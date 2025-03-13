@@ -1,7 +1,10 @@
 subitems:
   - title: Home
     url: /index
-  - title: Example page
-    url: /example_page
+  - title: FAIR Metroline steps
+    url: /fair_metroline_steps
+    subitems:
+      - title: Pre-FAIR Assessment
+        url: /metroline_steps/pre_fair_assessment
 
   
