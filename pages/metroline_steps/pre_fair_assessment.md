@@ -30,11 +30,6 @@ While we focus specifically on the FAIRness of (meta)data in this step, it is al
 The tables below provide an overview of some of the more popular tools from both categories. 
 
 #### Online self-assessment surveys
-<style>
-  table { width: 100%; border-collapse: collapse; }
-  th, td { text-align: left; vertical-align: top; padding: 8px; }
-  td ul { margin-top: 0; padding-left: 16px; } /* Fixes extra space above the list */
-</style>
 <table>
   <tr>
     <th>Tool</th>
