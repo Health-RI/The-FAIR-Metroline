@@ -96,10 +96,33 @@ The tables below provide an overview of some of the more popular tools from both
 </table>
 
 #### Online (semi-) automated tests
-| Tool | Description                                                                                                                                                                                                                    | Work on your side | Key features                                                                                       |
-| ---- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ---------------- |----------------------------------------------------------------------------------------------------|
-| **FAIR-Checker** | FAIR-Checker provides a web interface to automatically evaluate FAIR metrics. It provides users with hints on how to further improve the FAIRness of the resources. <br/>FAIRchecker does over 18000 metrics evaluations per month.| In the ‘Check' page, paste a URL or DOI and click on 'Test all metrics’. The assessment will run automatically and return a score for 12 FAIR sub-principles. If a sub-principle does not reach the highest score, you can view recommendations on how to improve. | * Automatically evaluates FAIRness of a dataset <br> * Provides a radar chart showing test results <br> * Suggests improvements for failed tests 
-| **The FAIR Evaluator** | The FAIR Evaluator provides an online service to test (meta)data resources against the FAIR Maturity Indicators in an objective, automated way.<br><br>The public version of The FAIR Evaluator has been used to assess >5500 datasets. |A guide on how to use the FAIR Evaluator can be found in the FAIR Cookbook.| * Automatically evaluates FAIRness of a dataset<br> * Assessment based on second generation of FAIR Maturity Indicators<br> * Provides a doughnut chart showing test results<br> * Provides a log that indicates why a test failed |
+<table>
+    <tr>
+        <td><b>FAIR-Checker</b></td>
+        <td>FAIR-Checker provides a web interface to automatically evaluate FAIR metrics. It provides users with hints on how to further improve the FAIRness of the resources. <br/>FAIRchecker does over 18000 metrics evaluations per month.</td> 
+        <td>In the ‘Check' page, paste a URL or DOI and click on 'Test all metrics’. The assessment will run automatically and return a score for 12 FAIR sub-principles. If a sub-principle does not reach the highest score, you can view recommendations on how to improve.</td>
+        <td>
+            <ul>
+                <li>Automatically evaluates FAIRness of a dataset</li>
+                <li>Provides a radar chart showing test results</li>
+                <li>Suggests improvements for failed tests</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><b>The FAIR Evaluator</b></td>
+        <td>The FAIR Evaluator provides an online service to test (meta)data resources against the FAIR Maturity Indicators in an objective, automated way.<br><br>The public version of The FAIR Evaluator has been used to assess >5500 datasets.</td>
+        <td>A guide on how to use the FAIR Evaluator can be found in the FAIR Cookbook.</td>
+        <td>
+            <ul>
+                <li>Automatically evaluates FAIRness of a dataset</li>>
+                <li>Assessment based on second generation of FAIR Maturity Indicators</li>
+                <li>Provides a doughnut chart showing test results</li>
+                <li>Provides a log that indicates why a test failed</li>
+            </ul>
+        </td>
+    </tr>
+</table>
 
 To find even more tools:  
 * FAIRassist offers an overview of available tools;

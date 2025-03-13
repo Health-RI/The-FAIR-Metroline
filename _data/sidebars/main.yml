@@ -6,5 +6,3 @@ subitems:
     subitems:
       - title: Pre-FAIR Assessment
         url: /metroline_steps/pre_fair_assessment
-      - title: Pre-FAIR Assessment V2
-        url: /pre_fair_assessment
