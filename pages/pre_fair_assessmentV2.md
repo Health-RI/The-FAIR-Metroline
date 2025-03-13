@@ -68,6 +68,7 @@ The tables below provide an overview of some of the more popular tools from both
             <li>More elaborate than ARDC</li>
             <li>Gives an indication of your FAIR level.</li>
         </ul>
+    </td>
   </tr>
     <tr>
         <td><b>The FIP Wizard</b></td>
