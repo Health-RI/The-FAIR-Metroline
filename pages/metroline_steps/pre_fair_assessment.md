@@ -1,7 +1,8 @@
 ---
 title: Pre-FAIR assessment
+permalink: /metroline_steps/pre_fair_assessment
+layout: default
 ---
-# Metroline step: Pre-FAIR assessment
 
 ’FAIR evaluation results can serve as a pointer to where your FAIRness can be improved.’ (FAIRopoly)
 
