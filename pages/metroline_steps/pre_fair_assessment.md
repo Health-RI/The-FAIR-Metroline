@@ -30,94 +30,17 @@ While we focus specifically on the FAIRness of (meta)data in this step, it is al
 The tables below provide an overview of some of the more popular tools from both categories. 
 
 #### Online self-assessment surveys
-<table>
-  <tr>
-    <th>Tool</th>
-    <th>Description</th>
-    <th>Work on your side</th>
-    <th>Key features</th>
-  </tr>
-  <tr>
-    <td><b>ARDC FAIR self assessment</b></td>
-    <td>Provided by Australian Research Data Commons, this 12-question online survey provides a visual indication of the FAIRness level of your (meta)data and provides resources on how to improve it. 
-        <br><br>
-        From October 2023 until May 2024, the site had around 2500 visitors who actively interacted with the page.</td>
-    <td>Fill in the survey, potentially with help of a FAIR expert/data steward.</td>
-    <td>
-      <ul>
-        <li>Online survey</li>
-        <li>Easy to use</li>
-        <li>Small time investment</li>
-        <li>Suggests improvements</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td><b>The FAIR Data Maturity Model</b></td>
-    <td>
-        Based on the FAIR principles and sub-principles, the Research Data Alliance created a checklist with FAIR maturity indicators and guidelines. These can be used to assess the FAIRness of (meta)data.
-        <br><br>
-        The FAIR Data Maturity Model is recommended by, amongst others, HL7, the world’s leading health IT standards development organisation.
-    </td>
-    <td>
-        Download the Excel file from Zenodo and in the ‘FAIR Indicators_v0.05’ tab, give a score to the 41 different ‘maturity indicators’, by selecting the level from the drop-down menu in the ‘METRIC’- column, that fits the status if your (meta)data best. Potentially perform this with assistance of a FAIR expert/data steward.
-        <br><br>
-        View the results in the ‘LEVELS' tab. Detailed definitions and examples for all 'maturity indicators’ can be found in the documentation on Zenodo.
-    </td>
-    <td>
-        <ul>
-            <li>Downloadable Excel-based survey</li>
-            <li>More elaborate than ARDC</li>
-            <li>Gives an indication of your FAIR level.</li>
-        </ul>
-  </tr>
-    <tr>
-        <td><b>The FIP Wizard</b></td>
-        <td>
-            A FAIR Implementation Profile (FIP) is a community’s collective choice of technologies to implement the FAIR principles. The FIP Wizard captures these choices through a questionnaire and publishes them as machine-readable, open data. This promotes reuse, saves effort and fosters standardisation across communities.
-        </td>
-        <td>
-            To use the FIP Wizard, create an account and review the user guide to understand the system and workflow. The wizard provides operates as a question-answer form to fill out.
-            <br><br>
-            See Funder Step: Creating a FAIR Implementation Profile (FIP) for more details.
-        </td>
-        <td>
-            <ul>
-                <li>Developed by the GO FAIR Foundation</li>
-                <li>Generates both human-readable and machine-actionable output</li>
-            </ul>
-        </td>
-    </tr>
-</table>
+| Tool                         | Description                                                                                                                                                                                                                          | Work on your side                                                                                                                                                                                                                                               | Key features                                                                 |
+|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| **ARDC FAIR self assessment** | Provided by Australian Research Data Commons, this 12-question online survey provides a visual indication of the FAIRness level of your (meta)data and provides resources on how to improve it. <br><br> From October 2023 until May 2024, the site had around 2500 visitors who actively interacted with the page. | Fill in the survey, potentially with help of a FAIR expert/data steward.                                                                                                                                                   | - Online survey <br> - Easy to use <br> - Small time investment <br> - Suggests improvements |
+| **The FAIR Data Maturity Model** | Based on the FAIR principles and sub-principles, the Research Data Alliance created a checklist with FAIR maturity indicators and guidelines. These can be used to assess the FAIRness of (meta)data. <br><br> The FAIR Data Maturity Model is recommended by, amongst others, HL7, the world’s leading health IT standards development organisation. | Download the Excel file from Zenodo and in the ‘FAIR Indicators_v0.05’ tab, give a score to the 41 different ‘maturity indicators’, by selecting the level from the drop-down menu in the ‘METRIC’-column, that fits the status of your (meta)data best. Potentially perform this with assistance of a FAIR expert/data steward. <br><br> View the results in the ‘LEVELS' tab. Detailed definitions and examples for all 'maturity indicators’ can be found in the documentation on Zenodo. | - Downloadable Excel-based survey <br> - More elaborate than ARDC <br> - Gives an indication of your FAIR level. |
+| **The FIP Wizard** | A FAIR Implementation Profile (FIP) is a community’s collective choice of technologies to implement the FAIR principles. The FIP Wizard captures these choices through a questionnaire and publishes them as machine-readable, open data. This promotes reuse, saves effort and fosters standardisation across communities. | To use the FIP Wizard, create an account and review the user guide to understand the system and workflow. The wizard operates as a question-answer form to fill out. <br><br> See Funder Step: Creating a FAIR Implementation Profile (FIP) for more details. | - Developed by the GO FAIR Foundation <br> - Generates both human-readable and machine-actionable output |
 
 #### Online (semi-) automated tests
-<table>
-    <tr>
-        <td><b>FAIR-Checker</b></td>
-        <td>FAIR-Checker provides a web interface to automatically evaluate FAIR metrics. It provides users with hints on how to further improve the FAIRness of the resources. <br/>FAIRchecker does over 18000 metrics evaluations per month.</td> 
-        <td>In the ‘Check' page, paste a URL or DOI and click on 'Test all metrics’. The assessment will run automatically and return a score for 12 FAIR sub-principles. If a sub-principle does not reach the highest score, you can view recommendations on how to improve.</td>
-        <td>
-            <ul>
-                <li>Automatically evaluates FAIRness of a dataset</li>
-                <li>Provides a radar chart showing test results</li>
-                <li>Suggests improvements for failed tests</li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <td><b>The FAIR Evaluator</b></td>
-        <td>The FAIR Evaluator provides an online service to test (meta)data resources against the FAIR Maturity Indicators in an objective, automated way.<br><br>The public version of The FAIR Evaluator has been used to assess >5500 datasets.</td>
-        <td>A guide on how to use the FAIR Evaluator can be found in the FAIR Cookbook.</td>
-        <td>
-            <ul>
-                <li>Automatically evaluates FAIRness of a dataset</li>>
-                <li>Assessment based on second generation of FAIR Maturity Indicators</li>
-                <li>Provides a doughnut chart showing test results</li>
-                <li>Provides a log that indicates why a test failed</li>
-            </ul>
-        </td>
-    </tr>
-</table>
+| Tool                 | Description                                                                                                                                                                 | Work on your side                                                                                                                                   | Key features                                                                                   |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **FAIR-Checker**     | FAIR-Checker provides a web interface to automatically evaluate FAIR metrics. It provides users with hints on how to further improve the FAIRness of the resources. <br/> FAIR-Checker performs over 18,000 metric evaluations per month. | In the ‘Check' page, paste a URL or DOI and click on 'Test all metrics’. The assessment will run automatically and return a score for 12 FAIR sub-principles. If a sub-principle does not reach the highest score, you can view recommendations on how to improve. | - Automatically evaluates FAIRness of a dataset <br> - Provides a radar chart showing test results <br> - Suggests improvements for failed tests |
+| **The FAIR Evaluator** | The FAIR Evaluator provides an online service to test (meta)data resources against the FAIR Maturity Indicators in an objective, automated way. <br><br> The public version of The FAIR Evaluator has been used to assess over 5,500 datasets. | A guide on how to use the FAIR Evaluator can be found in the FAIR Cookbook. | - Automatically evaluates FAIRness of a dataset <br> - Assessment based on the second generation of FAIR Maturity Indicators <br> - Provides a doughnut chart showing test results <br> - Provides a log that indicates why a test failed |
 
 To find even more tools:  
 * FAIRassist offers an overview of available tools;
