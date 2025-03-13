@@ -2,4 +2,4 @@
 title: Example page
 ---
 
-This page serves as an example page. Test.
+This page serves as an example page. Test2.
