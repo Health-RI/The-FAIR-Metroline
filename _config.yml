@@ -1,7 +1,7 @@
-title: Website title
+title: The FAIR Metroline
 # This appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-topnav_title: Website title
+topnav_title: The FAIR Metroline
 # Optional: this appears on the top navigation bar next to the main_logo.svg icon
 
 description: "Example of ELIXIR toolkit theme as a remote jekyll theme"
@@ -25,7 +25,19 @@ defaults:
       layout: "page"
       sidebar: main
 
-theme_variables: 
+plugins:
+  - elixir-toolkit-theme-plugins
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-github-metadata
+  - jemoji
+  - webrick
+
+mermaid:
+  src: "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
+
+theme_variables:
   # git_host: GitHub
   # back_to_top: true
   # dev-info-banner: false
@@ -58,15 +70,6 @@ theme_variables:
   # theme_color: 0d6efd
   # fonts:
   #   - url towards a font
-
-plugins:
-  - elixir-toolkit-theme-plugins
-  - jekyll-redirect-from
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-github-metadata
-  - jemoji
-  - webrick
 
 # --- Missing in gitlab: ---
 # github:

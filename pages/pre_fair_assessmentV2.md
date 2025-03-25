@@ -2,6 +2,27 @@
 title: Pre-FAIR assessment
 ---
 
+
+```mermaid
+flowchart LR
+  A --> B
+```
+
+<div class="mermaid">
+  graph TD
+  A[Start] --> B{Decision}
+  B -->|Yes| C[Do Something]
+  B -->|No| D[Do Something Else]
+</div>
+
+{% mermaid %}
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+{% endmermaid %}
+
 ’FAIR evaluation results can serve as a pointer to where your FAIRness can be improved.’ (FAIRopoly)
 
 A pre-FAIR assessment evaluates the current state of your data and its alignment with the FAIR principles. Performing this assessment early makes you aware of possibilities for increasing the FAIRness of your data, which in turn increases its impact and ensures its long-term usability.  
