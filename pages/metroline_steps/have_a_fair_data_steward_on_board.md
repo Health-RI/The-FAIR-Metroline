@@ -1,31 +1,11 @@
 ---
-title: Pre-FAIR assessment
+title: Have a FAIR data steward on board
+permalink: /metroline_steps/have_a_fair_data_steward_on_board
 ---
 
-
-```mermaid
-flowchart LR
-  A --> B
-```
-
-<div class="mermaid">
-  graph TD
-  A[Start] --> B{Decision}
-  B -->|Yes| C[Do Something]
-  B -->|No| D[Do Something Else]
-</div>
-
-{% mermaid %}
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-{% endmermaid %}
-
-’FAIR evaluation results can serve as a pointer to where your FAIRness can be improved.’ (FAIRopoly)
-
-A pre-FAIR assessment evaluates the current state of your data and its alignment with the FAIR principles. Performing this assessment early makes you aware of possibilities for increasing the FAIRness of your data, which in turn increases its impact and ensures its long-term usability.  
+>***FAIR evaluation results can serve as a pointer to where your FAIRness can be improved. (FAIRopoly)***
+>
+> A pre-FAIR assessment evaluates the current state of your data and its alignment with the FAIR principles. Performing this assessment early makes you aware of possibilities for increasing the FAIRness of your data, which in turn increases its impact and ensures its long-term usability.
 
 ## Short description
 In this phase you assess whether your (meta)data already meets FAIR criteria, such as persistent unique identifiers for data elements and rich metadata. By using FAIRness assessment tooling you can quantify the level of FAIRness of the data based on its current characteristics and environment. The assessment outcomes can help shape the necessary steps and requirements needed to achieve the desired FAIRification objectives (see A Generic Workflow for the Data FAIRification Process and FAIR in Action Framework by FAIRplus). 
@@ -112,6 +92,12 @@ The tables below provide an overview of some of the more popular tools from both
 
 #### Online (semi-) automated tests
 <table>
+    <tr>
+        <th>Tool</th>
+        <th>Description</th>
+        <th>Work on your side</th>
+        <th>Key features</th>
+    </tr>
     <tr>
         <td><b>FAIR-Checker</b></td>
         <td>FAIR-Checker provides a web interface to automatically evaluate FAIR metrics. It provides users with hints on how to further improve the FAIRness of the resources. <br/>FAIRchecker does over 18000 metrics evaluations per month.</td> 

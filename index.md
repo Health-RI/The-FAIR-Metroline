@@ -12,7 +12,19 @@ The FAIR Metroline provides practical guidance to help you reach your FAIR goals
 
 A variety of models and publications which are used in practice were studied to identify common FAIRification steps, which resulted in the FAIR Metroline (see image above). Depending on your project and goals only a select number of steps may be relevant. Consequently, each project will have its specific workflow: 
 
-![FAIR workflow image.png](assets/img/main/FAIR%20workflow%20image.png)
+{% mermaid %}
+graph LR
+  A[Define FAIRification Objectives] --> B[Build your team]
+  B --> C[Have a FAIR data steward on board]
+  C --> D[Pre-FAIR Assesment]
+
+  click A "./metroline_steps/define_fairification_objectives"
+  click C "./metroline_steps/have_a_fair_data_steward_on_board"
+  click D "./metroline_steps/pre_fair_assessment"
+{% endmermaid %}
+
+[//]: # (![FAIR workflow image.png]&#40;assets/img/main/FAIR%20workflow%20image.png&#41;)
+
 
 The FAIR Metroline is under development, in alignment with the development of the Dutch National Health Data Catalogue. Over the coming months, we will add detailed how-to descriptions and real-life examples of FAIR Metroline that will particularly help projects and initiatives to onboard (meta)data to the Dutch National Health Data Catalogue. This already is a first effective step to make your data more FAIR. We also collaborate with the health domain funders and their efforts to stimulate incorporating FAIR into projects from the start. 
 
@@ -23,6 +35,8 @@ For the current status of the steps see the status page.
 The FAIR Metroline will be richer and more feasible to execute if we better consider the organisational context and existing best practices. As a result, the FAIR Metroline is a cooperative effort between the Health-RI Hub and Nodes, involving the many public and private organisations and initiatives that address the reuse of care and research data. We invite you to collaborate with us as we continue to refine the various FAIR Metroline phases. To find out more, e-mail fairservicedesk@health-ri.nl.
 
 ## Overview Metroline steps
+
+
 
 direct hit 
 Define FAIRification Objectives

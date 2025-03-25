@@ -11,6 +11,37 @@
     }
 }
 
+// .nodeLabel p{
+//     text-decoration: underline; /* Makes it clear it's a link */
+//     color: darkblue !important; /* Default link color */
+// }
+
+// .mermaid a:hover {
+//     color: darkblue; /* Hover effect for clarity */
+//     cursor: pointer; /* Changes cursor on hover */
+// }
+
+.mermaid a:hover {
+    color: darkblue !important;
+    text-shadow: 0px 0px 5px rgba(0, 0, 255, 0.7); /* Glow effect */
+    cursor: pointer;
+//     transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
+// .mermaidTooltip {
+//     visibility: visible; /* Ensure it's visible */
+//     opacity: 1; /* Make sure it’s not transparent */
+//     background-color: rgba(0, 0, 0, 0.8); /* Tooltip background */
+//     color: #fff; /* Tooltip text color */
+//     padding: 5px 10px;
+//     border-radius: 5px;
+//     position: absolute;
+//     z-index: 9999;
+//     pointer-events: none; /* Prevent cursor interaction */
+// }
+
+
 // h1 {
 //     color: #76323f;
 // }

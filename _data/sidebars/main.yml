@@ -4,9 +4,9 @@ subitems:
   - title: FAIR Metroline steps
     url: /fair_metroline_steps
     subitems:
+      - title: Define FAIRification objectives
+        url: /metroline_steps/define_fairification_objectives
+      - title: Have a FAIR data steward on board
+        url: /metroline_steps/have_a_fair_data_steward_on_board
       - title: Pre-FAIR Assessment
         url: /metroline_steps/pre_fair_assessment
-      - title: Pre-FAIR AssessmentV2
-        url: pre_fair_assessmentV2
-      - title: Pre-FAIR AssessmentV3
-        url: pre_fair_assessmentV3
