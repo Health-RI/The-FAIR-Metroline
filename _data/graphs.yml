@@ -1,0 +1,26 @@
+# graph definitions
+main:
+  - id: graph1
+    label: graph 1 label
+    visible: true
+    definition: |
+      graph LR
+      A --> B
+      B --> C
+      B --> D
+      classDef highlighted stroke:#f66,stroke-width:4px;
+      class A,B,C highlighted;
+      linkStyle 0 stroke:#f66,stroke-width:4px;
+
+  - id: graph2
+    label: graph 2 label
+    visible: false
+    definition: |
+      graph LR
+      A --> B
+      B --> C
+      B --> D
+      classDef highlighted stroke:#f66,stroke-width:4px;
+      class A,B,D highlighted;
+    
+      

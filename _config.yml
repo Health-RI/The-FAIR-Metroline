@@ -42,11 +42,11 @@ theme_variables:
   # back_to_top: true
   # dev-info-banner: false
   # privacy_statement_url: /privacy
-  # github_buttons: 
+   github_buttons:
   #   position: top
-  #   edit_me: true
+     edit_me: false
   #   open_issue: true
-  #   history: true
+     history: true
   # datatables:
   #   searchbuilder: True
   # headings:
@@ -59,9 +59,9 @@ theme_variables:
   # toc:
   #   min_headings: 2
   #   headings: 'h2'
-  # topnav:
+   topnav:
     # theme: light
-    # brand_logo: assets/img/main_logo.svg
+     brand_logo: assets/img/logo_v3.png
     # github: true
     # twitter: false
     # bluesky: false

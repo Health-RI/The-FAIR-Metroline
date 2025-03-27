@@ -36,6 +36,35 @@ The FAIR Metroline will be richer and more feasible to execute if we better cons
 
 ## Overview Metroline steps
 
+<div>
+  {% for graph in site.data.graphs.main %}
+    <button onclick="showGraph('{{graph.id}}')">{{graph.label}}</button>
+  {% endfor %}
+</div>
+
+<div id="graph-container">
+  {% for graph in site.data.graphs.main %}
+  <div id="{{ graph.id }}" class="mermaid">
+    {{ graph.definition }}
+  </div>
+  {% endfor %}
+</div>
+
+<script src="assets/js/graphController.js"></script>
+
+<script>
+  window.onload = () => {
+    const graphVisibility = {
+      // maybe play around with some filtering for sections? Since you could have more than one graph in a section?
+      // {% assign filtered_graphs = site.data.graphs.main | where: "visible", false %}
+      {% for graph in site.data.graphs.main %}
+        "{{ graph.id }}": {{ graph.visible | downcase }}{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    };
+    initGraphs(graphVisibility)
+  };
+</script>
+
 
 
 direct hit 
