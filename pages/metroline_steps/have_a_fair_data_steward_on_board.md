@@ -3,9 +3,11 @@ title: Have a FAIR data steward on board
 permalink: /metroline_steps/have_a_fair_data_steward_on_board
 ---
 
->***‘Data stewardship is a relatively new profession and a catch-all term for numerous support functions, roles and activities. It implies professional and careful treatment of data throughout all stages of a research process. The core responsibilities and tasks vary, from policy advising and consultancy, to operational and technical support and IT related tasks. Responsibilities also vary between and among the different research-performing organisations, and data stewards (DS) often have different job titles. ([RDMkit](https://rdmkit.elixir-europe.org/data_steward))***
+{% include assign_current_step.html %}
+
+>***Data stewardship is a relatively new profession and a catch-all term for numerous support functions, roles and activities. It implies professional and careful treatment of data throughout all stages of a research process. The core responsibilities and tasks vary, from policy advising and consultancy, to operational and technical support and IT related tasks. Responsibilities also vary between and among the different research-performing organisations, and data stewards (DS) often have different job titles. ([RDMkit](https://rdmkit.elixir-europe.org/data_steward))***
 >
-> A FAIR data steward guides teams in organising, storing, and describing data to meet the FAIR principles, ensuring research data can be understood and reused, making science more efficient and transparent.
+> {{ current_step.summary }}
 
 ## Short description
 Proper data stewardship ensures research data is Findable, Accessible, Interoperable and Reusable (FAIR) in the long term through data management, archiving and reuse. Creating FAIR data requires attention from the planning phase of a study to its lifelong maintenance.  Hence, according to FAIRification models such as [FAIRopoly](https://www.ejprarediseases.org/fairopoly/) and [A Generic Workflow for the Data FAIRification Process](https://direct.mit.edu/dint/article/2/1-2/56/9988/A-Generic-Workflow-for-the-Data-FAIRification), a FAIR data steward - familiar with the local environment and FAIRification - should guide this process. This role can be filled by a trained team member or by using existing central support services within organisation or national initiatives such as Health-RI.
@@ -28,7 +30,7 @@ To ensure effective data stewardship, consider which type of data steward best f
 
 Each of these roles covers eight key competence areas (see below). A single data steward may oversee all areas, or responsibilities may be shared across multiple data stewards. Some organisations also have department- or division-based data stewards who focus on local RDM needs while aligning with central policies. When assembling your team, consider which competencies should be covered internally and identify resources for any gaps.
 
-{% include image-with-caption.html 
+{% include image_with_caption.html 
    src="/assets/img/metroline_steps/have_a_fair_data_steward_on_board/data_stewardship_roles.png" 
    alt="Data stewardship roles" 
    caption="NPOS/ELIXIR data stewardship roles" %}
@@ -61,7 +63,7 @@ For further details on data steward allocation, see the **NPOS report on profess
 ### Step 3 - Hire or consult a data steward
 Hire or consult a data steward following the formalised Dutch data steward profile, which has been adopted to professionalise data stewardship roles and create consistency across institutions. This profile ensures clear role definitions and career prospects for data stewards. The areas below outline what a data steward may be responsible for, based on the formal Dutch job classification system (see the earlier cited report, Annex 5 and beyond).
 
-{% include image-with-caption.html 
+{% include image_with_caption.html 
    src="/assets/img/metroline_steps/have_a_fair_data_steward_on_board/data_steward_job_profile.png" 
    alt="Data steward job profile"
    size="medium"

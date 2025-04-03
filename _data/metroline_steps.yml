@@ -1,0 +1,120 @@
+- id: 1
+  title: "Define FAIRification objectives"
+  summary: "FAIRification objectives aim to make data more Findable, Accessible, Interoperable, and Reusable (FAIR). They focus on improving how data is organised and shared, ensuring that it can be easily accessed, understood and used by both humans and machines. Achieving such objectives maximises the value of data, enhancing its usefulness and long-term usability."
+  url: "/metroline_steps/define_fairification_objectives"
+  icon: ""
+- id: 2
+  title: "Have a FAIR data steward on board"
+  summary: "A FAIR data steward guides teams in organising, storing, and describing data to meet the FAIR principles, ensuring research data can be understood and reused, making science more efficient and transparent."
+  url: "/metroline_steps/have_a_fair_data_steward_on_board"
+  icon: ""
+- id: 3
+  title: "Pre-FAIR assessment"
+  summary: "A pre-FAIR assessment evaluates the current state of your data and its alignment with the FAIR principles. Performing this assessment early makes you aware of possibilities for increasing the FAIRness of your data, which in turn increases its impact and ensures its long-term usability."
+  url: "metroline_steps/pre_fair_assessment"
+  icon: ""
+- id: 4
+  title: "Build the Team"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 5
+  title: "Get Training"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 6
+  title: "Design Solution Plan"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 7
+  title: "Data access and retrieval"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 8
+  title: "Assess availability of your metadata"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 9
+  title: "Select Identifier Scheme"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 10
+  title: "Register resource level metadata"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 11
+  title: "Register record level metadata"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 12
+  title: "Apply common data elements"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 13
+  title: "Analyse data semantics"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 14
+  title: "Design eCRF (data collection)"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 15
+  title: "Create or reuse a semantic (meta)data model"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 16
+  title: "Use ontologies in the data model"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 17
+  title: "Obtain Informed Consent"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 18
+  title: "Enter data in eCRF (data collection)"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 19
+  title: "Apply core metadata model"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 20
+  title: "Transform and expose FAIR (meta)data"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 21
+  title: "Define access conditions"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 22
+  title: "Query (use) over resources"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 23
+  title: "Assess FAIRness"
+  summary: "Coming soon."
+  url: ""
+  icon: ""
+- id: 24
+  title: "Did you reach your FAIRification objectives"
+  summary: "Coming soon."
+  url: ""
+  icon: ""

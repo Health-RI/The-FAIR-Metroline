@@ -3,9 +3,11 @@ title: Define FAIRification objectives
 permalink: /metroline_steps/define_fairification_objectives
 ---
 
+{% include assign_current_step.html %}
+
 >***A FAIRification objective is the end goal that the owners of a resource \[e.g. dataset, database, protocols, analysis workflow] are looking to achieve with the process of FAIRification. ([EJP RD FAIRification Guidelines](https://github.com/ejp-rd-vp/FAIRificationGuidance/blob/main/FAIRificationObjectives.pdf))***
 >
-> FAIRification objectives aim to make data more Findable, Accessible, Interoperable, and Reusable (FAIR). They focus on improving how data is organised and shared, ensuring that it can be easily accessed, understood and used by both humans and machines. Achieving such objectives maximises the value of data, enhancing its usefulness and long-term usability.
+> {{ current_step.summary }}
 
 ## Short description
 FAIRification enhances data Findability, Accessibility, Interoperability, and Reusability (FAIR) by improving documentation, metadata, and standardisation. It applies to both new and existing data. Defining FAIRification objectives is the first step in this process and can be guided by models such as [FAIRopoly](https://www.ejprarediseases.org/fairopoly/), [A Generic Workflow for the Data FAIRification Process](https://direct.mit.edu/dint/article/2/1-2/56/9988/A-Generic-Workflow-for-the-Data-FAIRification), and the [FAIR in Action Framework](https://www.nature.com/articles/s41597-023-02167-2).

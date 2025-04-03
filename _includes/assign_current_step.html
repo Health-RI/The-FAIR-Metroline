@@ -1,0 +1,9 @@
+{% assign page_title = page.title | strip | downcase %}
+{% assign current_step = null %}
+
+{% for step in site.data.metroline_steps %}
+  {% assign step_title = step.title | strip | downcase %}
+  {% if step_title == page_title %}
+    {% assign current_step = step %}
+  {% endif %}
+{% endfor %}
