@@ -3,17 +3,17 @@ title: Pre-FAIR assessment
 permalink: /metroline_steps/pre_fair_assessment
 ---
 
->***FAIR evaluation results can serve as a pointer to where your FAIRness can be improved. (FAIRopoly)***
+>***FAIR evaluation results can serve as a pointer to where your FAIRness can be improved. ([FAIRopoly](https://www.ejprarediseases.org/fairopoly/))***
 >
 > A pre-FAIR assessment evaluates the current state of your data and its alignment with the FAIR principles. Performing this assessment early makes you aware of possibilities for increasing the FAIRness of your data, which in turn increases its impact and ensures its long-term usability.
 
 ## Short description
-In this phase you assess whether your (meta)data already meets FAIR criteria, such as persistent unique identifiers for data elements and rich metadata. By using FAIRness assessment tooling you can quantify the level of FAIRness of the data based on its current characteristics and environment. The assessment outcomes can help shape the necessary steps and requirements needed to achieve the desired FAIRification objectives (see A Generic Workflow for the Data FAIRification Process and FAIR in Action Framework by FAIRplus). 
+In this phase you assess whether your (meta)data already meets FAIR criteria, such as persistent unique identifiers for data elements and rich metadata. By using FAIRness assessment tooling you can quantify the level of FAIRness of the data based on its current characteristics and environment. The assessment outcomes can help shape the necessary steps and requirements needed to achieve the desired [FAIRification objectives](define_fairification_objectives) (see [A Generic Workflow for the Data FAIRification Process](https://direct.mit.edu/dint/article/2/1-2/56/9988/A-Generic-Workflow-for-the-Data-FAIRification) and [FAIR in Action Framework by FAIRplus](https://www.nature.com/articles/s41597-023-02167-2)). 
 
 The how-to section describes a variety of assessment tools based on the FAIR principles. 
 
 ## Why is this step important 
-This step will help you assess the current FAIRness level of your data. Comparing the current FAIRness to the previously defined FAIRification objectives will help you shape the necessary steps and requirements needed to achieve your FAIRification goals and help you create your solution plan, a workplan specifically designed for reaching these goals. Furthermore, the assessment can be repeated in the Assess FAIRness step, allowing you to compare the results and check the progress of your data towards FAIRness.
+This step will help you assess the current FAIRness level of your data. Comparing the current FAIRness to the previously defined [FAIRification objectives](define_fairification_objectives) will help you shape the necessary steps and requirements needed to achieve your FAIRification goals and help you create your [solution plan](design_solution_plan), a workplan specifically designed for reaching these goals. Furthermore, the assessment can be repeated in the [Assess FAIRness](asses_fairness) step, allowing you to compare the results and check the progress of your data towards FAIRness.
 
 ## How to
 ### Step 1 - Types of tools
@@ -21,9 +21,9 @@ Decide which type of tool fits your goal(s) best. Broadly, the tools fall into t
 * Online self-assessment surveys. Here, the user is presented with an online form, which is filled in manually.
 * (Semi) automated tests.  Here (semi) automated tests are performed on a dataset by providing the tool with, for example, a link to an already published dataset. 
 
-In both cases, the result gives an indication about the FAIRness of the (meta)data. Additionally, tools may give advice how to improve FAIRness. It is important to bear in mind that outcomes of tools may vary due to, for example, differences in tests performed and subjectivity of self-assessments surveys. See FAIR Assessment Tools: Towards an “Apples to Apples” Comparisons for more information this.
+In both cases, the result gives an indication about the FAIRness of the (meta)data. Additionally, tools may give advice how to improve FAIRness. It is important to bear in mind that outcomes of tools may vary due to, for example, differences in tests performed and subjectivity of self-assessments surveys. See [FAIR Assessment Tools: Towards an “Apples to Apples” Comparisons](https://www.eosc.eu/sites/default/files/2023-01/Report%20on%20the%20FAIR%20Evaluation%20events_final_sub.pdf) for more information this.
 
-While we focus specifically on the FAIRness of (meta)data in this step, it is also possible to assess general FAIR awareness, for example by using the FAIR Aware tool provided by DANS.
+While we focus specifically on the FAIRness of (meta)data in this step, it is also possible to assess general FAIR awareness, for example by using the [FAIR Aware tool](https://fairaware.dans.knaw.nl/) provided by DANS.
 
 ### Step 2 - Popular tools
 The tables below provide an overview of some of the more popular tools from both categories. 
@@ -37,7 +37,7 @@ The tables below provide an overview of some of the more popular tools from both
     <th>Key features</th>
   </tr>
   <tr>
-    <td><b>ARDC FAIR self assessment</b></td>
+    <td><a href="https://ardc.edu.au/resources/working-with-data/fair-data/fair-self-assessment-tool/">ARDC FAIR self assessment</a></td>
     <td>Provided by Australian Research Data Commons, this 12-question online survey provides a visual indication of the FAIRness level of your (meta)data and provides resources on how to improve it. 
         <br><br>
         From October 2023 until May 2024, the site had around 2500 visitors who actively interacted with the page.</td>
@@ -52,16 +52,16 @@ The tables below provide an overview of some of the more popular tools from both
     </td>
   </tr>
   <tr>
-    <td><b>The FAIR Data Maturity Model</b></td>
+    <td><a href="https://zenodo.org/records/3909563#.YGRNnq8za70">The FAIR Data Maturity Model</a></td>
     <td>
         Based on the FAIR principles and sub-principles, the Research Data Alliance created a checklist with FAIR maturity indicators and guidelines. These can be used to assess the FAIRness of (meta)data.
         <br><br>
-        The FAIR Data Maturity Model is recommended by, amongst others, HL7, the world’s leading health IT standards development organisation.
+        The FAIR Data Maturity Model is recommended by, amongst others, <a href="https://confluence.hl7.org/display/SOA/Recommendations">HL7</a>, the world’s leading health IT standards development organisation.
     </td>
     <td>
-        Download the Excel file from Zenodo and in the ‘FAIR Indicators_v0.05’ tab, give a score to the 41 different ‘maturity indicators’, by selecting the level from the drop-down menu in the ‘METRIC’- column, that fits the status if your (meta)data best. Potentially perform this with assistance of a FAIR expert/data steward.
+        Download the <a href="https://zenodo.org/records/3909563/files/FAIR_evaluation_levels_v0.01.xlsx?download=1">Excel file</a> from Zenodo and in the ‘FAIR Indicators_v0.05’ tab, give a score to the 41 different ‘maturity indicators’, by selecting the level from the drop-down menu in the ‘METRIC’- column, that fits the status if your (meta)data best. Potentially perform this with assistance of a FAIR expert/data steward.
         <br><br>
-        View the results in the ‘LEVELS' tab. Detailed definitions and examples for all 'maturity indicators’ can be found in the documentation on Zenodo.
+        View the results in the ‘LEVELS' tab. Detailed definitions and examples for all 'maturity indicators’ can be found in the <a href="https://zenodo.org/records/3909563/files/FAIR%20Data%20Maturity%20Model_%20specification%20and%20guidelines_v1.00.pdf?download=1">documentation</a> on Zenodo.
     </td>
     <td>
         <ul>
@@ -72,14 +72,14 @@ The tables below provide an overview of some of the more popular tools from both
     </td>
   </tr>
     <tr>
-        <td><b>The FIP Wizard</b></td>
+        <td><a href="https://fip-wizard.ds-wizard.org/">FIP Wizard</a></td>
         <td>
             A FAIR Implementation Profile (FIP) is a community’s collective choice of technologies to implement the FAIR principles. The FIP Wizard captures these choices through a questionnaire and publishes them as machine-readable, open data. This promotes reuse, saves effort and fosters standardisation across communities.
         </td>
         <td>
-            To use the FIP Wizard, create an account and review the user guide to understand the system and workflow. The wizard provides operates as a question-answer form to fill out.
+            To use the FIP Wizard, create an account and review the <a href="https://gofair-foundation.github.io/gofair-wiki/docs/fip/content.html">user guide</a> to understand the system and workflow. The wizard provides operates as a question-answer form to fill out.
             <br><br>
-            See Funder Step: Creating a FAIR Implementation Profile (FIP) for more details.
+            See <a href="creating_a_fair_implementation_profile">Funder Step: Creating a FAIR Implementation Profile (FIP)</a> for more details.
         </td>
         <td>
             <ul>
@@ -99,7 +99,7 @@ The tables below provide an overview of some of the more popular tools from both
         <th>Key features</th>
     </tr>
     <tr>
-        <td><b>FAIR-Checker</b></td>
+        <td><a href="https://fair-checker.france-bioinformatique.fr/">FAIR-Checker</a></td>
         <td>FAIR-Checker provides a web interface to automatically evaluate FAIR metrics. It provides users with hints on how to further improve the FAIRness of the resources. <br/>FAIRchecker does over 18000 metrics evaluations per month.</td> 
         <td>In the ‘Check' page, paste a URL or DOI and click on 'Test all metrics’. The assessment will run automatically and return a score for 12 FAIR sub-principles. If a sub-principle does not reach the highest score, you can view recommendations on how to improve.</td>
         <td>
@@ -111,9 +111,9 @@ The tables below provide an overview of some of the more popular tools from both
         </td>
     </tr>
     <tr>
-        <td><b>The FAIR Evaluator</b></td>
-        <td>The FAIR Evaluator provides an online service to test (meta)data resources against the FAIR Maturity Indicators in an objective, automated way.<br><br>The public version of The FAIR Evaluator has been used to assess >5500 datasets.</td>
-        <td>A guide on how to use the FAIR Evaluator can be found in the FAIR Cookbook.</td>
+        <td><a href="https://w3id.org/AmIFAIR">The FAIR Evaluator</a></td>
+        <td>The FAIR Evaluator provides an online service to test (meta)data resources against the <a href="https://github.com/FAIRMetrics/Metrics/tree/master/MaturityIndicators">FAIR Maturity Indicators</a> in an objective, automated way.<br><br>The public version of The FAIR Evaluator has been used to assess >5500 datasets.</td>
+        <td>A guide on how to use the FAIR Evaluator can be found in the <a href="https://faircookbook.elixir-europe.org/content/recipes/assessing-fairness/fair-assessment-fairevaluator.html">FAIR Cookbook.</a></td>
         <td>
             <ul>
                 <li>Automatically evaluates FAIRness of a dataset</li>>
@@ -126,29 +126,29 @@ The tables below provide an overview of some of the more popular tools from both
 </table>
 
 To find even more tools:  
-* FAIRassist offers an overview of available tools;
-* several tools are evaluated and compared in FAIR assessment tools: evaluating use and performance;
-* RDMkit discusses several solutions.
+* [FAIRassist](https://fairassist.org/) offers an overview of available tools;
+* several tools are evaluated and compared in [FAIR assessment tools: evaluating use and performance](https://www.sciencedirect.com/science/article/pii/S2452074822000246);
+* [RDMkit](https://rdmkit.elixir-europe.org/compliance_monitoring#how-can-you-measure-and-document-data-management-capabilities) discusses several solutions.
 
 ### Step 3 - Effective approach to conducting a pre-FAIR assessment 
 To successfully do a pre-FAIR assessment, do the following:
-* learn from examples (see the practical examples section);
+* learn from examples (see the [practical examples](#practical-examples-from-the-community) section);
 * familiarise yourself with the tool you intend to use;
-* involve the necessary experts (see expertise requirements section);
+* involve the necessary experts (see [expertise requirements](#expertise-requirements-for-this-step) section);
 * perform the assessment.
 
 The final evaluation will give insight into the current FAIRness of your data. Depending on the tool used, you may receive feedback on how to improve the FAIRness of your data. Thus, the outcome of the pre-FAIR assessment helps you determine the next steps to achieve your FAIRification goals.
 
-## Expertise requirements for this step 
-The expertise required may depend on the assessment tool you want to use. Experts that may need to be involved, as described in Metroline Step: Build the Team, are described below.
+## Expertise requirements for this step
+The expertise required may depend on the assessment tool you want to use. Experts that may need to be involved, as described in [Metroline Step: Build the Team](build_the_team), are described below.
 * FAIR data stewards. Specialist who can help filling out the surveys and questionnaires.
 * Research software engineers. Specialists who can help running some of the specialised software.
 
-## Practical examples from the community 
-For an applied example of The FAIR Evaluator, see Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic.
+## Practical examples from the community
+For an applied example of The FAIR Evaluator, see [Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic](https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-022-00263-7).
 
 ## Training
 Relevant training will be added soon.
 
 ## Suggestions
-This page has been written and reviewed by field experts through a rigorous process and has reached the “released” status. Learn more about the contributors here and explore the development process here. If you have any suggestions, visit our How to contribute page to get in touch.
+This page has been written and reviewed by field experts through a rigorous process and has reached the “released” status. Learn more about the contributors [here](contributing/contributors) and explore the development process [here](contributing/development_process). If you have any suggestions, visit our [How to contribute](contributing/how_to_contribute) page to get in touch.

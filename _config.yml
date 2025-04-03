@@ -34,9 +34,6 @@ plugins:
   - jemoji
   - webrick
 
-mermaid:
-  src: "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
-
 theme_variables:
   # git_host: GitHub
   # back_to_top: true
@@ -49,13 +46,13 @@ theme_variables:
      history: true
   # datatables:
   #   searchbuilder: True
-  # headings:
+   headings:
   #   related-pages: Related pages
   #   more-information-tiles: More information
   #   resource-table-all: Tools and resources on this page
   #   resource-table-all-collapse: false
   #   affiliation-tiles-page: Affiliations
-  #   contributor-minitiles-page: Contributors
+#     contributor-minitiles-page: Contributors
   # toc:
   #   min_headings: 2
   #   headings: 'h2'

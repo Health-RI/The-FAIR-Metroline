@@ -1,0 +1,13 @@
+
+<script>
+  window.onload = () => {
+    const graphVisibility = {
+      // maybe play around with some filtering for sections? Since you could have more than one graph in a section?
+      // {% assign filtered_graphs = site.data.graphs.main | where: "visible", false %}
+      {% for graph in include.graphs %}
+        "{{ graph.id }}": {{ graph.visible | downcase }}{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    };
+    initGraphs(graphVisibility)
+  };
+</script>

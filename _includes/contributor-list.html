@@ -1,0 +1,29 @@
+<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-xl-5 g-4 contributor-cards mb-4">
+{% assign sorted_contributors = include.role | where: "active", include.active | sort_natural: 'firstName' %}
+    {% for contributor in sorted_contributors %}
+    <div class="col">
+        <div class="author-card">
+            <div class="author-image">
+                {% if contributor.image != "" %}
+                    <img src="{{base.url}}/assets/img/contributors/{{ contributor.image }}" alt="{{ contributor.firstName }} {{ contributor.lastName }}" />
+                {% else %}
+                    <img src="{{base.url}}/assets/img/logo_v2.png" alt="{{ contributor.firstName }} {{ contributor.lastName }}" />
+                {% endif %}
+            </div>
+
+            <div class="author-name">
+                {% if contributor.orcid != "" %}
+                    <a href="https://orcid.org/{{ contributor.orcid }}" target="_blank">
+                        {{ contributor.firstName }} {{ contributor.lastName }}
+                    </a>
+                {% else %}
+                    {{ contributor.firstName }} {{ contributor.lastName }}
+                {% endif %}
+            </div>
+            <span class="author-affiliation">
+                {{ contributor.affiliation }}
+            </span>
+        </div>
+    </div>
+    {% endfor %}
+</div>

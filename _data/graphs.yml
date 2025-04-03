@@ -1,7 +1,35 @@
 # graph definitions
 main:
   - id: graph1
+    section: section1
     label: graph 1 label
+    visible: true
+    definition: |
+      graph LR
+      A[Define FAIRification Objectives] --> B[Build your team]
+      B --> C[Have a FAIR data steward on board]
+      C --> D[Pre-FAIR Assesment]
+      click A "./metroline_steps/define_fairification_objectives"
+      click C "./metroline_steps/have_a_fair_data_steward_on_board"
+      click D "./metroline_steps/pre_fair_assessment"
+
+sdr_test:
+  - id: graph1
+    section: section1
+    label: graph 1 label
+    visible: true
+    definition: |
+      graph LR
+      A[Define FAIRification Objectives] --> B[Build your team]
+      B --> C[Have a FAIR data steward on board]
+      C --> D[Pre-FAIR Assesment]
+      click A "./metroline_steps/define_fairification_objectives"
+      click C "./metroline_steps/have_a_fair_data_steward_on_board"
+      click D "./metroline_steps/pre_fair_assessment"
+
+  - id: graph2
+    section: section2
+    label: graph 2 label
     visible: true
     definition: |
       graph LR
@@ -12,15 +40,13 @@ main:
       class A,B,C highlighted;
       linkStyle 0 stroke:#f66,stroke-width:4px;
 
-  - id: graph2
-    label: graph 2 label
+  - id: graph3
+    section: section2
+    label: graph 3 label
     visible: false
     definition: |
       graph LR
       A --> B
-      B --> C
-      B --> D
-      classDef highlighted stroke:#f66,stroke-width:4px;
-      class A,B,D highlighted;
-    
+      B --> A
+
       
