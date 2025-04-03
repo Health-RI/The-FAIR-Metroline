@@ -9,7 +9,7 @@ But, where do you start to make data FAIR? What steps are involved? What do thes
 
 The FAIR Metroline provides practical guidance to help you reach your FAIR goals and make your data more FAIR. Each Metroline step includes a short description, aimed at a general audience, as well as a section describing the expertise that may be necessary for the how-to section. This expertise can vary greatly per step and may include, for example, domain experts, software engineers or legal professionals. Given the time commitment and specialised knowledge needed, most steps will require the expertise of at least a data steward.
 
-![FAIR Metroline.jpg](../assets/img/main/FAIR%20Metroline.jpg)
+![FAIR Metroline.jpg]({{site.baseurl}}/assets/img/main/FAIR%20Metroline.jpg)
 
 A variety of models and publications which are used in practice [were studied](https://zenodo.org/records/7867293) to identify common FAIRification steps, which resulted in the FAIR Metroline (see image above). Depending on your project and goals only a select number of steps may be relevant. Consequently, each project will have its specific workflow: 
 
