@@ -9,6 +9,9 @@ description: "Example of ELIXIR toolkit theme as a remote jekyll theme"
 
 remote_theme: ELIXIR-Belgium/elixir-toolkit-theme@4.1.0
 
+url: "https://aderidder.github.io"
+baseurl: "/The-FAIR-Metroline"
+
 exclude:
   - README.md
   - vendor

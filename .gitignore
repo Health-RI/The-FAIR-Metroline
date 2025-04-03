@@ -1,5 +1,9 @@
 _site/
 .sass-cache/
 .jekyll-cache/
+_site/
+vendor/
 .jekyll-metadata
 Gemfile.lock
+.idea/
+.bundle/

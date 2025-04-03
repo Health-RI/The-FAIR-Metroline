@@ -5,9 +5,9 @@
         <div class="author-card">
             <div class="author-image">
                 {% if contributor.image != "" %}
-                    <img src="../assets/img/contributors/{{ contributor.image }}" alt="{{ contributor.firstName }} {{ contributor.lastName }}" />
+                    <img src="{{site.baseurl}}/assets/img/contributors/{{ contributor.image }}" alt="{{ contributor.firstName }} {{ contributor.lastName }}" />
                 {% else %}
-                    <img src="../assets/img/logo_v2.png" alt="{{ contributor.firstName }} {{ contributor.lastName }}" />
+                    <img src="{{site.baseurl}}/assets/img/logo_v2.png" alt="{{ contributor.firstName }} {{ contributor.lastName }}" />
                 {% endif %}
             </div>
 
