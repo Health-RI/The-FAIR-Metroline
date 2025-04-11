@@ -62,7 +62,7 @@ theme_variables:
   #   headings: 'h2'
    topnav:
     # theme: light
-     brand_logo: assets/img/logo_v3.png
+     brand_logo: assets/img/main_logo.svg
     # github: true
     # twitter: false
     # bluesky: false

@@ -4,7 +4,7 @@ columns:
   - type: image
     image_width: 88px
     width: 2
-    src: 'assets/img/logo_v3.png'
+    src: 'assets/img/main_logo.svg'
     alt: Metroline logo
   - type: links
     width: 3
@@ -27,6 +27,6 @@ columns:
   - type: image
     image_width: 88px
     width: 2
-    src: 'assets/img/logo_v3.png'
+    src: 'assets/img/main_logo.svg'
     alt: Metroline logo
 
