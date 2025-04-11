@@ -1,6 +1,68 @@
-- name: 
-  image_url: 
-  pid: 
+# we'll stick to the plugin's format here
+- name: Amsterdam UMC
+  image_url: assets/img/logos/amsterdamumc_transp.svg
+  pid: ""
   expose: true
-  type: 
-  url: 
+  type: general
+  url: https://www.amsterdamumc.nl/
+- name: Erasmus MC
+  image_url: assets/img/logos/erasmusmc_transp.svg
+  pid: ""
+  expose: true
+  type: general
+  url: https://www.erasmusmc.nl/
+- name: Health-RI
+  image_url: assets/img/logos/healthri_transp.png
+  pid: ""
+  expose: true
+  type: general
+  url: https://www.health-ri.nl/
+- name: Leids Universitair Medisch Centrum
+  image_url: assets/img/logos/lumc_transp.png
+  pid: ""
+  expose: true
+  type: general
+  url: https://www.lumc.nl/
+- name: Maastricht UMC+
+  image_url: assets/img/logos/maastrichtumc_transp.svg
+  pid: ""
+  expose: false
+  type: general
+  url: https://www.maastrichtuniversity.nl/
+- name: Maastricht University
+  image_url: assets/img/logos/maastricht_university_transp.svg
+  pid: ""
+  expose: true
+  type: general
+  url: https://www.maastrichtuniversity.nl/
+- name: Nederlands Kanker Instituut
+  image_url: assets/img/logos/nki_transp.svg
+  pid: ""
+  expose: true
+  type: general
+  url: https://www.nki.nl/
+- name: Radboudumc
+  image_url: assets/img/logos/radboudumc_transp.svg
+  pid: ""
+  expose: true
+  type: general
+  url: https://www.radboudumc.nl/
+- name: UMCG
+  image_url: assets/img/logos/umcg_transp.png
+  pid: ""
+  expose: true
+  type: general
+  url: https://www.umcg.nl/
+- name: UMC Utrecht
+  image_url: assets/img/logos/umcu_transp.png
+  pid: ""
+  expose: false
+  type: general
+  url: https://www.umcutrecht.nl/
+- name: ZonMw
+  image_url: assets/img/logos/zonmw_transp.svg
+  pid: ""
+  expose: false
+  type: funders
+  url: https://www.zonmw.nl/
+

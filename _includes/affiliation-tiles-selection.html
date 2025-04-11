@@ -1,0 +1,14 @@
+{%- assign alllogos = site.data.affiliations %}
+{%- assign filtered_logos = alllogos | where: "type", include.type %}
+
+<div class="logo-cloud d-flex flex-wrap justify-content-center align-items-center gap-4 my-4">
+  {%- for affiliation in filtered_logos %}
+    {%- if affiliation.image_url and affiliation.expose == true %}
+      <div class="logo-item" style="width: 160px;">
+        {% if affiliation.url %}<a href="{{ affiliation.url }}">{% endif %}
+          <img src="{{ affiliation.image_url | relative_url }}" alt="{{ affiliation.name }}" class="img-fluid">
+        {% if affiliation.url %}</a>{% endif %}
+      </div>
+    {%- endif %}
+  {%- endfor %}
+</div>

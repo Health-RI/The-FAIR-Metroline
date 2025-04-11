@@ -1,8 +1,8 @@
-<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-xl-5 g-4 contributor-cards mb-4">
+<!--build a metroline grid, for the contributors based on the parameters role and active -->
+<div class="metroline-grid">
 {% assign sorted_contributors = include.role | where: "active", include.active | sort_natural: 'firstName' %}
     {% for contributor in sorted_contributors %}
-    <div class="col">
-        <div class="author-card">
+    <div class="metroline-grid-cell">
             <div class="author-image">
                 {% if contributor.image != "" %}
                     <img src="{{site.baseurl}}/assets/img/contributors/{{ contributor.image }}" alt="{{ contributor.firstName }} {{ contributor.lastName }}" />
@@ -22,7 +22,6 @@
             <span class="author-affiliation">
                 {{ contributor.affiliation }}
             </span>
-        </div>
     </div>
     {% endfor %}
 </div>

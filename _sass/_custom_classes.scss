@@ -52,6 +52,56 @@ img.size-large {
 }
 
 
+.metroline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  gap: 1rem;
+}
+
+.metroline-grid-cell {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.05);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.metroline-grid-cell .icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+
+.logo-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo-item {
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-item img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-item img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+
 // .nodeLabel p{
 //     text-decoration: underline; /* Makes it clear it's a link */
 //     color: darkblue !important; /* Default link color */

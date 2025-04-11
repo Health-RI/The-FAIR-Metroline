@@ -37,6 +37,7 @@ plugins:
   - jemoji
   - webrick
 
+
 theme_variables:
   # git_host: GitHub
   # back_to_top: true
@@ -54,7 +55,7 @@ theme_variables:
   #   more-information-tiles: More information
   #   resource-table-all: Tools and resources on this page
   #   resource-table-all-collapse: false
-  #   affiliation-tiles-page: Affiliations
+     affiliation-tiles-page: Affiliations
 #     contributor-minitiles-page: Contributors
   # toc:
   #   min_headings: 2
