@@ -10,6 +10,8 @@ subitems:
         url: /metroline_steps/have_a_fair_data_steward_on_board
       - title: Pre-FAIR Assessment
         url: /metroline_steps/pre_fair_assessment
+  - title: Contributing
+    url: /contributing/contributing
   - title: Contributors
     url: /contributing/contributors
   - title: Logo page
