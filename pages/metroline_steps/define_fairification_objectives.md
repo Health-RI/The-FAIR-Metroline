@@ -22,7 +22,7 @@ Setting clear FAIRification objectives is essential for several reasons.
 * **Enhance collaboration.** Facilitates communication among team members and stakeholders, ensuring shared understanding of FAIR goals.
 * **Measure progress.** Establishes measurable milestones, supporting tracking and continuous improvement.
 
-FAIR objectives help identify which steps in the [FAIR Metroline](../index) are relevant to your FAIRification journey, ensuring a structured and efficient approach.
+FAIR objectives help identify which steps in the [FAIR Metroline]({{site.baseurl}}/index) are relevant to your FAIRification journey, ensuring a structured and efficient approach.
 
 ## How to
 ### Step 1 - Understand the FAIR principles
@@ -45,7 +45,7 @@ Consider the impact of your FAIRification efforts early on to ensure your object
 * **Research question.** How does the driving research question impact your FAIRification objectives?
 
 ### Step 4 - Define the target FAIR level
-Decide on the desired FAIR level for your project or study. Conducting a pre-FAIR assessment (see [Metroline step: Pre-FAIR Assessment](pre_fair_assessment)) helps to determine whether a lightweight FAIR approach (e.g. improving from non-structured to structured metadata) or a more extensive one (e.g. transforming a relational database into fully ontologised linked data) is suitable for your needs.
+Decide on the desired FAIR level for your project or study. Conducting a pre-FAIR assessment (see [Metroline step: Pre-FAIR Assessment]({{site.baseurl}}/metroline_steps/pre_fair_assessment)) helps to determine whether a lightweight FAIR approach (e.g. improving from non-structured to structured metadata) or a more extensive one (e.g. transforming a relational database into fully ontologised linked data) is suitable for your needs.
 
 ### Step 5 - Identify required resources
 Identify the resources you will need to complete your FAIRification process and assess their availability. Consider the following:
@@ -54,15 +54,15 @@ Identify the resources you will need to complete your FAIRification process and 
 * Do you need to hire specific expertise?
 * Do you need specific software or additional hardware to meet your FAIRification objectives?
 
-See [Metroline Step: Build the Team](build_the_team) for more information on team requirements.
+See [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team) for more information on team requirements.
 
 ### Step 6 - Organise and outline necessary steps
-Organise and describe the steps and resources identified in the previous step necessary for reaching your FAIRification objective(s). This can be a separate plan (see [Metroline Step: Design Solution Plan](design_solution_plan)) or part of your Data Management Plan (DMP). Make sure to formulate your FAIRification objectives as specifically as possible and, where possible, incorporate research questions. For example:
+Organise and describe the steps and resources identified in the previous step necessary for reaching your FAIRification objective(s). This can be a separate plan (see [Metroline Step: Design Solution Plan]({{site.baseurl}}/metroline_steps/design_solution_plan)) or part of your Data Management Plan (DMP). Make sure to formulate your FAIRification objectives as specifically as possible and, where possible, incorporate research questions. For example:
 * I require interoperable data, because I need to connect two different datasets to answer question X;
 * I want to make my data more findable for researchers in my field by publishing it in repository Z.
 
 ## Expertise requirements for this step 
-Defining FAIRification objectives is typically a collaborative effort by a range of experts, as described in [Metroline Step: Build the Team](build_the_team).
+Defining FAIRification objectives is typically a collaborative effort by a range of experts, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team).
 * **Researchers with domain knowledge.** Provide context to the FAIRification efforts from the perspective of a domain.
 * **FAIR data stewards.** Help define FAIRification objectives to meet the project’s, funder’s, journal’s and/or institute’s requirements.
 * **Semantic experts.** Assist in specifying the metadata/modelling aspects of FAIRification objectives.

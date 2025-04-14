@@ -1,6 +1,6 @@
 subitems:
   - title: Home
-    url: /index
+    url: /
   - title: FAIR Metroline steps
     url: /fair_metroline_steps
     subitems:
@@ -12,6 +12,9 @@ subitems:
         url: /metroline_steps/pre_fair_assessment
   - title: Contributing
     url: /contributing/contributing
+    subitems:
+      - title: Development process
+        url: /contributing/development_process
   - title: Contributors
     url: /contributing/contributors
   - title: Logo page

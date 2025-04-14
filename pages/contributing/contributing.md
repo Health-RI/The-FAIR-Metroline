@@ -6,13 +6,13 @@ permalink: contributing/contributing
 The FAIR Metroline will be richer and more feasible to execute if we better consider the organisational context and existing best practices. As a result, the FAIR Metroline is a cooperative effort between the Health-RI Hub and Nodes, involving the many public and private organisations and initiatives that address the reuse of care and research data. We invite you to collaborate with us as we continue to enhance and refine the various FAIR Metroline phases. Read more about the [FAIR Metroline development process]() and see the section below on the many ways you can contribute to this initiative. 
 
 Become part of the FAIR Metroline team:
-* Join the [Writing group]() and collaborate with us to co-create pages. As a member of the Writing group, you'll have the opportunity to draft new content, improve existing pages, and ensure that the information is clear, accurate, and actionable. 
-* Join the [Reviewing group]() and provide valuable feedback by reviewing content. As a reviewer, you will critically assess drafts for accuracy, clarity, and relevance, helping to ensure high-quality and trustworthy information. 
-* Join the [Editorial board]() and help shape the processes and priorities of the FAIR Metroline. As a board member, you'll be involved in decision-making regarding content prioritization, process improvements, and overall strategy. 
+* Join the [Writing group]({{site.baseurl}}/contributing/development_process#writing-group) and collaborate with us to co-create pages. As a member of the Writing group, you'll have the opportunity to draft new content, improve existing pages, and ensure that the information is clear, accurate, and actionable. 
+* Join the [Reviewing group]({{site.baseurl}}/contributing/development_process#reviewing-group) and provide valuable feedback by reviewing content. As a reviewer, you will critically assess drafts for accuracy, clarity, and relevance, helping to ensure high-quality and trustworthy information. 
+* Join the [Editorial board]({{site.baseurl}}/contributing/development_process#editorial-board) and help shape the processes and priorities of the FAIR Metroline. As a board member, you'll be involved in decision-making regarding content prioritization, process improvements, and overall strategy. 
 
 Send an email to <a href="mailto:fairservicedesk@health-ri.nl">fairservicedesk@health-ri.nl</a> and we will contact you to discuss the possibilities.
 
-If you have a suggestion about one of the pages, but are not interested in joining one of the groups, please feel free to fill in our [feedback form](). Your insights are valuable, and we welcome your contributions to improve the FAIR Metroline.
+If you have a suggestion about one of the pages, but are not interested in joining one of the groups, please feel free to fill in our [feedback form]({{site.baseurl}}/contributing/quick_feedback_form). Your insights are valuable, and we welcome your contributions to improve the FAIR Metroline.
 
 ## Contribute to the FAIR Metroline in various ways
 There are various ways you can contribute to the development of the FAIR Metroline pages:
