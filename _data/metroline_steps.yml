@@ -1,125 +1,151 @@
 - id: 1
-  title: "Define FAIRification objectives"
-  summary: "FAIRification objectives aim to make data more Findable, Accessible, Interoperable, and Reusable (FAIR). They focus on improving how data is organised and shared, ensuring that it can be easily accessed, understood and used by both humans and machines. Achieving such objectives maximises the value of data, enhancing its usefulness and long-term usability."
-  url: "/metroline_steps/define_fairification_objectives"
+  title: Define FAIRification objectives
+  summary: FAIRification objectives aim to make data more Findable, Accessible, Interoperable, and Reusable (FAIR). They focus on improving how data is organised and shared, ensuring that it can be easily accessed, understood and used by both humans and machines. Achieving such objectives maximises the value of data, enhancing its usefulness and long-term usability.
+  url: metroline_steps/define_fairification_objectives
   icon: ":dart:"
+  status: RELEASED
 - id: 2
-  title: "Have a FAIR data steward on board"
-  summary: "A FAIR data steward guides teams in organising, storing, and describing data to meet the FAIR principles, ensuring research data can be understood and reused, making science more efficient and transparent."
-  url: "/metroline_steps/have_a_fair_data_steward_on_board"
+  title: Have a FAIR data steward on board
+  summary: A FAIR data steward guides teams in organising, storing, and describing data to meet the FAIR principles, ensuring research data can be understood and reused, making science more efficient and transparent.
+  url: metroline_steps/have_a_fair_data_steward_on_board
   icon: ":mechanic:"
+  status: RELEASED
 - id: 3
-  title: "Pre-FAIR assessment"
-  summary: "A pre-FAIR assessment evaluates the current state of your data and its alignment with the FAIR principles. Performing this assessment early makes you aware of possibilities for increasing the FAIRness of your data, which in turn increases its impact and ensures its long-term usability."
-  url: "metroline_steps/pre_fair_assessment"
+  title: Pre-FAIR assessment
+  summary: A pre-FAIR assessment evaluates the current state of your data and its alignment with the FAIR principles. Performing this assessment early makes you aware of possibilities for increasing the FAIRness of your data, which in turn increases its impact and ensures its long-term usability.
+  url: metroline_steps/pre_fair_assessment
   icon: ":white_check_mark:"
+  status: RELEASED
 - id: 4
-  title: "Build the Team"
-  summary: "Coming soon."
-  url: ""
+  title: Build the Team
+  summary: Coming soon.
+  url: 
   icon: ":running_shirt_with_sash:"
+  status: IN DEVELOPMENT
 - id: 5
-  title: "Get Training"
-  summary: "Coming soon."
-  url: ""
+  title: Get Training
+  summary: Coming soon.
+  url: 
   icon: ":weight_lifting:"
+  status: IN DEVELOPMENT
 - id: 6
-  title: "Design Solution Plan"
-  summary: "Coming soon."
-  url: ""
+  title: Design Solution Plan
+  summary: Coming soon.
+  url: 
   icon: ":bookmark_tabs:"
+  status: IN DEVELOPMENT
 - id: 7
-  title: "Data access and retrieval"
-  summary: "Coming soon."
-  url: ""
+  title: Data access and retrieval
+  summary: Coming soon.
+  url: 
   icon: ":closed_lock_with_key:"
+  status: FUTURE WORK
 - id: 8
-  title: "Assess availability of your metadata"
-  summary: "Coming soon."
-  url: ""
+  title: Assess availability of your metadata
+  summary: Coming soon.
+  url: 
   icon: ":books:"
+  status: READY FOR REVIEW
 - id: 9
-  title: "Select Identifier Scheme"
-  summary: "Coming soon."
-  url: ""
+  title: Select Identifier Scheme
+  summary: Coming soon.
+  url: 
   icon: ":passport_control:"
+  status: FUTURE WORK
 - id: 10
-  title: "Register resource level metadata"
-  summary: "Coming soon."
-  url: ""
+  title: Register resource level metadata
+  summary: Coming soon.
+  url: 
   icon: ":card_file_box:"
+  status: READY FOR REVIEW
 - id: 11
-  title: "Register record level metadata"
-  summary: "Coming soon."
-  url: ""
+  title: Register record level metadata
+  summary: Coming soon.
+  url: 
   icon: ":card_file_box:"
+  status: IN DEVELOPMENT
 - id: 12
-  title: "Apply common data elements"
-  summary: "Coming soon."
-  url: ""
+  title: Apply common data elements
+  summary: Coming soon.
+  url: 
   icon: ":toolbox:"
+  status: FUTURE WORK
 - id: 13
-  title: "Analyse data semantics"
-  summary: "Coming soon."
-  url: ""
+  title: Analyse data semantics
+  summary: Coming soon.
+  url: 
   icon: ":mag_right:"
+  status: IN DEVELOPMENT
 - id: 14
-  title: "Design eCRF (data collection)"
-  summary: "Coming soon."
-  url: ""
+  title: Design eCRF (data collection)
+  summary: Coming soon.
+  url: 
   icon: ":pencil:"
+  status: FUTURE WORK
 - id: 15
-  title: "Create or reuse a semantic (meta)data model"
-  summary: "Coming soon."
-  url: ""
+  title: Create or reuse a semantic (meta)data model
+  summary: Coming soon.
+  url: 
   icon: ":construction:"
+  status: ON HOLD
 - id: 16
-  title: "Use ontologies in the data model"
-  summary: "Coming soon."
-  url: ""
+  title: Use ontologies in the data model
+  summary: Coming soon.
+  url: 
   icon: ":book:"
+  status: ON HOLD
 - id: 17
-  title: "Obtain Informed Consent"
-  summary: "Coming soon."
-  url: ""
+  title: Obtain Informed Consent
+  summary: Coming soon.
+  url: 
   icon: ":person_red_hair:"
+  status: IN DEVELOPMENT
 - id: 18
-  title: "Enter data in eCRF (data collection)"
-  summary: "Coming soon."
-  url: ""
+  title: Enter data in eCRF (data collection)
+  summary: Coming soon.
+  url: 
   icon: ":computer:"
+  status: FUTURE WORK
 - id: 19
-  title: "Apply core metadata model"
-  summary: "Coming soon."
-  url: ""
+  title: Apply core metadata model
+  summary: Coming soon.
+  url: 
   icon: ":card_file_box:"
+  status: IN DEVELOPMENT
 - id: 20
-  title: "Transform and expose FAIR (meta)data"
-  summary: "Coming soon."
-  url: ""
+  title: Transform and expose FAIR (meta)data
+  summary: Coming soon.
+  url: 
   icon: ":toolbox:"
+  status: IN DEVELOPMENT
 - id: 21
-  title: "Define access conditions"
-  summary: "Coming soon."
-  url: ""
+  title: Define access conditions
+  summary: Coming soon.
+  url: 
   icon: ":closed_lock_with_key:"
+  status: FUTURE WORK
 - id: 22
-  title: "Query (use) over resources"
-  summary: "Coming soon."
-  url: ""
+  title: Query (use) over resources
+  summary: Coming soon.
+  url: 
   icon: ":question:"
+  status: FUTURE WORK
 - id: 23
-  title: "Assess FAIRness"
-  summary: "Coming soon."
-  url: ""
+  title: Assess FAIRness
+  summary: Coming soon.
+  url: 
   icon: ":white_check_mark:"
+  status: IN DEVELOPMENT
 - id: 24
-  title: "Did you reach your FAIRification objectives"
-  summary: "Coming soon."
-  url: ""
+  title: Did you reach your FAIRification objectives
+  summary: Coming soon.
+  url: 
   icon: ":checkered_flag:"
+  status: FUTURE WORK
 - id: 25
-  title: "TEST"
-  summary: "Overflow test."
-  url: ""
-  icon: ""
+  title: TEST
+  summary: Overflow test.
+  url: 
+  icon: 
+  status: 
+

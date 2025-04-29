@@ -4,7 +4,7 @@ title: The FAIR Metroline
 topnav_title: The FAIR Metroline
 # Optional: this appears on the top navigation bar next to the main_logo.svg icon
 
-description: "Example of ELIXIR toolkit theme as a remote jekyll theme"
+description: "The FAIR Metroline - Steps for your FAIRification workflow"
 # Metadata description of the website
 
 remote_theme: ELIXIR-Belgium/elixir-toolkit-theme@4.1.0

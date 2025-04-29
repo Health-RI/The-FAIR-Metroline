@@ -4,6 +4,7 @@ permalink: /metroline_steps/pre_fair_assessment
 ---
 
 {% include assign_current_step.html %}
+{% include development_status.html step=current_step %}
 
 >***FAIR evaluation results can serve as a pointer to where your FAIRness can be improved. ([FAIRopoly](https://www.ejprarediseases.org/fairopoly/))***
 > 

@@ -19,9 +19,6 @@ A variety of models and publications which are used in practice [were studied](h
 {% include graph_logic/graph-block.html graphs=site.data.graphs.main section="section1" %}
 
 
-[//]: # (![FAIR workflow image.png]&#40;assets/img/main/FAIR%20workflow%20image.png&#41;)
-
-
 The FAIR Metroline is under development, in alignment with the development of the [Dutch National Health Data Catalogue](https://catalog.accesshealthdata.nl/). Over the coming months, we will add detailed how-to descriptions and real-life examples of FAIR Metroline that will particularly help projects and initiatives to onboard (meta)data to the Dutch National Health Data Catalogue. This already is a first effective step to make your data more FAIR. We also collaborate with the [health domain funders](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/33816783) and their efforts to stimulate incorporating FAIR into projects from the start. 
 
 For the current status of the steps see the [status](fair_metroline_status) page.
@@ -36,7 +33,8 @@ The FAIR Metroline will be richer and more feasible to execute if we better cons
 <div class="metroline-grid">
   {% for step in site.data.metroline_steps %}
     <div class="metroline-grid-cell">
-      <span class="icon">{{ step.icon }}</span><a href="{{ step.url }}"><b>{{ step.title }}</b></a>
+        <span class="icon">{{ step.icon }}</span><a href="{{ step.url }}"><b>{{ step.title }}</b></a>
+        {% include development_status.html step=step %}
     </div>
   {% endfor %}
 </div>

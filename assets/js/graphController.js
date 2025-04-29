@@ -9,7 +9,6 @@ function showGraph(graphId) {
 
 // hides all graphs
 function hideGraphs(element_section){
-//    const children = document.querySelectorAll("#graph-container").children;
     const children = document.querySelectorAll('[section='+element_section+']');
     for (let i = 0; i < children.length; i++) {
         children[i].style.display = "none";

@@ -1,4 +1,4 @@
-# we'll stick to the plugin's format here
+# we'll stick to the plugin's format here so we can reuse includes from the plugin if we want
 - name: Amsterdam UMC
   image_url: assets/img/logos/amsterdamumc_transp.svg
   pid: ""

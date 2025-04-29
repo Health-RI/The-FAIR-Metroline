@@ -11,19 +11,13 @@ columns:
     children: 
       - url_text: How to contribute
         url: /contributing/how_to_contribute
-      - url_text: Contributors
-        url: /contributing/contributors
       - url_text: Development process
         url: /contributing/development_process
   - type: links
     width: 3
     children: 
-      - url_text: How to contribute
-        url: /contributing/how_to_contribute
       - url_text: Contributors
         url: /contributing/contributors
-      - url_text: Development process
-        url: /contributing/development_process
   - type: image
     image_width: 88px
     width: 2
