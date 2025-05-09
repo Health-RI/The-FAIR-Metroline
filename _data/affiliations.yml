@@ -1,68 +1,121 @@
 # we'll stick to the plugin's format here so we can reuse includes from the plugin if we want
-- name: Amsterdam UMC
-  image_url: assets/img/logos/amsterdamumc_transp.svg
-  pid: ""
-  expose: true
-  type: general
-  url: https://www.amsterdamumc.nl/
-- name: Erasmus MC
-  image_url: assets/img/logos/erasmusmc_transp.svg
-  pid: ""
-  expose: true
-  type: general
-  url: https://www.erasmusmc.nl/
 - name: Health-RI
   image_url: assets/img/logos/healthri_transp.png
-  pid: ""
+  url: https://www.health-ri.nl/
   expose: true
   type: general
-  url: https://www.health-ri.nl/
+  pid: ""
+- name: Amsterdam UMC
+  image_url: assets/img/logos/amsterdamumc_transp.svg
+  url: https://www.amsterdamumc.nl/
+  expose: true
+  type: general
+  pid: ""
+- name: Erasmus MC
+  image_url: assets/img/logos/erasmusmc_transp.svg
+  url: https://www.erasmusmc.nl/
+  expose: true
+  type: general
+  pid: ""
 - name: Leids Universitair Medisch Centrum
   image_url: assets/img/logos/lumc_transp.png
-  pid: ""
+  url: https://www.lumc.nl/
   expose: true
   type: general
-  url: https://www.lumc.nl/
+  pid: ""
 - name: Maastricht UMC+
   image_url: assets/img/logos/maastrichtumc_transp.svg
-  pid: ""
+  url: https://www.maastrichtuniversity.nl/
   expose: false
   type: general
-  url: https://www.maastrichtuniversity.nl/
+  pid: ""
 - name: Maastricht University
   image_url: assets/img/logos/maastricht_university_transp.svg
-  pid: ""
+  url: https://www.maastrichtuniversity.nl/
   expose: true
   type: general
-  url: https://www.maastrichtuniversity.nl/
+  pid: ""
 - name: Nederlands Kanker Instituut
   image_url: assets/img/logos/nki_transp.svg
-  pid: ""
+  url: https://www.nki.nl/
   expose: true
   type: general
-  url: https://www.nki.nl/
+  pid: ""
 - name: Radboudumc
   image_url: assets/img/logos/radboudumc_transp.svg
-  pid: ""
+  url: https://www.radboudumc.nl/
   expose: true
   type: general
-  url: https://www.radboudumc.nl/
+  pid: ""
 - name: UMCG
   image_url: assets/img/logos/umcg_transp.png
-  pid: ""
+  url: https://www.umcg.nl/
   expose: true
   type: general
-  url: https://www.umcg.nl/
-- name: UMC Utrecht
-  image_url: assets/img/logos/umcu_transp.png
   pid: ""
-  expose: false
-  type: general
+- name: UMC Utrecht
+  image_url: assets/img/logos/umcu_transp.svg
   url: https://www.umcutrecht.nl/
+  expose: true
+  type: general
+  pid: ""
 - name: ZonMw
   image_url: assets/img/logos/zonmw_transp.svg
-  pid: ""
-  expose: false
-  type: funders
   url: https://www.zonmw.nl/
-
+  expose: true
+  type: general
+  pid: ""
+- name: Elixir
+  image_url: assets/img/logos/elixir-outlined_transp.png
+  url: https://elixir-europe.org/
+  expose: true
+  type: general
+  pid: ""
+- name: Elixir-NL
+  image_url: assets/img/logos/elixir-nl_transp.png
+  url: https://www.health-ri.nl/en/elixir
+  expose: true
+  type: general
+  pid: ""
+- name: Maastricht UMC+
+  image_url: assets/img/logos/mumc_transp.svg
+  url: https://www.mumc.nl/
+  expose: true
+  type: general
+  pid: ""
+- name: Eindhoven University of Technology
+  image_url: assets/img/logos/tue_transp.svg
+  url: https://www.tue.nl/
+  expose: true
+  type: general
+  pid: ""
+- name: RDMkit
+  image_url: assets/img/logos/rdmkit_transp.svg
+  url: https://rdmkit.elixir-europe.org
+  expose: true
+  type: general
+  pid: ""
+- name: FAIR Cookbook
+  image_url: assets/img/logos/faircookbook_transp.svg
+  url: https://elixiruknode.org/service/fair-cookbook
+  expose: true
+  type: general
+  pid: ""
+- name: Data Stewardship Wizard
+  image_url: assets/img/logos/dsw_transp.svg
+  url: https://ds-wizard.org/
+  expose: true
+  type: general
+  pid: ""
+- name: FAIRsharing
+  image_url: assets/img/logos/fairsharing_transp.svg
+  url: https://fairsharing.org/
+  expose: true
+  type: general
+  pid: ""
+- name: FIP Wizard
+  image_url: assets/img/logos/fip-wizard_transp.svg
+  url: https://fip.fair-wizard.com
+  expose: true
+  type: general
+  pid: ""

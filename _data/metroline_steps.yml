@@ -54,10 +54,10 @@
   status: FUTURE WORK
 - id: 10
   title: Register resource level metadata
-  summary: Coming soon.
-  url: 
+  summary: To make your resource (e.g. data), available for reuse, its metadata can be published in a catalogue. This step helps you find a catalogue where you can register these resource metadata and explains why adding your resource to such a catalogue is important.
+  url: metroline_steps/register_resource_level_metadata
   icon: ":card_file_box:"
-  status: READY FOR REVIEW
+  status: RELEASED
 - id: 11
   title: Register record level metadata
   summary: Coming soon.

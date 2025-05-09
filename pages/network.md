@@ -1,5 +1,5 @@
 ---
-title: Logo page
+title: Network
 ---
 
 The FAIR Metroline is endorsed by

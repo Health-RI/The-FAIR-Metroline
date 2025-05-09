@@ -8,8 +8,10 @@ subitems:
         url: /metroline_steps/define_fairification_objectives
       - title: Have a FAIR data steward on board
         url: /metroline_steps/have_a_fair_data_steward_on_board
-      - title: Pre-FAIR Assessment
+      - title: Pre-FAIR assessment
         url: /metroline_steps/pre_fair_assessment
+      - title: Register resource-level metadata
+        url: /metroline_steps/register_resource_level_metadata
   - title: Contributing
     url: /contributing/contributing
     subitems:
@@ -19,5 +21,5 @@ subitems:
         url: /contributing/style_guide
   - title: Contributors
     url: /contributing/contributors
-  - title: Logo page
-    url: /logo_page
+  - title: Network
+    url: /network
