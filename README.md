@@ -5,7 +5,7 @@ The FAIR Metroline provides practical guidance to help you reach your FAIR goals
 
 The development of the FAIR Metroline is currently ongoing in Confluence. To enhance flexibility and improve findability, we are transferring both published pages and those available for external review to this web-based version.
 
-More information will follow in this README soon. 
+More information will follow in this README soon.
 
 # Attribution
 The FAIR Metroline uses the ELIXIR Toolkit Theme. 
