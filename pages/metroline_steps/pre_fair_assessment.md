@@ -154,4 +154,5 @@ For an applied example of The FAIR Evaluator, see [Applying the FAIR principles 
 Relevant training will be added soon.
 
 ## Suggestions
-This page has been written and reviewed by field experts through a rigorous process and has reached the “released” status. Learn more about the contributors [here](contributing/contributors) and explore the development process [here](contributing/development_process). If you have any suggestions, visit our [How to contribute](contributing/how_to_contribute) page to get in touch.
+{% include metroline_steps/suggestions_released.html %}
+

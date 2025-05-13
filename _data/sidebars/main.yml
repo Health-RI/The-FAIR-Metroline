@@ -10,6 +10,8 @@ subitems:
         url: /metroline_steps/have_a_fair_data_steward_on_board
       - title: Pre-FAIR assessment
         url: /metroline_steps/pre_fair_assessment
+      - title: Assess availability of your metadata
+        url: /metroline_steps/assess_availability_of_your_metadata
       - title: Register resource-level metadata
         url: /metroline_steps/register_resource_level_metadata
   - title: Contributing

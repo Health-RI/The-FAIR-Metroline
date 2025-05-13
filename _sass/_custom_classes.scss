@@ -141,6 +141,13 @@ img.size-large {
 //     transform: scale(1.05); /* Slight zoom on hover */
 }
 
+.info-box {
+  border-left: 4px solid #1e90ff;
+  background-color: #f0f8ff;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 4px;
+}
 
 // .mermaidTooltip {
 //     visibility: visible; /* Ensure it's visible */

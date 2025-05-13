@@ -165,7 +165,5 @@ The current metadata catalogue selected for NMCB is [DataverseNL](https://datave
 Find more information in the [NMCB FAIR Implementation Profile](https://fip-wizard.ds-wizard.org/wizard/projects/64607580-dec0-40db-aca0-5151f96b4833). 
 
 ## Suggestions
-This page has been written and reviewed by field experts through a rigorous process and has reached the “released” status. Learn more about the contributors [here](contributing/contributors) and explore the development process [here](contributing/development_process). If you have any suggestions, visit our [How to contribute](contributing/how_to_contribute) page to get in touch.
-
-
+{% include metroline_steps/suggestions_released.html %}
 

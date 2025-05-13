@@ -102,4 +102,4 @@ For onboarding metadata into the catalogue, the following FAIRification objectiv
 Relevant training will be added soon.
 
 ## Suggestions
-This page has been written and reviewed by field experts through a rigorous process and has reached the “released” status. Learn more about the contributors [here](contributing/contributors) and explore the development process [here](contributing/development_process). If you have any suggestions, visit our [How to contribute](contributing/how_to_contribute) page to get in touch.
+{% include metroline_steps/suggestions_released.html %}
