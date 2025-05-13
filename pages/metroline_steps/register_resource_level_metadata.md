@@ -160,11 +160,9 @@ Depending on these variables, selecting the appropriate metadata catalogue may b
 
 The Netherlands ME/CFS Cohort and Biobank (NMCB) consortium, in partnership with patient organisations, is leading the way for the development of a national research infrastructure for Myalgic Encephalomyelitis and Chronic Fatigue Syndrome (ME/CFS). 
 
-The current choices of metadata catalogues for NMCB are as follows.
-* [Amsterdam Cohort Hub Data Catalogue]() (under development) for metadata of the NMCB consortium.
-* [DataverseNL](https://dataverse.nl/) for metadata of NMCB resources. It is a national data repository service with a catalogue, tailored for researchers in the Netherlands.
+The current metadata catalogue selected for NMCB is [DataverseNL](https://dataverse.nl/), a national repository service designed specifically for researchers in the Netherlands. It provides a dedicated catalogue for managing and publishing metadata associated with NMCB resources.
 
-These decisions are described in the first version of a FAIR Implementation Profile, the [NMCB FIP](https://fip-wizard.ds-wizard.org/wizard/projects/64607580-dec0-40db-aca0-5151f96b4833), and the release of the next version will be in October 2024. 
+Find more information in the [NMCB FAIR Implementation Profile](https://fip-wizard.ds-wizard.org/wizard/projects/64607580-dec0-40db-aca0-5151f96b4833). 
 
 ## Suggestions
 This page has been written and reviewed by field experts through a rigorous process and has reached the “released” status. Learn more about the contributors [here](contributing/contributors) and explore the development process [here](contributing/development_process). If you have any suggestions, visit our [How to contribute](contributing/how_to_contribute) page to get in touch.
