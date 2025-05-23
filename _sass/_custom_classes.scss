@@ -1,4 +1,8 @@
 // Include here all custom classes to add extra styling on top of what the theme and bootstrap variables offer. 
+@import "components/info-box";
+@import "components/metroline-grid";
+@import "components/metroline-status";
+@import "components/image-styling";
 
 //Example for highlighting the active page in the navigation:
 /*-----Top navigation-----*/
@@ -11,119 +15,9 @@
     }
 }
 
-.author-card {
-  text-align: center;
-}
-.author-name{
-    font-size: 90%;
-}
-.author-affiliation{
-    font-size: 80%;
-}
 
-figure {
-  text-align: center;
-  margin: 2em auto;
-}
 
-figure img {
-  max-width: 100%;
-  height: auto;
-}
 
-figcaption {
-  font-size: 0.9em;
-  color: #666;
-  margin-top: 0.5em;
-  text-align: center; /* This ensures the caption itself is centered */
-}
-
-img.size-small {
-  width: 300px;
-}
-
-img.size-medium {
-  width: 500px;
-}
-
-img.size-large {
-  width: 100%;
-  max-width: 800px;
-}
-
-// styling for the metroline grid as used by e.g. the contributors page
-.metroline-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
-  gap: 1rem;
-}
-
-.metroline-grid-cell {
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.05);
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.metroline-grid-cell .icon {
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
-}
-
-// Styling for the logos on the logo page
-.logo-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.logo-item {
-  width: 185px;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo-item img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  filter: grayscale(100%);
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.logo-item img:hover {
-  transform: scale(1.1);
-  filter: grayscale(0%);
-}
-
-// styling for metroline development status
-.metroline-status {
-  font-weight: bold;
-  font-size: 0.7em;
-  margin-top: 0.5em;
- }
-
-.metroline-status-released {
-  color: green;
-}
-.metroline-status-in-development {
-  color: red;
-}
-.metroline-status-on-hold {
-  color: blue;
-}
-.metroline-status-future-work {
-  color: purple;
-}
-.metroline-status-ready-for-review {
-  color: orange;
-}
 // .nodeLabel p{
 //     text-decoration: underline; /* Makes it clear it's a link */
 //     color: darkblue !important; /* Default link color */
@@ -134,6 +28,14 @@ img.size-large {
 //     cursor: pointer; /* Changes cursor on hover */
 // }
 
+
+
+.mermaid svg a p {
+  color: darkblue !important;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .mermaid a:hover {
     color: darkblue !important;
     text-shadow: 0px 0px 5px rgba(0, 0, 255, 0.7); /* Glow effect */
@@ -141,12 +43,15 @@ img.size-large {
 //     transform: scale(1.05); /* Slight zoom on hover */
 }
 
-.info-box {
-  border-left: 4px solid #1e90ff;
-  background-color: #f0f8ff;
-  padding: 1em;
-  margin: 1em 0;
-  border-radius: 4px;
+.graph-container {
+  display: inline-block;        // allow the box to shrink to fit content
+  max-width: 100%;              // prevent overflow on small screens
+  max-height: 550px;
+  overflow: auto;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;          // add spacing below the graph
+  background-color: #fff;       // optional: makes padding visible
 }
 
 // .mermaidTooltip {

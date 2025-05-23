@@ -1,6 +1,30 @@
 <!--
 Some reusable code to create an info box
 -->
-<div class="info-box">
-  <strong>ℹ️ {{ include.title | default: "Note" }}</strong> {{ include.text }}
+{% assign type = include.type | default: "info" %}
+
+{% case type %}
+  {% when "info" %}
+    {% assign icon = "ℹ️" %}
+    {% assign default_title = "Note" %}
+  {% when "warning" %}
+    {% assign icon = "⚠️" %}
+    {% assign default_title = "Warning" %}
+  {% when "alert" %}
+    {% assign icon = "🚨" %}
+    {% assign default_title = "Alert" %}
+  {% when "tip" %}
+    {% assign icon = "💡" %}
+    {% assign default_title = "Tip" %}
+  {% when "example" %}
+    {% assign icon = "🧪" %}
+    {% assign default_title = "Example" %}
+  {% else %}
+    {% assign icon = "📝" %}
+    {% assign default_title = "Note" %}
+{% endcase %}
+
+<div class="info-box {{ type }}">
+  <strong>{{ icon }} {{ include.title | default: default_title }}</strong>
+  {{ include.text | markdownify }}
 </div>

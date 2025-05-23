@@ -30,10 +30,10 @@
   status: IN DEVELOPMENT
 - id: 6
   title: Design Solution Plan
-  summary: Coming soon.
-  url: 
+  summary: This step is about turning the findings from the pre-FAIR assessment into a clear, actionable plan. It means choosing the right tools, deciding who does what, and making sure the process is simple and effective so data can actually become FAIR.
+  url: metroline_steps/design_solution_plan
   icon: ":bookmark_tabs:"
-  status: IN DEVELOPMENT
+  status: RELEASED
 - id: 7
   title: Data access and retrieval
   summary: Coming soon.
@@ -72,10 +72,10 @@
   status: FUTURE WORK
 - id: 13
   title: Analyse data semantics
-  summary: Coming soon.
-  url: 
+  summary: In this step, the aim is to gain more insight into the existing data, or the data that you aim to collect. Clearly defining the meaning (semantics) of the data is an important step for creating the semantic model, as well as for data collection via, for example, electronic case report forms (eCRFs).
+  url: metroline_steps/analyse_data_semantics
   icon: ":mag_right:"
-  status: IN DEVELOPMENT
+  status: RELEASED
 - id: 14
   title: Design eCRF (data collection)
   summary: Coming soon.
@@ -95,11 +95,11 @@
   icon: ":book:"
   status: ON HOLD
 - id: 17
-  title: Obtain Informed Consent
-  summary: Coming soon.
-  url: 
+  title: Obtain informed consent
+  summary: To ensure your data and materials can be reused in the future, your subject information sheet (SIS) and informed consent form (ICF) must address reuse. This Metroline step provides consideration and resources for preparing your SIS and ICF.
+  url: metroline_steps/obtain_informed_consent
   icon: ":person_red_hair:"
-  status: IN DEVELOPMENT
+  status: RELEASED
 - id: 18
   title: Enter data in eCRF (data collection)
   summary: Coming soon.

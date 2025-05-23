@@ -13,7 +13,7 @@ The FAIR Metroline provides practical guidance to help you reach your FAIR goals
 
 A variety of models and publications which are used in practice [were studied](https://zenodo.org/records/7867293) to identify common FAIRification steps, which resulted in the FAIR Metroline (see image above). Depending on your project and goals only a select number of steps may be relevant. Consequently, each project will have its specific workflow: 
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+<script src="assets/js/init_mermaid.js"></script>
 {% include graph_logic/on-load.html graphs=site.data.graphs.main %}
 <script src="assets/js/graphController.js"></script>
 {% include graph_logic/graph-block.html graphs=site.data.graphs.main section="section1" %}

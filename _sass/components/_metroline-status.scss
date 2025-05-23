@@ -1,0 +1,22 @@
+// styling for metroline development status
+.metroline-status {
+  font-weight: bold;
+  font-size: 0.7em;
+  margin-top: 0.5em;
+ }
+
+.metroline-status-released {
+  color: green;
+}
+.metroline-status-in-development {
+  color: red;
+}
+.metroline-status-on-hold {
+  color: blue;
+}
+.metroline-status-future-work {
+  color: purple;
+}
+.metroline-status-ready-for-review {
+  color: orange;
+}

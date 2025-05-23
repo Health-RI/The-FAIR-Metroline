@@ -1,0 +1,30 @@
+
+figure {
+  text-align: center;
+  margin: 2em auto;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 0.5em;
+  text-align: center; /* This ensures the caption itself is centered */
+}
+
+img.size-small {
+  width: 300px;
+}
+
+img.size-medium {
+  width: 500px;
+}
+
+img.size-large {
+  width: 100%;
+  max-width: 800px;
+}

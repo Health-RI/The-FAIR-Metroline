@@ -71,21 +71,21 @@ You are now ready to take the next step with your metadata:
 * **Expand your metadata to include domain specific metadata.** [Domain-specific metadata schema development](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/545783826)
 * **follow a semantic model to describe your metadata (under construction.** [Metroline Step: Create or reuse a semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model) )
 
-### Expertise requirements for this step 
+## Expertise requirements for this step 
 Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
 * Data manager/Data steward/Data librarian, Researcher (Scientist) or someone else who knows the context and content of the project.
 
-### Practical examples from the community 
+## Practical examples from the community 
 * The [Health-RI metadata schema](https://github.com/Health-RI/health-ri-metadata) is an example of **descriptive metadata** within the context of the [Dutch National Health Data Infrastructure](https://www.healthdata.nl/en).
 * An example of **administrative metadata** is provided by [ArrayExpress](https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-11745), which includes details such as experimental protocols.
 * The [FAIRGenomes codebook](https://decor.nictiz.nl/ad/#/fairgenomes-/project/overview), hosted on ART-DECOR, serves as an example of **structural metadata**.
 
-### Training
+## Training
 * [Fundamentals of Scientific Metadata: Data and Metadata](https://carpentries-incubator.github.io/scientific-metadata/instructor/data-metadata.html#metadata)  
 * [Metadata - How to FAIR](https://howtofair.dk/how-to-fair/metadata/#what-are-metadata) 
 
 More relevant trainings will be added soon.
 
-### Suggestions
+## Suggestions
 {% include metroline_steps/suggestions_released.html %}
 

@@ -1,0 +1,32 @@
+.info-box {
+  border-left: 4px solid #1e90ff;
+  background-color: #f0f8ff;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 4px;
+
+  &.info {
+    border-color: #1e90ff;
+    background-color: #f0f8ff;
+  }
+
+  &.warning {
+    border-color: #f4b400;
+    background-color: #fff8dc;
+  }
+
+  &.alert {
+    border-color: #d93025;
+    background-color: #fdecea;
+  }
+
+  &.tip {
+    border-color: #0f9d58;
+    background-color: #e6f4ea;
+  }
+
+  &.example {
+    border-color: #7e57c2; /* Deep purple */
+    background-color: #f3e5f5; /* Lavender/light purple */
+  }
+}

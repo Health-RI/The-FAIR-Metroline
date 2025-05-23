@@ -125,6 +125,20 @@ writers:
     affiliation: UMCG
     active: true
     image: stepanka_zverinova.png
+  - id: 19
+    firstName: Reinier
+    lastName: Groeneveld
+    orcid: ""
+    affiliation: Health-RI
+    active: true
+    image: reinier_groeneveld.jpg
+  - id: 20
+    firstName: Pedro
+    lastName: Paulo Favato Barcelos
+    orcid: 0000-0003-2736-7817
+    affiliation: Health-RI
+    active: true
+    image: pedro_barcelos.jpg
 reviewers:
   - id: 1
     firstName: Anna
