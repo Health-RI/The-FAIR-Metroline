@@ -1,6 +1,6 @@
 ---
 title: Evaluating the FAIRness of your data
-permalink: scenarios/evaluate_fairness
+permalink: scenarios/evaluate_data_fairness
 page_id: scenario_evaluate_fairness
 ---
 
@@ -8,7 +8,7 @@ page_id: scenario_evaluate_fairness
 This scenario illustrates which Metroline steps apply to "Evaluating the FAIRness of your data". Since it's a small scenario with no actual FAIR improvements, steps such as "Design solution plan" and "Assess FAIRness" are not part of the workflow. Thus, the workflow consists of three steps:
 * **Define FAIRification objectives** to properly define your goals.
 * **Have a FAIR data steward on board** to make sure you have the necessary support.
-* **Pre-FAIR assessment** to assess the FAIRness of your data. 
+* **Pre-FAIR assessment** to assess the FAIRness of your data.
 
 
 ## Workflow

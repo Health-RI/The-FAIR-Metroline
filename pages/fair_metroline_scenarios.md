@@ -7,5 +7,5 @@ The FAIR Metroline provides you with FAIR guidance. However, which steps are act
 
 This section provides guidance for common FAIR objectives through FAIR scenarios.
 
-* [Evaluate FAIRness of your data](scenarios/evaluate_data_fairness.md)
+* [Evaluate FAIRness of your data](scenarios/evaluate_data_fairness)
 
