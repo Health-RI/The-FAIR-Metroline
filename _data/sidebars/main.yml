@@ -24,7 +24,7 @@ subitems:
     url: /fair_metroline_scenarios
     subitems:
       - title: Evaluate data FAIRness
-        url: /metroline_steps/evaluate_data_fairness
+        url: /scenarios/evaluate_data_fairness
   - title: Contributing
     url: /contributing/contributing
     subitems:
