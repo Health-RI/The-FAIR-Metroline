@@ -1,0 +1,55 @@
+.image-wrapper {
+  display: inline-block;   // shrink to fit content
+  max-width: 100%;         // constrain growth
+  overflow-x: auto;        // enable scroll if too big
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-top: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+
+
+  &.scale-svg {
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &.no-scale-svg {
+    overflow-x: auto;
+
+    svg {
+      width: auto;
+      height: auto;
+      display: block;
+    }
+  }
+
+//   &.scale-mermaid {
+//     .mermaid {
+//       width: 100%;
+//       overflow-x: auto;
+//
+//       svg {
+//         width: 100%;
+//         height: auto;
+//         display: block;
+//       }
+//     }
+//   }
+//
+//   &.no-scale-mermaid {
+//     .mermaid {
+//       width: auto;
+//       overflow-x: auto;
+//
+//       svg {
+//         width: auto;
+//         height: auto;
+//         display: block;
+//       }
+//     }
+//   }
+}

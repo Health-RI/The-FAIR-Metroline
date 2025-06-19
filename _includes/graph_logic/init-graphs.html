@@ -1,0 +1,21 @@
+{% comment %}
+Injects the Mermaid graph definitions, configuration, and scripts.
+Requires `page_id` to be set in the front matter.
+{% endcomment %}
+
+{% assign page_graphs = site.data.graphs[page.page_id] %}
+{% if page_graphs %}
+  <script type="application/json" id="graph-config">
+    {{ page_graphs | jsonify }}
+  </script>
+
+  <script>
+    const METROLINE_BASE = "{{ site.baseurl | append: '/' }}";
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+  <script src="/assets/js/init-graphs.js"></script>
+{% else %}
+  <script>console.warn("No graphs found for graph_key '{{ page.page_id }}'")</script>
+{% endif %}

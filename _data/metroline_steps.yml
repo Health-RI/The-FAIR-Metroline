@@ -5,29 +5,29 @@
   icon: ":dart:"
   status: RELEASED
 - id: 2
+  title: Build the Team
+  summary: Coming soon.
+  url:
+  icon: ":running_shirt_with_sash:"
+  status: IN DEVELOPMENT
+- id: 3
   title: Have a FAIR data steward on board
   summary: A FAIR data steward guides teams in organising, storing, and describing data to meet the FAIR principles, ensuring research data can be understood and reused, making science more efficient and transparent.
   url: metroline_steps/have_a_fair_data_steward_on_board
   icon: ":mechanic:"
   status: RELEASED
-- id: 3
+- id: 4
+  title: Get Training
+  summary: Coming soon.
+  url:
+  icon: ":weight_lifting:"
+  status: IN DEVELOPMENT
+- id: 5
   title: Pre-FAIR assessment
   summary: A pre-FAIR assessment evaluates the current state of your data and its alignment with the FAIR principles. Performing this assessment early makes you aware of possibilities for increasing the FAIRness of your data, which in turn increases its impact and ensures its long-term usability.
   url: metroline_steps/pre_fair_assessment
   icon: ":white_check_mark:"
   status: RELEASED
-- id: 4
-  title: Build the Team
-  summary: Coming soon.
-  url: 
-  icon: ":running_shirt_with_sash:"
-  status: IN DEVELOPMENT
-- id: 5
-  title: Get Training
-  summary: Coming soon.
-  url: 
-  icon: ":weight_lifting:"
-  status: IN DEVELOPMENT
 - id: 6
   title: Design Solution Plan
   summary: This step is about turning the findings from the pre-FAIR assessment into a clear, actionable plan. It means choosing the right tools, deciding who does what, and making sure the process is simple and effective so data can actually become FAIR.
@@ -107,7 +107,7 @@
   icon: ":computer:"
   status: FUTURE WORK
 - id: 19
-  title: Apply core metadata model
+  title: Apply (meta)data model
   summary: Coming soon.
   url: 
   icon: ":card_file_box:"
@@ -132,10 +132,10 @@
   status: FUTURE WORK
 - id: 23
   title: Assess FAIRness
-  summary: Coming soon.
-  url: 
+  summary: Now that you’ve FAIRified your data, it’s time to check the resulting FAIRness and decide if you’ve reached your goals. Use tools and other methods to assess if your data is truly Findable, Accessible, Interoperable, and Reusable. If needed, adjust or improve things so your data stays FAIR in the long run.
+  url: metroline_steps/assess_fairness
   icon: ":white_check_mark:"
-  status: IN DEVELOPMENT
+  status: READY FOR REVIEW
 - id: 24
   title: Did you reach your FAIRification objectives
   summary: Coming soon.

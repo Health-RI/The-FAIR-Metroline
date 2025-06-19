@@ -1,53 +1,50 @@
-# graph definitions
 main:
   - id: graph1
-    section: section1
     label: graph 1 label
-    visible: true
+    initial_node_id:
+    initial_page:
     definition: |
       graph LR
-      A[Define<br>FAIRification Objectives] --> B[Build your team]
-      B --> C[Have a<br>FAIR data steward<br>on board]
-      C --> D[Pre-FAIR<br>Assesment]
+      A["Define<br>FAIRification Objectives"] --> B["Build your team"]
+      B --> C["Have a<br>FAIR data steward<br>on board"]
+      C --> D["Pre-FAIR<br>Assesment"]
       click A "./metroline_steps/define_fairification_objectives"
       click C "./metroline_steps/have_a_fair_data_steward_on_board"
       click D "./metroline_steps/pre_fair_assessment"
 
 analyse_data_semantics:
   - id: main_flow
-    section: section1
     label: graph 1 label
-    visible: true
     definition: |
       flowchart LR  
       A["Start!"] --> B{"Are you working<br>with existing data<br>or aiming to collect<br>new (meta)data?"}
-      B -->|"existing (meta)data"| C["Check for an existing standard/codebook a)"]
+      B -->|"existing (meta)data"| C["Check for an existing<br>standard/codebook a)"]
       C --> D{"Does the dataset<br>come with a<br>standard/codebook?"}
-      D -->|Yes| E["Check and improve (meta)data semantics"]
+      D -->|Yes| E["Check and improve<br>(meta)data semantics"]
       D -->|No| F["Compile information"]
       F --> J
-      E --> G["Congrats! You have a set of clearly defined (meta)data elements!"]
-      G --> H["Go to the next Metroline Step: a) Create or reuse semantic (meta)data model OR b) Register record level metadata"]
+      E --> G["Congrats!<br>You have a set of clearly<br>defined (meta)data elements!"]
+      G --> H["Go to the next Metroline Step:<br>a) Create or reuse semantic (meta)data model<br>OR<br>b) Register record level metadata"]
 
       B -->|de novo data collection| I["Compile information"]
-      I --> J["Check for an existing standard/codebook b)"]
+      I --> J["Check for an existing<br>standard/codebook b)"]
       J --> K{"Is there a standard<br>or codebook available?"}
       K -->|Yes| L{"How compatible is<br>the standard/codebook<br>with your (meta)data?"}
       K -->|No| E
 
-      L -->|Partially compatible| M["Use the items included in the standard/codebook"]
+      L -->|Partially compatible| M["Use the items included<br>in the standard/codebook"]
       M -->|For remaining items| E
-      L -->|Fully compatible| N["Go to the next Metroline Step: Apply (meta)data model"]
+      L -->|Fully compatible| N["Go to the next Metroline Step:<br>Apply (meta)data model"]
 
-      linkStyle 0 stroke:#f66,stroke-width:4px;
-      linkStyle 1 stroke:#f66,stroke-width:4px;
-      linkStyle 2 stroke:#f66,stroke-width:4px;
-      linkStyle 4 stroke:#f66,stroke-width:4px;
-      linkStyle 5 stroke:#f66,stroke-width:4px;
-      linkStyle 10 stroke:#f66,stroke-width:4px;
-      linkStyle 12 stroke:#f66,stroke-width:4px;
-      linkStyle 6 stroke:#f66,stroke-width:4px;
-      linkStyle 7 stroke:#f66,stroke-width:4px;
+      linkStyle 0 stroke:#c00,stroke-width:4px;
+      linkStyle 1 stroke:#c00,stroke-width:4px;
+      linkStyle 2 stroke:#c00,stroke-width:4px;
+      linkStyle 4 stroke:#c00,stroke-width:4px;
+      linkStyle 5 stroke:#c00,stroke-width:4px;
+      linkStyle 10 stroke:#c00,stroke-width:4px;
+      linkStyle 12 stroke:#c00,stroke-width:4px;
+      linkStyle 6 stroke:#c00,stroke-width:4px;
+      linkStyle 7 stroke:#c00,stroke-width:4px;
       
       click C "#a-for-existing-metadata-1"
       click E "#step-check-and-improve-metadata-semantics"
@@ -57,38 +54,49 @@ analyse_data_semantics:
       click J "#b-for-new-metadata"
       click N "#step-go-to-the-next-metroline-step"
 
-sdr_test:
+scenario_evaluate_fairness:
   - id: graph1
-    section: section1
-    label: graph 1 label
-    visible: true
+    label: Evaluate FAIRness
+    initial_node_id: A
+    initial_page: define_fairification_objectives.html
     definition: |
       graph LR
-      A[Define FAIRification Objectives] --> B[Build your team]
-      B --> C[Have a FAIR data steward on board]
-      C --> D[Pre-FAIR Assesment]
-      click A "./metroline_steps/define_fairification_objectives"
-      click C "./metroline_steps/have_a_fair_data_steward_on_board"
-      click D "./metroline_steps/pre_fair_assessment"
+      A[Define FAIRification Objectives] --> B[Have a FAIR data steward on board]
+      B --> C[Pre-FAIR Assesment]
+      click A call showContentAndHighlightNode("define_fairification_objectives", "A", "graph1")
+      click B call showContentAndHighlightNode("have_a_fair_data_steward_on_board", "B", "graph1")
+      click C call showContentAndHighlightNode("pre_fair_assessment", "C", "graph1")
 
+test_page:
+  - id: graph1
+    label: Evaluate FAIRness
+    initial_node_id: A
+    initial_page: define_fairification_objectives.html
+    definition: |
+      graph LR
+      A[Define FAIRification Objectives] --> B[Have a FAIR data steward on board]
+      B --> C[Pre-FAIR Assesment]
+      click A call showContentAndHighlightNode("define_fairification_objectives", "A", "graph1")
+      click B call showContentAndHighlightNode("have_a_fair_data_steward_on_board", "B", "graph1")
+      click C call showContentAndHighlightNode("pre_fair_assessment", "C", "graph1")
   - id: graph2
-    section: section2
-    label: graph 2 label
-    visible: true
+    label: Evaluate FAIRness 2
+    initial_node_id: A
+    initial_page:
     definition: |
       graph LR
-      A --> B
-      B --> C
-      B --> D
-      classDef highlighted stroke:#f66,stroke-width:4px;
-      class A,B,C highlighted;
-      linkStyle 0 stroke:#f66,stroke-width:4px;
-
+      A[Define FAIRification Objectives] --> B[Have a FAIR data steward on board]
+      B --> C[Pre-FAIR Assesment]
+      click A call showContentAndHighlightNode("define_fairification_objectives", "A", "graph2")
+      click B call showContentAndHighlightNode("have_a_fair_data_steward_on_board", "B", "graph2")
+      click C call showContentAndHighlightNode("pre_fair_assessment", "C", "graph2")
   - id: graph3
-    section: section2
     label: graph 3 label
-    visible: false
+    initial_node_id: B
+    initial_page:
     definition: |
       graph LR
-      A --> B
-      B --> A
+      A[Start A] --> B[Step B]
+      click A call highlightNodeOnly("A", "graph3")
+      click B call highlightNodeOnly("B", "graph3")
+    

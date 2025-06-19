@@ -1,0 +1,26 @@
+// Styling for highlighted
+.highlighted rect,
+.highlighted polygon,
+.highlighted path {
+    stroke: #c00 !important;
+    stroke-width: 4px !important;
+}
+
+// Styling for clickable nodes
+.mermaid g.clickable .nodeLabel {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #0645ad;
+}
+
+.mermaid a:hover {
+    color: darkblue !important;
+    text-shadow: 0px 0px 5px rgba(0, 0, 255, 0.7); /* Glow effect */
+    cursor: pointer;
+}
+
+// .mermaid svg a p {
+//   color: darkblue !important;
+//   text-decoration: underline;
+//   cursor: pointer;
+// }

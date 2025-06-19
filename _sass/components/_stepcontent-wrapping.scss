@@ -1,0 +1,43 @@
+/* used by scenarios for an integrated metroline page reader */
+
+#stepContentWrapper {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-top: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+#stepContent {
+    font-size: 0.9rem;       /* Base font size scaled down */
+    line-height: 1.4;
+}
+
+/* Scale all heading levels proportionally */
+#stepContent h1 {
+    font-size: 2em;          /* = 1.8rem */
+    margin-bottom: 0.5em;
+}
+#stepContent h2 {
+    font-size: 1.5em;        /* = 1.35rem */
+    margin-bottom: 0.4em;
+}
+#stepContent h3 {
+    font-size: 1.2em;        /* = 1.08rem */
+    margin-bottom: 0.3em;
+}
+#stepContent h4 {
+    font-size: 1em;          /* = 0.9rem */
+    margin-bottom: 0.3em;
+}
+#stepContent h5 {
+    font-size: 0.85em;       /* = 0.765rem */
+    margin-bottom: 0.2em;
+}
+
+#stepContent p,
+#stepContent li {
+    margin-bottom: 0.6em;
+}

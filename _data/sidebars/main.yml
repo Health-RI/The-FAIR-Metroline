@@ -8,10 +8,10 @@ subitems:
         url: /metroline_steps/define_fairification_objectives
       - title: Have a FAIR data steward on board
         url: /metroline_steps/have_a_fair_data_steward_on_board
-      - title: Design solution plan
-        url: /metroline_steps/design_solution_plan
       - title: Pre-FAIR assessment
         url: /metroline_steps/pre_fair_assessment
+      - title: Design solution plan
+        url: /metroline_steps/design_solution_plan
       - title: Assess availability of your metadata
         url: /metroline_steps/assess_availability_of_your_metadata
       - title: Register resource-level metadata
@@ -20,6 +20,11 @@ subitems:
         url: /metroline_steps/analyse_data_semantics
       - title: Obtain informed consent
         url: /metroline_steps/obtain_informed_consent
+  - title: Scenarios
+    url: /fair_metroline_scenarios
+    subitems:
+      - title: Evaluate data FAIRness
+        url: /metroline_steps/evaluate_data_fairness
   - title: Contributing
     url: /contributing/contributing
     subitems:

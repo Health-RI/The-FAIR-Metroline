@@ -1,6 +1,7 @@
 ---
 title: Analyse data semantics
 permalink: /metroline_steps/analyse_data_semantics
+page_id: analyse_data_semantics
 ---
 
 {% include assign_current_step.html %}
@@ -37,10 +38,10 @@ After completing these steps, you will end up with a set of clearly defined (met
 
 To see which steps are relevant for your case, please follow the flowchart below.  
 
-<script src="{{ site.baseurl }}/assets/js/init_mermaid.js"></script>
-{% include graph_logic/on-load.html graphs=site.data.graphs.analyse_data_semantics %}
-<script src="{{ site.baseurl }}/assets/js/graphController.js"></script>
-{% include graph_logic/graph-block.html graphs=site.data.graphs.analyse_data_semantics section="section1" %}
+{% include graph_logic/init-graphs.html %}
+<div class="image-wrapper">
+  <div class="graph-block" data-graph-id="main_flow"></div>
+</div>
 
 
 {% include info-box.html type="example" title="Example - part 0" text="

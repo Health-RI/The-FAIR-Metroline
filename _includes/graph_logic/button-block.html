@@ -1,7 +1,0 @@
-{% assign filtered_graphs = include.graphs | where: "section", include.section %}
-
-<div>
-  {% for graph in filtered_graphs %}
-    <button onclick="showGraph('{{graph.id}}')">{{graph.label}}</button>
-  {% endfor %}
-</div>

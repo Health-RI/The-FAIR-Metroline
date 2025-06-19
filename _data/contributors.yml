@@ -128,7 +128,7 @@ writers:
   - id: 19
     firstName: Reinier
     lastName: Groeneveld
-    orcid: ""
+    orcid: 0009-0006-1783-9082
     affiliation: Health-RI
     active: true
     image: reinier_groeneveld.jpg

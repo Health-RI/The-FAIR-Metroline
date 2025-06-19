@@ -3,6 +3,11 @@
 @import "components/metroline-grid";
 @import "components/metroline-status";
 @import "components/image-styling";
+@import "components/quick_form_styling";
+@import "components/image-wrapping";
+@import "components/mermaid-styling";
+@import "components/stepcontent-wrapping";
+
 
 //Example for highlighting the active page in the navigation:
 /*-----Top navigation-----*/
@@ -14,7 +19,6 @@
         border-radius: $border-radius;
     }
 }
-
 
 
 
@@ -30,29 +34,21 @@
 
 
 
-.mermaid svg a p {
-  color: darkblue !important;
-  text-decoration: underline;
-  cursor: pointer;
-}
 
-.mermaid a:hover {
-    color: darkblue !important;
-    text-shadow: 0px 0px 5px rgba(0, 0, 255, 0.7); /* Glow effect */
-    cursor: pointer;
-//     transform: scale(1.05); /* Slight zoom on hover */
-}
+// .graph-container {
+//   display: inline-block;        // allow the box to shrink to fit content
+//   max-width: 100%;              // prevent overflow on small screens
+//   max-height: 550px;
+//   overflow: auto;
+//   border: 1px solid #ccc;
+//   padding: 1rem;
+//   margin-bottom: 1rem;          // add spacing below the graph
+// //   background-color: #fff;       // optional: makes padding visible
+//   background: #f9f9f9;
+// }
 
-.graph-container {
-  display: inline-block;        // allow the box to shrink to fit content
-  max-width: 100%;              // prevent overflow on small screens
-  max-height: 550px;
-  overflow: auto;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  margin-bottom: 1rem;          // add spacing below the graph
-  background-color: #fff;       // optional: makes padding visible
-}
+
+
 
 // .mermaidTooltip {
 //     visibility: visible; /* Ensure it's visible */
