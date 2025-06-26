@@ -16,10 +16,18 @@ subitems:
         url: /metroline_steps/assess_availability_of_your_metadata
       - title: Register resource-level metadata
         url: /metroline_steps/register_resource_level_metadata
+      - title: Register structural metadata
+        url: /metroline_steps/register_structural_metadata
+      - title: Apply common data elements
+        url: /metroline_steps/apply_common_data_elements
       - title: Analyse data semantics
         url: /metroline_steps/analyse_data_semantics
       - title: Obtain informed consent
         url: /metroline_steps/obtain_informed_consent
+      - title: Apply (meta)data model
+        url: /metroline_steps/apply_metadata_model
+      - title: Assess FAIRness
+        url: /metroline_steps/assess_fairness
   - title: Scenarios
     url: /fair_metroline_scenarios
     subitems:

@@ -24,7 +24,7 @@ analyse_data_semantics:
       D -->|No| F["Compile information"]
       F --> J
       E --> G["Congrats!<br>You have a set of clearly<br>defined (meta)data elements!"]
-      G --> H["Go to the next Metroline Step:<br>a) Create or reuse semantic (meta)data model<br>OR<br>b) Register record level metadata"]
+      G --> H["Go to the next Metroline Step:<br>a) Create or reuse semantic (meta)data model<br>OR<br>b) Register structural metadata"]
 
       B -->|de novo data collection| I["Compile information"]
       I --> J["Check for an existing<br>standard/codebook b)"]

@@ -59,17 +59,17 @@
   icon: ":card_file_box:"
   status: RELEASED
 - id: 11
-  title: Register record level metadata
-  summary: Coming soon.
-  url: 
+  title: Register structural metadata
+  summary: This step focuses on how to share your resource’s structural metadata - an explanation of what each piece of your data means and how it’s organised. Publishing it helps others understand, find and reuse your data more easily. This step also shows how to make the metadata readable by computers, which can support specific FAIR objectives you may already have.
+  url: metroline_steps/register_structural_metadata
   icon: ":card_file_box:"
-  status: IN DEVELOPMENT
+  status: READY FOR REVIEW
 - id: 12
   title: Apply common data elements
-  summary: Coming soon.
-  url: 
+  summary: Common data elements (CDEs) are standardised data elements, such as variables and measurements, paired with defined rules for how values should be recorded. They are developed to promote consistency and reuse in data collection across different settings, enabling seamless integration and comparison. This step encourages you to search for relevant CDEs and offers guidance on what to do if no suitable CDE is available.
+  url: metroline_steps/apply_common_data_elements
   icon: ":toolbox:"
-  status: FUTURE WORK
+  status: READY FOR REVIEW
 - id: 13
   title: Analyse data semantics
   summary: In this step, the aim is to gain more insight into the existing data, or the data that you aim to collect. Clearly defining the meaning (semantics) of the data is an important step for creating the semantic model, as well as for data collection via, for example, electronic case report forms (eCRFs).
@@ -108,10 +108,10 @@
   status: FUTURE WORK
 - id: 19
   title: Apply (meta)data model
-  summary: Coming soon.
-  url: 
+  summary: Think of your data like a book in a library. A metadata model is like the card in the catalogue that tells people what the book is about and who wrote it. A data model is like the book’s table of contents - it helps everyone understand what’s inside and how to read it. Using both makes it easier for people and machines to find, understand, and reuse your data.
+  url: metroline_steps/apply_metadata_model
   icon: ":card_file_box:"
-  status: IN DEVELOPMENT
+  status: READY FOR REVIEW
 - id: 20
   title: Transform and expose FAIR (meta)data
   summary: Coming soon.
