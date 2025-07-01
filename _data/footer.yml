@@ -1,4 +1,4 @@
-copyright: Copyright notice
+copyright: <b>FAIR Metroline</b> by <b>Health-RI</b> is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/)
 extra_line: 
 columns:
   - type: image
@@ -11,15 +11,17 @@ columns:
     children: 
       - url_text: How to contribute
         url: /contributing/contributing
-      - url_text: Development process
-        url: /contributing/development_process
-  - type: links
-    width: 3
-    children: 
       - url_text: Contributors
         url: /contributing/contributors
       - url_text: Network
         url: network
+  - type: links
+    width: 3
+    children: 
+      - url_text: About
+        url: about
+      - url_text: How to cite
+        url: about#how-to-cite
   - type: image
     image_width: 88px
     width: 2

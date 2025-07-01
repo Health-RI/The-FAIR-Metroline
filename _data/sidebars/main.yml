@@ -44,3 +44,5 @@ subitems:
     url: /contributing/contributors
   - title: Network
     url: /network
+  - title: About
+    url: /about

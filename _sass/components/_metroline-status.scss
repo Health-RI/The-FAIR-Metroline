@@ -5,18 +5,34 @@
   margin-top: 0.5em;
  }
 
+.metroline-status {
+  font-weight: bold;
+  font-size: 0.7em;
+  margin-top: 0.5em;
+}
+
+/* Unique, intuitive colours for each status */
 .metroline-status-released {
-  color: green;
+  color: green; /* Completed */
 }
+
 .metroline-status-in-development {
-  color: red;
+  color: blue; /* Actively being worked on */
 }
+
 .metroline-status-on-hold {
-  color: blue;
+  color: red; /* Blocked or paused */
 }
+
 .metroline-status-future-work {
-  color: purple;
+  color: #20B2AA; /* Light sea green – not started yet */
 }
+
 .metroline-status-ready-for-review {
-  color: orange;
+  color: orange; /* Needs feedback */
 }
+
+.metroline-status-planned {
+  color: purple; /* Scheduled, upcoming */
+}
+

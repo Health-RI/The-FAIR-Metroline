@@ -81,19 +81,19 @@
   summary: Coming soon.
   url: 
   icon: ":pencil:"
-  status: FUTURE WORK
+  status: IN DEVELOPMENT
 - id: 15
   title: Create or reuse a semantic (meta)data model
   summary: Coming soon.
   url: 
   icon: ":construction:"
-  status: ON HOLD
+  status: IN DEVELOPMENT
 - id: 16
   title: Use ontologies in the data model
   summary: Coming soon.
   url: 
   icon: ":book:"
-  status: ON HOLD
+  status: PLANNED
 - id: 17
   title: Obtain informed consent
   summary: To ensure your data and materials can be reused in the future, your subject information sheet (SIS) and informed consent form (ICF) must address reuse. This Metroline step provides consideration and resources for preparing your SIS and ICF.
@@ -105,7 +105,7 @@
   summary: Coming soon.
   url: 
   icon: ":computer:"
-  status: FUTURE WORK
+  status: ON HOLD
 - id: 19
   title: Apply (meta)data model
   summary: Think of your data like a book in a library. A metadata model is like the card in the catalogue that tells people what the book is about and who wrote it. A data model is like the book’s table of contents - it helps everyone understand what’s inside and how to read it. Using both makes it easier for people and machines to find, understand, and reuse your data.
@@ -123,7 +123,7 @@
   summary: Coming soon.
   url: 
   icon: ":closed_lock_with_key:"
-  status: FUTURE WORK
+  status: IN DEVELOPMENT
 - id: 22
   title: Query (use) over resources
   summary: Coming soon.
@@ -141,7 +141,7 @@
   summary: Coming soon.
   url: 
   icon: ":checkered_flag:"
-  status: FUTURE WORK
+  status: ON HOLD
 - id: 25
   title: TEST
   summary: Overflow test.

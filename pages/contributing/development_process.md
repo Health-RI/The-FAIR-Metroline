@@ -7,11 +7,13 @@ This page needs to be improved to highlight that we have Confluence and GitHub p
 
 ## Page development phases
 While writing and reviewing it is important to keep in mind that the aim of the FAIR Metroline is to provide readers FAIRification guidance in an **understandable** and **applicable** way. Each page is designed to be user-friendly, with clear headings, concise language, and practical examples. After reading a page, a user should be able to understand the problem, take practical steps towards the solution, and apply the FAIR principles to their own research projects. Pages go through the development phases described below.
-* <span style="color: purple;">**STATUS: FUTURE WORK.**</span> This status indicates that work on this page won’t be started any time soon.   
-* <span style="color: grey;">**STATUS: PLANNED.**</span> This status indicates that this page has been planned for development.   
-* <span style="color: red;">**STATUS: IN DEVELOPMENT.**</span> This status shows that active work is being done to create the content by the Writing group. See [Writing group](#writing-group) for more information.
-* <span style="color: orange;">**STATUS: READY FOR REVIEW.**</span> At this stage, the content is drafted and checked on quality. Constructive feedback is provided by the [Reviewing group](#reviewing-group), and revisions are made as necessary. See Reviewing group for more information. 
-* <span style="color: green;">**STATUS: RELEASED.**</span> This status indicates that the content has been released by the Editorial board and is available for public use. See [Editorial process](#editorial-board) for details.
+* <span class="metroline-status-future-work">**STATUS: FUTURE WORK.**</span> This status indicates that work on this page won’t be started any time soon.   
+* <span class="metroline-status-planned">**STATUS: PLANNED.**</span> This status indicates that this page has been planned for development.   
+* <span class="metroline-status-in-development">**STATUS: IN DEVELOPMENT.**</span> This status shows that active work is being done to create the content by the Writing group. See [Writing group](#writing-group) for more information.
+* <span class="metroline-status-ready-for-review">**STATUS: READY FOR REVIEW.**</span> At this stage, the content is drafted and checked on quality. Constructive feedback is provided by the [Reviewing group](#reviewing-group), and revisions are made as necessary. See Reviewing group for more information. 
+* <span class="metroline-status-released">**STATUS: RELEASED.**</span> This status indicates that the content has been released by the Editorial board and is available for public use. See [Editorial process](#editorial-board) for details.
+* <span class="metroline-status-on-hold">**STATUS: ON HOLD.**</span> This status indicates that the editorial needs to discuss if the pages needs to be developed or is unnecessary / redundant / ...
+
 
 Updates to status are made by the Editorial board to ensure that all pages are accurately tracked and maintained throughout their lifecycle. This structured approach allows for a clear workflow and accountability, ensuring that the information provided is both current and reliable.
 

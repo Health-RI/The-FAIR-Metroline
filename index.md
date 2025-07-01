@@ -1,9 +1,8 @@
 ---
-title: The FAIR Metroline
+title: FAIR Metroline
 permalink: /
 page_id: main
 ---
-
 The [FAIR principles](https://www.go-fair.org/fair-principles/) aim to make data Findable, Accessible, Interoperable and Reusable, to maximize the reuse of (research) data. See the [Health-RI website](https://www.health-ri.nl/en/about/organisation/fair-data) for more information on FAIR. 
 
 But, where do you start to make data FAIR? What steps are involved? What do these steps mean and, importantly, how do you implement these steps? 

@@ -1,10 +1,10 @@
-title: The FAIR Metroline
+title: FAIR Metroline
 # This appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-topnav_title: The FAIR Metroline
+topnav_title: FAIR Metroline
 # Optional: this appears on the top navigation bar next to the main_logo.svg icon
 
-description: "The FAIR Metroline - Steps for your FAIRification workflow"
+description: "FAIR Metroline. A step-by-step route to making data FAIR."
 # Metadata description of the website
 
 remote_theme: ELIXIR-Belgium/elixir-toolkit-theme@4.1.0
