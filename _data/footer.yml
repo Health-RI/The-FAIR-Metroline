@@ -20,6 +20,8 @@ columns:
     children: 
       - url_text: About
         url: about
+      - url_text: Contact
+        url: contact
       - url_text: How to cite
         url: about#how-to-cite
   - type: image

@@ -10,9 +10,9 @@ Become part of the FAIR Metroline team:
 * Join the [Reviewing group]({{site.baseurl}}/contributing/development_process#reviewing-group) and provide valuable feedback by reviewing content. As a reviewer, you will critically assess drafts for accuracy, clarity, and relevance, helping to ensure high-quality and trustworthy information. 
 * Join the [Editorial board]({{site.baseurl}}/contributing/development_process#editorial-board) and help shape the processes and priorities of the FAIR Metroline. As a board member, you'll be involved in decision-making regarding content prioritization, process improvements, and overall strategy. 
 
-Send an email to <a href="mailto:fairservicedesk@health-ri.nl">fairservicedesk@health-ri.nl</a> and we will contact you to discuss the possibilities.
+Send an email to [Mijke Jetten](mailto:mijke.jetten@health-ri.nl) or [Sander de Ridder](mailto:sander.deridder@health-ri.nl) and we will contact you to discuss the possibilities.
 
-If you have a suggestion about one of the pages, but are not interested in joining one of the groups, please feel free to fill in our [feedback form]({{site.baseurl}}/contributing/quick_feedback_form). Your insights are valuable, and we welcome your contributions to improve the FAIR Metroline.
+If you have a suggestion about one of the pages, but are not interested in joining one of the groups, please feel free to fill in our [feedback form]({{site.baseurl}}/contact). Your insights are valuable, and we welcome your contributions to improve the FAIR Metroline.
 
 ## Contribute to the FAIR Metroline in various ways
 There are various ways you can contribute to the development of the FAIR Metroline pages:
