@@ -58,7 +58,7 @@ _Participants under 16 years old (children)_
 
 For participants who are younger than 16, parents or guardians must provide signed informed consent on behalf of the child. A consent form for parents or guardians is included in the appendices of the [CCMO website](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/e-information-research-subjects/e1-e2.-information-sheet-and-consent-form-research-subjects/e1-e2a-template-subject-information-sheet-for-research-subjects-16-years-of-age-children). The accompanying information letter should be updated to address the parents or guardians, including a statement granting permission for the child.
    * **Children under 12 years old.** Children are informed about the study using a discussion guide ([model bespreekblad](https://www.ccmo.nl/publicaties/formulieren/2019/10/14/e1-e2-model-bespreekblad-voor-kinderen-tot-12-jaar)), which can be found on the CCMO website. Once a child reaches the age of 12, they must also provide written consent. However, parents or guardians are not required to sign another consent form.
-   * **Children aged 12-16 years old.** Both the child and their parents or guardians must give consent. Once the child turns 16, written consent is no longer necessary.
+   * **Children aged 12-16 years old.** Both the child and their parents or guardians must give consent. Once the child turns 16, written consent of the parents or guardians is no longer necessary.
 
 _(Temporarily) incapacitated adults_
 
@@ -155,7 +155,7 @@ If you are setting up an ICF and SIS for a cohort study, keep the following in m
 * **Retention period for data and biomaterial.** Clearly define the data retention period in the SIS/ICF. Specify whether the period begins after the study concludes to avoid premature data deletion. Alternatively, consider specifying periodic evaluations of data retention (e.g., every 5 years) with participant notification.
 
 #### 4.2 Deceased participants. 
-While the AVG is no longer applicable, ethically you may want to adhere to the already specified choices. Bear in mind that the WGBO is still applicable. 
+While the GDPR is no longer applicable, ethically you may want to adhere to the already specified choices. Bear in mind that the WGBO is still applicable. 
 
 #### 4.3 Anonymised data. 
 If data is anonymised, it is no longer considered personal data under regulations like the GDPR. 

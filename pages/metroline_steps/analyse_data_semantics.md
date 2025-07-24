@@ -17,7 +17,7 @@ Understanding and clearly defining the meaning (semantics) of (meta)data is an i
 To illustrate the issue, consider the example where you receive a dataset with a variable called “date”. Without clearly defined semantics, it is unclear whether this means “date of data collection”, “admission date”, “date of birth”, or something else. This must be resolved before you can start analyzing the data or move forward with your FAIR goals, such as applying a semantic (meta)data model. In the How to section of this page we provide instructions to achieve this, along with an example following the different steps.
 
 The outcome of this step is a set of data elements (variables) with clear and unambiguous semantics, known as a codebook. For metadata, the outcome is a set of clearly defined metadata elements. This codebook provides information about the structural content of the data and can be made available following the approach described in 
-[Metroline Step: Register record level metadata]({{site.baseurl}}/metroline_steps/register_record_level_metadata). Note that finding machine-actionable items from ontologies for the data elements is not yet part of this step, but is described in [Metroline Step: Create or reuse a semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model). 
+[Metroline Step: Register structural metadata]({{site.baseurl}}/metroline_steps/register_structural_metadata). Note that finding machine-actionable items from ontologies for the data elements is not yet part of this step, but is described in [Metroline Step: Create or reuse a semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model). 
 
 ## Why is this step important
 Several of the Metroline steps that follow rely on being familiar with your data. For example, in order to [create or reuse your semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model), it is crucial to understand the meaning and relationships of variables.
@@ -191,7 +191,7 @@ Congratulations, you have now successfully analyzed your (meta)data semantics. Y
 
 From here, there are three possible next steps, depending on your needs:
 * [Metroline Step: Create or reuse a semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model). This step uses work done in this step as a basis to find correct ontologies that can be coupled to your data elements.
-* [Metroline Step: Register record level metadata]({{site.baseurl}}/metroline_steps/register_record_level_metadata). If you first want to make your codebook available, you can do so in this step.
+* [Metroline Step: Register structural metadata]({{site.baseurl}}/metroline_steps/register_structural_metadata). If you first want to make your codebook available, you can do so in this step.
 * [Metroline Step: Apply (meta)data model]({{site.baseurl}}/metroline_steps/apply_metadata_model). If you’ve found a fully compatible semantic model that wasn’t included with your dataset or you were starting with new data collection, you can skip model creation and directly apply it to your (meta)data.
 
 {% include info-box.html type="example" title="Example - part 5" text="
