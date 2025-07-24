@@ -3,7 +3,7 @@
 
 async function downloadMetrolineSVG({ stripAnchors = false } = {}) {
   try {
-    const response = await fetch("/assets/includes/metroline_interactive.svg.html");
+    const response = await fetch("/assets/includes/metroline_interactive.svg");
     if (!response.ok) throw new Error("Could not fetch SVG");
 
     // 1. Read and preprocess raw SVG text

@@ -11,7 +11,7 @@ The FAIR Metroline provides practical guidance to help you reach your FAIR goals
 
 <div id="content" class="mb-5">
   <div class="image-wrapper scale-svg">
-    {% include metroline_interactive.svg.html %}
+    {% include metroline_interactive.svg %}
   </div>
 </div>
 

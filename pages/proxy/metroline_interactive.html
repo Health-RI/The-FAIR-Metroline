@@ -1,5 +1,5 @@
 ---
-permalink: /assets/includes/metroline_interactive.svg.html
+permalink: /assets/includes/metroline_interactive.svg
 layout: null
 ---
 
@@ -8,14 +8,14 @@ layout: null
   %}
 /**
  * This file is needed to expose the interactive metroline SVG as a direct, standalone URL
- * (e.g. /assets/includes/metroline_interactive.svg.html) that can be fetched via JavaScript.
+ * (e.g. /assets/includes/metroline_interactive.svg) that can be fetched via JavaScript.
  *
- * Why not just link directly to _includes/metroline_interactive.svg.html?
+ * Why not just link directly to _includes/metroline_interactive.svg?
  * → Because Jekyll does not render files in _includes/ directly to accessible URLs.
  *    They are meant for template inclusion only.
  *
  * Why do we include the file here?
- * → This includes the actual SVG HTML content that lives in _includes/metroline_interactive.svg.html.
+ * → This includes the actual SVG HTML content that lives in _includes/metroline_interactive.svg.
  *    We manage the SVG in _includes/ so it can be reused inside other layouts as well.
  *
  * Specifically, we need this file in downloadMetroline.js where we take the svg.html and turn it
@@ -26,4 +26,4 @@ layout: null
   endcomment
 %}
 
-{% include metroline_interactive.svg.html %}
+{% include metroline_interactive.svg %}
