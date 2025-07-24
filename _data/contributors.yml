@@ -139,6 +139,13 @@ writers:
     affiliation: Health-RI
     active: true
     image: pedro_barcelos.jpg
+  - id: 21
+    firstName: Walter
+    lastName: Baccinelli
+    orcid: 0000-0001-8888-4792
+    affiliation: Health-RI
+    active: true
+    image: walter_baccinelli.jpg
 reviewers:
   - id: 1
     firstName: Anna
