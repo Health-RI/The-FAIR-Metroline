@@ -154,6 +154,9 @@ Applying metadata and data models effectively requires a mix of domain knowledge
 While basic metadata tasks (e.g. filling in a dataset description using a web form) may not require a deep technical knowledge, more advanced modelling—such as mapping raw data to ontological terms or generating knowledge graphs—typically benefits from the experience described above. 
 
 ## Practical examples from the community
+**FAIR Data Point**<br>
+The UMCs in the Netherlands are either in the process of setting up or already have a local FDP. For example, see [Amsterdam UMC’s FDP](https://fdp.healthdataspace.amsterdam/). Health-RI provides [guidance](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279150593) for setting up the FDP for the National Health Data Catalogue. 
+
 **VASCA registry**<br>
 Implemented the CDE semantic data model and implemented the DCAT metadata schema and EJPRD metadata schema.
 For more information see the following publications:

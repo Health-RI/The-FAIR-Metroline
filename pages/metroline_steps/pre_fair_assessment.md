@@ -62,7 +62,7 @@ The tables below provide an overview of some of the more popular tools from both
         The FAIR Data Maturity Model is recommended by, amongst others, <a href="https://confluence.hl7.org/display/SOA/Recommendations">HL7</a>, the world’s leading health IT standards development organisation.
     </td>
     <td>
-        Download the <a href="https://zenodo.org/records/3909563/files/FAIR_evaluation_levels_v0.01.xlsx?download=1">Excel file</a> from Zenodo and in the ‘FAIR Indicators_v0.05’ tab, give a score to the 41 different ‘maturity indicators’, by selecting the level from the drop-down menu in the ‘METRIC’- column, that fits the status if your (meta)data best. Potentially perform this with assistance of a FAIR expert/data steward.
+        Download the <a href="https://zenodo.org/records/3909563/files/FAIR_evaluation_levels_v0.02.xlsx?download=1">Excel file</a> from Zenodo and in the ‘FAIR Indicators_v0.05’ tab, give a score to the 41 different ‘maturity indicators’, by selecting the level from the drop-down menu in the ‘METRIC’- column, that fits the status if your (meta)data best. Potentially perform this with assistance of a FAIR expert/data steward.
         <br><br>
         View the results in the ‘LEVELS' tab. Detailed definitions and examples for all 'maturity indicators’ can be found in the <a href="https://zenodo.org/records/3909563/files/FAIR%20Data%20Maturity%20Model_%20specification%20and%20guidelines_v1.00.pdf?download=1">documentation</a> on Zenodo.
     </td>

@@ -66,6 +66,7 @@ theme_variables:
    topnav:
     # theme: light
      brand_logo: assets/img/main_logo.png
+#     brand_logo: assets/img/media_kit/main_logo_with_text_v4.png
     # github: true
     # twitter: false
     # bluesky: false

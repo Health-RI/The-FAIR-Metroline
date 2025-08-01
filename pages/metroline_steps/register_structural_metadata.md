@@ -11,7 +11,7 @@ permalink: /metroline_steps/register_structural_metadata
 > {{ current_step.summary }}
 
 ## Short description 
-Structural metadata (previously introduced in [Metroline Step: Assess availability of your metadata]({{site.baseurl}}/metroline_steps/assess_availability_of_your_metadata)), includes information about what data is collected and its format (e.g. “birthdate” - YYYYMMDD), and, if applicable, the code systems and values applied. Similar to how an index at the beginning of a book refers to all its chapters and pages, it gives the reader an idea about the content and its definitions. For data resources, this is typically referred to as the **codebook** or **data dictionary**. You can find more information about how to generate one in [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics).
+Structural metadata (previously introduced in [Metroline Step: Assess availability of your metadata]({{site.baseurl}}/metroline_steps/assess_availability_of_your_metadata)), includes information about what data is collected and its format (e.g. “birth date” - YYYYMMDD), and, if applicable, the code systems and values applied. Similar to how an index at the beginning of a book refers to all its chapters and pages, it gives the reader an idea about the content and its definitions. For data resources, this is typically referred to as the **codebook** or **data dictionary**. You can find more information about how to generate one in [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics).
 
 Once you’ve create this codebook, you should consider making it available to ensure clarity, usability, and trust in your dataset. This step will ensure that you can make a selection of data repositories that fit your research domain. Moreover, this step will point to tools that you can use to further increase FAIRness of your structural metadata.
 
@@ -22,6 +22,7 @@ In other words, this step:
 * **Reduces ambiguity.** Harmonises data elements, by providing definitions to each variable, making it easier to combine both existing and new datasets, as data alone might be meaningless or open to misinterpretation.
 * **Provides structural context.** Explains how variables are related to one another and describes the format of the data.
 * **Increases findability.** When variables are made publicly available, they allow more specific queries to be made about the resource.
+* **Enhances interoperability.** Harmonised data definitions ensure that concepts are clearly and precisely described, enabling easier integration and combination across datasets.
 * **Enhances reusability.**  By clearly describing the data elements, the data can be reused in the future by yourself or by other projects with different research objectives.
 * **Improves reproducibility.** Metadata about the structure of your data provides insight into how the original data was structured, even if the original data is no longer available.
 

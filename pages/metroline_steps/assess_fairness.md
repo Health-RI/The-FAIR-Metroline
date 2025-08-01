@@ -22,7 +22,7 @@ Assessing FAIRness after FAIRification ensures that your dataset truly meets you
 * **Boosting reuse and impact.** Well-assessed FAIR datasets are more likely to be shared, cited and reused in future research. 
 * **Meeting External Expectations.** A FAIRness assessment ensures your dataset complies with mandates and expectations from institutions, funders (like Horizon Europe or the NIH), journals, and the wider scientific community.  
 
-* Aligning with these key points does not only support accountability but also reinforces the credibility and acceptance of your work. 
+Aligning with these key points does not only support accountability but also reinforces the credibility and acceptance of your work. 
 
 ## How to 
 ### Step 1 – Check if you reached your (original) FAIRification objectives 
