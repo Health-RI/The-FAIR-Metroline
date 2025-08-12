@@ -201,10 +201,10 @@ Make sure that the codebook is published open access, even when the data is unde
 The codebook was uploaded in a [Data Sharing Collection](https://doi.org/10.34973/6s67-q643) from the Radboud Data Repository along with the dataset. This repository allows certain files in a collection to be flagged as [documentation files](https://data.ru.nl/doc/help/helppages/user-manual/archive-publish/fair-review.html). By marking the codebook as documentation, it is ensured that anyone downloading information about the dataset could immediately access and understand the content of the dataset, without needing to open the actual file.
 "%}
  
-### Step 4 - Have your reached your FAIR objectives?
+### Step 4 - Have you reached your FAIR objectives?
 {% include info-box.html type="tip" title="Tip" text="This particular step might require onboarding of a data steward to assist with the process."%}
 
-While stopping at Step 3 is already a good practice, ensuring that information about your data content is documented and made available. There are cases where you may want to further increase your FAIR maturity through additional mechanisms.
+While stopping at Step 3 is already a good practice, ensuring that information about your data content is documented and made available, there are cases where you may want to further increase your FAIR maturity through additional mechanisms.
 
 #### Findability
 For surveys, patient registries, and other data types, it can be helpful to explicitly describe in the metadata what is actually being collected from the individuals (e.g., age, diagnosis, age at diagnosis). In such cases, platforms that present this information visually—like the one shown in the figure below—might offer a solution.
