@@ -16,8 +16,6 @@ FAIRification enhances data Findability, Accessibility, Interoperability, and Re
 These objectives may be set by institutes, funders, or journals to promote data reuse (see FAIRsharing). As a researcher, aligning with FAIRification efforts can increase visibility, recognition, and opportunities for collaboration. Spend some time considering your FAIRification objectives. What is your FAIR driving force?
 
 ## Why is this step important 
-This step will help you assess the current FAIRness level of your data. Comparing the current FAIRness to the previously defined FAIRification objectives will help you shape the necessary steps and requirements needed to achieve your FAIRification goals and help you create your solution plan, a workplan specifically designed for reaching these goals. Furthermore, the assessment can be repeated in the Assess FAIRness step, allowing you to compare the results and check the progress of your data towards FAIRness.
-
 Setting clear FAIRification objectives is essential for several reasons.
 * **Clarify purpose.** Provides direction for FAIRification in studies and projects, ensuring clear roles and responsibilities.
 * **Enhance collaboration.** Facilitates communication among team members and stakeholders, ensuring shared understanding of FAIR goals.
