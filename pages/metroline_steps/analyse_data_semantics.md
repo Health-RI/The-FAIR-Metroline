@@ -30,9 +30,9 @@ For example, in a dataset a variable to collect sex-related data might be called
 
 ## How to
 This How to-section describes three steps to take in order to make your (meta)data elements clear and unambiguous. It is applicable to both FAIRification of existing data or de novo data collection. In both cases, you will perform the following steps (in different order):
-* **[Compile Information.](#step-compile-information)** Compile all the information of (meta)data elements, (meta)data values, and (meta)data structure. We describe this step separately for existing (meta)data elements or elements that are to be collected.
-* **[Check for an existing standard/codebook.](#step-check-for-an-existing-standardcodebook)** For both existing and de novo (meta)data, check if there are codebooks or standards that are (partially) compatible with your (meta)data elements.
-* **[Check and improve (meta)data semantics.](#step-check-and-improve-metadata-semantics)** Make sure that the meaning of the (meta)data elements is clear and unambiguous.
+* **[Compile Information.](#step-1---compile-and-assess-metadata-information)** Compile all the information of (meta)data elements, (meta)data values, and (meta)data structure. We describe this step separately for existing (meta)data elements or elements that are to be collected.
+* **[Check for an existing standard/codebook.](#step-2---check-existing-standardcodebook-for-your-metadata)** For both existing and de novo (meta)data, check if there are codebooks or standards that are (partially) compatible with your (meta)data elements.
+* **[Check and improve (meta)data semantics.](#step-3---check-and-improve-metadata-semantics)** Make sure that the meaning of the (meta)data elements is clear and unambiguous.
 
 After completing these steps, you will end up with a set of clearly defined (meta)data elements.
 
@@ -61,7 +61,7 @@ For easier understanding, we will follow the example of the below set of metadat
 In this example, we are working with existing metadata. According to the flowchart, we should start with [Check for an existing standard/codebook a)](#a-for-existing-metadata-1).
 " %}
 
-### Step: Compile information
+### Step 1 - Compile and assess (meta)data information
 Compile all the information of (meta)data elements, (meta)data values, and (meta)data structure. Examine the (meta)data in the way it is currently stored, including its format (e.g. JSON, CSV) and how the information is organised within it. This step helps to identify inconsistencies, ambiguities, and errors in the data. 
 
 If you are not the original creator of the data, if possible, try to get the creator involved to help with the questions you may have.
@@ -116,9 +116,9 @@ Also keep in mind the relationships between your data elements and make sure it 
 
 You should end up with a compiled table of information, like you can see in the table below [step a)](#a-for-existing-metadata) and continue to Step [Check for an existing standard/codebook b)](#b-for-new-metadata) (for new (meta)data).
 
-### Step: Check for an existing standard/codebook
+### Step 2 - Check existing standard/codebook for your (meta)data
 #### a) For existing (meta)data
-Check if your (meta)data comes with a codebook or metadata standard. In case it does, it is recommended to still check if the semantics of the codebook or standard are clear or need improvement. Jump to this part of the how-to [here](#step-check-and-improve-metadata-semantics).
+Check if your (meta)data comes with a codebook or metadata standard. In case it does, it is recommended to still check if the semantics of the codebook or standard are clear or need improvement. Jump to this part of the how-to [here](#step-3---check-and-improve-metadata-semantics).
 
 If the (meta)data is not coming with a codebook or standard, proceed to [Compile information](#a-for-existing-metadata).
 
@@ -148,14 +148,14 @@ You can find more about metadata standards and ontologies at the following link:
 
 If you find a codebook or standard that might fit your (meta)data, check if the definitions are compliant with the ones in your data. Are the value ranges correct? How well does it match your (meta)data elements? In the best case, you find a resource that fully matches your (meta)data. It could also be the case, that you find a partially matching standard, or none. Depending on the outcome of the search, do one of the following:
 * If you **find a fully compatible codebook or metadata standard**, apply it directly. You can find more relevant information in the Metroline step [Apply (meta)data model]({{site.baseurl}}/metroline_steps/apply_metadata_model).
-* If you find a **partial match**, use the relevant elements and document any modifications for missing components. For the missing components, also proceed to step [Check (meta)data semantics](#step-check-and-improve-metadata-semantics).
-* If **no suitable standard exists**, proceed to the step [Check (meta)data semantics](#step-check-and-improve-metadata-semantics), where you will define and structure metadata elements to ensure consistency and interoperability.
+* If you find a **partial match**, use the relevant elements and document any modifications for missing components. For the missing components, also proceed to step [Check (meta)data semantics](#step-3---check-and-improve-metadata-semantics).
+* If **no suitable standard exists**, proceed to the step [Check (meta)data semantics](#step-3---check-and-improve-metadata-semantics), where you will define and structure metadata elements to ensure consistency and interoperability.
 
 {% include info-box.html type="info" text="Health-RI, together with domain representatives, will be aiming to develop domain-specific national (meta)data standards in the future." %}
 
 {% include info-box.html type="example" title="Example - part 3" text="After having compiled all elements in our metadata, let’s say we explored the relevant repositories and, for the purpose of following the example through all of the steps, couldn’t find one that would be applicable to our example metadata. According to the flowchart, we should now move to the Check and improve (meta)data semantics step." %}
 
-### Step: Check and improve (meta)data semantics
+### Step 3 - Check and improve (meta)data semantics
 In order to end up with clearly defined (meta)data elements, we should check the semantics to identify things that are unclear or ambiguous. Next, we can improve these ambiguities. For this, first check:
 * Is the **definition or description** of the (meta)data elements clear and unambiguous? For those with ambiguous meaning, try to improve their definition.
   In the example of collecting data on a patient’s 'sex', it might be unclear if it means ‘biological sex at birth'  or ‘administrative gender’.
@@ -186,7 +186,7 @@ For example, we split the element Creator into Creator Name and Creator Identifi
 
 " %}
 
-### Step: Go to the next Metroline Step
+### Step 4 - Go to the next Metroline Step
 Congratulations, you have now successfully analyzed your (meta)data semantics. You should now have a set of data elements (variables) with clear and unambiguous semantics - a codebook. For metadata, you should be left with a set of clearly defined metadata elements.
 
 From here, there are three possible next steps, depending on your needs:

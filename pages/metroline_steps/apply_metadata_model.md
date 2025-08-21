@@ -32,6 +32,7 @@ Applying the data model to your data and metadata model to your metadata is cruc
 The metadata and data that are structured with ontologies and follow standard schemas make it easier for other resources to find your resource’s metadata and understand its data. 
 
 ## How to
+### Step 1 - Use specialised tools to apply and customise a FAIR (meta)data model to your resources
 The following tools provide support in applying a (meta)data model to your resource(s).
 
 <div class="table-container">

@@ -37,12 +37,12 @@ You set out by defining [FAIRification objectives]({{site.baseurl}}/metroline_st
 * Did any new requirements emerge during the project?
   * FAIRification is an iterative process; your goals may have evolved. 
 
-### Step 2 – Consider (re)running an assessment tool 
+### Step 2 – Re-assess the FAIRness of your data with tools
 After reflecting on your original objectives in step 1, it’s important to objectively assess your data’s FAIRness at this stage. You can do this by using FAIR assessment tools. 
 * In the [Pre-FAIR assessment step]({{site.baseurl}}/metroline_steps/pre_fair_assessment), various tools are discussed that can be used to assess fairness of data. By running such a tool in this stage, you can objectively assess how FAIR your data is right now.
 * If you did a pre-FAIR assessment, rerunning the same tool in this phase is a great way to compare results to show progress. 
 
-### Step 3 – Examples of other assessment options 
+### Step 3 – Enhance the validation with complementary methods
 In addition to using assessment tools, you should consider complementary methods to validate and further evaluate the FAIRness of your data and metadata. These options enhance the insights from step 2 and give you practical feedback. 
 * **Conduct a peer review.** Engage external reviewers or peers to conduct an independent assessment for objectivity. 
 * **Conduct tests.** If, for example, you set out to create machine actionable metadata, run actual tests to verify if this the case. 
@@ -58,7 +58,7 @@ For external publication, it's good practice to also publish a summary of the FA
 * Record any gaps or deviations from the initial FAIRification goals. 
 * Provide recommendations for further improvements if needed. 
 
-### Step 5 - Continuous monitoring and iterative improvement 
+### Step 5 - Continuously monitor and update the resources 
 Even if your FAIRification efforts are complete for now, evolving requirements, such as changes in metadata standards, may require future updates. It is therefore essential to continue monitoring your resource to ensure it remains FAIR over time. 
 
 To help keep an overview of the original FAIRification objectives, their status, and possible changes in the process, it might be useful to update this information in your datamanagement plan. Consider going back to [Metroline Step: Define FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives) to redefine the original FAIR objectives.

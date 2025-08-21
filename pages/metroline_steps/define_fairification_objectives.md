@@ -24,7 +24,7 @@ Setting clear FAIRification objectives is essential for several reasons.
 FAIR objectives help identify which steps in the [FAIR Metroline]({{site.baseurl}}/index) are relevant to your FAIRification journey, ensuring a structured and efficient approach.
 
 ## How to
-### Step 1 - Understand the FAIR principles
+### Step 1 - Get familiar with the FAIR principles
 Get acquainted with the FAIR principles through resources like the [GO FAIR Foundation (GFF) website](https://www.gofair.foundation/) and your institute’s Research Data Management (RDM) department. These principles are foundational for defining FAIRification objectives.
 
 ### Step 2 - Identify FAIR requirements
@@ -35,7 +35,7 @@ As you define your FAIRification objectives, take time to review the relevant re
 
 As the Data Management Plan (DMP) is usually created early in a project, it’s important to set your FAIRification objectives at the outset. Tools like [DMP Online](https://dmponline.dcc.ac.uk/) and the [Data Stewardship Wizard (DSW)](https://ds-wizard.org/)  can help align your FAIRification goals with institutional and funder expectations.
 
-### Step 3 - Assess impact
+### Step 3 - Weigh FAIRification impact, benefits and effort
 Consider the impact of your FAIRification efforts early on to ensure your objectives align with the broader benefits. For instance:
 * **Benefits for the researcher.** Your FAIRification efforts can lead to more visibility, recognition and reuse of the work, potentially leading to new collaboration opportunities, more publications, more citations, etc.
 * **Cost-benefit ratio.** Does the end result outweigh the efforts you are putting in?
@@ -43,10 +43,10 @@ Consider the impact of your FAIRification efforts early on to ensure your object
 * **Stakeholder benefits.** What other stakeholders (e.g. patients, general population, clinicians) would benefit from making your data more FAIR?
 * **Research question.** How does the driving research question impact your FAIRification objectives?
 
-### Step 4 - Define the target FAIR level
+### Step 4 - Decide the appropriate FAIRification level
 Decide on the desired FAIR level for your project or study. Conducting a pre-FAIR assessment (see [Metroline step: Pre-FAIR Assessment]({{site.baseurl}}/metroline_steps/pre_fair_assessment)) helps to determine whether a lightweight FAIR approach (e.g. improving from non-structured to structured metadata) or a more extensive one (e.g. transforming a relational database into fully ontologised linked data) is suitable for your needs.
 
-### Step 5 - Identify required resources
+### Step 5 - Identify the resources required for the FAIRification
 Identify the resources you will need to complete your FAIRification process and assess their availability. Consider the following:
 * Is there someone in your team who has run a FAIRification project before?
 * Is there expertise or central support available in your institute?
@@ -55,7 +55,7 @@ Identify the resources you will need to complete your FAIRification process and 
 
 See [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team) for more information on team requirements.
 
-### Step 6 - Organise and outline necessary steps
+### Step 6 - Create an actionable plan around clear objectives
 Organise and describe the steps and resources identified in the previous step necessary for reaching your FAIRification objective(s). This can be a separate plan (see [Metroline Step: Design Solution Plan]({{site.baseurl}}/metroline_steps/design_solution_plan)) or part of your Data Management Plan (DMP). Make sure to formulate your FAIRification objectives as specifically as possible and, where possible, incorporate research questions. For example:
 * I require interoperable data, because I need to connect two different datasets to answer question X;
 * I want to make my data more findable for researchers in my field by publishing it in repository Z.

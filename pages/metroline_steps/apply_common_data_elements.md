@@ -155,7 +155,7 @@ Benefits of using Common Data Elements are highlighted below.
 ## How to
 To promote standardisation, data sharing and interoperability, researchers should start with reusing existing CDEs whenever possible. Follow the steps below to identify and apply suitable CDEs for your study or data collection effort.
 
-### Step 1 - Consider your research context
+### Step 1 - Clarify your research context to target the right CDE repositories
 Before searching for CDEs, clarify the following:
 * What **research domain** are you working in (e.g. oncology, neurology, rare diseases)?
 * Are you working with a **specific disease** or **population**?
@@ -169,7 +169,7 @@ Setting up a **Rare Disease** Patient Registry to keep **clinical** information 
 "%}
 
 
-### Step 2 - Finding CDEs
+### Step 2 - Find the appropriate CDEs
 * First, check if there are regulatory or domain specific CDE requirements/recommendations. For example:
   * The European Commission's [Common Data elements for Rare Diseases Registration](https://eu-rd-platform.jrc.ec.europa.eu/set-of-common-data-elements_en)
   * The CRDC [Standard Data Elements for oncology](https://cadsr.cancer.gov/onedata/Home.jsp)
@@ -182,7 +182,7 @@ Setting up a **Rare Disease** Patient Registry to keep **clinical** information 
 The decision is made to collect data for the patient registry following the [Common Data Elements (CDEs) for Rare Diseases](https://eu-rd-platform.jrc.ec.europa.eu/set-of-common-data-elements_en), as required by the European Commission.
 "%}
 
-### Step 3 - Reuse, adapt and build upon the CDEs
+### Step 3 - Reuse CDEs where possible, adapt with care and document every change
 Once you've identified relevant Common Data Elements (CDEs), you can:
 * **Reuse directly.** If the CDE fully meets your needs (it has a clear definition, appropriate value set and proper ontology mappings) use the CDE as-is. This is the most robust path to semantic interoperability and consistency. 
 * **Adapt with care.** If a CDE is structurally useful but needs minor changes, for example additional categories or translation, document all modifications clearly in for instance a data dictionary or codebook. Be aware that any adaptations may reduce comparability with other datasets.
@@ -240,4 +240,4 @@ The Joint Research Centre has defined [Common Data Elements to be collected by a
 
 
 ## Suggestions
-{% include metroline_steps/suggestions_development.html %}
+{% include metroline_steps/suggestions_released.html %}

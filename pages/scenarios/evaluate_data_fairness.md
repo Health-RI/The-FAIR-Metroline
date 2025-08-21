@@ -47,7 +47,6 @@ Since FAIR is not my expertise, I enlist the help of a FAIR data steward who bri
 | 3 - Hire or consult a data steward                       | I need to consult a data steward that has knowledge about:<br> 1. Compliance. Advise on institutional compliance with RDM policies and regulations.<br>2. Data sharing & publishing. Identify gaps in support for data sharing and publishing. |
 | 4 - Ensure support and compliance                        | Not applicable, this aspect is for the data steward's manager to take care of.                                                                                                                                                                 |
 
-_SdR. Not 100% sure what to write for step 3 here_
 
 ### Pre-FAIR assessment
 I do this step together with the FAIR data steward from the previous step. 

@@ -19,16 +19,16 @@ The how-to section describes a variety of assessment tools based on the FAIR pri
 This step will help you assess the current FAIRness level of your data. Comparing the current FAIRness to the previously defined [FAIRification objectives](define_fairification_objectives) will help you shape the necessary steps and requirements needed to achieve your FAIRification goals and help you create your [solution plan](design_solution_plan), a workplan specifically designed for reaching these goals. Furthermore, the assessment can be repeated in the [Assess FAIRness](asses_fairness) step, allowing you to compare the results and check the progress of your data towards FAIRness.
 
 ## How to
-### Step 1 - Types of tools
+### Step 1 - Choose the right tool type for your FAIR Assessment
 Decide which type of tool fits your goal(s) best. Broadly, the tools fall into two categories. 
-* Online self-assessment surveys. Here, the user is presented with an online form, which is filled in manually.
-* (Semi) automated tests.  Here (semi) automated tests are performed on a dataset by providing the tool with, for example, a link to an already published dataset. 
+* **Online self-assessment surveys.** Here, the user is presented with an online form, which is filled in manually.
+* **(Semi) automated tests.**  Here (semi) automated tests are performed on a dataset by providing the tool with, for example, a link to an already published dataset. 
 
 In both cases, the result gives an indication about the FAIRness of the (meta)data. Additionally, tools may give advice how to improve FAIRness. It is important to bear in mind that outcomes of tools may vary due to, for example, differences in tests performed and subjectivity of self-assessments surveys. See [FAIR Assessment Tools: Towards an “Apples to Apples” Comparisons](https://www.eosc.eu/sites/default/files/2023-01/Report%20on%20the%20FAIR%20Evaluation%20events_final_sub.pdf) for more information this.
 
 While we focus specifically on the FAIRness of (meta)data in this step, it is also possible to assess general FAIR awareness, for example by using the [FAIR Aware tool](https://fairaware.dans.knaw.nl/) provided by DANS.
 
-### Step 2 - Popular tools
+### Step 2 - Consider using a well-known FAIR assessment tool
 The tables below provide an overview of some of the more popular tools from both categories. 
 
 #### Online self-assessment surveys
@@ -129,11 +129,12 @@ The tables below provide an overview of some of the more popular tools from both
 </table>
 
 To find even more tools:  
-* [FAIRassist](https://fairassist.org/) offers an overview of available tools;
-* several tools are evaluated and compared in [FAIR assessment tools: evaluating use and performance](https://www.sciencedirect.com/science/article/pii/S2452074822000246);
-* [RDMkit](https://rdmkit.elixir-europe.org/compliance_monitoring#how-can-you-measure-and-document-data-management-capabilities) discusses several solutions.
+* **[FAIRassist](https://fairassist.org/).** Offers an overview of available tools;
+* **[RDMkit](https://rdmkit.elixir-europe.org/compliance_monitoring#how-can-you-measure-and-document-data-management-capabilities).** Discusses several solutions, such as the FAIR metrics and FAIRshake;
+* **[FAIR assessment tools: evaluating use and performance](https://www.sciencedirect.com/science/article/pii/S2452074822000246).** Paper comparing several tools.
 
-### Step 3 - Effective approach to conducting a pre-FAIR assessment 
+
+### Step 3 - Prepare before you start your FAIR assessment
 To successfully do a pre-FAIR assessment, do the following:
 * learn from examples (see the [practical examples](#practical-examples-from-the-community) section);
 * familiarise yourself with the tool you intend to use;
@@ -144,8 +145,8 @@ The final evaluation will give insight into the current FAIRness of your data. D
 
 ## Expertise requirements for this step
 The expertise required may depend on the assessment tool you want to use. Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
-* FAIR data stewards. Specialist who can help filling out the surveys and questionnaires.
-* Research software engineers. Specialists who can help running some of the specialised software.
+* **FAIR data stewards.** Specialist who can help filling out the surveys and questionnaires.
+* **Research software engineers.** Specialists who can help running some of the specialised software.
 
 ## Practical examples from the community
 For an applied example of The FAIR Evaluator, see [Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic](https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-022-00263-7).

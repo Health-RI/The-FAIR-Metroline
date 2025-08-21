@@ -121,7 +121,7 @@ After determining the necessary metadata elements for PRISMA data in step 2, Eva
   * Biosamples. [BBMRI-ERIC data catalogue](https://directory.bbmri-eric.eu/ERIC/directory/#/catalogue);
   * Questionnaires. [The Qualitative Data Repository](https://qdr.syr.edu/).
 
-### Step 4 - Determine metadata catalogues 
+### Step 4 - Select the appropriate metadata catalogues
 In this step, you will evaluate the pros and cons of Metadata Catalogue candidates and make the decisions most appropriate for your context. The general suggestion is to prioritise community standards ([R1.3](https://www.go-fair.org/fair-principles/r1-3-metadata-meet-domain-relevant-community-standards/)) - is there a metadata catalogue which is widely used in your community?
 * **Yes.** It is recommended to choose it and adapt your metadata requirements (Step 2) to the predefined metadata elements of the Catalogue. 
 * **No.** It is recommended to compare your metadata requirements (Step 2) with the predefined metadata elements from the list of all repository candidates (Step 3) and choose the best matching one (instead of multiple ones).

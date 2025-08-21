@@ -32,20 +32,17 @@ Furthermore it is:
 
 {% include info-box.html title="Regarding the National Health Data catalogue." text="Health-RI is in the process of defining a metadata scheme for adding metadata (onboarding) to the Health-RI metadata portal. To allow for onboarding of a resource, the minimal metadata set must be provided. It is therefore essential that you assess whether this minimal set is collected/available or whether additional metadata needs to be collected." %}
 
-
-
-
 ## How to
 The steps below help you identify existing metadata about your resource and their possible location.
 
-### Step 1 -  Identify where information about your resource is stored 
+### Step 1 - Identify where information about your resource is stored
 Start by considering where information about your resource is already contained. Typically, institutions have systems that require a certain level of documentation. Investigate these systems. 
 
 _**Example:** Eva, a researcher at Radboudumc, wants to assess what metadata is available about her project. She starts by consulting her Data Management Plan (DMP). She then remembers that she added metadata about her project to the [PaNaMa](https://panama-rms.eu/) registry and the [Radboud Data Repository](https://data.ru.nl/)._ 
 
 **Step output:** Systems and documents identified. These could include the DMP, project or research management systems such as PaNaMa, systems involved in ethical approval and (local) data repositories. 
 
-### Step 2 - Extract and evaluate your metadata  
+### Step 2 - Extract, review and validate your metadata
 Once you've identified where your metadata might reside, it's time to extract and evaluate it. Errors and inconsistencies can naturally creep into your records over time, especially when many people are involved. Guidelines and project contexts can also change. This step helps ensure that the metadata is still understandable and accurate. Use the following questions to guide you. 
 
 * Are there typos in the metadata? 
@@ -58,7 +55,7 @@ _**Example:** After reviewing her metadata across various platforms, Eva realise
 
 **Step output:** A list of identified issues in the metadata to be resolved/updated. 
 
-### Step 3: Make the necessary corrections 
+### Step 3 - Update the metadata through the necessary corrections
 **Tip:** Try to find “one source of truth” in your organisation/project. For instance for resources you would change the information in the place where the DOI points to. 
 
 _**Example:** Eva decides to update her Data Management Plan because it's crucial for her PhD thesis. She also updates and fills out missing fields in the Radboud Data Repository to make her dataset available for reuse by others._ 

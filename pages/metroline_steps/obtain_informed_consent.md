@@ -31,14 +31,16 @@ The FAIR principles aim to make data useful for immediate research and future pu
 ## How to 
 IC is an essential component for collecting and reusing data. To ensure an IC complies to laws and regulations it has to be checked. Research that falls under the WMO must undergo a review by an accredited Medical Research Ethics Committees (MREC) or the Central Committee on Research Involving Human Subjects (CCMO). Non-WMO studies should be reviewed by an ethical committee, such as an MREC. Research is not allowed to start without a positive decision of the appropriate reviewing committee. 
 
-If your study is subject to the WMO go to [Step 1](#step-1---study-is-subject-to-wmo) and for a non-WMO study go to [Step 2](#step-2---study-is-not-subject-to-wmo). [Step 3](#step-3---additional-fair-consideration) describes additional paragraphs relevant for FAIR, which you should consider for your ICF and SIS. In [Step 4](#step-4---special-cases), issues you may encounter in specific cases are highlighted, for example, when you’re setting up a cohort study.  
+If your study is subject to the WMO go to [Step 1](#step-1---follow-wmo-informed-consent-requirements-for-data-reuse) and for a non-WMO study go to [Step 2](#step-2---follow-non-wmo-informed-consent-requirements-for-data-reuse). [Step 3](#step-3---address-additional-fair-consent-requirements-for-data-sharing-linkage-and-retention
+) describes additional paragraphs relevant for FAIR, which you should consider for your ICF and SIS. In [Step 4](#step-4---address-special-consent-considerations-for-cohorts-deceased-participants-and-other-cases
+), issues you may encounter in specific cases are highlighted, for example, when you’re setting up a cohort study.  
 
 {% include info-box.html type="warning" text="
 While this guidance aims to provide up-to-date and accurate information, you should always check with your local privacy and legal specialists! Also, where examples are provided, always check the actual templates to ensure you have the most up-to-date information.
 "%}
 
 
-### Step 1 - Study is subject to WMO
+### Step 1 - Follow WMO informed consent requirements for data reuse
 The CCMO has published SIS models for both adults and children and **strongly** recommends their usage. The models are available in both [English](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/e-information-research-subjects/e1-e2.-information-sheet-and-consent-form-research-subjects) and [Dutch](https://www.ccmo.nl/onderzoekers/standaardonderzoeksdossier/e-informatie-onderzoeksdeelnemers/e1-informatiebrief-en-toestemmingsformulier-onderzoeksdeelnemers). The MREC/CCMO reviewing committee only assesses the Dutch SIS and ICF. However, if a participant who is not adequately fluent in Dutch is asked to participate in a study, the information must be provided in a language the participant is proficient in.
 
 **Subject Information Sheet (SIS)**
@@ -66,9 +68,9 @@ Includes individuals with conditions such as advanced dementia, significant inte
 
 If the subject becomes temporarily incapacitated, consent must still be obtained from the individual whenever possible. If the individual later regains the ability to provide consent, they may do so at that time. The information letter should clearly outline how data collected during the period of incapacity will be handled, specifying whether the data will be kept for the study or destroyed.
 
-Next, proceed to [step 3](#step-3---additional-fair-consideration).
+Next, proceed to [step 3](#step-3---address-additional-fair-consent-requirements-for-data-sharing-linkage-and-retention).
 
-### Step 2 - Study is not subject to WMO
+### Step 2 - Follow non-WMO informed consent requirements for data reuse
 First, check with your local MREC which SIS and ICF templates they have available and accept. Verify whether these templates contain FAIR components. The ELSI Servicedesk provides [standardised text](https://elsi.health-ri.nl/sites/elsi/files/2024-10/Alinea%20hergebruik%20DEF.docx) that can be used in the SIS and ICF (only available in Dutch). 
 
 **Subject Information Sheet (SIS)**
@@ -89,7 +91,7 @@ _Participants < 16 years old (children)_
 
 If the MREC requires you to use a specific SIS/ICF template for children, check whether it contains FAIR components. If it does not contain FAIR components, consider reusing the entry described above and consult your local experts, such as a data protection / privacy officer, for exact integration before subjecting the documents for review .
 
-### Step 3 - Additional FAIR consideration
+### Step 3 - Address additional FAIR consent requirements for data sharing, linkage and retention
 The information below is translated from Amsterdam UMC’s [Dutch Non-WMO template](https://metc.amsterdamumc.org/wp-content/uploads/2024/09/E1E2.-Niet-WMO-model-informatiebrief-onderzoek-niet-WMO-versie-d.d.-15-08-2024.docx) and the ELSI Servicedesk’s [standardised text](https://elsi.health-ri.nl/sites/elsi/files/2024-10/Alinea%20hergebruik%20DEF.docx). If you decide to use any of these passages, please verify with your local experts.
 
 #### 3.1 Sharing data with parties outside of the EU
@@ -144,7 +146,7 @@ Please note that fixed retention periods apply to the type of research. You are 
 Depending on local policies, you could consider:
 * At least [xx] years or as long as necessary for scientific research.
 
-### Step 4 - Special cases
+### Step 4 - Address special consent considerations for cohorts, deceased participants and other cases
 #### 4.1 Cohort studies
 If you are setting up an ICF and SIS for a cohort study, keep the following in mind:  
 * **Check your consent for scope.** If your current consent has a specific scope, reuse must fall within this scope.
@@ -163,7 +165,7 @@ If data is anonymised, it is no longer considered personal data under regulation
 #### 4.4 Research involving animals. 
 Here, informed consent is not applicable in the same way it is for human research. Instead, ethical approval is required to ensure the humane treatment of animals. This is out of scope. For more information check [Dierexperimentencommissie (DEC) | Centrale Commissie Dierproeven](https://www.centralecommissiedierproeven.nl/onderwerpen/dierexperimentencommissie-dec (available in Dutch).
 
-### Step 5 - Finally
+### Step 5 - Submit your FAIR-ready SIS and ICF for final committee review
 With your SIS and ICF fully FAIR ready and approved by your data protection officer, get it reviewed by the appropriate committee:
 * An accredited MREC for Non-WMO studies 
 * An accredited MREC or the CCMO for WMO studies
