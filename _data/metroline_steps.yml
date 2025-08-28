@@ -39,7 +39,7 @@
   summary: Coming soon.
   url: 
   icon: ":closed_lock_with_key:"
-  status: FUTURE WORK
+  status: IN DEVELOPMENT
 - id: 8
   title: Assess availability of your metadata
   summary: Metadata describes a resource, like a book’s title and author or a photo’s date and location, which help with organization and discovery of that resource. This Metroline step describes the types of metadata, where you can find them for your resource, and how to improve their quality. Filling metadata gaps enhances a resource’s visibility and reusability.
@@ -93,7 +93,7 @@
   summary: Coming soon.
   url: 
   icon: ":book:"
-  status: PLANNED
+  status: IN DEVELOPMENT
 - id: 17
   title: Obtain informed consent
   summary: To ensure your data and materials can be reused in the future, your subject information sheet (SIS) and informed consent form (ICF) must address reuse. This Metroline step provides consideration and resources for preparing your SIS and ICF.
@@ -102,7 +102,7 @@
   status: RELEASED
 - id: 18
   title: Enter data in eCRF (data collection)
-  summary: Coming soon.
+  summary: On hold.
   url: 
   icon: ":computer:"
   status: ON HOLD
@@ -138,14 +138,9 @@
   status: RELEASED
 - id: 24
   title: Did you reach your FAIRification objectives
-  summary: Coming soon.
+  summary: On hold.
   url: 
   icon: ":checkered_flag:"
   status: ON HOLD
-- id: 25
-  title: TEST
-  summary: Overflow test.
-  url: 
-  icon: 
-  status: 
+
 
