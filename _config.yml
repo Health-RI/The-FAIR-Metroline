@@ -1,7 +1,7 @@
 title: FAIR Metroline
 # This appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-topnav_title: FAIR Metroline
+#topnav_title: FAIR Metroline
 # Optional: this appears on the top navigation bar next to the main_logo.svg icon
 
 description: "FAIR Metroline. A step-by-step route to making data FAIR."
@@ -65,8 +65,8 @@ theme_variables:
   #   headings: 'h2'
    topnav:
     # theme: light
-     brand_logo: assets/img/main_logo.png
-#     brand_logo: assets/img/media_kit/main_logo_with_text_v4.png
+#     brand_logo: assets/img/main_logo.png
+     brand_logo: assets/img/media_kit/main_logo_with_text.png
     # github: true
     # twitter: false
     # bluesky: false
