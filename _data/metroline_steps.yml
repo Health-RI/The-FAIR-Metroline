@@ -51,7 +51,7 @@
   summary: Coming soon.
   url: 
   icon: ":passport_control:"
-  status: FUTURE WORK
+  status: PLANNED
 - id: 10
   title: Register resource level metadata
   summary: To make your resource (e.g. data), available for reuse, its metadata can be published in a catalogue. This step helps you find a catalogue where you can register these resource metadata and explains why adding your resource to such a catalogue is important.
@@ -129,7 +129,7 @@
   summary: Coming soon.
   url: 
   icon: ":question:"
-  status: FUTURE WORK
+  status: PLANNED
 - id: 23
   title: Assess FAIRness
   summary: Now that you’ve FAIRified your data, it’s time to check the resulting FAIRness and decide if you’ve reached your goals. Use tools and other methods to assess if your data is truly Findable, Accessible, Interoperable, and Reusable. If needed, adjust or improve things so your data stays FAIR in the long run.
