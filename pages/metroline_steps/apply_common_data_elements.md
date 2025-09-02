@@ -12,7 +12,7 @@ permalink: /metroline_steps/apply_common_data_elements
 > {{ current_step.summary }}
 
 ## Short description 
-As explained in [Common Data Elements: Lessons from NIH Experience](https://www.nlm.nih.gov/NIHbmic/CDEprocessrecommendations17Jan2014.pd), a Common Data Element (CDE) is a standardised representation of a variable used in clinical or analytical projects. It includes a clearly defined question and a specified format or set of acceptable responses. Ideally, the CDE should be interpretable by both humans and machines without ambiguity.
+As explained in [Common Data Elements: Lessons from NIH Experience](https://www.nlm.nih.gov/NIHbmic/CDEprocessrecommendations17Jan2014.pdf), a Common Data Element (CDE) is a standardised representation of a variable used in clinical or analytical projects. It includes a clearly defined question and a specified format or set of acceptable responses. Ideally, the CDE should be interpretable by both humans and machines without ambiguity.
 
 To see whether an item can be considered a CDE, the following checklist can be applied: 
 

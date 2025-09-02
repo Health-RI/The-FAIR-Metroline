@@ -59,7 +59,7 @@ The CCMO’s SIS contains an ICF as an Appendix. The following items are relevan
 _Participants under 16 years old (children)_
 
 For participants who are younger than 16, parents or guardians must provide signed informed consent on behalf of the child. A consent form for parents or guardians is included in the appendices of the [CCMO website](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/e-information-research-subjects/e1-e2.-information-sheet-and-consent-form-research-subjects/e1-e2a-template-subject-information-sheet-for-research-subjects-16-years-of-age-children). The accompanying information letter should be updated to address the parents or guardians, including a statement granting permission for the child.
-   * **Children under 12 years old.** Children are informed about the study using a discussion guide ([model bespreekblad](https://www.ccmo.nl/publicaties/formulieren/2019/10/14/e1-e2-model-bespreekblad-voor-kinderen-tot-12-jaar)), which can be found on the CCMO website. Once a child reaches the age of 12, they must also provide written consent. However, parents or guardians are not required to sign another consent form.
+   * **Children under 12 years old.** Children are informed about the study using a discussion guide ([model bespreekblad](https://www.ccmo.nl/publicaties/formulieren/2019/10/14/e1-e2-model-bespreekblad-voor-kinderen-tot-12-jaar), which can be found on the CCMO website. Once a child reaches the age of 12, they must also provide written consent. However, parents or guardians are not required to sign another consent form.
    * **Children aged 12-16 years old.** Both the child and their parents or guardians must give consent. Once the child turns 16, written consent of the parents or guardians is no longer necessary.
 
 _(Temporarily) incapacitated adults_
@@ -163,7 +163,7 @@ While the GDPR is no longer applicable, ethically you may want to adhere to the 
 If data is anonymised, it is no longer considered personal data under regulations like the GDPR. 
 
 #### 4.4 Research involving animals. 
-Here, informed consent is not applicable in the same way it is for human research. Instead, ethical approval is required to ensure the humane treatment of animals. This is out of scope. For more information check [Dierexperimentencommissie (DEC) | Centrale Commissie Dierproeven](https://www.centralecommissiedierproeven.nl/onderwerpen/dierexperimentencommissie-dec (available in Dutch).
+Here, informed consent is not applicable in the same way it is for human research. Instead, ethical approval is required to ensure the humane treatment of animals. This is out of scope. For more information check [Dierexperimentencommissie (DEC) | Centrale Commissie Dierproeven](https://www.centralecommissiedierproeven.nl/onderwerpen/organisaties/dierexperimentencommissie-dec) (available in Dutch).
 
 ### Step 5 - Submit your FAIR-ready SIS and ICF for final committee review
 With your SIS and ICF fully FAIR ready and approved by your data protection officer, get it reviewed by the appropriate committee:
@@ -183,7 +183,7 @@ The following role from [Metroline Step: Build the Team]({{site.baseurl}}/metrol
 
 ## Training
 Available training resources include:
-* [GDPR 4 Data Support RDNL](https://researchdata.nl/en/two-ways-to-get-started-2/)
+* [GDPR 4 Data Support RDNL](https://researchdata.nl/en/gdpr-4-data-support/)
 * [Utrecht University Data Privacy Handbook](https://utrechtuniversity.github.io/dataprivacyhandbook/)
 
 ## Suggestions

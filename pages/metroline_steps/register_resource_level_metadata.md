@@ -139,7 +139,7 @@ The final step involves entering the metadata for each resource into the chosen 
 **Outcome:** successfully registered resource-level metadata in a FAIR manner, ensuring the resources are Findable, Accessible, Interoperable, and Reusable.
 
 #### Example 
-Eva followed the [instructions](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279150593) for onboarding data in the Health-RI data catalogue to register the metadata, which is now [available](https://healthdata.nl/datasets/93311669-be7c-4b16-911a-401a18ea692e). 
+Eva followed the [instructions](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279150593) for onboarding data in the Health-RI data catalogue to register the metadata, which is now [available](https://catalogus.healthdata.nl/datasets/2a34108d-6ff8-4b88-aaa5-51f51f68d489). 
 
 Eva entered the biosample data into the BBMRI Catalogue Form, which she [downloaded](), and submitted it to the [Health-RI Service Desk](https://www.health-ri.nl/health-ri-servicedesk). The metadata for biosample data were successfully registered, see  
 [BBMRI-ERIC Directory](https://directory.bbmri-eric.eu/ERIC/directory/#/collection/bbmri-eric:ID:NL_RB:collection:155?search=PRISMA).

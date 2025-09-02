@@ -100,7 +100,7 @@ Positioning a FAIR data steward in your team requires aligning their role with y
 
 ## Practical examples from the community 
 ***[European Joint Programme on Rare Diseases (EJP RD)](https://www.ejprarediseases.org/)***
-EJP RD provides various FAIRification services, guidance, tools and training, supported by a team of six FAIR data stewards. Their activities include (see the EJP RD FAIRification website for more details):
+EJP RD provides various FAIRification services, guidance, tools and training, supported by a team of six FAIR data stewards. Their activities include (see the EJP RD FAIRification [website](https://www.ejprarediseases.org/) for more details):
 * participating in project, national and international meetings to exchange knowledge, share experiences and develop FAIRification guidance;
 * identifying FAIRification bottlenecks and supporting the implementation of FAIRification processes within the project;
 * assessing training needs and organising workshops and hackathons at the project level.
@@ -112,7 +112,7 @@ As data stewardship is a relatively new job profile and the field of data manage
 While many trainings and resources focus on general RDM, they can often be adapted to emphasise FAIR principles and tailored to specific project needs.
 
 The [NPOS report on professionalising data stewardship in the Netherlands](https://doi.org/10.5281/zenodo.4623713) contains a list of training opportunities and materials (pp. 148–162). Several organisations in the Netherlands provide data stewardship training, including:
-* **Research Data Netherlands (RDNL) [Essentials 4 Data Support](https://researchdata.nl/en/services/cursus/).** A foundational, domain agnostic training in data management and data stewardship. Materials are publicly available.
+* **Research Data Netherlands (RDNL) [Essentials 4 Data Support](https://researchdata.nl/essentials-4-data-support/).** A foundational, domain agnostic training in data management and data stewardship. Materials are publicly available.
 * **LCRDM [DCC Spring training days](https://lcrdm.nl/evenementen/dcc-spring-training-days-2024).** Offers sessions on FAIR data and research data management. Most materials are freely available afterwards.
 * **Health-RI FAIR Data Stewardship Basics course.** Provides training on core data stewardship principles. See the [National Health Data Portal](https://www.healthdata.nl/en/services/fair-data-stewards-basics-course) for more information and contact <a href="mailto:fairservicedesk@health-ri.nl">fairservicedesk@health-ri.nl</a> for upcoming editions.
 
