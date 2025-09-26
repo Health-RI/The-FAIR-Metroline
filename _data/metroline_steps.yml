@@ -78,10 +78,11 @@
   status: RELEASED
 - id: 14
   title: Design eCRF (data collection)
-  summary: Coming soon.
-  url: 
+  summary: >
+   A Case Report Form (CRF) is a structured document used to capture information about study participants. When this process is conducted electronically, the form is referred to as an electronic Case Report Form (eCRF). The use of eCRFs offers several advantages: it facilitates efficient data storage, reduces the risk of human error and saves time throughout the study lifecycle. In this step, we will focus on how to design and develop an eCRF in preparation for data collection.
+  url: metroline_steps/design_ecrf
   icon: ":pencil:"
-  status: IN DEVELOPMENT
+  status: READY FOR REVIEW
 - id: 15
   title: Create or reuse a semantic (meta)data model
   summary: Coming soon.
