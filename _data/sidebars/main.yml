@@ -22,6 +22,8 @@ subitems:
         url: /metroline_steps/apply_common_data_elements
       - title: Analyse data semantics
         url: /metroline_steps/analyse_data_semantics
+      - title: Design eCRF
+        url: /metroline_steps/design_ecrf
       - title: Obtain informed consent
         url: /metroline_steps/obtain_informed_consent
       - title: Apply (meta)data model
