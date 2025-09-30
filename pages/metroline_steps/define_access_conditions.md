@@ -1,9 +1,9 @@
 ---
-title: Create or reuse a semantic (meta)data model
-permalink: /metroline_steps/create_or_reuse_a_semantic_model
+title: Define access conditions
+permalink: /metroline_steps/define_access_conditions
 ---
 
-This page is currently being migrated to the website. A version is available on [Confluence](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/277839878/Metroline+Step+Create+or+reuse+a+semantic+meta+data+model).
+This page is currently being migrated to the website. A version is available on [Confluence](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/277413922/Metroline+Step+Define+access+conditions).
 
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}

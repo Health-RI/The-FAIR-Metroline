@@ -5,9 +5,7 @@ permalink: /contributing/template
 
 {%raw%}
 {% include assign_current_step.html %}
-
 {% include development_status.html step=current_step %}
-
 
 >***Great quote. [Reference]()***
 >

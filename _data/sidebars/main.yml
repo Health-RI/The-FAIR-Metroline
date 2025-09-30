@@ -24,10 +24,16 @@ subitems:
         url: /metroline_steps/analyse_data_semantics
       - title: Design eCRF
         url: /metroline_steps/design_ecrf
+      - title: Create or reuse a semantic (meta)data model
+        url: /metroline_steps/create_or_reuse_a_semantic_model
       - title: Obtain informed consent
         url: /metroline_steps/obtain_informed_consent
       - title: Apply (meta)data model
         url: /metroline_steps/apply_metadata_model
+      - title: Transform and expose FAIR (meta)data
+        url: /metroline_steps/transform_and_expose_fair_metadata
+      - title: Define access conditions
+        url: /metroline_steps/define_access_conditions
       - title: Assess FAIRness
         url: /metroline_steps/assess_fairness
   - title: Scenarios
