@@ -88,7 +88,7 @@
   summary: Creating a semantic (meta)data model often requires considerable effort as it is a complex task. Reusing an existing model, where possible, can save time and increase interoperability. Start by checking if a suitable model already exists. If not, follow a structured approach to create one. Once the model is in place, share it using common platforms and provide clear documentation to support reuse by others.
   url: metroline_steps/create_or_reuse_a_semantic_model
   icon: ":construction:"
-  status: IN DEVELOPMENT
+  status: READY FOR REVIEW
 - id: 16
   title: Use ontologies in the data model
   summary: Coming soon.
