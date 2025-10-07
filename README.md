@@ -18,3 +18,6 @@ When referencing content from the FAIR Metroline pages, please cite as follows:
 # License
 This project is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). See the [LICENSE.txt](./LICENSE.txt) file for the full legal text.
 
+## Credits
+
+This project was originally based on [elixir-toolkit-theme-example](https://github.com/ELIXIR-Belgium/elixir-toolkit-theme-example).
