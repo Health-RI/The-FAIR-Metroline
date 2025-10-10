@@ -124,7 +124,7 @@
   summary: When making health care data FAIR, data holders have to keep the balance between making data accessible for reuse and protecting personal information of subjects present in the data. This Metroline step helps you pick the appropriate access level to your data and publish the necessary information in the metadata.
   url: metroline_steps/define_access_condiions
   icon: ":closed_lock_with_key:"
-  status: IN DEVELOPMENT
+  status: READY FOR REVIEW
 - id: 22
   title: Query (use) over resources
   summary: Coming soon.
