@@ -36,7 +36,11 @@ jobs:
 
       - name: Build with Jekyll
         run: |
-          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+          if [ "${{ github.ref_name }}" = "main" ]; then
+            bundle exec jekyll build --config _config.yml,_config.production.yml --baseurl "${{ steps.pages.outputs.base_path }}"
+          else
+            bundle exec jekyll build --config _config.yml --baseurl "${{ steps.pages.outputs.base_path }}"
+          fi
         env:
           PAGES_REPO_NWO: ${{ github.repository }}
           JEKYLL_ENV: production
@@ -56,7 +60,6 @@ jobs:
       cancel-in-progress: true
 
     environment:
-      # Different environment per PR to avoid clashes
       name: github-pages${{ github.event.pull_request.number && format('-pr-{0}', github.event.pull_request.number) || '' }}
       url: ${{ steps.deployment.outputs.page_url }}
     

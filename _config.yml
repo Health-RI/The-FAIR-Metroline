@@ -1,19 +1,13 @@
 title: FAIR Metroline
 # This appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-#topnav_title: FAIR Metroline
-# Optional: this appears on the top navigation bar next to the main_logo.svg icon
-
 description: "FAIR Metroline. A step-by-step route to making data FAIR."
 # Metadata description of the website
 
 remote_theme: ELIXIR-Belgium/elixir-toolkit-theme@4.1.0
 
-#url: "https://health-ri.github.io"
-#baseurl: "/The-FAIR-Metroline"
-
-url: "https://www.fairmetroline.org"
-baseurl: ""
+url: ""        # leave empty for previews
+baseurl: ""    # leave empty for previews
 
 exclude:
   - README.md
@@ -21,7 +15,6 @@ exclude:
   - Gemfile
 
 defaults:
-# Define here page metadata attributes for all pages at once or on specific directories. More information: https://jekyllrb.com/docs/configuration/front-matter-defaults/
   -
     scope:
       path: ""
@@ -40,44 +33,11 @@ plugins:
   - jemoji
   - webrick
 
-
 theme_variables:
-  # git_host: GitHub
-  # back_to_top: true
-  # dev-info-banner: false
-  # privacy_statement_url: /privacy
    github_buttons:
-  #   position: top
      edit_me: false
-  #   open_issue: true
      history: true
-  # datatables:
-  #   searchbuilder: True
    headings:
-  #   related-pages: Related pages
-  #   more-information-tiles: More information
-  #   resource-table-all: Tools and resources on this page
-  #   resource-table-all-collapse: false
      affiliation-tiles-page: Affiliations
-#     contributor-minitiles-page: Contributors
-  # toc:
-  #   min_headings: 2
-  #   headings: 'h2'
    topnav:
-    # theme: light
      brand_logo: assets/img/media_kit/transp_main_logo_wide_text.png
-    # github: true
-    # twitter: false
-    # bluesky: false
-    # linkedin: false
-    # fosstodon: false
-  # theme_color: 0d6efd
-  # fonts:
-  #   - url towards a font
-
-# --- Missing in gitlab: ---
-# github:
-#   repository_url: https://github.com/ELIXIR-Belgium/elixir-toolkit-theme
-#   source:
-#     branch: main
-
