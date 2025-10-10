@@ -14,7 +14,7 @@ permalink: /metroline_steps/create_or_reuse_a_semantic_model
 ## Short description 
 A semantic (meta)data model describes the meaning of your (meta)data elements in a structured, machine-readable, and ideally precise and unambiguous manner. It helps transform your data into a FAIR artefact that can be discovered, queried, and reused, supporting consistency, interoperability, and discoverability, especially across systems and communities (see [Metroline step: Apply (meta)data model]({{site.baseurl}}/metroline_steps/apply_metadata_model)). Before creating a new model, always check whether an existing (meta)data model can be reused or adapted.
 
-## Why is this step important?
+## Why is this step important
 Creating or reusing a semantic (meta)data model makes your data and metadata understandable not just to you, but also to others who may want to access, combine, and reuse it. This step aligns with the FAIR principles F2, I1, I2, I3, R1, and R1.3, and is important for several reasons:
 
 - **Enable reuse.** Ensures that data can be discovered, correctly understood, and reused, even in ways you might not have anticipated (F2, I1, I3, R1.3).
