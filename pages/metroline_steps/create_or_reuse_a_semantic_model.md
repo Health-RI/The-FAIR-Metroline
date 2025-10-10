@@ -19,11 +19,8 @@ Creating or reusing a semantic (meta)data model makes your data and metadata und
 
 - **Enable reuse.** Ensures that data can be discovered, correctly understood, and reused, even in ways you might not have anticipated (F2, I1, I3, R1.3).
   - For models annotated with ontologies: the hierarchical structure of ontologies also enhances findability—for instance, a model for 'neck cancer' can be found through broader searches for 'rare disease' or 'cancer'. You find more information on the use of ontologies [here](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/277151776/Metroline+Step+Use+ontologies+in+the+data+model).
-
 - **Promote standardisation.** Reusing established models where possible supports alignment with community practices, promotes convergence and avoids redundant work (I2, R1.3).
-
 - **Ensure clarity.** Clearly defining what each data element means, their relationships and possible values helps others interpret your data accurately and use it in new contexts (F2, I1, I3, R1.3).
-
 - **Support interoperability.** Well-defined and accessible definitions allow different systems and organisations to work together effectively using your data under clear conditions (I1, I2, I3).
 
 ## How to
@@ -41,17 +38,19 @@ To illustrate these steps, we'll use a *running example:* the "HRI Clinic," a sm
 ### Step 1 – Prepare your data for modelling
 This initial step ensures exactly what pieces of information should be included in the semantic model. This simply means deciding what's "in" and what's "out" by identifying the specific concepts from your subject area that the model will represent.
 
-*Example:* As preparation, the HRI Clinic defines the following main elements as part of their model's scope: `PatientID`, `VisitDate`, `ReasonForVisit`, and `Doctor`.
+{% include info-box.html type="example" title="Example - step 1" text="
+As preparation, the HRI Clinic defines the following main elements as part of their model's scope: `PatientID`, `VisitDate`, `ReasonForVisit`, and `Doctor`.
+" %}
 
 Additional information on preparation can be found in the [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics) page.
 
 ### Step 2 – Search for existing models
 Before creating a new model, first investigate existing semantic metadata models to see if one (or more) can be reused. To support this decision (taken in step 3), gather the following information from each potential reuse candidate model:
 
-- **Scope and domain coverage**: Does the model represent the entities and relationships relevant to your context?
-- **Granularity**: Is it too general or too detailed for your needs?
-- **Community adoption**: Is it actively maintained and used in your field?
-- **Licensing and openness**: What are the conditions for reusing and extending the model?
+- **Scope and domain coverage**. Does the model represent the entities and relationships relevant to your context?
+- **Granularity**. Is it too general or too detailed for your needs?
+- **Community adoption**. Is it actively maintained and used in your field?
+- **Licensing and openness**. What are the conditions for reusing and extending the model?
 
 Start by searching in well-maintained repositories. The [OntoUML/UFO Catalog](http://w3id.org/ontouml-models/) is an example of a catalogue of models that you can use to check for existing models. For ontologies, you can check the following resources:
 
@@ -79,7 +78,9 @@ Examples of widely reused data models:
 
 If a model is partially suitable, it can often be extended or mapped.
 
-*Example:* after conducting a literature review, the HRI Clinic team decided to use the CARE-SM model to annotate their data. This model already describes information relevant to their scope and is mapped to other resources, such as OMOP and HL7 FHIR.
+{% include info-box.html type="example" title="Example - step 2" text="
+After conducting a literature review, the HRI Clinic team decided to use the CARE-SM model to annotate their data. This model already describes information relevant to their scope and is mapped to other resources, such as OMOP and HL7 FHIR.
+" %}
 
 ### Step 3 – Reuse, extend, or create
 Once candidate models or vocabularies are identified, decide whether to reuse one as-is, use parts of it and extend it to fit your context, or create a new one. Most semantic modelling methodologies have workflows or guidelines to support your decision. Use the information gathered from the previous step, the methodologies guidance and the following general recommendations during your decision making process.
@@ -88,12 +89,10 @@ Once candidate models or vocabularies are identified, decide whether to reuse on
   - Use the model as-is if it meets your requirements in terms of scope, semantics, and technical format. This is the preferred approach for maximising interoperability, promoting standardisation, and avoiding redundancy.
   - *Tip:* Reuse models that are well-documented, actively maintained, and permissively licensed. In most cases, you will reuse parts of the model according to your scope. When doing so, make sure the model remains consistent (e.g. no relationships are missing between the concepts to be reused).
   - *Example:* Adopting the Data Catalogue Vocabulary (DCAT), a W3C standard, directly to describe datasets in an open data catalogue.
-
 - **Extend**
   - Extend an existing model when it partially fits your needs but lacks certain domain-specific elements. This may involve either a core, general-purpose model (e.g. Schema.org, DCAT) or a domain-specific ontology (e.g. SNOMED‐CT, DDI).
   - *Tip:* Do not modify the original model. Instead, you create an extension that builds on it while preserving compatibility. In practice, this means adding your own classes or properties and linking them to the original model using semantic linking methods such as rdfs:subClassOf, skos:broader, or owl:equivalentClass. This approach ensures that your additions are interoperable and aligned with community standards. This can also include merging different existing models that together cover your domain of interest. If doing so, check whether the source models semantically align in their definition of overlapping concepts.
   - *Example:* Extending Schema.org's Dataset class with a biomedical domain-specific subclass, such as BiomedicalDataset, to capture additional context. Examples of further extensions of Schema.org include [Bioschemas](https://bioschemas.org/profiles/).
-
 - **Create**
   - Create a new model only when no suitable model exists, and when reuse or extension is not feasible. This approach requires greater expertise in ontology engineering and should follow established best building practices.
   - *Tip*: Even when creating from scratch, it is strongly recommended to reuse existing vocabularies where possible for attributes and relations. In this case, following modelling methodologies is highly recommended. Make sure your model is properly validated using adequate tools and by consulting domain experts.
@@ -101,7 +100,9 @@ Once candidate models or vocabularies are identified, decide whether to reuse on
 
 Always document the rationale behind your choice. This supports transparency, facilitates reuse, and helps others integrate with your model.
 
-*Example:* the HRI Clinic decides to use only parts of the CARE-SM for their use case. Specifically, they reuse the *Demographics* and *Treatment and Interventions* modules, which are sufficient for their purposes. Within those modules, they select only the concepts related to their use case.
+{% include info-box.html type="example" title="Example - step 3" text="
+The HRI Clinic decides to use only parts of the CARE-SM for their use case. Specifically, they reuse the *Demographics* and *Treatment and Interventions* modules, which are sufficient for their purposes. Within those modules, they select only the concepts related to their use case.
+" %}
 
 ### Step 4 – Use standard technologies, document and share
 Use established semantic web technologies to encode your model in a machine-readable and interoperable way. A common best practice is to implement the model using semantic web technologies. These technologies help encode your model in a way that both humans and machines can interpret consistently.
@@ -122,7 +123,9 @@ If extending an existing model, follow the technical conventions of the reused v
 
 Even when your data cannot be openly shared (e.g. due to privacy or legal restrictions), the semantic model and its metadata can and should be FAIR. Publishing the model separately enables others to understand and align with your structure, even if the underlying data remains restricted.
 
-*Example:* The HRI Clinic modelling team decides to use RDF to structure their data into triples and OWL to define their data's rules and relationships. The clinic publishes their simplified version of CARE-SM on GitHub (including a clear license, version and credit to the original model).
+{% include info-box.html type="example" title="Example - step 4" text="
+The HRI Clinic modelling team decides to use RDF to structure their data into triples and OWL to define their data's rules and relationships. The clinic publishes their simplified version of CARE-SM on GitHub (including a clear license, version and credit to the original model).
+" %}
 
 ## Expertise requirements for this step
 Creating or reusing a semantic (meta)data model typically involves multiple experts, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team).
@@ -130,16 +133,13 @@ Creating or reusing a semantic (meta)data model typically involves multiple expe
 - **Metadata experts.** Bring a strong understanding of what metadata is, how it differs from data, and how it supports documentation, discovery, and reuse by both humans and machines. This expertise is essential from the start of the modelling process, as it underpins how data is meaningfully described and exposed.
   - *When reusing or extending a model*: for instance, help assess whether existing metadata fits the intended purposes.
   - *When creating a model*: for instance, support the definition of metadata for the model itself, including license and authorship.
-
 - **Semantic modelling experts.** Understand how to use conceptual and ontological modelling approaches to define the precise meaning of data elements. Familiar with modelling languages such as UML (conceptual models) and OWL (ontologies), they ensure the model is unambiguous and interoperable across tools and systems.
   - *When reusing or extending a model*: check if reused or added concepts are fit for purpose and their definitions ontologically sound.
   - *When creating a model*: help define the scope, structure, and relations in line with modelling best practices.
-
 - **Vocabulary and ontology experts.** Know how to identify and assess semantic resources, such as general-purpose vocabularies (e.g. DCAT) and domain-specific ontologies (e.g. DDI, SNOMED CT), and how to align terms with them.
   - *When reusing, extending or creating a model*:
     - Help evaluate if vocabularies capture intended meanings and whether local schema elements can be mapped to existing standards.
     - Promote consistency and reuse across systems, especially in regulated domains such as health or environmental sciences, where adherence to community standards is often required.
-
 - **Semantic web technology experts.** Have experience implementing models using RDF, OWL, and SHACL, core standards for making models machine-readable and technically valid. This expertise is particularly relevant when implementing, extending, or validating the structure of a selected model in a semantic framework.
   - *When reusing, extending or creating a model*:
     - Help represent mappings explicitly between internal schema elements and external vocabularies.
