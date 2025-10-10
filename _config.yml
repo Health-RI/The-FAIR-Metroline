@@ -1,13 +1,19 @@
 title: FAIR Metroline
 # This appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
+#topnav_title: FAIR Metroline
+# Optional: this appears on the top navigation bar next to the main_logo.svg icon
+
 description: "FAIR Metroline. A step-by-step route to making data FAIR."
 # Metadata description of the website
 
 remote_theme: ELIXIR-Belgium/elixir-toolkit-theme@4.1.0
 
-url: ""        # leave empty for previews
-baseurl: ""    # leave empty for previews
+#url: "https://health-ri.github.io"
+#baseurl: "/The-FAIR-Metroline"
+
+url: "https://www.fairmetroline.org"
+baseurl: ""
 
 exclude:
   - README.md
@@ -15,6 +21,7 @@ exclude:
   - Gemfile
 
 defaults:
+# Define here page metadata attributes for all pages at once or on specific directories. More information: https://jekyllrb.com/docs/configuration/front-matter-defaults/
   -
     scope:
       path: ""
@@ -33,11 +40,13 @@ plugins:
   - jemoji
   - webrick
 
-theme_variables:
+
+theme_variables
    github_buttons:
      edit_me: false
      history: true
    headings:
      affiliation-tiles-page: Affiliations
    topnav:
+    # theme: light
      brand_logo: assets/img/media_kit/transp_main_logo_wide_text.png
