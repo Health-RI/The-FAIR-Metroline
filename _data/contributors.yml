@@ -146,6 +146,20 @@ writers:
     affiliation: Health-RI
     active: true
     image: walter_baccinelli.jpg
+  - id: 22
+    firstName: Mariska
+    lastName: Steeghs Jansen
+    orcid: 0009-0007-2315-0983
+    affiliation: Health-RI
+    active: true
+    image: mariska_steeghs.jpg
+  - id: 23
+    firstName: Vedran
+    lastName: Kasalica
+    orcid: 0000-0002-0097-1056
+    affiliation: Health-RI
+    active: true
+    image: vedran_kasalica.jpg
 reviewers:
   - id: 1
     firstName: Anna
