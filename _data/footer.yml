@@ -2,10 +2,10 @@ copyright: <b>FAIR Metroline</b> by <b>Health-RI</b> is licensed under a [Creati
 extra_line: 
 columns:
   - type: image
-    image_width: 88px
-    width: 2
-    src: 'assets/img/main_logo.png'
-    alt: Metroline logo
+    image_width: 300px
+    width: 3
+    src: 'assets/img/logos/healthriV2_transp.svg'
+    alt: Health-RI logo
   - type: links
     width: 3
     children: 
@@ -25,8 +25,7 @@ columns:
       - url_text: How to cite
         url: about#how-to-cite
   - type: image
-    image_width: 88px
-    width: 2
-    src: 'assets/img/main_logo.png'
-    alt: Metroline logo
-
+    image_width: 150px
+    width: 3
+    src: 'assets/img/logos/elixir-nlV2_transp.png'
+    alt: ELIXIR-NL logo
