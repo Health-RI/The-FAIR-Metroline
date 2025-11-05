@@ -46,7 +46,7 @@ writers:
     lastName: de Oliveira Coelho Henriques
     orcid: 0000-0002-0756-2722
     affiliation: Radboudumc
-    active: true
+    active: false
     image: ines_henriques.png
   - id: 8
     firstName: Joëlle
@@ -160,6 +160,13 @@ writers:
     affiliation: Health-RI
     active: true
     image: vedran_kasalica.jpg
+  - id: 24
+    firstName: Veerle
+    lastName: Souverein
+    orcid: 0009-0006-6660-065X
+    affiliation: Radboudumc
+    active: true
+    image: veerle_souverein.jpeg
 reviewers:
   - id: 1
     firstName: Anna
@@ -203,6 +210,13 @@ reviewers:
     affiliation: Amsterdam UMC
     active: false
     image: quint_olislagers.jpeg
+  - id: 7
+    firstName: Kristina
+    lastName: Hettne
+    orcid: 0000-0002-4182-7560
+    affiliation: Leiden University Libraries
+    active: false
+    image: kristina_hettne.jpeg
 board:
   - id: 1
     firstName: Sander

@@ -36,6 +36,8 @@ subitems:
         url: /metroline_steps/define_access_conditions
       - title: Assess FAIRness
         url: /metroline_steps/assess_fairness
+      - title: Creating a FAIR Implementation Profile (FIP)
+        url: /metroline_steps/creating_a_fair_implementation_profile
   - title: Scenarios
     url: /fair_metroline_scenarios
     subitems:

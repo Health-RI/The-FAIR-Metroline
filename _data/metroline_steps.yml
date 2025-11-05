@@ -143,5 +143,10 @@
   url: 
   icon: ":checkered_flag:"
   status: ON HOLD
-
+- id: 25
+  title: Creating a FAIR Implementation Profile (FIP)
+  summary: A FAIR Implementation Profile (FIP) describes the practical choices a community makes to apply the FAIR data principles using shared standards and tools. It lists the specific resources, such as metadata schemas, ontologies and licences, that make data findable, accessible, interoperable and reusable. Other communities can reuse these profiles to align their practices, fill gaps and improve collaboration.
+  url: metroline_steps/creating_a_fair_implementation_profile
+  icon: ":bookmark_tabs:"
+  status: READY FOR REVIEW
 
