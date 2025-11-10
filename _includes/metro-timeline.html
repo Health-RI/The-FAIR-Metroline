@@ -1,0 +1,433 @@
+<!-- Metro Timeline Component -->
+<div class="metro-timeline">
+  {% for stop in include.stops %}
+  <div class="metro-stop {{ stop.status }}" data-stop-id="{{ forloop.index }}">
+    <div class="metro-stop-header">
+      <div class="metro-marker">
+        <div class="metro-dot"></div>
+        {% if forloop.last == false %}
+        <div class="metro-line"></div>
+        {% endif %}
+      </div>
+      <div class="metro-content">
+        <h3 class="metro-title">
+          {% if stop.icon %}{{ stop.icon }}{% endif %}
+          {{ stop.title }}
+        </h3>
+        {% if stop.short_description or stop.description or stop.examples or stop.link %}
+        <button class="metro-toggle" aria-expanded="false">
+          <span class="toggle-icon">▼</span>
+        </button>
+        {% endif %}
+      </div>
+    </div>
+    {% if stop.short_description or stop.description or stop.examples or stop.link %}
+    <div class="metro-details" style="display: none;">
+      <div class="metro-description">
+        {% if stop.short_description %}
+        <p class="short-description">{{ stop.short_description }}</p>
+        {% endif %}
+        
+        {% if stop.description %}
+        <div class="full-description">{{ stop.description }}</div>
+        {% endif %}
+        
+        {% if stop.examples %}
+        <div class="metro-examples">
+          <h4>Examples</h4>
+          <div class="example-tabs">
+            {% for example in stop.examples %}
+            <button class="example-tab {% if forloop.first %}active{% endif %}" data-example="{{ forloop.index }}">
+              {{ example.role }}
+            </button>
+            {% endfor %}
+          </div>
+          <div class="example-content">
+            {% for example in stop.examples %}
+            <div class="example-panel {% if forloop.first %}active{% endif %}" data-example="{{ forloop.index }}">
+              <h5>{{ example.role }}</h5>
+              <p>{{ example.description }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+        
+        {% if stop.link %}
+        <div class="metro-link">
+          <a href="{{ stop.link }}" target="_blank" class="btn-link">
+            📄 View full step details
+          </a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+<style>
+.metro-timeline {
+  max-width: 900px;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+.metro-stop {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.metro-stop-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.metro-marker {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.metro-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  background: white;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.metro-line {
+  width: 3px;
+  height: 80px;
+  background: #e0e0e0;
+  margin-top: 0;
+}
+
+.metro-content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: #f5f5f5;
+  transition: all 0.3s ease;
+}
+
+.metro-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.metro-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 0.8rem;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+.metro-toggle[aria-expanded="true"] .toggle-icon {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+.metro-details {
+  margin-left: 51px;
+  margin-top: 0.5rem;
+  padding: 1.5rem;
+  background: #fafafa;
+  border-left: 3px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.metro-description {
+  color: #555;
+  line-height: 1.6;
+}
+
+.short-description {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.full-description {
+  margin-bottom: 1rem;
+}
+
+.metro-examples {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.metro-examples h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.example-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.example-tab {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.example-tab:hover {
+  border-color: #4caf50;
+  background: #f1f8f4;
+}
+
+.example-tab.active {
+  background: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+.example-content {
+  position: relative;
+  min-height: 100px;
+}
+
+.example-panel {
+  display: none;
+  padding: 1rem;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+}
+
+.example-panel.active {
+  display: block;
+}
+
+.example-panel h5 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #4caf50;
+  font-size: 0.95rem;
+}
+
+.metro-link {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #2196f3;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.btn-link:hover {
+  background: #1976d2;
+}
+
+/* Status: completed (gray) */
+.metro-stop.completed .metro-dot {
+  background: #9e9e9e;
+  border-color: #757575;
+}
+
+.metro-stop.completed .metro-line {
+  background: #9e9e9e;
+}
+
+.metro-stop.completed .metro-content {
+  background: #f0f0f0;
+}
+
+.metro-stop.completed .metro-title {
+  color: #757575;
+}
+
+/* Status: active, upcoming, and todo all use green - EMPTY circles */
+.metro-stop.active .metro-dot,
+.metro-stop.upcoming .metro-dot,
+.metro-stop.todo .metro-dot {
+  background: white;
+  border-color: #4caf50;
+  border-width: 4px;
+}
+
+.metro-stop.active .metro-dot {
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+}
+
+.metro-stop.active .metro-line,
+.metro-stop.upcoming .metro-line,
+.metro-stop.todo .metro-line {
+  background: #4caf50;
+}
+
+.metro-stop.active .metro-content {
+  background: #e8f5e9;
+  border: 2px solid #4caf50;
+}
+
+.metro-stop.upcoming .metro-content,
+.metro-stop.todo .metro-content {
+  background: #f1f8f4;
+  border: 1px solid #a5d6a7;
+}
+
+.metro-stop.active .metro-title,
+.metro-stop.upcoming .metro-title,
+.metro-stop.todo .metro-title {
+  color: #2e7d32;
+}
+
+.metro-stop.active .metro-title {
+  font-weight: 600;
+}
+
+/* Status: suggestion (after destination, gray with  line) */
+.metro-stop.suggestion .metro-dot {
+  background: white;
+  border-color: #9e9e9e;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.metro-stop.suggestion .metro-line {
+  background: #9e9e9e;
+}
+
+.metro-stop.suggestion .metro-content {
+  background: #fafafa;
+  border: 1px solid #9e9e9e;
+}
+
+.metro-stop.suggestion .metro-title {
+  color: #757575;
+}
+
+.metro-stop.suggestion .metro-title::before {
+  content: "Optional: ";
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* Status: destination (flat bullseye target) */
+.metro-stop.destination .metro-dot {
+  background: white;
+  border: 4px solid #ff9800;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  box-shadow: none;
+}
+
+.metro-stop.destination .metro-dot::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #ff9800;
+  border-radius: 50%;
+}
+
+.metro-stop.destination .metro-line {
+  background: #9e9e9e;
+}
+
+.metro-stop.destination .metro-content {
+  background: #fff3e0;
+  border: 2px solid #ff9800;
+}
+
+.metro-stop.destination .metro-title {
+  color: #e65100;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Hover effects */
+.metro-stop.active:hover .metro-content,
+.metro-stop.upcoming:hover .metro-content,
+.metro-stop.todo:hover .metro-content,
+.metro-stop.suggestion:hover .metro-content {
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.metro-stop.completed:hover .metro-content {
+  background: #e8e8e8;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Toggle expand/collapse
+  const toggleButtons = document.querySelectorAll('.metro-toggle');
+  
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const stop = this.closest('.metro-stop');
+      const details = stop.querySelector('.metro-details');
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      
+      if (details) {
+        if (isExpanded) {
+          details.style.display = 'none';
+          this.setAttribute('aria-expanded', 'false');
+        } else {
+          details.style.display = 'block';
+          this.setAttribute('aria-expanded', 'true');
+        }
+      }
+    });
+  });
+  
+  // Example tabs switching
+  const exampleTabs = document.querySelectorAll('.example-tab');
+  
+  exampleTabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      const exampleId = this.getAttribute('data-example');
+      const container = this.closest('.metro-examples');
+      
+      // Deactivate all tabs and panels in this container
+      container.querySelectorAll('.example-tab').forEach(t => t.classList.remove('active'));
+      container.querySelectorAll('.example-panel').forEach(p => p.classList.remove('active'));
+      
+      // Activate clicked tab and corresponding panel
+      this.classList.add('active');
+      container.querySelector(`.example-panel[data-example="${exampleId}"]`).classList.add('active');
+    });
+  });
+});
+</script>
