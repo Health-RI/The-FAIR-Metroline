@@ -2,6 +2,7 @@
 title: How to make my dataset Findable?
 permalink: scenarios/make_dataset_findable
 page_id: make_dataset_findable
+custom_js: metro-timeline
 ---
 
 ## Background
