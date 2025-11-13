@@ -253,7 +253,7 @@ If you have experience using other(s), please, leave a comment!
 {% capture infobox_text2 %}
 Spreadsheets, such as Excel files, are not inherently machine-readable and often require manual work for data cleaning and analysis. To improve interoperability, the Data Stewards generated machine-actionable metadata describing the dataset’s structure.
 
-Using [CSV on the web](https://csvw.org/), a vocabulary designed to enhance metadata actionability, they created a JSON file that accurately reflects the content of the codebook. This effort significantly increased the dataset’s machine-readability and integration potential. Where possible, terms were mapped to ontologies—for example, Yes/No values were linked to:
+Using [CSV on the web](https://csvw.org/), a vocabulary designed to enhance metadata actionability, they created a JSON file that accurately reflects the content of the codebook. This effort significantly increased the dataset’s machine-readability and integration potential. Where possible, terms were mapped to ontologies. For example, Yes/No values were linked to:
 * False: [SNOMEDCT/64100000](http://purl.bioontology.org/ontology/SNOMEDCT/64100000)
 * True: [SNOMEDCT/31874001](http://purl.bioontology.org/ontology/SNOMEDCT/31874001)
 

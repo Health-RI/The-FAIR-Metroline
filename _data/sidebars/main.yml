@@ -43,6 +43,8 @@ subitems:
     subitems:
       - title: Evaluate data FAIRness
         url: /scenarios/evaluate_data_fairness
+      - title: Make dataset findable
+        url: /scenarios/make_dataset_findable
   - title: Contributing
     url: /contributing/contributing
     subitems:
