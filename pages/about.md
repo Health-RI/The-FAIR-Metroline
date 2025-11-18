@@ -4,6 +4,7 @@ title: About
 
 ## About the FAIR Metroline
 The FAIR Metroline is collaborative initiative between Health-RI and the international FAIR community to provide readable and applicable guidance on how to make data FAIR.
+It is based on the [Critical steps towards large-scale implementation of the FAIR data principles](https://doi.org/10.5281/zenodo.7867293) work by Bruna dos Santos Vieira, César Henrique Bernabé, Ines Henriques, Shuxin Zhang, Alberto Ballasteros Camara, Jose Antonio Ramírez García, et al.
 
 ## How to cite
 When referencing content from the FAIR Metroline pages, please cite as follows:
