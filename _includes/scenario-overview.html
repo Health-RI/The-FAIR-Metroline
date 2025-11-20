@@ -1,0 +1,32 @@
+<!-- Scenario Overview Component -->
+<div class="scenario-overview">
+  <div class="overview-card">
+    <div class="card-header">
+      <div class="card-icon complexity-icon">
+        <i class="fas fa-chart-line"></i>
+      </div>
+      <h3 class="card-label">Complexity</h3>
+    </div>
+    <p class="card-value">{{ include.complexity | default: "Medium" }}</p>
+  </div>
+
+  <div class="overview-card">
+    <div class="card-header">
+      <div class="card-icon experts-icon">
+        <i class="fas fa-users"></i>
+      </div>
+      <h3 class="card-label">Key Experts</h3>
+    </div>
+    <p class="card-value">{{ include.experts | default: "Data Steward" }}</p>
+  </div>
+
+  <div class="overview-card">
+    <div class="card-header">
+      <div class="card-icon outcome-icon">
+        <i class="fas fa-bullseye"></i>
+      </div>
+      <h3 class="card-label">Outcome</h3>
+    </div>
+    <p class="card-value">{{ include.outcome | default: "FAIR Data" }}</p>
+  </div>
+</div>

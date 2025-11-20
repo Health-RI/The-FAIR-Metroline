@@ -28,7 +28,7 @@
   status: "active"
   icon: "📋"
   short_description: "Take stock of what information you already have."
-  description: "Now you need to inventory the metadata you already have about your dataset—things like title, description, and keywords—and identify what's still missing. This assessment helps you understand the work ahead."
+  description: "Now you need to inventory the metadata you already have about your dataset. Things like title, description, and keywords, and identify what's still missing. This assessment helps you understand the work ahead."
   examples:
     - role: "Clinical Researcher"
       description: "I have my research protocol with a detailed study description, but I need to check whether I have everything required: keywords, contact details, and properly documented access conditions."
@@ -68,7 +68,7 @@
   status: "suggestion"
   icon: "💡"
   short_description: "Document your data's internal structure in detail."
-  description: "Take it even further by documenting the internal structure of your dataset—variable names, data types, relationships, and formats. This makes your data much more reusable and reduces the need for back-and-forth questions from potential users."
+  description: "Take it even further by documenting the internal structure of your dataset, e.g., variable names, data types, relationships, and formats. This makes your data much more reusable and reduces the need for back-and-forth questions from potential users."
   examples:
     - role: "Database Administrator"
       description: "I'm documenting our complete database schema so other researchers can understand the data structure independently, without needing to contact us for clarification."
