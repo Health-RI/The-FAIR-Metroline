@@ -1,0 +1,348 @@
+.metro-timeline {
+  max-width: 800px;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.metro-stop {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.metro-stop-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.metro-marker {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.metro-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid #e8f0f7;
+  background: white;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.metro-line {
+  width: 2px;
+  height: 80px;
+  background: #e8f0f7;
+  margin-top: 0;
+}
+
+.metro-content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 2px solid #e8f0f7;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.metro-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #328cc1 0%, #143368 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.metro-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #143368;
+}
+
+.metro-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 0.9rem;
+  color: #328cc1;
+  transition: transform 0.3s ease;
+}
+
+.metro-toggle .toggle-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.metro-toggle[aria-expanded="true"] .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.metro-details {
+  margin-left: 49px;
+  margin-top: 0.75rem;
+  padding: 1.25rem;
+  background: #f8fbfd;
+  border-left: 3px solid #328cc1;
+  border-radius: 8px;
+}
+
+.metro-description {
+  color: #143368;
+  line-height: 1.6;
+}
+
+.short-description {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #143368;
+}
+
+.full-description {
+  margin-bottom: 1rem;
+  color: #143368;
+}
+
+/* Examples section */
+.metro-examples {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e8f0f7;
+}
+
+.metro-examples h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #143368;
+  font-weight: 600;
+}
+
+.example-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.example-tab {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e8f0f7;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  color: #143368;
+  font-weight: 500;
+}
+
+.example-tab:hover {
+  border-color: #328cc1;
+  background: #f8fbfd;
+}
+
+.example-tab.active {
+  background: #328cc1;
+  color: white;
+  border-color: #328cc1;
+}
+
+.example-content {
+  position: relative;
+  min-height: 100px;
+}
+
+.example-panel {
+  display: none;
+  padding: 1rem;
+  background: white;
+  border: 2px solid #e8f0f7;
+  border-radius: 8px;
+}
+
+.example-panel.active {
+  display: block;
+}
+
+.example-panel h5 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #328cc1;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Link section */
+.metro-link {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e8f0f7;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #328cc1;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.btn-link:hover {
+  background: #143368;
+  color: white;
+}
+
+/* Status: completed (gray) */
+.metro-stop.completed .metro-dot {
+  background: #d1d5db;
+  border-color: #9ca3af;
+}
+
+.metro-stop.completed .metro-line {
+  background: #e8f0f7;
+}
+
+.metro-stop.completed .metro-content {
+  background: #f9fafb;
+  border-color: #e8f0f7;
+}
+
+.metro-stop.completed .metro-title {
+  color: #6b7280;
+}
+
+/* Status: active, upcoming, todo */
+.metro-stop.active .metro-dot,
+.metro-stop.upcoming .metro-dot,
+.metro-stop.todo .metro-dot {
+  background: white;
+  border-color: #10b981;
+  border-width: 3px;
+}
+
+.metro-stop.active .metro-dot {
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+}
+
+.metro-stop.active .metro-line,
+.metro-stop.upcoming .metro-line,
+.metro-stop.todo .metro-line {
+  background: #10b981;
+}
+
+.metro-stop.active .metro-content,
+.metro-stop.upcoming .metro-content,
+.metro-stop.todo .metro-content {
+  background: #ecfdf5;
+  border-color: #10b981;
+}
+
+.metro-stop.active .metro-title,
+.metro-stop.upcoming .metro-title,
+.metro-stop.todo .metro-title {
+  color: #065f46;
+}
+
+.metro-stop.active .metro-title {
+  font-weight: 700;
+}
+
+/* Status: suggestion (optional steps) */
+.metro-stop.suggestion .metro-dot {
+  background: white;
+  border-color: #d1d5db;
+  border-width: 2px;
+  border-style: dashed;
+}
+
+.metro-stop.suggestion .metro-line {
+  background: #e8f0f7;
+}
+
+.metro-stop.suggestion .metro-content {
+  background: #ffffff;
+  border: 2px dashed #e8f0f7;
+}
+
+.metro-stop.suggestion .metro-title {
+  color: #6b7280;
+}
+
+.metro-stop.suggestion .metro-title::before {
+  content: "Optional: ";
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* Status: destination */
+.metro-stop.destination .metro-dot {
+  background: white;
+  border: 3px solid #fdbd26;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  box-shadow: 0 0 0 4px rgba(253, 189, 38, 0.2);
+}
+
+.metro-stop.destination .metro-dot::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 3px);
+  left: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+  background: #fdbd26;
+  border-radius: 50%;
+}
+
+.metro-stop.destination .metro-line {
+  background: #e8f0f7;
+}
+
+.metro-stop.destination .metro-content {
+  background: #fffbeb;
+  border-color: #fdbd26;
+}
+
+.metro-stop.destination .metro-title {
+  color: #143368;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+/* Hover effects */
+.metro-stop-header:hover .metro-content {
+  border-color: #328cc1;
+  box-shadow: 0 4px 12px rgba(50, 140, 193, 0.15);
+  transform: translateY(-2px);
+}
+
+.metro-stop-header:hover .metro-content::before {
+  transform: scaleX(1);
+}
+
+.metro-stop.completed .metro-stop-header:hover .metro-content {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}

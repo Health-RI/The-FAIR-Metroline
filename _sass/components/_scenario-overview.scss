@@ -1,0 +1,104 @@
+// Modern Scenario Overview Styling
+.scenario-overview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 0;
+  max-width: 800px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.overview-card {
+  background: #ffffff;
+  border: 2px solid #e8f0f7;
+  border-radius: 10px;
+  padding: 1.25rem 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #328cc1 0%, #143368 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    border-color: #328cc1;
+    box-shadow: 0 4px 12px rgba(50, 140, 193, 0.15);
+    transform: translateY(-2px);
+
+    &::before {
+      transform: scaleX(1);
+    }
+
+    .card-icon {
+      transform: scale(1.08);
+    }
+  }
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-icon {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fbfd;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  font-size: 1.1rem;
+
+  i {
+    color: #328cc1;
+  }
+
+  &.complexity-icon i {
+    color: #143368;
+  }
+
+  &.experts-icon i {
+    color: #328cc1;
+  }
+
+  &.outcome-icon i {
+    color: #fdbd26;
+  }
+}
+
+.card-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #143368;
+  margin: 0;
+}
+
+.card-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #143368;
+  margin: 0.4rem 0 0 0;
+  line-height: 1.3;
+}

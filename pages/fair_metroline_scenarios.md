@@ -9,3 +9,5 @@ This section provides guidance for common FAIR objectives through FAIR scenarios
 
 * [Evaluate FAIRness of your data](scenarios/evaluate_data_fairness)
 
+* [How to make my dataset Findable?](scenarios/make_dataset_findable)
+

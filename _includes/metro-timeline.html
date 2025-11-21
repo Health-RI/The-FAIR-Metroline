@@ -1,0 +1,77 @@
+<!-- Metro Timeline Component -->
+<div class="metro-timeline">
+  {% for stop in include.stops %}
+  <div class="metro-stop {{ stop.status }}" data-stop-id="{{ forloop.index }}">
+    
+    <!-- Stop header with marker and title -->
+    <div class="metro-stop-header">
+      <div class="metro-marker">
+        <div class="metro-dot"></div>
+        {% if forloop.last == false %}
+        <div class="metro-line"></div>
+        {% endif %}
+      </div>
+      
+      <div class="metro-content">
+        <h3 class="metro-title">
+          {% if stop.icon %}{{ stop.icon }} {% endif %}{{ stop.title }}
+        </h3>
+        {% if stop.short_description or stop.description or stop.examples or stop.link %}
+        <button class="metro-toggle" aria-expanded="false">
+          <span class="toggle-icon">▼</span>
+        </button>
+        {% endif %}
+      </div>
+    </div>
+    
+    <!-- Stop details (expandable) -->
+    {% if stop.short_description or stop.description or stop.examples or stop.link %}
+    <div class="metro-details" style="display: none;">
+      <div class="metro-description">
+        
+        {% if stop.short_description %}
+        <p class="short-description">{{ stop.short_description }}</p>
+        {% endif %}
+        
+        {% if stop.description %}
+        <div class="full-description">{{ stop.description }}</div>
+        {% endif %}
+        
+        {% if stop.examples %}
+        <div class="metro-examples">
+          <h4>Examples</h4>
+          <div class="example-tabs">
+            {% for example in stop.examples %}
+            <button class="example-tab {% if forloop.first %}active{% endif %}" data-example="{{ forloop.index }}">
+              {{ example.role }}
+            </button>
+            {% endfor %}
+          </div>
+          <div class="example-content">
+            {% for example in stop.examples %}
+            <div class="example-panel {% if forloop.first %}active{% endif %}" data-example="{{ forloop.index }}">
+              <h5>{{ example.role }}</h5>
+              <p>{{ example.description }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+        
+        {% if stop.link %}
+        <div class="metro-link">
+          <a href="{{ stop.link }}" class="btn-link">
+            📄 View full step details
+          </a>
+        </div>
+        {% endif %}
+        
+      </div>
+    </div>
+    {% endif %}
+    
+  </div>
+  {% endfor %}
+</div>
+
+<script src="/assets/js/metro-timeline.js"></script>

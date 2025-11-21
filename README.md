@@ -15,6 +15,25 @@ When referencing content from the FAIR Metroline pages, please cite as follows:
 
 > FAIR Metroline. A step-by-step route to making data FAIR (Findable, Accessible, Interoperable and Reusable). https://fairmetroline.org
 
+# Local Development
+
+## Prerequisites
+Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+## Build and Run
+
+```bash
+# Build the Docker image
+docker build -t fair-metroline .
+
+# Run the site
+docker run -p 4000:4000 -v $(pwd):/site fair-metroline
+```
+
+Open http://localhost:4000 in your browser. The site will automatically reload when you make changes!
+
+To stop: Press `Ctrl+C`
+
 # License
 This project is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). See the [LICENSE.txt](./LICENSE.txt) file for the full legal text.
 
