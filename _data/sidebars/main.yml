@@ -43,6 +43,13 @@ subitems:
     subitems:
       - title: Evaluate data FAIRness
         url: /scenarios/evaluate_data_fairness
+  - title: Tool assemblies
+    url: /toolassemblies/toolassemblies
+    subitems:
+      - title: Data Lifecycle
+        url: /toolassemblies/data_lifecycle
+      - title: Tool selection
+        url: /toolassemblies/tool_selection
   - title: Contributing
     url: /contributing/contributing
     subitems:
