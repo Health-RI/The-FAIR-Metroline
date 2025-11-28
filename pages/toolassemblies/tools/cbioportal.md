@@ -3,6 +3,7 @@ title: cBioPortal
 toc: true
 type: tool
 page_img: toolassemblies/tools/cbioportal.png
+tool_id: 10
 domain: [Oncology]
 phase: [Process, Analyse, Share]
 ---
