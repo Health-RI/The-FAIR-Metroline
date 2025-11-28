@@ -1,0 +1,76 @@
+- title: "Set up HPC environment"
+  status: "completed"
+  icon: "https://www.flaticon.com/free-icon-font/system-cloud_16105516?page=1&position=1&term=cloud&origin=search&related_id=16105516"
+  short_description: "Ensure you have access to computational infrastructure."
+  description: "You have access to an HPC cluster or cloud environment with sufficient compute resources and storage to run the analysis pipeline. The environment should have Nextflow and container support (Singularity/Docker) installed."
+  examples:
+    - role: "Bioinformatician"
+      description: "I've requested access to our institutional HPC cluster and confirmed I can submit jobs with the required memory and CPU resources for whole genome analysis."
+    - role: "Research Engineer"
+      description: "I've set up a cloud compute environment with the necessary quotas and installed Nextflow to orchestrate the pipeline execution."
+
+- title: "Collect and stage tumour sequencing data"
+  status: "completed"
+  icon: "📁"
+  short_description: "Ensure sequencing files are accessible from the compute environment."
+  description: "You've obtained the tumour and normal sequencing data files (FASTQ or BAM format) from your sequencing facility and made them accessible from your HPC or cloud storage. The data should be organized and reachable from where you'll run the analysis pipeline."
+  examples:
+    - role: "Clinical Researcher"
+      description: "Our tumour samples have been sequenced and I've transferred the raw files to our HPC shared storage where the pipeline can access them."
+    - role: "Bioinformatician"
+      description: "I've downloaded the sequencing data from the sequencing facility's server to our HPC scratch space and organized the tumour-normal pairs for processing."
+
+- title: "Run the tumour analysis"
+  status: "active"
+  short_description: "Process tumour sequencing data to generate variants and profiles."
+  description: "Use oncoanalyser to process the tumour sequencing data and generate variants, copy number profiles and other outputs."
+  tools:
+    - name: "oncoanalyser"
+      url: "https://nf-co.re/oncoanalyser/2.2.0/"
+      logo: "https://raw.githubusercontent.com/nf-core/oncoanalyser/refs/heads/dev/docs/images/nf-core-oncoanalyser_logo_light.png"
+  examples:
+    - role: "Bioinformatician"
+      description: "I need to process whole genome sequencing data from a tumour sample to identify somatic variants, copy number alterations, and structural variants for downstream analysis."
+    - role: "Clinical Researcher"
+      description: "Our lab has tumour samples sequenced and I need to run the analysis pipeline to extract the genomic alterations that might be clinically actionable."
+
+- title: "Prepare the portal-ready dataset"
+  status: "upcoming"
+  short_description: "Convert pipeline outputs to portal-compatible formats."
+  description: "Take the standard outputs from oncoanalyser (VCF, copy number tables, fusion calls, expression files) and convert them into the simple tabular formats and study metadata structure required by cancer genomics portals. This step connects the pipeline results to the portal by mapping each output type to its corresponding portal file."
+  tools:
+    - name: "oncoanalyser outputs"
+      url: "https://nf-co.re/oncoanalyser/2.2.0/docs/output/"
+      logo: null
+    - name: "cBioPortal file formats"
+      url: "https://docs.cbioportal.org/file-formats/"
+      logo: "https://www.cbioportal.org/images/cbioportal_logo.png"
+  examples:
+    - role: "Bioinformatician"
+      description: "I have the oncoanalyser VCF and copy number outputs and need to reformat them into the specific MAF and SEG files that cBioPortal expects for data import."
+    - role: "Data Manager"
+      description: "I need to ensure the clinical annotations and sample metadata are properly structured to match the portal's data model before uploading."
+
+- title: "Load the dataset into cBioPortal"
+  status: "upcoming"
+  short_description: "Upload your prepared data to the portal."
+  description: "Use the cBioPortal import process to upload the prepared study directory to make your tumour data available in the portal for exploration."
+  tools:
+    - name: "cBioPortal"
+      url: "https://docs.cbioportal.org/"
+      logo: "https://www.cbioportal.org/images/cbioportal_logo.png"
+  examples:
+    - role: "Data Manager"
+      description: "I need to import our prepared study into our institutional cBioPortal instance using the data loading scripts."
+    - role: "Bioinformatician"
+      description: "I'm uploading the formatted datasets to cBioPortal so the research team can start exploring the results."
+
+- title: "Analysed data published in portal"
+  status: "destination"
+  short_description: "Success! Your data is now accessible for exploration."
+  description: "Congratulations! Your tumour genomics data is now published in cBioPortal. Researchers can interactively explore mutations, copy number alterations, gene expression, and clinical associations through the portal's visualization tools."
+  examples:
+    - role: "Cancer Researcher"
+      description: "Our study data is live in cBioPortal and the team can now query mutation patterns, survival associations, and genomic correlations without needing bioinformatics support."
+    - role: "Clinical Collaborator"
+      description: "I can now share the portal link with clinical partners who can explore our findings visually and identify potentially actionable alterations."
