@@ -1,6 +1,6 @@
 - title: "Set up HPC environment"
   status: "completed"
-  icon: "https://www.flaticon.com/free-icon-font/system-cloud_16105516?page=1&position=1&term=cloud&origin=search&related_id=16105516"
+  icon: ""
   short_description: "Ensure you have access to computational infrastructure."
   description: "You have access to an HPC cluster or cloud environment with sufficient compute resources and storage to run the analysis pipeline. The environment should have Nextflow and container support (Singularity/Docker) installed."
   examples:
@@ -11,7 +11,7 @@
 
 - title: "Collect and stage tumour sequencing data"
   status: "completed"
-  icon: "📁"
+  icon: ""
   short_description: "Ensure sequencing files are accessible from the compute environment."
   description: "You've obtained the tumour and normal sequencing data files (FASTQ or BAM format) from your sequencing facility and made them accessible from your HPC or cloud storage. The data should be organized and reachable from where you'll run the analysis pipeline."
   examples:
