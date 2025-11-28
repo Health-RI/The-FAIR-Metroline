@@ -1,0 +1,21 @@
+- id: plan-icon
+  name: Plan
+  text: 'This phase involves defining strategies for managing data and documentation throughout a project. Creating a Data Management Plan (DMP) helps anticipate potential issues, allocate resources, and ensure data is handled efficiently and in compliance with FAIR principles. '
+- id: collect-icon
+  name: Collect
+  text: 'Data collection is about gathering information using various methods, such as instruments or questionnaires. Ensuring data quality and proper documentation during this phase is crucial, as it lays the foundation for reliable research outcomes.'
+- id: process-icon
+  name: Process
+  text: 'In this phase, collected data is converted into formats suitable for analysis. Processing includes steps like format conversion, quality checks and preprocessing, aiming to produce clean, high-quality datasets ready for analysis.'
+- id: analyse-icon
+  name: Analyse
+  text: 'Data analysis involves exploring datasets to uncover patterns or relationships, often using statistical or computational methods. This phase is iterative and central to generating new knowledge, requiring reproducible and well-documented workflows.'
+- id: preserve-icon
+  name: Preserve
+  text: 'Preservation ensures long-term accessibility and usability of data. It goes beyond storage, involving activities like format migration, documentation, and adherence to standards to maintain data integrity over time.'
+- id: share-icon
+  name: Share
+  text: 'Sharing data means making it available to others, either within collaborations or publicly. This practice enhances research transparency and reproducibility, and is often mandated by funders and publishers.'
+- id: reuse-icon
+  name: Reuse
+  text: 'Data enters the broader scientific ecosystem and can be reused in a subsequent research cycle, either by you or by other researchers, as input for new studies or analyses.'

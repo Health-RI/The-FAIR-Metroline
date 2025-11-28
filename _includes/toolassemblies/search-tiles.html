@@ -1,0 +1,293 @@
+{%- if include.domains == true or include.phases == true or include.search == true %}
+{%- assign alldomains = "" %}
+{%- assign allphases = "" %}
+{%- for current_page in site.pages | sorted %}
+{%- if current_page.search_exclude != true and current_page.type == include.type %}
+{%- if current_page.domain %}
+{%- assign pagedomains = current_page.domain | join: ", " %}
+{%- if alldomains %}
+{%- assign alldomains = alldomains | append: ", " | append: pagedomains %}
+{%- else %}
+{%- assign alldomains = alldomains | append: pagedomains %}
+{%- endif %}
+{%- endif %}
+{%- if current_page.phase %}
+{%- assign pagephases = current_page.phase | join: ", " %}
+{%- if allphases %}
+{%- assign allphases = allphases | append: ", " | append: pagephases %}
+{%- else %}
+{%- assign allphases = allphases | append: pagephases %}
+{%- endif %}
+{%- endif %}
+{%- endif %}
+{%- endfor %}
+{%- assign alldomains = alldomains | split: ", " | uniq | sort %}
+{%- assign allphases = allphases | split: ", " | uniq | sort %}
+<div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-{{ include.col | default: 2 }} my-4">
+    {%- if include.domains == true %}
+    <div class="col">
+        <div class="input-group">
+            <label class="input-group-text" for="domains-input">Filter by domain</label>
+            <select class="form-select" id="domains-input" aria-label="Filter by domain">
+                {%- for domain in alldomains %}
+                <option value="{{domain | slugify}}">{{domain}}</option>
+                {%- endfor %}
+            </select>
+            <button class="btn btn-primary" title="Button to clear domains selection" type="button" id="cleardomainfilter">
+                <i class="fa-solid fa-backspace"></i>
+            </button>
+        </div>
+    </div>
+    {%- endif %}
+    {%- if include.phases == true %}
+    <div class="col">
+        <div class="input-group">
+            <label class="input-group-text" for="phases-input">Filter by phase</label>
+            <select class="form-select" id="phases-input" aria-label="Filter by phase">
+                {%- for phase in allphases %}
+                <option value="{{phase | slugify}}">{{phase}}</option>
+                {%- endfor %}
+            </select>
+            <button class="btn btn-primary" title="Button to clear phases selection" type="button" id="clearphasefilter">
+                <i class="fa-solid fa-backspace"></i>
+            </button>
+        </div>
+    </div>
+    {%- endif %}
+    {%- if include.search == true %}
+    <div class="col">
+        <div class="input-group">
+            <span class="input-group-text" id="search-label-tiles"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" id="title-search" class="form-control" onkeyup="StartSearch();" placeholder="Find your page..." aria-label="{{page.type | replace: '_', ' ' |}}" aria-describedby="search-label-tiles">
+            <button class="btn btn-primary" title="Button to clear search" type="button" id="clearsearch">
+                <i class="fa-solid fa-backspace"></i>
+            </button>
+        </div>
+    </div>
+    {%- endif %}
+</div>
+{%- endif %}
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-{{ include.col | default: 2 }} g-4 mb-5 navigation-tiles">
+    {%- if include.custom %}
+    {%- assign related_pages = include.custom | split: ", " %}
+    {%- unless include.sort == false %}
+    {%- assign related_pages = related_pages | sort %}
+    {%- endunless %}
+    {%- elsif include.type %}
+    {%- assign related_pages = site.pages | where:"type", include.type %}
+    {%- else %}
+    {%- assign related_pages = site.pages %}
+    {%- endif %}
+    {%- unless include.sort == false %}
+    {%- assign related_pages = related_pages | sort: 'title'%}
+    {%- endunless %}
+    {%- for related_page in related_pages %}
+    {%- if include.custom %}
+    {%- assign current_page = site.pages | where:"page_id", related_page | first %}
+    {%- else %}
+    {%- assign current_page = related_page %}
+    {%- endif %}
+    {%- assign domains_classes = "" %}
+    {%- assign phases_classes = "" %}
+    {%- assign except = include.except | split: ", " %}
+    {%- if current_page.title and current_page.search_exclude != true %}
+    {%- unless except contains current_page.name %}
+    {%- if current_page.domain %}
+    {%- capture domains_classes -%}
+    {%- assign domains_output = "" %}
+    {%- for domain in current_page.domain %}
+    {%- assign group_domains = domain | slugify | prepend: " " %}
+    {%- assign domains_output = domains_output | append: group_domains | strip %}
+    {%- endfor %}{{domains_output}}
+    {%- endcapture -%}
+    {%- endif %}
+    {%- if current_page.phase %}
+    {%- capture phases_classes -%}
+    {%- assign phases_output = "" %}
+    {%- for phase in current_page.phase %}
+    {%- assign group_phases = phase | slugify | prepend: " " %}
+    {%- assign phases_output = phases_output | append: group_phases | strip %}
+    {%- endfor %}{{phases_output}}
+    {%- endcapture -%}
+    {%- endif %}
+<div class="col" data-domains="{{domains_classes}}" data-phases="{{phases_classes}}">
+    <div class="card h-100">
+
+        <div class="card-body">
+
+            {%- if current_page.page_img %}
+            {%- capture file_url -%}
+            {{ "/assets/img/" | append: current_page.page_img | relative_url }}
+            {%- endcapture -%}
+            <img
+                alt="logo of {{ current_page.title }}"
+                src="{{ file_url }}"
+                class="page-img-sm pt-3 pe-3"
+                style="float:right; max-width:150px; width:auto; height:auto; margin-left:0.75rem; margin-bottom:0.5rem; object-fit:contain;"
+            >
+            {%- endif %}
+
+            <div class="d-flex align-items-center">
+                {%- if current_page.type_img %}
+                <img src="{{ current_page.type_img | relative_url }}" class="type-icon me-2" alt="{{ current_page.type }} icon">
+                {%- endif %}
+                {%- if current_page.type %}
+                <span class=""><small>{{ current_page.type | replace: "_", " " | capitalize }}</small></span>
+                {%- endif %}
+            </div>
+
+            <a class="stretched-link section-title" aria-label="Go to the {{ current_page.title }} page" href="{{ current_page.url | relative_url }}">
+                <b>{{ current_page.title }}</b>
+            </a>
+
+            {%- if current_page.description %}
+            <p class="card-text">{{ current_page.description }}</p>
+            {%- endif %}
+
+            {%- if current_page.domain %}
+            {%- assign pagedomains = current_page.domain | sort %}
+            <div class="d-flex align-items-center flex-wrap gap-2">
+                <span><b><small>Domains:</small></b></span>
+                {%- for domain in pagedomains %}
+                <span class="badge bg-primary">{{ domain }}</span>
+                {%- endfor %}
+            </div>
+            {%- endif %}
+
+            {%- if current_page.phase %}
+            {%- assign pagephases = current_page.phase | sort %}
+            <div class="d-flex align-items-center flex-wrap gap-2">
+                <span><b><small>Phases:</small></b></span>
+                {%- for phase in pagephases %}
+                <span class="badge bg-secondary">{{ phase }}</span>
+                {%- endfor %}
+            </div>
+            {%- endif %}
+
+        </div>
+    </div>
+</div>
+{% endunless %}
+{%- endif %}
+{%- endfor %}
+</div>
+
+
+{%- if include.domains == true or include.phases == true or include.search == true %}
+<script type="text/javascript">
+    /**
+     * Apply all active filters
+     */
+    function applyFilters() {
+        const cols = document.querySelectorAll(".navigation-tiles .col");
+        const domainSelect = document.getElementById('domains-input');
+        const phaseSelect = document.getElementById('phases-input');
+
+        const selectedDomain = domainSelect ? domainSelect.value : '';
+        const selectedPhase = phaseSelect ? phaseSelect.value : '';
+
+        for (col of cols) {
+            const colDomains = col.getAttribute("data-domains") ? col.getAttribute("data-domains").split(" ") : [];
+            const colPhases = col.getAttribute("data-phases") ? col.getAttribute("data-phases").split(" ") : [];
+
+            const domainMatch = !selectedDomain || colDomains.indexOf(selectedDomain) !== -1;
+            const phaseMatch = !selectedPhase || colPhases.indexOf(selectedPhase) !== -1;
+
+            if (domainMatch && phaseMatch) {
+                col.classList.remove("d-none");
+            } else {
+                col.classList.add("d-none");
+            }
+        }
+    }
+
+    $(document).ready(function () {
+        var domains = document.getElementById('domains-input');
+        if (domains) {
+            domains.addEventListener("change", function () {
+                var search = document.getElementById('title-search')
+                if (search) {
+                    search.value = '';
+                }
+                applyFilters();
+            });
+        }
+
+        var phases = document.getElementById('phases-input');
+        if (phases) {
+            phases.addEventListener("change", function () {
+                var search = document.getElementById('title-search')
+                if (search) {
+                    search.value = '';
+                }
+                applyFilters();
+            });
+        }
+
+        var cleardomains = document.getElementById("cleardomainfilter");
+        if (cleardomains) {
+            cleardomains.addEventListener("click", function () {
+                var domains = document.getElementById('domains-input');
+                if (domains) {
+                    domains.selectedIndex = -1;
+                    applyFilters();
+                }
+            });
+        }
+
+        var clearphases = document.getElementById("clearphasefilter");
+        if (clearphases) {
+            clearphases.addEventListener("click", function () {
+                var phases = document.getElementById('phases-input');
+                if (phases) {
+                    phases.selectedIndex = -1;
+                    applyFilters();
+                }
+            });
+        }
+    });
+
+    /**
+     * Search cards
+     */
+    var StartSearch = () => {
+        const input = document.getElementById("title-search");
+        if (input) {
+            const cols = document.querySelectorAll(".navigation-tiles .col");
+            let filter = input.value.toLowerCase();
+            var domains = document.getElementById('domains-input');
+            var phases = document.getElementById('phases-input');
+            if (domains) {
+                domains.selectedIndex = -1;
+            }
+            if (phases) {
+                phases.selectedIndex = -1;
+            }
+            for (let i = 0; i < cols.length; i++) {
+                let body = cols[i].querySelector(".card-body");
+                if (body.innerText.toLowerCase().indexOf(filter) > -1) {
+                    cols[i].classList.remove("d-none");
+                } else {
+                    cols[i].classList.add("d-none");
+                }
+            }
+        }
+    }
+
+    $(document).ready(function () {
+        var clearsearch = document.getElementById("clearsearch");
+        if (clearsearch) {
+            clearsearch.addEventListener("click", function () {
+                var search = document.getElementById('title-search')
+                if (search) {
+                    search.value = ''
+                    const cols = document.querySelectorAll(".navigation-tiles .col");
+                    for (col of cols) {
+                        col.classList.remove("d-none");
+                    }
+                }
+            });
+        }
+    });
+</script>
+{%- endif %}
