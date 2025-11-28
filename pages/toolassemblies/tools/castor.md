@@ -1,12 +1,11 @@
 ---
-title: cBioPortal
+title: Castor EDC
 type: tool
-page_img: toolassemblies/tools/cbioportal.png
-tool_id: 4
+tool_id: 1
+page_img: toolassemblies/tools/castor.png
 domain: [Oncology]
-phase: [Process, Analyse, Preserve, Share]
+phase: [Collect]
 ---
-
 
 ## At a glance
 {% include toolassemblies/tool-table.html tool_id=page.tool_id section="at_a_glance" %}

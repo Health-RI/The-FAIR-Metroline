@@ -1,12 +1,10 @@
 ---
-title: cBioPortal
+title: myDRE
 type: tool
-page_img: toolassemblies/tools/cbioportal.png
-tool_id: 4
-domain: [Oncology]
-phase: [Process, Analyse, Preserve, Share]
+tool_id: 2
+page_img: toolassemblies/tools/andrea.png
+phase: [Process, Analyse]
 ---
-
 
 ## At a glance
 {% include toolassemblies/tool-table.html tool_id=page.tool_id section="at_a_glance" %}
