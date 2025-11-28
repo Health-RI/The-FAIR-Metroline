@@ -42,18 +42,3 @@ subitems:
         url: /metroline_steps/assess_fairness
       - title: Creating a FAIR Implementation Profile (FIP)
         url: /metroline_steps/creating_a_fair_implementation_profile
-  - title: Contributing
-    url: /contributing/contributing
-    subitems:
-      - title: Development process
-        url: /contributing/development_process
-      - title: Style guide
-        url: /contributing/style_guide
-  - title: Contributors
-    url: /contributing/contributors
-  - title: Network
-    url: /network
-  - title: About
-    url: /about
-  - title: Contact
-    url: /contact

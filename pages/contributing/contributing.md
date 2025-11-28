@@ -1,6 +1,7 @@
 ---
 title: How to contribute
 permalink: contributing/contributing
+sidebar: contributing
 ---
 
 The FAIR Metroline will be richer and more feasible to execute if we better consider the organisational context and existing best practices. As a result, the FAIR Metroline is a cooperative effort between the Health-RI Hub and Nodes, involving the many public and private organisations and initiatives that address the reuse of care and research data. We invite you to collaborate with us as we continue to enhance and refine the various FAIR Metroline phases. Read more about the [FAIR Metroline development process]() and see the section below on the many ways you can contribute to this initiative. 

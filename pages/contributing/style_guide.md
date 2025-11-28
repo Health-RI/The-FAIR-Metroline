@@ -1,6 +1,7 @@
 ---
 title: Style guide
 permalink: contributing/style_guide
+sidebar: contributing
 ---
 
 The content of this page is based on RDMkit’s [Style Guide](https://rdmkit.elixir-europe.org/style_guide) and extended with styling information specific for the FAIR Metroline. Like the RDMKit, we follow the European Commission’s [Web Writing Style Guide](https://commission.europa.eu/resources-partners/europa-web-guide/design-content-and-development/content/web-writing-guidelines/style-guide_en) and their [English Style Guide](https://commission.europa.eu/system/files/2023-11/styleguide_english_dgt_en.pdf) (November 2023). To check whether a newer version is available, search online for “EC English style guide”.
