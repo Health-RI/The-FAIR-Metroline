@@ -4,7 +4,7 @@ columns:
   - type: image
     image_width: 300px
     width: 3
-    src: 'assets/img/logos/healthriV2_transp.svg'
+    src: 'assets/img/logos/healthriV2_transp_white.svg'
     alt: Health-RI logo
   - type: links
     width: 1
@@ -24,5 +24,5 @@ columns:
   - type: image
     image_width: 150px
     width: 3
-    src: 'assets/img/logos/elixir-nlV2_transp.png'
+    src: 'assets/img/logos/elixir-nl-white.png'
     alt: ELIXIR-NL logo
