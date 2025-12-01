@@ -1,5 +1,6 @@
 # TODO: Life cycle phases, domain are still used from the tools' front matter. Also, need to look into the compatible_with section
 - id: 1
+  page_img: toolassemblies/tools/castor.png
   at_a_glance:
     Tool name: Castor EDC
     Purpose and core functionality: Castor EDC is a cloud-based electronic data capture system designed to simplify clinical data collection and ensure interoperability. It integrates easily with broader clinical trial systems and ranks in the top 5% of EDC tools for build speed, with over 90% of studies deployed within 4 weeks.
@@ -37,6 +38,7 @@
     User needs:
   compatible_with:
 - id: 2
+  page_img: toolassemblies/tools/andrea.png
   at_a_glance:
     Tool name: myDRE
     Purpose and core functionality: myDRE is a Trusted Processing Environment (TPE) designed for secure, GDPR-compliant data analysis in collaborative academic settings. It enables institutions to set up isolated virtual workspaces with managed access, shared storage and scalable computing—supporting up to 50 users per project. myDRE is offered as a paid service based on actual usage and helps reduce pressure on central IT teams by offering a managed, secure research infrastructure.
@@ -73,6 +75,7 @@
     User needs:
   compatible_with:
 - id: 3
+  page_img: toolassemblies/tools/molgenis.png
   at_a_glance:
     Tool name: MOLGENIS
     Purpose and core functionality: Molgenis helps to find, capture, exchange, manage and analyse and exploit the large amounts of data that is being produced by scientific organisations. It is a fully customizable and scalable software infrastructure that offers the possibility to plug-in (bioinformatics) scripts.<br>The MOLGENIS software package helps setting up an online database application, making  data query-able and allowing to share data with collaborators. Enabling to store, edit, analyse, and share data.
@@ -110,6 +113,7 @@
     User needs:
   compatible_with:
 - id: 4
+  page_img: toolassemblies/tools/cbioportal.png
   at_a_glance:
     Tool name: cBioPortal
     Purpose and core functionality: cBioPortal simplifies access to complex cancer genomic data through visualisation and intuitive exploration. It enables researchers and clinicians to interpret multimodal datasets, extract biological insights and support clinical decisions.
@@ -151,6 +155,7 @@
     User needs:
   compatible_with: slide-score, xnat, xOpat
 - id: 5
+  page_img: toolassemblies/tools/slidescore.png
   at_a_glance:
     Tool name: Slide Score
     Purpose and core functionality: Slide Score is a web-based viewer for high-resolution digital microscopy images, with a focus on histopathology slides. It enables users to upload images, create scoring forms (question sets) and invite experts—such as pathologists—for collaborative evaluation and scoring.
@@ -185,6 +190,7 @@
     User needs:
   compatible_with: cbioportal
 - id: 6
+  page_img: toolassemblies/tools/xnat.png
   at_a_glance:
     Tool name: XNAT
     Purpose and core functionality: XNAT is an open-source imaging informatics platform designed to support imaging-based research. It offers tools to import, archive, process and securely distribute imaging and related study data. With a flexible architecture and growing plugin ecosystem, XNAT is suited to diverse clinical and research workflows.
