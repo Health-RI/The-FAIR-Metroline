@@ -2,12 +2,12 @@
 layout: page
 ---
 
-## At a glance
+<h2>At a glance</h2>
 {% include toolassemblies/tool-table.html tool_id=page.tool_id section="at_a_glance" %}
 
-## Known gaps or user needs
+<h2>Known gaps or user needs</h2>
 {% include toolassemblies/tool-table.html tool_id=page.tool_id section="gaps_and_needs" %}
 
-## Compatible with
+<h2>Compatible with</h2>
 {% assign tool = site.data.tools | where: "id", page.tool_id | first %}
 {% include toolassemblies/show-tiles.html ids=tool.compatible_with %}
