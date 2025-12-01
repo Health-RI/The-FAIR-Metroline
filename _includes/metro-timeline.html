@@ -1,6 +1,28 @@
 <!-- Metro Timeline Component -->
 <div class="metro-timeline">
   {% for stop in include.stops %}
+  
+  <!-- Look up the step from metroline_steps.yml if step_id is provided -->
+  {% assign metroline_step = nil %}
+  {% if stop.step_id %}
+    {% for step in site.data.metroline_steps %}
+      {% if step.id == stop.step_id %}
+        {% assign metroline_step = step %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  
+  <!-- Use metroline step data if available, otherwise use stop data directly -->
+  {% assign display_title = stop.title | default: metroline_step.title %}
+  {% assign display_icon = stop.icon | default: metroline_step.icon %}
+  {% assign display_link = stop.link %}
+  {% unless display_link %}
+    {% if metroline_step.url %}
+      {% assign display_link = metroline_step.url | prepend: "/" %}
+    {% endif %}
+  {% endunless %}
+  
   <div class="metro-stop {{ stop.status }}" data-stop-id="{{ forloop.index }}">
     
     <!-- Stop header with marker and title -->
@@ -14,7 +36,7 @@
       
       <div class="metro-content">
         <h3 class="metro-title">
-          {% if stop.icon %}{{ stop.icon }} {% endif %}{{ stop.title }}
+          {% if display_icon %}{{ display_icon }} {% endif %}{{ display_title }}
         </h3>
         {% if stop.short_description or stop.description or stop.examples or stop.link %}
         <button class="metro-toggle" aria-expanded="false">
@@ -58,9 +80,9 @@
         </div>
         {% endif %}
         
-        {% if stop.link %}
+        {% if display_link %}
         <div class="metro-link">
-          <a href="{{ stop.link }}" class="btn-link">
+          <a href="{{ display_link }}" class="btn-link">
             📄 View full step details
           </a>
         </div>

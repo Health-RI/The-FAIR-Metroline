@@ -1,5 +1,5 @@
 ---
-title: Analyse tumour data and publish results
+title: How to analyse tumour data and publish the results
 permalink: tool-scenarios/transform_onco_data
 page_id: transform_onco_data
 custom_js: metro-timeline
