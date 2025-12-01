@@ -11,4 +11,4 @@ This section provides guidance for common FAIR objectives through FAIR scenarios
 
 * [How to make my dataset Findable?](scenarios/make_dataset_findable)
 
-* [How to analyse and publish tumor data](tool-scenarios/transform_onco_data)
+* [How to analyse and publish tumour data](tool-scenarios/transform_onco_data)
