@@ -1,0 +1,13 @@
+// top navigation bar
+.nav-link{
+    color: $dark;
+}
+
+//GitHub icon color in the top right corner
+.me-2{
+    color: $top-nav-icon;
+}
+
+.nav-link:hover{
+    color: white;
+}
