@@ -1,0 +1,7 @@
+subitems:
+  - title: How to contribute
+    url: /contributing/contributing
+  - title: Development process
+    url: /contributing/development_process
+  - title: Style guide
+    url: /contributing/style_guide

@@ -3,4 +3,8 @@
 subitems:
 - title: Home
   url: /index
+- title: About
+  url: /about
+- title: Contribute
+  url: /contributing/contributing
     

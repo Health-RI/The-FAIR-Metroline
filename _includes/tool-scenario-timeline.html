@@ -1,0 +1,101 @@
+<!-- Tool Scenario Timeline Component -->
+<div class="metro-timeline tool-scenario-timeline">
+  {% for stop in include.stops %}
+  <div class="metro-stop {{ stop.status }}" data-stop-id="{{ forloop.index }}">
+    
+    <!-- Stop header with marker and title -->
+    <div class="metro-stop-header">
+      <div class="metro-marker">
+        <div class="metro-dot"></div>
+        {% if forloop.last == false %}
+        <div class="metro-line"></div>
+        {% endif %}
+      </div>
+      
+      <div class="metro-content">
+        <div class="metro-title-wrapper">
+          {% if stop.tools and stop.tools.size > 0 and stop.tools[0].logo %}
+            <img src="{{ stop.tools[0].logo }}" alt="{{ stop.tools[0].name }}" class="title-tool-logo">
+          {% elsif stop.icon %}
+            <span class="title-icon">{{ stop.icon }}</span>
+          {% endif %}
+          <h3 class="metro-title">{{ stop.title }}</h3>
+        </div>
+        {% if stop.short_description or stop.description or stop.tools or stop.examples %}
+        <button class="metro-toggle" aria-expanded="false">
+          <span class="toggle-icon">▼</span>
+        </button>
+        {% endif %}
+      </div>
+    </div>
+    
+    <!-- Stop details (expandable) -->
+    {% if stop.short_description or stop.description or stop.tools or stop.examples %}
+    <div class="metro-details" style="display: none;">
+      <div class="metro-description">
+        
+        {% if stop.short_description %}
+        <p class="short-description">{{ stop.short_description }}</p>
+        {% endif %}
+        
+        {% if stop.description %}
+        <div class="full-description">{{ stop.description }}</div>
+        {% endif %}
+        
+        {% if stop.tools %}
+        <div class="tool-list">
+          <h4>Tools & Resources</h4>
+          <div class="tools">
+            {% for tool in stop.tools %}
+            <div class="tool-item">
+              {% if tool.logo %}
+              <img src="{{ tool.logo }}" alt="{{ tool.name }} logo" class="tool-logo">
+              {% else %}
+              <div class="tool-icon">
+                <i class="fas fa-wrench"></i>
+              </div>
+              {% endif %}
+              <div class="tool-info">
+                <strong>{{ tool.name }}</strong>
+                {% if tool.url %}
+                <a href="{{ tool.url }}" target="_blank" class="tool-link">
+                  <i class="fas fa-external-link-alt"></i> Documentation
+                </a>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+        
+        {% if stop.examples %}
+        <div class="metro-examples">
+          <h4>Examples</h4>
+          <div class="example-tabs">
+            {% for example in stop.examples %}
+            <button class="example-tab {% if forloop.first %}active{% endif %}" data-example="{{ forloop.index }}">
+              {{ example.role }}
+            </button>
+            {% endfor %}
+          </div>
+          <div class="example-content">
+            {% for example in stop.examples %}
+            <div class="example-panel {% if forloop.first %}active{% endif %}" data-example="{{ forloop.index }}">
+              <h5>{{ example.role }}</h5>
+              <p>{{ example.description }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+        
+      </div>
+    </div>
+    {% endif %}
+    
+  </div>
+  {% endfor %}
+</div>
+
+<script src="/assets/js/metro-timeline.js"></script>

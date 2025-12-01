@@ -1,5 +1,6 @@
 ---
 title: About
+sidebar: about
 ---
 
 ## About the FAIR Metroline

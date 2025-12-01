@@ -1,7 +1,11 @@
 subitems:
   - title: Home
     url: /
-  - title: FAIR Metroline steps
+  - title: Scenarios
+    url: /fair_metroline_scenarios
+  - title: Tools
+    url: /toolassemblies/tool_selection
+  - title: FAIR steps
     url: /fair_metroline_steps
     subitems:
       - title: Define FAIRification objectives
@@ -38,32 +42,3 @@ subitems:
         url: /metroline_steps/assess_fairness
       - title: Creating a FAIR Implementation Profile (FIP)
         url: /metroline_steps/creating_a_fair_implementation_profile
-  - title: Scenarios
-    url: /fair_metroline_scenarios
-    subitems:
-      - title: Evaluate data FAIRness
-        url: /scenarios/evaluate_data_fairness
-      - title: Make dataset findable
-        url: /scenarios/make_dataset_findable
-  - title: Tool assemblies
-    url: /toolassemblies/toolassemblies
-    subitems:
-      - title: Data Lifecycle
-        url: /toolassemblies/data_lifecycle
-      - title: Tool selection
-        url: /toolassemblies/tool_selection
-  - title: Contributing
-    url: /contributing/contributing
-    subitems:
-      - title: Development process
-        url: /contributing/development_process
-      - title: Style guide
-        url: /contributing/style_guide
-  - title: Contributors
-    url: /contributing/contributors
-  - title: Network
-    url: /network
-  - title: About
-    url: /about
-  - title: Contact
-    url: /contact
