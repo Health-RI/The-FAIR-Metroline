@@ -2,7 +2,7 @@
   url: "scenarios/evaluate_data_fairness"
   icon: "📊"
   description: "Assess how well your data meets FAIR principles and identify areas for improvement using evaluation tools and frameworks."
-  type: "fair"
+  type: "fair guidlines"
   complexity: "Low"
   page_id: "evaluate_data_fairness"
   background: "Understanding how FAIR your data currently is helps you identify gaps and prioritize improvements to meet institutional or funder requirements."
@@ -15,7 +15,7 @@
   url: "scenarios/make_dataset_findable"
   icon: "🔍"
   description: "Register your dataset in institutional catalogs with proper metadata to comply with data policies and enable discovery."
-  type: "fair"
+  type: "fair guidlines"
   complexity: "Low-Medium"
 
 
@@ -23,5 +23,5 @@
   url: "tool-scenarios/transform_onco_data"
   icon: "🧬"
   description: "Process tumor sequencing data with oncoanalyser and publish results in cBioPortal for cancer research visualization and analysis."
-  type: "tool"
+  type: "tools"
   complexity: "Medium"
