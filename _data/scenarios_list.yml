@@ -4,6 +4,12 @@
   description: "Assess how well your data meets FAIR principles and identify areas for improvement using evaluation tools and frameworks."
   type: "fair"
   complexity: "Low"
+  page_id: "evaluate_data_fairness"
+  background: "Understanding how FAIR your data currently is helps you identify gaps and prioritize improvements to meet institutional or funder requirements."
+  overview: "You want to assess your dataset against FAIR principles to understand what needs improvement before taking further action."
+  experts: "Data Steward"
+  outcome: "FAIR assessment report with improvement recommendations"
+  timeline_data: "scenarios.evaluate_data_fairness"
 
 - title: "How to make my dataset Findable?"
   url: "scenarios/make_dataset_findable"
@@ -12,12 +18,6 @@
   type: "fair"
   complexity: "Low-Medium"
 
-- title: "How to meet funder FAIR data requirements?"
-  url: "scenarios/funders"
-  icon: "🎯"
-  description: "Comply with grant obligations by depositing FAIR data in certified repositories with proper metadata and persistent identifiers."
-  type: "fair"
-  complexity: "Medium-High"
 
 - title: "How to analyse and publish tumor data"
   url: "tool-scenarios/transform_onco_data"
