@@ -24,10 +24,8 @@
   status: "active"
   short_description: "Process tumour sequencing data to generate variants and profiles."
   description: "Use oncoanalyser to process the tumour sequencing data and generate variants, copy number profiles and other outputs."
-  tools:
-    - name: "oncoanalyser"
-      url: "https://nf-co.re/oncoanalyser/2.2.0/"
-      logo: "https://raw.githubusercontent.com/nf-core/oncoanalyser/refs/heads/dev/docs/images/nf-core-oncoanalyser_logo_light.png"
+  tool_ids:
+    - oncoanalyser
   examples:
     - role: "Bioinformatician"
       description: "I need to process whole genome sequencing data from a tumour sample to identify somatic variants, copy number alterations, and structural variants for downstream analysis."
@@ -55,10 +53,8 @@
   status: "upcoming"
   short_description: "Upload your prepared data to the portal."
   description: "Use the cBioPortal import process to upload the prepared study directory to make your tumour data available in the portal for exploration."
-  tools:
-    - name: "cBioPortal"
-      url: "https://docs.cbioportal.org/"
-      logo: "https://www.cbioportal.org/images/cbioportal_logo.png"
+  tool_ids:
+    - cbioportal
   examples:
     - role: "Data Manager"
       description: "I need to import our prepared study into our institutional cBioPortal instance using the data loading scripts."
