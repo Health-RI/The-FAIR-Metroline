@@ -11,3 +11,5 @@ layout: page
 <h2>Compatible with</h2>
 {% assign tool = site.data.tools | where: "id", page.tool_id | first %}
 {% include toolassemblies/show-tiles.html ids=tool.compatible_with %}
+
+{% include toolassemblies/related-scenarios.html tool_id=page.tool_id %}
