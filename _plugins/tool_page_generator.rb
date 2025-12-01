@@ -27,8 +27,9 @@ module Jekyll
         domain = tool.dig('at_a_glance', 'Domains using it')
         phase = tool.dig('at_a_glance', 'Life cycle phases')
         
-        # Extract image path from tool data
-        image_path = tool['page_img']
+        # Extract image path from tool data - supports both local paths and URLs
+        # page_img_url takes precedence if both are specified
+        image_path = tool['page_img_url'] || tool['page_img']
 
         # Create the page
         site.pages << ToolPage.new(site, tool_id, tool_name, slug, domain, phase, image_path)
