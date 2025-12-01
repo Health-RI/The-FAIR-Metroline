@@ -7,7 +7,7 @@ title: FAIR Metroline
 description: "FAIR Metroline. A step-by-step route to making data FAIR."
 # Metadata description of the website
 
-remote_theme: ELIXIR-Belgium/elixir-toolkit-theme@4.1.0
+remote_theme: ELIXIR-Belgium/elixir-toolkit-theme@5.0.0
 
 #url: "https://health-ri.github.io"
 #baseurl: "/The-FAIR-Metroline"
