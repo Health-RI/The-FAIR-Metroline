@@ -1,0 +1,25 @@
+#sidebar > nav > ul > li:not(.sidebar-title) > a {
+  background-color: $menu-unselected-bg;
+  color: $light;
+
+}
+
+// active sub item
+#sidebar > nav > ul li.active:not(.parent) > a {
+  background-color: $dark;
+  color: $light;
+}
+
+// unselected and not active sub item
+#sidebar > nav > ul ul li a {
+  margin-left: 30px;
+  color: $light;
+}
+
+
+.sidebar-collapse {
+  color: $dark;
+}
+.sidebar-collapse:hover {
+  color: white;
+}
