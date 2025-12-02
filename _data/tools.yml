@@ -232,7 +232,7 @@
   page_img: https://raw.githubusercontent.com/nf-core/oncoanalyser/60a62eb5cdde30ea3ee03b2a32791bf3421ca599/assets/nf-core-oncoanalyser_logo_light.png
   at_a_glance:
     Tool name: Oncoanalyser
-    Purpose and core functionality: Oncoanalyser is a Nextflow-based bioinformatics pipeline for processing tumour sequencing data. It supports whole genome, exome and targeted panel sequencing from tumour-normal pairs to generate variant calls, copy number profiles, structural variants and other genomic outputs.
+    Purpose and core functionality: Oncoanalyser is a Nextflow-based bioinformatics pipeline for processing tumor sequencing data. It supports whole genome, exome and targeted panel sequencing from tumor-normal pairs to generate variant calls, copy number profiles, structural variants and other genomic outputs.
     Type: Data analysis
     Life cycle phases: Process, Analyse
     Domains using it: Oncology
