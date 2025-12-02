@@ -16,6 +16,19 @@
 @import "components/sidebar-styling";
 @import "components/input-components-styling";
 @import "components/back-to-top-styling";
+@import "components/scenario-cards";
+
+
+//Example for highlighting the active page in the navigation:
+/*-----Top navigation-----*/
+
+.navbar-nav .nav-item > a {
+    &.active {
+        color: $white;
+        background-color: $primary;
+        border-radius: $border-radius;
+    }
+}
 
 
 // .nodeLabel p{

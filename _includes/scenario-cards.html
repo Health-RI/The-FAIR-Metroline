@@ -1,0 +1,18 @@
+<!-- Scenario Cards Grid -->
+<div class="scenario-cards-grid">
+  {% for scenario in include.scenarios %}
+  <a href="{{ scenario.url | relative_url }}" class="scenario-card">
+    <div class="scenario-card-icon">{{ scenario.icon }}</div>
+    <h3 class="scenario-card-title">{{ scenario.title }}</h3>
+    <p class="scenario-card-description">{{ scenario.description }}</p>
+    <div class="scenario-card-meta">
+      {% if scenario.type %}
+        <span class="scenario-type {{ scenario.type }}">{{ scenario.type | capitalize }}</span>
+      {% endif %}
+      {% if scenario.complexity %}
+        <span class="scenario-complexity">{{ scenario.complexity }}</span>
+      {% endif %}
+    </div>
+  </a>
+  {% endfor %}
+</div>

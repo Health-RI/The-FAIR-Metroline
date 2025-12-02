@@ -116,9 +116,13 @@
         <div class="card-body">
 
             {%- if current_page.page_img %}
+            {%- if current_page.page_img contains "http://" or current_page.page_img contains "https://" %}
+            {%- assign file_url = current_page.page_img -%}
+            {%- else %}
             {%- capture file_url -%}
             {{ "/assets/img/" | append: current_page.page_img | relative_url }}
             {%- endcapture -%}
+            {%- endif %}
             <img
                 alt="logo of {{ current_page.title }}"
                 src="{{ file_url }}"
