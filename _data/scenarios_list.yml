@@ -16,7 +16,7 @@
   icon: "🔍"
   description: "Register your dataset in institutional catalogs with proper metadata to comply with data policies and enable discovery."
   type: "fair guidelines"
-  complexity: "Low-Medium"
+  complexity: "Medium"
 
 
 - title: "How to analyse and publish tumor data"
@@ -24,4 +24,4 @@
   icon: "🧬"
   description: "Process tumor sequencing data with oncoanalyser and publish results in cBioPortal for cancer research visualization and analysis."
   type: "tools"
-  complexity: "Medium"
+  complexity: "High"

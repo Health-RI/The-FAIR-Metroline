@@ -15,7 +15,7 @@ You need to process tumor sequencing data to extract key genomic alterations. Ca
 
 You start with raw tumor sequencing files, run an analysis workflow to generate variants and copy number profiles, then format the outputs so they can be uploaded to a cancer genomics portal for exploration.
 
-{% include scenario-overview.html complexity="Medium to High" environment="HPC or Cloud" outcome="Published dataset" %}
+{% include scenario-overview.html complexity="High" environment="HPC or Cloud" outcome="Published dataset" %}
 
 ## Your Journey
 
