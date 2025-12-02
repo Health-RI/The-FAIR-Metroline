@@ -1,0 +1,55 @@
+---
+layout: default
+custom_js: metro-timeline
+---
+
+{% assign scenario_id = page.page_id %}
+{% assign scenario = nil %}
+
+{% for s in site.data.scenarios_list %}
+  {% if s.page_id == scenario_id %}
+    {% assign scenario = s %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if scenario %}
+
+<h1>{{ scenario.title }}</h1>
+
+<h2>Background</h2>
+<p>{{ scenario.background }}</p>
+
+<h2>Scenario Overview</h2>
+
+<p>{{ scenario.overview }}</p>
+
+{% if scenario.experts %}
+  {% include scenario-overview.html complexity=scenario.complexity experts=scenario.experts outcome=scenario.outcome %}
+{% elsif scenario.environment %}
+  {% include scenario-overview.html complexity=scenario.complexity environment=scenario.environment outcome=scenario.outcome %}
+{% endif %}
+
+<h2>Your Journey</h2>
+
+{% assign timeline_path_parts = scenario.timeline_data | split: "." %}
+{% if timeline_path_parts.size == 2 %}
+  {% if timeline_path_parts[0] == "scenarios" %}
+    {% assign timeline_stops = site.data.scenarios[timeline_path_parts[1]] %}
+  {% elsif timeline_path_parts[0] == "tool-scenarios" %}
+    {% assign timeline_stops = site.data.tool-scenarios[timeline_path_parts[1]] %}
+  {% endif %}
+{% endif %}
+
+{% if scenario.type == "tools" %}
+  {% include tool-scenario-timeline.html stops=timeline_stops %}
+{% else %}
+  {% include metro-timeline.html stops=timeline_stops %}
+{% endif %}
+
+{% else %}
+
+<h1>Scenario not found</h1>
+<p>The requested scenario could not be found. Please return to the <a href="{{ '/fair_metroline_scenarios' | relative_url }}">scenarios overview</a>.</p>
+
+{% endif %}
