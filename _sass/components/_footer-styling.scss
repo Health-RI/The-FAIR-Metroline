@@ -1,0 +1,23 @@
+// Copyright footer background color
+footer .copyright {
+  background-color: $light;
+}
+
+// Footer links styling
+footer a:hover {
+    color: #cbe0ff !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+// ETT logo in footer
+
+footer #ett-logo,
+footer #ett-logo:hover {
+    color: #cbe0ff !important;
+}
+
+footer #ett-logo .cls-1,
+footer #ett-logo .cls-1:hover {
+    color: #cbe0ff !important;
+}
