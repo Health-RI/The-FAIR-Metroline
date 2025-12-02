@@ -1,6 +1,5 @@
-- title: "Define FAIRification objectives"
+- step_id: 1
   status: "completed"
-  icon: "🎯"
   short_description: "Start by clearly defining what you want to achieve."
   description: "You've identified your goal: making your dataset findable in the institutional catalog to comply with your organization's data policy. Having clear objectives helps you stay focused on what matters most."
   examples:
@@ -10,11 +9,9 @@
       description: "I'm helping several research teams register their datasets. My goal is to create a smooth workflow that satisfies both our institutional policies and FAIR principles."
     - role: "PhD Candidate"
       description: "My supervisor wants me to make my research data available. I'm starting by understanding what 'findable' really means and identifying the essential steps I need to take."
-  link: "/metroline_steps/define_fairification_objectives"
 
-- title: "Have a FAIR data steward on board"
+- step_id: 3
   status: "completed"
-  icon: "👥"
   short_description: "Connect with someone who can guide you through the process."
   description: "You've reached out to your institutional data steward who will support you throughout this journey. Having expert guidance makes the process much smoother and helps you avoid common pitfalls."
   examples:
@@ -22,11 +19,9 @@
       description: "I contacted our research data office and connected with a data steward. They're helping me understand what metadata I need and which catalog to use for registration."
     - role: "Independent Researcher"
       description: "Since my institution doesn't have a dedicated data steward, I reached out to the Health-RI helpdesk. They're providing remote guidance tailored to my situation."
-  link: "/metroline_steps/have_a_fair_data_steward_on_board"
 
-- title: "Assess availability of your metadata"
+- step_id: 8
   status: "active"
-  icon: "📋"
   short_description: "Take stock of what information you already have."
   description: "Now you need to inventory the metadata you already have about your dataset. Things like title, description, and keywords, and identify what's still missing. This assessment helps you understand the work ahead."
   examples:
@@ -34,11 +29,9 @@
       description: "I have my research protocol with a detailed study description, but I need to check whether I have everything required: keywords, contact details, and properly documented access conditions."
     - role: "Data Manager"
       description: "I'm going through our data management plan to extract existing metadata. I also need to verify our licensing information and confirm we have the right consent documentation for sharing."
-  link: "/metroline_steps/assess_availability_of_your_metadata"
 
-- title: "Register resource level metadata"
+- step_id: 10
   status: "upcoming"
-  icon: "📝"
   short_description: "Submit your dataset information to the catalog."
   description: "With your metadata complete, you're ready to register your dataset in the institutional catalog. This step makes your data discoverable to colleagues and collaborators who might benefit from it."
   examples:
@@ -46,7 +39,6 @@
       description: "I'll use our institutional catalog's web interface to submit my dataset registration with all the metadata I've prepared."
     - role: "Multi-center Study Coordinator"
       description: "I need to register our dataset in multiple institutional catalogs across participating sites, making sure the information stays consistent everywhere."
-  link: "/metroline_steps/register_resource_level_metadata"
 
 - title: "Your metadata is now Findable in a catalog"
   status: "destination"
@@ -54,22 +46,18 @@
   short_description: "Success! Your dataset can now be discovered by others."
   description: "Congratulations! Your dataset is now registered and findable in the catalog. Researchers looking for data like yours can now discover it and understand what you have available, opening doors for potential collaborations and data reuse."
 
-- title: "Apply metadata model"
+- step_id: 19
   status: "suggestion"
-  icon: "💡"
   short_description: "Consider using standardized metadata schemas."
   description: "Want to go further? Applying a standardized metadata model like Dublin Core, DataCite, or domain-specific schemas can significantly improve your data's discoverability across different systems and catalogs."
   examples:
     - role: "Data Steward"
       description: "I want our metadata to work seamlessly with national and international catalogs, so I'm mapping our fields to the DataCite schema to ensure broad compatibility."
-  link: "/metroline_steps/apply_metadata_model"
 
-- title: "Register structural metadata"
+- step_id: 11
   status: "suggestion"
-  icon: "💡"
   short_description: "Document your data's internal structure in detail."
   description: "Take it even further by documenting the internal structure of your dataset, e.g., variable names, data types, relationships, and formats. This makes your data much more reusable and reduces the need for back-and-forth questions from potential users."
   examples:
     - role: "Database Administrator"
       description: "I'm documenting our complete database schema so other researchers can understand the data structure independently, without needing to contact us for clarification."
-  link: "/metroline_steps/register_structural_metadata"

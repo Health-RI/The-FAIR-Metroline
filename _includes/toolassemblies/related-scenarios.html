@@ -1,0 +1,72 @@
+{% comment %}
+  related-scenarios.html
+  Shows all tool scenarios that use the specified tool_id
+  Usage: {% include toolassemblies/related-scenarios.html tool_id="oncoanalyser" %}
+{% endcomment %}
+
+{% assign current_tool_id = include.tool_id %}
+{% assign related_scenarios = "" | split: "" %}
+
+{% comment %} Loop through all tool-scenarios data files {% endcomment %}
+{% for scenario_file in site.data.tool-scenarios %}
+  {% assign scenario_id = scenario_file[0] %}
+  {% assign scenario_steps = scenario_file[1] %}
+  
+  {% comment %} Check if any step in this scenario uses the current tool {% endcomment %}
+  {% assign tool_found = false %}
+  {% for step in scenario_steps %}
+    {% if step.tool_ids contains current_tool_id %}
+      {% assign tool_found = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  
+  {% comment %} If tool found, add this scenario to related scenarios {% endcomment %}
+  {% if tool_found %}
+    {% assign related_scenarios = related_scenarios | push: scenario_id %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Display the related scenarios if any found {% endcomment %}
+{% if related_scenarios.size > 0 %}
+<div class="related-scenarios mt-5">
+  <h2>Used in scenarios</h2>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 mb-5 navigation-tiles">
+    {% for scenario_id in related_scenarios %}
+      {% comment %} Find the scenario metadata from scenarios_list.yml {% endcomment %}
+      {% assign scenario_meta = site.data.scenarios_list | where_exp: "item", "item.url contains scenario_id" | first %}
+      
+      {% if scenario_meta %}
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            
+            <div class="d-flex align-items-center">
+              {% if scenario_meta.type %}
+              <span><small>{{ scenario_meta.type | replace: "_", " " | capitalize }}</small></span>
+              {% endif %}
+            </div>
+
+            <a class="stretched-link section-title" aria-label="Go to the {{ scenario_meta.title }} scenario" href="/{{ scenario_meta.url }}">
+              <b>{% if scenario_meta.icon %}<span class="me-2">{{ scenario_meta.icon }}</span>{% endif %}{{ scenario_meta.title }}</b>
+            </a>
+
+            {% if scenario_meta.description %}
+            <p class="card-text">{{ scenario_meta.description }}</p>
+            {% endif %}
+
+            {% if scenario_meta.complexity %}
+            <div class="d-flex align-items-center flex-wrap gap-2">
+              <span><b><small>Complexity:</small></b></span>
+              <span class="badge bg-secondary">{{ scenario_meta.complexity }}</span>
+            </div>
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
