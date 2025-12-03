@@ -1,20 +1,218 @@
-.navigation-tiles .card{
+// ============================================
+// SHARED CARD BASE STYLES
+// Used by both tool and scenario cards
+// ============================================
+
+// Shared card elements
+.tool-card-icon,
+.scenario-card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.tool-card-icon {
+  position: absolute;
+  top: 2rem;
+  right: 1.5rem;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 60px;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+}
+
+.tool-card-title {
+  color: #143368;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+  padding-right: 100px;
+}
+
+.tool-card-description {
+  color: #666;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0 0 0.75rem 0;
+  padding-right: 100px;
+}
+
+.tool-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  padding-right: 100px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 66%;
+    height: 1px;
+    background-color: #e8f0f7;
+  }
+}
+
+// ============================================
+// TOOL CARDS
+// ============================================
+
+.navigation-tiles {
+  .card {
     background-color: white;
     border: 1px solid #183d7626;
+    border-radius: 8px;
     color: $card-label;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      border-color: #183d76;
+      box-shadow: 0 4px 8px -2px rgba(0, 0, 34, 0.25);
+      background-color: #fff !important;
+      color: $card-label;
+
+      .tool-card-icon img {
+        transform: scale(1.55) translateX(-10px);
+      }
+
+      .tool-card-title {
+        color: #328cc1;
+      }
+    }
+
+    a.section-title {
+      color: $light;
+    }
+
+    &:hover a.section-title {
+      color: $light;
+    }
+  }
+
+  .tool-card {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
-.navigation-tiles .card a.section-title{
-    color: $light;
+// Tool-specific metadata styling
+.tool-type,
+.scenario-type,
+.scenario-complexity {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  width: fit-content;
 }
 
-.navigation-tiles .card:hover{
-    border-color: #183d76;
-    box-shadow: 0 6px 10px -4px #000022b3;
-    background-color: #fff !important;
-    color: $card-label;
+.tool-type {
+  background: #e8f0f7;
+  color: #143368;
 }
 
-.navigation-tiles .card:hover a.section-title{
-    color: $light;
+.tool-tags-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tool-tags-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #143368;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tool-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-weight: 500;
+    
+    &.bg-primary {
+      background: #dce9f7 !important;
+      color: #328cc1 !important;
+      border: none;
+    }
+    
+    &.bg-secondary {
+      background: #f0f0f0 !important;
+      color: #666 !important;
+      border: none;
+    }
+  }
+}
+
+// ============================================
+// RESPONSIVE ADJUSTMENTS
+// ============================================
+
+@media (max-width: 768px) {
+  .navigation-tiles .card {
+    .card-body {
+      padding: 1.5rem;
+    }
+  }
+
+  .tool-card-icon {
+    width: 60px;
+    height: 60px;
+    top: 1rem;
+    right: 1rem;
+
+    img {
+      max-width: 45px !important;
+      max-height: 45px !important;
+    }
+  }
+
+  .tool-card-title {
+    padding-right: 70px;
+  }
+
+  .tool-card-description {
+    padding-right: 70px;
+  }
+
+  .tool-card-title,
+  .scenario-card-title {
+    font-size: 1.1rem;
+  }
 }

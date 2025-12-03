@@ -27,19 +27,22 @@ module Jekyll
         domain = tool.dig('at_a_glance', 'Domains using it')
         phase = tool.dig('at_a_glance', 'Life cycle phases')
         
+        # Extract short description for card display
+        short_description = tool.dig('at_a_glance', 'Short description')
+        
         # Extract image path from tool data - supports both local paths and URLs
         # page_img_url takes precedence if both are specified
         image_path = tool['page_img_url'] || tool['page_img']
 
         # Create the page
-        site.pages << ToolPage.new(site, tool_id, tool_name, slug, domain, phase, image_path)
+        site.pages << ToolPage.new(site, tool_id, tool_name, slug, domain, phase, image_path, short_description)
       end
     end
   end
 
   # Represents a dynamically generated tool page
   class ToolPage < Page
-    def initialize(site, tool_id, tool_name, slug, domain, phase, image_path)
+    def initialize(site, tool_id, tool_name, slug, domain, phase, image_path, short_description = nil)
       @site = site
       @base = site.source
       @dir = 'toolassemblies/tools'
@@ -55,6 +58,7 @@ module Jekyll
       self.data['type'] = 'tool'
       self.data['tool_id'] = tool_id
       self.data['page_img'] = image_path if image_path
+      self.data['description'] = short_description if short_description
       
       # Parse domain - handle various formats
       if domain

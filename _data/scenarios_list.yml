@@ -23,5 +23,5 @@
   url: "tool-scenarios/transform_onco_data"
   icon: "🧬"
   description: "Process tumor sequencing data with oncoanalyser and publish results in cBioPortal for cancer research visualization and analysis."
-  type: "tools"
+  type: "analysis"
   complexity: "High"
