@@ -1,5 +1,5 @@
 - name: Funders
-  description: Organizations funding health and life sciences research
+  description: Funding organizations supporting the development
   anchor: funders
   icon: "📊"
 
@@ -9,6 +9,6 @@
   icon: "🤝"
 
 - name: Tools Integration
-  description: Planned tool integrations
+  description: Tools that will be included in the future in the assebly
   anchor: tools-integration
   icon: "🛠️"
