@@ -1,121 +1,214 @@
 # we'll stick to the plugin's format here so we can reuse includes from the plugin if we want
+# Organizations
 - name: Health-RI
   image_url: assets/img/logos/healthri_transp.png
   url: https://www.health-ri.nl/
   expose: true
-  type: general
+  type: organization
   pid: ""
+
 - name: Amsterdam UMC
   image_url: assets/img/logos/amsterdamumc_transp.svg
   url: https://www.amsterdamumc.nl/
   expose: true
-  type: general
+  type: organization
   pid: ""
+
 - name: Erasmus MC
   image_url: assets/img/logos/erasmusmc_transp.svg
   url: https://www.erasmusmc.nl/
   expose: true
-  type: general
+  type: organization
   pid: ""
+
 - name: Leids Universitair Medisch Centrum
   image_url: assets/img/logos/lumc_transp.png
   url: https://www.lumc.nl/
   expose: true
-  type: general
+  type: organization
   pid: ""
+
 - name: Maastricht UMC+
   image_url: assets/img/logos/maastrichtumc_transp.svg
   url: https://www.maastrichtuniversity.nl/
   expose: false
-  type: general
+  type: organization
   pid: ""
+
 - name: Maastricht University
   image_url: assets/img/logos/maastricht_university_transp.svg
   url: https://www.maastrichtuniversity.nl/
   expose: true
-  type: general
+  type: organization
   pid: ""
+
 - name: Nederlands Kanker Instituut
   image_url: assets/img/logos/nki_transp.svg
   url: https://www.nki.nl/
   expose: true
-  type: general
+  type: organization
   pid: ""
+
 - name: Radboudumc
   image_url: assets/img/logos/radboudumc_transp.svg
   url: https://www.radboudumc.nl/
   expose: true
-  type: general
+  type: organization
   pid: ""
+
 - name: UMCG
   image_url: assets/img/logos/umcg_transp.png
   url: https://www.umcg.nl/
   expose: true
-  type: general
+  type: organization
   pid: ""
+
 - name: UMC Utrecht
   image_url: assets/img/logos/umcu_transp.svg
   url: https://www.umcutrecht.nl/
   expose: true
-  type: general
+  type: organization
   pid: ""
+
+- name: Maastricht UMC+
+  image_url: assets/img/logos/mumc_transp.svg
+  url: https://www.mumc.nl/
+  expose: true
+  type: organization
+  pid: ""
+
+- name: Eindhoven University of Technology
+  image_url: assets/img/logos/tue_transp.svg
+  url: https://www.tue.nl/
+  expose: true
+  type: organization
+  pid: ""
+
+- name: Vrije Universiteit Amsterdam
+  image_url: assets/img/logos/vu_transp.svg
+  url: https://www.vu.nl/
+  expose: true
+  type: organization
+  pid: ""
+
+- name: Universiteit van Amsterdam
+  image_url: assets/img/logos/uva_transp.png
+  url: https://www.uva.nl/
+  expose: true
+  type: organization
+  pid: ""
+
+- name: Erasmus Universiteit Rotterdam
+  image_url: assets/img/logos/eur_transp.png
+  url: https://www.eur.nl/
+  expose: true
+  type: organization
+  pid: ""
+
+- name: Universiteit Leiden
+  image_url: assets/img/logos/lu_transp.png
+  url: https://www.universiteitleiden.nl/
+  expose: true
+  type: organization
+  pid: ""
+
+- name: Radboud University
+  image_url: assets/img/logos/radboud_university_transp.svg
+  url: https://www.ru.nl/
+  expose: true
+  type: organization
+  pid: ""
+
+- name: Rijksuniversiteit Groningen
+  image_url: assets/img/logos/rug_transp.svg
+  url: https://www.rug.nl/
+  expose: true
+  type: organization
+  pid: ""
+
+- name: Universiteit Utrecht
+  image_url: assets/img/logos/uu_transp.svg
+  url: https://www.uu.nl/
+  expose: true
+  type: organization
+  pid: ""
+
+- name: Technische Universiteit Delft
+  image_url: assets/img/logos/tud_transp.png
+  url: https://www.tudelft.nl/
+  expose: true
+  type: organization
+  pid: ""
+
+- name: Wageningen University & Research
+  image_url: assets/img/logos/wur_transp.svg
+  url: https://www.wur.nl/
+  expose: true
+  type: organization
+  pid: ""
+
+- name: SURF
+  image_url: assets/img/logos/surf_transp.svg
+  url: https://www.surf.nl/
+  expose: true
+  type: organization
+  pid: ""
+
+- name: Netherlands eScience Center
+  image_url: assets/img/logos/nlesc_transp.png
+  url: https://www.esciencecenter.nl/
+  expose: true
+  type: organization
+  pid: ""
+
+# Funders
 - name: ZonMw
   image_url: assets/img/logos/zonmw_transp.svg
   url: https://www.zonmw.nl/
   expose: true
-  type: general
+  type: funder
   pid: ""
+# Projects and Networks
 - name: Elixir
   image_url: assets/img/logos/elixir-outlined_transp.png
   url: https://elixir-europe.org/
   expose: true
-  type: general
+  type: network
   pid: ""
 - name: Elixir-NL
   image_url: assets/img/logos/elixir-nl_transp.png
   url: https://www.health-ri.nl/en/elixir
   expose: true
-  type: general
+  type: network
   pid: ""
-- name: Maastricht UMC+
-  image_url: assets/img/logos/mumc_transp.svg
-  url: https://www.mumc.nl/
-  expose: true
-  type: general
-  pid: ""
-- name: Eindhoven University of Technology
-  image_url: assets/img/logos/tue_transp.svg
-  url: https://www.tue.nl/
-  expose: true
-  type: general
-  pid: ""
+# Resources
 - name: RDMkit
   image_url: assets/img/logos/rdmkit_transp.svg
   url: https://rdmkit.elixir-europe.org
   expose: true
-  type: general
+  type: resource
   pid: ""
 - name: FAIR Cookbook
   image_url: assets/img/logos/faircookbook_transp.svg
   url: https://elixiruknode.org/service/fair-cookbook
   expose: true
-  type: general
+  type: resource
   pid: ""
 - name: Data Stewardship Wizard
   image_url: assets/img/logos/dsw_transp.svg
   url: https://ds-wizard.org/
   expose: true
-  type: general
+  type: resource
   pid: ""
 - name: FAIRsharing
   image_url: assets/img/logos/fairsharing_transp.svg
   url: https://fairsharing.org/
   expose: true
-  type: general
+  type: resource
   pid: ""
 - name: FIP Wizard
   image_url: assets/img/logos/fip-wizard_transp.svg
   url: https://fip.fair-wizard.com
   expose: true
-  type: general
+  type: resource
   pid: ""
