@@ -1,0 +1,14 @@
+- name: Funders
+  description: Organizations funding health and life sciences research
+  anchor: funders
+  icon: "📊"
+
+- name: Collaborations
+  description: Digital Competence Centers, projects, networks and resources we work with
+  anchor: collaborations
+  icon: "🤝"
+
+- name: Tools Integration
+  description: Planned tool integrations
+  anchor: tools-integration
+  icon: "🛠️"
