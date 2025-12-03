@@ -14,8 +14,8 @@ columns:
   - type: links
     width: 1
     children: 
-      - url_text: Network
-        url: network
+      - url_text: Collaborations
+        url: collaborations
   - type: links
     width: 1
     children: 
