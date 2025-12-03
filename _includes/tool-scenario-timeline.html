@@ -24,10 +24,20 @@
               {% else %}
                 {% assign tool_img_url = "/assets/img/" | append: tool_data.page_img %}
               {% endif %}
-              <img src="{{ tool_img_url }}" alt="{{ tool_data.at_a_glance['Tool name'] }}" class="title-tool-logo">
+              <span style="position: relative; order: 2; flex-shrink: 0; margin-right: 0.5rem;">
+                <img src="{{ tool_img_url }}" alt="{{ tool_data.at_a_glance['Tool name'] }}" class="title-tool-logo">
+                {% if stop.tool_ids.size > 1 %}
+                <span class="badge bg-primary" style="position: absolute; bottom: -3px; right: -8px; font-size: 0.65rem; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; padding: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">+{{ stop.tool_ids.size | minus: 1 }}</span>
+                {% endif %}
+              </span>
             {% endif %}
           {% elsif stop.tools and stop.tools.size > 0 and stop.tools[0].logo %}
-            <img src="{{ stop.tools[0].logo }}" alt="{{ stop.tools[0].name }}" class="title-tool-logo">
+            <span style="position: relative; order: 2; flex-shrink: 0; margin-right: 0.5rem;">
+              <img src="{{ stop.tools[0].logo }}" alt="{{ stop.tools[0].name }}" class="title-tool-logo">
+              {% if stop.tools.size > 1 %}
+              <span class="badge bg-primary" style="position: absolute; bottom: -3px; right: -8px; font-size: 0.65rem; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; padding: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">+{{ stop.tools.size | minus: 1 }}</span>
+              {% endif %}
+            </span>
           {% elsif stop.icon %}
             <span class="title-icon">{{ stop.icon }}</span>
           {% endif %}

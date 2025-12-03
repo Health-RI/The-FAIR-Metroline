@@ -13,7 +13,7 @@ Accessible because of funder or institutional requirements.
 
 You need to comply with your institution's FAIR data policy and make your dataset available in the institutional catalog.
 
-{% include scenario-overview.html complexity="Low to Medium" experts="Data Steward" outcome="Findable Dataset" %}
+{% include scenario-overview.html complexity="Medium" experts="Data Steward" outcome="Findable Dataset" %}
 
 ## Your Journey
 
