@@ -38,32 +38,38 @@
       
       {% if scenario_meta %}
       <div class="col">
-        <div class="card h-100">
+        <a href="/{{ scenario_meta.url }}" class="card h-100 tool-card" aria-label="Go to the {{ scenario_meta.title }} scenario">
           <div class="card-body">
             
-            <div class="d-flex align-items-center">
+            {%- if scenario_meta.icon %}
+            <div class="tool-card-icon" style="position: static; width: auto; height: auto; margin-bottom: 1rem;">
+              <span style="font-size: 2.5rem;">{{ scenario_meta.icon }}</span>
+            </div>
+            {%- endif %}
+
+            <h3 class="tool-card-title">{{ scenario_meta.title }}</h3>
+
+            {% if scenario_meta.description %}
+            <p class="tool-card-description">{{ scenario_meta.description }}</p>
+            {% endif %}
+
+            <div class="tool-card-meta">
               {% if scenario_meta.type %}
-              <span><small>{{ scenario_meta.type | replace: "_", " " | capitalize }}</small></span>
+              <span class="tool-type">{{ scenario_meta.type | replace: "_", " " | capitalize }}</span>
+              {% endif %}
+
+              {% if scenario_meta.complexity %}
+              <div class="tool-tags-group">
+                <span class="tool-tags-label">Complexity:</span>
+                <div class="tool-tags">
+                  <span class="badge bg-secondary">{{ scenario_meta.complexity }}</span>
+                </div>
+              </div>
               {% endif %}
             </div>
 
-            <a class="stretched-link section-title" aria-label="Go to the {{ scenario_meta.title }} scenario" href="/{{ scenario_meta.url }}">
-              <b>{% if scenario_meta.icon %}<span class="me-2">{{ scenario_meta.icon }}</span>{% endif %}{{ scenario_meta.title }}</b>
-            </a>
-
-            {% if scenario_meta.description %}
-            <p class="card-text">{{ scenario_meta.description }}</p>
-            {% endif %}
-
-            {% if scenario_meta.complexity %}
-            <div class="d-flex align-items-center flex-wrap gap-2">
-              <span><b><small>Complexity:</small></b></span>
-              <span class="badge bg-secondary">{{ scenario_meta.complexity }}</span>
-            </div>
-            {% endif %}
-
           </div>
-        </div>
+        </a>
       </div>
       {% endif %}
     {% endfor %}
