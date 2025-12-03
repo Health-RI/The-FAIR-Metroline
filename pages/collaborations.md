@@ -32,6 +32,8 @@ This is a list of the resources we collaborate with.
 
 The tools we plan to integrate in our resource based on our collaboration with the above parties.
 
+{% include collaborations/future-tools-cards.html %}
+
 We invite you to collaborate with us as we continue to enhance and refine the various FAIR Metroline phases.
 Read more about the FAIR Metroline development process and see the section below on the many ways you can
 contribute to this initiative.

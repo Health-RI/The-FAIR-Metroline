@@ -1,0 +1,514 @@
+- name: DMPonline
+  image_url:
+  url: https://dmponline.dcc.ac.uk/
+  description: Data Management Planning tool
+
+- name: R
+  image_url:
+  url: https://www.r-project.org/
+  description: Statistical computing and graphics
+
+- name: GitHub
+  image_url:
+  url: https://github.com/
+  description: Version control and collaboration platform
+
+- name: PaNaMa
+  image_url:
+  url: https://panama-rms.eu/
+  description: Research management system
+
+- name: eLabjournal
+  image_url:
+  url: https://www.elabjournal.com/
+  description: Electronic lab notebook
+
+- name: CTcue
+  image_url:
+  url: https://ai.ctcue.com/
+  description: Clinical trial management
+
+- name: ALEA
+  image_url:
+  url: https://www.aleaclinical.eu/products/
+  description: Randomization tool
+
+- name: DataverseNL
+  image_url:
+  url: https://dataverse.nl/
+  description: Research data repository
+
+- name: Yoda
+  image_url:
+  url: https://www.uu.nl/en/research/yoda
+  description: Research data management platform
+
+- name: Python
+  image_url:
+  url: https://www.python.org/
+  description: Programming language
+
+- name: Qualtrics
+  image_url:
+  url: https://www.qualtrics.com/
+  description: Survey and research platform
+
+- name: Formdesk
+  image_url:
+  url: https://www.formdesk.com/
+  description: Online form builder
+
+- name: HPC
+  image_url:
+  url: https://www.surf.nl/en/services/compute/hpc-cloud
+  description: High Performance Computing
+
+- name: Dataverse
+  image_url:
+  url: https://dataverse.org/
+  description: Open source research data repository
+
+- name: DataSHIELD
+  image_url:
+  url: https://www.datashield.org/
+  description: Privacy-preserving data analysis
+
+- name: Ldot
+  image_url:
+  url: https://www.ldot.nl/
+  description: Research data tool
+
+- name: iVentionLES
+  image_url:
+  url: https://www.ivention.nl/
+  description: Laboratory execution system
+
+- name: Opal
+  image_url:
+  url: https://www.obiba.org/pages/products/opal/
+  description: Data warehouse platform
+
+- name: EPIC
+  image_url:
+  url: https://www.epic.com/
+  description: Electronic health record system
+
+- name: SPSS
+  image_url:
+  url: https://www.ibm.com/products/spss-statistics
+  description: Statistical analysis software
+
+- name: Matlab
+  image_url:
+  url: https://www.mathworks.com/products/matlab.html
+  description: Numerical computing environment
+
+- name: LimeSurvey
+  image_url:
+  url: https://www.limesurvey.org/
+  description: Online survey platform
+
+- name: Biobank
+  image_url:
+  url: https://www.bbmri-eric.eu/
+  description: Biological sample management
+
+- name: vantage6
+  image_url:
+  url: https://vantage6.ai/
+  description: Privacy-preserving analytics platform
+
+- name: Atlas.ti
+  image_url:
+  url: https://atlasti.com/
+  description: Qualitative data analysis
+
+- name: Bioconductor
+  image_url:
+  url: https://www.bioconductor.org/
+  description: Bioinformatics software tools
+
+- name: Azure Cloud
+  image_url:
+  url: https://azure.microsoft.com/
+  description: Cloud computing platform
+
+- name: eLabNext
+  image_url:
+  url: https://www.elabnext.com/
+  description: Laboratory information management
+
+- name: iCRF Generator
+  image_url:
+  url: https://github.com/aderidder/iCRFGenerator/
+  description: Generate interoperable Case Report Forms
+
+- name: Dataplatform
+  image_url:
+  url:
+  description:
+
+- name: ELN tooling
+  image_url:
+  url:
+  description: Electronic lab notebook tools
+
+- name: FAIR2
+  image_url:
+  url: https://fair2.ai/
+  description: FAIR data management tool
+
+- name: BBMRI-Catalogue
+  image_url:
+  url: https://www.bbmri-eric.eu/
+  description: Biobank catalogue
+
+- name: OMOP-converter
+  image_url:
+  url: https://ohdsi.org/
+  description: Healthcare data standardization
+
+- name: Brightfish
+  image_url:
+  url: https://brightfish.com/
+  description: Research data tool
+
+- name: vhp4safety
+  image_url:
+  url: https://www.vhp4safety.nl/
+  description: Virtual Human Platform for Safety
+
+- name: Blaise
+  image_url:
+  url: https://www.blaise.com/products/blaise-5
+  description: Survey development system
+
+- name: DEDUCE
+  image_url:
+  url: https://github.com/vmenger/deduce
+  description: De-identification tool
+
+- name: CRAN
+  image_url:
+  url: https://cran.r-project.org/
+  description: R package repository
+
+- name: RSpace
+  image_url:
+  url: https://www.researchspace.com/
+  description: Electronic lab notebook
+
+- name: COVID-Portal
+  image_url:
+  url:
+  description:
+
+- name: CliniQuest
+  image_url:
+  url:
+  description:
+
+- name: Data Portal
+  image_url:
+  url:
+  description:
+
+- name: Health Data Platform
+  image_url:
+  url:
+  description:
+
+- name: FAIRnotator
+  image_url:
+  url: https://github.com/jvsoest/fairnotator
+  description: FAIR data annotation tool
+
+- name: JASP
+  image_url:
+  url: https://jasp-stats.org/
+  description: Statistical analysis software
+
+- name: AD workbench
+  image_url:
+  url: https://www.alzheimersdata.org/ad-workbench
+  description: Alzheimer's disease research platform
+
+- name: iRODS
+  image_url:
+  url: https://irods.org/
+  description: Data management middleware
+
+- name: MS Forms
+  image_url:
+  url: https://www.microsoft.com/en-us/microsoft-365/online-surveys-polls-quizzes
+  description: Online survey tool
+
+- name: Whisper (OpenAI)
+  image_url:
+  url: https://openai.com/research/whisper
+  description: Speech recognition system
+
+- name: Research Data Platform
+  image_url:
+  url:
+  description:
+
+- name: Photoshop
+  image_url:
+  url: https://www.adobe.com/products/photoshop.html
+  description: Image editing software
+
+- name: ASReview
+  image_url:
+  url: https://asreview.nl/
+  description: AI-assisted systematic reviews
+
+- name: RStudio
+  image_url:
+  url: https://posit.co/products/open-source/rstudio/
+  description: IDE for R programming
+
+- name: Office 365
+  image_url:
+  url: https://www.microsoft.com/microsoft-365
+  description: Productivity suite
+
+- name: LibreClinica
+  image_url:
+  url: https://www.libreclinica.org/
+  description: Clinical trial management
+
+- name: SES EG
+  image_url:
+  url:
+  description:
+
+- name: RedCap
+  image_url:
+  url: https://www.project-redcap.org/
+  description: Research data capture platform
+
+- name: Indesign
+  image_url:
+  url: https://www.adobe.com/products/indesign.html
+  description: Desktop publishing software
+
+- name: OneNote
+  image_url:
+  url: https://www.microsoft.com/microsoft-365/onenote
+  description: Digital note-taking app
+
+- name: FAIR Data Cube
+  image_url:
+  url: https://www.x-omics.nl/fdcube
+  description:
+
+- name: Encryptietooling
+  image_url:
+  url:
+  description:
+
+- name: UMCG Research Data Catalogue
+  image_url:
+  url:
+  description:
+
+- name: PODIUM
+  image_url:
+  url: https://podium.bbmri.nl/#/
+  description: Data access platform
+
+- name: WORCS
+  image_url:
+  url: https://cjvanlissa.github.io/worcs/
+  description: Workflow for Open Reproducible Code
+
+- name: OpenRefine
+  image_url:
+  url: https://openrefine.org/
+  description: Data cleaning tool
+
+- name: Chemdraw
+  image_url:
+  url: https://revvitysignals.com/products/research/chemdraw
+  description: Chemical structure drawing
+
+- name: Linksight
+  image_url:
+  url: https://www.linksight.nl/
+  description: Research data tool
+
+- name: DataDino
+  image_url:
+  url: https://github.com/jbanes/DataDino
+  description: Data management tool
+
+- name: Figshare
+  image_url:
+  url: https://figshare.com/
+  description: Research data repository
+
+- name: Illustrator
+  image_url:
+  url: https://www.adobe.com/products/illustrator.html
+  description: Vector graphics editor
+
+- name: Virtual Research Workspace
+  image_url:
+  url:
+  description:
+
+- name: Labguru
+  image_url:
+  url: https://www.labguru.com/
+  description: Lab management platform
+
+- name: Maastricht Data Repository
+  image_url:
+  url:
+  description: Research data repository
+
+- name: Pymol
+  image_url:
+  url: https://pymol.org/
+  description: Molecular visualization system
+
+- name: Galaxy
+  image_url:
+  url: https://usegalaxy.org/
+  description: Data analysis platform
+
+- name: HPC/Shark cluster
+  image_url:
+  url:
+  description:
+
+- name: HIX
+  image_url:
+  url: https://www.chipsoft.com/en/solutions/electronic-health-record-hix/
+  description: Healthcare information exchange
+
+- name: BioRender
+  image_url:
+  url: https://www.biorender.com/
+  description: Scientific illustration tool
+
+- name: SURF compute services (Snellius)
+  image_url:
+  url: https://www.surf.nl/diensten/rekenen/snellius-de-nationale-supercomputer
+  description: National supercomputer
+
+- name: Snapgene
+  image_url:
+  url: https://www.snapgene.com/
+  description: Molecular cloning software
+
+- name: Nextflow
+  image_url:
+  url: https://www.nextflow.io/
+  description: Workflow management system
+
+- name: Survalyzer
+  image_url:
+  url: https://www.survalyzer.com/
+  description: Survey platform
+
+- name: SURF Research Drive
+  image_url:
+  url: https://www.surf.nl/en/research-drive
+  description: Cloud storage for research
+
+- name: AutoCAD
+  image_url:
+  url: https://www.autodesk.com/products/autocad
+  description: Computer-aided design software
+
+- name: Q-dot
+  image_url:
+  url:
+  description:
+
+- name: PIMS
+  image_url:
+  url:
+  description: Patient information management
+
+- name: Your Research/CTCM
+  image_url:
+  url:
+  description: Clinical trial management
+
+- name: Mica
+  image_url:
+  url: https://www.obiba.org/pages/products/mica/
+  description: Data discovery platform
+
+- name: SURF filesender
+  image_url:
+  url: https://www.surf.nl/en/filesender
+  description: Secure file transfer
+
+- name: Radboud Data Repository
+  image_url:
+  url: https://data.ru.nl/
+  description: Research data repository
+
+- name: Blender
+  image_url:
+  url: https://www.blender.org/
+  description: 3D creation suite
+
+- name: SlicerDicer
+  image_url:
+  url: https://health.ucdavis.edu/data/epic-slicer-dicer.html
+  description: Healthcare data analysis
+
+- name: Fiji
+  image_url:
+  url: https://fiji.sc/
+  description: Image processing package
+
+- name: BioDynaMo
+  image_url:
+  url: https://biodynamo.org/
+  description: Agent-based simulation platform
+
+- name: ImageJ
+  image_url:
+  url: https://imagej.net/
+  description: Image processing software
+
+- name: AlphaFold
+  image_url:
+  url: https://alphafold.ebi.ac.uk/
+  description: Protein structure prediction
+
+- name: Jupyter notebooks
+  image_url:
+  url: https://jupyter.org/
+  description: Interactive computing environment
+
+- name: 4CAT
+  image_url:
+  url: https://4cat.nl/
+  description: Social media data analysis
+
+- name: TRES
+  image_url:
+  url:
+  description: Research data tool
+
+- name: Wolfram Mathematica
+  image_url:
+  url: https://www.wolfram.com/mathematica/
+  description: Computational software
+
+- name: Gitlab
+  image_url:
+  url: https://about.gitlab.com/
+  description: DevOps platform
+
+- name: Overleaf
+  image_url:
+  url: https://www.overleaf.com/
+  description: Collaborative LaTeX editor
