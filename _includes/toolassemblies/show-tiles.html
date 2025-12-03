@@ -9,9 +9,13 @@
             <div class="card-body">
 
                 {%- if tool_page.page_img %}
+                {%- if tool_page.page_img contains "http://" or tool_page.page_img contains "https://" %}
+                {%- assign file_url = tool_page.page_img -%}
+                {%- else %}
                 {%- capture file_url -%}
                 {{ "/assets/img/" | append: tool_page.page_img | relative_url }}
                 {%- endcapture -%}
+                {%- endif %}
                 <img
                     alt="logo of {{ tool_page.title }}"
                     src="{{ file_url }}"

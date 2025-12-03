@@ -41,7 +41,7 @@ custom_js: metro-timeline
   {% endif %}
 {% endif %}
 
-{% if scenario.type == "tool" %}
+{% if scenario.type == "tools" %}
   {% include tool-scenario-timeline.html stops=timeline_stops %}
 {% else %}
   {% include metro-timeline.html stops=timeline_stops %}

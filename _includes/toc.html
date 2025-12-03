@@ -1,9 +1,13 @@
 
 {%- if page.page_img %}
 <div id="page-img" class="d-flex flex-column">
+{%- if page.page_img contains "http://" or page.page_img contains "https://" %}
+{%- assign file_url = page.page_img -%}
+{%- else %}
 {%- capture file_url -%}
 {{ "/assets/img/" | append: page.page_img | relative_url }}
 {%- endcapture -%}
+{%- endif %}
 <div class="mb-4"><img src="{{ file_url }}" alt="Page image" class="page-img-lg"/></div>
 {% endif %}
 {%- if page.page_img %}

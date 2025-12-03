@@ -14,14 +14,36 @@
       
       <div class="metro-content">
         <div class="metro-title-wrapper">
-          {% if stop.tools and stop.tools.size > 0 and stop.tools[0].logo %}
-            <img src="{{ stop.tools[0].logo }}" alt="{{ stop.tools[0].name }}" class="title-tool-logo">
+          {% comment %} Check if tool_ids are defined and get the first tool's image {% endcomment %}
+          {% if stop.tool_ids and stop.tool_ids.size > 0 %}
+            {% assign first_tool_id = stop.tool_ids[0] %}
+            {% assign tool_data = site.data.tools | where: "id", first_tool_id | first %}
+            {% if tool_data.page_img %}
+              {% if tool_data.page_img contains "http://" or tool_data.page_img contains "https://" %}
+                {% assign tool_img_url = tool_data.page_img %}
+              {% else %}
+                {% assign tool_img_url = "/assets/img/" | append: tool_data.page_img %}
+              {% endif %}
+              <span style="position: relative; order: 2; flex-shrink: 0; margin-right: 0.5rem;">
+                <img src="{{ tool_img_url }}" alt="{{ tool_data.at_a_glance['Tool name'] }}" class="title-tool-logo">
+                {% if stop.tool_ids.size > 1 %}
+                <span class="badge bg-primary" style="position: absolute; bottom: -3px; right: -8px; font-size: 0.65rem; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; padding: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">+{{ stop.tool_ids.size | minus: 1 }}</span>
+                {% endif %}
+              </span>
+            {% endif %}
+          {% elsif stop.tools and stop.tools.size > 0 and stop.tools[0].logo %}
+            <span style="position: relative; order: 2; flex-shrink: 0; margin-right: 0.5rem;">
+              <img src="{{ stop.tools[0].logo }}" alt="{{ stop.tools[0].name }}" class="title-tool-logo">
+              {% if stop.tools.size > 1 %}
+              <span class="badge bg-primary" style="position: absolute; bottom: -3px; right: -8px; font-size: 0.65rem; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; padding: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">+{{ stop.tools.size | minus: 1 }}</span>
+              {% endif %}
+            </span>
           {% elsif stop.icon %}
             <span class="title-icon">{{ stop.icon }}</span>
           {% endif %}
           <h3 class="metro-title">{{ stop.title }}</h3>
         </div>
-        {% if stop.short_description or stop.description or stop.tools or stop.examples %}
+        {% if stop.short_description or stop.description or stop.tool_ids or stop.tools or stop.examples %}
         <button class="metro-toggle" aria-expanded="false">
           <span class="toggle-icon">▼</span>
         </button>
@@ -42,9 +64,46 @@
         <div class="full-description">{{ stop.description }}</div>
         {% endif %}
         
-        {% if stop.tools %}
+        {% comment %} Handle tool_ids (references to tools.yml) {% endcomment %}
+        {% if stop.tool_ids %}
         <div class="tool-list">
           <h4>Tools & Resources</h4>
+          <div class="tools">
+            {% for tool_id in stop.tool_ids %}
+            {% assign tool_data = site.data.tools | where: "id", tool_id | first %}
+            {% if tool_data %}
+            {% assign tool_name = tool_data.at_a_glance['Tool name'] | default: tool_id %}
+            {% assign tool_slug = tool_name | downcase | replace: ' ', '-' | replace: '/', '-' | replace: '(', '' | replace: ')', '' %}
+            <div class="tool-item">
+              {% if tool_data.page_img %}
+              {% if tool_data.page_img contains "http://" or tool_data.page_img contains "https://" %}
+                {% assign tool_img_url = tool_data.page_img %}
+              {% else %}
+                {% assign tool_img_url = "/assets/img/" | append: tool_data.page_img %}
+              {% endif %}
+              <img src="{{ tool_img_url }}" alt="{{ tool_name }} logo" class="tool-logo">
+              {% else %}
+              <div class="tool-icon">
+                <i class="fas fa-wrench"></i>
+              </div>
+              {% endif %}
+              <div class="tool-info">
+                <strong>{{ tool_name }}</strong>
+                <a href="/{{ tool_slug }}" class="tool-link">
+                  <i class="fas fa-arrow-right"></i> View tool details
+                </a>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+        
+        {% comment %} Handle legacy tools format (manual tool definitions) {% endcomment %}
+        {% if stop.tools %}
+        <div class="tool-list">
+          {% unless stop.tool_ids %}<h4>Tools & Resources</h4>{% endunless %}
           <div class="tools">
             {% for tool in stop.tools %}
             <div class="tool-item">
