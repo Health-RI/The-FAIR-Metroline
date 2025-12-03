@@ -167,6 +167,18 @@
     padding: 0.25rem 0.75rem;
     border-radius: 12px;
     font-weight: 500;
+    
+    &.bg-primary {
+      background: #dce9f7 !important;
+      color: #328cc1 !important;
+      border: none;
+    }
+    
+    &.bg-secondary {
+      background: #f0f0f0 !important;
+      color: #666 !important;
+      border: none;
+    }
   }
 }
 
