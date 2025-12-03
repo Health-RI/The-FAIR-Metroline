@@ -168,6 +168,42 @@
   expose: true
   type: funder
   pid: ""
+
+- name: KWF Kankerbestrijding
+  image_url: assets/img/logos/kwf_transp.svg
+  url: https://www.kwf.nl/
+  expose: true
+  type: funder
+  pid: ""
+
+- name: Alzheimer Nederland
+  image_url: assets/img/logos/alzheimer_nederland_transp.svg
+  url: https://www.alzheimer-nederland.nl/
+  expose: true
+  type: funder
+  pid: ""
+
+- name: Hartstichting
+  image_url: assets/img/logos/hartstichting_transp.svg
+  url: https://www.hartstichting.nl/
+  expose: true
+  type: funder
+  pid: ""
+
+- name: Open Science NL
+  image_url: assets/img/logos/osnl_transp.png
+  url: https://www.openscience.nl/
+  expose: true
+  type: funder
+  pid: ""
+
+- name: NWO
+  image_url: assets/img/logos/nwo_transp.svg
+  url: https://www.nwo.nl/
+  expose: true
+  type: funder
+  pid: ""
+
 # Projects and Networks
 - name: Elixir
   image_url: assets/img/logos/elixir-outlined_transp.png
@@ -175,12 +211,42 @@
   expose: true
   type: network
   pid: ""
+
 - name: Elixir-NL
   image_url: assets/img/logos/elixir-nl_transp.png
   url: https://www.health-ri.nl/en/elixir
   expose: true
   type: network
   pid: ""
+
+- name: Health-AI
+  image_url: assets/img/logos/health_ai_transp.png
+  url: https://www.health-ai-project.nl
+  expose: true
+  type: network
+  pid: ""
+
+- name: DEMPACT
+  image_url: assets/img/logos/dempact_transp.png
+  url: https://www.dempact.nl/
+  expose: true
+  type: network
+  pid: ""
+
+- name: TDCC-LSH
+  image_url: assets/img/logos/tdcc_lsh_transp.png
+  url: https://tdcc.nl/about-tddc/lsh/
+  expose: true
+  type: network
+  pid: ""
+
+- name: Research Data Alliance
+  image_url: assets/img/logos/rda_transp.png
+  url: https://www.rd-alliance.org/
+  expose: true
+  type: network
+  pid: ""
+
 # Resources
 - name: RDMkit
   image_url: assets/img/logos/rdmkit_transp.svg
@@ -188,27 +254,45 @@
   expose: true
   type: resource
   pid: ""
+
 - name: FAIR Cookbook
   image_url: assets/img/logos/faircookbook_transp.svg
   url: https://elixiruknode.org/service/fair-cookbook
   expose: true
   type: resource
   pid: ""
+
 - name: Data Stewardship Wizard
   image_url: assets/img/logos/dsw_transp.svg
   url: https://ds-wizard.org/
   expose: true
   type: resource
   pid: ""
+
 - name: FAIRsharing
   image_url: assets/img/logos/fairsharing_transp.svg
   url: https://fairsharing.org/
   expose: true
   type: resource
   pid: ""
+
 - name: FIP Wizard
   image_url: assets/img/logos/fip-wizard_transp.svg
   url: https://fip.fair-wizard.com
+  expose: true
+  type: resource
+  pid: ""
+
+- name: Research Software Directory
+  image_url: assets/img/logos/research_software_directory_transp.svg
+  url: https://research-software-directory.org/
+  expose: true
+  type: resource
+  pid: ""
+
+- name: bio.tools
+  image_url: assets/img/logos/bio_tools_transp.svg
+  url: https://bio.tools/
   expose: true
   type: resource
   pid: ""
