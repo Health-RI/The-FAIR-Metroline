@@ -105,9 +105,9 @@
   type: organization
   pid: ""
 
-- name: Universiteit Leiden
-  image_url: assets/img/logos/lu_transp.png
-  url: https://www.universiteitleiden.nl/
+- name: Wageningen University & Research
+  image_url: assets/img/logos/wur_transp.svg
+  url: https://www.wur.nl/
   expose: true
   type: organization
   pid: ""
@@ -140,9 +140,9 @@
   type: organization
   pid: ""
 
-- name: Wageningen University & Research
-  image_url: assets/img/logos/wur_transp.svg
-  url: https://www.wur.nl/
+- name: Universiteit Leiden
+  image_url: assets/img/logos/lu_transp.png
+  url: https://www.universiteitleiden.nl/
   expose: true
   type: organization
   pid: ""
