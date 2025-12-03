@@ -31,46 +31,33 @@
 {% if related_scenarios.size > 0 %}
 <div class="related-scenarios mt-5">
   <h2>Used in scenarios</h2>
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 mb-5 navigation-tiles">
+  <div class="scenario-cards-grid scenario-cards-compact">
     {% for scenario_id in related_scenarios %}
       {% comment %} Find the scenario metadata from scenarios_list.yml {% endcomment %}
       {% assign scenario_meta = site.data.scenarios_list | where_exp: "item", "item.url contains scenario_id" | first %}
       
       {% if scenario_meta %}
-      <div class="col">
-        <a href="/{{ scenario_meta.url }}" class="card h-100 tool-card" aria-label="Go to the {{ scenario_meta.title }} scenario">
-          <div class="card-body">
-            
-            {%- if scenario_meta.icon %}
-            <div class="tool-card-icon" style="position: static; width: auto; height: auto; margin-bottom: 1rem;">
-              <span style="font-size: 2.5rem;">{{ scenario_meta.icon }}</span>
-            </div>
-            {%- endif %}
+      <a href="/{{ scenario_meta.url }}" class="scenario-card">
+        {%- if scenario_meta.icon %}
+        <div class="scenario-card-icon">{{ scenario_meta.icon }}</div>
+        {%- endif %}
+        
+        <h3 class="scenario-card-title">{{ scenario_meta.title }}</h3>
 
-            <h3 class="tool-card-title">{{ scenario_meta.title }}</h3>
+        {% if scenario_meta.description %}
+        <p class="scenario-card-description">{{ scenario_meta.description }}</p>
+        {% endif %}
 
-            {% if scenario_meta.description %}
-            <p class="tool-card-description">{{ scenario_meta.description }}</p>
-            {% endif %}
+        <div class="scenario-card-meta">
+          {% if scenario_meta.type %}
+          <span class="scenario-type">{{ scenario_meta.type | replace: "_", " " | capitalize }}</span>
+          {% endif %}
 
-            <div class="tool-card-meta">
-              {% if scenario_meta.type %}
-              <span class="tool-type">{{ scenario_meta.type | replace: "_", " " | capitalize }}</span>
-              {% endif %}
-
-              {% if scenario_meta.complexity %}
-              <div class="tool-tags-group">
-                <span class="tool-tags-label">Complexity:</span>
-                <div class="tool-tags">
-                  <span class="badge bg-secondary">{{ scenario_meta.complexity }}</span>
-                </div>
-              </div>
-              {% endif %}
-            </div>
-
-          </div>
-        </a>
-      </div>
+          {% if scenario_meta.complexity %}
+          <span class="scenario-complexity"> {{ scenario_meta.complexity }} complexity</span>
+          {% endif %}
+        </div>
+      </a>
       {% endif %}
     {% endfor %}
   </div>
