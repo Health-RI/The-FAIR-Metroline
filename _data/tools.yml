@@ -198,7 +198,7 @@
   page_img: toolassemblies/tools/xnat.png
   at_a_glance:
     Tool name: XNAT
-    Short description: XNAT is an open-source imaging informatics platform designed to support imaging-based research. 
+    Short description: XNAT is an open-source imaging informatics platform designed to support imaging-based research.
     Purpose and core functionality: XNAT is an open-source imaging informatics platform designed to support imaging-based research. It offers tools to import, archive, process and securely distribute imaging and related study data. With a flexible architecture and growing plugin ecosystem, XNAT is suited to diverse clinical and research workflows.
     Type: Data analysis
     Life cycle phases: Process, Analyse, Preserve, Share, Reuse
@@ -238,7 +238,7 @@
   page_img: https://raw.githubusercontent.com/nf-core/oncoanalyser/60a62eb5cdde30ea3ee03b2a32791bf3421ca599/assets/nf-core-oncoanalyser_logo_light.png
   at_a_glance:
     Tool name: Oncoanalyser
-    Short description: Nextflow-based bioinformatics pipeline for processing tumor sequencing data from tumor-normal pairs to generate variant calls, copy number profiles and other genomic outputs. 
+    Short description: Nextflow-based bioinformatics pipeline for processing tumor sequencing data from tumor-normal pairs to generate variant calls, copy number profiles and other genomic outputs.
     Purpose and core functionality: Oncoanalyser is a Nextflow-based bioinformatics pipeline for processing tumor sequencing data. It supports whole genome, exome and targeted panel sequencing from tumor-normal pairs to generate variant calls, copy number profiles, structural variants and other genomic outputs.
     Type: Data analysis
     Life cycle phases: Process, Analyse
