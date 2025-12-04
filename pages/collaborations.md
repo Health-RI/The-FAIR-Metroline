@@ -17,7 +17,7 @@ This is a list of the funders we collaborate with.
 ## Collaborations {#collaborations}
 
 ### Organizations
-This is a list of the Digital Competence Centers and the organizations we collaborate with
+This is a list of the Digital Competence Centers and the organizations we collaborate with.
 {% include collaborations/affiliation-tiles-selection.html type="organization" %}
 
 ### Projects and Networks
