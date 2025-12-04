@@ -58,7 +58,7 @@
   url: https://www.formdesk.com/
   description: Online form builder
 
-- name: HPC
+- name: HPC Cloud
   image_url:
   url: https://www.surf.nl/en/services/compute/hpc-cloud
   description: High Performance Computing
