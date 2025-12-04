@@ -161,7 +161,7 @@
     Gaps:
     User needs:
   compatible_with: slide-score, xnat, xOpat
-  biotools_id: cBioportal
+  biotools_id: cbioportal
 - id: slidescore
   page_img: toolassemblies/tools/slidescore.png
   at_a_glance:
