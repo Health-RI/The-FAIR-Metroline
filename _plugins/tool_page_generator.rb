@@ -38,14 +38,14 @@ module Jekyll
         biotools_id = tool['biotools_id']
 
         # Create the page
-        site.pages << ToolPage.new(site, tool_id, tool_name, slug, domain, phase, image_path, biotools_id, short_description)
+        site.pages << ToolPage.new(site, tool_id, tool_name, slug, domain, phase, image_path, short_description, biotools_id)
       end
     end
   end
 
   # Represents a dynamically generated tool page
   class ToolPage < Page
-    def initialize(site, tool_id, tool_name, slug, domain, phase, image_path, biotools_id, short_description = nil)
+    def initialize(site, tool_id, tool_name, slug, domain, phase, image_path, short_description = nil, biotools_id)
       @site = site
       @base = site.source
       @dir = 'toolassemblies/tools'
