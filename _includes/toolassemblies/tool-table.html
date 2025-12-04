@@ -6,17 +6,6 @@
     {% include tool-table.html tool_id=1 section="compatible" %}
 {% endcomment %}
 
-<style>
-table td ul {
-  padding-left: 20px;
-  margin: 0;
-}
-
-table td ul ul {
-  padding-left: 20px;
-}
-</style>
-
 
 <!-- Container div for the table. Unique ID per tool and section -->
 {% assign section_id = include.section | default: "all" %}
@@ -90,8 +79,7 @@ table td ul ul {
 
   // Create the table element
   const table = document.createElement('table');
-  table.style.borderCollapse = 'collapse';
-  table.style.width = '100%';
+  table.className = 'tool-table';
 
   // Loop through each field in the object we want to render
   for (const [field, value] of Object.entries(renderObj)) {
@@ -100,17 +88,9 @@ table td ul ul {
     // Table header (field name)
     const th = document.createElement('th');
     th.textContent = field;
-    th.style.border = '1px solid #ccc';
-    th.style.padding = '8px';
-    th.style.background = '#f4f4f4';
-    th.style.verticalAlign = 'top';
-    th.style.width = '25%';
 
     // Table data (field value)
     const td = document.createElement('td');
-    td.style.border = '1px solid #ccc';
-    td.style.padding = '8px';
-    td.style.verticalAlign = 'top';
     td.appendChild(renderValue(value));
 
     tr.appendChild(th);
