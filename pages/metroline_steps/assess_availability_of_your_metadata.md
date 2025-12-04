@@ -80,8 +80,8 @@ Experts that may need to be involved, as described in [Metroline Step: Build the
 ## Training
 * [Fundamentals of Scientific Metadata: Data and Metadata](https://carpentries-incubator.github.io/scientific-metadata/instructor/data-metadata.html#metadata)  
 * [Metadata - How to FAIR](https://howtofair.dk/how-to-fair/metadata/#what-are-metadata) 
-
-More relevant trainings will be added soon.
+* [Improving open data and metadata quality \| data.europa.eu](https://data.europa.eu/en/academy/improving-open-data-and-metadata-quality)
+* [HealthDCAT AP \| European Health Information Portal](https://www.healthinformationportal.eu/healthdcat-ap)
 
 ## Suggestions
 {% include metroline_steps/suggestions_released.html %}

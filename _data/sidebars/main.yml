@@ -14,6 +14,8 @@ subitems:
         url: /metroline_steps/have_a_fair_data_steward_on_board
       - title: Pre-FAIR assessment
         url: /metroline_steps/pre_fair_assessment
+      - title: Creating a FAIR Implementation Profile (FIP)
+        url: /metroline_steps/creating_a_fair_implementation_profile
       - title: Design solution plan
         url: /metroline_steps/design_solution_plan
       - title: Assess availability of your metadata
@@ -40,5 +42,3 @@ subitems:
         url: /metroline_steps/define_access_conditions
       - title: Assess FAIRness
         url: /metroline_steps/assess_fairness
-      - title: Creating a FAIR Implementation Profile (FIP)
-        url: /metroline_steps/creating_a_fair_implementation_profile
