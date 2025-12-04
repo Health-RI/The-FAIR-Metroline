@@ -1,0 +1,77 @@
+{% assign biotools_id = include.biotools_id %}
+<script src="{{ '/assets/js/getBiotoolsData.js' | relative_url }}"></script>
+
+<div id="biotools-data-container">
+    <p>Loading bio.tools data...</p>
+</div>
+
+<script>
+    //parse the bio.tools data
+    function parse(data) {
+        return {
+            version: data.version || 'Version not available',
+            publication: data.publication?.map(pub => pub.doi).filter(Boolean) || []
+        };
+    }
+
+    // Render the data in a table
+    function renderTable(parsedData) {
+        const container = document.getElementById('biotools-data-container');
+
+        let tableHTML = '<table class="table table-bordered"><tbody>';
+
+        // Version row
+        tableHTML += `
+            <tr>
+                <th>Version</th>
+                <td>${parsedData.version}</td>
+            </tr>
+        `;
+
+        // Publications row
+        if (parsedData.publication.length > 0) {
+            const pubLinks = parsedData.publication.map(doi =>
+                `<a href="https://doi.org/${doi}" target="_blank">${doi}</a>`
+            ).join('<br>');
+
+            tableHTML += `
+                <tr>
+                    <th>Publications (DOI)</th>
+                    <td>${pubLinks}</td>
+                </tr>
+            `;
+        } else {
+            tableHTML += `
+                <tr>
+                    <th>Publications (DOI)</th>
+                    <td>No publications available</td>
+                </tr>
+            `;
+        }
+
+        // Openebench row
+        tableHTML += `
+            <tr>
+                <th>Openebench</th>
+                <td>
+                    <a href="https://openebench.bsc.es/tool/{{ biotools_id }}" target="_blank">statistics</a>
+            </tr>
+        `;
+
+        tableHTML += '</tbody></table>';
+
+        container.innerHTML = tableHTML;
+    }
+
+    // Get the data of the tools with the desired ID
+    getBiotoolsData("{{ biotools_id }}")
+        .then(data => {
+            const parsedData = parse(data);
+            renderTable(parsedData);
+        })
+        .catch(error => {
+            console.error(error);
+            document.getElementById('biotools-data-container').innerHTML =
+                '<p class="text-danger">Failed to load bio.tools data.</p>';
+        });
+</script>
