@@ -82,13 +82,13 @@
    A Case Report Form (CRF) is a structured document used to capture information about study participants. When this process is conducted electronically, the form is referred to as an electronic Case Report Form (eCRF). The use of eCRFs offers several advantages: it facilitates efficient data storage, reduces the risk of human error and saves time throughout the study lifecycle. In this step, we will focus on how to design and develop an eCRF in preparation for data collection.
   url: metroline_steps/design_ecrf
   icon: ":pencil:"
-  status: READY FOR REVIEW
+  status: RELEASED
 - id: 15
   title: Create or reuse a semantic (meta)data model
   summary: Creating a semantic (meta)data model often requires considerable effort as it is a complex task. Reusing an existing model, where possible, can save time and increase interoperability. Start by checking if a suitable model already exists. If not, follow a structured approach to create one. Once the model is in place, share it using common platforms and provide clear documentation to support reuse by others.
   url: metroline_steps/create_or_reuse_a_semantic_model
   icon: ":construction:"
-  status: READY FOR REVIEW
+  status: RELEASED
 - id: 16
   title: Use ontologies in the data model
   summary: Coming soon.
@@ -118,13 +118,13 @@
   summary: Think of your data like a well-written book that’s hidden away on a shelf that no one knows about. By transforming it into a standardised, machine-readable format and publishing it through trusted channels, you place it in a public library where everyone, people and machines, can easily find, open, and read it.
   url: metroline_steps/transform_and_expose_fair_metadata
   icon: ":toolbox:"
-  status: READY FOR REVIEW
+  status: RELEASED
 - id: 21
   title: Define access conditions
   summary: When making health care data FAIR, data holders have to keep the balance between making data accessible for reuse and protecting personal information of subjects present in the data. This Metroline step helps you pick the appropriate access level to your data and publish the necessary information in the metadata.
   url: metroline_steps/define_access_condiions
   icon: ":closed_lock_with_key:"
-  status: READY FOR REVIEW
+  status: RELEASED
 - id: 22
   title: Query (use) over resources
   summary: Coming soon.
@@ -148,5 +148,5 @@
   summary: A FAIR Implementation Profile (FIP) describes the practical choices a community makes to apply the FAIR data principles using shared standards and tools. It lists the specific resources, such as metadata schemas, ontologies and licences, that make data findable, accessible, interoperable and reusable. Other communities can reuse these profiles to align their practices, fill gaps and improve collaboration.
   url: metroline_steps/creating_a_fair_implementation_profile
   icon: ":bookmark_tabs:"
-  status: READY FOR REVIEW
+  status: RELEASED
 
