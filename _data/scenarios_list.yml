@@ -25,3 +25,11 @@
   description: "Process tumor sequencing data with oncoanalyser and publish results in cBioPortal for cancer research visualization and analysis."
   type: "tools"
   complexity: "High"
+
+
+- title: "How to meet funder FAIR data requirements?"
+  url: "scenarios/funders"
+  icon: "🧬"
+  description: "As a researcher working with external funding, you need to comply with your funder's FAIR data requirements as part of your grant obligations."
+  type: "fair guidelines"
+  complexity: "Medium"
