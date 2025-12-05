@@ -1,0 +1,9 @@
+<div class="scenario-cards-grid">
+  {% for section in include.sections %}
+  <a href="#{{ section.anchor }}" class="scenario-card">
+    <div class="scenario-card-icon">{{ section.icon }}</div>
+    <h3 class="scenario-card-title">{{ section.name }}</h3>
+    <p class="scenario-card-description">{{ section.description }}</p>
+  </a>
+  {% endfor %}
+</div>

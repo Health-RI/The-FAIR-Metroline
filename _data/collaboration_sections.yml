@@ -1,0 +1,14 @@
+- name: Funders
+  description: Funding organizations supporting the development
+  anchor: funders
+  icon: "📊"
+
+- name: Collaborations
+  description: Digital Competence Centers, projects, networks and resources we work with
+  anchor: collaborations
+  icon: "🤝"
+
+- name: Tools Integration
+  description: Tools that will be included in the future in the assebly
+  anchor: tools-integration
+  icon: "🛠️"
