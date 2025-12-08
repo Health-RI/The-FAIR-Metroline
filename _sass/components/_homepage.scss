@@ -12,7 +12,7 @@
 .hero-subtitle {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: #495057;
+  color: $secondary;
   font-weight: 400;
   margin: 0;
 }
@@ -31,7 +31,7 @@
 
 .homepage-nav-card {
   background: white;
-  border: 1px solid #183d7626;
+  border: 1px solid rgba($light, 0.15);
   border-radius: 12px;
   padding: 2.5rem 2rem;
   text-decoration: none;
@@ -51,15 +51,15 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #143368, #328cc1);
+    background: linear-gradient(90deg, $primary, $link-color);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
   }
 
   &:hover {
-    border-color: #183d76;
-    box-shadow: 0 8px 20px rgba(20, 51, 104, 0.15);
+    border-color: $light;
+    box-shadow: 0 8px 20px rgba($light, 0.15);
     transform: translateY(-4px);
     text-decoration: none;
 
@@ -69,11 +69,11 @@
 
     .nav-card-icon {
       transform: scale(1.1);
-      color: #328cc1;
+      color: $link-color;
     }
 
     .nav-card-title {
-      color: #328cc1;
+      color: $link-color;
     }
   }
 }
@@ -82,26 +82,34 @@
   width: 80px;
   height: 80px;
   margin-bottom: 1.5rem;
-  color: #143368;
+  color: $primary;
   transition: all 0.3s ease;
 
   svg {
     width: 100%;
     height: 100%;
+    stroke: $primary;
+    transition: stroke 0.3s ease;
+  }
+}
+
+.homepage-nav-card:hover {
+  .nav-card-icon svg {
+    stroke: $top-nav-icon;
   }
 }
 
 .nav-card-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #143368;
+  color: $primary;
   margin: 0 0 1rem 0;
   transition: color 0.3s ease;
 }
 
 .nav-card-description {
   font-size: 1rem;
-  color: #666;
+  color: $secondary;
   line-height: 1.6;
   margin: 0;
 }
@@ -117,7 +125,7 @@
   .section-title {
     font-size: 2rem;
     font-weight: 600;
-    color: #143368;
+    color: $primary;
     margin-bottom: 2rem;
   }
 
@@ -133,13 +141,13 @@
 
 .homepage-about {
   max-width: 900px;
-  border-top: 1px solid #e1e8ed;
+  border-top: 1px solid $menu-unselected-bg;
   
   h2 {
     font-size: 1.75rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    color: #2c3e50;
+    color: $primary;
   }
 
   h3 {
@@ -147,18 +155,18 @@
     font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    color: #2c3e50;
+    color: $primary;
   }
 
   p {
     font-size: 1rem;
     line-height: 1.7;
-    color: #495057;
+    color: $secondary;
     margin-bottom: 1rem;
   }
 
   a {
-    color: #007bff;
+    color: $link-color;
     text-decoration: none;
     
     &:hover {

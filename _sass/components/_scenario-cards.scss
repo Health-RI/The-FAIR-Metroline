@@ -14,7 +14,7 @@
 
 .scenario-card {
   background: white;
-  border: 1px solid #183d7626;
+  border: 1px solid rgba($light, 0.15);
   border-radius: 8px;
   padding: 2rem;
   text-decoration: none;
@@ -33,15 +33,15 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #143368, #328cc1);
+    background: linear-gradient(90deg, $primary, $link-color);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
   }
 
   &:hover {
-    border-color: #183d76;
-    box-shadow: 0 4px 8px -2px rgba(0, 0, 34, 0.25);
+    border-color: $light;
+    box-shadow: 0 4px 8px -2px rgba($light, 0.25);
 
     // UNIQUE: Loading line appears on hover
     &::before {
@@ -62,6 +62,22 @@
   line-height: 1;
 }
 
+.scenario-card-title {
+  color: $primary;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+.scenario-card-description {
+  color: $secondary;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  flex-grow: 1;
+}
+
 // Scenario-specific metadata styling
 .scenario-card-meta {
   display: flex;
@@ -69,21 +85,21 @@
   flex-wrap: wrap;
   margin-top: auto;
   padding-top: 1rem;
-  border-top: 1px solid #e8f0f7;
+  border-top: 1px solid $menu-unselected-bg;
 }
 
 .scenario-type {
-  background: #e8f0f7;
-  color: #143368;
+  background: $menu-unselected-bg;
+  color: $primary;
 
   &.tool {
-    background: #fdeccc;
-    color: #b8860b;
+    background: rgba($top-nav-icon, 0.2);
+    color: darken($top-nav-icon, 30%);
   }
 
   &.fair {
-    background: #dce9f7;
-    color: #328cc1;
+    background: rgba($link-color, 0.15);
+    color: $link-color;
   }
 }
 
