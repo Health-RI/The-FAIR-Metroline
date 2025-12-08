@@ -1,0 +1,29 @@
+.tool-table {
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td ul {
+    padding-left: 20px;
+    margin: 0;
+
+    ul {
+      padding-left: 20px;
+    }
+  }
+
+  th {
+    border: 1px solid #ccc;
+    padding: 8px;
+    background: #f4f4f4;
+    vertical-align: top;
+    width: 25%;
+  }
+
+  td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    vertical-align: top;
+  }
+}
