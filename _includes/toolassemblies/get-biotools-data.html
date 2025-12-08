@@ -16,6 +16,7 @@
         const version_container = document.getElementById('version');
         const publication_container = document.getElementById('publication');
         const openebench_container = document.getElementById('openebench');
+        const biotools_container = document.getElementById('biotools');
 
         // Version
         version_container.innerText = parsedData.version;
@@ -32,6 +33,11 @@
         // Openebench link
         openebench_container.innerHTML = `
             <a href="https://openebench.bsc.es/tool/{{ biotools_id }}" target="_blank">statistics</a>
+        `;
+
+        // bio.tools page link
+        biotools_container.innerHTML = `
+            <a href="https://bio.tools/{{ biotools_id }}" target="_blank">tool page</a>
         `;
     }
 
