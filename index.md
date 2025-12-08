@@ -43,7 +43,7 @@ page_id: main
 </div>
 
 <div class="homepage-recent-scenarios mt-5">
-  <h2 class="section-title">Recent Scenarios</h2>
+  <h2 class="section-title">Recently Added Scenarios</h2>
   <div class="scenario-cards-grid scenario-cards-compact">
     {% assign scenarios = site.data.scenarios_list | slice: 0, 2 %}
     {% for scenario in scenarios %}
