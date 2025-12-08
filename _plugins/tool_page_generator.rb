@@ -34,15 +34,18 @@ module Jekyll
         # page_img_url takes precedence if both are specified
         image_path = tool['page_img_url'] || tool['page_img']
 
+        # Get bio.tools ID if available
+        biotools_id = tool['biotools_id']
+
         # Create the page
-        site.pages << ToolPage.new(site, tool_id, tool_name, slug, domain, phase, image_path, short_description)
+        site.pages << ToolPage.new(site, tool_id, tool_name, slug, domain, phase, image_path, short_description, biotools_id)
       end
     end
   end
 
   # Represents a dynamically generated tool page
   class ToolPage < Page
-    def initialize(site, tool_id, tool_name, slug, domain, phase, image_path, short_description = nil)
+    def initialize(site, tool_id, tool_name, slug, domain, phase, image_path, short_description = nil, biotools_id)
       @site = site
       @base = site.source
       @dir = 'toolassemblies/tools'
@@ -59,6 +62,7 @@ module Jekyll
       self.data['tool_id'] = tool_id
       self.data['page_img'] = image_path if image_path
       self.data['description'] = short_description if short_description
+      self.data['biotools_id'] = biotools_id if biotools_id
       
       # Parse domain - handle various formats
       if domain
