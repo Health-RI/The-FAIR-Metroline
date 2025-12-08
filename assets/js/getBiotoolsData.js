@@ -30,8 +30,3 @@ async function getBiotoolsData(id) {
     throw error;
   }
 }
-
-// Example usage:
-// getBiotoolsData('blast')
-//   .then(data => console.log(data))
-//   .catch(error => console.error(error));
