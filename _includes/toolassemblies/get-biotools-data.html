@@ -5,8 +5,9 @@
 <script>
     // Parse the bio.tools data
     function parse(data) {
+        console.log(data);
         return {
-            version: data.version || 'Version not available',
+            version: (data.version && data.version.length > 0) ? data.version : 'Version not available',
             publication: data.publication?.map(pub => pub.doi).filter(Boolean) || []
         };
     }
