@@ -37,7 +37,7 @@ page_id: main
         <polyline points="19 12 12 19 5 12"/>
       </svg>
     </div>
-    <div class="nav-card-title">FAIR Guidance Steps</div>
+    <div class="nav-card-title">FAIR Steps</div>
     <p class="nav-card-description">Follow step-by-step guidance through the FAIRification process</p>
   </a>
 </div>
