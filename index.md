@@ -16,7 +16,7 @@ page_id: main
         <path d="M2 12l10 5 10-5"/>
       </svg>
     </div>
-    <h2 class="nav-card-title">Scenarios</h2>
+    <div class="nav-card-title">Scenarios</div>
     <p class="nav-card-description">Explore real-world examples and use cases for making your data FAIR</p>
   </a>
 
@@ -26,7 +26,7 @@ page_id: main
         <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
       </svg>
     </div>
-    <h2 class="nav-card-title">Tools</h2>
+    <div class="nav-card-title">Tools</div>
     <p class="nav-card-description">Discover tools and software to support your FAIR data journey</p>
   </a>
 
@@ -37,7 +37,7 @@ page_id: main
         <polyline points="19 12 12 19 5 12"/>
       </svg>
     </div>
-    <h2 class="nav-card-title">FAIR Guidance Steps</h2>
+    <div class="nav-card-title">FAIR Guidance Steps</div>
     <p class="nav-card-description">Follow step-by-step guidance through the FAIRification process</p>
   </a>
 </div>
@@ -68,8 +68,8 @@ page_id: main
   <h2>About FAIR Metroline</h2>
   <p>The FAIR Metroline provides step-by-step guidance, practical scenarios, and tooling recommendations to help you make your health data FAIR (Findable, Accessible, Interoperable and Reusable). Learn more about <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> and <a href="https://www.health-ri.nl/en/about/organisation/fair-data">Health-RI's FAIR data initiatives</a>.</p>
 
-  <p>The platform is under active development in alignment with the <a href="https://catalogus.healthdata.nl/">Dutch National Health Data Catalogue</a>, with ongoing contributions of scenarios and tools from UMCs and life science researchers across the Netherlands.</p>
+  <p>The platform is under active development in alignment with the <a href="https://catalogus.healthdata.nl/">Dutch National Health Data Catalogue</a>, with ongoing contributions of scenarios and tools from UMCs and life science researchers across the Netherlands. See the <a href="/network">list of contributors</a> for more details.</p>
 
   <h3>How to contribute</h3>
-  <p>The FAIR Metroline is a cooperative effort between Health-RI and its network of academic medical centers, research institutes, and healthcare organizations. We welcome contributions of new scenarios, tools, and practical guidance. Contact us at <a href="mailto:fairservicedesk@health-ri.nl">fairservicedesk@health-ri.nl</a>.</p>
+  <p>The FAIR Metroline is a cooperative effort between Health-RI and its network of academic medical centers, research institutes, and healthcare organizations. We welcome contributions of new scenarios, tools, and practical guidance. Learn more about <a href="/contributing/contributing">how to contribute</a> or contact us at <a href="mailto:fairservicedesk@health-ri.nl">fairservicedesk@health-ri.nl</a>.</p>
 </div>
