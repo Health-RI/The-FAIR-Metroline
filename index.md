@@ -4,7 +4,7 @@ permalink: /
 page_id: main
 ---
 
-<h5>Practical guidance to make your health data Findable, Accessible, Interoperable and Reusable, from planning to implementation.
+<h5>Practical guidance to make your health and life sciences data Findable, Accessible, Interoperable and Reusable, from planning to implementation.
 </h5>
 
 <div class="homepage-nav-grid">
@@ -66,7 +66,7 @@ page_id: main
 
 <div class="homepage-about mt-5 pt-5">
   <h2>About FAIR Metroline</h2>
-  <p>The FAIR Metroline provides step-by-step guidance, practical scenarios, and tooling recommendations to help you make your health data FAIR (Findable, Accessible, Interoperable and Reusable). Learn more about <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> and <a href="https://www.health-ri.nl/en/about/organisation/fair-data">Health-RI's FAIR data initiatives</a>.</p>
+  <p>The FAIR Metroline provides step-by-step guidance, practical scenarios, and tooling recommendations to help you make your health and life sciences data FAIR (Findable, Accessible, Interoperable and Reusable). Learn more about <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> and <a href="https://www.health-ri.nl/en/about/organisation/fair-data">Health-RI's FAIR data initiatives</a>.</p>
 
   <p>The platform is under active development in alignment with the <a href="https://catalogus.healthdata.nl/">Dutch National Health Data Catalogue</a>, with ongoing contributions of scenarios and tools from UMCs and life science researchers across the Netherlands. See the <a href="/network">list of contributors</a> for more details.</p>
 
