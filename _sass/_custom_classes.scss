@@ -18,8 +18,13 @@
 @import "components/back-to-top-styling";
 @import "components/footer-styling";
 @import "components/scenario-cards";
+@import "components/homepage";
 @import "components/tool-table";
 
+// Fix "On this page" button text color
+#btn-toc-hide.bg-light {
+  color: $dark !important;
+}
 
 //Example for highlighting the active page in the navigation:
 /*-----Top navigation-----*/

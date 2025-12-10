@@ -82,7 +82,7 @@
   page_img: toolassemblies/tools/molgenis.png
   at_a_glance:
     Tool name: MOLGENIS
-    Short description: Molgenis helps to find, capture, exchange, manage and analyse and exploit the large amounts of data that is being produced by scientific organisations. It is a fully customizable and scalable software infrastructure that offers the possibility to plug-in (bioinformatics) scripts.
+    Short description: Customizable platform for managing and analyzing large scientific datasets with support for bioinformatics scripts.
     Purpose and core functionality: Molgenis helps to find, capture, exchange, manage and analyse and exploit the large amounts of data that is being produced by scientific organisations. It is a fully customizable and scalable software infrastructure that offers the possibility to plug-in (bioinformatics) scripts.<br>The MOLGENIS software package helps setting up an online database application, making  data query-able and allowing to share data with collaborators. Enabling to store, edit, analyse, and share data.
     Type: Data management, data analysis
     Life cycle phases: Analyse

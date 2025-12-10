@@ -15,7 +15,7 @@
 
 .tool-card-icon {
   position: absolute;
-  top: 2rem;
+  top: 1.25rem;
   right: 1.5rem;
   width: 80px;
   height: 80px;
@@ -34,7 +34,7 @@
 }
 
 .tool-card-title {
-  color: #143368;
+  color: $primary;
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
@@ -44,11 +44,12 @@
 }
 
 .tool-card-description {
-  color: #666;
+  color: $secondary;
   font-size: 0.875rem;
   line-height: 1.5;
   margin: 0 0 0.75rem 0;
   padding-right: 100px;
+  max-width: 95%;
 }
 
 .tool-card-meta {
@@ -65,9 +66,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 66%;
+    width: 80%;
     height: 1px;
-    background-color: #e8f0f7;
+    background-color: $menu-unselected-bg;
   }
 }
 
@@ -78,7 +79,7 @@
 .navigation-tiles {
   .card {
     background-color: white;
-    border: 1px solid #183d7626;
+    border: 1px solid rgba($light, 0.15);
     border-radius: 8px;
     color: $card-label;
     text-decoration: none;
@@ -89,8 +90,8 @@
     overflow: hidden;
 
     &:hover {
-      border-color: #183d76;
-      box-shadow: 0 4px 8px -2px rgba(0, 0, 34, 0.25);
+      border-color: $light;
+      box-shadow: 0 4px 8px -2px rgba($light, 0.25);
       background-color: #fff !important;
       color: $card-label;
 
@@ -99,7 +100,7 @@
       }
 
       .tool-card-title {
-        color: #328cc1;
+        color: $link-color;
       }
     }
 
@@ -137,8 +138,8 @@
 }
 
 .tool-type {
-  background: #e8f0f7;
-  color: #143368;
+  background: $menu-unselected-bg;
+  color: $primary;
 }
 
 .tool-tags-group {
@@ -150,7 +151,7 @@
 .tool-tags-label {
   font-size: 0.75rem;
   font-weight: 600;
-  color: #143368;
+  color: $primary;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -167,14 +168,14 @@
     font-weight: 500;
     
     &.bg-primary {
-      background: #dce9f7 !important;
-      color: #328cc1 !important;
+      background: rgba($link-color, 0.15) !important;
+      color: $link-color !important;
       border: none;
     }
     
     &.bg-secondary {
-      background: #f0f0f0 !important;
-      color: #666 !important;
+      background: $menu-unselected-bg !important;
+      color: $secondary !important;
       border: none;
     }
   }

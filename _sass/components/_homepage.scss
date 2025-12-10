@@ -1,0 +1,208 @@
+// ============================================
+// HOMEPAGE STYLES
+// ============================================
+
+.homepage-hero {
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: $secondary;
+  font-weight: 400;
+  margin: 0;
+}
+
+// ============================================
+// NAVIGATION CARDS GRID
+// ============================================
+
+.homepage-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
+  max-width: 1200px;
+}
+
+.homepage-nav-card {
+  background: white;
+  border: 1px solid rgba($light, 0.15);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, $primary, $link-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    border-color: $light;
+    box-shadow: 0 8px 20px rgba($light, 0.15);
+    transform: translateY(-4px);
+    text-decoration: none;
+
+    &::before {
+      transform: scaleX(1);
+    }
+
+    .nav-card-icon {
+      transform: scale(1.1);
+      color: $link-color;
+    }
+
+    .nav-card-title {
+      color: $link-color;
+    }
+  }
+}
+
+.nav-card-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  color: $primary;
+  transition: all 0.3s ease;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    stroke: $primary;
+    transition: stroke 0.3s ease;
+  }
+}
+
+.homepage-nav-card:hover {
+  .nav-card-icon svg {
+    stroke: $top-nav-icon;
+  }
+}
+
+.nav-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $primary;
+  margin: 0 0 1rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-card-description {
+  font-size: 1rem;
+  color: $secondary;
+  line-height: 1.6;
+  margin: 0;
+}
+
+// ============================================
+// RECENT SCENARIOS SECTION
+// ============================================
+
+.homepage-recent-scenarios {
+  max-width: 1200px;
+  margin: 4rem 0;
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $primary;
+    margin-bottom: 2rem;
+  }
+
+  .scenario-cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 800px;
+  }
+}
+
+// ============================================
+// ABOUT SECTION
+// ============================================
+
+.homepage-about {
+  max-width: 900px;
+  border-top: 1px solid $menu-unselected-bg;
+  
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: $primary;
+  }
+
+  h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: $primary;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: $secondary;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// ============================================
+// RESPONSIVE ADJUSTMENTS
+// ============================================
+
+@media (max-width: 768px) {
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .homepage-nav-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .homepage-nav-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .nav-card-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .nav-card-title {
+    font-size: 1.25rem;
+  }
+
+  .homepage-recent-scenarios .section-title {
+    font-size: 1.5rem;
+  }
+}
