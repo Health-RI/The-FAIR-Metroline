@@ -1,6 +1,7 @@
 ---
 title: Development process
 permalink: contributing/development_process
+sidebar: contributing
 ---
 
 This page needs to be improved to highlight that we have Confluence and GitHub pages. Also, the status flag is not correctly highlighted yet. TODO.

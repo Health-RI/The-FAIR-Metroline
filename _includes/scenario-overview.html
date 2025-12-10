@@ -1,5 +1,6 @@
 <!-- Scenario Overview Component -->
 <div class="scenario-overview">
+  {% if include.complexity %}
   <div class="overview-card">
     <div class="card-header">
       <div class="card-icon complexity-icon">
@@ -7,9 +8,11 @@
       </div>
       <h3 class="card-label">Complexity</h3>
     </div>
-    <p class="card-value">{{ include.complexity | default: "Medium" }}</p>
+    <p class="card-value">{{ include.complexity }}</p>
   </div>
+  {% endif %}
 
+  {% if include.experts %}
   <div class="overview-card">
     <div class="card-header">
       <div class="card-icon experts-icon">
@@ -17,9 +20,23 @@
       </div>
       <h3 class="card-label">Key Experts</h3>
     </div>
-    <p class="card-value">{{ include.experts | default: "Data Steward" }}</p>
+    <p class="card-value">{{ include.experts }}</p>
   </div>
+  {% endif %}
 
+  {% if include.environment %}
+  <div class="overview-card">
+    <div class="card-header">
+      <div class="card-icon experts-icon">
+        <i class="fas fa-server"></i>
+      </div>
+      <h3 class="card-label">Environment</h3>
+    </div>
+    <p class="card-value">{{ include.environment }}</p>
+  </div>
+  {% endif %}
+
+  {% if include.outcome %}
   <div class="overview-card">
     <div class="card-header">
       <div class="card-icon outcome-icon">
@@ -27,6 +44,7 @@
       </div>
       <h3 class="card-label">Outcome</h3>
     </div>
-    <p class="card-value">{{ include.outcome | default: "FAIR Data" }}</p>
+    <p class="card-value">{{ include.outcome }}</p>
   </div>
+  {% endif %}
 </div>

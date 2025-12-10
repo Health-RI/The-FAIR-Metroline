@@ -1,0 +1,13 @@
+#back-to-top {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  bottom: -50px; /* Default hidden position */
+  right: 1rem; /* Adjust as needed */
+  opacity: 0;
+  overflow: hidden;
+  z-index: 1000;
+  font-size: 21px;
+  transition: bottom 0.15s ease-out, opacity 0.15s ease-out;
+  color: $top-nav-icon;
+}

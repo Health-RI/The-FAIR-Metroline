@@ -1,5 +1,5 @@
 ---
-title: Assess fairness
+title: Assess FAIRness
 permalink: /metroline_steps/assess_fairness
 ---
 

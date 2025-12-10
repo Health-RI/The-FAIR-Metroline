@@ -7,7 +7,5 @@ The FAIR Metroline provides you with FAIR guidance. However, which steps are act
 
 This section provides guidance for common FAIR objectives through FAIR scenarios.
 
-* [Evaluate FAIRness of your data](scenarios/evaluate_data_fairness)
-
-* [How to make my dataset Findable?](scenarios/make_dataset_findable)
-
+{% assign scenarios = site.data.scenarios_list %}
+{% include scenario-cards.html scenarios=scenarios %}

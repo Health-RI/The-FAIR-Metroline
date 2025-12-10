@@ -4,28 +4,25 @@ columns:
   - type: image
     image_width: 300px
     width: 3
-    src: 'assets/img/logos/healthriV2_transp.svg'
+    src: 'assets/img/logos/healthriV2_transp_white.svg'
     alt: Health-RI logo
   - type: links
-    width: 3
+    width: 1
     children: 
-      - url_text: How to contribute
-        url: /contributing/contributing
       - url_text: Contributors
         url: /contributing/contributors
-      - url_text: Network
-        url: network
   - type: links
-    width: 3
+    width: 1
     children: 
-      - url_text: About
-        url: about
+      - url_text: Collaborations
+        url: collaborations
+  - type: links
+    width: 1
+    children: 
       - url_text: Contact
         url: contact
-      - url_text: How to cite
-        url: about#how-to-cite
   - type: image
     image_width: 150px
     width: 3
-    src: 'assets/img/logos/elixir-nlV2_transp.png'
+    src: 'assets/img/logos/elixir-nl-white.png'
     alt: ELIXIR-NL logo

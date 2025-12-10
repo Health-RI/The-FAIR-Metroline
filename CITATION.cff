@@ -1,0 +1,157 @@
+cff-version: 1.2.0
+title: FAIR Metroline
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Sander
+    family-names: de Ridder
+    affiliation: Health-RI
+    orcid: https://orcid.org/0000-0001-7250-7239'
+    email: sander.deridder@health-ri.nl
+  - given-names: Ana
+    family-names: Konrad
+    orcid: 'https://orcid.org/0009-0002-3089-9558'
+    affiliation: Health-RI
+  - given-names: Bruna
+    family-names: dos Santos Vieira
+    orcid: '0000-0001-7893-0505'
+    affiliation: Radboudumc
+  - given-names: César
+    family-names: Bernabé
+    orcid: '0000-0003-1795-5930'
+    affiliation: LUMC
+  - given-names: Dena
+    family-names: Tahvildari
+    affiliation: Health-RI
+  - given-names: Fieke
+    family-names: Schoots
+    orcid: '0000-0002-4385-9312'
+    affiliation: Health-RI
+  - given-names: Hannah
+    family-names: Neikes
+    orcid: '0000-0001-8306-0380'
+    affiliation: Health-RI
+  - given-names: Inês
+    family-names: de Oliveira Coelho Henriques
+    orcid: '0000-0002-0756-2722'
+    affiliation: Radboudumc
+  - given-names: Joëlle
+    family-names: Jagersma
+    orcid: '0000-0002-6119-6188'
+    affiliation: UMCG
+  - given-names: Jolanda
+    family-names: Strubel
+    orcid: '0000-0001-6675-4639'
+    affiliation: Health-RI
+  - given-names: Maria
+    family-names: Vivas Romero
+    orcid: '0000-0002-7398-0594'
+    affiliation: Maastricht University
+  - given-names: Marije
+    family-names: van der Geest
+    orcid: '0000-0002-1919-6547'
+    affiliation: UMCG
+  - given-names: Meriem
+    family-names: Manaï
+    orcid: '0000-0002-4684-9224'
+    affiliation: Amsterdam UMC
+  - given-names: Milou
+    family-names: de Jong
+    orcid: '0009-0003-7082-3053'
+    affiliation: Radboudumc
+  - given-names: Niek
+    family-names: van Ulzen
+    orcid: '0000-0003-0771-3516'
+    affiliation: Health-RI
+  - given-names: Shuxin
+    family-names: Zhang
+    orcid: '0000-0003-4715-9070'
+    affiliation: Amsterdam UMC
+  - given-names: Stepanka
+    family-names: Zverinova
+    orcid: '0000-0002-3370-9484'
+    affiliation: UMCG
+  - given-names: Reinier
+    family-names: Groeneveld
+    orcid: '0009-0006-1783-9082'
+    affiliation: Health-RI
+  - given-names: Pedro
+    family-names: Paulo Favato Barcelos
+    orcid: '0000-0003-2736-7817'
+    affiliation: Health-RI
+  - given-names: Walter
+    family-names: Baccinelli
+    orcid: '0000-0001-8888-4792'
+    affiliation: Health-RI
+  - given-names: Mariska
+    family-names: Steeghs Jansen
+    orcid: '0009-0007-2315-0983'
+    affiliation: Health-RI
+  - given-names: Vedran
+    family-names: Kasalica
+    orcid: '0000-0002-0097-1056'
+    affiliation: Health-RI
+  - given-names: Veerle
+    family-names: Souverein
+    orcid: '0009-0006-6660-065X'
+    affiliation: Radboudumc
+  - given-names: Anna
+    family-names: Niehues
+    orcid: '0000-0002-9839-5439'
+    affiliation: LUMC
+  - given-names: Marian
+    family-names: Beekman
+    orcid: '0000-0003-0585-6206'
+    affiliation: LUMC
+  - given-names: Rudy
+    family-names: Scholte
+    affiliation: Amsterdam UMC
+  - given-names: Viola
+    family-names: Woeckel
+    orcid: '0009-0007-9979-7927'
+    affiliation: Erasmus MC
+  - given-names: Susanne
+    family-names: Rebers
+    orcid: '0000-0002-5867-9525'
+    affiliation: Health-RI / NKI
+  - given-names: Quint
+    family-names: Olislagers
+    orcid: '0009-0002-2607-7869'
+    affiliation: Amsterdam UMC
+  - given-names: Kristina
+    family-names: Hettne
+    orcid: '0000-0002-4182-7560'
+    affiliation: Leiden University Libraries
+  - given-names: Jolanda
+    family-names: Strubel
+    orcid: '0000-0001-6675-4639'
+    affiliation: Health-RI
+  - given-names: Mijke
+    family-names: Jetten
+    orcid: '0000-0001-9114-2896'
+    affiliation: Health-RI
+  - given-names: Ronald
+    family-names: van Schijndel
+    orcid: '0000-0002-2294-1050'
+    affiliation: Amsterdam UMC
+
+identifiers:
+  - type: url
+    value: 'https://github.com/Health-RI/The-FAIR-Metroline'
+    description: GitHub
+repository-code: 'https://github.com/Health-RI/The-FAIR-Metroline'
+url: 'https://fairmetroline.org/'
+abstract: >-
+  The FAIR Metroline provides practical guidance to help you
+  reach your FAIR goals and make your data more FAIR. Each
+  Metroline step includes a short description, aimed at a
+  general audience, as well as a section describing the
+  expertise that may be necessary for the how-to section.
+  This expertise can vary greatly per step and may include,
+  for example, domain experts, software engineers or legal
+  professionals. Given the time commitment and specialised
+  knowledge needed, most steps will require the expertise of
+  at least a data steward.
+license: CC-BY-4.0

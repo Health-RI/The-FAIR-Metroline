@@ -10,19 +10,24 @@
 @import "components/stepcontent-wrapping";
 @import "components/table-styling";
 @import "components/scenario-overview";
+@import "components/tool-scenario-timeline";
+@import "components/tiles-styling";
+@import "components/top-nav-bar-styling";
+@import "components/sidebar-styling";
+@import "components/input-components-styling";
+@import "components/back-to-top-styling";
+@import "components/footer-styling";
+@import "components/scenario-cards";
+@import "components/homepage";
+@import "components/tool-table";
 
+// Fix "On this page" button text color
+#btn-toc-hide.bg-light {
+  color: $dark !important;
+}
 
 //Example for highlighting the active page in the navigation:
 /*-----Top navigation-----*/
-
-.navbar-nav .nav-item > a {
-    &.active {
-        color: $white;
-        background-color: $primary;
-        border-radius: $border-radius;
-    }
-}
-
 
 
 // .nodeLabel p{

@@ -1,0 +1,284 @@
+# TODO: Life cycle phases, domain are still used from the tools' front matter. Also, need to look into the compatible_with section
+- id: castor
+  page_img: toolassemblies/tools/castor.png
+  at_a_glance:
+    Tool name: Castor EDC
+    Short description: Cloud-based electronic data capture system for clinical research studies.
+    Purpose and core functionality: Castor EDC is a cloud-based electronic data capture system designed to simplify clinical data collection and ensure interoperability. It integrates easily with broader clinical trial systems and ranks in the top 5% of EDC tools for build speed, with over 90% of studies deployed within 4 weeks.
+    Type: Electronic Data Capture (EDC)
+    Life cycle phases: Collect
+    Domains using it: Oncology
+    Website:
+      - <a href='https://www.castoredc.com/'>Castor EDC website</a>
+    Resource URLs:
+      Training:
+        - <a href='https://academy.castoredc.com/'>Castor Academy</a> - Searchable knowledge base for users
+        - <a href='https://www.castoredc.com/resources/webinars/'>Webinars</a>
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://helpdesk.castoredc.com/'>Castor Helpdesk</a> - Searchable knowledge base for users
+      Supporting software:
+        - iCRFGenerator (<a href='https://www.healthdata.nl/en/services/icrf-generator'>Health-RI services</a> and <a href='https://github.com/aderidder/iCRFGenerator/'>GitHub</a>) - Builds eCRFs from ART-DECOR and OpenEHR codebooks
+      Scripts and workflows:
+        - <a href='https://forms.castoredc.com/'>Castor Form Exchange</a> - Repository of eCRF templates shared by users
+      Metadata and data standards:
+        - <a href='https://decor.nictiz.nl/ad/'>ART-DECOR</a> - Access to codebooks for form design
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - <a href='https://helpdesk.castoredc.com/hc/en-us/categories/26179696201885-eConsent'>Castor eConsent</a> - Can be integrated with Castor EDC. Setup and security implications may vary per institute.
+      Guide:
+        - <a href='https://fairmetroline.org/metroline_steps/design_ecrf'>FAIR Metroline</a> - Guide on building eCRFs aligned with FAIR principles
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+      - eConsent awareness - Due to recent METc regulations, digital informed consent is/will be required for study participants. To comply, research teams must be made aware of this change, and suitable eConsent tools must be available. Castor eConsent supports this requirement and can be integrated directly with Castor EDC.
+      - Tool onboarding validation - New tools like eConsent must be validated against institute security policies (like TraIT did for Ldot)
+      - CTMS discontinuation - Castor no longer offers CTMS for new clients, creating fragmentation in tooling
+    User needs:
+  compatible_with:
+  biotools_id: castor
+- id: mydre
+  page_img: toolassemblies/tools/andrea.png
+  at_a_glance:
+    Tool name: myDRE
+    Short description: Trusted Processing Environment (TPE) for secure, GDPR-compliant data analysis in collaborative academic settings.
+    Purpose and core functionality: myDRE is a Trusted Processing Environment (TPE) designed for secure, GDPR-compliant data analysis in collaborative academic settings. It enables institutions to set up isolated virtual workspaces with managed access, shared storage and scalable computing—supporting up to 50 users per project. myDRE is offered as a paid service based on actual usage and helps reduce pressure on central IT teams by offering a managed, secure research infrastructure.
+    Type: Trusted Processing Environment (TPE)
+    Life cycle phases: Process, Analyse
+    Domains using it: Oncology
+    Website:
+      - <a href='https://mydre.org/'>myDRE website</a>
+    Resource URLs:
+      Training:
+        - <a href='https://sites.google.com/andrea-cloud.com/e-learning/1-welcome'>myDRE E-learning</a> - e-learning environment for onboarding
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://support.mydre.org/portal/en/kb/mydre'>User docs</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        -
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - cBioPortal - see <a href='https://support.mydre.org/portal/en/kb/articles/setting-up-cbioportal-in-mydre#1_Create_the_VMs_in_one_workspace'>this guide</a>
+        - Castor - see <a href='https://support.mydre.org/portal/en/kb/articles/using-castor-in-python#Castor_EDC_API_in_R'>this guide</a>
+        - vantage6 - see <a href='https://support.mydre.org/portal/en/kb/articles/federated-learning-on-mydre-with-vantage6'>this guide
+        - <a href='https://support.mydre.org/portal/en/kb/mydre/applications/general'>Full list</a> of applications
+      Guide:
+        -
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+- id: molgenis
+  page_img: toolassemblies/tools/molgenis.png
+  at_a_glance:
+    Tool name: MOLGENIS
+    Short description: Customizable platform for managing and analyzing large scientific datasets with support for bioinformatics scripts.
+    Purpose and core functionality: Molgenis helps to find, capture, exchange, manage and analyse and exploit the large amounts of data that is being produced by scientific organisations. It is a fully customizable and scalable software infrastructure that offers the possibility to plug-in (bioinformatics) scripts.<br>The MOLGENIS software package helps setting up an online database application, making  data query-able and allowing to share data with collaborators. Enabling to store, edit, analyse, and share data.
+    Type: Data management, data analysis
+    Life cycle phases: Analyse
+    Domains using it:
+    Website:
+      - <a href='https://molgenis.org/'>MOLGENIS website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://molgenis.github.io/molgenis-emx2/#/'>MOLGENIS Documentation</a>
+        - <a href='https://molgenis.github.io/molgenis-service-armadillo/'>MOLGENIS Armadillo Documentation</a>
+      Supporting software:
+        - <a href='https://datashield.org/'>DataSHIELD</a> - it is run by Armadillo to perform the analysis.
+      Scripts and workflows:
+        - <a href='https://molgenis.gitbook.io/molgenis-pipelines'>MOLGENIS Pipelines</a>
+        - <a href='https://molgenis.github.io/vip/'>Variant Interpretation Pipeline (VIP)</a>
+      Metadata and data standards:
+        - <a href='https://molgenis.github.io/molgenis-emx2/#/molgenis/semantics'>Semantics and ontologies</a>
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      Guide:
+        -
+      Other:
+        -
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id: molgenis
+- id: cbioportal
+  page_img: toolassemblies/tools/cbioportal.png
+  at_a_glance:
+    Tool name: cBioPortal
+    Short description: cBioPortal is an open-source platform for visualizing and exploring multidimensional cancer genomics data through an intuitive web interface.
+    Purpose and core functionality: cBioPortal simplifies access to complex cancer genomic data through visualisation and intuitive exploration. It enables researchers and clinicians to interpret multimodal datasets, extract biological insights and support clinical decisions.
+    Type: Data analysis
+    Life cycle phases: Process, Analyse, Preserve, Share
+    Domains using it: Oncology
+    Website:
+      - <a href='https://www.cbioportal.org/'>cBioPortal website</a>
+      - <a href='https://www.healthdata.nl/en/services/health-ri-cbioportal'>Health-RI Service</a>
+      - <a href='https://cbioportal.health-ri.nl/'>Health-RI hosted instance</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://docs.cbioportal.org/user-guide/'>User guide</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - <a href='https://docs.cbioportal.org/supported-data-types/'>Supported data types</a>
+      Specific documentation, e.g. versioning:
+        - <a href='https://docs.cbioportal.org/'>Documentation</a> includes development, deployment and usage documentation
+      Integrations with other tools:
+        - Slide Score - Enables slide viewer embedding within cBioPortal interface as described <a href='https://www.slidescore.com/news/a/031_cbioportal'>here</a>
+        - XNAT using <a href='https://gitlab.com/radiology/infrastructure/utils/xnat2cbio'>xnat2cbio</a> and following the <a href='https://zenodo.org/records/14900295'>EOSC4Cancer manual</a>
+        - xOpat following the <a href='https://zenodo.org/records/14900295'>EOSC4Cancer manual</a>
+        - cBioPortal can easily link to other tools, although the tools must support the appropriate security measures.
+      Guide:
+        -
+      Other:
+        - <a href='https://www.health-ri.nl/en/health-ri-service-desk'>Health-RI support</a> - Service desk for users in the Health-RI hosted environment
+        - <a href='https://www.aacr.org/professionals/research/aacr-project-genie/aacr-project-genie-data/'>GENIE data</a> - Large multi-institutional cancer dataset compatible with cBioPortal
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with: slide-score, xnat, xOpat
+  biotools_id: cbioportal
+- id: slidescore
+  page_img: toolassemblies/tools/slidescore.png
+  at_a_glance:
+    Tool name: Slide Score
+    Short description: Web-based viewer for high-resolution digital microscopy images, focused on histopathology slides, enabling collaborative evaluation and scoring.
+    Purpose and core functionality: Slide Score is a web-based viewer for high-resolution digital microscopy images, with a focus on histopathology slides. It enables users to upload images, create scoring forms (question sets) and invite experts—such as pathologists—for collaborative evaluation and scoring.
+    Type: Data analysis
+    Life cycle phases: Process, Analyse, Preserve, Share
+    Domains using it: Oncology
+    Website:
+      - <a href='https://www.slidescore.com/'>Slide Score website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://www.slidescore.com/docs/start.html'>Slide Score Documentation</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+        -
+      Metadata and data standards:
+        -
+      Specific documentation, e.g. versioning:
+        - <a href='https://www.slidescore.com/docs/api.html'>Developers documentation (API)</a>
+      Integrations with other tools:
+        - cBioPortal - Allows embedding the Slide Score viewer within the cBioPortal interface as described <a href='https://www.slidescore.com/news/a/031_cbioportal'>here</a>
+      Guide:
+        -
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with: cbioportal
+  biotools_id:
+- id: xnat
+  page_img: toolassemblies/tools/xnat.png
+  at_a_glance:
+    Tool name: XNAT
+    Short description: XNAT is an open-source imaging informatics platform designed to support imaging-based research.
+    Purpose and core functionality: XNAT is an open-source imaging informatics platform designed to support imaging-based research. It offers tools to import, archive, process and securely distribute imaging and related study data. With a flexible architecture and growing plugin ecosystem, XNAT is suited to diverse clinical and research workflows.
+    Type: Data analysis
+    Life cycle phases: Process, Analyse, Preserve, Share, Reuse
+    Domains using it: Oncology
+    Website:
+      - <a href='https://www.xnat.org/'>XNAT website</a>
+      - <a href='https://www.healthdata.nl/en/services/health-ri-xnat-medical-imaging-service'>Health-RI service</a>
+      - <a href='https://xnat.health-ri.nl/'>Health-RI server</a>
+    Resource URLs:
+      Training:
+        - <a href='https://www.xnat.org/about/xnat-academy.php'>XNAT Academy</a> - E-learning platform with tutorials and courses
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://wiki.xnat.org/documentation/how-to-use-xnat'>User documentation</a>
+      Supporting software:
+        - <a href='https://www.rsna.org/research/imaging-research-tools'>Clinical Trials Processor</a> - Used for anonymisation of images
+        - <a href='https://github.com/Health-RI/img2catalog'>img2catalog</a> - Export the metadata of datasets containing images to FAIR Data Point.
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - <a href='https://wiki.xnat.org/documentation/managing-data-types-in-xnat'>XNAT data types</a>
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - cBioPortal using <a href='https://gitlab.com/radiology/infrastructure/utils/xnat2cbio'>xnat2cbio</a> and following the <a href='https://zenodo.org/records/14900295'>EOSC4Cancer manual</a>
+      Guide:
+        -
+      Other:
+        - <a href='https://www.health-ri.nl/en/health-ri-service-desk'>Health-RI support</a> - Service desk for users in the Health-RI hosted environment
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id: xnat
+- id: oncoanalyser
+  page_img: https://raw.githubusercontent.com/nf-core/oncoanalyser/60a62eb5cdde30ea3ee03b2a32791bf3421ca599/assets/nf-core-oncoanalyser_logo_light.png
+  at_a_glance:
+    Tool name: Oncoanalyser
+    Short description: Nextflow-based bioinformatics pipeline for processing tumor sequencing data from tumor-normal pairs to generate variant calls, copy number profiles and other genomic outputs.
+    Purpose and core functionality: Oncoanalyser is a Nextflow-based bioinformatics pipeline for processing tumor sequencing data. It supports whole genome, exome and targeted panel sequencing from tumor-normal pairs to generate variant calls, copy number profiles, structural variants and other genomic outputs.
+    Type: Data analysis
+    Life cycle phases: Process, Analyse
+    Domains using it: Oncology
+    Website:
+      - <a href='https://nf-co.re/oncoanalyser/'>Oncoanalyser website</a>
+    Resource URLs:
+      Training:
+        - <a href='https://nf-co.re/oncoanalyser/2.2.0/docs/usage/'>Usage documentation</a>
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://nf-co.re/oncoanalyser/2.2.0/docs/output/'>Output documentation</a>
+        - <a href='https://nf-co.re/oncoanalyser/2.2.0/parameters/'>Parameters guide</a>
+      Supporting software:
+        - <a href='https://www.nextflow.io/'>Nextflow</a> - Workflow orchestration system required to run Oncoanalyser
+        - <a href='https://sylabs.io/singularity/'>Singularity</a> or <a href='https://www.docker.com/'>Docker</a> - Container runtime for reproducible execution
+      Scripts and workflows:
+        - <a href='https://github.com/nf-core/oncoanalyser'>GitHub repository</a>
+      Metadata and data standards:
+        - <a href='https://samtools.github.io/hts-specs/VCFv4.2.pdf'>VCF format</a> - Variant call output format
+        - <a href='https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format/'>MAF format</a> - Mutation annotation format for cancer data
+      Specific documentation, e.g. versioning:
+        - <a href='https://nf-co.re/oncoanalyser/2.2.0/'>Version 2.2.0 documentation</a>
+      Integrations with other tools:
+        - cBioPortal - Outputs can be converted to cBioPortal format for visualization
+      Guide:
+        -
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+      - Format conversion - Direct conversion from Oncoanalyser outputs to cBioPortal-compatible formats requires additional scripting or tools
+      - HPC access - Requires access to high-performance computing infrastructure for whole genome analysis
+    User needs:
+  compatible_with: cbioportal
+  biotools_id: oncoanalyser
+

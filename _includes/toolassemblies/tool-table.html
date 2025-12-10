@@ -1,0 +1,108 @@
+{% comment %}
+  tool-table.html
+  Reusable table for rendering a section of a tool from _data/tools.yml
+  Usage in Markdown:
+    {% include tool-table.html tool_id=1 section="glance" %}
+    {% include tool-table.html tool_id=1 section="compatible" %}
+{% endcomment %}
+
+
+<!-- Container div for the table. Unique ID per tool and section -->
+{% assign section_id = include.section | default: "all" %}
+<div id="tool-table-{{ include.tool_id }}-{{ section_id }}"></div>
+
+<script>
+(function() {
+  // --- Configuration from include ---
+  const toolId = "{{ include.tool_id }}";
+  const sectionKey = '{{ include.section | default: "" }}'; // optional, defaults to entire tool
+
+  // Find the container div
+  const container = document.getElementById('tool-table-' + toolId + '-' + (sectionKey || 'all'));
+  if (!container) return;
+
+  // Convert YAML data to JSON (done at build time by Liquid)
+  const data = {{ site.data.tools | jsonify }};
+
+  // Find the tool by ID
+  const tool = data.find(t => t.id === toolId);
+  if (!tool) return;
+
+  // Determine the object to render: either a specific section or the whole tool
+  const renderObj = sectionKey && tool[sectionKey] ? tool[sectionKey] : tool;
+
+  /**
+   * Recursively render a value from the tool object
+   * Supports:
+   * - null/empty → '—'
+   * - Arrays → <ul><li>...</li></ul>
+   * - Objects → <ul><li><strong>key:</strong> value</li></ul>
+   * - Strings containing HTML → rendered as HTML
+   * - Plain strings/numbers → text node
+   */
+  function renderValue(val) {
+    if (val === null || val === undefined || val === '') return document.createTextNode('—');
+
+    // Strings containing HTML tags
+    if (typeof val === 'string' && val.match(/<[^>]+>/)) {
+      const span = document.createElement('span');
+      span.innerHTML = val;
+      return span;
+    }
+
+    // Arrays → render each item in a <ul>
+    if (Array.isArray(val)) {
+      const ul = document.createElement('ul');
+      val.forEach(item => {
+        const li = document.createElement('li');
+        li.appendChild(renderValue(item));
+        ul.appendChild(li);
+      });
+      return ul;
+    }
+
+    // Objects → render key/value pairs recursively
+    if (typeof val === 'object') {
+      const ul = document.createElement('ul');
+      for (const [k, v] of Object.entries(val)) {
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${k}:</strong> `;
+        li.appendChild(renderValue(v));
+        ul.appendChild(li);
+      }
+      return ul;
+    }
+
+    // Plain string or number
+    return document.createTextNode(val);
+  }
+
+  // Create the table element
+  const table = document.createElement('table');
+  table.className = 'tool-table';
+
+  // Loop through each field in the object we want to render
+  for (const [field, value] of Object.entries(renderObj)) {
+    const tr = document.createElement('tr');
+
+    // Table header (field name)
+    const th = document.createElement('th');
+    th.textContent = field;
+
+    // Table data (field value)
+    const td = document.createElement('td');
+    td.appendChild(renderValue(value));
+
+    tr.appendChild(th);
+    tr.appendChild(td);
+    table.appendChild(tr);
+  }
+
+  // Append the table to the container
+  container.appendChild(table);
+})();
+</script>
+
+
+
+
