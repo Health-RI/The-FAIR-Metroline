@@ -19,17 +19,9 @@ When referencing content from the FAIR Metroline pages, please cite as follows:
 
 ## Prerequisites
 
-### 1. Install Git
-Download and install Git from [git-scm.com](https://git-scm.com/downloads) or use your package manager:
-- **macOS**: `brew install git`
-- **Linux**: `sudo apt-get install git` or `sudo yum install git`
-- **Windows**: Download from [git-scm.com](https://git-scm.com/downloads)
-
-### 2. Install Docker Desktop
-Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) for your operating system.
-
-### 3. Set up SSH Key (Required for Contributing)
-If you plan to make changes and contribute to the repository, you'll need to set up an SSH key for GitHub authentication. Follow the instructions in [GitHub's SSH documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+1. **Git** - Install from [git-scm.com](https://git-scm.com/downloads)
+2. **Docker Desktop** - Install from [docker.com](https://www.docker.com/products/docker-desktop/)
+3. **SSH Key** (for contributors, not reviewers) - Set up following [GitHub's SSH guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
 
 ## Clone the Repository
 
@@ -44,6 +36,8 @@ cd The-FAIR-Metroline
 ```
 
 ## Build and Run
+
+Make sure Docker Desktop is running, then:
 
 ```bash
 # Build the Docker image
