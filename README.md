@@ -18,7 +18,30 @@ When referencing content from the FAIR Metroline pages, please cite as follows:
 # Local Development
 
 ## Prerequisites
-Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+### 1. Install Git
+Download and install Git from [git-scm.com](https://git-scm.com/downloads) or use your package manager:
+- **macOS**: `brew install git`
+- **Linux**: `sudo apt-get install git` or `sudo yum install git`
+- **Windows**: Download from [git-scm.com](https://git-scm.com/downloads)
+
+### 2. Install Docker Desktop
+Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) for your operating system.
+
+### 3. Set up SSH Key (Required for Contributing)
+If you plan to make changes and contribute to the repository, you'll need to set up an SSH key for GitHub authentication. Follow the instructions in [GitHub's SSH documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+
+## Clone the Repository
+
+```bash
+# Clone using HTTPS (read-only)
+git clone https://github.com/Health-RI/The-FAIR-Metroline.git
+cd The-FAIR-Metroline
+
+# Or clone using SSH (required for contributors)
+git clone git@github.com:Health-RI/The-FAIR-Metroline.git
+cd The-FAIR-Metroline
+```
 
 ## Build and Run
 
