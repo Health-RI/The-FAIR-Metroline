@@ -346,3 +346,66 @@
   background: #f3f4f6;
   border-color: #d1d5db;
 }
+
+/* Metro Timeline Legend */
+.metro-legend {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.metro-legend .legend-title {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.metro-legend .legend-items {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.metro-legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metro-legend .legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.metro-legend .legend-dot.completed {
+  background: #d1d5db;
+  border: 2px solid #9ca3af;
+}
+
+.metro-legend .legend-dot.active {
+  background: white;
+  border: 3px solid #10b981;
+}
+
+.metro-legend .legend-dot.destination {
+  background: white;
+  border: 3px solid #fdbd26;
+}
+
+.metro-legend .legend-dot.suggestion {
+  background: white;
+  border: 2px dashed #d1d5db;
+}
+
+.metro-legend .legend-label {
+  font-size: 0.9rem;
+  color: #4b5563;
+}

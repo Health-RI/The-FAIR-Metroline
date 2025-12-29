@@ -1,0 +1,44 @@
+<!-- Metro Timeline Legend Component -->
+{% comment %} Collect all unique statuses from the stops {% endcomment %}
+{% assign statuses = "" | split: "" %}
+{% for stop in include.stops %}
+  {% unless statuses contains stop.status %}
+    {% assign statuses = statuses | push: stop.status %}
+  {% endunless %}
+{% endfor %}
+
+{% comment %} Only show legend if there are statuses to display {% endcomment %}
+{% if statuses.size > 0 %}
+<div class="metro-legend">
+  <div class="legend-title">Legend:</div>
+  <div class="legend-items">
+    {% if statuses contains "completed" %}
+    <div class="legend-item">
+      <div class="legend-dot completed"></div>
+      <span class="legend-label">Completed</span>
+    </div>
+    {% endif %}
+    
+    {% if statuses contains "active" or statuses contains "upcoming" or statuses contains "todo" %}
+    <div class="legend-item">
+      <div class="legend-dot active"></div>
+      <span class="legend-label">Active/To Do</span>
+    </div>
+    {% endif %}
+    
+    {% if statuses contains "destination" %}
+    <div class="legend-item">
+      <div class="legend-dot destination"></div>
+      <span class="legend-label">Destination</span>
+    </div>
+    {% endif %}
+    
+    {% if statuses contains "suggestion" %}
+    <div class="legend-item">
+      <div class="legend-dot suggestion"></div>
+      <span class="legend-label">Optional</span>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
