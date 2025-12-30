@@ -1,18 +1,91 @@
+<!-- Scenario Cards Grid with Filtering -->
+{%- assign all_types = "" %}
+{%- for scenario in include.scenarios %}
+  {%- if scenario.type %}{%- assign all_types = all_types | append: scenario.type | append: "," %}{%- endif %}
+{%- endfor %}
+{%- assign all_types = all_types | split: "," | uniq | sort %}
+
+<!-- Filter controls -->
+<div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-2 my-4">
+  <div class="col">
+    <div class="input-group">
+      <label class="input-group-text" for="type-filter">Filter by type</label>
+      <select class="form-select" id="type-filter" aria-label="Filter by type">
+        <option value="">All types</option>
+        {%- for type in all_types %}{%- if type != "" %}
+        <option value="{{ type | slugify }}">{{ type | capitalize }}</option>
+        {%- endif %}{%- endfor %}
+      </select>
+      <button class="btn btn-primary" title="Clear type filter" type="button" id="clear-type-filter"><i class="fa-solid fa-backspace"></i></button>
+    </div>
+  </div>
+  <div class="col">
+    <div class="input-group">
+      <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+      <input type="text" id="scenario-search" class="form-control" placeholder="Search scenarios...">
+      <button class="btn btn-primary" title="Clear search" type="button" id="clear-search"><i class="fa-solid fa-backspace"></i></button>
+    </div>
+  </div>
+</div>
+
 <!-- Scenario Cards Grid -->
-<div class="scenario-cards-grid">
-  {% for scenario in include.scenarios %}
-  <a href="{{ scenario.url | relative_url }}" class="scenario-card">
+<div class="scenario-cards-grid" id="scenario-cards-container">
+  {%- for scenario in include.scenarios %}
+  <a href="{{ scenario.url | relative_url }}" class="scenario-card" data-type="{{ scenario.type | slugify }}" data-title="{{ scenario.title | downcase }}" data-description="{{ scenario.description | downcase }}">
     <div class="scenario-card-icon">{{ scenario.icon }}</div>
     <h3 class="scenario-card-title">{{ scenario.title }}</h3>
     <p class="scenario-card-description">{{ scenario.description }}</p>
     <div class="scenario-card-meta">
-      {% if scenario.type %}
-        <span class="scenario-type {{ scenario.type }}">{{ scenario.type | capitalize }}</span>
-      {% endif %}
-      {% if scenario.complexity %}
-        <span class="scenario-complexity">{{ scenario.complexity }} complexity</span>
-      {% endif %}
+      {%- if scenario.type %}<span class="scenario-type {{ scenario.type | slugify }}">{{ scenario.type | capitalize }}</span>{%- endif %}
+      {%- if scenario.complexity %}<span class="scenario-complexity">{{ scenario.complexity }} complexity</span>{%- endif %}
     </div>
   </a>
-  {% endfor %}
+  {%- endfor %}
 </div>
+
+<div id="no-results" style="display: none; text-align: center; padding: 2rem; color: #6b7280;">
+  <i class="fa-solid fa-folder-open" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+  <p style="font-size: 1.1rem; margin: 0;">No scenarios found matching your criteria.</p>
+</div>
+
+<script>
+(function() {
+  const els = {
+    typeFilter: document.getElementById('type-filter'),
+    search: document.getElementById('scenario-search'),
+    clearType: document.getElementById('clear-type-filter'),
+    clearSearch: document.getElementById('clear-search'),
+    cards: document.querySelectorAll('.scenario-card'),
+    noResults: document.getElementById('no-results'),
+    container: document.getElementById('scenario-cards-container')
+  };
+
+  function applyFilters() {
+    const type = els.typeFilter.value.toLowerCase();
+    const search = els.search.value.toLowerCase();
+    let visible = 0;
+
+    els.cards.forEach(card => {
+      const matches = (!type || (card.dataset.type || '') === type) && 
+                     (!search || (card.dataset.title || '').includes(search) || (card.dataset.description || '').includes(search));
+      card.style.display = matches ? 'flex' : 'none';
+      if (matches) visible++;
+    });
+
+    els.container.style.display = visible ? '' : 'none';
+    els.noResults.style.display = visible ? 'none' : 'block';
+    
+    const params = new URLSearchParams();
+    if (els.typeFilter.value) params.set('type', els.typeFilter.value);
+    history.replaceState({}, '', params.toString() ? `?${params}` : location.pathname);
+  }
+
+  els.typeFilter.addEventListener('change', applyFilters);
+  els.search.addEventListener('input', applyFilters);
+  els.clearType.addEventListener('click', () => { els.typeFilter.value = ''; applyFilters(); });
+  els.clearSearch.addEventListener('click', () => { els.search.value = ''; applyFilters(); });
+
+  const urlType = new URLSearchParams(location.search).get('type');
+  if (urlType) { els.typeFilter.value = urlType; applyFilters(); }
+})();
+</script>
