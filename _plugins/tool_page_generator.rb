@@ -26,6 +26,7 @@ module Jekyll
         # Extract domain and phase for metadata
         domain = tool.dig('at_a_glance', 'Domains using it')
         phase = tool.dig('at_a_glance', 'Life cycle phases')
+        institutes = tool['institutes']
         
         # Extract short description for card display
         short_description = tool.dig('at_a_glance', 'Short description')
@@ -38,14 +39,14 @@ module Jekyll
         biotools_id = tool['biotools_id']
 
         # Create the page
-        site.pages << ToolPage.new(site, tool_id, tool_name, slug, domain, phase, image_path, short_description, biotools_id)
+        site.pages << ToolPage.new(site, tool_id, tool_name, slug, domain, phase, institutes, image_path, short_description, biotools_id)
       end
     end
   end
 
   # Represents a dynamically generated tool page
   class ToolPage < Page
-    def initialize(site, tool_id, tool_name, slug, domain, phase, image_path, short_description = nil, biotools_id)
+    def initialize(site, tool_id, tool_name, slug, domain, phase, institutes, image_path, short_description = nil, biotools_id)
       @site = site
       @base = site.source
       @dir = 'toolassemblies/tools'
@@ -79,6 +80,13 @@ module Jekyll
           self.data['phase'] = phase.split(',').map(&:strip).reject(&:empty?)
         elsif phase.is_a?(Array)
           self.data['phase'] = phase
+        end
+      end
+      
+      # Set institutes if provided
+      if institutes
+        if institutes.is_a?(Array)
+          self.data['institutes'] = institutes
         end
       end
       

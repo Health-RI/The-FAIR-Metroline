@@ -1,6 +1,7 @@
-{%- if include.domains == true or include.phases == true or include.search == true %}
+{%- if include.domains == true or include.phases == true or include.institutes == true or include.search == true %}
 {%- assign alldomains = "" %}
 {%- assign allphases = "" %}
+{%- assign allinstitutes = "" %}
 {%- for current_page in site.pages | sorted %}
 {%- if current_page.search_exclude != true and current_page.type == include.type %}
 {%- if current_page.domain %}
@@ -19,10 +20,19 @@
 {%- assign allphases = allphases | append: pagephases %}
 {%- endif %}
 {%- endif %}
+{%- if current_page.institutes %}
+{%- assign pageinstitutes = current_page.institutes | join: ", " %}
+{%- if allinstitutes %}
+{%- assign allinstitutes = allinstitutes | append: ", " | append: pageinstitutes %}
+{%- else %}
+{%- assign allinstitutes = allinstitutes | append: pageinstitutes %}
+{%- endif %}
+{%- endif %}
 {%- endif %}
 {%- endfor %}
 {%- assign alldomains = alldomains | split: ", " | uniq | sort %}
 {%- assign allphases = allphases | split: ", " | uniq | sort %}
+{%- assign allinstitutes = allinstitutes | split: ", " | uniq | sort %}
 <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-{{ include.col | default: 2 }} my-4">
     {%- if include.domains == true %}
     <div class="col">
@@ -49,6 +59,21 @@
                 {%- endfor %}
             </select>
             <button class="btn btn-primary" title="Button to clear phases selection" type="button" id="clearphasefilter">
+                <i class="fa-solid fa-backspace"></i>
+            </button>
+        </div>
+    </div>
+    {%- endif %}
+    {%- if include.institutes == true %}
+    <div class="col">
+        <div class="input-group">
+            <label class="input-group-text" for="institutes-input">Filter by institute</label>
+            <select class="form-select" id="institutes-input" aria-label="Filter by institute">
+                {%- for institute in allinstitutes %}
+                <option value="{{institute | slugify}}">{{institute}}</option>
+                {%- endfor %}
+            </select>
+            <button class="btn btn-primary" title="Button to clear institutes selection" type="button" id="clearinstitutefilter">
                 <i class="fa-solid fa-backspace"></i>
             </button>
         </div>
@@ -89,6 +114,7 @@
     {%- endif %}
     {%- assign domains_classes = "" %}
     {%- assign phases_classes = "" %}
+    {%- assign institutes_classes = "" %}
     {%- assign except = include.except | split: ", " %}
     {%- if current_page.title and current_page.search_exclude != true %}
     {%- unless except contains current_page.name %}
@@ -110,7 +136,16 @@
     {%- endfor %}{{phases_output}}
     {%- endcapture -%}
     {%- endif %}
-<div class="col" data-domains="{{domains_classes}}" data-phases="{{phases_classes}}">
+    {%- if current_page.institutes %}
+    {%- capture institutes_classes -%}
+    {%- assign institutes_output = "" %}
+    {%- for institute in current_page.institutes %}
+    {%- assign group_institutes = institute | slugify | prepend: " " %}
+    {%- assign institutes_output = institutes_output | append: group_institutes | strip %}
+    {%- endfor %}{{institutes_output}}
+    {%- endcapture -%}
+    {%- endif %}
+<div class="col" data-domains="{{domains_classes}}" data-phases="{{phases_classes}}" data-institutes="{{institutes_classes}}">
     <a href="{{ current_page.url | relative_url }}" class="card h-100 tool-card" aria-label="Go to the {{ current_page.title }} page">
         <div class="card-body">
 
@@ -171,7 +206,7 @@
 </div>
 
 
-{%- if include.domains == true or include.phases == true or include.search == true %}
+{%- if include.domains == true or include.phases == true or include.institutes == true or include.search == true %}
 <script type="text/javascript">
     /**
      * Apply all active filters
@@ -180,18 +215,22 @@
         const cols = document.querySelectorAll(".navigation-tiles .col");
         const domainSelect = document.getElementById('domains-input');
         const phaseSelect = document.getElementById('phases-input');
+        const instituteSelect = document.getElementById('institutes-input');
 
         const selectedDomain = domainSelect ? domainSelect.value : '';
         const selectedPhase = phaseSelect ? phaseSelect.value : '';
+        const selectedInstitute = instituteSelect ? instituteSelect.value : '';
 
         for (col of cols) {
             const colDomains = col.getAttribute("data-domains") ? col.getAttribute("data-domains").split(" ") : [];
             const colPhases = col.getAttribute("data-phases") ? col.getAttribute("data-phases").split(" ") : [];
+            const colInstitutes = col.getAttribute("data-institutes") ? col.getAttribute("data-institutes").split(" ") : [];
 
             const domainMatch = !selectedDomain || colDomains.indexOf(selectedDomain) !== -1;
             const phaseMatch = !selectedPhase || colPhases.indexOf(selectedPhase) !== -1;
+            const instituteMatch = !selectedInstitute || colInstitutes.indexOf(selectedInstitute) !== -1;
 
-            if (domainMatch && phaseMatch) {
+            if (domainMatch && phaseMatch && instituteMatch) {
                 col.classList.remove("d-none");
             } else {
                 col.classList.add("d-none");
@@ -222,6 +261,17 @@
             });
         }
 
+        var institutes = document.getElementById('institutes-input');
+        if (institutes) {
+            institutes.addEventListener("change", function () {
+                var search = document.getElementById('title-search')
+                if (search) {
+                    search.value = '';
+                }
+                applyFilters();
+            });
+        }
+
         var cleardomains = document.getElementById("cleardomainfilter");
         if (cleardomains) {
             cleardomains.addEventListener("click", function () {
@@ -239,6 +289,17 @@
                 var phases = document.getElementById('phases-input');
                 if (phases) {
                     phases.selectedIndex = -1;
+                    applyFilters();
+                }
+            });
+        }
+
+        var clearinstitutes = document.getElementById("clearinstitutefilter");
+        if (clearinstitutes) {
+            clearinstitutes.addEventListener("click", function () {
+                var institutes = document.getElementById('institutes-input');
+                if (institutes) {
+                    institutes.selectedIndex = -1;
                     applyFilters();
                 }
             });
