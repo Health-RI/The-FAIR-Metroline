@@ -83,6 +83,9 @@
 
   // Loop through each field in the object we want to render
   for (const [field, value] of Object.entries(renderObj)) {
+    // Skip 'Short description' field
+    if (field === 'Short description') continue;
+    
     const tr = document.createElement('tr');
 
     // Table header (field name)

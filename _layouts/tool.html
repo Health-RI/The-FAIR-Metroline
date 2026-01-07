@@ -5,6 +5,24 @@ layout: page
 <h2>At a glance</h2>
 {% include toolassemblies/tool-table.html tool_id=page.tool_id section="at_a_glance" %}
 
+{% if page.institutes %}
+<h2>Used by</h2>
+<div class="logo-cloud">
+  {% for institute in page.institutes %}
+    {% assign affiliation = site.data.affiliations | where: "name", institute | first %}
+    {% if affiliation %}
+      <div class="logo-item" style="width: 100px;">
+        <a href="{{ affiliation.url }}" target="_blank" title="{{ institute }}">
+          <img src="/{{ affiliation.image_url }}" alt="{{ institute }}">
+        </a>
+      </div>
+    {% else %}
+      <span class="badge bg-info" style="margin: 0.25rem; font-size: 1rem; padding: 0.5rem 1rem;">{{ institute }}</span>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
+
 {% if page.biotools_id %}
 <h3>Information retrieved from bio.tools</h3>
 {% include toolassemblies/get-biotools-data.html biotools_id=page.biotools_id %}

@@ -1,6 +1,13 @@
 # TODO: Life cycle phases, domain are still used from the tools' front matter. Also, need to look into the compatible_with section
 - id: castor
   page_img: toolassemblies/tools/castor.png
+  institutes:
+    - Amsterdam UMC
+    - Erasmus MC
+    - Leiden UMC
+    - Maastricht UMC+
+    - Radboudumc
+    - UMCG
   at_a_glance:
     Tool name: Castor EDC
     Short description: Cloud-based electronic data capture system for clinical research studies.
@@ -80,6 +87,8 @@
   biotools_id:
 - id: molgenis
   page_img: toolassemblies/tools/molgenis.png
+  institutes:
+    - UMCG
   at_a_glance:
     Tool name: MOLGENIS
     Short description: Customizable platform for managing and analyzing large scientific datasets with support for bioinformatics scripts.
@@ -201,6 +210,10 @@
   biotools_id:
 - id: xnat
   page_img: toolassemblies/tools/xnat.png
+  institutes:
+    - Erasmus MC
+    - Leiden UMC
+    - UMCG
   at_a_glance:
     Tool name: XNAT
     Short description: XNAT is an open-source imaging informatics platform designed to support imaging-based research.

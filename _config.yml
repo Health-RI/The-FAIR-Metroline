@@ -42,7 +42,7 @@ plugins:
 
 
 theme_variables:
-  # git_host: GitHub
+   git_host: GitHub
   # back_to_top: true
   # dev-info-banner: false
   # privacy_statement_url: /privacy
@@ -51,6 +51,7 @@ theme_variables:
      edit_me: false
   #   open_issue: true
      history: true
+   git_branch: main
   # datatables:
   #   searchbuilder: True
    headings:
@@ -76,8 +77,9 @@ theme_variables:
   #   - url towards a font
 
 # --- Missing in gitlab: ---
-# github:
-#   repository_url: https://github.com/ELIXIR-Belgium/elixir-toolkit-theme
-#   source:
-#     branch: main
+github:
+  repository_url: https://github.com/Health-RI/The-FAIR-Metroline
+  source:
+    branch: main
+
 

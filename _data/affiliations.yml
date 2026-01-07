@@ -21,17 +21,10 @@
   type: organization
   pid: ""
 
-- name: Leids Universitair Medisch Centrum
+- name: Leiden UMC
   image_url: assets/img/logos/lumc_transp.png
   url: https://www.lumc.nl/
   expose: true
-  type: organization
-  pid: ""
-
-- name: Maastricht UMC+
-  image_url: assets/img/logos/maastrichtumc_transp.svg
-  url: https://www.maastrichtuniversity.nl/
-  expose: false
   type: organization
   pid: ""
 
