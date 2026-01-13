@@ -235,9 +235,8 @@ Experts that may need to be involved, as described in Metroline Step: Build the 
 The Joint Research Centre has defined [Common Data Elements to be collected by all Rare Disease (RD) registries](https://eu-rd-platform.jrc.ec.europa.eu/set-of-common-data-elements_en) and collecting them will improve interoperability with other ERN registries that are obligated to collect these data items. So far, 16 minimal Rare Disease data elements have been identified as essential for further research in the field. This list includes the variables to be collected and how they should be annotated.
 
 ## Training
-* [Webinar in the NIH CDE Repository](https://www.youtube.com/watch?v=H35FVD31tEs)
-{% include metroline_steps/training_will_be_added.html %}
-
+* [NIH Common Data Elements (CDE) Repository playlist](https://www.youtube.com/watch?v=NLawraFWWfI&list=PL7dF9e2qSW0Z7a0soasArMb025JlzwAcH)
+* [E-learning Common Data Elements](https://www.nlm.nih.gov/oet/ed/cde/tutorial/index.html). Standardising Data Collection provided by the National Library of Medicine 
 
 ## Suggestions
 {% include metroline_steps/suggestions_released.html %}

@@ -244,7 +244,7 @@ Experts that may need to be involved, as described in [Metroline Step: Build the
   * [De-novo FAIRification via an Electronic Data Capture system by automated transformation of filled electronic Case Report Forms into machine-readable data](https://doi.org/10.1016/j.jbi.2021.103897)
 
 ## Training
-{% include metroline_steps/training_will_be_added.html %}
+* The EJPRD Workshop on the Implementation of a CDE Semantic Model for ERNs is fully available on [GitHub](https://github.com/ejp-rd-vp/EJP-RD-hackathons-workshops/blob/master/EJPRD_Workshop_2020-06_Hackathon_Implementation_CDE_semantic_model_for_ERNs/Presentations/2020-06-23%20-%20Castor%20EDC%20-%20Martijn%20Kersloot%20-%20FAIRification%20at%20the%20Source.pdf). 
 
 ## Suggestions
-{% include metroline_steps/suggestions_development.html %}
+{% include metroline_steps/suggestions_released.html %}

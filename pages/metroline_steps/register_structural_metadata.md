@@ -279,7 +279,7 @@ This step requires the following experts as described in the [Metroline Step: Bu
 {% include metroline_steps/looking_for_examples.html %}
 
 ## Training
-{% include metroline_steps/training_will_be_added.html %}
+The training available for the registering structural metadata is still limited. However, some resources include the Official European Training on Open Data. They provide courses on the DCAT and DCAT-AP standards, which are the foundation for European public sector metadata structuring. The material is freely available here: [Improving open data and metadata quality | data.europa.eu](https://data.europa.eu/en/academy/improving-open-data-and-metadata-quality) 
 
 ## Suggestions
-{% include metroline_steps/suggestions_development.html %}
+{% include metroline_steps/suggestions_released.html %}
