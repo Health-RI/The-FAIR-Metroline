@@ -192,7 +192,7 @@ The [Health-RI metadata schema](https://github.com/Health-RI/health-ri-metadata/
 - Each instance is associated with a domain-specific class from the OBO Foundry to ensure semantic clarity.
 
 ## Training
-{% include metroline_steps/training_will_be_added.html %}
+* Some documentation and e-learning materials can be found in the [Interoperable Europe Portal](https://interoperable-europe.ec.europa.eu/collection/iopeu-monitoring)
 
 ## Suggestions
-{% include metroline_steps/suggestions_development.html %}
+{% include metroline_steps/suggestions_released.html %}

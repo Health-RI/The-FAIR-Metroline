@@ -113,7 +113,7 @@ More information:
 * [PRISMA metadata in the Radboudumc FAIR Data Point](https://fdp.radboudumc.nl/catalog/fa48b19f-f390-4023-872d-f0f0024bfcec)
 
 ## Training
-{% include metroline_steps/training_will_be_added.html %}
+* FAIR Cookbook - [An inventory of tools for converting data to RDF](https://faircookbook.elixir-europe.org/content/recipes/interoperability/rdf-conversion.html)
 
 ## Suggestions
-{% include metroline_steps/suggestions_development.html %}
+{% include metroline_steps/suggestions_released.html %}

@@ -235,4 +235,4 @@ and applicable accessibility regulations.
 * [Essentials 4 Data Support](https://danstraining.moodlecloud.com/course/view.php?id=11) ([section V - LEGISLATION AND POLICY](https://danstraining.moodlecloud.com/course/section.php?id=86))
 
 ## Suggestions
-{% include metroline_steps/suggestions_development.html %}
+{% include metroline_steps/suggestions_released.html %}
