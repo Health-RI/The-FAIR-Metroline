@@ -168,7 +168,7 @@ For more information see the following publications:
 Implemented the Health-RI metadata schema in the FDP to apply the Health-RI core metadata schema to metadata from the [PRISMA study](https://www.prisma-studie.nl/). You can view PRISMA metadata in the [Radboudumc FAIR Data Point](https://fdp.radboudumc.nl/catalog/fa48b19f-f390-4023-872d-f0f0024bfcec). 
 
 ## Training
-* [A portal to (Meta)data](https://zenodo.org/records/15676294), a presentation-lecture on gathering meta-data elements at different levels.
+* [A portal to (Meta)data](https://zenodo.org/records/15676294), a presentation-lecture on gathering metadata elements at different levels.
 
 ## Suggestions
 {% include metroline_steps/suggestions_released.html %}
