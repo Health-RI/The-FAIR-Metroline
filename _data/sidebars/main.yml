@@ -12,6 +12,8 @@ subitems:
         url: /metroline_steps/define_fairification_objectives
       - title: Have a FAIR data steward on board
         url: /metroline_steps/have_a_fair_data_steward_on_board
+      - title: Organise training
+        url: /metroline_steps/organise_training
       - title: Pre-FAIR assessment
         url: /metroline_steps/pre_fair_assessment
       - title: Creating a FAIR Implementation Profile (FIP)
