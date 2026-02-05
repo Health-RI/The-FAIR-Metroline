@@ -97,7 +97,8 @@ For onboarding metadata into the catalogue, the following FAIRification objectiv
 * include a [machine-readable license](https://spdx.dev/learn/handling-license-info/) (see also [DCAT-AP info](https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/#distribution-licence)) and provenance information on how the data was created.
 
 ## Training
-Relevant training will be added soon.
+At this stage of the FAIR Metroline, even before beginning training, a useful resource to look at, especially for the life sciences, is:
+* The [FAIR Toolkit](https://fairtoolkit.pistoiaalliance.org/) for Life Science Industry by Pistoia Alliance
 
 ## Suggestions
 {% include metroline_steps/suggestions_released.html %}
