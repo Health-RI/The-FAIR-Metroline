@@ -17,11 +17,11 @@
   icon: ":mechanic:"
   status: RELEASED
 - id: 4
-  title: Get Training
-  summary: Coming soon.
-  url:
+  title: Organise Training
+  summary: This page brings forward the training and educational elements available to guide the team in their journey through the Metroline subsequent steps.
+  url: metroline_steps/organise_training
   icon: ":weight_lifting:"
-  status: IN DEVELOPMENT
+  status: READY FOR REVIEW
 - id: 5
   title: Pre-FAIR assessment
   summary: A pre-FAIR assessment evaluates the current state of your data and its alignment with the FAIR principles. Performing this assessment early makes you aware of possibilities for increasing the FAIRness of your data, which in turn increases its impact and ensures its long-term usability.
