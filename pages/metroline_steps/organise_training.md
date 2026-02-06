@@ -47,12 +47,12 @@ In addition to identifying which skills are needed, it is also important to know
 Check within your organisation what training is available. Many institutions provide training on data management and FAIR for their researchers. However, if these are not available some useful places to look into are described below.
 * the [Health-RI services portal](https://www.healthdata.nl/en/services?rendered_item=training) lists a range of training courses from the Health-RI nodes and partners;
 * [Taxila](https://taxila.nl/materials?keywords=FAIR), a Dutch portal that lists upcoming training events and materials;
-* the [European training portal TeSS](https://tess.elixir-europe.org/events) for international courses and training materials in the field of life sciences data (ELIXIR);
+* the [European training portal TeSS](https://tess.elixir-europe.org) for international courses and training materials in the field of life sciences data (ELIXIR);
 * the [RDMkit training resources](https://rdmkit.elixir-europe.org/all_training_resources) may be helpful.
 
 #### FAIR and RDM training aimed at researchers or hands-on Data Stewards in life sciences & health
 Many universities and UMCs organise specialised data management courses. Check your local organisation for resources at your UMC as well as practical examples from the community: 
-* The [DTL Course Directory](https://www.dtls.nl/courses/) includes Dutch courses, trainings, and workshops in the field of data and technologies for the life sciences, including those of the [Netherlands Bioinformatics and Systems Biology research school](https://www.biosb.nl/) (BioSB).  
+* the [Netherlands Bioinformatics and Systems Biology research school](https://www.dtls.nl/biosb/education/) (BioSB) offers courses, training and workshops in the field of data and technologies for life sciences;
 * [Data Carpentry](https://datacarpentry.org/) develops and teaches workshops on the fundamental data skills needed to conduct research. Some institutions organise data carpentry training for their researchers. Additionally, The [Netherlands eScience Center](https://www.esciencecenter.nl/digital-skills/) also organises workshops. 
 
 #### Training for Data Stewards
@@ -60,7 +60,7 @@ The evolution of the Data Steward’s role within the research data lifecycle ha
 * Health-RI provides an annual introductory course for data stewards. For more information check the [Health-RI service portal](https://www.healthdata.nl/en/services/fair-data-stewards-basics-course). 
 * Several universities and UMCs have their own onboarding training for new data stewards, such as [Maastricht University](https://doi.org/10.5281/zenodo.13736063).  
 * The ELIXIR [RDMKit](https://rdmkit.elixir-europe.org/index) provides an overview of data management best practices data curation techniques, metadata standards, and relevant tools and technologies. 
-* The Elixir RDM community is also developing the [Data Steward Handbook](https://github.com/elixir-europe/ds-handbook), a resource that offers practical guidance to data stewards. 
+* The Elixir RDM community is also developing the [Data Steward Handbook](https://elixir-europe.github.io/ds-handbook/), a resource that offers practical guidance to data stewards. 
 * [Essentials 4 Data Support](https://researchdata.nl/essentials-4-data-support/), provided by [Research Data Netherlands](https://researchdata.nl), is an introductory course for those that wish to support researchers in storing, managing, archiving and sharing their research data, regardless of their domain. All course materials are publicly available. 
 * [GDPR 4 Data Support](https://researchdata.nl/en/gdpr-4-data-support/), also provided by Research Data Netherlands, is an introductory course for data professionals / data stewards who help researchers deal with privacy sensitive data. All course materials are publicly available. 
 * The National Coordination Point RDM (LCRDM) organises the [DCC Spring training days](https://lcrdm.nl/evenementen/dcc-spring-training-days-2024). Most materials are freely available afterwards. 
