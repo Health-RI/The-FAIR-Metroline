@@ -17,11 +17,11 @@
   icon: ":mechanic:"
   status: RELEASED
 - id: 4
-  title: Get Training
-  summary: Coming soon.
-  url:
+  title: Organise Training
+  summary: This page brings forward the training and educational elements available to guide the team in their journey through the Metroline subsequent steps.
+  url: metroline_steps/organise_training
   icon: ":weight_lifting:"
-  status: IN DEVELOPMENT
+  status: READY FOR REVIEW
 - id: 5
   title: Pre-FAIR assessment
   summary: A pre-FAIR assessment evaluates the current state of your data and its alignment with the FAIR principles. Performing this assessment early makes you aware of possibilities for increasing the FAIRness of your data, which in turn increases its impact and ensures its long-term usability.
@@ -36,10 +36,10 @@
   status: RELEASED
 - id: 7
   title: Data access and retrieval
-  summary: Coming soon.
-  url: 
+  summary: Before data can be made FAIR, we first need to get it the right way. That means finding trustworthy sources, making sure we’re allowed to use the data, and keeping it safe and private. When we do this properly, it ensures that the data can be trusted, shared, and reused to support new research and innovation.
+  url: metroline_steps/data_access_and_retrieval
   icon: ":closed_lock_with_key:"
-  status: IN DEVELOPMENT
+  status: READY FOR REVIEW
 - id: 8
   title: Assess availability of your metadata
   summary: Metadata describes a resource, like a book’s title and author or a photo’s date and location, which help with organization and discovery of that resource. This Metroline step describes the types of metadata, where you can find them for your resource, and how to improve their quality. Filling metadata gaps enhances a resource’s visibility and reusability.
@@ -90,11 +90,11 @@
   icon: ":construction:"
   status: RELEASED
 - id: 16
-  title: Use ontologies in the data model
-  summary: Coming soon.
-  url: 
+  title: Use ontologies in the model
+  summary: This process involves linking your data model to ontologies, which are essentially formal, shared dictionaries that provide precise, computer-readable definitions for concepts. By assigning these standard definitions to the elements in your data model, you make their meanings explicit and clear. This allows different computer systems to correctly understand, combine, and compare data from various sources without confusion, making the data more interoperable and easier to reuse across different projects.
+  url: metroline_steps/use_ontologies_in_the_model
   icon: ":book:"
-  status: IN DEVELOPMENT
+  status: READY FOR REVIEW
 - id: 17
   title: Obtain informed consent
   summary: To ensure your data and materials can be reused in the future, your subject information sheet (SIS) and informed consent form (ICF) must address reuse. This Metroline step provides consideration and resources for preparing your SIS and ICF.
@@ -127,10 +127,10 @@
   status: RELEASED
 - id: 22
   title: Query (use) over resources
-  summary: Coming soon.
-  url: 
+  summary: Querying FAIR resources is the process of asking structured questions to retrieve data that is easy to find, access, and reuse. When resources follow FAIR principles, queries become more efficient because the data is well-organized and clearly described. In this step, we will explore the tools and platforms that enable effective querying of FAIR-compliant resources.
+  url: metroline_steps/query_over_resources
   icon: ":question:"
-  status: IN DEVELOPMENT
+  status: READY FOR REVIEW
 - id: 23
   title: Assess FAIRness
   summary: Now that you’ve FAIRified your data, it’s time to check the resulting FAIRness and decide if you’ve reached your goals. Use tools and other methods to assess if your data is truly Findable, Accessible, Interoperable, and Reusable. If needed, adjust or improve things so your data stays FAIR in the long run.

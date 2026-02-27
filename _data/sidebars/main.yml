@@ -12,12 +12,16 @@ subitems:
         url: /metroline_steps/define_fairification_objectives
       - title: Have a FAIR data steward on board
         url: /metroline_steps/have_a_fair_data_steward_on_board
+      - title: Organise training
+        url: /metroline_steps/organise_training
       - title: Pre-FAIR assessment
         url: /metroline_steps/pre_fair_assessment
       - title: Creating a FAIR Implementation Profile (FIP)
         url: /metroline_steps/creating_a_fair_implementation_profile
       - title: Design solution plan
         url: /metroline_steps/design_solution_plan
+      - title: Data access and retrieval
+        url: /metroline_steps/data_access_and_retrieval
       - title: Assess availability of your metadata
         url: /metroline_steps/assess_availability_of_your_metadata
       - title: Register resource-level metadata
@@ -32,6 +36,8 @@ subitems:
         url: /metroline_steps/design_ecrf
       - title: Create or reuse a semantic (meta)data model
         url: /metroline_steps/create_or_reuse_a_semantic_model
+      - title: Use ontologies in the model
+        url: /metroline_steps/use_ontologies_in_the_model
       - title: Obtain informed consent
         url: /metroline_steps/obtain_informed_consent
       - title: Apply (meta)data model
@@ -40,5 +46,7 @@ subitems:
         url: /metroline_steps/transform_and_expose_fair_metadata
       - title: Define access conditions
         url: /metroline_steps/define_access_conditions
+      - title: Query (use) over resources
+        url: /metroline_steps/query_over_resources
       - title: Assess FAIRness
         url: /metroline_steps/assess_fairness
