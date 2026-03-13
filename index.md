@@ -42,6 +42,16 @@ page_id: main
   </a>
 </div>
 
+<div class="text-center mt-4 mb-3">
+  <p class="text-muted mb-2">Have questions or suggestions?</p>
+  <a href="/contact" class="btn btn-outline-primary">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom; margin-right: 6px;">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+    Share your feedback
+  </a>
+</div>
+
 <div class="homepage-recent-scenarios mt-5">
   <h2 class="section-title">Recently Added Scenarios</h2>
   <div class="scenario-cards-grid scenario-cards-compact">
@@ -71,5 +81,5 @@ page_id: main
   <p>The platform is under active development in alignment with the <a href="https://catalogus.healthdata.nl/">Dutch National Health Data Catalogue</a>, with ongoing contributions of scenarios and tools from UMCs and life science researchers across the Netherlands. See the <a href="/network">list of contributors</a> for more details.</p>
 
   <h3>How to contribute</h3>
-  <p>The FAIR Metroline is a cooperative effort between Health-RI and its network of academic medical centers, research institutes, and healthcare organizations. We welcome contributions of new scenarios, tools, and practical guidance. Learn more about <a href="/contributing/contributing">how to contribute</a> or contact us at <a href="mailto:fairservicedesk@health-ri.nl">fairservicedesk@health-ri.nl</a>.</p>
+  <p>The FAIR Metroline is a cooperative effort between Health-RI and its network of academic medical centers, research institutes, and healthcare organizations. We welcome contributions of new scenarios, tools, and practical guidance. Learn more about <a href="/contributing/contributing">how to contribute</a>, <a href="/contact">share your feedback</a>, or contact us at <a href="mailto:fairservicedesk@health-ri.nl">fairservicedesk@health-ri.nl</a>.</p>
 </div>
