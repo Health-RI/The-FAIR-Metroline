@@ -42,16 +42,6 @@ page_id: main
   </a>
 </div>
 
-<div class="text-center mt-4 mb-3">
-  <p class="text-muted mb-2">Have questions or suggestions?</p>
-  <a href="/contact" class="btn btn-outline-primary">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom; margin-right: 6px;">
-      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-    </svg>
-    Share your feedback
-  </a>
-</div>
-
 <div class="homepage-recent-scenarios mt-5">
   <h2 class="section-title">Recently Added Scenarios</h2>
   <div class="scenario-cards-grid scenario-cards-compact">
@@ -72,6 +62,16 @@ page_id: main
     </a>
     {% endfor %}
   </div>
+</div>
+
+<div class="text-center mt-4 mb-3">
+  <p class="text-muted mb-2">Have questions or suggestions?</p>
+  <a href="/contact" class="btn btn-outline-primary">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: text-bottom; margin-right: 6px;">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+    Share your feedback
+  </a>
 </div>
 
 <div class="homepage-about mt-5 pt-5">
