@@ -3,6 +3,7 @@ title: Register structural metadata
 permalink: /metroline_steps/register_structural_metadata
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 

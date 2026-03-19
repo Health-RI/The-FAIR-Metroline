@@ -3,6 +3,7 @@ title: Creating a FAIR Implementation Profile (FIP)
 permalink: /metroline_steps/creating_a_fair_implementation_profile
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 

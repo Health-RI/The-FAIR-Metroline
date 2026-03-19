@@ -3,6 +3,7 @@ title: Have a FAIR data steward on board
 permalink: /metroline_steps/have_a_fair_data_steward_on_board
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 

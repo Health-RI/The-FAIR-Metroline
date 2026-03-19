@@ -1,0 +1,93 @@
+.glossary-term {
+  position: relative;
+  cursor: help;
+  text-decoration: underline dotted;
+}
+
+.glossary-term::after {
+  content: attr(data-definition);
+  position: absolute;
+  left: 0;
+  bottom: 125%;
+  z-index: 1000;
+  width: 22rem;
+  max-width: min(22rem, 80vw);
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.4rem;
+  background: #222;
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  white-space: normal;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.2rem);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.glossary-term:hover::after,
+.glossary-term:focus::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glossary-nav {
+  margin: 1.5rem 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.glossary-nav a,
+.glossary-nav span {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+}
+
+.glossary-nav .is-disabled {
+  opacity: 0.4;
+}
+
+.glossary-entry {
+  margin: 0 0 1.75rem;
+  scroll-margin-top: 5rem;
+}
+
+.glossary-term-line {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.glossary-sources, .glossary-citation {
+  font-size: 0.95em;
+  font-weight: normal;
+}
+
+.glossary-aliases {
+  margin: 0 0 0.5rem;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.glossary-definition > :first-child {
+  margin-top: 0;
+}
+
+.glossary-definition > :last-child {
+  margin-bottom: 0;
+}
+
+.glossary-definition ul,
+.glossary-definition ol {
+  margin-top: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+h2[id^="letter-"] {
+  margin-top: 2rem;
+  scroll-margin-top: 5rem;
+}

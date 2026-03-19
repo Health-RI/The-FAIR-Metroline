@@ -3,6 +3,7 @@ title: Define FAIRification objectives
 permalink: /metroline_steps/define_fairification_objectives
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 

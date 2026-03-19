@@ -4,6 +4,7 @@ permalink: /metroline_steps/analyse_data_semantics
 page_id: analyse_data_semantics
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 

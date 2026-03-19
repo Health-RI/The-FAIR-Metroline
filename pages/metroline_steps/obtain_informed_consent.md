@@ -3,6 +3,7 @@ title: Obtain informed consent
 permalink: /metroline_steps/obtain_informed_consent
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 
