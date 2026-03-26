@@ -116,4 +116,4 @@ More information:
 * FAIR Cookbook - [An inventory of tools for converting data to RDF](https://faircookbook.elixir-europe.org/content/recipes/interoperability/rdf-conversion.html)
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
+{% include metroline_steps/suggestions_released.html src=page.title%}

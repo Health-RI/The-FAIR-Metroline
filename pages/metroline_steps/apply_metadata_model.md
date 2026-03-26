@@ -171,4 +171,4 @@ Implemented the Health-RI metadata schema in the FDP to apply the Health-RI core
 * [A portal to (Meta)data](https://zenodo.org/records/15676294), a presentation-lecture on gathering metadata elements at different levels.
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
+{% include metroline_steps/suggestions_released.html src=page.title%}

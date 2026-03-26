@@ -161,5 +161,4 @@ Other relevant trainings deal directly with the FAIR principles and how they can
 The Go FAIR Foundation also offers multiple Training a year dedicated to FAIR awareness. For more information look into: [Upcoming training \| GO FAIR Foundation](https://www.gofair.foundation/upcoming-training). It’s however important to notice that these trainings do have a cost. 
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
-
+{% include metroline_steps/suggestions_released.html src=page.title%}

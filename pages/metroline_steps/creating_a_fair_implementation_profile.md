@@ -58,4 +58,4 @@ Experts that may need to be involved, as described in [Metroline Step: Build the
 * [FAIR Implementation Profile course](https://training.envri.eu/course/view.php?id=56) offered by the ENVRI Community.  
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
+{% include metroline_steps/suggestions_released.html src=page.title%}

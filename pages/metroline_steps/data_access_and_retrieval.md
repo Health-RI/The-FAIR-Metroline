@@ -127,5 +127,4 @@ Additionally, some more specific trainings on regulations such as the GDPR in th
 * **GDPR 4 Data Support - RDNL.** The [GDPR 4 Data Support (GDPR4DS) course](https://researchdata.nl/gdpr-4-data-support/) is an introductory course designed for data supporters who want to understand more about the General Data Protection Regulation (GDPR) in the context of research and want to strengthen their role in protecting personal data.  
 
 ## Suggestions
-{% include metroline_steps/suggestions_development.html %}
-
+{% include metroline_steps/suggestions_development.html src=page.title%}

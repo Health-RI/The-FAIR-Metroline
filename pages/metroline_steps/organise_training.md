@@ -96,4 +96,4 @@ While previous initiatives primarily targeted researchers, the University of Maa
 At the LUMC, central Data Stewards are responsible for promoting data stewardship and FAIR research practices. They develop and maintain training materials for both researchers and support staff. A mandatory e-learning module on data stewardship, currently required for all PhD candidates, has enrolled over 200 participants. Additional in-house courses, such as Writing a Data Management Plan and From Data Export to Analysis, are offered quarterly. A program to train specialised data stewards per department is currently in progress. In collaboration with the BioSemantics group, new training resources on FAIR data are also in development.
 
 ## Suggestions
-{% include metroline_steps/suggestions_development.html %}
+{% include metroline_steps/suggestions_development.html src=page.title %}

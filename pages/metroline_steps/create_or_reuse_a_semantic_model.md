@@ -195,4 +195,4 @@ The [Health-RI metadata schema](https://github.com/Health-RI/health-ri-metadata/
 * Some documentation and e-learning materials can be found in the [Interoperable Europe Portal](https://interoperable-europe.ec.europa.eu/collection/iopeu-monitoring)
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
+{% include metroline_steps/suggestions_released.html src=page.title%}

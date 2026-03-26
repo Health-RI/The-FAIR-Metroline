@@ -84,5 +84,4 @@ Experts that may need to be involved, as described in [Metroline Step: Build the
 * [HealthDCAT AP \| European Health Information Portal](https://www.healthinformationportal.eu/healthdcat-ap)
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
-
+{% include metroline_steps/suggestions_released.html src=page.title%}

@@ -239,4 +239,4 @@ The Joint Research Centre has defined [Common Data Elements to be collected by a
 * [E-learning Common Data Elements](https://www.nlm.nih.gov/oet/ed/cde/tutorial/index.html). Standardising Data Collection provided by the National Library of Medicine 
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
+{% include metroline_steps/suggestions_released.html src=page.title%}
