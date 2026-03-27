@@ -121,5 +121,4 @@ Training events and materials on data management and FAIR can also be found thro
 For those new to data stewardship, the blogpost [From Researcher to Data Steward: How to Get Started?](https://openworking.wordpress.com/2024/08/27/from-researcher-to-data-steward-how-to-get-started/) provides insights into learning paths and practical steps. This resource may also be useful for researchers managing their own data in smaller projects without a dedicated data steward.
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
-
+{% include metroline_steps/suggestions_released.html src=page.title%}

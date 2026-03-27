@@ -95,5 +95,4 @@ One interesting educational resource is the [Ontology mapping with Ontology Xref
 An interesting resource is the [OBO Semantic Engineering Training](https://oboacademy.github.io/obook/) (Open Biological and Biomedical Ontologies Organized Knowledge). Although developed for a particular project, its content offers a practical demonstration of how to address a genuine case.
 
 ## Suggestions
-{% include metroline_steps/suggestions_development.html %}
-
+{% include metroline_steps/suggestions_development.html src=page.title %}

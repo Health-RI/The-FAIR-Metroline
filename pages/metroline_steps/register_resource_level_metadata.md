@@ -168,5 +168,4 @@ Find more information in the [NMCB FAIR Implementation Profile](https://fip-wiza
 At the EU-level the [Data.europa.eu Academy](https://data.europa.eu/en/academy) offers online modules such as “improving open data and metadata quality” and lessons on DCAT and DCAT-AP (Data Catalog Vocabulary Application Profile), which is the common EU standard for cross-border metadata. The online modules directly cover structural metadata standards. 
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
-
+{% include metroline_steps/suggestions_released.html src=page.title%}

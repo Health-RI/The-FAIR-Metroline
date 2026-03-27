@@ -20,7 +20,7 @@ columns:
     width: 1
     children: 
       - url_text: Contact
-        url: contact
+        url: contact?src=""
   - type: image
     image_width: 150px
     width: 3

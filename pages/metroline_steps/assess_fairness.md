@@ -78,4 +78,4 @@ Considering looking into the following resources:
 * [The FAIR Maturity Evaluation Service](https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/)
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
+{% include metroline_steps/suggestions_released.html src=page.title%}

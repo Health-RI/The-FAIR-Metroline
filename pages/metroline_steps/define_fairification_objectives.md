@@ -101,4 +101,4 @@ At this stage of the FAIR Metroline, even before beginning training, a useful re
 * The [FAIR Toolkit](https://fairtoolkit.pistoiaalliance.org/) for Life Science Industry by Pistoia Alliance
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
+{% include metroline_steps/suggestions_released.html src=page.title%}

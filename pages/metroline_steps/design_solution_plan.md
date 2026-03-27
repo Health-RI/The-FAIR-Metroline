@@ -100,4 +100,4 @@ This section should show the step applied in a real project. Links to demonstrat
 * [Tutorial: Insights in FAIRification planning](https://fairification-planning.github.io/)
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
+{% include metroline_steps/suggestions_released.html src=page.title%}
