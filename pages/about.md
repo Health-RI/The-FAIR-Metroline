@@ -38,7 +38,7 @@ _With text, white background_
 
 **Infographics**
 * Metroline infographic - coming soon
-* Metroline page infographics - coming soon
+* [Metroline content one-pagers, zip file]({{site.baseurl}}/assets/img/media_kit/one-pagers/one-pagers.zip)
 
 
 
