@@ -144,7 +144,6 @@ and deep links (e.g. /glossary/#api) can link directly to it.
 {% comment %}
 Convenience navigation link to return to the top alphabet menu.
 {% endcomment %}
-[Back to top](#top)
 
   {% endif %}
 {% endfor %}
