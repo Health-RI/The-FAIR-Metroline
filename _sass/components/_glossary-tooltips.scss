@@ -2,6 +2,8 @@
   position: relative;
   cursor: help;
   text-decoration: underline dotted;
+  color: $primary;
+  font-weight: bold;
 }
 
 .glossary-term::after {
@@ -14,16 +16,17 @@
   max-width: min(22rem, 80vw);
   padding: 0.6rem 0.8rem;
   border-radius: 0.4rem;
-  background: #222;
-  color: #fff;
+  background: $secondary;
+  color: $white;
   font-size: 0.9rem;
+  font-weight: normal;
   line-height: 1.35;
   white-space: normal;
   opacity: 0;
   pointer-events: none;
   transform: translateY(0.2rem);
   transition: opacity 0.15s ease, transform 0.15s ease;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba($secondary, 0.2);
 }
 
 .glossary-term:hover::after,
@@ -70,7 +73,7 @@
 .glossary-aliases {
   margin: 0 0 0.5rem;
   font-size: 0.95em;
-  color: #555;
+  color: $gray-600;
 }
 
 .glossary-definition > :first-child {
