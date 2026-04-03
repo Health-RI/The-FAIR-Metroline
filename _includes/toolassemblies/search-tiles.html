@@ -236,6 +236,14 @@
                 col.classList.add("d-none");
             }
         }
+
+        // Update URL with current filter values
+        const params = new URLSearchParams();
+        if (selectedDomain) params.set('domain', selectedDomain);
+        if (selectedPhase) params.set('phase', selectedPhase);
+        if (selectedInstitute) params.set('institute', selectedInstitute);
+        const newUrl = params.toString() ? `?${params}` : location.pathname;
+        history.replaceState({}, '', newUrl);
     }
 
     $(document).ready(function () {
@@ -346,6 +354,36 @@
                     }
                 }
             });
+        }
+
+        // Read URL parameters and apply filters on page load
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlDomain = urlParams.get('domain');
+        const urlPhase = urlParams.get('phase');
+        const urlInstitute = urlParams.get('institute');
+
+        if (urlDomain) {
+            const domainSelect = document.getElementById('domains-input');
+            if (domainSelect) {
+                domainSelect.value = urlDomain;
+            }
+        }
+        if (urlPhase) {
+            const phaseSelect = document.getElementById('phases-input');
+            if (phaseSelect) {
+                phaseSelect.value = urlPhase;
+            }
+        }
+        if (urlInstitute) {
+            const instituteSelect = document.getElementById('institutes-input');
+            if (instituteSelect) {
+                instituteSelect.value = urlInstitute;
+            }
+        }
+
+        // Apply filters if any URL parameters were present
+        if (urlDomain || urlPhase || urlInstitute) {
+            applyFilters();
         }
     });
 </script>
