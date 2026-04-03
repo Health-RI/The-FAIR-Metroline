@@ -3,6 +3,7 @@ title: Assess FAIRness
 permalink: /metroline_steps/assess_fairness
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 
@@ -29,7 +30,7 @@ Aligning with these key points does not only support accountability but also rei
 You set out by defining [FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives) at the beginning of your project. You should now check if you reached these objectives, reflecting on them one by one. Keep in mind: 
 * How important was the objective? 
   * The objective is a must-have. For example, if one goal is to meet specific funder, institutional, and/or journal requirements, not reaching it may not be an option. 
-    * For example, ZonMw requires you to fill in their so-called “[kerntabel](https://www.zonmw.nl/nl/instructies-voor-rapportage-over-fair-datamanagement-met-kerngegevens)” which should provide information on where data is stored and how it can be accessed. This information should be published and have a persistent identifier (doi). 
+    * For example, ZonMw requires you to fill in a table with [key items](https://www.zonmw.nl/en/instructions-report-fair-data-management-using-key-items), which should provide information on where data is stored and how it can be accessed. This information should be published and have a persistent identifier (doi). 
   * The objective is a nice-to-have. Some goals may be optional or dependent on available resources. For example, achieving fully interoperable data may be too complicated or too time-consuming if no experts are available. 
 * Do you have the resources for further improvement? 
   * If funding runs out, further FAIR enhancements may not be realistic and you may have to settle for less ambitious goals. Sometimes. “good enough” is acceptable given time, budget, or resource limits. 

@@ -1,0 +1,6 @@
+<script>
+  window.GLOSSARY = {{ site.data.glossary.glossary | jsonify }};
+  console.log("Glossary loaded:", window.GLOSSARY.length, "entries");
+</script>
+
+<script src="{{ '/assets/js/glossary-tooltips.js' | relative_url }}"></script>

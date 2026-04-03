@@ -1,0 +1,1506 @@
+[
+  {
+    "term": "Accessible",
+    "definition": "Accessibility requires that there is a clear protocol for accessing the data. This does not mean that all data must be freely downloadable, only that the process for gaining access to it is transparent.",
+    "sources": [
+      {
+        "label": "NNLM",
+        "url": "https://www.nnlm.gov/resources/data-glossary/fair-principles"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Administrative metadata",
+    "definition": "Metadata used to manage administrative aspects of the digital objects such as intellectual property rights and acquisition. Also documents information concerning the creation, alteration, and version control of the metadata itself. This is sometimes known as meta-metadata.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/administrative-metadata"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Anonymous data",
+    "definition": "Anonymized data are personal data that is processed so that the identifying features are irreversibly removed/hidden so that it is no longer possible to trace it back to a person.",
+    "sources": [
+      {
+        "label": "Health-RI",
+        "url": "https://health-ri.atlassian.net/wiki/spaces/HNG/pages/997466980/Glossary"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Application Programming Interface",
+    "definition": "An API (Application Programming Interface) is used by software components to exchange data in a formalized way.",
+    "sources": [
+      {
+        "label": "Health-RI",
+        "url": "https://health-ri.atlassian.net/wiki/spaces/HNG/pages/997466980/Glossary"
+      }
+    ],
+    "aliases": [
+      "API",
+      "Application Programming Interface (API)"
+    ]
+  },
+  {
+    "term": "Archiving",
+    "definition": "Engage in curation activity that ensures that records, objects, metadata and data are properly selected, stored, and can be accessed, and for which logical and physical integrity are maintained over time, including security and authenticity.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/archive-verb"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Basisregistratie personen",
+    "definition": "The Personal Records Database (BRP) contains the personal data of people who live in the Netherlands (residents) and of people who live abroad (non-residents).",
+    "sources": [
+      {
+        "label": "Government of the Netherlands",
+        "url": "https://www.government.nl/topics/personal-data/personal-records-database-brp"
+      }
+    ],
+    "aliases": [
+      "BRP",
+      "Basisregistratie personen (BRP)"
+    ]
+  },
+  {
+    "term": "Biobank",
+    "definition": "A biobank is a type of biorepository that stores biological samples (usually human) for use in research.",
+    "sources": [
+      {
+        "label": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Biobank"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Case Report Form",
+    "definition": "A printed, optical, or electronic document designed to record all of the protocol required information to be reported to the sponsor on each trial subject.",
+    "sources": [
+      {
+        "label": "NIHR",
+        "url": "https://www.ct-toolkit.ac.uk/glossary#letter-c"
+      }
+    ],
+    "aliases": [
+      "CRF",
+      "Case Report Form (CRF)"
+    ]
+  },
+  {
+    "term": "Catalogue",
+    "definition": "Index describing, indicating the location of, and recording other details of resources, materials works, etc. Curated and organised using a formal metadata schema such as MARC, ISAD(G), Dublin Core, DataCite etc.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/catalogue-noun"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "CCMO",
+    "definition": "The Central Committee on Research Involving Human Subjects (CCMO) was established on the basis of section 14 of the Medical Research Involving Human Subjects Act (WMO) and executes the WMO and the Embryo’s Act, protecting research participants by reviewing medical scientific research involving human subjects under statutory provisions.",
+    "sources": [
+      {
+        "label": "CCMO",
+        "url": "https://english.ccmo.nl/about-ccmo"
+      }
+    ],
+    "aliases": [
+      "Central Committee on Research Involving Human Subjects",
+      "Central Committee on Research Involving Human Subjects (CCMO)"
+    ]
+  },
+  {
+    "term": "CDASH",
+    "definition": "The Clinical Data Acquisition Standards Harmonization (CDASH) standard establishes a standard way to collect data consistently across studies and sponsors so that data collection formats and structures provide clear traceability of submission data into the Study Data Tabulation Model (SDTM).",
+    "sources": [
+      {
+        "label": "CDISC",
+        "url": "https://www.cdisc.org/standards/foundational/cdash"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "CDISC",
+    "definition": "The Clinical Data Interchange Standards Consortium (CDISC) is a standards developing organization dealing with medical research data linked with healthcare, made to enable information system interoperability and to improve medical research and related areas of healthcare.",
+    "sources": [
+      {
+        "label": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Clinical_Data_Interchange_Standards_Consortium"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Clinical data",
+    "definition": "Clinical data is data that has to do with the health or treatment of people. They may come from clinical research, where treatments or other medical interventions are tested on human subjects, or from clinical practice, where Healthcare Professionals or patients collect data about their patients or in the case patients themselves.",
+    "sources": [
+      {
+        "label": "Health-RI",
+        "url": "https://health-ri.atlassian.net/wiki/spaces/HNG/pages/997466980/Glossary"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Clinical trial",
+    "definition": "Clinical trials are a type of clinical research designed to look at new ways to prevent, detect, or treat disease. Clinical trials rely on the participation of volunteers (participants) and follow a research plan or protocol created by the investigators running the study.",
+    "sources": [
+      {
+        "label": "NCATS",
+        "url": "https://toolkit.ncats.nih.gov/glossary/clinical-trial/"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Code book",
+    "definition": "A codebook describes the contents, structure, and layout of a data collection. A well-documented codebook “contains information intended to be complete and self-explanatory for each variable in a data file.”",
+    "sources": [
+      {
+        "label": "ICPSR",
+        "url": "https://www.icpsr.umich.edu/sites/icpsr/posts/shared/what-is-a-codebook"
+      }
+    ],
+    "aliases": [
+      "codebook"
+    ]
+  },
+  {
+    "term": "Cohort study",
+    "definition": "A cohort study is a longitudinal study that follows research participants with common characteristics over time.",
+    "sources": [
+      {
+        "label": "NIH",
+        "url": "https://www.nih.gov/nih-style-guide/appendix-biomedical-definitions#cohort"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Common Conditions of Use Elements",
+    "definition": "“Common Conditions of use Elements” (CCE) comprises core set of “Use Condition Terms”. Each term within the CCE is designed to be atomic and non-directional in nature. As such they can be used as building blocks to construct a Use Conditions “policy” covering the general use conditions for a resource.",
+    "sources": [
+      {
+        "label": "Digital Use Conditions",
+        "url": "https://ducepnd.le.ac.uk/"
+      }
+    ],
+    "aliases": [
+      "CCE",
+      "Common Conditions of Use Elements (CCE)"
+    ]
+  },
+  {
+    "term": "Common Data Elements",
+    "definition": "Elements common to multiple data sets from different studies.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q70326393"
+      }
+    ],
+    "aliases": [
+      "CDE"
+    ]
+  },
+  {
+    "term": "Consortium",
+    "definition": "Association of two or more individuals, companies, organizations or governments (or any combination of these entities).",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q194166"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Controlled access",
+    "definition": "Controlled access data sharing requires a request for access to the dataset to be approved. The requirements vary, but usually limit data sharing to researchers with a specific, relevant research question.",
+    "sources": [
+      {
+        "label": "NCATS",
+        "url": "https://toolkit.ncats.nih.gov/glossary/controlled-access-data-sharing/"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Controlled vocabulary",
+    "definition": "Standardized and organized sets of words and phrases for retrieval and disambiguation of information, distinguishing preferred terms from non-preferred terms.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q1469824"
+      }
+    ],
+    "aliases": [
+      "(Controlled) Vocabulary"
+    ]
+  },
+  {
+    "term": "CoreTrustSeal",
+    "definition": "CoreTrustSeal is an international, community based, non-governmental, and non-profit organization promoting sustainable and trustworthy data infrastructures.",
+    "sources": [
+      {
+        "label": "CoreTrustSeal",
+        "url": "https://www.coretrustseal.org/about/"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Creative Commons licence",
+    "definition": "Family of public copyright licenses for allowing free use of a work.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q284742"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Data Access Committee",
+    "definition": "Data Access Committees, commonly referred to as DACs, comprise on or more individuals (or data controllers) that review data access requests and make decisions on who can access personally identifiable genetic, phenotypic, and clinical data.",
+    "sources": [
+      {
+        "label": "EGA",
+        "url": "https://ega-archive.org/access/data-access-committee/what-is-dac/"
+      }
+    ],
+    "aliases": [
+      "DAC",
+      "Data Access Committee (DAC)"
+    ]
+  },
+  {
+    "term": "Data Access Policy",
+    "definition": "A Data Access Policy is an established control put in place to ensure that data protection requirements are followed.",
+    "sources": [
+      {
+        "label": "NCI GDC",
+        "url": "https://docs.gdc.cancer.gov/Encyclopedia/pages/Data_Access_Policy/"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Data Access Protocol",
+    "definition": "Provides a structured and concise overview of how and under what conditions a dataset can be accessed.",
+    "sources": [
+      {
+        "label": "DANS",
+        "url": "https://dans.knaw.nl/en/news/guidebook-for-publishing-restricted-access-datasets-published/"
+      }
+    ],
+    "aliases": [
+      "DAP",
+      "(Data) Access Protocol"
+    ]
+  },
+  {
+    "term": "Data curation",
+    "definition": "Managed process throughout the data lifecycle, by which data/data collections are cleansed, documented, standardised, formatted and inter-related. The goal of curation is to manage and promote the use of data from its point of creation to ensure it is fit for contemporary purpose and available for discovery and re-use. For dynamic datasets this may mean continuous enrichment or updating to keep it fit for purpose. Special forms of curation may be available in data repositories. The data curation process itself must be documented as part of curation. Thus curation and provenance are highly related.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/data-curation"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Data curator",
+    "definition": "A data curator is a professional responsible for managing, maintaining, and enhancing the quality of an organization’s data. Data curators play a crucial role in ensuring that data is easily accessible, accurate, and relevant to the organization’s needs.",
+    "sources": [
+      {
+        "label": "Atlan",
+        "url": "https://atlan.com/who-is-a-data-curator/"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Data dictionary",
+    "definition": "A data dictionary is a collection of names, definitions, and attributes about data elements that are used or captured in a database, information system, or part of a research project. It describes the meanings and purposes of data elements within the context of a project and provides guidance on interpretation, accepted meanings, and representation. A data dictionary also provides metadata about data elements. The metadata included in a data dictionary assists in defining the scope and characteristics of data elements, as well as the rules for their usage and application.",
+    "sources": [
+      {
+        "label": "Health-RI",
+        "url": "https://health-ri.atlassian.net/wiki/spaces/HNG/pages/997466980/Glossary"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Data element",
+    "definition": "Unit of data for which the definition, identification, representation (term used to represent it), and permissible values are specified by means of a set of attributes.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/data-element"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Data engineer",
+    "definition": "A data engineer is a type of software engineer who creates big data ETL pipelines to manage the flow of data through the organization.",
+    "sources": [
+      {
+        "label": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Data_engineering"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Data Governance Act",
+    "definition": "Regulation of the European Union establishing a framework for the exchange and use of data.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q107123820"
+      }
+    ],
+    "aliases": [
+      "DGA",
+      "Data Governance Act (DGA)"
+    ]
+  },
+  {
+    "term": "Data integration",
+    "definition": "Combining diverse datasets from disparate sources into one unified dataset or database. Data are accessed and extracted, moved, validated, cleaned, transformed and loaded.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/data-integration"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Data Management Plan",
+    "definition": "A Data Management Plan (DMP) is a formal document developed at the beginning of your research project that describes all aspects of data management, both during and after the project. It contains, among other things:\n* what data will be collected (type, size)\n* where the data is stored, who has access to it and how access is arranged\n* how often the data is backed up\n* how the data is documented\n* the version control strategy and the folder structure that will be used\n* whether there are privacy and ownership issues\n* whether and how the data will be archived and shared.",
+    "sources": [
+      {
+        "label": "Health-RI",
+        "url": "https://health-ri.atlassian.net/wiki/spaces/HNG/pages/997466980/Glossary"
+      }
+    ],
+    "aliases": [
+      "DMP",
+      "Data Management Plan (DMP)"
+    ]
+  },
+  {
+    "term": "Data model",
+    "definition": "Abstract, logical and structured representation of data that documents how elements of the data are related by defining: the entities represented in the data; the attributes that are associated with each entity; and the relationships between the various entities which are usually linked together using identifier variables.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/data-model"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Data reuse",
+    "definition": "Re-analysis of a dataset or combination of datasets outside of the original research purpose for which the dataset was created.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/re-use"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Data Sharing Agreement",
+    "definition": "A data sharing agreement is an agreement between two or more parties that outlines which data will be shared and, most importantly, how the data can be used.",
+    "sources": [
+      {
+        "label": "NCATS",
+        "url": "https://toolkit.ncats.nih.gov/glossary/data-sharing-agreement/"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Data steward",
+    "definition": "Person responsible for the management and fitness of data elements - both the content and metadata , which ensure the quality of the data and its compliance with various types of regulatory, academic and international requirements.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q1172231"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Data Transfer Agreement",
+    "definition": "Agreement governing data transfers, and facilitating compliance with the General Data Protection Regulation in B2B contexts.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q60228447"
+      }
+    ],
+    "aliases": [
+      "DTA",
+      "Data Transfer Agreement (DTA)"
+    ]
+  },
+  {
+    "term": "Data Usage Agreement",
+    "definition": "A Data Use Agreement (DUA) is a legal contract between the entity that owns access to a data source, typically a dataset or database, and a secondary entity that will receive the data, or a subset of it, for reuse.",
+    "sources": [
+      {
+        "label": "NNLM",
+        "url": "https://www.nnlm.gov/guides/data-glossary/data-use-agreement"
+      }
+    ],
+    "aliases": [
+      "DUA",
+      "Data Usage Agreement (DUA)"
+    ]
+  },
+  {
+    "term": "Data Use Ontology",
+    "definition": "DUO is an ontology which represent data use conditions.",
+    "sources": [
+      {
+        "label": "OBO Foundry",
+        "url": "https://obofoundry.org/ontology/duo.html"
+      }
+    ],
+    "aliases": [
+      "DUO",
+      "Data Use Ontology (DUO)"
+    ]
+  },
+  {
+    "term": "Database",
+    "definition": "Structured collection of data stored electronically in a computer system, designed to enable efficient storage, retrieval, management, and updating of information. It can store various types of data, including text, numbers, images, videos, and files.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/database"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Dataset",
+    "definition": "A dataset is an organized collection of data. The most basic representation of a dataset is data elements presented in tabular form. Each column represents a particular variable. Each row corresponds to a given value of that column’s variable. A dataset may also present information in a variety of non-tabular formats, such as an extensible mark-up language (XML) file, a geospatial data file, or an image file, etc.",
+    "sources": [
+      {
+        "label": "resources.data.gov",
+        "url": "https://resources.data.gov/glossary/dataset/"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "DCAT-AP",
+    "definition": "The DCAT Application profile for data portals in Europe (DCAT-AP) is a specification based on the Data Catalogue vocabulary (DCAT) for describing public sector datasets in Europe.",
+    "sources": [
+      {
+        "label": "European Union",
+        "url": "https://op.europa.eu/en/web/eu-vocabularies/dcat-ap"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Descriptive metadata",
+    "definition": "Metadata that describe a dataset or resource in such a way that people can discover and identify it. Contains information that aids with findability such as information (metadata elements) on the creator(s), affiliation(s), title, abstract, keywords, persistent identifier, related publications, etc.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/descriptive-metadata"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Digital Object Identifier",
+    "definition": "ISO standard unique string identifier for a digital object.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q25670"
+      }
+    ],
+    "aliases": [
+      "DOI",
+      "Digitial Object Identifier (DOI)"
+    ]
+  },
+  {
+    "term": "Digital Use Conditions",
+    "definition": "Digital Use Conditions (DUC) is an operational data structure designed to standardise the way consent and use conditions (relating to any resource) are computationally represented.",
+    "sources": [
+      {
+        "label": "Digital Use Conditions",
+        "url": "https://ducepnd.le.ac.uk/"
+      }
+    ],
+    "aliases": [
+      "DUC",
+      "Digital Use Conditions (DUC)"
+    ]
+  },
+  {
+    "term": "Domain specific metadata",
+    "definition": "There are many types of metadata standards/schemas. Some are generic, while others are domain-specific. Generic ones such as Dublin Core tend to be easy to use and widely adopted, but often need to be expanded in order to cover more specific information. Domain-specific schemas have a much richer vocabulary and structure, but tend to be highly specialized and only understandable by researchers in that area.",
+    "sources": [
+      {
+        "label": "The University of North Carolina at Chapel Hill",
+        "url": "https://guides.lib.unc.edu/metadata/standards"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Electronic Case Report Form",
+    "definition": "An electronic case report form (eCRF) is a digital, usually web-based, questionnaire for collecting data about a study participant.",
+    "sources": [
+      {
+        "label": "OpenClinica",
+        "url": "https://www.openclinica.com/blog/the-anatomy-of-an-electronic-case-report-form-ecrf/"
+      }
+    ],
+    "aliases": [
+      "eCRF",
+      "Electronic Case Report Form (eCRF)"
+    ]
+  },
+  {
+    "term": "Electronic data capture",
+    "definition": "Electronic data capture for clinical trials is using systems to collect trial data in electronic form as opposed to paper form.",
+    "sources": [
+      {
+        "label": "OpenClinica",
+        "url": "https://www.openclinica.com/blog/electronic-data-capture-for-clinical-trials-the-fundamentals/"
+      }
+    ],
+    "aliases": [
+      "EDC",
+      "Electronic data capture (EDC)"
+    ]
+  },
+  {
+    "term": "Electronic Health Record",
+    "definition": "An electronic health record (EHR) is a digital repository of a patient’s medical information that documents their entire healthcare journey in real time. Everything from diagnoses, medical history, medications and immunizations, to X-rays, laboratory results and clinical notes, is updated automatically so that doctors and providers have the most recent information when they access a patient’s EHR.",
+    "sources": [
+      {
+        "label": "ISO",
+        "url": "https://www.iso.org/healthcare/electronic-health-records"
+      }
+    ],
+    "aliases": [
+      "EHR",
+      "Electronic Health Record (EHR)"
+    ]
+  },
+  {
+    "term": "European Commision Joint Research Centre",
+    "definition": "European Commission's science and knowledge service.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q1500915"
+      }
+    ],
+    "aliases": [
+      "JRC",
+      "Joint Research Centre",
+      "Joint Research Centre (JRC)",
+      "European Commision Joint Research Centre (JRC)"
+    ]
+  },
+  {
+    "term": "European Reference Networks",
+    "definition": "The European Reference Networks (ERNs) are cross-border networks that bring together European hospital centres of expertise and reference to tackle rare, low prevalence and complex diseases and conditions requiring highly specialised healthcare.",
+    "sources": [
+      {
+        "label": "European Commission",
+        "url": "https://health.ec.europa.eu/rare-diseases-and-european-reference-networks/european-reference-networks_en"
+      }
+    ],
+    "aliases": [
+      "ERN",
+      "ERNs",
+      "European Reference Networks (ERNs)"
+    ]
+  },
+  {
+    "term": "Existing data",
+    "definition": "Any data that exist before researchers formulate their research hypothesis.",
+    "citation": "Weston SJ, Ritchie SJ, Rohrer JM, Przybylski AK. Recommendations for Increasing the Transparency of Analysis of Preexisting Data Sets. Advances in Methods and Practices in Psychological Science. 2019;2(3):214-227. doi:10.1177/2515245919848684",
+    "sources": [
+      {
+        "label": "Paper",
+        "url": "https://doi.org/10.1177/2515245919848684"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "FAIR Data Point",
+    "definition": "FAIR Data Points are used to describe datasets in a FAIR manner, with metadata standardized in accordance with DCAT-AP, and to make the datasets available through simple web protocols.",
+    "sources": [
+      {
+        "label": "Health-RI",
+        "url": "https://health-ri.atlassian.net/wiki/spaces/HNG/pages/997466980/Glossary"
+      }
+    ],
+    "aliases": [
+      "FDP",
+      "FAIR Data Point (FDP)"
+    ]
+  },
+  {
+    "term": "FAIR Data Station",
+    "definition": "The FAIR Data Station is a web application that allows you to create and manage metadata in a FAIR manner.",
+    "sources": [
+      {
+        "label": "FAIR by Design",
+        "url": "https://docs.fairbydesign.nl/docs/fairdatastation/introduction.html"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "FAIR Implementation Profile",
+    "definition": "The FIP is a collection of FAIR implementation choices made by a community of practice for each of the FAIR Principles. Community specific FAIR Implementation Profiles are themselves captured as FAIR datasets and are made openly available to other communities for reuse.",
+    "sources": [
+      {
+        "label": "GO FAIR",
+        "url": "https://www.go-fair.org/how-to-go-fair/fair-implementation-profile/"
+      }
+    ],
+    "aliases": [
+      "FIP",
+      "FAIR Implementation Profile (FIP)"
+    ]
+  },
+  {
+    "term": "FAIR-enabling resources",
+    "definition": "A FAIR Enabling Resource (or FER) is described as ‘any digital object that provides a function needed to achieve some aspect of “FAIRness” and is explicitly linked to one or more FAIR Principles’.",
+    "sources": [
+      {
+        "label": "FAIR Process Framework",
+        "url": "https://fairprocessframework.org/steps/step-6-8/"
+      }
+    ],
+    "aliases": [
+      "FER",
+      "FERs",
+      "FAIR-enabling resources (FERs)"
+    ]
+  },
+  {
+    "term": "FAIRification",
+    "definition": "FAIRification is the process of improving a dataset’s alignment with the FAIR (Findable, Accessible, Interoperable, and Reusable) principles. This can apply to both new data, where FAIR principles are integrated from the start, and to existing data, where efforts are made to enhance its findability, accessibility, interoperability, and reusability through modifications such as better documentation, metadata, and standardisation.",
+    "sources": [
+      {
+        "label": "Health-RI",
+        "url": "https://health-ri.atlassian.net/wiki/spaces/HNG/pages/997466980/Glossary"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Findable",
+    "definition": "Data and metadata that can be located by humans and machines. They should be assigned a\nglobally unique persistent identifier, be described with rich metadata, and ideally registered in a searchable catalogue or index.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/findable"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Funder",
+    "definition": "A person or an organization that provides money for a particular purpose.",
+    "sources": [
+      {
+        "label": "Oxford Learners Dictionaries",
+        "url": "https://www.oxfordlearnersdictionaries.com/definition/english/funder"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "GDPR",
+    "definition": "European Union regulation on the processing of personal data.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q1172506"
+      }
+    ],
+    "aliases": [
+      "General Data Protection Regulation",
+      "General Data Protection Regulation (GDPR)"
+    ]
+  },
+  {
+    "term": "Global Alliance for Genomics and Health",
+    "definition": "Formed in 2013, the Global Alliance for Genomics and Health (GA4GH) unites an international community dedicated to advancing human health through genomic data. We build technical standards and policy frameworks and tools that will expand responsible, voluntary, and secure use of genomic and other related health data.",
+    "sources": [
+      {
+        "label": "GA4GH",
+        "url": "https://www.ga4gh.org/about-us/"
+      }
+    ],
+    "aliases": [
+      "GA4GH",
+      "Global Alliance for Genomics and Health (GA4GH)"
+    ]
+  },
+  {
+    "term": "Hackathon",
+    "definition": "Event in which groups of software developers work at an accelerated pace.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q46855"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "High Value Datasets Implementing Regulation",
+    "definition": "Commission Implementing Regulation (EU) 2023/138 of 21 December 2022 laying down a list of specific high-value datasets and the arrangements for their publication and re-use.",
+    "sources": [
+      {
+        "label": "EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg_impl/2023/138/oj/eng"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Imaging data",
+    "definition": "Imaging data, as defined relevant to clinical care, registries, and clinical trials, are the test results obtained from imaging tests.",
+    "sources": [
+      {
+        "label": "NCATS",
+        "url": "https://toolkit.ncats.nih.gov/glossary/imaging-data/"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Indexed",
+    "definition": "Indexing is the process of collecting and organizing data or content in a system or database so that it can be easily and quickly searched, read and analyzed.",
+    "sources": [
+      {
+        "label": "Tundra",
+        "url": "https://www.tundra.nl/en/jargon/indexing/"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Informed Consent Form",
+    "definition": "In a clinical study, the informed consent form is the document used during the informed consent process that is the basis for explaining to potential subjects the potential risks and benefits of a study and the rights and responsibilities of the parties involved.",
+    "sources": [
+      {
+        "label": "NCATS",
+        "url": "https://toolkit.ncats.nih.gov/glossary/informed-consent-form/"
+      }
+    ],
+    "aliases": [
+      "ICF",
+      "Informed Consent Form (ICF)"
+    ]
+  },
+  {
+    "term": "Interoperable",
+    "definition": "The ability of organisations as well as software applications or devices from the same manufacturer or different manufacturers to interact towards mutually beneficial goals, involving the exchange of information and knowledge without changing the content of the data between these organisations, software applications or devices, through the processes they support.",
+    "sources": [
+      {
+        "label": "European Health Data Space",
+        "url": "https://www.european-health-data-space.com/European_Health_Data_Space_Article_2_(Proposal_3.5.2022).html"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Key Performance Indicator",
+    "definition": "Measurement of performance-related attributes that evaluates the success of an organization or of a particular activity, to be compared against benchmarks or expectations.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q860554"
+      }
+    ],
+    "aliases": [
+      "KPI",
+      "Key Performance Indicator (KPI)"
+    ]
+  },
+  {
+    "term": "Keywords",
+    "definition": "Word that deals with a topic in a text and that are used for topic development and topic searches.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q12310022"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "knowledge management",
+    "definition": "Process of creating, sharing, using and managing the knowledge and information of an organization.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q192060"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Knowledge Organization System",
+    "definition": "Generic term used in knowledge organization about authority files, classification schemes, thesauri, topic maps, ontologies etc.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q6423319"
+      }
+    ],
+    "aliases": [
+      "KOS",
+      "Knowledge Organization System (KOS)"
+    ]
+  },
+  {
+    "term": "Linked open data",
+    "definition": "Set of principles for publishing and linking data on the Internet in a way that is both human and machine-readable, and freely available for anyone to access/use.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/linked-open-data"
+      }
+    ],
+    "aliases": [
+      "Linked (open) data",
+      "LOD"
+    ]
+  },
+  {
+    "term": "Machine-actionable data",
+    "definition": "Machine-readable dataset or file format that is structured in such a way as to allow machines to take automated programmed actions as a result.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/machine-actionable"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Machine-readable data",
+    "definition": "In a form that can be used and understood by a computer.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/machine-readable"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Material Transfer Agreement",
+    "definition": "A contract that governs the transfer of tangible research materials between two organizations when the recipient intends to use the materials for their own research purposes.",
+    "sources": [
+      {
+        "label": "Mayo Clinic",
+        "url": "https://www.mayo.edu/research/institutional-review-board/definition-terms"
+      }
+    ],
+    "aliases": [
+      "MTA",
+      "Material Transfer Agreement (MTA)"
+    ]
+  },
+  {
+    "term": "Medical Research Ethics Committees",
+    "definition": "Assesses medical research involving human subjects under the Medical Research Involving Human Subjects Act (WMO). The purpose of this assessment is to safeguard the rights, safety, and well-being of the participants. Research may only be conducted after an approved METC has issued a positive recommendation.",
+    "sources": [
+      {
+        "label": "Health-RI",
+        "url": "https://health-ri.atlassian.net/wiki/spaces/HNG/pages/997466980/Glossary"
+      }
+    ],
+    "aliases": [
+      "MREC",
+      "Medical Research Ethics Committees (MREC)"
+    ]
+  },
+  {
+    "term": "Medical Research Involving Human Subjects Act",
+    "definition": "Medical scientific research involving human participant is covered by the Medical Research Involving Human Subjects Act (WMO) if it involves human research participants and if people are being subjected to actions or if rules of behaviour are imposed on them.",
+    "sources": [
+      {
+        "label": "CCMO",
+        "url": "https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/laws/medical-research-involving-human-subjects-act-wmo"
+      }
+    ],
+    "aliases": [
+      "WMO",
+      "Medical Research Involving Human Subjects Act / Wet medisch-wetenschappelijk onderzoek met mensen (WMO)",
+      "Wet medisch-wetenschappelijk onderzoek met mensen"
+    ]
+  },
+  {
+    "term": "Meta-analysis",
+    "definition": "Meta-analysis, in statistics, approach to synthesizing the results of separate but related studies. In general, meta-analysis involves the systematic identification, evaluation, statistical synthesis, and interpretation of results from multiple studies.",
+    "sources": [
+      {
+        "label": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/topic/meta-analysis"
+      }
+    ],
+    "aliases": [
+      "Meta analysis"
+    ]
+  },
+  {
+    "term": "Metadata",
+    "definition": "Data about data. Defines and describes the characteristics of other data. It is used to improve the understanding and use of the data.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/metadata"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Metadata aggregator",
+    "definition": "Metadata aggregators facilitate the connection of disparate sources of data and/or provide the means for others to connect to the data stored in their repositories through common content identifiers.",
+    "sources": [
+      {
+        "label": "SVTA",
+        "url": "https://wiki.svta.org/metadata-aggregator/"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Metadata catalogue",
+    "definition": "Catalogue containing metadata records that enables services to find data and services.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/metadata-catalogue"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Metadata elements",
+    "definition": "Unit of information that is used to describe a piece of data.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/metadata-element"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Metadata model",
+    "definition": "Metadata models serve as frameworks to organize, classify, and structure metadata, ensuring its usability and consistency.",
+    "sources": [
+      {
+        "label": "data.world",
+        "url": "https://docs.data.world/en/290706-an-overview-of-metadata-modeling.html"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Methontology",
+    "definition": "A Methodology to Build Ontologies from Scratch.",
+    "citation": "Fernández-López, Mariano & Gomez-Perez, Asuncion & Juristo, Natalia. (1997). METHONTOLOGY: from ontological art towards ontological engineering. Engineering Workshop on Ontological Engineering (AAAI97).",
+    "sources": [
+      {
+        "label": "Paper",
+        "url": "https://oa.upm.es/5484/1/METHONTOLOGY_.pdf"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Nanopublication",
+    "definition": "Small knowledge graph snippet with metadata that is to be treated as an independent (scientific) publication.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q57814310"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "National Health Data Catalogue",
+    "definition": "The National Health Data Catalogue is an overview of health & life sciences research data in the Netherlands. It contains metadata about the available datasets, meaning it contains the description of the datasets and other resources.",
+    "sources": [
+      {
+        "label": "Nationaal Gezondheidsdataportaal",
+        "url": "https://www.healthdata.nl/en/services/national-health-data-catalogue"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "National Institutes of Health",
+    "definition": "The National Institutes of Health (NIH), a part of the U.S. Department of Health and Human Services, is the nation’s medical research agency — making important discoveries that improve health and save lives.",
+    "sources": [
+      {
+        "label": "NIH",
+        "url": "https://www.nih.gov/about-nih"
+      }
+    ],
+    "aliases": [
+      "NIH",
+      "National Institutes of Health (NIH)"
+    ]
+  },
+  {
+    "term": "Nederlandse Federatie van Universitair Medische Centra",
+    "definition": "The NFU (Nederlandse Federatie van Universitair Medische Centra) is the umbrella organisation representing the eight university medical centres in the Netherlands.",
+    "sources": [
+      {
+        "label": "NFU",
+        "url": "https://www.nfu.nl/english/"
+      }
+    ],
+    "aliases": [
+      "NFU",
+      "Nederlandse Federatie van Universitair Medische Centra (NFU)"
+    ]
+  },
+  {
+    "term": "Non-structured metadata",
+    "definition": "Unstructured metadata is information about unstructured data (emails, documents, videos, images, PDFs, etc.) that does not follow a rigid, predefined format. It provides context or descriptive details that help identify, understand, or manage the data, yet, unlike structured metadata, it is often inconsistent, loosely formatted, and may be embedded within the data itself.",
+    "sources": [
+      {
+        "label": "komprise",
+        "url": "https://www.komprise.com/glossary_terms/unstructured-metadata/"
+      }
+    ],
+    "aliases": [
+      "unstructured metadata"
+    ]
+  },
+  {
+    "term": "Omics",
+    "definition": "Omics is the collective characterization and quantification of entire sets of biological molecules and the investigation of how they translate into the structure, function, and dynamics of an organism or group of organisms.",
+    "sources": [
+      {
+        "label": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Omics"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Ontology",
+    "definition": "Shared and standardised list of words, terms and phrases to describe components of a particular discipline or domain, along with a taxonomy of their relations. Compare this to a controlled vocabularies, which tend not to include a structure of relations between their terms. Ontologies are typically developed by domain-specific institutions or communities to aid in the precise referencing of elements.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/ontology"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Open access",
+    "definition": "Open access is the practice of providing online access to scientific information that is free of charge and reusable to the user. This includes both peer-reviewed publications and data underlying publications, or other datasets.",
+    "sources": [
+      {
+        "label": "European Commission",
+        "url": "https://rea.ec.europa.eu/open-science_en"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Open data",
+    "definition": "Data that are accessible, machine-readable, usable, intelligible, and freely shared. Open data can be freely used, re-used, built on, and redistributed by anyone – subject only, at most, to the requirement to attribute and sharealike.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/open-data"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Opt-out consent",
+    "definition": "Opt-out consent is a model where an individual’s consent is assumed by default, and they must take action to decline or withdraw participation or data usage if the do not agree.",
+    "sources": [
+      {
+        "label": "CERTINAL",
+        "url": "https://www.certinal.com/glossary/what-is-opt-out-consent/"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Patient Health Record",
+    "definition": "A personal health record stores information about your health and care online. Both you and health professionals who care for you can add information to it.",
+    "sources": [
+      {
+        "label": "NHS",
+        "url": "https://www.nhs.uk/nhs-app/help/health-records-in-the-nhs-app/personal-health-records/"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Persistent identifier",
+    "definition": "Long-lasting digital reference to an object that gives information about that object regardless of what happens to that object. Developed to address link rot, a persistent identifier can be resolved to provide an appropriate representation of an object whether that object changes its online location or goes offline.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/persistent-identifier"
+      }
+    ],
+    "aliases": [
+      "PID",
+      "Persistent Identifier (PID)"
+    ]
+  },
+  {
+    "term": "Personal data",
+    "definition": "Personally identifiable information - Data that relate to a living individual who can be identified from those data. Identification can either come from the data directly (usually if names are included in the data) or by combining the data with other readily available data (such as combining the data with a key file that contains names or combining demographic information in the dataset with publicly available data).",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/personally-identifiable-information"
+      }
+    ],
+    "aliases": [
+      "Personally identifiable information"
+    ]
+  },
+  {
+    "term": "Pseudonymous data",
+    "definition": "‘pseudonymisation’ means the processing of personal data in such a manner that the personal data can no longer be attributed to a specific data subject without the use of additional information, provided that such additional information is kept separately and is subject to technical and organisational measures to ensure that the personal data are not attributed to an identified or identifiable natural person.",
+    "sources": [
+      {
+        "label": "EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "RDF Triplestore",
+    "definition": "A triplestore or RDF store is a purpose-built database for the storage and retrieval of triples through semantic queries.",
+    "sources": [
+      {
+        "label": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Triplestore"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Registry",
+    "definition": "Set of records with a single structure arranged according to a criterion, providing an authoritative list of one kind of information.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q19386377"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Relational database",
+    "definition": "Relational database, database in which all data are represented in tabular form.",
+    "sources": [
+      {
+        "label": "Encyclopaedia Britannica",
+        "url": "https://www.britannica.com/technology/relational-database"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Repository",
+    "definition": "Physical or digital storage location that can house, preserve, manage, and provide access to many types of digital and physical materials in a variety of formats. Materials in online repositories are curated to enable search, discovery, and reuse. There must be sufficient control for the physical and digital material to be authentic, reliable, accessible and usable on a continuing basis.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/repository"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Research Data Management",
+    "definition": "Storage, access and preservation of data created or collected in the course of research. Research data management practices cover the entire lifecycle of the data, from planning the investigation to conducting it, and from backing up data as it is created and used to long term preservation of data deliverables after the research investigation has concluded.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/research-data-management"
+      }
+    ],
+    "aliases": [
+      "RDM",
+      "Research Data Management (RDM)"
+    ]
+  },
+  {
+    "term": "Research software engineer",
+    "definition": "Research Software Engineers (RSEs; also known as Research Software Developers, HPC Programmers, Scientific Programmers, …) combine academic research experience with expertise in good software engineering principles.",
+    "sources": [
+      {
+        "label": "University College London (UCL)",
+        "url": "https://www.ucl.ac.uk/advanced-research-computing/research-software-engineers"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Resource Description Framework",
+    "definition": "RDF is a standard model for data interchange on the Web. RDF has features that facilitate data merging even if the underlying schemas differ, and it specifically supports the evolution of schemas over time without requiring all the data consumers to be changed. RDF extends the linking structure of the Web to use URIs to name the relationship between things as well as the two ends of the link (this is usually referred to as a “triple”). Using this simple model, it allows structured and semi-structured data to be mixed, exposed, and shared across different applications.",
+    "sources": [
+      {
+        "label": "World Wide Web Consortium (W3C)",
+        "url": "https://www.w3.org/RDF/"
+      }
+    ],
+    "aliases": [
+      "RDF",
+      "Resource Description Framework (RDF)"
+    ]
+  },
+  {
+    "term": "Resource level metadata",
+    "definition": "A list of core metadata properties chosen for the accurate and consistent identification of a resource for citation and retrieval purposes, along with recommended use instructions. The resource that is being identified can be of any kind, but it is typically a dataset.",
+    "sources": [
+      {
+        "label": "DataCite Metadata Schema",
+        "url": "https://schema.datacite.org/meta/kernel-3.0/doc/DataCite-MetadataKernel_v3.0.pdf"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Restricted access",
+    "definition": "Although data can often be shared openly, sometimes access needs to be restricted. This means that your data is only shared with interested parties under well-defined conditions. In line with the FAIR-principles, restricted access data should be made 'as open as possible and as closed as necessary'.",
+    "sources": [
+      {
+        "label": "University of Groningen",
+        "url": "https://www.rug.nl/digital-competence-centre/research-data/archive-and-publish/make-your-data-available-under-restricted-access"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Retention period",
+    "definition": "Metadata operation to create state information for a data object that defines the date when retention of the data object should be evaluated. The retention period must have an associated disposition policy for deciding what to do when the retention period expires.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/retention-period"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Reusable",
+    "definition": "One of the four FAIR principles. Reusable data is data that can be utilised to replicate research findings and/or can be analysed in settings outside of the original context in which it was produced or collected. The reusability of research data can depend on its format, licensing, and the richness of the relevant metadata.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/reusable"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Rich metadata",
+    "definition": "In creating FAIR digital resources, metadata can (and should) be generous and extensive, including descriptive information about the context, quality and condition, or characteristics of the data. Rich metadata allow a computer to automatically accomplish routine and tedious sorting and prioritising tasks that currently demand a lot of attention from researchers.",
+    "sources": [
+      {
+        "label": "GO FAIR",
+        "url": "https://www.go-fair.org/fair-principles/f2-data-described-rich-metadata"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Secondary data",
+    "definition": "Secondary data are defined as data that have been collected for a different purpose (e.g., census) or to answer a given research question (e.g., collected for the purposes of another research project), which is then made available to be used by another researcher or to answer a different research question.",
+    "sources": [
+      {
+        "label": "University of BATH",
+        "url": "https://www.bath.ac.uk/guides/working-with-secondary-data"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Semantic model",
+    "definition": "A semantic model is a set of machine-interpretable representations used to model an area of knowledge or some part of the world, including software. Examples of such models are ontologies that embody some community agreement, logic-based representations, etc. Depending upon the framework or language used for modelling, different terminologies exist for denoting the building blocks of semantic models.",
+    "sources": [
+      {
+        "label": "World Wide Web Consortium (W3C)",
+        "url": "https://www.w3.org/TR/sawsdl/"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Semanticscience Integrated Ontology",
+    "definition": "The semanticscience integrated ontology (SIO) provides a simple, integrated upper level ontology (types, relations) for consistent knowledge representation across physical, processual and informational entities",
+    "sources": [
+      {
+        "label": "Bioportal",
+        "url": "https://bioportal.bioontology.org/ontologies/SIO"
+      }
+    ],
+    "aliases": [
+      "SIO",
+      "Semanticscience Integrated Ontology (SIO)"
+    ]
+  },
+  {
+    "term": "Sensitive data",
+    "definition": "Data that must be protected against unintended access or disclosure. The exact scope of sensitive data varies depending upon applicable laws and policies.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/sensitive-data"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Sensitive data",
+    "definition": "Data that must be protected against unintended access or disclosure. The exact scope of sensitive data varies depending upon applicable laws and policies.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/sensitive-data"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Sociodemographic data",
+    "definition": "Sociodemographic data is information about a person’s social background, such as their education, religion and employment. It also includes demographic characteristics such as age, gender, income, ethnicity and race.",
+    "sources": [
+      {
+        "label": "University of Ottawa Heart Institute",
+        "url": "https://www.ottawaheart.ca/patients-visitors/quality-care-and-patient-services/sociodemographic-data#what-is-sociodemographic-data"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Standardisation",
+    "definition": "Development and implementation of technical standards based on the consensus of different parties.",
+    "sources": [
+      {
+        "label": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q369577"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Structural metadata",
+    "definition": "* Computing.  Metadata type that tells a computer how to assemble a digital object.\n* Information. Type of metadata that indicates how compound objects are put together.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/structural-metadata"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Structured metadata",
+    "definition": "Structured metadata refers to metadata that is organized in a predefined and consistent format, often using standardized structures or schemas to ensure uniformity and interoperability.",
+    "sources": [
+      {
+        "label": "The Metadata Editor",
+        "url": "https://worldbank.github.io/metadata-editor-docs/intro_metadata_standards.html#structured-metadata"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Subject Information Sheet",
+    "definition": "A document provided to potential research participants that clearly and comprehensively explains the purpose, procedures, risks, benefits, data use (including privacy and data protection), and voluntary nature of a study in plain language, enabling them to make an informed decision about whether to participate. It typically includes study‑specific details (what participation involves) and general information about rights, data handling, and consent, and is usually provided alongside the consent form for review by ethics committees.",
+    "sources": [
+      {
+        "label": "nWMO",
+        "url": "https://nwmostudies.nl/wp-content/uploads/sites/15/2025/01/DCRF-template-subject-information-for-nWMO-research-15Jan2025.docx"
+      },
+      {
+        "label": "CCMO",
+        "url": "https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/e-information-research-participants/e1.-information-sheet-and-consent-form-research-participants/e1b.-template-subject-information-sheet-for-research-participants--16-years-of-age-adults"
+      }
+    ],
+    "aliases": [
+      "SIS",
+      "Subject Information Sheet (SIS)"
+    ]
+  },
+  {
+    "term": "Trusted repository",
+    "definition": "A trusted digital repository is one whose mission is to provide reliable, long-term access to managed digital resources to its designated community, now and in the future.",
+    "sources": [
+      {
+        "label": "OCLC",
+        "url": "https://www.oclc.org/content/dam/research/activities/trustedrep/repositories.pdf"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Wet geneeskundige behandelingsovereenkomst",
+    "definition": "The Dutch Medical Treatment Contracts Act (WGBO) regulates the relationship between patients and care providers. Among other things the WGBO stipulates that those involved in medical scientific research have to be adequately informed about the research and must give their legally valid permission for their data to be accessed. The WGBO is applicable to medical scientific research that is not covered by the scope of the WMO, the Embryo Act, the CTR, the MDR and the IVDR. However, the WGBO may also be applicable in addition to the laws and regulations mentioned above.",
+    "sources": [
+      {
+        "label": "CCMO",
+        "url": "https://english.ccmo.nl/investigators/legal-framework-for-medical-scientific-research/laws/dutch-medical-treatment-contracts-act"
+      }
+    ],
+    "aliases": [
+      "WGBO",
+      "Wet geneeskundige behandelingsovereenkomst (WGBO)"
+    ]
+  }
+]

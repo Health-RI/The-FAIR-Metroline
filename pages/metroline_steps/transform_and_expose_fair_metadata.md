@@ -3,6 +3,7 @@ title: Transform and expose FAIR (meta)data
 permalink: /metroline_steps/transform_and_expose_fair_metadata
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 

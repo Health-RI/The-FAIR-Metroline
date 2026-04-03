@@ -3,6 +3,7 @@ title: Organise training
 permalink: /metroline_steps/organise_training
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 

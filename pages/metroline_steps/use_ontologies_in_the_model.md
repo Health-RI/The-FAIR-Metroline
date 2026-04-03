@@ -3,6 +3,7 @@ title: Use ontologies in the model
 permalink: /metroline_steps/use_ontologies_in_the_model
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 

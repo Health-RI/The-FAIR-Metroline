@@ -5,6 +5,7 @@ permalink: /metroline_steps/register_resource_level_metadata
 
 ***Disclaimer:** This FAIR Metroline Step focuses solely on the registration of metadata. It does not cover the technical details of metadata schemas or FAIR Data Point, both of which will be detailed in subsequent FAIR Metroline Steps.*
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 

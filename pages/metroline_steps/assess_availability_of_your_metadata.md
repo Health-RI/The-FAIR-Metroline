@@ -3,6 +3,7 @@ title: Assess availability of your metadata
 permalink: /metroline_steps/assess_availability_of_your_metadata
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 
@@ -15,7 +16,7 @@ Metadata refers to the contextual information about a resource (e.g. a dataset),
 
 * **Descriptive metadata.** This is the type of metadata you might be most familiar with as it is often collected in repositories such as Zenodo (see the example of [how Zenodo describes the resources](https://help.zenodo.org/docs/deposit/describe-records/) on its repository). This generic metadata includes details on what the resource is about (e.g., data from patient health records), who created it (e.g., a research team at Radboudumc) and when it was collected. Typically, it also discloses information about the possible uses of the resource (e.g., applicable licensing) and access restrictions (e.g., available for public use/restricted access).
 * **Administrative metadata.** This refers to how the resource came to be (provenance of the data, [FAIR principle R1.2](https://www.go-fair.org/fair-principles/r1-2-metadata-associated-detailed-provenance/)), what protocols were followed and what tools were used. The purpose of this metadata is to ensure that you, your colleagues or others can reproduce the initial research.
-* **Structural metadata.** Depending on the type of resource, this refers to a detailed description of your resource that goes beyond the generic information explained above. For instance, in the context of a dataset containing data collected from a questionnaire, content metadata could include the questions asked and the allowed range of values. This type of metadata is also often described in a codebook or data dictionary.
+* **Structural metadata.** Depending on the type of resource, this refers to a detailed description of your resource that goes beyond the generic information explained above. For instance, in the context of a dataset containing data collected from a questionnaire, this metadata could include the questions asked and the allowed range of values. This type of metadata is also often described in a codebook or data dictionary.
 
 In this step, the focus will be on assessing the availability of your metadata. This involves identifying and collecting all types of metadata gathered for your resource, checking its quality and ensuring it is as accurate and complete as possible.
 

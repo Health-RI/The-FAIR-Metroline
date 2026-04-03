@@ -3,8 +3,8 @@ title: Apply common data elements
 permalink: /metroline_steps/apply_common_data_elements
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
-
 {% include development_status.html step=current_step %}
 
 >***The use of Common Data Elements (CDEs) can facilitate cross study comparisons, data aggregation and meta-analyses, simplify training and operations, improve overall efficiency, promote interoperability between different systems, and improve the quality of data collection. [Sheehan et al., 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC5133155/)***

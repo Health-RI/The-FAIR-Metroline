@@ -3,6 +3,7 @@ title: Define access conditions
 permalink: /metroline_steps/define_access_conditions
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 

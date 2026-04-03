@@ -50,3 +50,5 @@ subitems:
         url: /metroline_steps/query_over_resources
       - title: Assess FAIRness
         url: /metroline_steps/assess_fairness
+  - title: Glossary
+    url: /glossary

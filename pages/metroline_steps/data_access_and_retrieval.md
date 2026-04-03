@@ -3,6 +3,7 @@ title: Data access and retrieval
 permalink: /metroline_steps/data_access_and_retrieval
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 
