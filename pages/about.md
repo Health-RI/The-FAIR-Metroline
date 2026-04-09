@@ -16,29 +16,25 @@ The FAIR Metroline makes all its documents and data available under a [CC-BY](ht
 
 
 ## Media kit
-**Images of the FAIR Metroline with the models and steps**
+
+### Metroline Diagrams
 <script src="{{ '/assets/js/downloadMetroline.js' | relative_url }}"></script>
-* <a href="#" onclick="downloadMetrolineSVG({ stripAnchors: true }); return false;">FAIR Metroline main, no clickable links</a>
-* <a href="#" onclick="downloadMetrolineSVG({ stripAnchors: false }); return false;">FAIR Metroline main, clickable links</a>
+* <a href="#" onclick="downloadMetrolineSVG({ stripAnchors: true }); return false;">Main diagram (static)</a>
+* <a href="#" onclick="downloadMetrolineSVG({ stripAnchors: false }); return false;">Main diagram (with clickable links)</a>
 
-**Logos**<br>
-_Image only_
-* [FAIR Metroline logo, round, no text]({{site.baseurl}}/assets/img/main_logo.png)
-* [FAIR Metroline logo, square, no text]({{site.baseurl}}/assets/img/main_logo_square.png)
+### Logos
 
-_With text, transparent background_
-* [FAIR Metroline logo, slogan, url]({{site.baseurl}}/assets/img/media_kit/transp_main_logo_text_url.png)
-* [FAIR Metroline logo wide, slogan]({{site.baseurl}}/assets/img/media_kit/transp_main_logo_wide_text.png)
-* [FAIR Metroline logo wide, slogan, url]({{site.baseurl}}/assets/img/media_kit/transp_main_logo_wide_text_url.png)
+| Format | Transparent | White Background |
+|--------|-------------|------------------|
+| **Round** (image only) | [PNG]({{site.baseurl}}/assets/img/main_logo.png) | - |
+| **Square** (image only) | [PNG]({{site.baseurl}}/assets/img/main_logo_square.png) | - |
+| **Standard** (+ slogan + URL) | [PNG]({{site.baseurl}}/assets/img/media_kit/transp_main_logo_text_url.png) | [PNG]({{site.baseurl}}/assets/img/media_kit/white_main_logo_text_url.png) |
+| **Wide** (+ slogan) | [PNG]({{site.baseurl}}/assets/img/media_kit/transp_main_logo_wide_text.png) | [PNG]({{site.baseurl}}/assets/img/media_kit/white_main_logo_wide_text.png) |
+| **Wide** (+ slogan + URL) | [PNG]({{site.baseurl}}/assets/img/media_kit/transp_main_logo_wide_text_url.png) | [PNG]({{site.baseurl}}/assets/img/media_kit/white_main_logo_wide_text_url.png) |
 
-_With text, white background_
-* [FAIR Metroline logo, slogan, url]({{site.baseurl}}/assets/img/media_kit/white_main_logo_text_url.png)
-* [FAIR Metroline logo wide, slogan]({{site.baseurl}}/assets/img/media_kit/white_main_logo_wide_text.png)
-* [FAIR Metroline logo wide, slogan, url]({{site.baseurl}}/assets/img/media_kit/white_main_logo_wide_text_url.png)
-
-**Infographics**
+### Infographics
+* [One-pagers (ZIP)]({{site.baseurl}}/assets/img/media_kit/one-pagers/one-pagers.zip) - Step-by-step content summaries
 * Metroline infographic - coming soon
-* [Metroline content one-pagers, zip file]({{site.baseurl}}/assets/img/media_kit/one-pagers/one-pagers.zip)
 
 
 
