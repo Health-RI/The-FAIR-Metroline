@@ -6,14 +6,20 @@ custom_js: metro-timeline
 ---
 
 ## Background
-As a researcher, you may need to understand how FAIR your data currently is 
-to comply with institutional requirements or to identify areas for improvement.
+As a researcher, you may need to understand how FAIR your data currently is to comply with institutional requirements or to identify areas for improvement in how your data is described, accessed, and reused.
 
 ## Scenario Overview
 
-You need to assess the current FAIRness level of your dataset to determine whether it meets your institutional requirements and identify specific areas where improvements can be made.
+You need to determine the current FAIRness level of your dataset to check compliance with institutional requirements and identify specific areas for improvement.
 
-{% include scenario-overview.html complexity="Low" experts="Data Steward" outcome="FAIRness Assessment Report" %}
+{% include scenario-overview.html
+  complexity="Low"
+  experts="Data Steward"
+  outcome="FAIRness Assessment Report"
+  complexity_tooltip="Uses existing FAIR self-assessment tools and guidance from a data steward, requiring minimal technical effort."
+  experts_tooltip="Requires a data steward or other expert with knowledge of FAIR principles. Experience with FAIR assessment tools is a plus."
+  outcome_tooltip="A report with a baseline FAIRness score and actionable recommendations for improving the data."
+%}
 
 ## Your Journey
 

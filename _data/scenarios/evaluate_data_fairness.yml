@@ -4,9 +4,7 @@
   description: "Start by identifying your goal: assessing how FAIR your dataset currently is to determine whether it meets your institutional requirements. Understanding baseline FAIRness helps you prioritize improvements."
   examples:
     - role: "Researcher"
-      description: "My institute has set minimal FAIR requirements for data. I want to get an indication if I meet these requirements before submission."
-    - role: "PhD Candidate"
-      description: "I need to understand the current FAIRness of my research data to plan improvements before my defense."
+      description: "I reviewed the FAIR requirements from my institute and planned publication venue, then checked which aspects of my dataset are most relevant to assess, such as identifiers, metadata, access conditions, and licensing."
 
 - step_id: 3
   status: "upcoming"
@@ -14,7 +12,7 @@
   description: "Reach out to a FAIR data steward who brings expertise in FAIR principles and assessment tools. Having professional support ensures accurate evaluation and actionable recommendations."
   examples:
     - role: "Researcher"
-      description: "I contacted our department's data steward who helped me understand which FAIR assessment tool would be most appropriate for my situation."
+      description: "I discussed my dataset, repository options, and metadata with a data steward, who helped me decide which FAIR criteria were most relevant and which assessment approach fit my situation."
 
 - step_id: 5
   status: "upcoming"
@@ -22,10 +20,8 @@
   description: "Together with your data steward, conduct a pre-FAIR assessment using an appropriate tool (like ARDC FAIR self-assessment or FAIR-Checker) to evaluate how well your data meets FAIR principles and identify specific gaps."
   examples:
     - role: "Researcher"
-      description: "We're using the ARDC FAIR self-assessment tool, which provides both a FAIRness score and specific suggestions for improvement."
-    - role: "Data Manager"
-      description: "I'm running multiple datasets through automated FAIR assessment to get a baseline for our repository's overall FAIRness."
-
+      description: "I completed a FAIR assessment of my dataset and metadata using FAIR-Checker, then reviewed the results to identify gaps such as limited metadata, missing persistent identifiers, or unclear reuse conditions."
+      
 - title: "FAIR assessment complete"
   status: "destination"
   icon: "🎯"
