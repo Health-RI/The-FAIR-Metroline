@@ -38,6 +38,7 @@
       <div class="metro-content">
         <h3 class="metro-title">
           {% if display_icon %}{{ display_icon }} {% endif %}{{ display_title }}
+          {% if stop.tags %}{% for tag in stop.tags %}<span class="metro-tag">{{ tag }}</span>{% endfor %}{% endif %}
         </h3>
         {% if stop.short_description or stop.description or stop.examples or stop.link %}
         <button class="metro-toggle" aria-expanded="false">

@@ -38,21 +38,31 @@
     - role: "Researcher at University Medical Center"
       description: "I ensures all necessary metadata fields necessary for the HRI catalogue are filled. This metadata will be registered in the local FDP as part of the next step."
 
+- step_id: 19
+  status: "suggestion"
+  tags: ["Platform specific"]
+  short_description: "Ensure there is a service (such as a FAIR Data Point) available to publish your metadata to a catalogue."
+  description: ""
+  examples:
+    - role: "Researcher at University Medical Center"
+      description: "I check with my data steward that there is a local FDP available that uses the Health-RI Core Metadata schema, which is required for publishing to the National Health Data Catalogue."
+
+
 - step_id: 20
-  status: "upcoming"
-  short_description: "Transform mapped data and metadata into machine-readable formats such as RDF and publish them via platforms like FAIR Data Points, making them discoverable, accessible and interoperable under defined access conditions."
-  description: "The metadata is made available in the FDP, allowing it to be harvested by the National Health Data Catalogue."
+  status: "suggestion"
+  tags: ["Platform specific"]
+  short_description: "Transform mapped data and metadata into machine-readable formats such as RDF and publish them via platforms (e.g., FAIR Data Point), making them discoverable, accessible and interoperable under defined access conditions."
+  description: ""
   examples:
     - role: "Researcher at University Medical Center"
       description: "I give the metadata to the data steward who makes the data available in the FDP."
 
-- title: "Your metadata is now Findable in the National Health Data Catalogue"
+- title: "Your metadata is now Findable in a catalogue"
   status: "destination"
   icon: "🎯"
   short_description: "Success! Your dataset can now be discovered by others."
   description: "Congratulations! Your dataset is now registered and findable in the catalog. Researchers looking for data like yours can now discover it and understand what you have available, opening doors for potential collaborations and data reuse."
+  examples:
+    - role: "Researcher at University Medical Center"
+      description: "I made the metadata available in the local FAIR Data Point and therefore Findable in the National Health Data Catalogue."
 
-- step_id: 19
-  status: "suggestion"
-  short_description: "Ensure there is a local FDP which uses the Health-RI Core Metadata schema"
-  description: "This scenario assumes the FDP is already in place"

@@ -153,6 +153,19 @@
   font-weight: 500;
 }
 
+.metro-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: $menu-unselected-bg;
+  color: $primary;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  letter-spacing: 0.03em;
+}
+
 .example-tab:hover {
   border-color: #328cc1;
   background: #f8fbfd;
@@ -290,7 +303,7 @@
 }
 
 .metro-stop.suggestion .metro-title::before {
-  content: "Optional: ";
+  content: "";
   font-style: italic;
   font-weight: normal;
 }
