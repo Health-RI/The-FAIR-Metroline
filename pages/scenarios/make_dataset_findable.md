@@ -5,13 +5,23 @@ page_id: make_dataset_findable
 custom_js: metro-timeline
 ---
 
-## Background
+## Scenario Overview
 As a researcher, you may need to make your dataset Findable and 
 Accessible because of funder or institutional requirements.
 
-## Scenario Overview
 
-You need to comply with your institution's FAIR data policy and make your dataset available in the institutional catalog.
+
+<div class="metro-examples">
+  <h4>Examples</h4>
+  <div class="example-tabs">
+    <button class="example-tab active" data-example="1">Researcher at University Medical Center</button>
+  </div>
+  <div class="example-content">
+    <div class="example-panel active" data-example="1">
+      <p>I need to comply with my UMC's FAIR data policy and make my dataset available in the National Health Data Catalogue.</p>
+    </div>
+  </div>
+</div>
 
 {% include scenario-overview.html
   complexity="Medium"
