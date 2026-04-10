@@ -3,6 +3,7 @@ title: Use ontologies in the model
 permalink: /metroline_steps/use_ontologies_in_the_model
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 
@@ -95,5 +96,4 @@ One interesting educational resource is the [Ontology mapping with Ontology Xref
 An interesting resource is the [OBO Semantic Engineering Training](https://oboacademy.github.io/obook/) (Open Biological and Biomedical Ontologies Organized Knowledge). Although developed for a particular project, its content offers a practical demonstration of how to address a genuine case.
 
 ## Suggestions
-{% include metroline_steps/suggestions_development.html %}
-
+{% include metroline_steps/suggestions_development.html src=page.title %}

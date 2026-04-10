@@ -3,6 +3,7 @@ title: Obtain informed consent
 permalink: /metroline_steps/obtain_informed_consent
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 
@@ -189,5 +190,4 @@ Available training and pedagogical resources include:
 * Utrecht University Research Data Management Support: [How to write an informed consent form](https://www.uu.nl/en/research/research-data-management/guides/legal-considerations/how-to-write-an-informed-consent-form)
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
-
+{% include metroline_steps/suggestions_released.html src=page.title%}

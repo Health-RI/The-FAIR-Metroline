@@ -3,8 +3,8 @@ title: Create or reuse a semantic (meta)data model
 permalink: /metroline_steps/create_or_reuse_a_semantic_model
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
-
 {% include development_status.html step=current_step %}
 
 >***'Generating a semantic model is often the most time-consuming step of data FAIRification. However, we expect the modelling effort to diminish as more and more models are made available for reuse over time. Thus, it is important to first check whether a semantic model already exists for the data and the metadata that may be reused. For cases where no semantic model is available a new one needs to be generated.' [Jacobsen et al. Data Intelligence (2020)](https://direct.mit.edu/dint/article/2/1-2/56/9988/A-Generic-Workflow-for-the-Data-FAIRification)***
@@ -195,4 +195,4 @@ The [Health-RI metadata schema](https://github.com/Health-RI/health-ri-metadata/
 * Some documentation and e-learning materials can be found in the [Interoperable Europe Portal](https://interoperable-europe.ec.europa.eu/collection/iopeu-monitoring)
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
+{% include metroline_steps/suggestions_released.html src=page.title%}

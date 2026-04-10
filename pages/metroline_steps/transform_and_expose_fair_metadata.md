@@ -3,6 +3,7 @@ title: Transform and expose FAIR (meta)data
 permalink: /metroline_steps/transform_and_expose_fair_metadata
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 
@@ -116,4 +117,4 @@ More information:
 * FAIR Cookbook - [An inventory of tools for converting data to RDF](https://faircookbook.elixir-europe.org/content/recipes/interoperability/rdf-conversion.html)
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
+{% include metroline_steps/suggestions_released.html src=page.title%}

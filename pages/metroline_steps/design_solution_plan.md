@@ -3,6 +3,7 @@ title: Design solution plan
 permalink: /metroline_steps/design_solution_plan
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 
@@ -100,4 +101,4 @@ This section should show the step applied in a real project. Links to demonstrat
 * [Tutorial: Insights in FAIRification planning](https://fairification-planning.github.io/)
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
+{% include metroline_steps/suggestions_released.html src=page.title%}

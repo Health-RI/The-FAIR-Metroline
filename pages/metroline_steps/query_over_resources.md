@@ -2,6 +2,8 @@
 title: Query (use) over resources
 permalink: /metroline_steps/query_over_resources
 ---
+
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 
@@ -128,5 +130,4 @@ See [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_
 * [Apache Jena SPARQL Tutorial](https://jena.apache.org/tutorials/sparql.html). This SPARQL tutorial provides a concise introduction to the language, illustrating its major features through examples without aiming for full coverage.
 
 ## Suggestions
-{% include metroline_steps/suggestions_development.html %}
-
+{% include metroline_steps/suggestions_development.html src=page.title %}

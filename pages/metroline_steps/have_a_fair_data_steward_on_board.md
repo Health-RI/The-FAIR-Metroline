@@ -3,6 +3,7 @@ title: Have a FAIR data steward on board
 permalink: /metroline_steps/have_a_fair_data_steward_on_board
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 
@@ -121,5 +122,4 @@ Training events and materials on data management and FAIR can also be found thro
 For those new to data stewardship, the blogpost [From Researcher to Data Steward: How to Get Started?](https://openworking.wordpress.com/2024/08/27/from-researcher-to-data-steward-how-to-get-started/) provides insights into learning paths and practical steps. This resource may also be useful for researchers managing their own data in smaller projects without a dedicated data steward.
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
-
+{% include metroline_steps/suggestions_released.html src=page.title%}

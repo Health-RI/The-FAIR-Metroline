@@ -1,63 +1,68 @@
 - step_id: 1
   status: "completed"
-  short_description: "Start by clearly defining what you want to achieve."
-  description: "You've identified your goal: making your dataset findable in the institutional catalog to comply with your organization's data policy. Having clear objectives helps you stay focused on what matters most."
+  short_description: "You've defined the objectives you want to achieve."
+  description: "You've identified your goal: making your dataset findable in the National Health Data Catalogue to comply with your organization's data policy. Having clear objectives helps you stay focused on what matters most."
   examples:
-    - role: "Clinical Researcher"
-      description: "I need to register my clinical trial data in our institutional catalog before submitting my grant report. I'm aiming for the minimum metadata requirements our institution mandates."
-    - role: "Data Steward"
-      description: "I'm helping several research teams register their datasets. My goal is to create a smooth workflow that satisfies both our institutional policies and FAIR principles."
-    - role: "PhD Candidate"
-      description: "My supervisor wants me to make my research data available. I'm starting by understanding what 'findable' really means and identifying the essential steps I need to take."
+    - role: "Researcher at University Medical Center"
+      description: "My FAIR Objectives are: make my data Findable and Accessible in the National Health Data Catalogue metadata catalogue"
 
 - step_id: 3
   status: "completed"
-  short_description: "Connect with someone who can guide you through the process."
+  short_description: "You've connected with someone who can guide you through the process."
   description: "You've reached out to your institutional data steward who will support you throughout this journey. Having expert guidance makes the process much smoother and helps you avoid common pitfalls."
   examples:
     - role: "Researcher at University Medical Center"
-      description: "I contacted our research data office and connected with a data steward. They're helping me understand what metadata I need and which catalog to use for registration."
-    - role: "Independent Researcher"
-      description: "Since my institution doesn't have a dedicated data steward, I reached out to the Health-RI helpdesk. They're providing remote guidance tailored to my situation."
+      description: "I contact my institutional data stewards for support on how to make the dataset Findable and Accessible in the National Health Data Catalogue."
 
 - step_id: 8
   status: "active"
   short_description: "Take stock of what information you already have."
   description: "Now you need to inventory the metadata you already have about your dataset. Things like title, description, and keywords, and identify what's still missing. This assessment helps you understand the work ahead."
   examples:
-    - role: "Clinical Researcher"
-      description: "I have my research protocol with a detailed study description, but I need to check whether I have everything required: keywords, contact details, and properly documented access conditions."
-    - role: "Data Manager"
-      description: "I'm going through our data management plan to extract existing metadata. I also need to verify our licensing information and confirm we have the right consent documentation for sharing."
+    - role: "Researcher at University Medical Center"
+      description: "I check, together with my institutional data steward, what metadata is available as well as its quality."
+
+- step_id: 21
+  status: "upcoming"
+  short_description: "Define the access conditions for the data."
+  description: "Next, define and document the conditions under which data can be accessed and reused, including access levels, policies, licences and agreements, ensuring compliance with legal, ethical and FAIR requirements."
+  examples:
+    - role: "Researcher at University Medical Center"
+      description: "The data will be available under Open Access conditions with my institution's default license. This is specified in the metadata."
 
 - step_id: 10
   status: "upcoming"
-  short_description: "Submit your dataset information to the catalog."
-  description: "With your metadata complete, you're ready to register your dataset in the institutional catalog. This step makes your data discoverable to colleagues and collaborators who might benefit from it."
+  short_description: "Align the available metadata with the with the repository's requirements."
+  description: "Align the metadata according to the repository / catalogue's requirements. Depending on the repository, you may be able to register the metadata manually. In case of the National Health Data Catalogue metadata is initially published to a local FDP."
   examples:
     - role: "Researcher at University Medical Center"
-      description: "I'll use our institutional catalog's web interface to submit my dataset registration with all the metadata I've prepared."
-    - role: "Multi-center Study Coordinator"
-      description: "I need to register our dataset in multiple institutional catalogs across participating sites, making sure the information stays consistent everywhere."
+      description: "I ensures all necessary metadata fields necessary for the HRI catalogue are filled. This metadata will be registered in the local FDP as part of the next step."
 
-- title: "Your metadata is now Findable in a catalog"
+- step_id: 19
+  status: "suggestion"
+  tags: ["Platform specific"]
+  short_description: "Ensure there is a service (such as a FAIR Data Point) available to publish your metadata to a catalogue."
+  description: ""
+  examples:
+    - role: "Researcher at University Medical Center"
+      description: "I check with my data steward that there is a local FDP available that uses the Health-RI Core Metadata schema, which is required for publishing to the National Health Data Catalogue."
+
+
+- step_id: 20
+  status: "suggestion"
+  tags: ["Platform specific"]
+  short_description: "Transform mapped data and metadata into machine-readable formats such as RDF and publish them via platforms (e.g., FAIR Data Point), making them discoverable, accessible and interoperable under defined access conditions."
+  description: ""
+  examples:
+    - role: "Researcher at University Medical Center"
+      description: "I give the metadata to the data steward who makes the data available in the FDP."
+
+- title: "Your metadata is now Findable in a catalogue"
   status: "destination"
   icon: "🎯"
   short_description: "Success! Your dataset can now be discovered by others."
   description: "Congratulations! Your dataset is now registered and findable in the catalog. Researchers looking for data like yours can now discover it and understand what you have available, opening doors for potential collaborations and data reuse."
-
-- step_id: 19
-  status: "suggestion"
-  short_description: "Consider using standardized metadata schemas."
-  description: "Want to go further? Applying a standardized metadata model like Dublin Core, DataCite, or domain-specific schemas can significantly improve your data's discoverability across different systems and catalogs."
   examples:
-    - role: "Data Steward"
-      description: "I want our metadata to work seamlessly with national and international catalogs, so I'm mapping our fields to the DataCite schema to ensure broad compatibility."
+    - role: "Researcher at University Medical Center"
+      description: "I made the metadata available in the local FAIR Data Point and therefore Findable in the National Health Data Catalogue."
 
-- step_id: 11
-  status: "suggestion"
-  short_description: "Document your data's internal structure in detail."
-  description: "Take it even further by documenting the internal structure of your dataset, e.g., variable names, data types, relationships, and formats. This makes your data much more reusable and reduces the need for back-and-forth questions from potential users."
-  examples:
-    - role: "Database Administrator"
-      description: "I'm documenting our complete database schema so other researchers can understand the data structure independently, without needing to contact us for clarification."

@@ -3,6 +3,7 @@ title: Define FAIRification objectives
 permalink: /metroline_steps/define_fairification_objectives
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 
@@ -101,4 +102,4 @@ At this stage of the FAIR Metroline, even before beginning training, a useful re
 * The [FAIR Toolkit](https://fairtoolkit.pistoiaalliance.org/) for Life Science Industry by Pistoia Alliance
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
+{% include metroline_steps/suggestions_released.html src=page.title%}

@@ -3,6 +3,7 @@ title: Register structural metadata
 permalink: /metroline_steps/register_structural_metadata
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 
@@ -282,4 +283,4 @@ This step requires the following experts as described in the [Metroline Step: Bu
 The training available for the registering structural metadata is still limited. However, some resources include the Official European Training on Open Data. They provide courses on the DCAT and DCAT-AP standards, which are the foundation for European public sector metadata structuring. The material is freely available here: [Improving open data and metadata quality | data.europa.eu](https://data.europa.eu/en/academy/improving-open-data-and-metadata-quality) 
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
+{% include metroline_steps/suggestions_released.html src=page.title%}

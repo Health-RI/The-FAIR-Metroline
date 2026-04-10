@@ -3,10 +3,9 @@ title: Apply (meta)data model
 permalink: /metroline_steps/apply_metadata_model
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
-
 {% include development_status.html step=current_step %}
-
 
 >***A meta(data) model is intended to ‘answer questions about a domain, improve understanding, and promote knowledge sharing; expose \[…] assumptions about a domain; promote communication among people developing a conceptual model, or among people who (later) use a conceptual model' [On the Philosophical Foundations of Conceptual Models](https://ebooks.iospress.nl/volumearticle/53687)***
 >
@@ -171,4 +170,4 @@ Implemented the Health-RI metadata schema in the FDP to apply the Health-RI core
 * [A portal to (Meta)data](https://zenodo.org/records/15676294), a presentation-lecture on gathering metadata elements at different levels.
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
+{% include metroline_steps/suggestions_released.html src=page.title%}

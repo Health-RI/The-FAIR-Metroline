@@ -4,6 +4,7 @@ permalink: /metroline_steps/analyse_data_semantics
 page_id: analyse_data_semantics
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
 
@@ -211,5 +212,4 @@ Below are experts that may need to be involved, as described in [Metroline Step:
 For an overview on Data Semantics principles, the University of Twente offers a Linked Data and Semantic Web Lecture that can be found here: [PowerPoint Presentation](https://www.utwente.nl/en/ces/sal/exams/Linked-Data-and-Semantic-Web/ldsw-lecture3.pdf)
 
 ## Suggestions
-{% include metroline_steps/suggestions_released.html %}
-
+{% include metroline_steps/suggestions_released.html src=page.title%}
