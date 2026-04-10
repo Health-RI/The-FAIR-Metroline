@@ -1,7 +1,7 @@
 <!-- Scenario Overview Component -->
 <div class="scenario-overview">
   {% if include.complexity %}
-  <div class="overview-card">
+  <div class="overview-card" {% if include.complexity_tooltip %}data-tooltip="{{ include.complexity_tooltip }}"{% endif %}>
     <div class="card-header">
       <div class="card-icon complexity-icon">
         <i class="fas fa-chart-line"></i>
@@ -13,7 +13,7 @@
   {% endif %}
 
   {% if include.experts %}
-  <div class="overview-card">
+  <div class="overview-card" {% if include.experts_tooltip %}data-tooltip="{{ include.experts_tooltip }}"{% endif %}>
     <div class="card-header">
       <div class="card-icon experts-icon">
         <i class="fas fa-users"></i>
@@ -25,7 +25,7 @@
   {% endif %}
 
   {% if include.environment %}
-  <div class="overview-card">
+  <div class="overview-card" {% if include.environment_tooltip %}data-tooltip="{{ include.environment_tooltip }}"{% endif %}>
     <div class="card-header">
       <div class="card-icon experts-icon">
         <i class="fas fa-server"></i>
@@ -37,7 +37,7 @@
   {% endif %}
 
   {% if include.outcome %}
-  <div class="overview-card">
+  <div class="overview-card" {% if include.outcome_tooltip %}data-tooltip="{{ include.outcome_tooltip }}"{% endif %}>
     <div class="card-header">
       <div class="card-icon outcome-icon">
         <i class="fas fa-bullseye"></i>

@@ -25,9 +25,9 @@ custom_js: metro-timeline
 <p>{{ scenario.overview }}</p>
 
 {% if scenario.experts %}
-  {% include scenario-overview.html complexity=scenario.complexity experts=scenario.experts outcome=scenario.outcome %}
+  {% include scenario-overview.html complexity=scenario.complexity experts=scenario.experts outcome=scenario.outcome complexity_tooltip=scenario.complexity_tooltip experts_tooltip=scenario.experts_tooltip outcome_tooltip=scenario.outcome_tooltip %}
 {% elsif scenario.environment %}
-  {% include scenario-overview.html complexity=scenario.complexity environment=scenario.environment outcome=scenario.outcome %}
+  {% include scenario-overview.html complexity=scenario.complexity environment=scenario.environment outcome=scenario.outcome complexity_tooltip=scenario.complexity_tooltip environment_tooltip=scenario.environment_tooltip outcome_tooltip=scenario.outcome_tooltip %}
 {% endif %}
 
 <h2>Your Journey</h2>
