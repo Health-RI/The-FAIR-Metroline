@@ -83,7 +83,7 @@
     <div class="col">
         <div class="input-group">
             <span class="input-group-text" id="search-label-tiles"><i class="fa-solid fa-magnifying-glass"></i></span>
-            <input type="text" id="title-search" class="form-control" onkeyup="StartSearch();" placeholder="Find your page..." aria-label="{{page.type | replace: '_', ' ' |}}" aria-describedby="search-label-tiles">
+            <input type="text" id="title-search" class="form-control" onkeyup="applyFilters();" placeholder="Find your page..." aria-label="{{page.type | replace: '_', ' ' |}}" aria-describedby="search-label-tiles">
             <button class="btn btn-primary" title="Button to clear search" type="button" id="clearsearch">
                 <i class="fa-solid fa-backspace"></i>
             </button>
@@ -216,10 +216,12 @@
         const domainSelect = document.getElementById('domains-input');
         const phaseSelect = document.getElementById('phases-input');
         const instituteSelect = document.getElementById('institutes-input');
+        const searchInput = document.getElementById('title-search');
 
         const selectedDomain = domainSelect ? domainSelect.value : '';
         const selectedPhase = phaseSelect ? phaseSelect.value : '';
         const selectedInstitute = instituteSelect ? instituteSelect.value : '';
+        const searchFilter = searchInput ? searchInput.value.toLowerCase() : '';
 
         for (col of cols) {
             const colDomains = col.getAttribute("data-domains") ? col.getAttribute("data-domains").split(" ") : [];
@@ -229,8 +231,10 @@
             const domainMatch = !selectedDomain || colDomains.indexOf(selectedDomain) !== -1;
             const phaseMatch = !selectedPhase || colPhases.indexOf(selectedPhase) !== -1;
             const instituteMatch = !selectedInstitute || colInstitutes.indexOf(selectedInstitute) !== -1;
+            const body = col.querySelector(".card-body");
+            const searchMatch = !searchFilter || (body && body.innerText.toLowerCase().indexOf(searchFilter) > -1);
 
-            if (domainMatch && phaseMatch && instituteMatch) {
+            if (domainMatch && phaseMatch && instituteMatch && searchMatch) {
                 col.classList.remove("d-none");
             } else {
                 col.classList.add("d-none");
@@ -249,35 +253,17 @@
     $(document).ready(function () {
         var domains = document.getElementById('domains-input');
         if (domains) {
-            domains.addEventListener("change", function () {
-                var search = document.getElementById('title-search')
-                if (search) {
-                    search.value = '';
-                }
-                applyFilters();
-            });
+            domains.addEventListener("change", applyFilters);
         }
 
         var phases = document.getElementById('phases-input');
         if (phases) {
-            phases.addEventListener("change", function () {
-                var search = document.getElementById('title-search')
-                if (search) {
-                    search.value = '';
-                }
-                applyFilters();
-            });
+            phases.addEventListener("change", applyFilters);
         }
 
         var institutes = document.getElementById('institutes-input');
         if (institutes) {
-            institutes.addEventListener("change", function () {
-                var search = document.getElementById('title-search')
-                if (search) {
-                    search.value = '';
-                }
-                applyFilters();
-            });
+            institutes.addEventListener("change", applyFilters);
         }
 
         var cleardomains = document.getElementById("cleardomainfilter");
@@ -314,33 +300,6 @@
         }
     });
 
-    /**
-     * Search cards
-     */
-    var StartSearch = () => {
-        const input = document.getElementById("title-search");
-        if (input) {
-            const cols = document.querySelectorAll(".navigation-tiles .col");
-            let filter = input.value.toLowerCase();
-            var domains = document.getElementById('domains-input');
-            var phases = document.getElementById('phases-input');
-            if (domains) {
-                domains.selectedIndex = -1;
-            }
-            if (phases) {
-                phases.selectedIndex = -1;
-            }
-            for (let i = 0; i < cols.length; i++) {
-                let body = cols[i].querySelector(".card-body");
-                if (body.innerText.toLowerCase().indexOf(filter) > -1) {
-                    cols[i].classList.remove("d-none");
-                } else {
-                    cols[i].classList.add("d-none");
-                }
-            }
-        }
-    }
-
     $(document).ready(function () {
         var clearsearch = document.getElementById("clearsearch");
         if (clearsearch) {
@@ -348,10 +307,7 @@
                 var search = document.getElementById('title-search')
                 if (search) {
                     search.value = ''
-                    const cols = document.querySelectorAll(".navigation-tiles .col");
-                    for (col of cols) {
-                        col.classList.remove("d-none");
-                    }
+                    applyFilters();
                 }
             });
         }
