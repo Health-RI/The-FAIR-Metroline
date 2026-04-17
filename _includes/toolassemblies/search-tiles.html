@@ -83,7 +83,7 @@
     <div class="col">
         <div class="input-group">
             <span class="input-group-text" id="search-label-tiles"><i class="fa-solid fa-magnifying-glass"></i></span>
-            <input type="text" id="title-search" class="form-control" onkeyup="StartSearch();" placeholder="Find your page..." aria-label="{{page.type | replace: '_', ' ' |}}" aria-describedby="search-label-tiles">
+            <input type="text" id="title-search" class="form-control" onkeyup="applyFilters();" placeholder="Search titles and descriptions..." aria-label="{{page.type | replace: '_', ' ' |}}" aria-describedby="search-label-tiles">
             <button class="btn btn-primary" title="Button to clear search" type="button" id="clearsearch">
                 <i class="fa-solid fa-backspace"></i>
             </button>
@@ -216,10 +216,12 @@
         const domainSelect = document.getElementById('domains-input');
         const phaseSelect = document.getElementById('phases-input');
         const instituteSelect = document.getElementById('institutes-input');
+        const searchInput = document.getElementById('title-search');
 
         const selectedDomain = domainSelect ? domainSelect.value : '';
         const selectedPhase = phaseSelect ? phaseSelect.value : '';
         const selectedInstitute = instituteSelect ? instituteSelect.value : '';
+        const searchFilter = searchInput ? searchInput.value.toLowerCase() : '';
 
         for (col of cols) {
             const colDomains = col.getAttribute("data-domains") ? col.getAttribute("data-domains").split(" ") : [];
@@ -229,47 +231,39 @@
             const domainMatch = !selectedDomain || colDomains.indexOf(selectedDomain) !== -1;
             const phaseMatch = !selectedPhase || colPhases.indexOf(selectedPhase) !== -1;
             const instituteMatch = !selectedInstitute || colInstitutes.indexOf(selectedInstitute) !== -1;
+            const body = col.querySelector(".card-body");
+            const searchMatch = !searchFilter || (body && body.innerText.toLowerCase().indexOf(searchFilter) > -1);
 
-            if (domainMatch && phaseMatch && instituteMatch) {
+            if (domainMatch && phaseMatch && instituteMatch && searchMatch) {
                 col.classList.remove("d-none");
             } else {
                 col.classList.add("d-none");
             }
         }
+
+        // Update URL with current filter values
+        const params = new URLSearchParams();
+        if (selectedDomain) params.set('domain', selectedDomain);
+        if (selectedPhase) params.set('phase', selectedPhase);
+        if (selectedInstitute) params.set('institute', selectedInstitute);
+        const newUrl = params.toString() ? `?${params}` : location.pathname;
+        history.replaceState({}, '', newUrl);
     }
 
     $(document).ready(function () {
         var domains = document.getElementById('domains-input');
         if (domains) {
-            domains.addEventListener("change", function () {
-                var search = document.getElementById('title-search')
-                if (search) {
-                    search.value = '';
-                }
-                applyFilters();
-            });
+            domains.addEventListener("change", applyFilters);
         }
 
         var phases = document.getElementById('phases-input');
         if (phases) {
-            phases.addEventListener("change", function () {
-                var search = document.getElementById('title-search')
-                if (search) {
-                    search.value = '';
-                }
-                applyFilters();
-            });
+            phases.addEventListener("change", applyFilters);
         }
 
         var institutes = document.getElementById('institutes-input');
         if (institutes) {
-            institutes.addEventListener("change", function () {
-                var search = document.getElementById('title-search')
-                if (search) {
-                    search.value = '';
-                }
-                applyFilters();
-            });
+            institutes.addEventListener("change", applyFilters);
         }
 
         var cleardomains = document.getElementById("cleardomainfilter");
@@ -306,33 +300,6 @@
         }
     });
 
-    /**
-     * Search cards
-     */
-    var StartSearch = () => {
-        const input = document.getElementById("title-search");
-        if (input) {
-            const cols = document.querySelectorAll(".navigation-tiles .col");
-            let filter = input.value.toLowerCase();
-            var domains = document.getElementById('domains-input');
-            var phases = document.getElementById('phases-input');
-            if (domains) {
-                domains.selectedIndex = -1;
-            }
-            if (phases) {
-                phases.selectedIndex = -1;
-            }
-            for (let i = 0; i < cols.length; i++) {
-                let body = cols[i].querySelector(".card-body");
-                if (body.innerText.toLowerCase().indexOf(filter) > -1) {
-                    cols[i].classList.remove("d-none");
-                } else {
-                    cols[i].classList.add("d-none");
-                }
-            }
-        }
-    }
-
     $(document).ready(function () {
         var clearsearch = document.getElementById("clearsearch");
         if (clearsearch) {
@@ -340,12 +307,39 @@
                 var search = document.getElementById('title-search')
                 if (search) {
                     search.value = ''
-                    const cols = document.querySelectorAll(".navigation-tiles .col");
-                    for (col of cols) {
-                        col.classList.remove("d-none");
-                    }
+                    applyFilters();
                 }
             });
+        }
+
+        // Read URL parameters and apply filters on page load
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlDomain = urlParams.get('domain');
+        const urlPhase = urlParams.get('phase');
+        const urlInstitute = urlParams.get('institute');
+
+        if (urlDomain) {
+            const domainSelect = document.getElementById('domains-input');
+            if (domainSelect) {
+                domainSelect.value = urlDomain;
+            }
+        }
+        if (urlPhase) {
+            const phaseSelect = document.getElementById('phases-input');
+            if (phaseSelect) {
+                phaseSelect.value = urlPhase;
+            }
+        }
+        if (urlInstitute) {
+            const instituteSelect = document.getElementById('institutes-input');
+            if (instituteSelect) {
+                instituteSelect.value = urlInstitute;
+            }
+        }
+
+        // Apply filters if any URL parameters were present
+        if (urlDomain || urlPhase || urlInstitute) {
+            applyFilters();
         }
     });
 </script>
