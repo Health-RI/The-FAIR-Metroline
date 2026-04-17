@@ -27,6 +27,13 @@ writers:
     affiliation: Health-RI
     active: false
     image: ""
+  - id: 25
+    firstName: Douwe
+    lastName: Spaanderman
+    orcid: 0000-0001-8397-2339
+    affiliation: Health-RI
+    active: true
+    image: douwe_spaanderman.jpg
   - id: 5
     firstName: Fieke
     lastName: Schoots
