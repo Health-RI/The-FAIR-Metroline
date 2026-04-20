@@ -294,4 +294,49 @@
     User needs:
   compatible_with: cbioportal
   biotools_id: oncoanalyser
+- id: dmponline
+  page_img: toolassemblies/tools/dmponline.png
+  institutes:
+    - Leiden UMC
+    - Radboudumc
+    - Vrije Universiteit Amsterdam
+    - UMC Utrecht
+    - Wageningen University & Research
+    - Universiteit Utrecht
+    - Technische Universiteit Delft
+    - Erasmus Universiteit Rotterdam
+  at_a_glance:
+    Tool name: DMPonline
+    Short description: Web-based tool for creating, reviewing, and sharing Data Management Plans (DMPs) that meet institutional and funder requirements.
+    Purpose and core functionality: DMPonline is a web-based Data Management Planning (DMP) tool developed and maintained by the Digital Curation Centre (DCC) in partnership with the University of California Curation Center (UC3). It helps researchers create, review, and share Data Management Plans that comply with requirements from institutions and research funders. The tool provides the latest funder templates, tailored guidance, and example answers. Users can collaborate on plans, browse publicly shared DMPs for inspiration, and export plans in multiple formats. DMPonline is free to use for all researchers and is hosted by subscribing institutions and universities worldwide, with over 177,000 users across 804 organisations in 89 countries.
+    Type: Data Management Planning
+    Life cycle phases: Plan
+    Domains using it:
+    Website:
+      - <a href='https://dmponline.dcc.ac.uk/'>DMPonline website</a>
+    Resource URLs:
+      Training:
+        - <a href='https://dmponline.dcc.ac.uk/help'>DMPonline Help</a> - User guidance and help resources
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://github.com/DMPRoadmap/roadmap/wiki'>DMPRoadmap Wiki</a> - Installation and user documentation
+      Supporting software:
+        -
+      Scripts and workflows:
+        - <a href='https://github.com/DMPRoadmap/roadmap'>GitHub repository</a> - Open source codebase (MIT licence) for self-hosting instances
+      Metadata and data standards:
+        - <a href='https://dmponline.dcc.ac.uk/public_templates'>Funder templates</a> - Templates aligned with requirements from funders and institutions
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - API access available to subscribing organisations for harvesting plan data
+      Guide:
+        -
+    Contact point: dmponline@dcc.ac.uk
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
 
