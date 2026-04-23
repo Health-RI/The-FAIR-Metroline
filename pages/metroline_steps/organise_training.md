@@ -83,6 +83,7 @@ You can also consider joining a community of trainers.
 All of these resources are emerging to adapt and tailor FAIR data solutions to meet the specific needs and constraints of every team. Additionally, every step of the Metroline contains training links or information that could be of further use. Ultimately, also contact the Training Coordinator of your institution for more relevant advise. 
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 The expertise required may depend on the training that will be followed, or the task that will be performed. Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
 * **Researcher.** Provides research data and discipline specific knowledge.
 * **Data steward.** Often, data stewards act as trainers for their research group, department, faculty, or university.

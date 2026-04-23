@@ -47,6 +47,7 @@ The FIP Wizard provides a more advanced and structured environment. You will nee
 Once you’ve created your FIP using the FIP Wizard, you can publish it to make it available for reuse. When you choose to publish, the Wizard packages your FIP as a machine-actionable nanopublication and submits it to the public nanopublication network. After publication, your FIP and the FAIR-enabling resources it references become automatically searchable and reusable through [FAIR Connect](https://fairconnect.pro/) and [Nanodash](https://nanodash.knowledgepixels.com/). 
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
 * researcher with domain knowledge;
 * semantic expert / metadata expert;

@@ -64,6 +64,7 @@ Organise and describe the steps and resources identified in the previous step ne
 * I want to make my data more findable for researchers in my field by publishing it in repository Z.
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 Defining FAIRification objectives is typically a collaborative effort by a range of experts, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team).
 * **Researchers with domain knowledge.** Provide context to the FAIRification efforts from the perspective of a domain.
 * **FAIR data stewards.** Help define FAIRification objectives to meet the project’s, funder’s, journal’s and/or institute’s requirements.

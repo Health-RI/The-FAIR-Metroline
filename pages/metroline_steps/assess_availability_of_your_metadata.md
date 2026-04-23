@@ -72,6 +72,7 @@ You are now ready to take the next step with your metadata:
 * **follow a semantic model to describe your metadata (under construction.** [Metroline Step: Create or reuse a semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model) )
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
 * Data manager/Data steward/Data librarian, Researcher (Scientist) or someone else who knows the context and content of the project.
 

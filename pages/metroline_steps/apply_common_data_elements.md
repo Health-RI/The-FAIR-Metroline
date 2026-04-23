@@ -229,6 +229,7 @@ The [initial data elements](https://eu-rd-platform.jrc.ec.europa.eu/set-of-commo
 {% include info-box.html type="example" title="Example" text=infobox_text1 %}
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 Experts that may need to be involved, as described in Metroline Step: Build the Team, are described below.
 * **Researcher.** Understands the scientific context of the data being collected.
 * **Data steward.** Ensures the technical accuracy and consistency of how CDEs are applied.

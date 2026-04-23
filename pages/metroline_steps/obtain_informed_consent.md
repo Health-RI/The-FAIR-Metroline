@@ -174,6 +174,7 @@ With your SIS and ICF fully FAIR ready and approved by your data protection offi
 * An accredited MREC or the CCMO for WMO studies
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 The following role from [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team) is necessary for this step:
 * ELSI expert 
   * National level

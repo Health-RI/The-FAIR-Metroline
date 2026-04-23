@@ -274,6 +274,7 @@ Guidance on maintaining metadata integrity can be found in the following Metroli
 {% include info-box.html type="example" title="Example" text=infobox_text2 %}
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 This step requires the following experts as described in the [Metroline Step: Build the team]({{site.baseurl}}/metroline_steps/build_the_team) step.
 * **Researcher.** Provide the metadata/codebook.
 * **Data Steward.** Find solutions and implement them or support the Researcher in the implementation.

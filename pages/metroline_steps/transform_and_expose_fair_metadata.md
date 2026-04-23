@@ -92,6 +92,7 @@ Start by transforming metadata into a structured format using semantic web stand
 "%}
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 Transforming and exposing FAIR (meta)data effectively requires a mix of domain knowledge, semantic expertise and technical skills. Ideally, teams should involve:
 * **Domain experts.** Provide context and ensure that the transformed (meta)data accurately reflects the research content.
 * **Semantic modellers or ontologists.** Advise on selecting and applying the right ontologies, vocabularies and semantic models.

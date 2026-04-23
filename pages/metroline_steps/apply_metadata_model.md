@@ -148,6 +148,7 @@ The following tools provide support in applying a (meta)data model to your resou
 </div>
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 Applying metadata and data models effectively requires a mix of domain knowledge and technical skills. Ideally, teams should involve:
 * **Domain experts.** Understand the research content and can guide the correct interpretation of terms and relationships.
 * **(Meta)Data modellers and ontologists.** Can help select or customise the right models and ontologies to fit the data.

@@ -108,6 +108,7 @@ A checksum is a short digital code that works like a fingerprint for a file, let
 "%}
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 You may need access to or support from:
 * **Data Stewards.** Ensure proper metadata and FAIR practices.
 * **Legal and ethical advisors.** Interpret GDPR and other ethical constraints). 

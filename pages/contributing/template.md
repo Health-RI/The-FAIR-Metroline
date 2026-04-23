@@ -26,6 +26,7 @@ permalink: /contributing/template
 
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 
 
 ## Practical examples from the community 

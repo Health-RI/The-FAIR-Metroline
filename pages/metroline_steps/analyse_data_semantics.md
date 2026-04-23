@@ -201,6 +201,7 @@ Great job! After checking and improving our metadata semantics, we can now move 
 "%}
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 Below are experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team).
 * **Semantic data / modelling specialists.** Can help understanding the data’s structure and ambiguity.
 * **Domain expert.** Can help understanding the data’s elements and their potential ambiguity.

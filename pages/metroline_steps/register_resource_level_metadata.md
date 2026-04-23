@@ -148,6 +148,7 @@ Eva entered the biosample data into the BBMRI Catalogue Form, which she [downloa
 [BBMRI-ERIC Directory](https://directory.bbmri-eric.eu/ERIC/directory/#/collection/bbmri-eric:ID:NL_RB:collection:155?search=PRISMA).
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 The level of expertise required for this step will depend on several factors:
 * your department’s familiarity with data-sharing practices;
 * your personal experience with metadata catalogues and metadata elements relevant to your research domain;
