@@ -11,7 +11,8 @@ permalink: /metroline_steps/use_ontologies_in_the_model
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 This step starts from the existing [semantic (meta)data model](https://fairmetroline.org/metroline_steps/create_or_reuse_a_semantic_model) that organises your domain's entities, attributes and value sets with clear project-level meaning. Building on that model, this step links its elements to ontology terms to make their meanings explicit, computable and interoperable. Ontologies are formal, logic-based representations of domain knowledge that define types of entities, relations and constraints, enabling explicit semantics and consistent computational interpretation. By adding this semantic layer, models become not only well-structured but also interoperable across systems.
 
 ## Why is this step important

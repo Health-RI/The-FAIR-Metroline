@@ -12,7 +12,8 @@ page_id: analyse_data_semantics
 > 
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 Understanding and clearly defining the meaning (semantics) of (meta)data is an important preparation for [creating the semantic model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model), as well as for data collection via, for example, [electronic case report forms]({{site.baseurl}}/metroline_steps/design_ecrf) (eCRFs). In this step, the aim is to ensure you gain a clear and unambiguous understanding of the (meta)data elements. The step provides guidance for both existing data and data that is to be collected.
 
 To illustrate the issue, consider the example where you receive a dataset with a variable called “date”. Without clearly defined semantics, it is unclear whether this means “date of data collection”, “admission date”, “date of birth”, or something else. This must be resolved before you can start analyzing the data or move forward with your FAIR goals, such as applying a semantic (meta)data model. In the How to section of this page we provide instructions to achieve this, along with an example following the different steps.

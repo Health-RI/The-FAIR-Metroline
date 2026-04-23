@@ -12,6 +12,7 @@ permalink: /metroline_steps/pre_fair_assessment
 > {{ current_step.summary }}
 
 ## Short description
+{: .cs-collapsed}
 In this phase you assess whether your (meta)data already meets FAIR criteria, such as persistent unique identifiers for data elements and rich metadata. By using FAIRness assessment tooling you can quantify the level of FAIRness of the data based on its current characteristics and environment. The assessment outcomes can help shape the necessary steps and requirements needed to achieve the desired [FAIRification objectives](define_fairification_objectives) (see [A Generic Workflow for the Data FAIRification Process](https://direct.mit.edu/dint/article/2/1-2/56/9988/A-Generic-Workflow-for-the-Data-FAIRification) and [FAIR in Action Framework by FAIRplus](https://www.nature.com/articles/s41597-023-02167-2)). 
 
 The how-to section describes a variety of assessment tools based on the FAIR principles. 

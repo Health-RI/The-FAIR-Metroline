@@ -11,7 +11,8 @@ permalink: /metroline_steps/organise_training
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 After building your team ([Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team)), it is a good idea to assess their training needs. This vital step involves a comprehensive assessment to pinpoint any missing expertise or skill gaps within the different roles in your team. This page creates a broad overview of training solutions that support the development of core competencies in FAIR data management. This page offers guidance on how to locate targeted training options for all roles within a given team. Specialised training that is needed for a specific Metroline Step are listed in the corresponding pages.
 
 ## Why is this step important

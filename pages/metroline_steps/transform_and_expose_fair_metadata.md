@@ -11,7 +11,8 @@ permalink: /metroline_steps/transform_and_expose_fair_metadata
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 Before following this step, make sure you have already mapped your data and metadata to appropriate (meta)data schemas, as described in [Metroline Step: Apply (meta)data model]({{site.baseurl}}/metroline_steps/apply_metadata_model).
 
 This step guides you through **transforming and exposing** both your **data** and **metadata**. These are two closely related but distinct processes. While the semantic models, tools, and storage methods differ (metadata is usually made publicly accessible, while data often remains restricted due to privacy or sensitivity), both transformations are essential to make your resource FAIRer.

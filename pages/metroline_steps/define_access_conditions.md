@@ -11,7 +11,8 @@ permalink: /metroline_steps/define_access_conditions
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 According to the FAIR principles, data should be shared “[as open as possible and as closed as necessary](https://direct.mit.edu/dint/article/2/1-2/47/9998/The-A-of-FAIR-As-Open-as-Possible-as-Closed-as)” 
 – open to allow reuse, but closed to protect privacy of the participants. In practice that means establishing the conditions 
 under which researchers can get access to the data and how it can be reused, and deciding if the data can be further shared. 

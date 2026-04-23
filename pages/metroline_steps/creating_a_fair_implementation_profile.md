@@ -11,7 +11,8 @@ permalink: /metroline_steps/creating_a_fair_implementation_profile
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 A [FAIR Implementation Profile](https://www.go-fair.org/how-to-go-fair/fair-implementation-profile/) (FIP) is a collection of practical implementation choices made by a community, such as a research project or institute, for all FAIR Principles. Developed by the [GO FAIR Foundation](https://www.go-fair.org/how-to-go-fair/fair-implementation-profile/), it serves as a structured recipe for making data FAIR, based on shared agreements and standards within that community. 
 
 A key element of a FIP is the description of the specific FAIR-enabling resources (FERs) that a community uses to support each FAIR Principle. FERs are the concrete tools, standards and resources that make FAIR data practices possible. Examples include metadata schemas, controlled vocabularies, ontologies such as the [Human Phenotype Ontology](https://bioportal.bioontology.org/ontologies/HP), identifier systems like DOIs and data licences such as [CC BY](https://creativecommons.org/licenses/by/4.0/). Together, these resources form the technical and semantic backbone of FAIR data. 

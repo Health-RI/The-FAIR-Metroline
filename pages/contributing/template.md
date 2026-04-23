@@ -11,7 +11,8 @@ permalink: /contributing/template
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 
 
 ## Why is this step important

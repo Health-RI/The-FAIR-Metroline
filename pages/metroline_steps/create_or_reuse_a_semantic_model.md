@@ -11,7 +11,8 @@ permalink: /metroline_steps/create_or_reuse_a_semantic_model
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 A semantic (meta)data model describes the meaning of your (meta)data elements in a structured, machine-readable, and ideally precise and unambiguous manner. It helps transform your data into a FAIR artefact that can be discovered, queried, and reused, supporting consistency, interoperability, and discoverability, especially across systems and communities (see [Metroline step: Apply (meta)data model]({{site.baseurl}}/metroline_steps/apply_metadata_model)). Before creating a new model, always check whether an existing (meta)data model can be reused or adapted.
 
 ## Why is this step important

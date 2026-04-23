@@ -13,7 +13,8 @@ permalink: /metroline_steps/register_resource_level_metadata
 > 
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 [Metadata](https://health-ri.atlassian.net/wiki/spaces/HNG/pages/997466980/Glossary#Metadata) is essential for describing information about your resource, whether it is a dataset, article, software, report or other project outputs. In this chapter, we explain how to make metadata about your resources available online so others can find it. This step will help you make your data resources more Findable by registering them in a searchable repository, such as a **metadata catalogue**.
 
 Metadata catalogues are platforms that store and help you find information about various resources. They allow you to search for existing data relevant for your research, saving time in data collection, and enable others to find your work, thereby increasing collaboration opportunities. Examples of metadata catalogues include the [National Health Data Catalogue](https://catalogus.healthdata.nl/) for healthcare and life sciences data and the [BBMRI-NL catalogue](https://catalogue.bbmri.nl/) for biosample information.

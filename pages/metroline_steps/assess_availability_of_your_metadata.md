@@ -11,7 +11,8 @@ permalink: /metroline_steps/assess_availability_of_your_metadata
 > 
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 Metadata refers to the contextual information about a resource (e.g. a dataset), often described as “data about data”. Metadata can come in many different types and forms. 
 
 * **Descriptive metadata.** This is the type of metadata you might be most familiar with as it is often collected in repositories such as Zenodo (see the example of [how Zenodo describes the resources](https://help.zenodo.org/docs/deposit/describe-records/) on its repository). This generic metadata includes details on what the resource is about (e.g., data from patient health records), who created it (e.g., a research team at Radboudumc) and when it was collected. Typically, it also discloses information about the possible uses of the resource (e.g., applicable licensing) and access restrictions (e.g., available for public use/restricted access).

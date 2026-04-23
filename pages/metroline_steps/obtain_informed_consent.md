@@ -12,6 +12,7 @@ permalink: /metroline_steps/obtain_informed_consent
 > {{ current_step.summary }}
 
 ## Short description
+{: .cs-collapsed}
 Informed consent (IC) is the process by which a patient voluntarily agrees to a medical procedure, treatment, or participation in research after being fully informed of the relevant details. Collecting data as well as its reuse for scientific purposes typically requires participants' IC. To align with the FAIR principles, it is essential that these data-sharing practices are explicitly addressed in the informed consent form. Additionally, consent may also be required for activities such as data archiving and linkage to external registries.
 
 Many different forms of IC exist. The image below highlights some variants of informed consent and how they are (generally) related.

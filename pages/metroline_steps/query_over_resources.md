@@ -11,7 +11,8 @@ permalink: /metroline_steps/query_over_resources
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 When machine-readable (meta)data is exposed (see [Metroline step: Transform and Expose FAIR metadata]({{site.baseurl}}/metroline_steps/transform_and_expose_fair_metadata)), it becomes an accessible FAIR resource. In other words, a dataset or metadata collection which can be found, queried, and reused. Such resources are often hosted or described in catalogues and/or via [FAIR Data Points](https://www.fairdatapoint.org/), which expose (meta)data in a standardised way. This ability to discover and reuse data using the metadata resources is what makes FAIR so powerful: it turns isolated data into actionable knowledge for science.
 
 These catalogues offer different levels of interaction:

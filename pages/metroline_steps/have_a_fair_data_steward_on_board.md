@@ -12,6 +12,7 @@ permalink: /metroline_steps/have_a_fair_data_steward_on_board
 > {{ current_step.summary }}
 
 ## Short description
+{: .cs-collapsed}
 Proper data stewardship ensures research data is Findable, Accessible, Interoperable and Reusable (FAIR) in the long term through data management, archiving and reuse. Creating FAIR data requires attention from the planning phase of a study to its lifelong maintenance.  Hence, according to FAIRification models such as [FAIRopoly](https://www.ejprarediseases.org/fairopoly/) and [A Generic Workflow for the Data FAIRification Process](https://direct.mit.edu/dint/article/2/1-2/56/9988/A-Generic-Workflow-for-the-Data-FAIRification), a FAIR data steward - familiar with the local environment and FAIRification - should guide this process. This role can be filled by a trained team member or by using existing central support services within organisation or national initiatives such as Health-RI.
 
 ## Why is this step important

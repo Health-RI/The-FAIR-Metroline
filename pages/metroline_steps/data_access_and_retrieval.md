@@ -11,7 +11,8 @@ permalink: /metroline_steps/data_access_and_retrieval
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 Data must be acquired responsibly and efficiently. This includes identifying how to access and retrieve the data and how to ensure the data meets legal, ethical, and technical requirements. This page outlines the steps and considerations involved in acquiring data.
 
 ## Why is this step important

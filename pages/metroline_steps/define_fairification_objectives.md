@@ -12,6 +12,7 @@ permalink: /metroline_steps/define_fairification_objectives
 > {{ current_step.summary }}
 
 ## Short description
+{: .cs-collapsed}
 FAIRification enhances data Findability, Accessibility, Interoperability, and Reusability (FAIR) by improving documentation, metadata, and standardisation. It applies to both new and existing data. Defining FAIRification objectives is the first step in this process and can be guided by models such as [FAIRopoly](https://www.ejprarediseases.org/fairopoly/), [A Generic Workflow for the Data FAIRification Process](https://direct.mit.edu/dint/article/2/1-2/56/9988/A-Generic-Workflow-for-the-Data-FAIRification), and the [FAIR in Action Framework](https://www.nature.com/articles/s41597-023-02167-2).
 
 These objectives may be set by institutes, funders, or journals to promote data reuse (see FAIRsharing). As a researcher, aligning with FAIRification efforts can increase visibility, recognition, and opportunities for collaboration. Spend some time considering your FAIRification objectives. What is your FAIR driving force?

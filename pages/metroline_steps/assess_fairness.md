@@ -11,7 +11,8 @@ permalink: /metroline_steps/assess_fairness
 > 
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 In this step, you assess whether the objectives of your FAIRification process have been achieved. As outlined in [A Generic Workflow for the Data FAIRification Process](https://direct.mit.edu/dint/article/2/1-2/56/9988/A-Generic-Workflow-for-the-Data-FAIRification), this may include evaluating the extent to which the original [FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives) have been met and assessing the FAIR status of your data and metadata, for example, by using [FAIR assessment tools]({{site.baseurl}}/metroline_steps/pre_fair_assessment). Depending on your solution plan, this step may mark the completion of your FAIRification journey or serve as an intermediate checkpoint to review progress and, if needed, refine your objectives.
 
 ## Why is this step important

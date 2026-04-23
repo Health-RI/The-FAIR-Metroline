@@ -11,7 +11,8 @@ permalink: /metroline_steps/apply_metadata_model
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 This step provides guidance on how to apply a metadata model to describe research resources (e.g. a model describing the topic, provenance, or type of datasets), and how to apply a data model to describe the information contained in those resources (e.g. a model capturing the structure and semantics of cohort data). Usually, both metadata and data models are annotated with ontologies (e.g. [DCAT](https://www.w3.org/TR/vocab-dcat-3/) for metadata, [ORDO](https://www.orphadata.com/ordo/) for data). This page outlines the differences between metadata and data models, their benefits, and the main methods and tools available to apply them effectively.
 
 **Metadata models** describe information _about_ a resource. For instance, who created it, when it was collected, and what it is generally about (theme). These models help structure information like catalogues of datasets and their distributions, and also properties like authorship, licensing, and contact points. Using a metadata model to describe your resource improves its findability, allowing others to assess its potential for reuse.
