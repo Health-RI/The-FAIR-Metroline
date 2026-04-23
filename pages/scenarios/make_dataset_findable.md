@@ -5,7 +5,7 @@ page_id: make_dataset_findable
 custom_js: metro-timeline
 ---
 
-## Scenario Overview
+## Use Case Overview
 As a researcher, you may need to make your dataset Findable and 
 Accessible because of funder or institutional requirements.
 
