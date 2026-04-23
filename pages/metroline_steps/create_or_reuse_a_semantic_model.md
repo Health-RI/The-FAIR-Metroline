@@ -194,6 +194,7 @@ The [Health-RI metadata schema](https://github.com/Health-RI/health-ri-metadata/
 - Each instance is associated with a domain-specific class from the OBO Foundry to ensure semantic clarity.
 
 ## Training
+{: .cs-collapsed}
 * Some documentation and e-learning materials can be found in the [Interoperable Europe Portal](https://interoperable-europe.ec.europa.eu/collection/iopeu-monitoring)
 
 ## Suggestions

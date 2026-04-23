@@ -58,7 +58,8 @@ Many universities and UMCs organise specialised data management courses. Check y
 * the [Netherlands Bioinformatics and Systems Biology research school](https://www.dtls.nl/biosb/education/) (BioSB) offers courses, training and workshops in the field of data and technologies for life sciences;
 * [Data Carpentry](https://datacarpentry.org/) develops and teaches workshops on the fundamental data skills needed to conduct research. Some institutions organise data carpentry training for their researchers. Additionally, The [Netherlands eScience Center](https://www.esciencecenter.nl/digital-skills/) also organises workshops. 
 
-#### Training for Data Stewards
+#### Training
+{: .cs-collapsed} for Data Stewards
 The evolution of the Data Steward’s role within the research data lifecycle has brought a need for specific skill sets. Because data stewardship is a relatively new job profile and the areas of data management and FAIR data practices are constantly evolving, FAIR data stewards will significantly benefit from continuous learning. Staying on top of emerging trends, tools, and standards is key to developing and maintaining the necessary skills and expertise. In this context you might want to consider the following options:
 * Health-RI provides an annual introductory course for data stewards. For more information check the [Health-RI service portal](https://www.healthdata.nl/en/services/fair-data-stewards-basics-course). 
 * Several universities and UMCs have their own onboarding training for new data stewards, such as [Maastricht University](https://doi.org/10.5281/zenodo.13736063).  
@@ -69,7 +70,8 @@ The evolution of the Data Steward’s role within the research data lifecycle ha
 * The National Coordination Point RDM (LCRDM) organises the [DCC Spring training days](https://lcrdm.nl/evenementen/dcc-spring-training-days-2024). Most materials are freely available afterwards. 
 * For other resources also check the [FAIR Training and Capacity Building](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/39256187) on the Health-RI Confluence. 
 
-#### Training for trainers
+#### Training
+{: .cs-collapsed} for trainers
 Training materials can themselves be FAIR. The following resources support trainers in enhancing the FAIRness and effectiveness of their materials.
 * ELIXIR’s [Train-the-Trainer programme](https://elixir-europe.org/platforms/training/train-the-trainer);
 * the [EOSC synergy learn platform](https://learn.eosc-synergy.eu/get-started/) helps you to get started in designing training;

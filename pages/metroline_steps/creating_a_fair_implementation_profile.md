@@ -60,6 +60,7 @@ Experts that may need to be involved, as described in [Metroline Step: Build the
 * The European Platform for Neurodegenerative Diseases ([EPND](https://epnd.org/)) has implemented FIPs and uses them to help make data ready for their [data platform](https://discover.epnd.org/).
 
 ## Training
+{: .cs-collapsed}
 * [FAIR Implementation Profile course](https://training.envri.eu/course/view.php?id=56) offered by the ENVRI Community.  
 
 ## Suggestions

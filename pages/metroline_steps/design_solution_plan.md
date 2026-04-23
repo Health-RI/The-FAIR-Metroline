@@ -99,6 +99,7 @@ Designing a solution plan is typically a collaborative effort by a range of expe
 This section should show the step applied in a real project. Links to demonstrator projects. 
 
 ## Training
+{: .cs-collapsed}
 * [FAIRification Tools and Templates – ELIXIR-UK Fellowship](https://fellowship.elixiruknode.org/latest/rdmbites-fairification-tools-and-templates)
 * [FAIRification Workflow – FAIR Toolkit](https://fairtoolkit.pistoiaalliance.org/methods/fairification-workflow/)
 * [FAIR Implementation Profile]({{site.baseurl}}/metroline_steps/creating_a_fair_implementation_profile)

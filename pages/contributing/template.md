@@ -35,6 +35,8 @@ permalink: /contributing/template
 
 
 ## Training
+{: .cs-collapsed}
+{: .cs-collapsed}
 {% include metroline_steps/training_will_be_added.html %}
 
 

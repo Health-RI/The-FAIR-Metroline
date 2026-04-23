@@ -110,6 +110,7 @@ EJP RD provides various FAIRification services, guidance, tools and training, su
 * assessing training needs and organising workshops and hackathons at the project level.
 
 ## Training
+{: .cs-collapsed}
 As data stewardship is a relatively new job profile and the field of data management and FAIR data practices continues to evolve, FAIR data stewards benefit from continuous learning. Staying updated on emerging trends, tools and standards helps them develop the necessary skills and expertise.
 * Training for data stewards may cover data management best practices, data curation techniques, metadata standards and relevant tools and technologies. [RDMkit](https://rdmkit.elixir-europe.org/index) provides an overview of data management best practices and guidelines. 
 

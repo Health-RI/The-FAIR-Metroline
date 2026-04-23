@@ -83,6 +83,7 @@ Experts that may need to be involved, as described in [Metroline Step: Build the
 * The [FAIRGenomes codebook](https://decor.nictiz.nl/ad/#/fairgenomes-/project/overview), hosted on ART-DECOR, serves as an example of **structural metadata**.
 
 ## Training
+{: .cs-collapsed}
 * [Fundamentals of Scientific Metadata: Data and Metadata](https://carpentries-incubator.github.io/scientific-metadata/instructor/data-metadata.html#metadata)  
 * [Metadata - How to FAIR](https://howtofair.dk/how-to-fair/metadata/#what-are-metadata) 
 * [Improving open data and metadata quality \| data.europa.eu](https://data.europa.eu/en/academy/improving-open-data-and-metadata-quality)

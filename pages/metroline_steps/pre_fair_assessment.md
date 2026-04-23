@@ -155,6 +155,7 @@ The expertise required may depend on the assessment tool you want to use. Expert
 For an applied example of The FAIR Evaluator, see [Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic](https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-022-00263-7).
 
 ## Training
+{: .cs-collapsed}
 **DMP Instructional Trainings**<br>
 Relevant Trainings for this session might those who initially deal with Data Management Plans. Data Management Plans tend to be the starting point to draft a plan to eventually FAIRIFY the data. Every University Hospital and University in The Netherlands has their own DMP relevant training. One way to find them is to look for them in the Health-RI portfolio of [Services](https://www.healthdata.nl/en/services?rendered_item=DMP).
 

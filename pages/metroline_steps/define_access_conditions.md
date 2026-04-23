@@ -236,6 +236,7 @@ and applicable accessibility regulations.
 {% include metroline_steps/looking_for_examples.html %}
 
 ## Training
+{: .cs-collapsed}
 * [Essentials 4 Data Support](https://danstraining.moodlecloud.com/course/view.php?id=11) ([section V - LEGISLATION AND POLICY](https://danstraining.moodlecloud.com/course/section.php?id=86))
 
 ## Suggestions

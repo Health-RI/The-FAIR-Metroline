@@ -122,6 +122,7 @@ Refer to [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build
 {% include metroline_steps/looking_for_examples.html %}
 
 ## Training
+{: .cs-collapsed}
 Training on data acquisition and access is crucial to meet FAIR principles and legal requirements. To acquire and retrieve data responsibly, researchers need to understand both the **technical processes** (e.g. secure file transfer, APIs, data validation) and the **legal/ethical frameworks** (e.g. data licenses, consent, institutional approvals). Several training resources are available to build these competencies:
 * **ELIXIR Luxembourg – Practicalities of Data Handling.** A [presentation](https://doi.org/10.5281/zenodo.4068228) covering key topics in secure data transfer, storage, encryption, and checksums. 
 * **GOBLET – Bioinformatics Introductory Module.** An introductory [self-study course](https://www.mygoblet.org/training-portal/materials/bioinformatics-introductory-module/) designed for life science students to learn about databases, sequence data, expression analysis, and basic bioinformatics tools.

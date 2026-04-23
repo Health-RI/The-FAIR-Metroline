@@ -78,6 +78,7 @@ The expertise required may depend on the assessment tool you want to use. Expert
 For an applied example of The FAIR Evaluator tool, see Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic. 
 
 ## Training
+{: .cs-collapsed}
 Considering looking into the following resources:
 * [FAIR Evaluator tool](https://faircookbook.elixir-europe.org/content/recipes/assessing-fairness/fair-assessment-fairevaluator.html) 
 * [The FAIR Maturity Evaluation Service](https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/)

@@ -187,6 +187,7 @@ The following role from [Metroline Step: Build the Team]({{site.baseurl}}/metrol
 * [COMPRAYA’s SIS](https://www.compraya.nl/files/e1-e2ppicomprayastudie_m20com_v1.9_14032023_clean.pdf) (in Dutch) contains a section about, for example, future use of data and materials (page 7).
 
 ## Training
+{: .cs-collapsed}
 Available training and pedagogical resources include:
 * Research Data Netherlands (RDNL): [GDPR 4 Data Support](https://researchdata.nl/en/gdpr-4-data-support/)
 * UK Data Service (Economic and Social Research Council): [Role of informed consent in ethical data collection, sharing and reuse](https://ukdataservice.ac.uk/app/uploads/roleofinformedconsent2024-10-24.pdf) 

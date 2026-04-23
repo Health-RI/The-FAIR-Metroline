@@ -128,6 +128,7 @@ See [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_
 <br>DEAS is a cross-hospital federated query tool developed by the Swiss Personalized Health Network (SPHN) to replace the previous Federated Query System. It enables researchers to securely query aggregated clinical data from multiple Swiss university hospitals without moving patient-level data.
 
 ## Training
+{: .cs-collapsed}
 * [FAIR Cookbook – Exploring data with SPARQL (Python)](https://faircookbook.elixir-europe.org/content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html). Explains how to use Python and SPARQL to query a FAIR-aligned RDF representation.
 * [Apache Jena SPARQL Tutorial](https://jena.apache.org/tutorials/sparql.html). This SPARQL tutorial provides a concise introduction to the language, illustrating its major features through examples without aiming for full coverage.
 

@@ -94,6 +94,7 @@ Experts that may need to be involved, as described in [Metroline Step: Build the
 * [Model (Investigation–Study–Assay)](https://isa-tools.org/). Links experimental metadata fields to [Ontology for Biomedical Investigations (OBI)](https://obi-ontology.org/) and [Chemical Entities of Biological Interest (ChEBI)](https://www.ebi.ac.uk/chebi/) terms to support consistent interpretation and validation.
 
 ## Training
+{: .cs-collapsed}
 One interesting educational resource is the [Ontology mapping with Ontology Xref Service (OxO)](https://faircookbook.elixir-europe.org/content/recipes/interoperability/ontology-alignment-oxo.html) provided in the FAIRCOOKBOOK. This specific recipe shows how to use EMBL-EBI ontology Xref Service (OxO) to map ontology terms between source and target vocabularies.
 
 An interesting resource is the [OBO Semantic Engineering Training](https://oboacademy.github.io/obook/) (Open Biological and Biomedical Ontologies Organized Knowledge). Although developed for a particular project, its content offers a practical demonstration of how to address a genuine case.
