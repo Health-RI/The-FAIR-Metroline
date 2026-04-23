@@ -129,7 +129,8 @@ Even when your data cannot be openly shared (e.g. due to privacy or legal restri
 The HRI Clinic modelling team decides to use RDF to structure their data into triples and OWL to define their data's rules and relationships. The clinic publishes their simplified version of CARE-SM on GitHub (including a clear license, version and credit to the original model).
 " %}
 
-## Expertise requirements for this step
+## Expertise requirements for this step 
+{: .cs-collapsed}
 Creating or reusing a semantic (meta)data model typically involves multiple experts, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team).
 
 - **Metadata experts.** Bring a strong understanding of what metadata is, how it differs from data, and how it supports documentation, discovery, and reuse by both humans and machines. This expertise is essential from the start of the modelling process, as it underpins how data is meaningfully described and exposed.

@@ -115,7 +115,8 @@ In [Wikidata](https://www.wikidata.org), you can visualise query results in diff
 "%}
 
 
-## Expertise requirements for this step
+## Expertise requirements for this step 
+{: .cs-collapsed}
 To successfully perform this step, you may need help from the following experts:
 * **Researcher/domain expert.** Uses domain knowledge to formulate queries and interpret results.
 * **Data scientist.** Executes queries, processes results and handles federated queries.

@@ -94,7 +94,8 @@ If your team includes a FAIR data steward, ensure they have access to the right 
 * **Funder requirements.** Many funders now require a data steward to be part of the project team. Check grant conditions to ensure compliance with specific expectations.
 * **Publishing policies and local guidance.** Ensure data handling aligns with institutional policies and national and international regulations. Discuss early stage requirements with local guidance bodies to meet FAIR standards and repository guidelines.
 
-## Expertise requirements for this step
+## Expertise requirements for this step 
+{: .cs-collapsed}
 Positioning a FAIR data steward in your team requires aligning their role with your FAIRification objectives and existing support structures, as described in Metroline Step: Build the Team. The following experts may be involved.
 * **FAIR data stewards.** Provide expertise in data management, metadata standards, data integration, repository platforms and privacy/security compliance.
 * **Researchers.** Work with data stewards during data generation, collection and analysis, adopting recommended tools and platforms.

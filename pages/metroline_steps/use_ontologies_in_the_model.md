@@ -81,7 +81,8 @@ Ontologies evolve over time, so mappings and bindings must be reviewed and updat
 
 As the volume of (meta)data and repositories grows, continuous ontology maintenance can become a significant burden. Establish governance rules that clarify which bindings will be maintained, how often they are reviewed and by whom, and make these rules part of your project and repository documentation.
 
-## Expertise requirements for this step
+## Expertise requirements for this step 
+{: .cs-collapsed}
 Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below. 
 * **Ontology experts.** Select appropriate ontologies, apply alignment patterns and evaluate ontology quality and scope.
 * **Metadata experts.** Ensure coverage of required metadata elements and provide clear documentation for users.

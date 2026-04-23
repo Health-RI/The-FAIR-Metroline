@@ -157,6 +157,8 @@ As the study progresses, monitoring may reveal patterns such as fields being con
 While adjustments may be necessary, modifying a live eCRF can have serious consequences. Changes may affect the protocol, data integrity, ethics approval and downstream analysis. Potential risks should be carefully assessed and, if required, changes should be managed through formal amendments. Plan for the possibility of data migration and revalidation. Whenever possible, make adjustments in a non-live copy of the study to prevent incidents and contamination of real data. Some systems offer dedicated functionality for this (for example, Castor's [FormSync](https://www.castoredc.com/webinars/introducing-form-sync/)). Always document changes thoroughly and communicate them clearly to all involved parties. 
 
 ### Special step 1 - Adding annotations in Castor EDC and REDCap
+{: .cs-collapsed} 
+
 #### Castor EDC
 In Castor EDC an item's terminology references can be added via the item's "Data standardization". Before you can do so, you first need to add the terminology in the Annotations section of the Settings: 
 {% include image_with_caption.html 
@@ -231,10 +233,13 @@ Now, when you enter data, you can select the item from the ontology's list. For 
    %}
 
 ### Special step 2 - Tools to help you build eCRFs
+{: .cs-collapsed} 
 * **iCRF Generator.** The [iCRF Generator](https://github.com/aderidder/iCRFGenerator/) is a tool that generates eCRFs for various EDC systems such as Castor EDC and REDCap from codebooks published in ART-DECOR and OpenEHR. When codebooks are properly annotated, their annotations are incorporated into the generated CRFs in accordance with the methods described above.
 * **Codebook to Castor/LimeSurvey.** Codebook to Castor/LimeSurvey. Developed by Amsterdam UMC, this tool converts an Excel-based codebook into a format compatible with RadboudUMC’s Castor Offline Design converter, which then generates a Castor-ready XML file. Nowadays, the tool also has limited LimeSurvey support. Currently, the tool is only available within Amsterdam UMC.
 
-## Expertise requirements for this step
+## Expertise requirements for this step 
+{: .cs-collapsed}
+{: .cs-collapsed} 
 Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
 * **Researcher with domain knowledge.** Specifies the items that need to be collected. 
 * **Data steward with EDC knowledge/ data manager.** Builds the forms in the EDC system. They are also in charge of setting up user access and offer technical help to researchers and ensure data integrity and regulatory compliance. 
