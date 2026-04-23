@@ -11,7 +11,8 @@ permalink: /metroline_steps/query_over_resources
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 When machine-readable (meta)data is exposed (see [Metroline step: Transform and Expose FAIR metadata]({{site.baseurl}}/metroline_steps/transform_and_expose_fair_metadata)), it becomes an accessible FAIR resource. In other words, a dataset or metadata collection which can be found, queried, and reused. Such resources are often hosted or described in catalogues and/or via [FAIR Data Points](https://www.fairdatapoint.org/), which expose (meta)data in a standardised way. This ability to discover and reuse data using the metadata resources is what makes FAIR so powerful: it turns isolated data into actionable knowledge for science.
 
 These catalogues offer different levels of interaction:
@@ -36,6 +37,7 @@ This Metroline page focuses on **SPARQL** as it is the standard query language f
 
 
 ## Why is this step important
+{: .cs-collapsed}
 Querying FAIR data is important because it is how you actually use the data. FAIR data is only valuable if it can be discovered, filtered, combined and analysed and querying is how this is made possible.
 * **Find exactly what you need.** General search and filtering allow you to locate datasets or specific information quickly, without manually checking every record.
 * **Explore and understand data.** Browsing and faceted search help you see what datasets exist, what they describe and how they are structured.
@@ -113,7 +115,8 @@ In [Wikidata](https://www.wikidata.org), you can visualise query results in diff
 "%}
 
 
-## Expertise requirements for this step
+## Expertise requirements for this step 
+{: .cs-collapsed}
 To successfully perform this step, you may need help from the following experts:
 * **Researcher/domain expert.** Uses domain knowledge to formulate queries and interpret results.
 * **Data scientist.** Executes queries, processes results and handles federated queries.
@@ -126,6 +129,7 @@ See [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_
 <br>DEAS is a cross-hospital federated query tool developed by the Swiss Personalized Health Network (SPHN) to replace the previous Federated Query System. It enables researchers to securely query aggregated clinical data from multiple Swiss university hospitals without moving patient-level data.
 
 ## Training
+{: .cs-collapsed}
 * [FAIR Cookbook – Exploring data with SPARQL (Python)](https://faircookbook.elixir-europe.org/content/recipes/applied-examples/fair-data-matrix/2-rose-metabolites-Python-RDF-querying-analysis.html). Explains how to use Python and SPARQL to query a FAIR-aligned RDF representation.
 * [Apache Jena SPARQL Tutorial](https://jena.apache.org/tutorials/sparql.html). This SPARQL tutorial provides a concise introduction to the language, illustrating its major features through examples without aiming for full coverage.
 

@@ -12,11 +12,13 @@ permalink: /metroline_steps/pre_fair_assessment
 > {{ current_step.summary }}
 
 ## Short description
+{: .cs-collapsed}
 In this phase you assess whether your (meta)data already meets FAIR criteria, such as persistent unique identifiers for data elements and rich metadata. By using FAIRness assessment tooling you can quantify the level of FAIRness of the data based on its current characteristics and environment. The assessment outcomes can help shape the necessary steps and requirements needed to achieve the desired [FAIRification objectives](define_fairification_objectives) (see [A Generic Workflow for the Data FAIRification Process](https://direct.mit.edu/dint/article/2/1-2/56/9988/A-Generic-Workflow-for-the-Data-FAIRification) and [FAIR in Action Framework by FAIRplus](https://www.nature.com/articles/s41597-023-02167-2)). 
 
 The how-to section describes a variety of assessment tools based on the FAIR principles. 
 
-## Why is this step important 
+## Why is this step important
+{: .cs-collapsed}
 This step will help you assess the current FAIRness level of your data. Comparing the current FAIRness to the previously defined [FAIRification objectives](define_fairification_objectives) will help you shape the necessary steps and requirements needed to achieve your FAIRification goals and help you create your [solution plan](design_solution_plan), a workplan specifically designed for reaching these goals. Furthermore, the assessment can be repeated in the [Assess FAIRness](assess_fairness) step, allowing you to compare the results and check the progress of your data towards FAIRness.
 
 ## How to
@@ -144,7 +146,8 @@ To successfully do a pre-FAIR assessment, do the following:
 
 The final evaluation will give insight into the current FAIRness of your data. Depending on the tool used, you may receive feedback on how to improve the FAIRness of your data. Thus, the outcome of the pre-FAIR assessment helps you determine the next steps to achieve your FAIRification goals.
 
-## Expertise requirements for this step
+## Expertise requirements for this step 
+{: .cs-collapsed}
 The expertise required may depend on the assessment tool you want to use. Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
 * **FAIR data stewards.** Specialist who can help filling out the surveys and questionnaires.
 * **Research software engineers.** Specialists who can help running some of the specialised software.
@@ -153,6 +156,7 @@ The expertise required may depend on the assessment tool you want to use. Expert
 For an applied example of The FAIR Evaluator, see [Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic](https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-022-00263-7).
 
 ## Training
+{: .cs-collapsed}
 **DMP Instructional Trainings**<br>
 Relevant Trainings for this session might those who initially deal with Data Management Plans. Data Management Plans tend to be the starting point to draft a plan to eventually FAIRIFY the data. Every University Hospital and University in The Netherlands has their own DMP relevant training. One way to find them is to look for them in the Health-RI portfolio of [Services](https://www.healthdata.nl/en/services?rendered_item=DMP).
 

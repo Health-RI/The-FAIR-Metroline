@@ -16,7 +16,7 @@ page_id: main
         <path d="M2 12l10 5 10-5"/>
       </svg>
     </div>
-    <div class="nav-card-title">Scenarios</div>
+    <div class="nav-card-title">Use cases</div>
     <p class="nav-card-description">Explore real-world examples and use cases for making your data FAIR</p>
   </a>
 
@@ -43,7 +43,7 @@ page_id: main
 </div>
 
 <div class="homepage-recent-scenarios mt-5">
-  <h2 class="section-title">Recently Added Scenarios</h2>
+  <h2 class="section-title">Recently Added Use Cases</h2>
   <div class="scenario-cards-grid scenario-cards-compact">
     {% assign scenarios = site.data.scenarios_list | slice: 0, 2 %}
     {% for scenario in scenarios %}

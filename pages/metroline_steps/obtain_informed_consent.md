@@ -12,6 +12,7 @@ permalink: /metroline_steps/obtain_informed_consent
 > {{ current_step.summary }}
 
 ## Short description
+{: .cs-collapsed}
 Informed consent (IC) is the process by which a patient voluntarily agrees to a medical procedure, treatment, or participation in research after being fully informed of the relevant details. Collecting data as well as its reuse for scientific purposes typically requires participants' IC. To align with the FAIR principles, it is essential that these data-sharing practices are explicitly addressed in the informed consent form. Additionally, consent may also be required for activities such as data archiving and linkage to external registries.
 
 Many different forms of IC exist. The image below highlights some variants of informed consent and how they are (generally) related.
@@ -26,7 +27,8 @@ This step provides considerations and resources for setting up an Informed Conse
 
 To ensure a dataset can efficiently be accessed, processed, and utilised by machines with minimal manual intervention (i.e. machine-actionable data), information from the IC must also be available in the metadata, making it machine-actionable. This enables automated systems to interpret consent terms to a certain extent, facilitating the ethical and legal sharing of data across systems while safeguarding participant rights. Making an IC more machine-actionable, will be addressed in another Metroline step (future plans).
 
-## Why is this step important 
+## Why is this step important
+{: .cs-collapsed}
 The FAIR principles aim to make data useful for immediate research and future purposes, such as replication, validation, and meta-analysis, while safeguarding participants' privacy and rights. Therefore, informed consent must address both current and potential future data use in compliance with GDPR requirements. This step offers guidance on creating an effective informed consent form (ICF) and subject information sheet (SIS) to meet these standards.
 
 ## How to 
@@ -172,6 +174,7 @@ With your SIS and ICF fully FAIR ready and approved by your data protection offi
 * An accredited MREC or the CCMO for WMO studies
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 The following role from [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team) is necessary for this step:
 * ELSI expert 
   * National level
@@ -180,9 +183,11 @@ The following role from [Metroline Step: Build the Team]({{site.baseurl}}/metrol
     * Amsterdam UMC - Privacy Bescherming & Informatie Beveiliging (<privacy@amsterdamumc.nl>)
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 * [COMPRAYA’s SIS](https://www.compraya.nl/files/e1-e2ppicomprayastudie_m20com_v1.9_14032023_clean.pdf) (in Dutch) contains a section about, for example, future use of data and materials (page 7).
 
 ## Training
+{: .cs-collapsed}
 Available training and pedagogical resources include:
 * Research Data Netherlands (RDNL): [GDPR 4 Data Support](https://researchdata.nl/en/gdpr-4-data-support/)
 * UK Data Service (Economic and Social Research Council): [Role of informed consent in ethical data collection, sharing and reuse](https://ukdataservice.ac.uk/app/uploads/roleofinformedconsent2024-10-24.pdf) 

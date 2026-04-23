@@ -11,10 +11,12 @@ permalink: /metroline_steps/use_ontologies_in_the_model
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 This step starts from the existing [semantic (meta)data model](https://fairmetroline.org/metroline_steps/create_or_reuse_a_semantic_model) that organises your domain's entities, attributes and value sets with clear project-level meaning. Building on that model, this step links its elements to ontology terms to make their meanings explicit, computable and interoperable. Ontologies are formal, logic-based representations of domain knowledge that define types of entities, relations and constraints, enabling explicit semantics and consistent computational interpretation. By adding this semantic layer, models become not only well-structured but also interoperable across systems.
 
 ## Why is this step important
+{: .cs-collapsed}
 A (meta)data model can express semantics for its project context, but those meanings are often implicit or local. The next challenge is to make them interpretable across systems. Ontologies provide the shared semantic layer that enables this. They make model elements formally defined and logically connected beyond their original context, turning isolated data structures into interoperable, machine-understandable representations. The following aspects highlight the main contributions of ontology use to semantic precision, data integration and FAIR alignment:
 * **Shared meaning.** Ontologies use formal semantics and axioms (formal rules that software can check) to make each model element's meaning explicit across systems.
 * **Data integration.** By providing precise, shared semantics, ontologies reduce false matches where labels align but meanings differ, enabling reliable combination and comparison across systems.
@@ -79,18 +81,21 @@ Ontologies evolve over time, so mappings and bindings must be reviewed and updat
 
 As the volume of (meta)data and repositories grows, continuous ontology maintenance can become a significant burden. Establish governance rules that clarify which bindings will be maintained, how often they are reviewed and by whom, and make these rules part of your project and repository documentation.
 
-## Expertise requirements for this step
+## Expertise requirements for this step 
+{: .cs-collapsed}
 Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below. 
 * **Ontology experts.** Select appropriate ontologies, apply alignment patterns and evaluate ontology quality and scope.
 * **Metadata experts.** Ensure coverage of required metadata elements and provide clear documentation for users.
 * **Semantic web technology experts.** Represent bindings in RDF, OWL and SKOS; maintain internal coherence of the model; design persistent IRIs, implement SHACL validation and automate mapping publication workflows.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 * [CARE-SM (Clinical and Registry Entries Semantic Model)](https://github.com/CARE-SM). Annotates clinical registry concepts using OBO Foundry-aligned ontologies for precise semantics and cross-resource mapping.
 * [ELIXIR (European Life-science Infrastructure for Biological Information) Bioschemas](https://bioschemas.org/). Extends [Schema.org](https://schema.org/) and uses ontology terms to improve dataset discovery on the web.
 * [Model (Investigation–Study–Assay)](https://isa-tools.org/). Links experimental metadata fields to [Ontology for Biomedical Investigations (OBI)](https://obi-ontology.org/) and [Chemical Entities of Biological Interest (ChEBI)](https://www.ebi.ac.uk/chebi/) terms to support consistent interpretation and validation.
 
 ## Training
+{: .cs-collapsed}
 One interesting educational resource is the [Ontology mapping with Ontology Xref Service (OxO)](https://faircookbook.elixir-europe.org/content/recipes/interoperability/ontology-alignment-oxo.html) provided in the FAIRCOOKBOOK. This specific recipe shows how to use EMBL-EBI ontology Xref Service (OxO) to map ontology terms between source and target vocabularies.
 
 An interesting resource is the [OBO Semantic Engineering Training](https://oboacademy.github.io/obook/) (Open Biological and Biomedical Ontologies Organized Knowledge). Although developed for a particular project, its content offers a practical demonstration of how to address a genuine case.

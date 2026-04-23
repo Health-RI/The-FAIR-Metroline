@@ -11,7 +11,8 @@ permalink: /contributing/template
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 
 
 ## Why is this step important
@@ -25,13 +26,17 @@ permalink: /contributing/template
 
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 {% include metroline_steps/looking_for_examples.html %}
 
 
 ## Training
+{: .cs-collapsed}
+{: .cs-collapsed}
 {% include metroline_steps/training_will_be_added.html %}
 
 

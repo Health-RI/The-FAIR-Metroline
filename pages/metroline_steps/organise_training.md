@@ -11,10 +11,12 @@ permalink: /metroline_steps/organise_training
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 After building your team ([Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team)), it is a good idea to assess their training needs. This vital step involves a comprehensive assessment to pinpoint any missing expertise or skill gaps within the different roles in your team. This page creates a broad overview of training solutions that support the development of core competencies in FAIR data management. This page offers guidance on how to locate targeted training options for all roles within a given team. Specialised training that is needed for a specific Metroline Step are listed in the corresponding pages.
 
 ## Why is this step important
+{: .cs-collapsed}
 The journey to making data FAIR is intricate, demanding both a comprehensive understanding of the FAIR principles and the practical skills for their implementation. A specialised FAIRification training will empower your team members to:  
 * Understand the FAIR principles and how to 1) apply them to your own data or to 2) support others in applying them effectively.
 * Learn the benefits and best practices for implementing FAIR data management, whether you are responsible for hands-on activities or for advising colleagues. 
@@ -56,7 +58,8 @@ Many universities and UMCs organise specialised data management courses. Check y
 * the [Netherlands Bioinformatics and Systems Biology research school](https://www.dtls.nl/biosb/education/) (BioSB) offers courses, training and workshops in the field of data and technologies for life sciences;
 * [Data Carpentry](https://datacarpentry.org/) develops and teaches workshops on the fundamental data skills needed to conduct research. Some institutions organise data carpentry training for their researchers. Additionally, The [Netherlands eScience Center](https://www.esciencecenter.nl/digital-skills/) also organises workshops. 
 
-#### Training for Data Stewards
+#### Training
+{: .cs-collapsed} for Data Stewards
 The evolution of the Data Steward’s role within the research data lifecycle has brought a need for specific skill sets. Because data stewardship is a relatively new job profile and the areas of data management and FAIR data practices are constantly evolving, FAIR data stewards will significantly benefit from continuous learning. Staying on top of emerging trends, tools, and standards is key to developing and maintaining the necessary skills and expertise. In this context you might want to consider the following options:
 * Health-RI provides an annual introductory course for data stewards. For more information check the [Health-RI service portal](https://www.healthdata.nl/en/services/fair-data-stewards-basics-course). 
 * Several universities and UMCs have their own onboarding training for new data stewards, such as [Maastricht University](https://doi.org/10.5281/zenodo.13736063).  
@@ -67,7 +70,8 @@ The evolution of the Data Steward’s role within the research data lifecycle ha
 * The National Coordination Point RDM (LCRDM) organises the [DCC Spring training days](https://lcrdm.nl/evenementen/dcc-spring-training-days-2024). Most materials are freely available afterwards. 
 * For other resources also check the [FAIR Training and Capacity Building](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/39256187) on the Health-RI Confluence. 
 
-#### Training for trainers
+#### Training
+{: .cs-collapsed} for trainers
 Training materials can themselves be FAIR. The following resources support trainers in enhancing the FAIRness and effectiveness of their materials.
 * ELIXIR’s [Train-the-Trainer programme](https://elixir-europe.org/platforms/training/train-the-trainer);
 * the [EOSC synergy learn platform](https://learn.eosc-synergy.eu/get-started/) helps you to get started in designing training;
@@ -81,12 +85,14 @@ You can also consider joining a community of trainers.
 All of these resources are emerging to adapt and tailor FAIR data solutions to meet the specific needs and constraints of every team. Additionally, every step of the Metroline contains training links or information that could be of further use. Ultimately, also contact the Training Coordinator of your institution for more relevant advise. 
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 The expertise required may depend on the training that will be followed, or the task that will be performed. Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
 * **Researcher.** Provides research data and discipline specific knowledge.
 * **Data steward.** Often, data stewards act as trainers for their research group, department, faculty, or university.
 * **Trainer.** Your institutional Training Coordinator that focuses on research data management (if available) knows which training is available for the different roles in the team. They can find or create and organise tailor-made training and evaluate the effectiveness and impact of training. 
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 ***Radboud University Medical Center (RadboudUMC)***<br>
 Researchers from RadboudUMC have mandatory induction days where they are presented with a variety of services available to them. As part of these sessions, researchers learn to apply the Findability and Acessibility principles within their studies. Furthermore, within the [Radboudumc Technology Centers](https://www.radboudumc.nl/en/research/technology-centers) quarterly training FAIR RDM sessions get offered where researchers learn how to introduce the FAIR principles in their Data management practices.
 

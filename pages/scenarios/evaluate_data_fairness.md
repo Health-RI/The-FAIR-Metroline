@@ -5,7 +5,7 @@ page_id: evaluate_data_fairness
 custom_js: metro-timeline
 ---
 
-## Scenario Overview
+## Use Case Overview
 
 As a researcher, you may need to understand how FAIR your data currently is to comply with institutional requirements or to identify areas for improvement. In this scenario, you assess the current FAIRness level of your dataset to check compliance and pinpoint specific areas for improvement in how your data is described, accessed, and reused.
 

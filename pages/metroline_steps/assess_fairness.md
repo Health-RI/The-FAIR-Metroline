@@ -11,10 +11,12 @@ permalink: /metroline_steps/assess_fairness
 > 
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 In this step, you assess whether the objectives of your FAIRification process have been achieved. As outlined in [A Generic Workflow for the Data FAIRification Process](https://direct.mit.edu/dint/article/2/1-2/56/9988/A-Generic-Workflow-for-the-Data-FAIRification), this may include evaluating the extent to which the original [FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives) have been met and assessing the FAIR status of your data and metadata, for example, by using [FAIR assessment tools]({{site.baseurl}}/metroline_steps/pre_fair_assessment). Depending on your solution plan, this step may mark the completion of your FAIRification journey or serve as an intermediate checkpoint to review progress and, if needed, refine your objectives.
 
-## Why is this step important 
+## Why is this step important
+{: .cs-collapsed}
 Assessing FAIRness after FAIRification ensures that your dataset truly meets your original goals and reveals where further work is needed. This step is key to: 
 * **Verifying FAIR compliance.** Confirms whether your data is truly Findable, Accessible, Interoperable and Reusable, rather than just improved. 
 * **Ensuring long-term usability.** Prevents obsolescence by checking if your data remains understandable and accessible over time. 
@@ -65,15 +67,18 @@ Even if your FAIRification efforts are complete for now, evolving requirements, 
 To help keep an overview of the original FAIRification objectives, their status, and possible changes in the process, it might be useful to update this information in your datamanagement plan. Consider going back to [Metroline Step: Define FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives) to redefine the original FAIR objectives.
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 The expertise required may depend on the assessment tool you want to use. Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below. 
 * **Researcher.** Understands the data content and how it should be used. 
 * **FAIR data stewards.** Specialist who can help filling out the FAIR assessment tools (see also [Metroline step: Pre-FAIR assessment]({{site.baseurl}}/metroline_steps/pre_fair_assessment)) 
 * **Research software engineers.** Specialists who can help running some of the specialised software. 
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 For an applied example of The FAIR Evaluator tool, see Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic. 
 
 ## Training
+{: .cs-collapsed}
 Considering looking into the following resources:
 * [FAIR Evaluator tool](https://faircookbook.elixir-europe.org/content/recipes/assessing-fairness/fair-assessment-fairevaluator.html) 
 * [The FAIR Maturity Evaluation Service](https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/)

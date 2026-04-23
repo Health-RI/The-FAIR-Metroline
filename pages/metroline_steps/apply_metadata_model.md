@@ -11,7 +11,8 @@ permalink: /metroline_steps/apply_metadata_model
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 This step provides guidance on how to apply a metadata model to describe research resources (e.g. a model describing the topic, provenance, or type of datasets), and how to apply a data model to describe the information contained in those resources (e.g. a model capturing the structure and semantics of cohort data). Usually, both metadata and data models are annotated with ontologies (e.g. [DCAT](https://www.w3.org/TR/vocab-dcat-3/) for metadata, [ORDO](https://www.orphadata.com/ordo/) for data). This page outlines the differences between metadata and data models, their benefits, and the main methods and tools available to apply them effectively.
 
 **Metadata models** describe information _about_ a resource. For instance, who created it, when it was collected, and what it is generally about (theme). These models help structure information like catalogues of datasets and their distributions, and also properties like authorship, licensing, and contact points. Using a metadata model to describe your resource improves its findability, allowing others to assess its potential for reuse.
@@ -25,6 +26,7 @@ For example, for a tool like FAIR-in-a-box (see also table below), this may invo
 Many metadata-focused tools also provide mechanisms to expose your resource online under clear access conditions, increasing its findability. This may include generating metadata records in RDF and publishing the metadata via catalogues or registries that support standard protocols such as SPARQL.
 
 ## Why is this step important
+{: .cs-collapsed}
 Applying the data model to your data and metadata model to your metadata is crucial for the next step: 
 [Metroline Step: Transform and expose FAIR (meta)data]({{site.baseurl}}/metroline_steps/transform_and_expose_fair_metadata). It is a central step in the FAIRification process, in which you connect your (meta)data to elements of your (semantic) (meta)data model. By doing this, your (meta)data becomes machine-readable and interoperable.
 
@@ -146,6 +148,7 @@ The following tools provide support in applying a (meta)data model to your resou
 </div>
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 Applying metadata and data models effectively requires a mix of domain knowledge and technical skills. Ideally, teams should involve:
 * **Domain experts.** Understand the research content and can guide the correct interpretation of terms and relationships.
 * **(Meta)Data modellers and ontologists.** Can help select or customise the right models and ontologies to fit the data.
@@ -167,6 +170,7 @@ For more information see the following publications:
 Implemented the Health-RI metadata schema in the FDP to apply the Health-RI core metadata schema to metadata from the [PRISMA study](https://www.prisma-studie.nl/). You can view PRISMA metadata in the [Radboudumc FAIR Data Point](https://fdp.radboudumc.nl/catalog/fa48b19f-f390-4023-872d-f0f0024bfcec). 
 
 ## Training
+{: .cs-collapsed}
 * [A portal to (Meta)data](https://zenodo.org/records/15676294), a presentation-lecture on gathering metadata elements at different levels.
 
 ## Suggestions

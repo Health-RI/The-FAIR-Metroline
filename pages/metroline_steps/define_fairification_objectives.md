@@ -12,11 +12,13 @@ permalink: /metroline_steps/define_fairification_objectives
 > {{ current_step.summary }}
 
 ## Short description
+{: .cs-collapsed}
 FAIRification enhances data Findability, Accessibility, Interoperability, and Reusability (FAIR) by improving documentation, metadata, and standardisation. It applies to both new and existing data. Defining FAIRification objectives is the first step in this process and can be guided by models such as [FAIRopoly](https://www.ejprarediseases.org/fairopoly/), [A Generic Workflow for the Data FAIRification Process](https://direct.mit.edu/dint/article/2/1-2/56/9988/A-Generic-Workflow-for-the-Data-FAIRification), and the [FAIR in Action Framework](https://www.nature.com/articles/s41597-023-02167-2).
 
 These objectives may be set by institutes, funders, or journals to promote data reuse (see FAIRsharing). As a researcher, aligning with FAIRification efforts can increase visibility, recognition, and opportunities for collaboration. Spend some time considering your FAIRification objectives. What is your FAIR driving force?
 
-## Why is this step important 
+## Why is this step important
+{: .cs-collapsed}
 Setting clear FAIRification objectives is essential for several reasons.
 * **Clarify purpose.** Provides direction for FAIRification in studies and projects, ensuring clear roles and responsibilities.
 * **Enhance collaboration.** Facilitates communication among team members and stakeholders, ensuring shared understanding of FAIR goals.
@@ -62,6 +64,7 @@ Organise and describe the steps and resources identified in the previous step ne
 * I want to make my data more findable for researchers in my field by publishing it in repository Z.
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 Defining FAIRification objectives is typically a collaborative effort by a range of experts, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team).
 * **Researchers with domain knowledge.** Provide context to the FAIRification efforts from the perspective of a domain.
 * **FAIR data stewards.** Help define FAIRification objectives to meet the project’s, funder’s, journal’s and/or institute’s requirements.
@@ -69,6 +72,7 @@ Defining FAIRification objectives is typically a collaborative effort by a range
 * **ELSI experts.** Help identify the legal compliance and ethical aspects of FAIRification objectives.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 Below you can find several examples of projects with the FAIR objectives they set.
 
 ***[European Joint Programme on Rare Diseases (EJP RD)](https://www.ejprarediseases.org/)***
@@ -98,6 +102,7 @@ For onboarding metadata into the catalogue, the following FAIRification objectiv
 * include a [machine-readable license](https://spdx.dev/learn/handling-license-info/) (see also [DCAT-AP info](https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/#distribution-licence)) and provenance information on how the data was created.
 
 ## Training
+{: .cs-collapsed}
 At this stage of the FAIR Metroline, even before beginning training, a useful resource to look at, especially for the life sciences, is:
 * The [FAIR Toolkit](https://fairtoolkit.pistoiaalliance.org/) for Life Science Industry by Pistoia Alliance
 

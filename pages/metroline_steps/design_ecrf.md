@@ -11,14 +11,16 @@ permalink: /metroline_steps/design_ecrf
 > 
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 Capturing clinical data plays a vital role in health research. Traditionally, this information was recorded on paper case report forms (CRFs) and later manually entered into a database. Today, however, data is increasingly collected directly using electronic case report forms (eCRFs) within electronic data capture (EDC) systems. This shift has significantly improved the quality and reduced the costs associated with data collection. 
 
 A variety of EDC platforms are available to support clinical data capture. Most Dutch University Medical Centres (UMCs) hold site licences for one or more of these platforms. Use of these platforms is mandatory for research that falls under Good Clinical Practice (GCP) as defined in the [ICH E6(R3) guideline](https://www.ema.europa.eu/en/documents/scientific-guideline/ich-e6-r3-guideline-good-clinical-practice-gcp-step-5_en.pdf) and the NFU also indicates that their use is mandatory for all WMO research within the Netherlands as specified in its [guideline on the quality assurance of human subject research](https://www.umcnl.nl/app/uploads/2025/10/Richtlijn-kwaliteitsborging-mensgebonden-onderzoek-2023.pdf). Commonly used systems in the Netherlands include [Castor EDC](https://www.castoredc.com/) and [REDCap](https://project-redcap.org/). These tools offer a wide range of functionalities, including real-time data validation during entry, integrated questionnaires, study planning modules, streamlined import/export processes and monitoring features that promote data quality and regulatory compliance. Some of these functionalities also support the efficient design of eCRFs, which is the key focus of this page. 
 
 This page provides guidance on the design of eCRFs, including considerations before creating one, and best practices to keep in mind while to ensure high data quality and reliability.  
 
-## Why is this step important 
+## Why is this step important
+{: .cs-collapsed}
 Properly designing your eCRF is important for a variety of reasons: 
 * **Improved data quality.** The quality of the eCRF will greatly influence the quality of the collected data. A well designed eCRF reduces human errors, leading to more accurate and reliable data collection. 
 * **Interoperability of data.** Using standardised and reusable definitions to build these eCRFs, makes the collected data easier to integrate and compare across studies and systems.  
@@ -155,6 +157,8 @@ As the study progresses, monitoring may reveal patterns such as fields being con
 While adjustments may be necessary, modifying a live eCRF can have serious consequences. Changes may affect the protocol, data integrity, ethics approval and downstream analysis. Potential risks should be carefully assessed and, if required, changes should be managed through formal amendments. Plan for the possibility of data migration and revalidation. Whenever possible, make adjustments in a non-live copy of the study to prevent incidents and contamination of real data. Some systems offer dedicated functionality for this (for example, Castor's [FormSync](https://www.castoredc.com/webinars/introducing-form-sync/)). Always document changes thoroughly and communicate them clearly to all involved parties. 
 
 ### Special step 1 - Adding annotations in Castor EDC and REDCap
+{: .cs-collapsed} 
+
 #### Castor EDC
 In Castor EDC an item's terminology references can be added via the item's "Data standardization". Before you can do so, you first need to add the terminology in the Annotations section of the Settings: 
 {% include image_with_caption.html 
@@ -229,10 +233,13 @@ Now, when you enter data, you can select the item from the ontology's list. For 
    %}
 
 ### Special step 2 - Tools to help you build eCRFs
+{: .cs-collapsed} 
 * **iCRF Generator.** The [iCRF Generator](https://github.com/aderidder/iCRFGenerator/) is a tool that generates eCRFs for various EDC systems such as Castor EDC and REDCap from codebooks published in ART-DECOR and OpenEHR. When codebooks are properly annotated, their annotations are incorporated into the generated CRFs in accordance with the methods described above.
 * **Codebook to Castor/LimeSurvey.** Codebook to Castor/LimeSurvey. Developed by Amsterdam UMC, this tool converts an Excel-based codebook into a format compatible with RadboudUMC’s Castor Offline Design converter, which then generates a Castor-ready XML file. Nowadays, the tool also has limited LimeSurvey support. Currently, the tool is only available within Amsterdam UMC.
 
-## Expertise requirements for this step
+## Expertise requirements for this step 
+{: .cs-collapsed}
+{: .cs-collapsed} 
 Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
 * **Researcher with domain knowledge.** Specifies the items that need to be collected. 
 * **Data steward with EDC knowledge/ data manager.** Builds the forms in the EDC system. They are also in charge of setting up user access and offer technical help to researchers and ensure data integrity and regulatory compliance. 
@@ -245,6 +252,7 @@ Experts that may need to be involved, as described in [Metroline Step: Build the
   * [De-novo FAIRification via an Electronic Data Capture system by automated transformation of filled electronic Case Report Forms into machine-readable data](https://doi.org/10.1016/j.jbi.2021.103897)
 
 ## Training
+{: .cs-collapsed}
 * The EJPRD Workshop on the Implementation of a CDE Semantic Model for ERNs is fully available on [GitHub](https://github.com/ejp-rd-vp/EJP-RD-hackathons-workshops/blob/master/EJPRD_Workshop_2020-06_Hackathon_Implementation_CDE_semantic_model_for_ERNs/Presentations/2020-06-23%20-%20Castor%20EDC%20-%20Martijn%20Kersloot%20-%20FAIRification%20at%20the%20Source.pdf). 
 
 ## Suggestions

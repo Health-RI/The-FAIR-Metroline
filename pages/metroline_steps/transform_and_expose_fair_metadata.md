@@ -11,7 +11,8 @@ permalink: /metroline_steps/transform_and_expose_fair_metadata
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 Before following this step, make sure you have already mapped your data and metadata to appropriate (meta)data schemas, as described in [Metroline Step: Apply (meta)data model]({{site.baseurl}}/metroline_steps/apply_metadata_model).
 
 This step guides you through **transforming and exposing** both your **data** and **metadata**. These are two closely related but distinct processes. While the semantic models, tools, and storage methods differ (metadata is usually made publicly accessible, while data often remains restricted due to privacy or sensitivity), both transformations are essential to make your resource FAIRer.
@@ -32,6 +33,7 @@ While RDF may be more effort than a simple table, it is especially valuable when
 By following this step, you put the FAIR principles into practice with practical advice and tools to improve the reusability and interoperability of your metadata and data. This ensures that it can be effectively matched and reused within the scientific community and beyond.
 
 ## Why is this step important
+{: .cs-collapsed}
 Transforming and exposing your (meta)data in this way makes it FAIR-ready and visible to others under your chosen access conditions (see [Metroline Step: Define access conditions]({{site.baseurl}}/metroline_steps/define_access_conditions)). Building on the metadata model from the 
 [Metroline Step: Apply (meta)data model]({{site.baseurl}}/metroline_steps/apply_metadata_model), you share your resource in a standardised, machine-readable format. This increases its findability, accessibility and reuse.
 
@@ -90,6 +92,7 @@ Start by transforming metadata into a structured format using semantic web stand
 "%}
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 Transforming and exposing FAIR (meta)data effectively requires a mix of domain knowledge, semantic expertise and technical skills. Ideally, teams should involve:
 * **Domain experts.** Provide context and ensure that the transformed (meta)data accurately reflects the research content.
 * **Semantic modellers or ontologists.** Advise on selecting and applying the right ontologies, vocabularies and semantic models.
@@ -114,6 +117,7 @@ More information:
 * [PRISMA metadata in the Radboudumc FAIR Data Point](https://fdp.radboudumc.nl/catalog/fa48b19f-f390-4023-872d-f0f0024bfcec)
 
 ## Training
+{: .cs-collapsed}
 * FAIR Cookbook - [An inventory of tools for converting data to RDF](https://faircookbook.elixir-europe.org/content/recipes/interoperability/rdf-conversion.html)
 
 ## Suggestions

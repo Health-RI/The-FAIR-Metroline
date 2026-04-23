@@ -11,12 +11,14 @@ permalink: /metroline_steps/register_structural_metadata
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 Structural metadata (previously introduced in [Metroline Step: Assess availability of your metadata]({{site.baseurl}}/metroline_steps/assess_availability_of_your_metadata)), includes information about what data is collected and its format (e.g. “birth date” - YYYYMMDD), and, if applicable, the code systems and values applied. Similar to how an index at the beginning of a book refers to all its chapters and pages, it gives the reader an idea about the content and its definitions. For data resources, this is typically referred to as the **codebook** or **data dictionary**. You can find more information about how to generate one in [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics).
 
 Once you’ve created this codebook, you should consider making it available to ensure clarity, usability, and trust in your dataset. This step will ensure that you can make a selection of data repositories that fit your research domain. Moreover, this step will point to tools that you can use to further increase FAIRness of your structural metadata.
 
 ## Why is this step important
+{: .cs-collapsed}
 Registering (or publishing) structural metadata is crucial for ensuring the effective reuse and harmonisation of data structures across various research. This step enhances the contextual understanding of individual records, making data more meaningful and accessible, and improves the precision in data retrieval.
 
 In other words, this step:
@@ -272,14 +274,17 @@ Guidance on maintaining metadata integrity can be found in the following Metroli
 {% include info-box.html type="example" title="Example" text=infobox_text2 %}
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 This step requires the following experts as described in the [Metroline Step: Build the team]({{site.baseurl}}/metroline_steps/build_the_team) step.
 * **Researcher.** Provide the metadata/codebook.
 * **Data Steward.** Find solutions and implement them or support the Researcher in the implementation.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 {% include metroline_steps/looking_for_examples.html %}
 
 ## Training
+{: .cs-collapsed}
 The training available for the registering structural metadata is still limited. However, some resources include the Official European Training on Open Data. They provide courses on the DCAT and DCAT-AP standards, which are the foundation for European public sector metadata structuring. The material is freely available here: [Improving open data and metadata quality | data.europa.eu](https://data.europa.eu/en/academy/improving-open-data-and-metadata-quality) 
 
 ## Suggestions

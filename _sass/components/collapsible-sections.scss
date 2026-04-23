@@ -1,0 +1,20 @@
+// Collapsible section headings on metroline step pages
+.cs-heading {
+  cursor: pointer;
+  user-select: none;
+
+  &::after {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    content: '\f078'; // fa-chevron-down
+    font-size: 0.6em;
+    margin-left: 0.5em;
+    vertical-align: middle;
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+
+  &[aria-expanded="false"]::after {
+    transform: rotate(-90deg);
+  }
+}

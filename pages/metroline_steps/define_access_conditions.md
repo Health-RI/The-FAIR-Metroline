@@ -11,7 +11,8 @@ permalink: /metroline_steps/define_access_conditions
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 According to the FAIR principles, data should be shared “[as open as possible and as closed as necessary](https://direct.mit.edu/dint/article/2/1-2/47/9998/The-A-of-FAIR-As-Open-as-Possible-as-Closed-as)” 
 – open to allow reuse, but closed to protect privacy of the participants. In practice that means establishing the conditions 
 under which researchers can get access to the data and how it can be reused, and deciding if the data can be further shared. 
@@ -39,6 +40,7 @@ access and reuse conditions. This process is quite complex and can vary per inst
 procedures for the different Dutch University Medical Centers, please find specific contact details at the [ELSI Serivcedesk](https://elsi.health-ri.nl/instituutspecifieke-informatie).
 
 ## Why is this step important
+{: .cs-collapsed}
 Accessibility, much like Findability and Interoperability, plays a vital role in ensuring that data can be effectively reused. 
 This step provides guidelines to define and document the conditions under which the data can be legally and ethically accessed 
 and reused both by humans and machines.
@@ -220,7 +222,8 @@ In case of restricted access data, the Geonovum [link for Non-open data](https:/
 can add a link to the Data Use Agreement (human-readable) or encoded use conditions (machine-readable). 
 See [Step 3](#step-3---prepare-necessary-documentation) for information about machine-readable access conditions.
 
-## Expertise requirements for this step
+## Expertise requirements for this step 
+{: .cs-collapsed}
 The following role from [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team)) is necessary for this step:
 - **Researcher.** Knowledge about the data/research, and the domain best practices, responsible for implementation of 
 accessibility policy and following-through (e.g. granting access).
@@ -230,9 +233,11 @@ and applicable accessibility regulations.
 - **Legal expert.** Advise the Researcher on legal aspects of data sharing and reuse.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 {% include metroline_steps/looking_for_examples.html %}
 
 ## Training
+{: .cs-collapsed}
 * [Essentials 4 Data Support](https://danstraining.moodlecloud.com/course/view.php?id=11) ([section V - LEGISLATION AND POLICY](https://danstraining.moodlecloud.com/course/section.php?id=86))
 
 ## Suggestions

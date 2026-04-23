@@ -11,10 +11,12 @@ permalink: /metroline_steps/data_access_and_retrieval
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 Data must be acquired responsibly and efficiently. This includes identifying how to access and retrieve the data and how to ensure the data meets legal, ethical, and technical requirements. This page outlines the steps and considerations involved in acquiring data.
 
 ## Why is this step important
+{: .cs-collapsed}
 Correct and responsible data access and retrieval ensures you:
 * **Comply with regulations.** You confirm that the data can be used legally and ethically, meeting requirements such as GDPR.
 * **Safeguard data integrity.** Secure transfer methods and integrity checks (e.g. checksum) make sure the data are complete and unchanged.
@@ -106,6 +108,7 @@ A checksum is a short digital code that works like a fingerprint for a file, let
 "%}
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 You may need access to or support from:
 * **Data Stewards.** Ensure proper metadata and FAIR practices.
 * **Legal and ethical advisors.** Interpret GDPR and other ethical constraints). 
@@ -115,9 +118,11 @@ You may need access to or support from:
 Refer to [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team) for role descriptions and team structure advice.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 {% include metroline_steps/looking_for_examples.html %}
 
 ## Training
+{: .cs-collapsed}
 Training on data acquisition and access is crucial to meet FAIR principles and legal requirements. To acquire and retrieve data responsibly, researchers need to understand both the **technical processes** (e.g. secure file transfer, APIs, data validation) and the **legal/ethical frameworks** (e.g. data licenses, consent, institutional approvals). Several training resources are available to build these competencies:
 * **ELIXIR Luxembourg – Practicalities of Data Handling.** A [presentation](https://doi.org/10.5281/zenodo.4068228) covering key topics in secure data transfer, storage, encryption, and checksums. 
 * **GOBLET – Bioinformatics Introductory Module.** An introductory [self-study course](https://www.mygoblet.org/training-portal/materials/bioinformatics-introductory-module/) designed for life science students to learn about databases, sequence data, expression analysis, and basic bioinformatics tools.

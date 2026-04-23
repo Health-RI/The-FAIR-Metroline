@@ -11,7 +11,8 @@ permalink: /metroline_steps/assess_availability_of_your_metadata
 > 
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 Metadata refers to the contextual information about a resource (e.g. a dataset), often described as “data about data”. Metadata can come in many different types and forms. 
 
 * **Descriptive metadata.** This is the type of metadata you might be most familiar with as it is often collected in repositories such as Zenodo (see the example of [how Zenodo describes the resources](https://help.zenodo.org/docs/deposit/describe-records/) on its repository). This generic metadata includes details on what the resource is about (e.g., data from patient health records), who created it (e.g., a research team at Radboudumc) and when it was collected. Typically, it also discloses information about the possible uses of the resource (e.g., applicable licensing) and access restrictions (e.g., available for public use/restricted access).
@@ -20,7 +21,8 @@ Metadata refers to the contextual information about a resource (e.g. a dataset),
 
 In this step, the focus will be on assessing the availability of your metadata. This involves identifying and collecting all types of metadata gathered for your resource, checking its quality and ensuring it is as accurate and complete as possible.
 
-## Why is this step important 
+## Why is this step important
+{: .cs-collapsed}
 To be able to [register resource level metadata](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/272924765) (for instance in a repository or catalogue) you need to make sure you have/collect the appropriate and correct metadata.  
 
 Furthermore it is: 
@@ -70,15 +72,18 @@ You are now ready to take the next step with your metadata:
 * **follow a semantic model to describe your metadata (under construction.** [Metroline Step: Create or reuse a semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model) )
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
 * Data manager/Data steward/Data librarian, Researcher (Scientist) or someone else who knows the context and content of the project.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 * The [Health-RI metadata schema](https://github.com/Health-RI/health-ri-metadata) is an example of **descriptive metadata** within the context of the [Dutch National Health Data Infrastructure](https://www.healthdata.nl/en).
 * An example of **administrative metadata** is provided by [ArrayExpress](https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-11745), which includes details such as experimental protocols.
 * The [FAIRGenomes codebook](https://decor.nictiz.nl/ad/#/fairgenomes-/project/overview), hosted on ART-DECOR, serves as an example of **structural metadata**.
 
 ## Training
+{: .cs-collapsed}
 * [Fundamentals of Scientific Metadata: Data and Metadata](https://carpentries-incubator.github.io/scientific-metadata/instructor/data-metadata.html#metadata)  
 * [Metadata - How to FAIR](https://howtofair.dk/how-to-fair/metadata/#what-are-metadata) 
 * [Improving open data and metadata quality \| data.europa.eu](https://data.europa.eu/en/academy/improving-open-data-and-metadata-quality)

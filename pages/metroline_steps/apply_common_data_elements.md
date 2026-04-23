@@ -11,7 +11,9 @@ permalink: /metroline_steps/apply_common_data_elements
 >
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed}
+{: .cs-collapsed}
 As explained in [Common Data Elements: Lessons from NIH Experience](https://www.nlm.nih.gov/NIHbmic/CDEprocessrecommendations17Jan2014.pdf), a Common Data Element (CDE) is a standardised representation of a variable used in clinical or analytical projects. It includes a clearly defined question and a specified format or set of acceptable responses. Ideally, the CDE should be interpretable by both humans and machines without ambiguity.
 
 To see whether an item can be considered a CDE, the following checklist can be applied: 
@@ -144,6 +146,7 @@ On this page we provide you with resources to help you find CDEs and provide gui
 
 
 ## Why is this step important
+{: .cs-collapsed}
 Benefits of using Common Data Elements are highlighted below.
 * **Saves time and effort.** Reusing well-defined CDEs eliminates the need to create variables from scratch, speeding up study design and eCRF development, and ultimately enabling reuse of eCRFs with incorporated CDEs.
 * **Facilitates data sharing and pooling.** When multiple datasets use the same CDEs, they can be aggregated, compared or analysed together more easily, especially in multi-centre studies or registries.
@@ -226,15 +229,18 @@ The [initial data elements](https://eu-rd-platform.jrc.ec.europa.eu/set-of-commo
 {% include info-box.html type="example" title="Example" text=infobox_text1 %}
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 Experts that may need to be involved, as described in Metroline Step: Build the Team, are described below.
 * **Researcher.** Understands the scientific context of the data being collected.
 * **Data steward.** Ensures the technical accuracy and consistency of how CDEs are applied.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 **Patient Registries on Rare Diseases**<br>
 The Joint Research Centre has defined [Common Data Elements to be collected by all Rare Disease (RD) registries](https://eu-rd-platform.jrc.ec.europa.eu/set-of-common-data-elements_en) and collecting them will improve interoperability with other ERN registries that are obligated to collect these data items. So far, 16 minimal Rare Disease data elements have been identified as essential for further research in the field. This list includes the variables to be collected and how they should be annotated.
 
 ## Training
+{: .cs-collapsed}
 * [NIH Common Data Elements (CDE) Repository playlist](https://www.youtube.com/watch?v=NLawraFWWfI&list=PL7dF9e2qSW0Z7a0soasArMb025JlzwAcH)
 * [E-learning Common Data Elements](https://www.nlm.nih.gov/oet/ed/cde/tutorial/index.html). Standardising Data Collection provided by the National Library of Medicine 
 

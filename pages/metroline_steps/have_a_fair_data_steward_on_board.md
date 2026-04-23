@@ -12,9 +12,11 @@ permalink: /metroline_steps/have_a_fair_data_steward_on_board
 > {{ current_step.summary }}
 
 ## Short description
+{: .cs-collapsed}
 Proper data stewardship ensures research data is Findable, Accessible, Interoperable and Reusable (FAIR) in the long term through data management, archiving and reuse. Creating FAIR data requires attention from the planning phase of a study to its lifelong maintenance.  Hence, according to FAIRification models such as [FAIRopoly](https://www.ejprarediseases.org/fairopoly/) and [A Generic Workflow for the Data FAIRification Process](https://direct.mit.edu/dint/article/2/1-2/56/9988/A-Generic-Workflow-for-the-Data-FAIRification), a FAIR data steward - familiar with the local environment and FAIRification - should guide this process. This role can be filled by a trained team member or by using existing central support services within organisation or national initiatives such as Health-RI.
 
-## Why is this step important 
+## Why is this step important
+{: .cs-collapsed}
 Good data stewardship incorporates the FAIR data principles and ensures sustainable integration in the research cycle. It is a collective effort requiring actions and competencies from researchers, project teams, institutes, research disciplines and funders. Each organisation tailors its research data management (RDM) policy to its own context, with funders and institutions defining roles and responsibilities differently, such as expectations for research teams, host institutions and third-party organisations like data centres ([Towards FAIR Data Steward as profession for the Lifesciences](https://zenodo.org/records/3474789/files/Report_FAIR%20Data%20Steward%20in%20Lifesciences_v2.pdf)).
 
 Having a FAIR data steward in your multidisciplinary team (see [Metroline Step: Build the team]({{site.baseurl}}/metroline_steps/build_the_team)) offers key benefits (see [FAIRopoly](https://www.ejprarediseases.org/fairopoly/)).
@@ -92,7 +94,8 @@ If your team includes a FAIR data steward, ensure they have access to the right 
 * **Funder requirements.** Many funders now require a data steward to be part of the project team. Check grant conditions to ensure compliance with specific expectations.
 * **Publishing policies and local guidance.** Ensure data handling aligns with institutional policies and national and international regulations. Discuss early stage requirements with local guidance bodies to meet FAIR standards and repository guidelines.
 
-## Expertise requirements for this step
+## Expertise requirements for this step 
+{: .cs-collapsed}
 Positioning a FAIR data steward in your team requires aligning their role with your FAIRification objectives and existing support structures, as described in Metroline Step: Build the Team. The following experts may be involved.
 * **FAIR data stewards.** Provide expertise in data management, metadata standards, data integration, repository platforms and privacy/security compliance.
 * **Researchers.** Work with data stewards during data generation, collection and analysis, adopting recommended tools and platforms.
@@ -100,6 +103,7 @@ Positioning a FAIR data steward in your team requires aligning their role with y
 * **Project managers.** Coordinate FAIR data implementation, manage responsibilities and ensure policy compliance.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 ***[European Joint Programme on Rare Diseases (EJP RD)](https://www.ejprarediseases.org/)***
 EJP RD provides various FAIRification services, guidance, tools and training, supported by a team of six FAIR data stewards. Their activities include (see the EJP RD FAIRification [website](https://www.ejprarediseases.org/) for more details):
 * participating in project, national and international meetings to exchange knowledge, share experiences and develop FAIRification guidance;
@@ -107,6 +111,7 @@ EJP RD provides various FAIRification services, guidance, tools and training, su
 * assessing training needs and organising workshops and hackathons at the project level.
 
 ## Training
+{: .cs-collapsed}
 As data stewardship is a relatively new job profile and the field of data management and FAIR data practices continues to evolve, FAIR data stewards benefit from continuous learning. Staying updated on emerging trends, tools and standards helps them develop the necessary skills and expertise.
 * Training for data stewards may cover data management best practices, data curation techniques, metadata standards and relevant tools and technologies. [RDMkit](https://rdmkit.elixir-europe.org/index) provides an overview of data management best practices and guidelines. 
 

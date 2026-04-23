@@ -12,9 +12,11 @@ permalink: /metroline_steps/design_solution_plan
 > {{ current_step.summary }}
 
 ## Short description
+{: .cs-collapsed}
 A solution plan provides a structured approach to addressing identified gaps in FAIR compliance. By comparing the outcomes of the pre-FAIR assessment with the previously defined FAIRification objectives, you can design a targeted solution plan. This plan transforms assessment insights into actionable steps, ensuring that technical, organisational, and procedural aspects are considered. It helps your team allocate resources efficiently and prepares for upcoming challenges. The outcome is a clear roadmap that enhances data management and facilitates improved FAIRification.
 
-## Why is this step important 
+## Why is this step important
+{: .cs-collapsed}
 Designing a solution plan ensures that assessment insights are systematically translated into a structured plan, preventing fragmented and ineffective FAIRification efforts. The pre-FAIR assessment identifies key gaps and challenges in FAIR compliance, such as incomplete metadata, lack of a data storage strategy, or missing documentation practices. If left unaddressed, these issues can hinder data quality, interoperability, and reuse.
 
 A well-defined solution plan helps to:
@@ -84,6 +86,7 @@ For example, when making data FAIR, datasets can be split into smaller sets, imp
 **Example:** For GO-Plan, a template was developed to facilitate the identification of FAIRification objectives. This template has been successfully applied in two tutorials, with participants reporting that it effectively guided them through the process.
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 Designing a solution plan is typically a collaborative effort by a range of experts, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team).
 * **FAIR experts.** Provide guidance on best practices, standards, and methodologies.
 * **Domain experts.** Define data semantics, quality standards, and use cases.
@@ -92,9 +95,11 @@ Designing a solution plan is typically a collaborative effort by a range of expe
 * **Project managers.** Oversee planning, stakeholder coordination, and implementation tracking.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 This section should show the step applied in a real project. Links to demonstrator projects. 
 
 ## Training
+{: .cs-collapsed}
 * [FAIRification Tools and Templates – ELIXIR-UK Fellowship](https://fellowship.elixiruknode.org/latest/rdmbites-fairification-tools-and-templates)
 * [FAIRification Workflow – FAIR Toolkit](https://fairtoolkit.pistoiaalliance.org/methods/fairification-workflow/)
 * [FAIR Implementation Profile]({{site.baseurl}}/metroline_steps/creating_a_fair_implementation_profile)

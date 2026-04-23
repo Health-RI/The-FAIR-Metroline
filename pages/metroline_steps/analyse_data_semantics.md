@@ -12,7 +12,8 @@ page_id: analyse_data_semantics
 > 
 > {{ current_step.summary }}
 
-## Short description 
+## Short description
+{: .cs-collapsed} 
 Understanding and clearly defining the meaning (semantics) of (meta)data is an important preparation for [creating the semantic model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model), as well as for data collection via, for example, [electronic case report forms]({{site.baseurl}}/metroline_steps/design_ecrf) (eCRFs). In this step, the aim is to ensure you gain a clear and unambiguous understanding of the (meta)data elements. The step provides guidance for both existing data and data that is to be collected.
 
 To illustrate the issue, consider the example where you receive a dataset with a variable called “date”. Without clearly defined semantics, it is unclear whether this means “date of data collection”, “admission date”, “date of birth”, or something else. This must be resolved before you can start analyzing the data or move forward with your FAIR goals, such as applying a semantic (meta)data model. In the How to section of this page we provide instructions to achieve this, along with an example following the different steps.
@@ -20,7 +21,8 @@ To illustrate the issue, consider the example where you receive a dataset with a
 The outcome of this step is a set of data elements (variables) with clear and unambiguous semantics, known as a codebook. For metadata, the outcome is a set of clearly defined metadata elements. This codebook provides information about the structural content of the data and can be made available following the approach described in 
 [Metroline Step: Register structural metadata]({{site.baseurl}}/metroline_steps/register_structural_metadata). Note that finding machine-actionable items from ontologies for the data elements is not yet part of this step, but is described in [Metroline Step: Create or reuse a semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model). 
 
-## Why is this step important
+## Why is this step importan
+{: .cs-collapsed}
 Several of the Metroline steps that follow rely on being familiar with your data. For example, in order to [create or reuse your semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model), it is crucial to understand the meaning and relationships of variables.
 
 While performing this step, keep your FAIRification goals in mind. If you have a clear idea of your [FAIRification goals]({{site.baseurl}}/metroline_steps/define_fairification_objectives), it might be easier to define what elements should be present in your (meta)data and how these elements should be represented.
@@ -200,6 +202,7 @@ Great job! After checking and improving our metadata semantics, we can now move 
 "%}
 
 ## Expertise requirements for this step 
+{: .cs-collapsed}
 Below are experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team).
 * **Semantic data / modelling specialists.** Can help understanding the data’s structure and ambiguity.
 * **Domain expert.** Can help understanding the data’s elements and their potential ambiguity.
@@ -209,6 +212,7 @@ Below are experts that may need to be involved, as described in [Metroline Step:
 {% include metroline_steps/looking_for_examples.html %}
 
 ## Training
+{: .cs-collapsed}
 For an overview on Data Semantics principles, the University of Twente offers a Linked Data and Semantic Web Lecture that can be found here: [PowerPoint Presentation](https://www.utwente.nl/en/ces/sal/exams/Linked-Data-and-Semantic-Web/ldsw-lecture3.pdf)
 
 ## Suggestions
