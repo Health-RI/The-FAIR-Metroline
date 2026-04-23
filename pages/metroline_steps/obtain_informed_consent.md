@@ -183,6 +183,7 @@ The following role from [Metroline Step: Build the Team]({{site.baseurl}}/metrol
     * Amsterdam UMC - Privacy Bescherming & Informatie Beveiliging (<privacy@amsterdamumc.nl>)
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 * [COMPRAYA’s SIS](https://www.compraya.nl/files/e1-e2ppicomprayastudie_m20com_v1.9_14032023_clean.pdf) (in Dutch) contains a section about, for example, future use of data and materials (page 7).
 
 ## Training

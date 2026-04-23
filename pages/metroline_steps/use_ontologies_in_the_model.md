@@ -88,6 +88,7 @@ Experts that may need to be involved, as described in [Metroline Step: Build the
 * **Semantic web technology experts.** Represent bindings in RDF, OWL and SKOS; maintain internal coherence of the model; design persistent IRIs, implement SHACL validation and automate mapping publication workflows.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 * [CARE-SM (Clinical and Registry Entries Semantic Model)](https://github.com/CARE-SM). Annotates clinical registry concepts using OBO Foundry-aligned ontologies for precise semantics and cross-resource mapping.
 * [ELIXIR (European Life-science Infrastructure for Biological Information) Bioschemas](https://bioschemas.org/). Extends [Schema.org](https://schema.org/) and uses ontology terms to improve dataset discovery on the web.
 * [Model (Investigation–Study–Assay)](https://isa-tools.org/). Links experimental metadata fields to [Ontology for Biomedical Investigations (OBI)](https://obi-ontology.org/) and [Chemical Entities of Biological Interest (ChEBI)](https://www.ebi.ac.uk/chebi/) terms to support consistent interpretation and validation.

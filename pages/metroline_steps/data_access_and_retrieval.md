@@ -118,6 +118,7 @@ You may need access to or support from:
 Refer to [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team) for role descriptions and team structure advice.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 {% include metroline_steps/looking_for_examples.html %}
 
 ## Training

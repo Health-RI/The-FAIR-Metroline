@@ -54,6 +54,7 @@ Experts that may need to be involved, as described in [Metroline Step: Build the
 * ELSI expert for e.g. licensing questions.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 * The Virus Outbreak Data Network ([VODAN](https://www.go-fair.org/implementation-networks/overview/vodan/))-Africa is a joint activity of CODATA, RDA, WDS, and GO FAIR which has implemented FIPs for their [VODAN-Africa project](https://fip-wizard.ds-wizard.org/projects/9cbf831d-5536-4b97-a5c6-f00522f9ec6b).
 * The WorldFAIR Project, a multi-disciplinary project that crosses 11 domains, is a collaboration between CODATA and RDA. It uses FIPs as a methodology for listing the FAIR implementation decisions made within the project. They have summarized their experiences in [this article](https://doi.org/10.5281/zenodo.7378109).
 * The European Platform for Neurodegenerative Diseases ([EPND](https://epnd.org/)) has implemented FIPs and uses them to help make data ready for their [data platform](https://discover.epnd.org/).

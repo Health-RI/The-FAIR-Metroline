@@ -160,6 +160,7 @@ Depending on these variables, selecting the appropriate metadata catalogue may b
 * **Infrastructure professional.** When no suitable metadata catalogue is available or if you need to connect with federated catalogues (such as the [Health-RI Data Catalogue](https://healthdata.nl/)), specialised IT knowledge may be required. This is particularly important when exposing metadata on the web via a [FAIR Data Point](https://www.fairdatapoint.org/) or integrating with other systems.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 ***[The Netherlands ME/CFS Cohort and Biobank Consortium](https://www.health-ri.nl/en/netherlands-mecfs-cohort-and-biobank-nmcb-consortium)***
 
 The Netherlands ME/CFS Cohort and Biobank (NMCB) consortium, in partnership with patient organisations, is leading the way for the development of a national research infrastructure for Myalgic Encephalomyelitis and Chronic Fatigue Syndrome (ME/CFS). 

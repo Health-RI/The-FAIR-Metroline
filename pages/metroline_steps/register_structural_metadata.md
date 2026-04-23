@@ -280,6 +280,7 @@ This step requires the following experts as described in the [Metroline Step: Bu
 * **Data Steward.** Find solutions and implement them or support the Researcher in the implementation.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 {% include metroline_steps/looking_for_examples.html %}
 
 ## Training

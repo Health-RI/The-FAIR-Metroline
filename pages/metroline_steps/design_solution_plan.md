@@ -95,6 +95,7 @@ Designing a solution plan is typically a collaborative effort by a range of expe
 * **Project managers.** Oversee planning, stakeholder coordination, and implementation tracking.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 This section should show the step applied in a real project. Links to demonstrator projects. 
 
 ## Training

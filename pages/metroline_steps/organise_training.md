@@ -90,6 +90,7 @@ The expertise required may depend on the training that will be followed, or the 
 * **Trainer.** Your institutional Training Coordinator that focuses on research data management (if available) knows which training is available for the different roles in the team. They can find or create and organise tailor-made training and evaluate the effectiveness and impact of training. 
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 ***Radboud University Medical Center (RadboudUMC)***<br>
 Researchers from RadboudUMC have mandatory induction days where they are presented with a variety of services available to them. As part of these sessions, researchers learn to apply the Findability and Acessibility principles within their studies. Furthermore, within the [Radboudumc Technology Centers](https://www.radboudumc.nl/en/research/technology-centers) quarterly training FAIR RDM sessions get offered where researchers learn how to introduce the FAIR principles in their Data management practices.
 

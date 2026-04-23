@@ -72,6 +72,7 @@ Defining FAIRification objectives is typically a collaborative effort by a range
 * **ELSI experts.** Help identify the legal compliance and ethical aspects of FAIRification objectives.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 Below you can find several examples of projects with the FAIR objectives they set.
 
 ***[European Joint Programme on Rare Diseases (EJP RD)](https://www.ejprarediseases.org/)***

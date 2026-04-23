@@ -77,6 +77,7 @@ Experts that may need to be involved, as described in [Metroline Step: Build the
 * Data manager/Data steward/Data librarian, Researcher (Scientist) or someone else who knows the context and content of the project.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 * The [Health-RI metadata schema](https://github.com/Health-RI/health-ri-metadata) is an example of **descriptive metadata** within the context of the [Dutch National Health Data Infrastructure](https://www.healthdata.nl/en).
 * An example of **administrative metadata** is provided by [ArrayExpress](https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-11745), which includes details such as experimental protocols.
 * The [FAIRGenomes codebook](https://decor.nictiz.nl/ad/#/fairgenomes-/project/overview), hosted on ART-DECOR, serves as an example of **structural metadata**.

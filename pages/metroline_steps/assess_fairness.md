@@ -74,6 +74,7 @@ The expertise required may depend on the assessment tool you want to use. Expert
 * **Research software engineers.** Specialists who can help running some of the specialised software. 
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 For an applied example of The FAIR Evaluator tool, see Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic. 
 
 ## Training

@@ -30,6 +30,7 @@ permalink: /contributing/template
 
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 {% include metroline_steps/looking_for_examples.html %}
 
 

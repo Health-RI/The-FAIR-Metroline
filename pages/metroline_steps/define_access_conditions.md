@@ -232,6 +232,7 @@ and applicable accessibility regulations.
 - **Legal expert.** Advise the Researcher on legal aspects of data sharing and reuse.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 {% include metroline_steps/looking_for_examples.html %}
 
 ## Training

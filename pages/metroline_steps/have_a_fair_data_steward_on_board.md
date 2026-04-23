@@ -102,6 +102,7 @@ Positioning a FAIR data steward in your team requires aligning their role with y
 * **Project managers.** Coordinate FAIR data implementation, manage responsibilities and ensure policy compliance.
 
 ## Practical examples from the community 
+{: .cs-collapsed}
 ***[European Joint Programme on Rare Diseases (EJP RD)](https://www.ejprarediseases.org/)***
 EJP RD provides various FAIRification services, guidance, tools and training, supported by a team of six FAIR data stewards. Their activities include (see the EJP RD FAIRification [website](https://www.ejprarediseases.org/) for more details):
 * participating in project, national and international meetings to exchange knowledge, share experiences and develop FAIRification guidance;
