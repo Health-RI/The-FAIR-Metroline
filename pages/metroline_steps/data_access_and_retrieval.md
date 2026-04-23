@@ -15,6 +15,7 @@ permalink: /metroline_steps/data_access_and_retrieval
 Data must be acquired responsibly and efficiently. This includes identifying how to access and retrieve the data and how to ensure the data meets legal, ethical, and technical requirements. This page outlines the steps and considerations involved in acquiring data.
 
 ## Why is this step important
+{: .cs-collapsed}
 Correct and responsible data access and retrieval ensures you:
 * **Comply with regulations.** You confirm that the data can be used legally and ethically, meeting requirements such as GDPR.
 * **Safeguard data integrity.** Secure transfer methods and integrity checks (e.g. checksum) make sure the data are complete and unchanged.

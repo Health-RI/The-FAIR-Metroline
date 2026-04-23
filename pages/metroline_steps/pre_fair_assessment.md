@@ -16,7 +16,8 @@ In this phase you assess whether your (meta)data already meets FAIR criteria, su
 
 The how-to section describes a variety of assessment tools based on the FAIR principles. 
 
-## Why is this step important 
+## Why is this step important
+{: .cs-collapsed}
 This step will help you assess the current FAIRness level of your data. Comparing the current FAIRness to the previously defined [FAIRification objectives](define_fairification_objectives) will help you shape the necessary steps and requirements needed to achieve your FAIRification goals and help you create your [solution plan](design_solution_plan), a workplan specifically designed for reaching these goals. Furthermore, the assessment can be repeated in the [Assess FAIRness](assess_fairness) step, allowing you to compare the results and check the progress of your data towards FAIRness.
 
 ## How to

@@ -36,6 +36,7 @@ This Metroline page focuses on **SPARQL** as it is the standard query language f
 
 
 ## Why is this step important
+{: .cs-collapsed}
 Querying FAIR data is important because it is how you actually use the data. FAIR data is only valuable if it can be discovered, filtered, combined and analysed and querying is how this is made possible.
 * **Find exactly what you need.** General search and filtering allow you to locate datasets or specific information quickly, without manually checking every record.
 * **Explore and understand data.** Browsing and faceted search help you see what datasets exist, what they describe and how they are structured.

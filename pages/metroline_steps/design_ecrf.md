@@ -18,7 +18,8 @@ A variety of EDC platforms are available to support clinical data capture. Most 
 
 This page provides guidance on the design of eCRFs, including considerations before creating one, and best practices to keep in mind while to ensure high data quality and reliability.  
 
-## Why is this step important 
+## Why is this step important
+{: .cs-collapsed}
 Properly designing your eCRF is important for a variety of reasons: 
 * **Improved data quality.** The quality of the eCRF will greatly influence the quality of the collected data. A well designed eCRF reduces human errors, leading to more accurate and reliable data collection. 
 * **Interoperability of data.** Using standardised and reusable definitions to build these eCRFs, makes the collected data easier to integrate and compare across studies and systems.  

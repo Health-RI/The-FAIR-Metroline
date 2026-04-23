@@ -20,7 +20,7 @@ To illustrate the issue, consider the example where you receive a dataset with a
 The outcome of this step is a set of data elements (variables) with clear and unambiguous semantics, known as a codebook. For metadata, the outcome is a set of clearly defined metadata elements. This codebook provides information about the structural content of the data and can be made available following the approach described in 
 [Metroline Step: Register structural metadata]({{site.baseurl}}/metroline_steps/register_structural_metadata). Note that finding machine-actionable items from ontologies for the data elements is not yet part of this step, but is described in [Metroline Step: Create or reuse a semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model). 
 
-## Why is this step important
+## Why is this step importan\n{: .cs-collapsed}
 Several of the Metroline steps that follow rely on being familiar with your data. For example, in order to [create or reuse your semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model), it is crucial to understand the meaning and relationships of variables.
 
 While performing this step, keep your FAIRification goals in mind. If you have a clear idea of your [FAIRification goals]({{site.baseurl}}/metroline_steps/define_fairification_objectives), it might be easier to define what elements should be present in your (meta)data and how these elements should be represented.

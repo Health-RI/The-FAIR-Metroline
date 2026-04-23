@@ -32,6 +32,7 @@ While RDF may be more effort than a simple table, it is especially valuable when
 By following this step, you put the FAIR principles into practice with practical advice and tools to improve the reusability and interoperability of your metadata and data. This ensures that it can be effectively matched and reused within the scientific community and beyond.
 
 ## Why is this step important
+{: .cs-collapsed}
 Transforming and exposing your (meta)data in this way makes it FAIR-ready and visible to others under your chosen access conditions (see [Metroline Step: Define access conditions]({{site.baseurl}}/metroline_steps/define_access_conditions)). Building on the metadata model from the 
 [Metroline Step: Apply (meta)data model]({{site.baseurl}}/metroline_steps/apply_metadata_model), you share your resource in a standardised, machine-readable format. This increases its findability, accessibility and reuse.
 

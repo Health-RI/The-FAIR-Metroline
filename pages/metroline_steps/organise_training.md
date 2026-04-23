@@ -15,6 +15,7 @@ permalink: /metroline_steps/organise_training
 After building your team ([Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team)), it is a good idea to assess their training needs. This vital step involves a comprehensive assessment to pinpoint any missing expertise or skill gaps within the different roles in your team. This page creates a broad overview of training solutions that support the development of core competencies in FAIR data management. This page offers guidance on how to locate targeted training options for all roles within a given team. Specialised training that is needed for a specific Metroline Step are listed in the corresponding pages.
 
 ## Why is this step important
+{: .cs-collapsed}
 The journey to making data FAIR is intricate, demanding both a comprehensive understanding of the FAIR principles and the practical skills for their implementation. A specialised FAIRification training will empower your team members to:  
 * Understand the FAIR principles and how to 1) apply them to your own data or to 2) support others in applying them effectively.
 * Learn the benefits and best practices for implementing FAIR data management, whether you are responsible for hands-on activities or for advising colleagues. 

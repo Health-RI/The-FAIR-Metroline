@@ -144,6 +144,7 @@ On this page we provide you with resources to help you find CDEs and provide gui
 
 
 ## Why is this step important
+{: .cs-collapsed}
 Benefits of using Common Data Elements are highlighted below.
 * **Saves time and effort.** Reusing well-defined CDEs eliminates the need to create variables from scratch, speeding up study design and eCRF development, and ultimately enabling reuse of eCRFs with incorporated CDEs.
 * **Facilitates data sharing and pooling.** When multiple datasets use the same CDEs, they can be aggregated, compared or analysed together more easily, especially in multi-centre studies or registries.

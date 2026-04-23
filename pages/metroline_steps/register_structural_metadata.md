@@ -17,6 +17,7 @@ Structural metadata (previously introduced in [Metroline Step: Assess availabili
 Once you’ve created this codebook, you should consider making it available to ensure clarity, usability, and trust in your dataset. This step will ensure that you can make a selection of data repositories that fit your research domain. Moreover, this step will point to tools that you can use to further increase FAIRness of your structural metadata.
 
 ## Why is this step important
+{: .cs-collapsed}
 Registering (or publishing) structural metadata is crucial for ensuring the effective reuse and harmonisation of data structures across various research. This step enhances the contextual understanding of individual records, making data more meaningful and accessible, and improves the precision in data retrieval.
 
 In other words, this step:

@@ -14,7 +14,8 @@ permalink: /metroline_steps/have_a_fair_data_steward_on_board
 ## Short description
 Proper data stewardship ensures research data is Findable, Accessible, Interoperable and Reusable (FAIR) in the long term through data management, archiving and reuse. Creating FAIR data requires attention from the planning phase of a study to its lifelong maintenance.  Hence, according to FAIRification models such as [FAIRopoly](https://www.ejprarediseases.org/fairopoly/) and [A Generic Workflow for the Data FAIRification Process](https://direct.mit.edu/dint/article/2/1-2/56/9988/A-Generic-Workflow-for-the-Data-FAIRification), a FAIR data steward - familiar with the local environment and FAIRification - should guide this process. This role can be filled by a trained team member or by using existing central support services within organisation or national initiatives such as Health-RI.
 
-## Why is this step important 
+## Why is this step important
+{: .cs-collapsed}
 Good data stewardship incorporates the FAIR data principles and ensures sustainable integration in the research cycle. It is a collective effort requiring actions and competencies from researchers, project teams, institutes, research disciplines and funders. Each organisation tailors its research data management (RDM) policy to its own context, with funders and institutions defining roles and responsibilities differently, such as expectations for research teams, host institutions and third-party organisations like data centres ([Towards FAIR Data Steward as profession for the Lifesciences](https://zenodo.org/records/3474789/files/Report_FAIR%20Data%20Steward%20in%20Lifesciences_v2.pdf)).
 
 Having a FAIR data steward in your multidisciplinary team (see [Metroline Step: Build the team]({{site.baseurl}}/metroline_steps/build_the_team)) offers key benefits (see [FAIRopoly](https://www.ejprarediseases.org/fairopoly/)).

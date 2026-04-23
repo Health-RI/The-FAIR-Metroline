@@ -3,6 +3,15 @@
 
   var counter = 0;
 
+  // H3 headings matching "Step N..." collapse by default
+  var STEP_HEADING_RE = /^Step\s+\d+/i;
+
+  function shouldStartCollapsed(heading) {
+    if (heading.classList.contains('cs-collapsed')) return true;
+    if (heading.tagName === 'H3' && STEP_HEADING_RE.test(heading.textContent.trim())) return true;
+    return false;
+  }
+
   function makeCollapsible(container, headingTag, stopSelectors) {
     var headings = Array.from(container.querySelectorAll(':scope > ' + headingTag));
     headings.forEach(function (heading) {
@@ -19,17 +28,20 @@
 
       if (toMove.length === 0) return;
 
+      var collapsed = shouldStartCollapsed(heading);
+
       // Create the Bootstrap collapse wrapper
       var wrapper = document.createElement('div');
       wrapper.id = id;
-      wrapper.classList.add('collapse', 'show', 'cs-section');
+      wrapper.classList.add('collapse', 'cs-section');
+      if (!collapsed) wrapper.classList.add('show');
       heading.insertAdjacentElement('afterend', wrapper);
       toMove.forEach(function (el) { wrapper.appendChild(el); });
 
       // Wire up Bootstrap collapse on the heading
       heading.setAttribute('data-bs-toggle', 'collapse');
       heading.setAttribute('data-bs-target', '#' + id);
-      heading.setAttribute('aria-expanded', 'true');
+      heading.setAttribute('aria-expanded', String(!collapsed));
       heading.setAttribute('aria-controls', id);
       heading.classList.add('cs-heading');
     });

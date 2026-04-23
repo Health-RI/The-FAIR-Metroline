@@ -21,6 +21,7 @@ Once published, a FIP can be reused by other communities to guide their own FAIR
 Pre-made, well-tested FIPs created by trusted communities can be widely reused and greatly speed up the adoption of consistent, well-informed FAIR implementations. FIPs and the FAIR-enabling resources they reference can be searched and explored in [FAIR Connect](https://fairconnect.pro/) and [Nanodash](https://nanodash.knowledgepixels.com/). 
 
 ## Why is this step important
+{: .cs-collapsed}
 The FAIR Principles, by design, do not define specific implementation choices that enable FAIR practices. As each community has its own established preferences and priorities for data reuse, coordinating a broadly accepted and consistent implementation approach remains a global challenge. 
 
 FIPs capture the implementation strategies of various communities and can be used to harmonise the reuse of resources and improve interoperability across domains. Ready-made, well-tested FIPs created by reliable communities can promote widespread reuse and greatly accelerate convergence toward well-informed FAIR implementations. 

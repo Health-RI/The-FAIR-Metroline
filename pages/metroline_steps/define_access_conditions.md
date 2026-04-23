@@ -39,6 +39,7 @@ access and reuse conditions. This process is quite complex and can vary per inst
 procedures for the different Dutch University Medical Centers, please find specific contact details at the [ELSI Serivcedesk](https://elsi.health-ri.nl/instituutspecifieke-informatie).
 
 ## Why is this step important
+{: .cs-collapsed}
 Accessibility, much like Findability and Interoperability, plays a vital role in ensuring that data can be effectively reused. 
 This step provides guidelines to define and document the conditions under which the data can be legally and ethically accessed 
 and reused both by humans and machines.

@@ -27,7 +27,8 @@ For more information about Data Repositories, see [Archiving data](https://www.h
    alt="Catalogue vs Repository" 
    caption="Relationship and differences between a Catalogue and Repository." %}
 
-## Why is this step important 
+## Why is this step important
+{: .cs-collapsed}
 The key advantage of using metadata catalogues is that you don’t need to publish your resource, such as data, beforehand. This can be very useful if your project has just started data collection or if you have very restrictive data access conditions, but do wish for others to be able to find you. For example, registries keeping data about Rare Disease patients may want to be contacted for the purposes of diagnostic and therapy discovery, without making their actual data available in a repository. If you later decide to publish your resource in a (data) repository for long-term preservation and archiving, you can update the metadata catalogue entry with this new information. Furthermore, metadata catalogues are critical for making research resources, such as data, more visible and accessible.
 
 Metadata catalogues offer a range of benefits to data holders, users and the broader scientific community. 

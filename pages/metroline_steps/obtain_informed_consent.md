@@ -26,7 +26,8 @@ This step provides considerations and resources for setting up an Informed Conse
 
 To ensure a dataset can efficiently be accessed, processed, and utilised by machines with minimal manual intervention (i.e. machine-actionable data), information from the IC must also be available in the metadata, making it machine-actionable. This enables automated systems to interpret consent terms to a certain extent, facilitating the ethical and legal sharing of data across systems while safeguarding participant rights. Making an IC more machine-actionable, will be addressed in another Metroline step (future plans).
 
-## Why is this step important 
+## Why is this step important
+{: .cs-collapsed}
 The FAIR principles aim to make data useful for immediate research and future purposes, such as replication, validation, and meta-analysis, while safeguarding participants' privacy and rights. Therefore, informed consent must address both current and potential future data use in compliance with GDPR requirements. This step offers guidance on creating an effective informed consent form (ICF) and subject information sheet (SIS) to meet these standards.
 
 ## How to 

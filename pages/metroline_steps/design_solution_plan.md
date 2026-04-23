@@ -14,7 +14,8 @@ permalink: /metroline_steps/design_solution_plan
 ## Short description
 A solution plan provides a structured approach to addressing identified gaps in FAIR compliance. By comparing the outcomes of the pre-FAIR assessment with the previously defined FAIRification objectives, you can design a targeted solution plan. This plan transforms assessment insights into actionable steps, ensuring that technical, organisational, and procedural aspects are considered. It helps your team allocate resources efficiently and prepares for upcoming challenges. The outcome is a clear roadmap that enhances data management and facilitates improved FAIRification.
 
-## Why is this step important 
+## Why is this step important
+{: .cs-collapsed}
 Designing a solution plan ensures that assessment insights are systematically translated into a structured plan, preventing fragmented and ineffective FAIRification efforts. The pre-FAIR assessment identifies key gaps and challenges in FAIR compliance, such as incomplete metadata, lack of a data storage strategy, or missing documentation practices. If left unaddressed, these issues can hinder data quality, interoperability, and reuse.
 
 A well-defined solution plan helps to:

@@ -25,6 +25,7 @@ For example, for a tool like FAIR-in-a-box (see also table below), this may invo
 Many metadata-focused tools also provide mechanisms to expose your resource online under clear access conditions, increasing its findability. This may include generating metadata records in RDF and publishing the metadata via catalogues or registries that support standard protocols such as SPARQL.
 
 ## Why is this step important
+{: .cs-collapsed}
 Applying the data model to your data and metadata model to your metadata is crucial for the next step: 
 [Metroline Step: Transform and expose FAIR (meta)data]({{site.baseurl}}/metroline_steps/transform_and_expose_fair_metadata). It is a central step in the FAIRification process, in which you connect your (meta)data to elements of your (semantic) (meta)data model. By doing this, your (meta)data becomes machine-readable and interoperable.
 

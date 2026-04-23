@@ -20,7 +20,8 @@ Metadata refers to the contextual information about a resource (e.g. a dataset),
 
 In this step, the focus will be on assessing the availability of your metadata. This involves identifying and collecting all types of metadata gathered for your resource, checking its quality and ensuring it is as accurate and complete as possible.
 
-## Why is this step important 
+## Why is this step important
+{: .cs-collapsed}
 To be able to [register resource level metadata](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/272924765) (for instance in a repository or catalogue) you need to make sure you have/collect the appropriate and correct metadata.  
 
 Furthermore it is: 
