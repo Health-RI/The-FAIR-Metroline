@@ -13,7 +13,8 @@
     Short description: Cloud-based electronic data capture system for clinical research studies.
     Purpose and core functionality: Castor EDC is a cloud-based electronic data capture system designed to simplify clinical data collection and ensure interoperability. It integrates easily with broader clinical trial systems and ranks in the top 5% of EDC tools for build speed, with over 90% of studies deployed within 4 weeks.
     Type: Electronic Data Capture (EDC)
-    Life cycle phases: Collect
+    Life cycle phases:
+      - Collect
     Domains using it: Oncology
     Website:
       - <a href='https://www.castoredc.com/'>Castor EDC website</a>
@@ -53,7 +54,9 @@
     Short description: Trusted Processing Environment (TPE) for secure, GDPR-compliant data analysis in collaborative academic settings.
     Purpose and core functionality: myDRE is a Trusted Processing Environment (TPE) designed for secure, GDPR-compliant data analysis in collaborative academic settings. It enables institutions to set up isolated virtual workspaces with managed access, shared storage and scalable computing—supporting up to 50 users per project. myDRE is offered as a paid service based on actual usage and helps reduce pressure on central IT teams by offering a managed, secure research infrastructure.
     Type: Trusted Processing Environment (TPE)
-    Life cycle phases: Process, Analyse
+    Life cycle phases:
+      - Process
+      - Analyse
     Domains using it: Oncology
     Website:
       - <a href='https://mydre.org/'>myDRE website</a>
@@ -94,7 +97,8 @@
     Short description: Customizable platform for managing and analyzing large scientific datasets with support for bioinformatics scripts.
     Purpose and core functionality: Molgenis helps to find, capture, exchange, manage and analyse and exploit the large amounts of data that is being produced by scientific organisations. It is a fully customizable and scalable software infrastructure that offers the possibility to plug-in (bioinformatics) scripts.<br>The MOLGENIS software package helps setting up an online database application, making  data query-able and allowing to share data with collaborators. Enabling to store, edit, analyse, and share data.
     Type: Data management, data analysis
-    Life cycle phases: Analyse
+    Life cycle phases:
+      - Analyse
     Domains using it:
     Website:
       - <a href='https://molgenis.org/'>MOLGENIS website</a>
@@ -134,7 +138,11 @@
     Short description: cBioPortal is an open-source platform for visualizing and exploring multidimensional cancer genomics data through an intuitive web interface.
     Purpose and core functionality: cBioPortal simplifies access to complex cancer genomic data through visualisation and intuitive exploration. It enables researchers and clinicians to interpret multimodal datasets, extract biological insights and support clinical decisions.
     Type: Data analysis
-    Life cycle phases: Process, Analyse, Preserve, Share
+    Life cycle phases:
+      - Process
+      - Analyse
+      - Preserve
+      - Share
     Domains using it: Oncology
     Website:
       - <a href='https://www.cbioportal.org/'>cBioPortal website</a>
@@ -178,7 +186,11 @@
     Short description: Web-based viewer for high-resolution digital microscopy images, focused on histopathology slides, enabling collaborative evaluation and scoring.
     Purpose and core functionality: Slide Score is a web-based viewer for high-resolution digital microscopy images, with a focus on histopathology slides. It enables users to upload images, create scoring forms (question sets) and invite experts—such as pathologists—for collaborative evaluation and scoring.
     Type: Data analysis
-    Life cycle phases: Process, Analyse, Preserve, Share
+    Life cycle phases:
+      - Process
+      - Analyse
+      - Preserve
+      - Share
     Domains using it: Oncology
     Website:
       - <a href='https://www.slidescore.com/'>Slide Score website</a>
@@ -219,7 +231,12 @@
     Short description: XNAT is an open-source imaging informatics platform designed to support imaging-based research.
     Purpose and core functionality: XNAT is an open-source imaging informatics platform designed to support imaging-based research. It offers tools to import, archive, process and securely distribute imaging and related study data. With a flexible architecture and growing plugin ecosystem, XNAT is suited to diverse clinical and research workflows.
     Type: Data analysis
-    Life cycle phases: Process, Analyse, Preserve, Share, Reuse
+    Life cycle phases:
+      - Reuse
+      - Process
+      - Analyse
+      - Preserve
+      - Share
     Domains using it: Oncology
     Website:
       - <a href='https://www.xnat.org/'>XNAT website</a>
@@ -260,7 +277,9 @@
     Short description: Nextflow-based bioinformatics pipeline for processing tumor sequencing data from tumor-normal pairs to generate variant calls, copy number profiles and other genomic outputs.
     Purpose and core functionality: Oncoanalyser is a Nextflow-based bioinformatics pipeline for processing tumor sequencing data. It supports whole genome, exome and targeted panel sequencing from tumor-normal pairs to generate variant calls, copy number profiles, structural variants and other genomic outputs.
     Type: Data analysis
-    Life cycle phases: Process, Analyse
+    Life cycle phases:
+      - Process
+      - Analyse
     Domains using it: Oncology
     Website:
       - <a href='https://nf-co.re/oncoanalyser/'>Oncoanalyser website</a>
@@ -294,4 +313,50 @@
     User needs:
   compatible_with: cbioportal
   biotools_id: oncoanalyser
+- id: dmponline
+  page_img: toolassemblies/tools/dmponline.png
+  institutes:
+    - Leiden UMC
+    - Radboudumc
+    - Vrije Universiteit Amsterdam
+    - UMC Utrecht
+    - Wageningen University & Research
+    - Universiteit Utrecht
+    - Technische Universiteit Delft
+    - Erasmus Universiteit Rotterdam
+  at_a_glance:
+    Tool name: DMPonline
+    Short description: Web-based tool for creating, reviewing, and sharing Data Management Plans (DMPs) that meet institutional and funder requirements.
+    Purpose and core functionality: DMPonline is a web-based Data Management Planning (DMP) tool developed and maintained by the Digital Curation Centre (DCC) in partnership with the University of California Curation Center (UC3). It helps researchers create, review, and share Data Management Plans that comply with requirements from institutions and research funders. The tool provides the latest funder templates, tailored guidance, and example answers. Users can collaborate on plans, browse publicly shared DMPs for inspiration, and export plans in multiple formats. DMPonline is free to use for all researchers and is hosted by subscribing institutions and universities worldwide, with over 177,000 users across 804 organisations in 89 countries.
+    Type: Data Management Planning
+    Life cycle phases:
+      - Plan
+    Domains using it:
+    Website:
+      - <a href='https://dmponline.dcc.ac.uk/'>DMPonline website</a>
+    Resource URLs:
+      Training:
+        - <a href='https://dmponline.dcc.ac.uk/help'>DMPonline Help</a> - User guidance and help resources
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://github.com/DMPRoadmap/roadmap/wiki'>DMPRoadmap Wiki</a> - Installation and user documentation
+      Supporting software:
+        -
+      Scripts and workflows:
+        - <a href='https://github.com/DMPRoadmap/roadmap'>GitHub repository</a> - Open source codebase (MIT licence) for self-hosting instances
+      Metadata and data standards:
+        - <a href='https://dmponline.dcc.ac.uk/public_templates'>Funder templates</a> - Templates aligned with requirements from funders and institutions
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - API access is available to subscribing organisations to programmatically access data management plans.
+      Guide:
+        -
+    Contact point: dmponline@dcc.ac.uk
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
 
