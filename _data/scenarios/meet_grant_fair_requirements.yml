@@ -1,0 +1,37 @@
+- step_id: 3
+  status: "completed"
+  short_description: "Have a data steward onboard"
+  description: "Reach out to a FAIR data steward who brings expertise in FAIR principles and assessment tools. Having professional support ensures accurate evaluation and actionable recommendations."
+  examples:
+    - role: "Researcher"
+      description: ""
+
+- step_id: 5
+  status: "upcoming"
+  short_description: "Run a pre-FAIR assessment"
+  description: "Researcher and Data steward sit together and do a Pre-FAIR Assessment E.g. FAIR data maturity level."
+  examples:
+    - role: "Researcher"
+      description: ""
+
+- step_id: 6
+  status: "upcoming"
+  short_description: "Design a solution plan."
+  description: "Data steward helps design the plan to reach the FAIRification goals."
+  examples:
+    - role: "Researcher"
+      description: ""
+
+- step_id: 5
+  status: "upcoming"
+  short_description: "After, execurting the plan, re-assess your data's  FAIRness level."
+  description: "Researcher and data steward sit together again and re-assess the FAIRness to see if the goals are reached, after the execution of the plan."
+  examples:
+    - role: "Researcher"
+      description: "I completed a FAIR assessment of my dataset and metadata using FAIR-Checker, then reviewed the results to identify gaps such as limited metadata, missing persistent identifiers, or unclear reuse conditions."
+      
+- title: "FAIR assessment complete"
+  status: "destination"
+  icon: "🎯"
+  short_description: "Your data meet the FAIR requirements of the grant."
+  description: ""

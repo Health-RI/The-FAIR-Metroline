@@ -12,6 +12,12 @@
   type: "fair guidelines"
   complexity: "Medium"
 
+- title: "Demonstrate that a dataset meets FAIR requirements in a grant review"
+  url: "scenarios/meet_grant_fair_requirements"
+  icon: "🔍"
+  description: "A researcher has to demonstrate that their dataset meets FAIR requirements in a grant review."
+  type: "fair guidelines"
+  complexity: "Low / Medium"
 
 - title: "How to analyse and publish tumor data"
   url: "tool-scenarios/transform_onco_data"
