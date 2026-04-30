@@ -8,7 +8,7 @@ custom_js: metro-timeline
 ## Scenario Overview
 Researcher has existing data. While applying for a grant, 
 they have to assess the current FAIRness level and they need to write a 
-FAIRifcation plan how they want to improve the FAIRness of their dataset
+FAIRifcation plan to improve the FAIRness of their dataset
 
 
 
@@ -28,9 +28,9 @@ FAIRifcation plan how they want to improve the FAIRness of their dataset
   complexity="Medium"
   experts="Data Steward"
   outcome="Data that meets the funders requirements"
-  complexity_tooltip="Making a dataset findable requires coordinating metadata quality, access conditions, and catalogue requirements. While no data transformation is needed, aligning metadata with a FAIR Data Point and national catalogue standards adds moderate complexity."
-  experts_tooltip="A data steward is needed to guide the metadata assessment, align it with catalogue requirements, and publish the metadata to the FAIR Data Point for harvesting."
-  outcome_tooltip="A dataset whose metadata is registered in the National Health Data Catalogue, making it discoverable by other researchers and enabling potential collaboration and reuse."
+  complexity_tooltip="With the help of a data steward, this is an activity with a low level of complexity. Without expert help, performing the FAIR assessment and designing a plan can result in a higher level of complexity."
+  experts_tooltip="A data steward is needed to guide the process of assessing the data FAIRness and preparing a proper solution plan."
+  outcome_tooltip="A dataset that is compliant with the FAIR requirements set in the grant conditions."
 %}
 
 ## Your Journey
