@@ -31,7 +31,12 @@
 {%- endif %}
 {%- endfor %}
 {%- assign alldomains = alldomains | split: ", " | uniq | sort %}
-{%- assign allphases = allphases | split: ", " | uniq | sort %}
+{%- assign allphases = "" %}
+{%- for _stage in site.data.lifecycle_stages %}
+{%- unless allphases == "" %}{%- assign allphases = allphases | append: "|" %}{%- endunless %}
+{%- assign allphases = allphases | append: _stage.name %}
+{%- endfor %}
+{%- assign allphases = allphases | split: "|" %}
 {%- assign allinstitutes = allinstitutes | split: ", " | uniq | sort %}
 <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-{{ include.col | default: 2 }} my-4">
     {%- if include.domains == true %}
@@ -39,8 +44,11 @@
         <div class="input-group">
             <label class="input-group-text" for="domains-input">Filter by domain</label>
             <select class="form-select" id="domains-input" aria-label="Filter by domain">
+                <option value="">All domains</option>
                 {%- for domain in alldomains %}
+                {%- if domain != "" %}
                 <option value="{{domain | slugify}}">{{domain}}</option>
+                {%- endif %}
                 {%- endfor %}
             </select>
             <button class="btn btn-primary" title="Button to clear domains selection" type="button" id="cleardomainfilter">
@@ -54,6 +62,7 @@
         <div class="input-group">
             <label class="input-group-text" for="phases-input">Filter by phase</label>
             <select class="form-select" id="phases-input" aria-label="Filter by phase">
+                <option value="">All phases</option>
                 {%- for phase in allphases %}
                 <option value="{{phase | slugify}}">{{phase}}</option>
                 {%- endfor %}
@@ -69,8 +78,11 @@
         <div class="input-group">
             <label class="input-group-text" for="institutes-input">Filter by institute</label>
             <select class="form-select" id="institutes-input" aria-label="Filter by institute">
+                <option value="">All institutes</option>
                 {%- for institute in allinstitutes %}
+                {%- if institute != "" %}
                 <option value="{{institute | slugify}}">{{institute}}</option>
+                {%- endif %}
                 {%- endfor %}
             </select>
             <button class="btn btn-primary" title="Button to clear institutes selection" type="button" id="clearinstitutefilter">
@@ -185,7 +197,7 @@
                 {%- endif %}
 
                 {%- if current_page.phase %}
-                {%- assign pagephases = current_page.phase | sort %}
+                {%- assign pagephases = current_page.phase %}
                 <div class="tool-tags-group">
                     <span class="tool-tags-label">Phases:</span>
                     <div class="tool-tags">

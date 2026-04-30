@@ -18,7 +18,7 @@ writers:
     lastName: Bernabé
     orcid: 0000-0003-1795-5930
     affiliation: LUMC
-    active: true
+    active: false
     image: cesar_bernabe.png
   - id: 4
     firstName: Dena
@@ -81,7 +81,7 @@ writers:
     lastName: van der Geest
     orcid: 0000-0002-1919-6547
     affiliation: UMCG
-    active: true
+    active: false
     image: marije_vd_geest.png
   - id: 12
     firstName: Meriem
@@ -201,7 +201,7 @@ reviewers:
     lastName: Woeckel
     orcid: 0009-0007-9979-7927
     affiliation: Erasmus MC
-    active: true
+    active: false
     image: viola_woeckel.png
   - id: 5
     firstName: Susanne
@@ -253,3 +253,10 @@ board:
     affiliation: Amsterdam UMC
     active: true
     image: ronald_van_schijndel.png
+  - id: 5
+    firstName: Vedran
+    lastName: Kasalica
+    orcid: 0000-0002-0097-1056
+    affiliation: Health-RI
+    active: true
+    image: vedran_kasalica.jpg
