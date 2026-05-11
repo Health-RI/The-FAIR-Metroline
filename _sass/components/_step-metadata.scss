@@ -1,0 +1,58 @@
+// Compact metadata bar shown at the top of each metroline step page
+.step-metadata {
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0 1.25rem;
+  background-color: #f8f9fa;
+  font-size: 0.875em;
+}
+
+.step-metadata-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+
+  & + & {
+    border-top: 1px solid #e9ecef;
+  }
+}
+
+.step-metadata-label {
+  font-weight: 600;
+  color: #495057;
+  min-width: 8rem;
+  flex-shrink: 0;
+}
+
+.step-metadata-value {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+// Keyword pills
+.step-metadata-tag {
+  display: inline-block;
+  padding: 0.15em 0.6em;
+  border-radius: 1rem;
+  background-color: #e2e8f0;
+  color: #2d3748;
+
+  &--role {
+    background-color: #dbeafe;
+    color: #1e40af;
+  }
+}
+
+// Audience chips
+.step-metadata-audience-chip {
+  display: inline-block;
+  padding: 0.15em 0.7em;
+  border-radius: 1rem;
+  background-color: #d1fae5;
+  color: #065f46;
+  font-weight: 500;
+}

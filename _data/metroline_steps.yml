@@ -4,6 +4,18 @@
   url: metroline_steps/define_fairification_objectives
   icon: ":dart:"
   status: RELEASED
+  keywords:
+    - planning
+    - goals
+    - governance
+  core_roles:
+    - Data steward
+    - ELSI expert
+    - Researcher
+    - Semantic expert
+  audience:
+    data_holder: true
+    data_user: true
 - id: 2
   title: Build the Team
   summary: Coming soon.
