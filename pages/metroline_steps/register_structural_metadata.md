@@ -12,31 +12,33 @@ permalink: /metroline_steps/register_structural_metadata
 > {{ current_step.summary }}
 
 ## Short description 
-Structural metadata (previously introduced in [Metroline Step: Assess availability of your metadata]({{site.baseurl}}/metroline_steps/assess_availability_of_your_metadata)), includes information about what data is collected and its format (e.g. “birth date” - YYYYMMDD), and, if applicable, the code systems and values applied. Similar to how an index at the beginning of a book refers to all its chapters and pages, it gives the reader an idea about the content and its definitions. For data resources, this is typically referred to as the **codebook** or **data dictionary**. You can find more information about how to generate one in [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics).
+Structural metadata (previously introduced on [Metroline Step: Assess availability of your metadata]({{site.baseurl}}/metroline_steps/assess_availability_of_your_metadata)) includes information about what data is collected and its format (e.g. “birth date” - YYYYMMDD) and, if applicable, the code systems and values applied. Similar to how an index at the beginning of a book refers to all its chapters and pages, it gives the reader an idea about the content and its definitions. For data resources, this is typically referred to as the **codebook** or **data dictionary**. You can find more information about how to generate one on [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics).
 
-Once you’ve created this codebook, you should consider making it available to ensure clarity, usability, and trust in your dataset. This step will ensure that you can make a selection of data repositories that fit your research domain. Moreover, this step will point to tools that you can use to further increase FAIRness of your structural metadata.
+Once you’ve created this codebook, you should consider making it available to ensure clarity, usability and trust in your dataset. This step helps you select data repositories that fit your research domain and points to tools that can further increase the FAIRness of your structural metadata.
 
 ## Why is this step important
-Registering (or publishing) structural metadata is crucial for ensuring the effective reuse and harmonisation of data structures across various research. This step enhances the contextual understanding of individual records, making data more meaningful and accessible, and improves the precision in data retrieval.
+Registering (or publishing) structural metadata is crucial for ensuring the effective reuse and harmonisation of data structures across various research. This step enhances understanding of how data is structured and organised, making data more meaningful and accessible and improving precision in data retrieval.
 
 In other words, this step:
-* **Reduces ambiguity.** Harmonises data elements, by providing definitions to each variable, making it easier to combine both existing and new datasets, as data alone might be meaningless or open to misinterpretation.
-* **Provides structural context.** Explains how variables are related to one another and describes the format of the data.
-* **Increases findability.** When variables are made publicly available, they allow more specific queries to be made about the resource.
+* **Reduces ambiguity.** Structural metadata provides clear definitions for data elements, supporting interpretation and harmonisation across datasets and reducing the risk of misinterpretation.
+* **Provides structural context.** Describes how data elements are organised and related, including variable definitions, data formats and relationships between variables.
+* **Can support findability.** When structural metadata is published in searchable registries and linked to datasets, it can help users identify resources containing relevant variables or data elements.
 * **Enhances interoperability.** Harmonised data definitions ensure that concepts are clearly and precisely described, enabling easier integration and combination across datasets.
-* **Enhances reusability.**  By clearly describing the data elements, the data can be reused in the future by yourself or by other projects with different research objectives.
+* **Enhances reusability.** By clearly describing the data elements, the data can be reused in the future by yourself or by other projects with different research objectives.
 * **Improves reproducibility.** Metadata about the structure of your data provides insight into how the original data was structured, even if the original data is no longer available.
 
-Keep in mind your [FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives) - registering structural metadata can facilitate the subsequent steps in the FAIRification process. For example, proper metadata is essential for applying Common Data Elements and creating a semantic model ([Metroline Step: Apply common data elements]({{site.baseurl}}/metroline_steps/apply_common_data_elements), [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics)).
+Keep in mind your [FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives). Structural metadata can support subsequent FAIRification activities, such as development of semantic models (see e.g. [FAIR Metroline Step: Create or reuse a semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model)), by making data structures and definitions available to others.
 
 ## How to
 ### Step 1 - Prepare your codebook
-For more information on how to choose which data elements to collect and how to create the codebook, see the following pages:[Metroline Step: Apply common data elements]({{site.baseurl}}/metroline_steps/apply_common_data_elements), [Create a Codebook](https://ddialliance.org/create-a-codebook) and [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics).
 
-The information you need to provide in your metadata are largely defined by the community you are part of and can vary significantly between research-domains. 
+For more information on how to choose which data elements to collect and how to create the codebook, see the following pages: [Metroline Step: Apply common data elements]({{site.baseurl}}/metroline_steps/apply_common_data_elements), [Create a Codebook](https://ddialliance.org/create-a-codebook) and [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics).
 
-* For instance, in microscopy research, an image is linked to details about the individual from whom a tissue sample was obtained. Here, characteristics such as age, sex, and diagnosis of that person serve as metadata about the sample, as well as the settings of the image itself, offering context about the microscopy image. 
-* However, in patient registry or clinical studies, this same information is considered the primary data, with their structural metadata including information about which variables are collected and the value ranges without specifying the individual record (for example, Age, captured as a integer ).
+The information you need to provide in your metadata is largely defined by the community you are part of and can vary significantly between research domains. 
+
+* For instance, in microscopy research, an image is linked to details about the individual from whom a tissue sample was obtained. Here, characteristics such as age, sex and diagnosis of that person serve as metadata about the sample, as well as the settings of the image itself, offering context about the microscopy image. 
+
+* However, in patient registry or clinical studies, this same information is considered the primary data, with their structural metadata including information about which variables are collected and the value ranges without specifying the individual record (e.g., Age, captured as an integer value).
 
 {% capture infobox_text1 %}
 A group of Data Stewards conducted a campus-wide survey to assess current data management practices among their researchers. After collecting and preparing the data for sharing, they developed a codebook to document the dataset structure and definitions.
@@ -179,11 +181,13 @@ A group of Data Stewards conducted a campus-wide survey to assess current data m
 
 
 ### Step 2 - Select the most appropriate data repository for publishing
-Once the codebook is ready, you can determine where and how it should be published. Structural metadata can be published in various forms, and the  most suitable option often depends on the specific context of the research project and the [FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives).
-For certain projects, it might be practical to publish the codebook together with the research data in a repository, creating a cohesive and accessible package. However, in some projects where data cannot be published (e.g. due to privacy concern, legal restrictions, or intellectual property rights), it is appropriate to publish the codebook independently in a specialised catalogue, such as [ART-DECOR](https://art-decor.org/ad/#/covid19f-/datasets/dataset). 
+Once the codebook is ready (see [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics)), you can determine where and how it should be published. Depending on the research domain or data type, repository requirements and metadata standards may already influence how structural metadata is collected and formatted earlier in the research lifecycle. Structural metadata can be published in various forms, and the most suitable option often depends on the context of the research project and the [FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives).
+
+For certain projects, it might be practical to publish the codebook together with the research data in a repository, creating a cohesive and accessible package. However, in some projects where data cannot be published (e.g. due to privacy concerns, legal restrictions, or intellectual property rights), it is appropriate to publish the codebook independently in a specialised catalogue, such as an [ART-DECOR](https://decor.nictiz.nl/ad) instance hosted by Nictiz.
+
 When selecting a repository or catalogue:
-* Use domain-specific repositories where possible (a repository that is commonly used in your research domain). If you don’t know what repositories are used in your domain, you can make use of [re3data](https://www.re3data.org/) or [FAIRsharing](https://fairsharing.org/) to browse through repositories. Many filters can be applied (e.g., generation of a persistent identifier, selecting a country, data access level, etc.), making it possible to select a data repository that fits your needs.
-    * If there is no domain-specific repository, you can make use of generic or institutional repositories (for example, DANS Data Stations Life Sciences, Zenodo, Radboud Data Repository for Radboudumc researchers or DataverseNL for Amsterdam UMC, UMC Utrecht and Erasmus MC).
+* Use domain-specific repositories where possible (a repository that is commonly used in your research domain). If you don’t know what repositories are used in your domain, you can make use of [re3data](https://www.re3data.org/) or [FAIRsharing](https://fairsharing.org/) to browse through repositories. Many filters can be applied (e.g., generation of a persistent identifier, selecting a country, data access level,  etc.), making it possible to select a data repository that fits your needs.
+   * If there is no domain-specific repository, you can make use of generic or institutional repositories (e.g., DANS Data Stations Life Sciences, Zenodo, Radboud Data Repository for Radboudumc researchers, or DataverseNL for Amsterdam UMC, UMC Utrecht, and Erasmus MC).
 * Select a repository that makes it possible to publish documentation open access, even if the data is under restricted access. This way researchers can get an idea of what your data looks like, before actually needing to access the data.
 * If possible, try to choose a repository that supports publishing metadata (or the codebook) in machine-readable formats, such as JSON/XML/RDF.
 * Keep in mind the funder requirements – do they require you to publish in a specific repository?
@@ -195,7 +199,7 @@ The researchers decided to make use of the institutional data repository (Radbou
 
 ### Step 3 - Publish the codebook in the selected data repository
 This step involves publishing the structural metadata in the selected data repository. 
-Preferably the metadata is machine-actionable (see Step 4), but publishing your codebook as-is at this point may already suffice to reach your [FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives). 
+Preferably the metadata is machine-actionable (see [Step 4](#step-4---enhance-findability-and-interoperability-of-structural-metadata)), but publishing your codebook as-is at this point may already suffice to reach your [FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives).
 Make sure that the codebook is published open access, even when the data is under restricted access. Some repositories that support this are DANS Data Stations Life Sciences (generic repository), Radboud Data Repository, and DataverseNL (institutional repositories).
 
 {% include info-box.html type="example" title="Example" text="
@@ -208,19 +212,19 @@ The codebook was uploaded in a [Data Sharing Collection](https://doi.org/10.3497
 While stopping at Step 3 is already a good practice, ensuring that information about your data content is documented and made available, there are cases where you may want to further increase your FAIR maturity through additional mechanisms.
 
 #### Findability
-For surveys, patient registries, and other data types, it can be helpful to explicitly describe in the metadata what is actually being collected from the individuals (e.g., age, diagnosis, age at diagnosis). In such cases, platforms that present this information visually—like the one shown in the figure below—might offer a solution.
+For surveys, patient registries and other data types, it can be helpful to explicitly describe in the metadata what is actually being collected from the individuals (for example age, diagnosis and age at diagnosis). In such cases, platforms that present this information visually, like the one shown in the figure below, might offer a solution.
 
 {% include image_with_caption.html 
    src="/assets/img/metroline_steps/register_structural_metadata/ART-DECOR_screenshot.png" 
    alt="ART-DECOR dataset" 
-   caption="ART-DECOR dataset with example dataset and its variables." %}
+   caption="ART-DECOR view of structural metadata describing an example dataset’s variables." %}
 
 Depending on your field and data type, different tools may be available. Most of these tools support interoperability, which is also essential for FAIR data practices:
 * **Clinical studies and patient registries.** ART-DECOR allows you to publish structured metadata about your dataset, including data elements in XML format (see example [here](https://art-decor.org/ad/#/covid19f-/datasets/dataset)).
 * **Patient Registries.** [ERDRI.mdr](https://eu-rd-platform.jrc.ec.europa.eu/mdr/) is a metadata repository that enables the publication of sampled data elements.
 * **Survey and/or any tabular datasets (rows and columns).** [DDI](https://ddialliance.org/) provides tools to convert your codebook into RDF or XML. Ideally, these files should be hosted in repositories that support these formats, but they can also be shared alongside your data following the guidance above.
 
-While these are valuable solutions, it’s important to ensure that, if you share information about the content of your data in a different place than the location of your dataset, you reflect this on your metadata’s “single source of truth”, as explained in [Metroline Step: Assess availability of your metadata]({{site.baseurl}}/metroline_steps/assess_availability_of_your_metadata). For example, if your institution connects with Health-RI to share metadata via a FAIR Data Point, make sure that the link to your structural metadata page is also included in that pathway.
+Make sure that, when structural metadata is shared separately from the dataset itself, the dataset’s resource-level metadata includes clear and maintained links to the structural metadata. For example, if your institution shares resource-level metadata via a FAIR Data Point, make sure that links to the structural metadata are also included there.
 
 #### Interoperability
 Your original codebook file alone may not be sufficient to make your data interoperable. Two key characteristics are required:
@@ -250,9 +254,8 @@ To achieve interoperable metadata, consider using the following tools:
 
 If you have experience using other(s), please, leave a comment!
 
-
 {% capture infobox_text2 %}
-Spreadsheets, such as Excel files, are not inherently machine-readable and often require manual work for data cleaning and analysis. To improve interoperability, the Data Stewards generated machine-actionable metadata describing the dataset’s structure.
+Spreadsheets, such as Excel files, can be difficult to process automatically without additional metadata describing their structure and meaning. To improve interoperability, the Data Stewards generated machine-actionable metadata describing the dataset’s structure.
 
 Using [CSV on the web](https://csvw.org/), a vocabulary designed to enhance metadata actionability, they created a JSON file that accurately reflects the content of the codebook. This effort significantly increased the dataset’s machine-readability and integration potential. Where possible, terms were mapped to ontologies. For example, Yes/No values were linked to:
 * False: [SNOMEDCT/64100000](http://purl.bioontology.org/ontology/SNOMEDCT/64100000)
@@ -263,7 +266,7 @@ Using [CSV on the web](https://csvw.org/), a vocabulary designed to enhance meta
    alt="structural metadata" 
    caption="Comparison of the original codebook (top) and a snippet of the generated JSON file (left), showing the corresponding fields." %}
 
-The next step is to make this JSON file available. It can remain within the same data collection or be hosted elsewhere, such as on GitHub or a JSON hosting service. However, if the file is moved to a location other than the the place where the dataset lives in, it is essential to ensure that this is documented in the organisation's “single source of truth”, as already explained. 
+The next step is to make this JSON file available. It can remain within the same data collection and/or be hosted elsewhere, such as on GitHub or a JSON hosting service. When the structural metadata is made available separately from the dataset itself, make sure that clear and maintained links to it are included in the dataset’s resource-level metadata.
 
 Guidance on maintaining metadata integrity can be found in the following Metroline resources: 
 [Metroline Step: Assess availability of your metadata]({{site.baseurl}}/metroline_steps/assess_availability_of_your_metadata) and [Metroline Step: Register resource level metadata]({{site.baseurl}}/metroline_steps/register_resource_level_metadata).

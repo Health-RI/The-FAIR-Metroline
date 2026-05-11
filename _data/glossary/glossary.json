@@ -917,7 +917,7 @@
         "url": "https://terms.codata.org/rdmt/machine-actionable"
       }
     ],
-    "aliases": []
+    "aliases": ["Machine-actionable"]
   },
   {
     "term": "Machine-readable data",
@@ -928,7 +928,7 @@
         "url": "https://terms.codata.org/rdmt/machine-readable"
       }
     ],
-    "aliases": []
+    "aliases": ["Machine-readable"]
   },
   {
     "term": "Material Transfer Agreement",
