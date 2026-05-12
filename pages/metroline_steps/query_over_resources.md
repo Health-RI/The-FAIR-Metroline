@@ -6,6 +6,7 @@ permalink: /metroline_steps/query_over_resources
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Research is formalized curiosity. It is poking and prying with a purpose. [Zora Neale Hurston](https://www.floridamemory.com/learn/exhibits/in-her-own-words/zora-neale-hurston/)***
 >

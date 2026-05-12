@@ -4,11 +4,11 @@ Usage: {% raw %}{% include metroline_steps/step-metadata.html step=current_step 
 
 Reads optional fields from the step data:
   keywords   – list of keyword strings
-  core_roles – list of role name strings
+  expertise_required – list of role name strings
   audience.data_holder / audience.data_user – booleans
 -->
 {% assign step = include.step %}
-{% if step.keywords or step.core_roles or step.audience %}
+{% if step.keywords or step.expertise_required or step.audience %}
 <div class="step-metadata">
 
   {% if step.keywords %}
@@ -20,11 +20,11 @@ Reads optional fields from the step data:
   </div>
   {% endif %}
 
-  {% if step.core_roles %}
+  {% if step.expertise_required %}
   <div class="step-metadata-row">
-    <span class="step-metadata-label">Core roles</span>
+    <span class="step-metadata-label">Expertise required</span>
     <span class="step-metadata-value">
-      {% for role in step.core_roles %}<span class="step-metadata-tag step-metadata-tag--role">{{ role }}</span>{% endfor %}
+      {% for role in step.expertise_required %}<span class="step-metadata-tag step-metadata-tag--role">{{ role }}</span>{% endfor %}
     </span>
   </div>
   {% endif %}

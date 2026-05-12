@@ -859,17 +859,6 @@
     ]
   },
   {
-    "term": "Keywords",
-    "definition": "Word that deals with a topic in a text and that are used for topic development and topic searches.",
-    "sources": [
-      {
-        "label": "Wikidata",
-        "url": "https://www.wikidata.org/wiki/Q12310022"
-      }
-    ],
-    "aliases": []
-  },
-  {
     "term": "knowledge management",
     "definition": "Process of creating, sharing, using and managing the knowledge and information of an organization.",
     "sources": [

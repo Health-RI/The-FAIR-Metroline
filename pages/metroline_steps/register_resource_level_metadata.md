@@ -8,6 +8,7 @@ permalink: /metroline_steps/register_resource_level_metadata
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Perfectly good data resources may go unused simply because no one knows they exist. There are many ways in which digital resources can be made discoverable, including indexing. ([GO FAIR](https://www.go-fair.org/fair-principles/f4-metadata-registered-indexed-searchable-resource/))***
 > 

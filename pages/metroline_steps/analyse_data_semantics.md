@@ -7,6 +7,7 @@ page_id: analyse_data_semantics
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***… selecting a relevant subset of the data and defining driving user questions(s) are highly relying on being familiar with the data ([Generic](https://direct.mit.edu/dint/article/2/1-2/56/9988/A-Generic-Workflow-for-the-Data-FAIRification))***
 > 

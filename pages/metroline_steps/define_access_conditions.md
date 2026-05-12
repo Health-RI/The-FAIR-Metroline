@@ -6,6 +6,7 @@ permalink: /metroline_steps/define_access_conditions
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***The “A” of FAIR – As Open as Possible, as Closed as Necessary. ([Landi et al. 2019](https://doi.org/10.1162/dint_a_00027))***
 >

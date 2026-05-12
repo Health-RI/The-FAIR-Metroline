@@ -6,6 +6,7 @@ permalink: /metroline_steps/assess_fairness
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Without this phase, there is a danger of work continuing beyond the point where the benefits to the project justify the continued expenditure of resources. ([FAIR in action](https://pmc.ncbi.nlm.nih.gov/articles/PMC10199076/))***
 > 

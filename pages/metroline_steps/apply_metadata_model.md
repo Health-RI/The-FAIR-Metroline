@@ -6,6 +6,7 @@ permalink: /metroline_steps/apply_metadata_model
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***A meta(data) model is intended to ‘answer questions about a domain, improve understanding, and promote knowledge sharing; expose \[…] assumptions about a domain; promote communication among people developing a conceptual model, or among people who (later) use a conceptual model' [On the Philosophical Foundations of Conceptual Models](https://ebooks.iospress.nl/volumearticle/53687)***
 >
