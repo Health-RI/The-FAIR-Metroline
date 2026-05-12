@@ -128,7 +128,7 @@
         sources: Array.isArray(item.sources) ? item.sources : [],
 
         // Target on the glossary page.
-        url: "/glossary/#" + slugify(canonicalTerm)
+        url: "/glossary#" + slugify(canonicalTerm)
       });
     }
 
