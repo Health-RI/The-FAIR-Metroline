@@ -16,7 +16,7 @@ In this step, you assess whether the objectives of your FAIRification process ha
 
 ## Why is this step important 
 Assessing FAIRness after FAIRification ensures that your dataset truly meets your original goals and reveals where further work is needed. This step is key to: 
-* **Verifying FAIR compliance.** Confirms whether your data is truly Findable, Accessible, Interoperable and Reusable, rather than just improved. 
+* **Verifying progress towards FAIR objectives.** Helps evaluate whether your data has become more Findable, Accessible, Interoperable and Reusable in line with your FAIRification goals.
 * **Ensuring long-term usability.** Prevents obsolescence by checking if your data remains understandable and accessible over time. 
 * **Pinpointing gaps.** Identifies remaining issues—like missing metadata or access barriers—supporting ongoing improvement. 
 * **Building trust and transparency.** Clarifies access policies and validates metadata availability, even if the data itself is restricted later. 
@@ -40,8 +40,7 @@ You set out by defining [FAIRification objectives]({{site.baseurl}}/metroline_st
 
 ### Step 2 – Re-assess the FAIRness of your data with tools
 After reflecting on your original objectives in step 1, it’s important to objectively assess your data’s FAIRness at this stage. You can do this by using FAIR assessment tools. 
-* In the [Pre-FAIR assessment step]({{site.baseurl}}/metroline_steps/pre_fair_assessment), various tools are discussed that can be used to assess fairness of data. By running such a tool in this stage, you can objectively assess how FAIR your data is right now.
-* If you did a pre-FAIR assessment, rerunning the same tool in this phase is a great way to compare results to show progress. 
+* If you performed a pre-FAIR assessment earlier in the process, consider repeating the same approach at this stage to evaluate progress over time. This may involve automated tools or checklist-based self-assessments. Information about different FAIR evaluation methods can be found in [Metroline step: Pre-FAIR assessment]({{site.baseurl}}/metroline_steps/pre_fair_assessment).
 
 ### Step 3 – Enhance the validation with complementary methods
 In addition to using assessment tools, you should consider complementary methods to validate and further evaluate the FAIRness of your data and metadata. These options enhance the insights from step 2 and give you practical feedback. 

@@ -69,7 +69,7 @@ To see whether an item can be considered a CDE, the following checklist can be a
 
 To illustrate how CDEs can be used, consider the example for the [CMS Discharge Disposition](https://cde.nlm.nih.gov/deView?tinyId=cRUgcKV8co) element (table below) from the NIH CDE repository. The CDE's data label is shown in purple, possible response values, such as Home, Hospice or Long-term care are shown in red, and their concept identifiers in yellow. The concept identifiers help annotate (or map) the corresponding response values to ensure (semantic) interoperability and machine-readability. Typically, these machine-readable terms are represented with codes or URL links. For example, the concept "Home" is referred by the NCIT code C18002, which is also represented by [a URL](http://purl.obolibrary.org/obo/NCIT_C18002). Moreover, this annotation is crucial for integrating CDEs from different sources and allows computers to determine whether elements that appear similar are indeed ontologically matched (conceptually equivalent).  
 
-<div class="table-container">
+<div id="cde_table" class="table-container">
 <table>
    <caption style="caption-side: top; font-weight: bold; padding: 5px;">
       Table: CDE for CMS Discharge Disposition 
@@ -153,7 +153,7 @@ Benefits of using Common Data Elements are highlighted below.
 * **Leverages community expertise.** Many CDEs are developed by domain experts, reviewed by peers and tested in real-world settings, offering reliable, consensus-based definitions.
 
 ## How to
-To promote standardisation, data sharing and interoperability, researchers should start with reusing existing CDEs whenever possible. Follow the steps below to identify and apply suitable CDEs for your study or data collection effort.
+To promote standardisation, data sharing and interoperability, researchers should start with reusing existing Common Data Elements (CDEs) whenever possible. CDEs define individual variables, while relationships between these elements within or across datasets are typically described in semantic data models (see [Metroline step: Create or reuse a semantic model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model)). Follow the steps below to identify and apply suitable CDEs for your study or data collection effort.
 
 ### Step 1 - Clarify your research context to target the right CDE repositories
 Before searching for CDEs, clarify the following:
@@ -189,11 +189,13 @@ Once you've identified relevant Common Data Elements (CDEs), you can:
 
 Your dataset will likely include CDEs alongside context-specific variables. Augment the CDEs with variables you are missing. Ensure your codebook distinguishes between reused, adapted and new elements.
 
-{% include info-box.html type="warning" title="Important" text="
-Whenever possible, reuse or preserve the ontology codes that come with a CDE (e.g. SNOMED CT, LOINC, HPO). This enables machine-readable alignment and integration.
-"%}
+{% capture important_reuse %}
+Whenever possible, reuse or preserve the ontology codes that come with a CDE (e.g. SNOMED CT, LOINC, HPO). These codes support semantic interoperability and machine-readable integration across systems and datasets. To learn more, see [Metroline step: Create or reuse a semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model).
+{% endcapture %}
 
-If a CDE does not yet include annotations, such as concept identifiers, as shown in the yellow box in the figure in the Short description, aim to add these annotations yourself. Ensure you document your annotations and adaptations explicitly, and consider sharing your contributions and modifications with the original source of the CDE to support future updates. Failure to properly document such changes can lead to semantic divergence when used by other teams, even if the CDE appears identical at first glance. To learn more about codebooks, see [Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics).
+{% include info-box.html type="warning" title="Important" text=important_reuse%}
+
+If a CDE does not yet include annotations, such as the concept identifiers in the yellow box in the [Table in the Short description](#cde_table), aim to add these annotations yourself. Ensure you document your annotations and adaptations explicitly, for example in a codebook or data dictionary that is shared alongside your dataset. If the original CDE repository or provider supports community feedback or contributions, consider sharing your modifications to support future updates and harmonisation efforts. Poorly documented adaptations can reduce interoperability and lead to semantic inconsistencies between datasets, even when elements appear similar. To learn more about codebooks, see [Metroline step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics).
 
 {% capture infobox_text1 %}
 In addition to the set of common data elements for rare diseases registration, study and disease specific data elements were [identified and agreed upon](https://pmc.ncbi.nlm.nih.gov/articles/PMC9166638/) through collaboration among various European Reference Networks (ERNs). These additional elements were determined on a study-to-study basis and included patient-reported outcomes, such as those captured by the [OVAMA Questionnaire](https://ovama.org/ovama-questionnaire/).
