@@ -91,10 +91,10 @@
   status: RELEASED
 - id: 16
   title: Use ontologies in the model
-  summary: This process involves linking your data model to ontologies, which are essentially formal, shared dictionaries that provide precise, computer-readable definitions for concepts. By assigning these standard definitions to the elements in your data model, you make their meanings explicit and clear. This allows different computer systems to correctly understand, combine, and compare data from various sources without confusion, making the data more interoperable and easier to reuse across different projects.
+  summary: This process involves linking your semantic (meta)data model to ontologies, which are formal, shared vocabularies that provide precise, machine-readable definitions for concepts. This step is written for a broad FAIRification audience and may be used by researchers, data stewards, metadata specialists and ontology or semantic web technology experts, depending on the project context. Not all activities need to be carried out by the same person. Researchers and project teams can use this step to understand the process and provide domain knowledge, while specialist support may be needed for ontology selection, concept mapping, formal representation, validation and maintenance. By assigning standard definitions to the elements in your model, you make their meanings explicit and unambiguous. This allows different computer systems to correctly understand, combine and compare data from various sources consistently, making the data more interoperable and easier to reuse across projects.
   url: metroline_steps/use_ontologies_in_the_model
   icon: ":book:"
-  status: READY FOR REVIEW
+  status: RELEASED
 - id: 17
   title: Obtain informed consent
   summary: To ensure your data and materials can be reused in the future, your subject information sheet (SIS) and informed consent form (ICF) must address reuse. This Metroline step provides consideration and resources for preparing your SIS and ICF.
