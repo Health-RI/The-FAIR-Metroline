@@ -1,4 +1,12 @@
 // Collapsible section headings on metroline step pages
+h2.cs-heading {
+  font-size: 24px;
+}
+
+h3.cs-heading {
+  font-size: 18px;
+}
+
 .cs-heading {
   cursor: pointer;
   user-select: none;
