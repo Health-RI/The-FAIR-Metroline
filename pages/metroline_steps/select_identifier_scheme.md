@@ -171,7 +171,7 @@ predicate_id: sssom:exactMatch
 ### Step 9 - Ensure governance and infrastructure for persistence
 Identifier quality depends on stable services that guarantee resolution and long-term accessibility. Good governance protects identifiers from decay.
 * **Benefit.** Maintains trust and usability of identifiers across decades.
-* **How.** Establish or rely on stable services that guarantee identifier resolution and long-term accessibility. PID infrastructures such as [GUPrI](https://faircookbook.elixir-europe.org/content/recipes/infrastructure/gupri.html) help ensure persistent resolution and long-term stewardship. Governance arrangements and technical infrastructure are usually managed at the institutional or community level rather than by individual researchers. To make governance concrete, consider questions such as:
+* **How.** Establish or rely on stable services that guarantee identifier resolution and long-term accessibility. PID infrastructures such as [GUPRI](https://faircookbook.elixir-europe.org/content/recipes/infrastructure/gupri.html) (Globally Unique, Persistent, Resolvable Identifier) help ensure persistent resolution and long-term stewardship. Governance arrangements and technical infrastructure are usually managed at the institutional or community level rather than by individual researchers. To make governance concrete, consider questions such as:
   * Who is responsible for maintaining resolution if a system changes?
   * What happens to identifiers when a project ends? 
   * Does your institution have a PID policy?
