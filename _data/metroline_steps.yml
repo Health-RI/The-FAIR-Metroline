@@ -123,10 +123,10 @@
     data_user: true
 - id: 9
   title: Select Identifier Scheme
-  summary: Coming soon.
-  url: 
+  summary: In simple terms, selecting an identifier scheme is like deciding how to label books in a library. If every book has a clear catalogue number, author, and subject, readers can always find what they need. Without a consistent scheme, books would be scattered and confusing. For datasets, choosing the right identifier scheme ensures that your data can be discovered, cited and reused. Similar to well-organised books that are easy to find in a structured library.
+  url: metroline_steps/select_identifier_scheme
   icon: ":passport_control:"
-  status: IN DEVELOPMENT
+  status: READY FOR REVIEW
   keywords:
     - identifiers
     - persistence
@@ -155,7 +155,7 @@
     data_user: false
 - id: 11
   title: Register structural metadata
-  summary: This step focuses on how to share your resource’s structural metadata - an explanation of what each piece of your data means and how it’s organised. Publishing it helps others understand, find and reuse your data more easily. This step also shows how to make the metadata readable by computers, which can support specific FAIR objectives you may already have.
+  summary: Structural metadata can describe many aspects of how data is organised, represented and related within a dataset or resource. In this step, the focus is primarily on structural metadata describing data elements, their definitions and formats, such as codebooks or data dictionaries. Publishing structural metadata helps others understand, find and reuse your data more easily. This step also describes approaches for making structural metadata easier for computers to process automatically, which can support specific FAIRification objectives.
   url: metroline_steps/register_structural_metadata
   icon: ":card_file_box:"
   status: RELEASED
@@ -235,10 +235,10 @@
     data_user: true
 - id: 16
   title: Use ontologies in the model
-  summary: This process involves linking your data model to ontologies, which are essentially formal, shared dictionaries that provide precise, computer-readable definitions for concepts. By assigning these standard definitions to the elements in your data model, you make their meanings explicit and clear. This allows different computer systems to correctly understand, combine, and compare data from various sources without confusion, making the data more interoperable and easier to reuse across different projects.
+  summary: This process involves linking your semantic (meta)data model to ontologies, which are formal, shared vocabularies that provide precise, machine-readable definitions for concepts. This step is written for a broad FAIRification audience and may be used by researchers, data stewards, metadata specialists and ontology or semantic web technology experts, depending on the project context. Not all activities need to be carried out by the same person. Researchers and project teams can use this step to understand the process and provide domain knowledge, while specialist support may be needed for ontology selection, concept mapping, formal representation, validation and maintenance. By assigning standard definitions to the elements in your model, you make their meanings explicit and unambiguous. This allows different computer systems to correctly understand, combine and compare data from various sources consistently, making the data more interoperable and easier to reuse across projects.
   url: metroline_steps/use_ontologies_in_the_model
   icon: ":book:"
-  status: READY FOR REVIEW
+  status: RELEASED
   keywords:
     - semantic model
     - ontologies
@@ -271,7 +271,7 @@
   status: ON HOLD
 - id: 19
   title: Apply (meta)data model
-  summary: Think of your data like a book in a library. A metadata model is like the card in the catalogue that tells people what the book is about and who wrote it. A data model is like the book’s table of contents - it helps everyone understand what’s inside and how to read it. Using both makes it easier for people and machines to find, understand, and reuse your data.
+  summary: Think of your data like a book in a library. A metadata model defines the kind of information included in the catalogue entry, such as the title, author, topic, and publication date, helping people find and understand the book. A data model defines how the contents of the book are organised and related, like the structure of chapters, sections, and references. Using both makes it easier for people and machines to find, understand, and reuse your data.
   url: metroline_steps/apply_metadata_model
   icon: ":card_file_box:"
   status: RELEASED
