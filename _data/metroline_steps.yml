@@ -48,10 +48,10 @@
   status: RELEASED
 - id: 9
   title: Select Identifier Scheme
-  summary: Coming soon.
-  url: 
+  summary: In simple terms, selecting an identifier scheme is like deciding how to label books in a library. If every book has a clear catalogue number, author, and subject, readers can always find what they need. Without a consistent scheme, books would be scattered and confusing. For datasets, choosing the right identifier scheme ensures that your data can be discovered, cited and reused. Similar to well-organised books that are easy to find in a structured library.
+  url: metroline_steps/select_identifier_scheme
   icon: ":passport_control:"
-  status: IN DEVELOPMENT
+  status: READY FOR REVIEW
 - id: 10
   title: Register resource level metadata
   summary: To make your resource (e.g. data), available for reuse, its metadata can be published in a catalogue. This step helps you find a catalogue where you can register these resource metadata and explains why adding your resource to such a catalogue is important.
