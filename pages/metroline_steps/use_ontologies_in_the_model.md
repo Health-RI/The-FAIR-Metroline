@@ -6,6 +6,7 @@ permalink: /metroline_steps/use_ontologies_in_the_model
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Ontologies provide a flexible approach to integrating data and sharing meaning and may be better able to assist in inferring meaning in complex situations. [Liyanage H, Krause P, de Lusignan S. Using ontologies to improve semantic interoperability in health data. BMJ Health & Care Informatics.](https://doi.org/10.14236/jhi.v22i2.159)***
 >

@@ -6,6 +6,7 @@ permalink: /metroline_steps/register_structural_metadata
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Structural metadata are data about how a dataset or resource came about, but also how it is internally structured. [How to FAIR](https://howtofair.dk/how-to-fair/metadata/)***
 >
