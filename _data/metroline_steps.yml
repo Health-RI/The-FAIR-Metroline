@@ -9,10 +9,10 @@
     - goals
     - governance
   expertise_required:
-    - Data steward
+    - data steward
     - ELSI expert
-    - Researcher
-    - Semantic expert
+    - researcher
+    - semantic expert
   audience:
     data_holder: true
     data_user: true
@@ -33,10 +33,10 @@
     - support
     - governance
   expertise_required:
-    - Data steward
-    - Infrastructure professional
-    - Project manager
-    - Researcher
+    - data steward
+    - infrastructure professional
+    - project manager
+    - researcher
   audience:
     data_holder: true
     data_user: true
@@ -50,8 +50,8 @@
     - training
     - skills
   expertise_required:
-    - Data steward
-    - Researcher
+    - data steward
+    - researcher
     - Trainer
   audience:
     data_holder: true
@@ -66,8 +66,8 @@
     - assessment
     - FAIR maturity
   expertise_required:
-    - Data steward
-    - Research software engineer
+    - data steward
+    - research software engineer
   audience:
     data_holder: true
     data_user: true
@@ -81,10 +81,10 @@
     - planning
     - implementation
   expertise_required:
-    - Data steward
-    - Infrastructure professional
-    - Project manager
-    - Researcher
+    - data steward
+    - infrastructure professional
+    - project manager
+    - researcher
   audience:
     data_holder: true
     data_user: true
@@ -98,10 +98,10 @@
     - data access
     - data retrieval
   expertise_required:
-    - Data steward
+    - data steward
     - ELSI expert
-    - Infrastructure professional
-    - Researcher
+    - infrastructure professional
+    - researcher
   audience:
     data_holder: false
     data_user: true
@@ -116,8 +116,8 @@
     - availability
     - discovery
   expertise_required:
-    - Data steward
-    - Researcher
+    - data steward
+    - researcher
   audience:
     data_holder: true
     data_user: true
@@ -131,8 +131,8 @@
     - identifiers
     - persistence
   expertise_required:
-    - Policy specialist
-    - Technical specialist
+    - policy specialist
+    - technical specialist
   audience:
     data_holder: true
     data_user: true
@@ -147,9 +147,9 @@
     - publication
     - discovery
   expertise_required:
-    - Data steward
-    - Infrastructure professional
-    - Researcher
+    - data steward
+    - infrastructure professional
+    - researcher
   audience:
     data_holder: true
     data_user: false
@@ -164,8 +164,8 @@
     - metadata
     - publication
   expertise_required:
-    - Data steward
-    - Researcher
+    - data steward
+    - researcher
   audience:
     data_holder: true
     data_user: false
@@ -180,8 +180,8 @@
     - standardisation
     - CDE
   expertise_required:
-    - Data steward
-    - Researcher
+    - data steward
+    - researcher
   audience:
     data_holder: true
     data_user: true
@@ -195,9 +195,9 @@
     - codebook
     - semantics
   expertise_required:
-    - Data steward
-    - Researcher
-    - Semantic expert
+    - data steward
+    - researcher
+    - semantic expert
   audience:
     data_holder: true
     data_user: true
@@ -213,9 +213,9 @@
     - data collection
     - codebook
   expertise_required:
-    - Data collection specialist
-    - Data steward
-    - Researcher
+    - data collection specialist
+    - data steward
+    - researcher
   audience:
     data_holder: true
     data_user: false
@@ -229,13 +229,13 @@
     - semantic model
     - semantics
   expertise_required:
-    - Semantic expert
+    - semantic expert
   audience:
     data_holder: true
     data_user: true
 - id: 16
   title: Use ontologies in the model
-  summary: This process involves linking your semantic (meta)data model to ontologies, which are formal, shared vocabularies that provide precise, machine-readable definitions for concepts. This step is written for a broad FAIRification audience and may be used by researchers, data stewards, metadata specialists and ontology or semantic web technology experts, depending on the project context. Not all activities need to be carried out by the same person. Researchers and project teams can use this step to understand the process and provide domain knowledge, while specialist support may be needed for ontology selection, concept mapping, formal representation, validation and maintenance. By assigning standard definitions to the elements in your model, you make their meanings explicit and unambiguous. This allows different computer systems to correctly understand, combine and compare data from various sources consistently, making the data more interoperable and easier to reuse across projects.
+  summary: This process involves linking your semantic (meta)data model to ontologies, which are formal, shared vocabularies that provide precise, machine-readable definitions for concepts. This step is written for a broad FAIRification audience and may be used by researchers, data stewards, metadata specialists and ontology or semantic web technology experts, depending on the project context. Not all activities need to be carried out by the same person. researchers and project teams can use this step to understand the process and provide domain knowledge, while specialist support may be needed for ontology selection, concept mapping, formal representation, validation and maintenance. By assigning standard definitions to the elements in your model, you make their meanings explicit and unambiguous. This allows different computer systems to correctly understand, combine and compare data from various sources consistently, making the data more interoperable and easier to reuse across projects.
   url: metroline_steps/use_ontologies_in_the_model
   icon: ":book:"
   status: RELEASED
@@ -244,7 +244,7 @@
     - ontologies
     - semantics
   expertise_required:
-    - Semantic expert
+    - semantic expert
   audience:
     data_holder: true
     data_user: true
@@ -280,10 +280,10 @@
     - tools
     - semantic model
   expertise_required:
-    - Data steward
-    - Researcher
-    - Semantic expert
-    - Technical specialist
+    - data steward
+    - researcher
+    - semantic expert
+    - technical specialist
   audience:
     data_holder: true
     data_user: false
@@ -298,10 +298,10 @@
     - RDF
     - publication
   expertise_required:
-    - Data steward
-    - Infrastructure professional
-    - Researcher
-    - Semantic expert
+    - data steward
+    - infrastructure professional
+    - researcher
+    - semantic expert
   audience:
     data_holder: true
     data_user: false
@@ -317,9 +317,9 @@
     - governance
   expertise_required:
     - Data curator
-    - Data steward
+    - data steward
     - ELSI expert
-    - Researcher
+    - researcher
   audience:
     data_holder: true
     data_user: false
@@ -332,9 +332,9 @@
   keywords:
     - querying
   expertise_required:
-    - Data scientist
-    - Researcher
-    - Semantic expert
+    - data scientist
+    - researcher
+    - semantic expert
   audience:
     data_holder: false
     data_user: true
@@ -348,9 +348,9 @@
     - assessment
     - FAIR maturity
   expertise_required:
-    - Data steward
-    - Research software engineer
-    - Researcher
+    - data steward
+    - research software engineer
+    - researcher
   audience:
     data_holder: true
     data_user: true
@@ -372,8 +372,8 @@
     - governance
   expertise_required:
     - ELSI expert
-    - Researcher
-    - Semantic expert
+    - researcher
+    - semantic expert
   audience:
     data_holder: true
     data_user: true
