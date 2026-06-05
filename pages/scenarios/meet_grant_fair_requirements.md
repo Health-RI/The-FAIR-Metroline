@@ -8,7 +8,13 @@ custom_js: metro-timeline
 ## Scenario Overview
 Researcher has existing data. While applying for a grant, 
 they have to assess the current FAIRness level and they need to write a 
-FAIRifcation plan to improve the FAIRness of their dataset
+FAIRifcation plan to improve the FAIRness of their dataset.
+
+Before getting started:
+
+* Be sure you are clear about your **FAIRifcation Objectives**
+* When necessary, make sure you enlist the help from a **FAIR data steward**, if possible
+* If there are gaps in your (team's) knowledge, considering following **training**
 
 
 
