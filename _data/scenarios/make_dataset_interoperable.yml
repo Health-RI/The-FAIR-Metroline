@@ -1,0 +1,35 @@
+
+- step_id: 13
+  status: "upcoming"
+  short_description: "Analyse data semantics"
+  description: "Clarify and define the meaning of their data and metadata elements by identifying ambiguities and creating a clear, unambiguous codebook to support further FAIRification steps."
+  examples:
+    - role: "Researcher"
+      description: "The first step is to accurately specify the data that will be collected.
+We initially used the variable “sex”, but this was ambiguous (biological vs administrative vs self-reported). 
+We refined this to “phenotypic sex” with values “female”, “male”, and “hermaphrodite”.
+This specification leads to a first rough version of a codebook.
+Next, we search for existing initiatives online. For genomics, parts of the FAIR Genomes definitions can be reused. 
+The values we aim to collect are aligned according to the <a href='https://decor.nictiz.nl/ad/#/fairgenomes-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.120.1.0/2021-07-20T24:00:00'>FAIR Genomes codebook</a>: 'female' will have the code 'http://purl.obolibrary.org/obo/PATO_0000383'"
+
+- step_id: 12
+  status: "upcoming"
+  short_description: "Apply Common data elements"
+  description: "Identify, select and apply common data elements to standardise data collection and improve interoperability, data quality and reuse."
+  examples:
+    - role: "Researcher"
+      description: "FAIR Genomes does not have a definition for bmi, so I check if there are Common data elements available that I can reuse. 
+  I find I need to add the following elements to properly register the bmi. https://cde.nlm.nih.gov/formView?tinyId=t6XCi_Ob5"
+
+- step_id: 14
+  status: "upcoming"
+  short_description: "Design eCRF"
+  description: "Design effective electronic case report forms by translating well-defined data elements into structured, validated forms that support high-quality, interoperable and reusable data collection."
+  examples:
+    - role: "Researcher"
+      description: "I use these definitions of bmi and phenotypic sex as the basis for the eCRF. The definitions are added to my codebook."
+
+- title: "Data collected are interoperable"
+  status: "destination"
+  icon: "🎯"
+  short_description: "Your data are will now be collected in alignment with standards and will be interoperable with other researchers' data."
