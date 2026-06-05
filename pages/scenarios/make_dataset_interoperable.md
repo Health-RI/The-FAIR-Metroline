@@ -10,9 +10,9 @@ Design new dataset so it is interoperable from the start, including alignment to
 
 Before getting started:
 
-* Be sure you are clear about your FAIRifcation Objectives
-* When necessary, make sure you enlist the help from a FAIR data steward, if possible
-* If there are gaps in your (team's) knowledge, considering following training
+* Be sure you are clear about your [FAIRifcation Objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives)
+* When necessary, make sure you enlist the help from a [FAIR data steward]({{site.baseurl}}/metroline_steps/have_a_fair_data_steward_on_board), if possible
+* If there are gaps in your (team's) knowledge, considering following [training]({{site.baseurl}}/metroline_steps/organise_training)
 
 
 
