@@ -26,3 +26,11 @@
   description: "I want to design my new dataset so it is interoperable from the start, including alignment to existing standards or reference datasets."
   type: "fair guidelines"
   complexity: "Medium"
+
+- title: "I want my existing dataset to be citable in my publication"
+  url: "scenarios/make_dataset_citable"
+  icon: "📑"
+  description: "I want to make my existing dataset citable in my publication, so I need to prepare the data according
+  to the publication constraints and make it findable."
+  type: "fair guidelines"
+  complexity: "Medium"
