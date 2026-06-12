@@ -6,6 +6,7 @@ permalink: /metroline_steps/have_a_fair_data_steward_on_board
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Data stewardship is a relatively new profession and a catch-all term for numerous support functions, roles and activities. It implies professional and careful treatment of data throughout all stages of a research process. The core responsibilities and tasks vary, from policy advising and consultancy, to operational and technical support and IT related tasks. Responsibilities also vary between and among the different research-performing organisations, and data stewards (DS) often have different job titles. ([RDMkit](https://rdmkit.elixir-europe.org/data_steward))***
 >

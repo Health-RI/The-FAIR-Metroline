@@ -24,6 +24,8 @@ subitems:
         url: /metroline_steps/data_access_and_retrieval
       - title: Assess availability of your metadata
         url: /metroline_steps/assess_availability_of_your_metadata
+      - title: Select identifier scheme
+        url: /metroline_steps/select_identifier_scheme
       - title: Register resource-level metadata
         url: /metroline_steps/register_resource_level_metadata
       - title: Register structural metadata

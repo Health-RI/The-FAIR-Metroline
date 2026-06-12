@@ -6,6 +6,7 @@ permalink: /metroline_steps/design_ecrf
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***… It is increasingly recognized that the design of the CRF or eCRF is a key quality step in ensuring the data required by the protocol, regulatory compliance and/or safety needs/ comments, study scientific-specific hypothesis attributes, site work flow, and cross-checking of data items within a form or across different forms are addressed. ([Clinical data management: Current status, challenges, and future directions from industry perspectives](https://doi.org/10.2147/OAJCT.S8172))***
 > 

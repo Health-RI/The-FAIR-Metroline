@@ -6,6 +6,7 @@ permalink: /metroline_steps/assess_availability_of_your_metadata
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Metadata is the descriptor, and data is the thing being described' [FAIR Principles: Interpretations and Implementation Considerations](https://www.sciengine.com/DI/doi/10.1162/dint_r_00024)***
 > 

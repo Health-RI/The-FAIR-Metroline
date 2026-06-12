@@ -19,3 +19,10 @@
   description: "Process tumor sequencing data with oncoanalyser and publish results in cBioPortal for cancer research visualization and analysis."
   type: "analysis"
   complexity: "High"
+
+- title: "How to make a  new dataset interoperable from the start"
+  url: "scenarios/make_dataset_interoperable"
+  icon: "🧩"
+  description: "I want to design my new dataset so it is interoperable from the start, including alignment to existing standards or reference datasets."
+  type: "fair guidelines"
+  complexity: "Medium"

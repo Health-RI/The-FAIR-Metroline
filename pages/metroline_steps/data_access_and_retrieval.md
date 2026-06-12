@@ -6,6 +6,7 @@ permalink: /metroline_steps/data_access_and_retrieval
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Data locked away benefits no one, but when data is shared responsibly and carefully with bright minds everywhere, we get results that will give us all a healthier future. ([UK Biobank is safely sharing health data to drive medical research](https://www.theguardian.com/science/2025/apr/18/uk-biobank-is-safely-sharing-health-data-to-drive-medical-research))***
 >
