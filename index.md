@@ -45,7 +45,7 @@ page_id: main
 <div class="homepage-recent-scenarios mt-5">
   <h2 class="section-title">Recently Added Scenarios</h2>
   <div class="scenario-cards-grid scenario-cards-compact">
-    {% assign scenarios = site.data.scenarios_list | slice: 0, 2 %}
+    {% assign scenarios = site.data.scenarios_list | slice: -2, 2 %}
     {% for scenario in scenarios %}
     <a href="{{ scenario.url | relative_url }}" class="scenario-card">
       <div class="scenario-card-icon">{{ scenario.icon }}</div>
