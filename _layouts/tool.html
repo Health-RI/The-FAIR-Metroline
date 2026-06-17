@@ -2,9 +2,31 @@
 layout: page
 ---
 
-<h2>At a glance</h2>
-{% include toolassemblies/tool-table.html tool_id=page.tool_id section="at_a_glance" %}
+{% assign tool = site.data.tools | where: "id", page.tool_id | first %}
 
+{% comment %} Lead description {% endcomment %}
+{% if page.description %}
+<p class="lead tool-lead-description">{{ page.description }}</p>
+{% endif %}
+
+{% comment %} ===== DATA LIFE CYCLE (local) ===== {% endcomment %}
+{% if page.phase %}
+<h2>Data life cycle</h2>
+<div class="lifecycle-phase-track" aria-label="Data life cycle phases">
+  {% for stage in site.data.lifecycle_stages %}
+    {% assign phase_active = false %}
+    {% for p in page.phase %}
+      {% if p == stage.name %}{% assign phase_active = true %}{% endif %}
+    {% endfor %}
+    <div class="lifecycle-phase-step{% if phase_active %} lifecycle-phase-step--active{% endif %}"
+         title="{{ stage.text }}" role="listitem">
+      <span class="lifecycle-phase-name">{{ stage.name }}</span>
+    </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% comment %} ===== USED BY (local) ===== {% endcomment %}
 {% if page.institutes %}
 <h2>Used by</h2>
 <div class="logo-cloud">
@@ -23,16 +45,92 @@ layout: page
 </div>
 {% endif %}
 
+{% comment %} ===== BIO.TOOLS AUTOMATED SECTION ===== {% endcomment %}
 {% if page.biotools_id %}
-<h3>Information retrieved from bio.tools</h3>
-{% include toolassemblies/get-biotools-data.html biotools_id=page.biotools_id %}
+<div class="biotools-section-wrapper">
+  <div class="d-flex align-items-center gap-2 mb-1">
+    <h2 class="mb-0">Tool information</h2>
+    <a href="https://bio.tools/{{ page.biotools_id }}" target="_blank" rel="noopener noreferrer"
+       class="biotools-source-badge">via <strong>bio.tools</strong></a>
+  </div>
+  <p class="text-muted small mb-3">The following information is automatically retrieved from
+    <a href="https://bio.tools/{{ page.biotools_id }}" target="_blank" rel="noopener noreferrer">bio.tools</a>.
+  </p>
+  {% include toolassemblies/get-biotools-data.html biotools_id=page.biotools_id %}
+</div>
+{% else %}
+{% comment %} Fallback for tools not yet in bio.tools {% endcomment %}
+{% assign purpose = tool.at_a_glance["Purpose and core functionality"] %}
+{% assign tool_type = tool.at_a_glance["Type"] %}
+{% if purpose or tool_type %}
+<h2>About</h2>
+{% if tool_type %}<p><strong>Type:</strong> {{ tool_type }}</p>{% endif %}
+{% if purpose %}<p>{{ purpose }}</p>{% endif %}
+{% endif %}
 {% endif %}
 
+{% comment %} ===== RESOURCES (local — website, manuals, training, etc.) ===== {% endcomment %}
+{% if tool %}
+  {% assign website      = tool.at_a_glance["Website"] %}
+  {% assign resource_urls = tool.at_a_glance["Resource URLs"] %}
+  {% assign contact      = tool.at_a_glance["Contact point"] %}
+
+  {% assign has_resources = false %}
+  {% if website %}{% assign has_resources = true %}{% endif %}
+  {% if resource_urls %}{% assign has_resources = true %}{% endif %}
+  {% if contact %}{% assign has_resources = true %}{% endif %}
+
+  {% if has_resources %}
+<h2>Resources</h2>
+<div class="tool-resources-section">
+
+  {% if website %}
+  <div class="tool-resource-group">
+    <h4 class="tool-resource-heading">Website</h4>
+    <ul class="tool-resource-list">
+      {% for item in website %}{% if item %}<li>{{ item }}</li>{% endif %}{% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if resource_urls %}
+  <div class="tool-resource-groups-accordion">
+    {% for group in resource_urls %}
+      {% assign group_name  = group[0] %}
+      {% assign group_items = group[1] %}
+      {% assign has_items   = false %}
+      {% for item in group_items %}{% if item %}{% assign has_items = true %}{% endif %}{% endfor %}
+      {% if has_items %}
+      <details class="tool-resource-details">
+        <summary class="tool-resource-summary">{{ group_name }}</summary>
+        <div class="tool-resource-body">
+          <ul class="tool-resource-list">
+            {% for item in group_items %}{% if item %}<li>{{ item }}</li>{% endif %}{% endfor %}
+          </ul>
+        </div>
+      </details>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if contact %}
+  <div class="tool-resource-group mt-3">
+    <h4 class="tool-resource-heading">Contact</h4>
+    <p>{{ contact }}</p>
+  </div>
+  {% endif %}
+
+</div>
+  {% endif %}
+{% endif %}
+
+{% comment %} ===== KNOWN GAPS OR USER NEEDS (local) ===== {% endcomment %}
 <h2>Known gaps or user needs</h2>
 {% include toolassemblies/tool-table.html tool_id=page.tool_id section="gaps_and_needs" %}
 
+{% comment %} ===== COMPATIBLE WITH (local) ===== {% endcomment %}
 <h2>Compatible with</h2>
-{% assign tool = site.data.tools | where: "id", page.tool_id | first %}
 {% include toolassemblies/show-tiles.html ids=tool.compatible_with %}
 
 {% include toolassemblies/related-scenarios.html tool_id=page.tool_id %}

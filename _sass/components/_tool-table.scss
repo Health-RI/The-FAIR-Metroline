@@ -27,3 +27,322 @@
     vertical-align: top;
   }
 }
+
+// ============================================================
+// LIFECYCLE PHASE TRACK
+// ============================================================
+
+.lifecycle-phase-track {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: #f8f9fa;
+}
+
+.lifecycle-phase-step {
+  flex: 1;
+  text-align: center;
+  padding: 0.65rem 0.3rem;
+  border-right: 1px solid #dee2e6;
+  cursor: default;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  &--active {
+    background: $primary;
+
+    .lifecycle-phase-name {
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+}
+
+.lifecycle-phase-name {
+  display: block;
+  font-size: 0.8rem;
+  color: #adb5bd;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+// ============================================================
+// BIO.TOOLS SECTION WRAPPER
+// ============================================================
+
+.tool-lead-description {
+  border-left: 4px solid $link-color;
+  padding-left: 1rem;
+  color: #3a3a3a;
+}
+
+.biotools-section-wrapper {
+  border-left: 4px solid $link-color;
+  padding-left: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.biotools-source-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.18rem 0.7rem;
+  background: #e8f4fb;
+  border: 1px solid #b8dff0;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  color: $link-color;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    background: #d0eaf7;
+    text-decoration: none;
+  }
+}
+
+// Meta badges
+.biotools-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.biotools-badge-type    { background: $primary;  color: #fff; }
+.biotools-badge-meta    { background: #4174c3;   color: #fff; }
+.biotools-badge-license { background: #198754;   color: #fff; }
+.biotools-badge-cost    { background: #0d6efd;   color: #fff; }
+.biotools-badge-access  { background: #6f42c1;   color: #fff; }
+
+// ── EDAM chips ──────────────────────────────────────────────
+
+.edam-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.edam-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6c757d;
+  white-space: nowrap;
+  padding-top: 0.25rem;
+  min-width: 72px;
+}
+
+.edam-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.edam-chip {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+    text-decoration: none;
+  }
+
+  &--topic {
+    background: #e8f0fb;
+    color: #2d5fa6;
+    border: 1px solid #c4d8f5;
+  }
+
+  &--operation {
+    background: #e8f7ed;
+    color: #1d7a41;
+    border: 1px solid #b8e8c8;
+  }
+}
+
+// ── Technical details / ELIXIR DL ────────────────────────────
+
+.biotools-dl {
+  font-size: 0.875rem;
+  margin-bottom: 0;
+
+  dt {
+    font-weight: 600;
+    color: #495057;
+    padding-top: 0.1rem;
+  }
+
+  dd {
+    color: #212529;
+    margin-bottom: 0.25rem;
+  }
+}
+
+// ── Subsection title ─────────────────────────────────────────
+
+.biotools-subsection-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #6c757d;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+// ── Publications ─────────────────────────────────────────────
+
+.biotools-pubs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.biotools-pub-card {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    border-color: #adb5bd;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+  }
+}
+
+.biotools-pub-title {
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+
+  a {
+    color: $primary;
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+  }
+}
+
+.biotools-pub-meta  { margin-bottom: 0.4rem; }
+
+.biotools-pub-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+// ── Links list ───────────────────────────────────────────────
+
+.biotools-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+// ── Credits list ─────────────────────────────────────────────
+
+.biotools-credits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+// ── Footer ───────────────────────────────────────────────────
+
+.biotools-footer {
+  border-top: 1px solid #dee2e6;
+}
+
+// ============================================================
+// LOCAL RESOURCES SECTION
+// ============================================================
+
+.tool-resources-section {
+  margin-bottom: 1.5rem;
+}
+
+.tool-resource-group {
+  margin-bottom: 0.75rem;
+}
+
+.tool-resource-heading {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.tool-resource-list {
+  font-size: 0.9rem;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+
+  li { margin-bottom: 0.2rem; }
+}
+
+.tool-resource-details {
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  margin-bottom: 0.4rem;
+  overflow: hidden;
+
+  &[open] > .tool-resource-summary {
+    border-bottom: 1px solid #dee2e6;
+    background: #e9f0fa;
+  }
+}
+
+.tool-resource-summary {
+  padding: 0.55rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: #f8f9fa;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+
+  &::-webkit-details-marker { display: none; }
+
+  &::before {
+    content: '▶';
+    font-size: 0.6rem;
+    color: #6c757d;
+    transition: transform 0.2s;
+  }
+
+  &:hover { background: #e9ecef; }
+}
+
+details[open] > .tool-resource-summary::before {
+  transform: rotate(90deg);
+}
+
+.tool-resource-body {
+  padding: 0.6rem 1rem 0.4rem;
+}
