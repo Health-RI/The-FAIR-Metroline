@@ -42,10 +42,20 @@ page_id: main
   </a>
 </div>
 
+<div class="fair-intro-ribbon">
+  <div class="fair-intro-ribbon-content">
+    <strong>New to FAIR?</strong>
+    Learn the basics of the FAIR principles before exploring scenarios and guidance.<br>
+    <a href="/fair_basics" class="fair-intro-link">
+      Introduction to FAIR →
+    </a>
+  </div>
+</div>
+
 <div class="homepage-recent-scenarios mt-5">
   <h2 class="section-title">Recently Added Scenarios</h2>
   <div class="scenario-cards-grid scenario-cards-compact">
-    {% assign scenarios = site.data.scenarios_list | slice: 0, 2 %}
+    {% assign scenarios = site.data.scenarios_list | slice: -2, 2 %}
     {% for scenario in scenarios %}
     <a href="{{ scenario.url | relative_url }}" class="scenario-card">
       <div class="scenario-card-icon">{{ scenario.icon }}</div>

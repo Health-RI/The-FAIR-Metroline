@@ -206,3 +206,31 @@
     font-size: 1.5rem;
   }
 }
+
+// ============================================
+// FAIR basics styling
+// ============================================
+
+.fair-intro-ribbon {
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  background: rgba(0, 120, 255, 0.04);
+}
+
+.fair-intro-ribbon-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.fair-intro-link {
+  margin-left: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.25rem;
+
+}

@@ -1,55 +1,257 @@
 {% assign biotools_id = include.biotools_id %}
-{% include toolassemblies/biotools-display-table.html %}
+
+<div id="biotools-data-container">
+  <p id="biotools-loading" class="text-muted fst-italic">
+    Loading tool information from bio.tools&hellip;
+  </p>
+
+  <div id="biotools-content" style="display:none">
+
+    <!-- Description -->
+    <div id="bt-description" class="biotools-description mb-3"></div>
+
+    <!-- Meta badges: tool type, maturity, license, cost, accessibility -->
+    <div id="bt-meta" class="biotools-meta-row mb-3"></div>
+
+    <!-- EDAM topics & operations -->
+    <div id="bt-edam" class="mb-3"></div>
+
+    <!-- Technical details -->
+    <div class="mb-3" id="bt-tech"></div>
+
+    <!-- Publications -->
+    <div id="bt-publications" class="mb-3"></div>
+
+    <!-- Documentation, repository & download links -->
+    <div id="bt-links" class="mb-3"></div>
+
+    <!-- Credits / maintainers -->
+    <div id="bt-credits" class="mb-3"></div>
+
+    <!-- Footer: bio.tools + OpenEBench buttons -->
+    <div id="bt-footer" class="biotools-footer d-flex flex-wrap gap-2 pt-3"></div>
+
+  </div><!-- #biotools-content -->
+</div><!-- #biotools-data-container -->
 
 <script src="{{ '/assets/js/getBiotoolsData.js' | relative_url }}"></script>
 <script>
-    // Parse the bio.tools data
-    function parse(data) {
-        return {
-            version: (data.version && data.version.length > 0) ? data.version : 'Version not available',
-            publication: data.publication?.map(pub => pub.doi).filter(Boolean) || []
-        };
+(function () {
+  'use strict';
+
+  const BT_ID = "{{ biotools_id }}";
+
+  // DOM refs
+  const loading   = document.getElementById('biotools-loading');
+  const content   = document.getElementById('biotools-content');
+  const descEl    = document.getElementById('bt-description');
+  const metaEl    = document.getElementById('bt-meta');
+  const edamEl    = document.getElementById('bt-edam');
+  const techEl    = document.getElementById('bt-tech');
+
+  const pubsEl    = document.getElementById('bt-publications');
+  const linksEl   = document.getElementById('bt-links');
+  const creditsEl = document.getElementById('bt-credits');
+  const footerEl  = document.getElementById('bt-footer');
+
+  // ── Helpers ──────────────────────────────────────────────────────────────
+
+  function badge(text, cls) {
+    return `<span class="badge ${cls} me-1 mb-1">${esc(text)}</span>`;
+  }
+
+  function esc(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function subsectionTitle(text) {
+    return `<h5 class="biotools-subsection-title">${esc(text)}</h5>`;
+  }
+
+  // ── Render ────────────────────────────────────────────────────────────────
+
+  function render(data) {
+
+    // 1. Description
+    if (data.description) {
+      descEl.innerHTML = `<p>${esc(data.description)}</p>`;
     }
 
-    // Render the data in a table
-    function renderTable(parsedData) {
-        const version_container = document.getElementById('version');
-        const publication_container = document.getElementById('publication');
-        const openebench_container = document.getElementById('openebench');
-        const biotools_container = document.getElementById('biotools');
+    // 2. Meta badges
+    const meta = [];
+    (data.toolType || []).forEach(t => meta.push(badge(t, 'biotools-badge-type')));
+    if (data.maturity)     meta.push(badge('Maturity: ' + data.maturity,         'biotools-badge-meta'));
+    if (data.license)      meta.push(badge('License: '  + data.license,          'biotools-badge-license'));
+    if (data.cost)         meta.push(badge(data.cost,                             'biotools-badge-cost'));
+    if (data.accessibility) meta.push(badge(data.accessibility,                   'biotools-badge-access'));
+    if (meta.length) metaEl.innerHTML = meta.join('');
 
-        // Version
-        version_container.innerText = parsedData.version;
+    // 3. EDAM topics & operations
+    const edamParts = [];
 
-        // Publications
-        if (parsedData.publication.length > 0) {
-            publication_container.innerHTML = parsedData.publication.map(doi =>
-                `<a href="https://doi.org/${doi}" target="_blank">${doi}</a>`
-            ).join('<br>');
-        } else {
-            publication_container.innerText = 'No publications available';
+    if (data.topic && data.topic.length) {
+      const chips = data.topic.map(t =>
+        `<a href="${esc(t.uri)}" target="_blank" rel="noopener noreferrer"
+            class="edam-chip edam-chip--topic">${esc(t.term)}</a>`
+      ).join('');
+      edamParts.push(`
+        <div class="edam-row">
+          <span class="edam-label">Topics</span>
+          <div class="edam-chips">${chips}</div>
+        </div>`);
+    }
+
+    const allOps = (data.function || []).flatMap(f => f.operation || []);
+    if (allOps.length) {
+      const chips = allOps.map(op =>
+        `<a href="${esc(op.uri)}" target="_blank" rel="noopener noreferrer"
+            class="edam-chip edam-chip--operation">${esc(op.term)}</a>`
+      ).join('');
+      edamParts.push(`
+        <div class="edam-row">
+          <span class="edam-label">Operations</span>
+          <div class="edam-chips">${chips}</div>
+        </div>`);
+    }
+
+    if (edamParts.length) edamEl.innerHTML = edamParts.join('');
+
+    // 4. Technical details
+    const techRows = [];
+    if (data.version && data.version.length)
+      techRows.push(['Version', data.version.join(', ')]);
+    if (data.language && data.language.length)
+      techRows.push(['Languages', data.language.join(', ')]);
+    if (data.operatingSystem && data.operatingSystem.length)
+      techRows.push(['Platform', data.operatingSystem.join(', ')]);
+
+    if (techRows.length) {
+      const dlHtml = techRows.map(([k, v]) =>
+        `<dt class="col-5">${esc(k)}</dt><dd class="col-7">${esc(v)}</dd>`
+      ).join('');
+      techEl.innerHTML =
+        subsectionTitle('Technical details') +
+        `<dl class="row biotools-dl">${dlHtml}</dl>`;
+    }
+
+
+
+    // 6. Publications
+    if (data.publication && data.publication.length) {
+      const cards = data.publication.map(pub => {
+        const m        = pub.metadata || {};
+        const title    = m.title || '';
+        const journal  = m.journal || '';
+        const year     = m.date ? m.date.substring(0, 4) : '';
+        const citations = (m.citationCount != null) ? m.citationCount : null;
+        const authors  = (m.authors || []).slice(0, 5).map(a => esc(a.name)).join(', ');
+        const etAl     = (m.authors || []).length > 5 ? ' <em>et al.</em>' : '';
+        const doi      = pub.doi;
+
+        let html = `<div class="biotools-pub-card">`;
+
+        if (title) {
+          const titleLink = doi
+            ? `<a href="https://doi.org/${esc(doi)}" target="_blank" rel="noopener noreferrer">${esc(title)}</a>`
+            : esc(title);
+          html += `<p class="biotools-pub-title">${titleLink}</p>`;
         }
 
-        // Openebench link
-        openebench_container.innerHTML = `
-            <a href="https://openebench.bsc.es/tool/{{ biotools_id }}" target="_blank">statistics</a>
-        `;
+        const metaParts = [];
+        if (authors)  metaParts.push(authors + etAl);
+        if (journal)  metaParts.push(`<em>${esc(journal)}</em>`);
+        if (year)     metaParts.push(esc(year));
+        if (metaParts.length)
+          html += `<p class="biotools-pub-meta text-muted small">${metaParts.join(' &middot; ')}</p>`;
 
-        // bio.tools page link
-        biotools_container.innerHTML = `
-            <a href="https://bio.tools/{{ biotools_id }}" target="_blank">tool page</a>
-        `;
+        const links = [];
+        if (doi)      links.push(`<a href="https://doi.org/${esc(doi)}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">DOI</a>`);
+        if (pub.pmid) links.push(`<a href="https://pubmed.ncbi.nlm.nih.gov/${esc(pub.pmid)}/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">PubMed</a>`);
+        if (citations !== null) links.push(`<span class="text-muted small ms-2">&#128218; ${citations.toLocaleString()} citations</span>`);
+        if (links.length) html += `<div class="biotools-pub-links">${links.join(' ')}</div>`;
+
+        html += `</div>`;
+        return html;
+      }).join('');
+
+      pubsEl.innerHTML = subsectionTitle('Publications') +
+        `<div class="biotools-pubs-list">${cards}</div>`;
     }
 
-    // Get the data of the tools with the desired ID
-    getBiotoolsData("{{ biotools_id }}")
-        .then(data => {
-            const parsedData = parse(data);
-            renderTable(parsedData);
-        })
-        .catch(error => {
-            console.error(error);
-            document.getElementById('biotools-data-container').innerHTML =
-                '<p class="text-danger">Failed to load bio.tools data.</p>';
-        });
+    // 7. Documentation, repository & download links
+    const linkItems = [];
+
+    (data.documentation || []).forEach(doc => {
+      if (!doc.url) return;
+      const label = (doc.type || []).join(', ') || 'Documentation';
+      const note  = doc.note ? ` <span class="text-muted">— ${esc(doc.note)}</span>` : '';
+      linkItems.push(`<li><a href="${esc(doc.url)}" target="_blank" rel="noopener noreferrer">${esc(label)}</a>${note}</li>`);
+    });
+
+    (data.link || []).forEach(lnk => {
+      if (!lnk.url) return;
+      const label = (lnk.type || []).join(', ') || 'Link';
+      const note  = lnk.note ? ` <span class="text-muted">— ${esc(lnk.note)}</span>` : '';
+      linkItems.push(`<li><a href="${esc(lnk.url)}" target="_blank" rel="noopener noreferrer">${esc(label)}</a>${note}</li>`);
+    });
+
+    (data.download || []).forEach(dl => {
+      if (!dl.url) return;
+      const label = dl.type || 'Download';
+      const ver   = dl.version ? ` (v${esc(dl.version)})` : '';
+      const note  = dl.note ? ` <span class="text-muted">— ${esc(dl.note)}</span>` : '';
+      linkItems.push(`<li><a href="${esc(dl.url)}" target="_blank" rel="noopener noreferrer">${esc(label)}${ver}</a>${note}</li>`);
+    });
+
+    if (linkItems.length) {
+      linksEl.innerHTML = subsectionTitle('Documentation &amp; links') +
+        `<ul class="biotools-links-list">${linkItems.join('')}</ul>`;
+    }
+
+    // 8. Credits
+    const creditItems = (data.credit || [])
+      .filter(c => c.name || c.email)
+      .map(c => {
+        let name = esc(c.name || c.email);
+        const linkHref = c.url || (c.orcidid ? `https://orcid.org/${esc(c.orcidid)}` : null);
+        if (linkHref) name = `<a href="${linkHref}" target="_blank" rel="noopener noreferrer">${name}</a>`;
+        const roles  = (c.typeRole   || []).filter(Boolean);
+        const entity = c.typeEntity ? `[${esc(c.typeEntity)}]` : '';
+        const meta   = [roles.join(', '), entity].filter(Boolean).join(' ');
+        return `<li>${name}${meta ? ` <span class="text-muted small">${meta}</span>` : ''}</li>`;
+      });
+
+    if (creditItems.length) {
+      creditsEl.innerHTML = subsectionTitle('Credits') +
+        `<ul class="biotools-credits-list">${creditItems.join('')}</ul>`;
+    }
+
+    // 9. Footer buttons
+    footerEl.innerHTML = `
+      <a href="https://bio.tools/${esc(BT_ID)}" target="_blank" rel="noopener noreferrer"
+         class="btn btn-sm btn-outline-primary">View on bio.tools</a>
+      <a href="https://openebench.bsc.es/tool/${esc(BT_ID)}" target="_blank" rel="noopener noreferrer"
+         class="btn btn-sm btn-outline-secondary">View on OpenEBench</a>`;
+
+    // Show content
+    loading.style.display = 'none';
+    content.style.display  = '';
+  }
+
+  // ── Fetch ─────────────────────────────────────────────────────────────────
+  getBiotoolsData(BT_ID)
+    .then(data => render(data))
+    .catch(err => {
+      console.error('bio.tools fetch error:', err);
+      document.getElementById('biotools-data-container').innerHTML =
+        '<p class="text-danger">Failed to load bio.tools data. Please visit ' +
+        `<a href="https://bio.tools/${esc(BT_ID)}" target="_blank" rel="noopener noreferrer">bio.tools</a> directly.</p>`;
+    });
+
+})();
 </script>
