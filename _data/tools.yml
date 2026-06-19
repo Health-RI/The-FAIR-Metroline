@@ -46,7 +46,7 @@
       - CTMS discontinuation - Castor no longer offers CTMS for new clients, creating fragmentation in tooling
     User needs:
   compatible_with:
-  biotools_id: castor
+  biotools_id:
 - id: mydre
   page_img: toolassemblies/tools/andrea.png
   at_a_glance:

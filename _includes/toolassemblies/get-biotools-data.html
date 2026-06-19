@@ -16,11 +16,8 @@
     <!-- EDAM topics & operations -->
     <div id="bt-edam" class="mb-3"></div>
 
-    <!-- Two-column: technical details | ELIXIR affiliation -->
-    <div class="row mb-3">
-      <div class="col-md-6" id="bt-tech"></div>
-      <div class="col-md-6" id="bt-elixir"></div>
-    </div>
+    <!-- Technical details -->
+    <div class="mb-3" id="bt-tech"></div>
 
     <!-- Publications -->
     <div id="bt-publications" class="mb-3"></div>
@@ -51,7 +48,7 @@
   const metaEl    = document.getElementById('bt-meta');
   const edamEl    = document.getElementById('bt-edam');
   const techEl    = document.getElementById('bt-tech');
-  const elixirEl  = document.getElementById('bt-elixir');
+
   const pubsEl    = document.getElementById('bt-publications');
   const linksEl   = document.getElementById('bt-links');
   const creditsEl = document.getElementById('bt-credits');
@@ -142,23 +139,7 @@
         `<dl class="row biotools-dl">${dlHtml}</dl>`;
     }
 
-    // 5. ELIXIR affiliation
-    const elixirRows = [];
-    if (data.elixirNode && data.elixirNode.length)
-      elixirRows.push(['ELIXIR node', data.elixirNode.join(', ')]);
-    if (data.elixirPlatform && data.elixirPlatform.length)
-      elixirRows.push(['ELIXIR platform', data.elixirPlatform.join(', ')]);
-    if (data.collectionID && data.collectionID.length)
-      elixirRows.push(['Collections', data.collectionID.join(', ')]);
 
-    if (elixirRows.length) {
-      const dlHtml = elixirRows.map(([k, v]) =>
-        `<dt class="col-6">${esc(k)}</dt><dd class="col-6">${esc(v)}</dd>`
-      ).join('');
-      elixirEl.innerHTML =
-        subsectionTitle('ELIXIR & community') +
-        `<dl class="row biotools-dl">${dlHtml}</dl>`;
-    }
 
     // 6. Publications
     if (data.publication && data.publication.length) {
@@ -237,7 +218,8 @@
       .filter(c => c.name || c.email)
       .map(c => {
         let name = esc(c.name || c.email);
-        if (c.url) name = `<a href="${esc(c.url)}" target="_blank" rel="noopener noreferrer">${name}</a>`;
+        const linkHref = c.url || (c.orcidid ? `https://orcid.org/${esc(c.orcidid)}` : null);
+        if (linkHref) name = `<a href="${linkHref}" target="_blank" rel="noopener noreferrer">${name}</a>`;
         const roles  = (c.typeRole   || []).filter(Boolean);
         const entity = c.typeEntity ? `[${esc(c.typeEntity)}]` : '';
         const meta   = [roles.join(', '), entity].filter(Boolean).join(' ');

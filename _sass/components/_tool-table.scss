@@ -54,10 +54,12 @@
   }
 
   &--active {
-    background: $primary;
+    background: mix($primary, #fff, 12%);
+    // border-top: 1px solid $primary;
+    
 
     .lifecycle-phase-name {
-      color: #fff;
+      color: $primary;
       font-weight: 700;
     }
   }
