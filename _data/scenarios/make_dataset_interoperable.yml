@@ -6,11 +6,10 @@
   examples:
     - role: "Researcher"
       description: "The first step is to accurately specify the data that will be collected.
-We initially used the variable “sex”, but this was ambiguous (biological vs administrative vs self-reported). 
-We refined this to “phenotypic sex” with values “female”, “male”, and “hermaphrodite”.
-This specification leads to a first rough version of a codebook.
-Next, we search for existing initiatives online. For genomics, parts of the FAIR Genomes definitions can be reused. 
-The values we aim to collect are aligned according to the <a href='https://decor.nictiz.nl/ad/#/fairgenomes-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.120.1.0/2021-07-20T24:00:00'>FAIR Genomes codebook</a>: 'female' will have the code 'http://purl.obolibrary.org/obo/PATO_0000383'"
+We intended to use the variable “sex”, but this is ambiguous (biological vs administrative vs self-reported). 
+Thus, we refined it to “phenotypic sex” with values “female”, “male” and “hermaphrodite”.
+This specification leads to a first rough version of a codebook.<br>
+Next, we search for existing initiatives online to align with. For genomics, parts of the <a href='https://decor.nictiz.nl/ad/#/fairgenomes-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.120.1.0/2021-07-20T24:00:00'>FAIR Genomes codebook</a> can be reused. For example, for 'Female' will use the code 'http://purl.obolibrary.org/obo/PATO_0000383'."
 
 - step_id: 12
   status: "upcoming"
@@ -18,8 +17,7 @@ The values we aim to collect are aligned according to the <a href='https://decor
   description: "Identify, select and apply common data elements to standardise data collection and improve interoperability, data quality and reuse."
   examples:
     - role: "Researcher"
-      description: "FAIR Genomes does not have a definition for bmi, so we check if there are Common data elements available that we can reuse. 
-  We find we need to add the elements described <a href='https://cde.nlm.nih.gov/formView?tinyId=t6XCi_Ob5'>here</a> to properly register the bmi."
+      description: "Since FAIR Genomes does not have a definition for bmi, we check the <a href='https://cde.nlm.nih.gov'>NIH CDE Repository</a> for Common data elements to reuse. We find we need to add the elements described <a href='https://cde.nlm.nih.gov/formView?tinyId=t6XCi_Ob5'>here</a> to properly register the bmi."
 
 - step_id: 14
   status: "upcoming"
