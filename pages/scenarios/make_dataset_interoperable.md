@@ -32,9 +32,9 @@ Before getting started:
   complexity="Medium"
   experts="Data Steward"
   outcome="Interoperable Dataset"
-  complexity_tooltip="Making a dataset findable requires coordinating metadata quality, access conditions, and catalogue requirements. While no data transformation is needed, aligning metadata with a FAIR Data Point and national catalogue standards adds moderate complexity."
-  experts_tooltip="A data steward is needed to guide the metadata assessment, align it with catalogue requirements, and publish the metadata to the FAIR Data Point for harvesting."
-  outcome_tooltip="A dataset that is interoperable."
+  complexity_tooltip="Making a dataset interoperable from the start requires knowledge of the data elements that will be collecting, data standard that exist for the domain and the data elements, and knowledge on how to use these standards in data collection."
+  experts_tooltip="A data steward can help finding the appropriate standards and help preparing for data collection, for example by creating electronic case report forms."
+  outcome_tooltip="A dataset that is interoperable and a codebook that describes the data elements."
 %}
 
 ## Your Journey
