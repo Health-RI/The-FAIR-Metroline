@@ -143,8 +143,7 @@ The final step involves entering the metadata for each resource into the chosen 
 #### Example 
 Eva followed the [instructions](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279150593) for onboarding data in the Health-RI data catalogue to register the metadata, which is now [available](https://catalogus.healthdata.nl/datasets/2a34108d-6ff8-4b88-aaa5-51f51f68d489). 
 
-Eva entered the biosample data into the BBMRI Catalogue Form, which she [downloaded](), and submitted it to the [Health-RI Service Desk](https://www.health-ri.nl/health-ri-servicedesk). The metadata for biosample data were successfully registered, see  
-[BBMRI-ERIC Directory](https://directory.bbmri-eric.eu/ERIC/directory/#/collection/bbmri-eric:ID:NL_RB:collection:155?search=PRISMA).
+Eva entered the biosample data into the [BBMRI Catalogue Form](https://github.com/molgenis/molgenis-emx2/raw/master/docs/resources/BBMRI-NL_catalogue_form.docx) and sent it to MOLGENIS support (see [Getting started](https://catalogue.bbmri.nl/BBMRI-ERIC/pages/#/Getting%20Started)). The metadata for biosample data were successfully registered, in the [BBMRI-ERIC Directory](https://directory.bbmri-eric.eu/ERIC/directory/#/collection/bbmri-eric:ID:NL_RB:collection:155?search=PRISMA).
 
 ## Expertise requirements for this step 
 The level of expertise required for this step will depend on several factors:
