@@ -64,12 +64,6 @@ Even if your FAIRification efforts are complete for now, evolving requirements, 
 
 To help keep an overview of the original FAIRification objectives, their status, and possible changes in the process, it might be useful to update this information in your datamanagement plan. Consider going back to [Metroline Step: Define FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives) to redefine the original FAIR objectives.
 
-## Expertise requirements for this step 
-The expertise required may depend on the assessment tool you want to use. Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below. 
-* **Researcher.** Understands the data content and how it should be used. 
-* **FAIR data stewards.** Specialist who can help filling out the FAIR assessment tools (see also [Metroline step: Pre-FAIR assessment]({{site.baseurl}}/metroline_steps/pre_fair_assessment)) 
-* **Research software engineers.** Specialists who can help running some of the specialised software. 
-
 ## Practical examples from the community 
 For an applied example of The FAIR Evaluator tool, see Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic. 
 

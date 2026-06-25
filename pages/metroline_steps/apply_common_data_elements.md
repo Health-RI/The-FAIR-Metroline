@@ -228,11 +228,6 @@ The [initial data elements](https://eu-rd-platform.jrc.ec.europa.eu/set-of-commo
 
 {% include info-box.html type="example" title="Example" text=infobox_text1 %}
 
-## Expertise requirements for this step 
-Experts that may need to be involved, as described in Metroline Step: Build the Team, are described below.
-* **Researcher.** Understands the scientific context of the data being collected.
-* **Data steward.** Ensures the technical accuracy and consistency of how CDEs are applied.
-
 ## Practical examples from the community 
 **Patient Registries on Rare Diseases**<br>
 The Joint Research Centre has defined [Common Data Elements to be collected by all Rare Disease (RD) registries](https://eu-rd-platform.jrc.ec.europa.eu/set-of-common-data-elements_en) and collecting them will improve interoperability with other ERN registries that are obligated to collect these data items. So far, 16 minimal Rare Disease data elements have been identified as essential for further research in the field. This list includes the variables to be collected and how they should be annotated.

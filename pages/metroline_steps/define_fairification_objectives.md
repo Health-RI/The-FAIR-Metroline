@@ -55,19 +55,10 @@ Identify the resources you will need to complete your FAIRification process and 
 * Do you need to hire specific expertise?
 * Do you need specific software or additional hardware to meet your FAIRification objectives?
 
-See [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team) for more information on team requirements.
-
 ### Step 6 - Create an actionable plan around clear objectives
 Organise and describe the steps and resources identified in the previous step necessary for reaching your FAIRification objective(s). This can be a separate plan (see [Metroline Step: Design Solution Plan]({{site.baseurl}}/metroline_steps/design_solution_plan)) or part of your Data Management Plan (DMP). Make sure to formulate your FAIRification objectives as specifically as possible and, where possible, incorporate research questions. For example:
 * I require interoperable data, because I need to connect two different datasets to answer question X;
 * I want to make my data more findable for researchers in my field by publishing it in repository Z.
-
-## Expertise requirements for this step 
-Defining FAIRification objectives is typically a collaborative effort by a range of experts, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team).
-* **Researchers with domain knowledge.** Provide context to the FAIRification efforts from the perspective of a domain.
-* **FAIR data stewards.** Help define FAIRification objectives to meet the project’s, funder’s, journal’s and/or institute’s requirements.
-* **Semantic experts.** Assist in specifying the metadata/modelling aspects of FAIRification objectives.
-* **ELSI experts.** Help identify the legal compliance and ethical aspects of FAIRification objectives.
 
 ## Practical examples from the community 
 Below you can find several examples of projects with the FAIR objectives they set.
