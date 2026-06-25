@@ -146,17 +146,6 @@ Eva followed the [instructions](https://health-ri.atlassian.net/wiki/spaces/FSD/
 Eva entered the biosample data into the BBMRI Catalogue Form, which she [downloaded](), and submitted it to the [Health-RI Service Desk](https://www.health-ri.nl/health-ri-servicedesk). The metadata for biosample data were successfully registered, see  
 [BBMRI-ERIC Directory](https://directory.bbmri-eric.eu/ERIC/directory/#/collection/bbmri-eric:ID:NL_RB:collection:155?search=PRISMA).
 
-## Expertise requirements for this step 
-The level of expertise required for this step will depend on several factors:
-* your department’s familiarity with data-sharing practices;
-* your personal experience with metadata catalogues and metadata elements relevant to your research domain;
-* availability of metadata catalogues within your community.
-
-Depending on these variables, selecting the appropriate metadata catalogue may be a straightforward process or may require input from multiple experts. Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
-* **Researcher with domain knowledge.** Someone that understands the project, study and data to create detailed and comprehensive metadata.
-* **FAIR data steward.** Specialist who can advice on the metadata catalogues to use and can provide advice on how to fill in metadata accurately.
-* **Infrastructure professional.** When no suitable metadata catalogue is available or if you need to connect with federated catalogues (such as the [Health-RI Data Catalogue](https://healthdata.nl/)), specialised IT knowledge may be required. This is particularly important when exposing metadata on the web via a [FAIR Data Point](https://www.fairdatapoint.org/) or integrating with other systems.
-
 ## Practical examples from the community 
 ***[The Netherlands ME/CFS Cohort and Biobank Consortium](https://www.health-ri.nl/en/netherlands-mecfs-cohort-and-biobank-nmcb-consortium)***
 

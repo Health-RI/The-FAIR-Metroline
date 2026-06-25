@@ -90,14 +90,6 @@ Start by transforming metadata into a structured format using semantic web stand
 * **[Castor EDC (FDP Component)](https://fdp.castoredc.com/fdp).** Contains a template to fill out metadata and exposes that information in a way that is semantically compatible with DCAT and FDP specifications. 
 "%}
 
-## Expertise requirements for this step 
-Transforming and exposing FAIR (meta)data effectively requires a mix of domain knowledge, semantic expertise and technical skills. Ideally, teams should involve:
-* **Domain experts.** Provide context and ensure that the transformed (meta)data accurately reflects the research content.
-* **Semantic modellers or ontologists.** Advise on selecting and applying the right ontologies, vocabularies and semantic models.
-* **FAIR data stewards or infrastructure professionals.** Coordinate the process and set up the systems needed to store and expose data and metadata in a FAIR-compliant way.
-
-While some basic exposure tasks may not require advanced technical knowledge, setting up robust pipelines (e.g. triplestores, FAIR Data Points) and ensuring semantic interoperability benefits greatly from the combined expertise above.
-
 ## Practical examples from the community
 **VASCA Registry (Castor EDC + FAIR Data Point)**<br>
 The VASCA registry (Registry of Vascular Anomalies) implemented the CDE semantic data model and uses the DCAT metadata schema to publish metadata in three layers: catalogue, dataset and distribution. It stores machine-readable RDF data in Castor EDC’s FAIR Data Point, supporting de novo FAIRification, meaning data is FAIR from the moment it is collected through the eCRF.

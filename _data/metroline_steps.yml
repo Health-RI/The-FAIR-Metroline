@@ -16,12 +16,6 @@
   audience:
     data_holder: true
     data_user: true
-- id: 2
-  title: Build the Team
-  summary: Coming soon.
-  url:
-  icon: ":running_shirt_with_sash:"
-  status: IN DEVELOPMENT
 - id: 3
   title: Have a FAIR data steward on board
   summary: A FAIR data steward guides teams in organising, storing, and describing data to meet the FAIR principles, ensuring research data can be understood and reused, making science more efficient and transparent.
@@ -263,12 +257,6 @@
   audience:
     data_holder: true
     data_user: false
-- id: 18
-  title: Enter data in eCRF (data collection)
-  summary: On hold.
-  url: 
-  icon: ":computer:"
-  status: ON HOLD
 - id: 19
   title: Apply (meta)data model
   summary: Think of your data like a book in a library. A metadata model defines the kind of information included in the catalogue entry, such as the title, author, topic, and publication date, helping people find and understand the book. A data model defines how the contents of the book are organised and related, like the structure of chapters, sections, and references. Using both makes it easier for people and machines to find, understand, and reuse your data.
@@ -354,12 +342,6 @@
   audience:
     data_holder: true
     data_user: true
-- id: 24
-  title: Did you reach your FAIRification objectives
-  summary: On hold.
-  url: 
-  icon: ":checkered_flag:"
-  status: ON HOLD
 - id: 25
   title: Creating a FAIR Implementation Profile (FIP)
   summary: A FAIR Implementation Profile (FIP) describes the practical choices a community makes to apply the FAIR data principles using shared standards and tools. It lists the specific resources, such as metadata schemas, ontologies and licences, that make data findable, accessible, interoperable and reusable. Other communities can reuse these profiles to align their practices, fill gaps and improve collaboration.

@@ -128,24 +128,6 @@ Even when your data cannot be openly shared (e.g. due to privacy or legal restri
 The HRI Clinic modelling team decides to use RDF to structure their data into triples and OWL to define their data's rules and relationships. The clinic publishes their simplified version of CARE-SM on GitHub (including a clear license, version and credit to the original model).
 " %}
 
-## Expertise requirements for this step
-Creating or reusing a semantic (meta)data model typically involves multiple experts, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team).
-
-- **Metadata experts.** Bring a strong understanding of what metadata is, how it differs from data, and how it supports documentation, discovery, and reuse by both humans and machines. This expertise is essential from the start of the modelling process, as it underpins how data is meaningfully described and exposed.
-  - *When reusing or extending a model*: for instance, help assess whether existing metadata fits the intended purposes.
-  - *When creating a model*: for instance, support the definition of metadata for the model itself, including license and authorship.
-- **Semantic modelling experts.** Understand how to use conceptual and ontological modelling approaches to define the precise meaning of data elements. Familiar with modelling languages such as UML (conceptual models) and OWL (ontologies), they ensure the model is unambiguous and interoperable across tools and systems.
-  - *When reusing or extending a model*: check if reused or added concepts are fit for purpose and their definitions ontologically sound.
-  - *When creating a model*: help define the scope, structure, and relations in line with modelling best practices.
-- **Vocabulary and ontology experts.** Know how to identify and assess semantic resources, such as general-purpose vocabularies (e.g. DCAT) and domain-specific ontologies (e.g. DDI, SNOMED CT), and how to align terms with them.
-  - *When reusing, extending or creating a model*:
-    - Help evaluate if vocabularies capture intended meanings and whether local schema elements can be mapped to existing standards.
-    - Promote consistency and reuse across systems, especially in regulated domains such as health or environmental sciences, where adherence to community standards is often required.
-- **Semantic web technology experts.** Have experience implementing models using RDF, OWL, and SHACL, core standards for making models machine-readable and technically valid. This expertise is particularly relevant when implementing, extending, or validating the structure of a selected model in a semantic framework.
-  - *When reusing, extending or creating a model*:
-    - Help represent mappings explicitly between internal schema elements and external vocabularies.
-    - Ensure structure and constraints are formally expressed and validated, in alignment with the FAIR principles.
-
 ## Practical examples from the community
 Below are examples of how research communities and infrastructures have created or reused semantic (meta)data models to improve interoperability and support FAIR implementation. These cases demonstrate reuse, extension, alignment with standards, and use of semantic web technologies.
 
