@@ -6,6 +6,7 @@ permalink: /metroline_steps/design_solution_plan
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***FAIRification planning should not only focus on the selection of suitable technologies or standards, but also on prioritising the effort required to raise the FAIR level of the targeted resources for the realisation of the related objectives. [A goal-oriented method for FAIRification planning](https://doi.org/10.21203/rs.3.rs-3092538/v1)***
 >

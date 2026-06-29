@@ -6,6 +6,7 @@ permalink: /metroline_steps/obtain_informed_consent
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Obtaining consent is not only an ethical obligation, but also a legal compulsion. [Informed Consent: An Ethical Obligation or Legal Compulsion?](https://pmc.ncbi.nlm.nih.gov/articles/PMC2840885/)***
 >

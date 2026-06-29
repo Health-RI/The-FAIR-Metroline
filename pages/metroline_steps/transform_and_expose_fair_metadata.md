@@ -6,6 +6,7 @@ permalink: /metroline_steps/transform_and_expose_fair_metadata
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Data that is not exposed in a standardised, machine-readable way might as well not exist. [The FAIR Guiding Principles for scientific data management and stewardship](https://www.nature.com/articles/sdata201618)***
 >

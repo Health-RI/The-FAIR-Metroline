@@ -136,6 +136,10 @@ authors:
     family-names: van Schijndel
     orcid: '0000-0002-2294-1050'
     affiliation: Amsterdam UMC
+  - given-names: Douwe
+    family-names: Spaanderman
+    orcid: '0000-0001-8397-2339'
+    affiliation: Health-RI
 
 identifiers:
   - type: url

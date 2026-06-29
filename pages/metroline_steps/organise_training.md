@@ -6,6 +6,7 @@ permalink: /metroline_steps/organise_training
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***People, with their enduring cultures and practices, and the enormous variety of perspectives on their environment (including a concept such as data) still play a key role in whether technological developments and the information infrastructures that accompany them work as intended. [Bowker and Star, 2000](https://journals.sagepub.com/doi/full/10.1177/20539517251349157#bibr10-20539517251349157)***
 >

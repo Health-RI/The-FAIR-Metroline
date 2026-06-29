@@ -3,6 +3,11 @@
     color: $dark;
 }
 
+.navbar-brand {
+  pointer-events: none;
+  cursor: default;
+}
+
 //GitHub icon color in the top right corner
 .me-2{
     color: $top-nav-icon;

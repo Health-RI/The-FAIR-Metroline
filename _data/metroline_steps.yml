@@ -4,6 +4,18 @@
   url: metroline_steps/define_fairification_objectives
   icon: ":dart:"
   status: RELEASED
+  keywords:
+    - planning
+    - goals
+    - governance
+  expertise_required:
+    - data steward
+    - ELSI expert
+    - researcher
+    - semantic expert
+  audience:
+    data_holder: true
+    data_user: true
 - id: 2
   title: Build the Team
   summary: Coming soon.
@@ -16,66 +28,179 @@
   url: metroline_steps/have_a_fair_data_steward_on_board
   icon: ":mechanic:"
   status: RELEASED
+  keywords:
+    - expertise
+    - support
+    - governance
+  expertise_required:
+    - data steward
+    - infrastructure professional
+    - project manager
+    - researcher
+  audience:
+    data_holder: true
+    data_user: true
 - id: 4
   title: Organise Training
   summary: This page brings forward the training and educational elements available to guide the team in their journey through the Metroline subsequent steps.
   url: metroline_steps/organise_training
   icon: ":weight_lifting:"
   status: READY FOR REVIEW
+  keywords:
+    - training
+    - skills
+  expertise_required:
+    - data steward
+    - researcher
+    - Trainer
+  audience:
+    data_holder: true
+    data_user: true
 - id: 5
   title: Pre-FAIR assessment
   summary: A pre-FAIR assessment evaluates the current state of your data and its alignment with the FAIR principles. Performing this assessment early makes you aware of possibilities for increasing the FAIRness of your data, which in turn increases its impact and ensures its long-term usability.
   url: metroline_steps/pre_fair_assessment
   icon: ":white_check_mark:"
   status: RELEASED
+  keywords:
+    - assessment
+    - FAIR maturity
+  expertise_required:
+    - data steward
+    - research software engineer
+  audience:
+    data_holder: true
+    data_user: true
 - id: 6
   title: Design Solution Plan
   summary: This step is about turning the findings from the pre-FAIR assessment into a clear, actionable plan. It means choosing the right tools, deciding who does what, and making sure the process is simple and effective so data can actually become FAIR.
   url: metroline_steps/design_solution_plan
   icon: ":bookmark_tabs:"
   status: RELEASED
+  keywords:
+    - planning
+    - implementation
+  expertise_required:
+    - data steward
+    - infrastructure professional
+    - project manager
+    - researcher
+  audience:
+    data_holder: true
+    data_user: true
 - id: 7
   title: Data access and retrieval
   summary: Before data can be made FAIR, we first need to get it the right way. That means finding trustworthy sources, making sure we’re allowed to use the data, and keeping it safe and private. When we do this properly, it ensures that the data can be trusted, shared, and reused to support new research and innovation.
   url: metroline_steps/data_access_and_retrieval
   icon: ":closed_lock_with_key:"
-  status: READY FOR REVIEW
+  status: RELEASED
+  keywords:
+    - data access
+    - data retrieval
+  expertise_required:
+    - data steward
+    - ELSI expert
+    - infrastructure professional
+    - researcher
+  audience:
+    data_holder: false
+    data_user: true
 - id: 8
   title: Assess availability of your metadata
   summary: Metadata describes a resource, like a book’s title and author or a photo’s date and location, which help with organization and discovery of that resource. This Metroline step describes the types of metadata, where you can find them for your resource, and how to improve their quality. Filling metadata gaps enhances a resource’s visibility and reusability.
   url: metroline_steps/assess_availability_of_your_metadata
   icon: ":books:"
   status: RELEASED
+  keywords:
+    - metadata
+    - availability
+    - discovery
+  expertise_required:
+    - data steward
+    - researcher
+  audience:
+    data_holder: true
+    data_user: true
 - id: 9
   title: Select Identifier Scheme
-  summary: Coming soon.
-  url: 
+  summary: In simple terms, selecting an identifier scheme is like deciding how to label books in a library. If every book has a clear catalogue number, author, and subject, readers can always find what they need. Without a consistent scheme, books would be scattered and confusing. For datasets, choosing the right identifier scheme ensures that your data can be discovered, cited and reused. Similar to well-organised books that are easy to find in a structured library.
+  url: metroline_steps/select_identifier_scheme
   icon: ":passport_control:"
-  status: IN DEVELOPMENT
+  status: READY FOR REVIEW
+  keywords:
+    - identifiers
+    - persistence
+  expertise_required:
+    - policy specialist
+    - technical specialist
+  audience:
+    data_holder: true
+    data_user: true
 - id: 10
   title: Register resource level metadata
   summary: To make your resource (e.g. data), available for reuse, its metadata can be published in a catalogue. This step helps you find a catalogue where you can register these resource metadata and explains why adding your resource to such a catalogue is important.
   url: metroline_steps/register_resource_level_metadata
   icon: ":card_file_box:"
   status: RELEASED
+  keywords:
+    - metadata
+    - publication
+    - discovery
+  expertise_required:
+    - data steward
+    - infrastructure professional
+    - researcher
+  audience:
+    data_holder: true
+    data_user: false
 - id: 11
   title: Register structural metadata
-  summary: This step focuses on how to share your resource’s structural metadata - an explanation of what each piece of your data means and how it’s organised. Publishing it helps others understand, find and reuse your data more easily. This step also shows how to make the metadata readable by computers, which can support specific FAIR objectives you may already have.
+  summary: Structural metadata can describe many aspects of how data is organised, represented and related within a dataset or resource. In this step, the focus is primarily on structural metadata describing data elements, their definitions and formats, such as codebooks or data dictionaries. Publishing structural metadata helps others understand, find and reuse your data more easily. This step also describes approaches for making structural metadata easier for computers to process automatically, which can support specific FAIRification objectives.
   url: metroline_steps/register_structural_metadata
   icon: ":card_file_box:"
   status: RELEASED
+  keywords:
+    - codebook
+    - metadata
+    - publication
+  expertise_required:
+    - data steward
+    - researcher
+  audience:
+    data_holder: true
+    data_user: false
 - id: 12
   title: Apply common data elements
   summary: Common data elements (CDEs) are standardised data elements, such as variables and measurements, paired with defined rules for how values should be recorded. They are developed to promote consistency and reuse in data collection across different settings, enabling seamless integration and comparison. This step encourages you to search for relevant CDEs and offers guidance on what to do if no suitable CDE is available.
   url: metroline_steps/apply_common_data_elements
   icon: ":toolbox:"
   status: RELEASED
+  keywords:
+    - codebook
+    - standardisation
+    - CDE
+  expertise_required:
+    - data steward
+    - researcher
+  audience:
+    data_holder: true
+    data_user: true
 - id: 13
   title: Analyse data semantics
   summary: In this step, the aim is to gain more insight into the existing data, or the data that you aim to collect. Clearly defining the meaning (semantics) of the data is an important step for creating the semantic model, as well as for data collection via, for example, electronic case report forms (eCRFs).
   url: metroline_steps/analyse_data_semantics
   icon: ":mag_right:"
   status: RELEASED
+  keywords:
+    - codebook
+    - semantics
+  expertise_required:
+    - data steward
+    - researcher
+    - semantic expert
+  audience:
+    data_holder: true
+    data_user: true
 - id: 14
   title: Design eCRF (data collection)
   summary: >
@@ -83,24 +208,61 @@
   url: metroline_steps/design_ecrf
   icon: ":pencil:"
   status: RELEASED
+  keywords:
+    - eCRF
+    - data collection
+    - codebook
+  expertise_required:
+    - data collection specialist
+    - data steward
+    - researcher
+  audience:
+    data_holder: true
+    data_user: false
 - id: 15
   title: Create or reuse a semantic (meta)data model
   summary: Creating a semantic (meta)data model often requires considerable effort as it is a complex task. Reusing an existing model, where possible, can save time and increase interoperability. Start by checking if a suitable model already exists. If not, follow a structured approach to create one. Once the model is in place, share it using common platforms and provide clear documentation to support reuse by others.
   url: metroline_steps/create_or_reuse_a_semantic_model
   icon: ":construction:"
   status: RELEASED
+  keywords:
+    - semantic model
+    - semantics
+  expertise_required:
+    - semantic expert
+  audience:
+    data_holder: true
+    data_user: true
 - id: 16
   title: Use ontologies in the model
-  summary: This process involves linking your data model to ontologies, which are essentially formal, shared dictionaries that provide precise, computer-readable definitions for concepts. By assigning these standard definitions to the elements in your data model, you make their meanings explicit and clear. This allows different computer systems to correctly understand, combine, and compare data from various sources without confusion, making the data more interoperable and easier to reuse across different projects.
+  summary: This process involves linking your semantic (meta)data model to ontologies, which are formal, shared vocabularies that provide precise, machine-readable definitions for concepts. This step is written for a broad FAIRification audience and may be used by researchers, data stewards, metadata specialists and ontology or semantic web technology experts, depending on the project context. Not all activities need to be carried out by the same person. researchers and project teams can use this step to understand the process and provide domain knowledge, while specialist support may be needed for ontology selection, concept mapping, formal representation, validation and maintenance. By assigning standard definitions to the elements in your model, you make their meanings explicit and unambiguous. This allows different computer systems to correctly understand, combine and compare data from various sources consistently, making the data more interoperable and easier to reuse across projects.
   url: metroline_steps/use_ontologies_in_the_model
   icon: ":book:"
-  status: READY FOR REVIEW
+  status: RELEASED
+  keywords:
+    - semantic model
+    - ontologies
+    - semantics
+  expertise_required:
+    - semantic expert
+  audience:
+    data_holder: true
+    data_user: true
 - id: 17
   title: Obtain informed consent
   summary: To ensure your data and materials can be reused in the future, your subject information sheet (SIS) and informed consent form (ICF) must address reuse. This Metroline step provides consideration and resources for preparing your SIS and ICF.
   url: metroline_steps/obtain_informed_consent
   icon: ":person_red_hair:"
   status: RELEASED
+  keywords:
+    - consent
+    - data sharing
+    - legal
+  expertise_required:
+    - ELSI expert
+  audience:
+    data_holder: true
+    data_user: false
 - id: 18
   title: Enter data in eCRF (data collection)
   summary: On hold.
@@ -109,34 +271,89 @@
   status: ON HOLD
 - id: 19
   title: Apply (meta)data model
-  summary: Think of your data like a book in a library. A metadata model is like the card in the catalogue that tells people what the book is about and who wrote it. A data model is like the book’s table of contents - it helps everyone understand what’s inside and how to read it. Using both makes it easier for people and machines to find, understand, and reuse your data.
+  summary: Think of your data like a book in a library. A metadata model defines the kind of information included in the catalogue entry, such as the title, author, topic, and publication date, helping people find and understand the book. A data model defines how the contents of the book are organised and related, like the structure of chapters, sections, and references. Using both makes it easier for people and machines to find, understand, and reuse your data.
   url: metroline_steps/apply_metadata_model
   icon: ":card_file_box:"
   status: RELEASED
+  keywords:
+    - data transformation
+    - tools
+    - semantic model
+  expertise_required:
+    - data steward
+    - researcher
+    - semantic expert
+    - technical specialist
+  audience:
+    data_holder: true
+    data_user: false
 - id: 20
   title: Transform and expose FAIR (meta)data
   summary: Think of your data like a well-written book that’s hidden away on a shelf that no one knows about. By transforming it into a standardised, machine-readable format and publishing it through trusted channels, you place it in a public library where everyone, people and machines, can easily find, open, and read it.
   url: metroline_steps/transform_and_expose_fair_metadata
   icon: ":toolbox:"
   status: RELEASED
+  keywords:
+    - data transformation
+    - RDF
+    - publication
+  expertise_required:
+    - data steward
+    - infrastructure professional
+    - researcher
+    - semantic expert
+  audience:
+    data_holder: true
+    data_user: false
 - id: 21
   title: Define access conditions
   summary: When making health care data FAIR, data holders have to keep the balance between making data accessible for reuse and protecting personal information of subjects present in the data. This Metroline step helps you pick the appropriate access level to your data and publish the necessary information in the metadata.
   url: metroline_steps/define_access_conditions
   icon: ":closed_lock_with_key:"
   status: RELEASED
+  keywords:
+    - data sharing
+    - legal
+    - governance
+  expertise_required:
+    - Data curator
+    - data steward
+    - ELSI expert
+    - researcher
+  audience:
+    data_holder: true
+    data_user: false
 - id: 22
   title: Query (use) over resources
   summary: Querying FAIR resources is the process of asking structured questions to retrieve data that is easy to find, access, and reuse. When resources follow FAIR principles, queries become more efficient because the data is well-organized and clearly described. In this step, we will explore the tools and platforms that enable effective querying of FAIR-compliant resources.
   url: metroline_steps/query_over_resources
   icon: ":question:"
-  status: READY FOR REVIEW
+  status: RELEASED
+  keywords:
+    - querying
+  expertise_required:
+    - data scientist
+    - researcher
+    - semantic expert
+  audience:
+    data_holder: false
+    data_user: true
 - id: 23
   title: Assess FAIRness
   summary: Now that you’ve FAIRified your data, it’s time to check the resulting FAIRness and decide if you’ve reached your goals. Use tools and other methods to assess if your data is truly Findable, Accessible, Interoperable, and Reusable. If needed, adjust or improve things so your data stays FAIR in the long run.
   url: metroline_steps/assess_fairness
   icon: ":white_check_mark:"
   status: RELEASED
+  keywords:
+    - assessment
+    - FAIR maturity
+  expertise_required:
+    - data steward
+    - research software engineer
+    - researcher
+  audience:
+    data_holder: true
+    data_user: true
 - id: 24
   title: Did you reach your FAIRification objectives
   summary: On hold.
@@ -149,4 +366,15 @@
   url: metroline_steps/creating_a_fair_implementation_profile
   icon: ":bookmark_tabs:"
   status: RELEASED
+  keywords:
+    - standards
+    - interoperability
+    - governance
+  expertise_required:
+    - ELSI expert
+    - researcher
+    - semantic expert
+  audience:
+    data_holder: true
+    data_user: true
 

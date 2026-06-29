@@ -44,6 +44,9 @@ module Jekyll
     end
   end
 
+  # Canonical RDM lifecycle phase order (planning → reuse)
+  LIFECYCLE_ORDER = %w[Plan Collect Process Analyse Preserve Share Reuse].freeze
+
   # Represents a dynamically generated tool page
   class ToolPage < Page
     def initialize(site, tool_id, tool_name, slug, domain, phase, institutes, image_path, short_description = nil, biotools_id)
@@ -74,13 +77,12 @@ module Jekyll
         end
       end
       
-      # Parse phase - handle various formats
+      # Parse phase - validate against canonical lifecycle order and sort accordingly
       if phase
-        if phase.is_a?(String)
-          self.data['phase'] = phase.split(',').map(&:strip).reject(&:empty?)
-        elsif phase.is_a?(Array)
-          self.data['phase'] = phase
-        end
+        phases = phase.is_a?(Array) ? phase : phase.split(',').map(&:strip).reject(&:empty?)
+        unknown = phases - LIFECYCLE_ORDER
+        Jekyll.logger.warn "Tool #{tool_id}:", "Unknown lifecycle phases: #{unknown.join(', ')}" unless unknown.empty?
+        self.data['phase'] = phases.sort_by { |p| LIFECYCLE_ORDER.index(p) || 999 }
       end
       
       # Set institutes if provided

@@ -6,6 +6,7 @@ permalink: /metroline_steps/creating_a_fair_implementation_profile
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Ready-made and well-tested FIPs created by trusted communities will find widespread reuse among other communities and could vastly accelerate decision making on well-informed implementations of the FAIR Principles within and particularly between domains. [Reusable FAIR Implementation Profiles as Accelerators of FAIR Convergence](https://link.springer.com/chapter/10.1007/978-3-030-65847-2_13)***
 >
