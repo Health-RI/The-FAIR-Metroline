@@ -38,5 +38,5 @@
   url: "tool-scenarios/ibisba_wur_fair_bioprocess_data"
   icon: "🧪"
   description: "Illustrative WUR/IBISBA-style scenario showing how equipment data, structured metadata and research assets could move from LEAF and FAIR Data Station into FAIRDOM-SEEK."
-  type: "fair data workflow"
+  type: "analysis"
   complexity: "Medium"
