@@ -1,0 +1,61 @@
+- title: "Define the experiment and metadata scope"
+  status: "completed"
+  icon: ""
+  short_description: "Agree what needs to be captured before the experiment starts."
+  description: "Before data capture starts, the research team agrees which operational signals, sample identifiers, protocols, instrument settings, processing outputs and provenance records need to be linked. This illustrative scenario assumes a bioprocess or fermentation-style experiment where equipment data is captured during a run and later connected to study and assay metadata. The exact terminology should be reviewed by the WUR and IBISBA teams."
+  examples:
+    - role: "Researcher"
+      description: "I am planning a bioreactor experiment and want to make sure the run metadata, sample identifiers and instrument settings can be reused later."
+    - role: "Data Steward"
+      description: "I help the team decide which metadata templates, identifiers and controlled terms should be used before the experiment starts."
+
+- title: "Capture equipment data close to the source"
+  status: "active"
+  icon: ""
+  short_description: "Extract operational data from lab equipment during the run."
+  description: "Use LEAF, or a similar equipment-adapter setup, to extract data and metadata from research equipment and transfer them to the selected endpoint. Depending on the local deployment, this may include MQTT messaging, time-series storage, dashboards or additional processing components. This step should be refined by the team that operates the actual LEAF setup."
+  tool_ids:
+    - leaf
+  examples:
+    - role: "Research Engineer"
+      description: "I configure an adapter so the bioreactor run parameters and sensor readings are captured without manually copying files from the instrument."
+    - role: "Facility Operator"
+      description: "I want equipment data to be available during the experiment so the team can monitor the run and later connect the values to the dataset."
+
+- title: "Record and connect study, sample, assay and run metadata"
+  status: "active"
+  icon: ""
+  short_description: "Describe the experiment and link metadata to captured equipment data."
+  description: "Use FAIR Data Station to capture and validate metadata about the investigation, study, observation units, samples, assays and data files. Where relevant, include references to LEAF-captured run information, instrument settings, raw files and processed outputs. The goal is to make the experimental context explicit early and to ensure that equipment data, metadata and derived files can be interpreted together. The concrete metadata profile, template fields, identifiers and controlled vocabularies should be completed by the WUR and IBISBA domain experts."
+  tool_ids:
+    - fair-data-station
+    - leaf
+  examples:
+    - role: "Data Steward"
+      description: "I prepare a FAIR Data Station template so sample metadata, assay descriptions, run identifiers and data-file references are recorded consistently."
+    - role: "Researcher"
+      description: "I fill in the metadata template while the experiment is still fresh, so others can understand how the data was generated and how the files relate to the run."
+      
+- title: "Register and share the dataset in FAIRDOM-SEEK"
+  status: "upcoming"
+  icon: ""
+  short_description: "Publish or catalogue the structured research object."
+  description: "Use FAIRDOM-SEEK, or an IBISBA Knowledge Hub instance based on FAIRDOM-SEEK, to register the investigation, study, samples, assays, protocols, data files and related outputs. Access permissions, project membership, licences and publication status should be decided according to the project policy. If FAIR Data Station import is used, the exact import behaviour and metadata mappings should be confirmed with the FAIRDOM-SEEK and WUR teams."
+  tool_ids:
+    - fairdom-seek
+  examples:
+    - role: "Data Manager"
+      description: "I import or register the metadata and data files so collaborators can find the experiment, understand the structure and access the approved outputs."
+    - role: "Project Coordinator"
+      description: "I want the project data and SOPs to be visible in the IBISBA Knowledge Hub with the right sharing settings."
+
+- title: "FAIR bioprocess dataset available for reuse"
+  status: "destination"
+  icon: ""
+  short_description: "Success! Data, metadata and provenance are connected."
+  description: "The experiment is no longer only a collection of files and instrument exports. The operational data, sample and assay metadata, protocols, derived outputs and access conditions are connected in a platform where collaborators can discover, interpret and reuse them. This final wording should be adapted once WUR and IBISBA confirm the intended user story."
+  examples:
+    - role: "Researcher"
+      description: "I can point collaborators to the registered experiment instead of sending separate spreadsheets, files and notes."
+    - role: "Data Steward"
+      description: "I can review whether the published package contains the metadata, provenance and access information needed for reuse."
