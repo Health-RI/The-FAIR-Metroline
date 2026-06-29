@@ -22,33 +22,20 @@
     - role: "Facility Operator"
       description: "I want equipment data to be available during the experiment so the team can monitor the run and later connect the values to the dataset."
 
-- title: "Record study, sample and assay metadata"
+- title: "Record and connect study, sample, assay and run metadata"
   status: "active"
   icon: ""
-  short_description: "Describe the experiment using structured metadata templates."
-  description: "Use FAIR Data Station to capture and validate metadata about the investigation, study, observation units, samples, assays and data files. The goal is to make the experimental context explicit early, instead of reconstructing it after analysis. The concrete metadata profile, template fields and controlled vocabularies should be completed by the WUR and IBISBA domain experts."
+  short_description: "Describe the experiment and link metadata to captured equipment data."
+  description: "Use FAIR Data Station to capture and validate metadata about the investigation, study, observation units, samples, assays and data files. Where relevant, include references to LEAF-captured run information, instrument settings, raw files and processed outputs. The goal is to make the experimental context explicit early and to ensure that equipment data, metadata and derived files can be interpreted together. The concrete metadata profile, template fields, identifiers and controlled vocabularies should be completed by the WUR and IBISBA domain experts."
   tool_ids:
     - fair-data-station
-  examples:
-    - role: "Data Steward"
-      description: "I prepare a FAIR Data Station template so sample metadata, assay descriptions and data-file references are recorded consistently."
-    - role: "Researcher"
-      description: "I fill in the metadata template while the experiment is still fresh, so others can understand how the data was generated."
-
-- title: "Connect operational data, metadata and processing outputs"
-  status: "upcoming"
-  icon: ""
-  short_description: "Link equipment data and derived files to the experiment metadata."
-  description: "Map run identifiers, sample identifiers, instrument settings, raw files, processed outputs and workflow provenance into a coherent package. This is the point where local conventions matter most: the team should define how LEAF run information, FAIR Data Station metadata and analysis outputs refer to the same experiment, samples and assays."
-  tool_ids:
     - leaf
-    - fair-data-station
   examples:
-    - role: "Research Software Engineer"
-      description: "I make sure the run ID used by the equipment adapter also appears in the metadata and in the processed output folder."
     - role: "Data Steward"
-      description: "I check whether the metadata package contains enough information to understand the files, parameters and provenance before anything is shared."
-
+      description: "I prepare a FAIR Data Station template so sample metadata, assay descriptions, run identifiers and data-file references are recorded consistently."
+    - role: "Researcher"
+      description: "I fill in the metadata template while the experiment is still fresh, so others can understand how the data was generated and how the files relate to the run."
+      
 - title: "Register and share the dataset in FAIRDOM-SEEK"
   status: "upcoming"
   icon: ""
