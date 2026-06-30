@@ -18,9 +18,26 @@ When referencing content from the FAIR Metroline pages, please cite as follows:
 # Local Development
 
 ## Prerequisites
-Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+1. **Git** - Install from [git-scm.com](https://git-scm.com/downloads)
+2. **Docker Desktop** - Install from [docker.com](https://www.docker.com/products/docker-desktop/)
+3. **SSH Key** (for contributors, not reviewers) - Set up following [GitHub's SSH guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+
+## Clone the Repository
+
+```bash
+# Clone using HTTPS (read-only)
+git clone https://github.com/Health-RI/The-FAIR-Metroline.git
+cd The-FAIR-Metroline
+
+# Or clone using SSH (required for contributors)
+git clone git@github.com:Health-RI/The-FAIR-Metroline.git
+cd The-FAIR-Metroline
+```
 
 ## Build and Run
+
+Make sure Docker Desktop is running, then:
 
 ```bash
 # Build the Docker image
