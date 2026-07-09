@@ -360,3 +360,165 @@
   compatible_with:
   biotools_id:
 
+- id: leaf
+  page_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAEJ8d9O9pkiFQvrOcfA-gGxDEMXzW80nlYfPGRxJZlw&s"
+  institutes:
+    - Wageningen University & Research
+    - IBISBA
+  at_a_glance:
+    Tool name: LEAF
+    Short description: Lightweight Equipment Adapter Framework for automated data and metadata acquisition from research equipment.
+    Purpose and core functionality: LEAF is an open-source, modular framework for extracting data and metadata from research equipment and transferring them via MQTT to a chosen endpoint. In this scenario, it represents the data-acquisition layer that captures operational equipment data close to the source. The exact adapters, endpoints and operational deployment should be confirmed by the WUR and IBISBA teams.
+    Type: Equipment data acquisition
+    Life cycle phases:
+      - Collect
+      - Process
+    Domains using it:
+      - Industrial biotechnology
+      - Life sciences
+    Website:
+      - <a href='https://leaf-framework.org/'>LEAF website</a>
+      - <a href='https://leaf-framework.org/docs/'>LEAF documentation</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://leaf-framework.org/docs/'>LEAF documentation</a> - Overview, architecture and contribution information
+      Supporting software:
+        - MQTT endpoint or broker - Used for transferring equipment data to a selected endpoint; the concrete setup depends on local deployment.
+      Scripts and workflows:
+        - <a href='https://gitlab.com/m-unlock'>m-unlock GitLab</a> - Open-source tools from WUR and UNLOCK, including FAIR-by-design tooling
+      Metadata and data standards:
+        - Local equipment and experiment metadata conventions - To be specified by the WUR and IBISBA teams.
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - FAIR Data Station - Metadata captured in FAIR Data Station can be linked to equipment runs and generated data files.
+        - FAIRDOM-SEEK - Data and metadata generated during the experiment can be registered or published through FAIRDOM-SEEK-based platforms.
+      Guide:
+        -
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+      - Deployment-specific details - The exact adapters, broker, database, dashboards and endpoint used by WUR and IBISBA need confirmation.
+      - Identifier mapping - The scenario should define how equipment run identifiers are linked to samples, assays and data files.
+    User needs:
+      - Practical examples of supported equipment types.
+      - Guidance on how to connect LEAF outputs to metadata templates and downstream catalogues.
+  compatible_with:
+    - fair-data-station
+    - fairdom-seek
+  biotools_id:
+
+- id: fair-data-station
+  page_img: "toolassemblies/tools/fair-ds.png"
+  institutes:
+    - Wageningen University & Research
+    - UNLOCK
+  at_a_glance:
+    Tool name: FAIR Data Station
+    Short description: Tool for recording, validating and exporting structured FAIR metadata from the start of a research project.
+    Purpose and core functionality: FAIR Data Station supports researchers and data stewards in recording and validating structured metadata, including investigation, study, observation unit, sample, assay and data-file information. In this scenario, it is used to describe the experiment and connect operational data capture with downstream registration in FAIRDOM-SEEK. The exact template fields and controlled vocabularies should be provided by the WUR and IBISBA teams.
+    Type: Metadata capture and validation
+    Life cycle phases:
+      - Plan
+      - Collect
+      - Preserve
+      - Share
+    Domains using it:
+      - Industrial biotechnology
+      - Microbial research
+      - Life sciences
+    Website:
+      - <a href='https://fairbydesign.nl/'>FAIR by Design website</a>
+      - <a href='https://fairds.fairbydesign.nl/'>Open FAIR Data Station</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://fairbydesign.nl/'>FAIR by Design documentation</a> - Entry point for FAIR Data Station and related FAIR-by-design tooling
+      Supporting software:
+        - Spreadsheet-based metadata templates - Used to collect structured metadata that can be validated and exported.
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - ISA structure - Used to organise investigations, studies and assays.
+        - FAIR Data Station metadata templates - Concrete profiles should be specified by the domain team.
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - LEAF - Equipment run metadata can be linked to the structured experiment metadata.
+        - FAIRDOM-SEEK - FAIRDOM-SEEK supports importing metadata produced by FAIR Data Station in recent versions; exact mappings should be validated locally.
+      Guide:
+        -
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+      - Domain profile - The specific IBISBA/WUR metadata profile needs to be completed by domain experts.
+      - Controlled vocabularies - Required ontologies, units and identifiers should be documented for the scenario.
+    User needs:
+      - Example templates for bioprocess or fermentation experiments.
+      - Clear instructions for validating and exporting metadata for FAIRDOM-SEEK.
+  compatible_with:
+    - leaf
+    - fairdom-seek
+  biotools_id: fair_data_station
+
+- id: fairdom-seek
+  page_img: "https://seek4science.org/assets/images/fairdom-seek-logo-alt.svg"
+  institutes:
+    - FAIRDOM
+    - IBISBA
+  at_a_glance:
+    Tool name: FAIRDOM-SEEK
+    Short description: Open-source research data management platform for organising, sharing and publishing heterogeneous research assets.
+    Purpose and core functionality: FAIRDOM-SEEK is a web-based platform for cataloguing, sharing and publishing research data, models, simulations, processes and outcomes. It uses an ISA-style structure for investigations, studies and assays, supports permissions and publication workflows, and can be used as the basis for project or community hubs such as the IBISBA Knowledge Hub. In this scenario, it is the destination where the structured experiment, metadata, files and related outputs are registered for controlled sharing and reuse.
+    Type: Research data management platform
+    Life cycle phases:
+      - Preserve
+      - Share
+      - Publish
+    Domains using it:
+      - Systems biology
+      - Industrial biotechnology
+      - Life sciences
+    Website:
+      - <a href='https://seek4science.org/'>FAIRDOM-SEEK website</a>
+      - <a href='https://hub.ibisba.eu/'>IBISBA Knowledge Hub</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://docs.seek4science.org/'>FAIRDOM-SEEK documentation</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - ISA structure - Used to organise investigations, studies, assays and related assets.
+        - Extended metadata types - Can be used to capture domain-specific attributes.
+      Specific documentation, e.g. versioning:
+        - <a href='https://docs.seek4science.org/tech/releases/'>FAIRDOM-SEEK release notes</a> - Release information, including FAIR Data Station import support.
+      Integrations with other tools:
+        - FAIR Data Station - Metadata produced by FAIR Data Station can be imported into FAIRDOM-SEEK in supported configurations.
+        - LEAF - Equipment data and related files can be registered in FAIRDOM-SEEK when linked through project metadata and identifiers.
+      Guide:
+        -
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+      - Import configuration - FAIR Data Station import behaviour, permissions and extended metadata mappings should be confirmed for the target instance.
+      - Publishing policy - The scenario should state when data remain internal, when they are shared with collaborators and when they can be published.
+    User needs:
+      - Clear steps for importing FAIR Data Station metadata into the relevant FAIRDOM-SEEK or IBISBA Knowledge Hub instance.
+      - Example project structure showing investigations, studies, samples, assays, files and SOPs.
+  compatible_with:
+    - fair-data-station
+    - leaf
+  biotools_id: seek_for_science
