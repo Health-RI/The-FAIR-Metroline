@@ -147,14 +147,6 @@ The following tools provide support in applying a (meta)data model to your resou
 </table>
 </div>
 
-## Expertise requirements for this step 
-Applying metadata and data models effectively requires a mix of domain knowledge and technical skills. Ideally, teams should involve:
-* **Domain experts.** Understand the research content and can guide the correct interpretation of terms and relationships.
-* **(Meta)Data modellers and ontologists.** Can help select or customise the right models and ontologies to fit the data.
-* **Data engineers or FAIR data stewards.** Are familiar with tools, knowledge representation formats, and transformation workflows.
-
-While basic metadata tasks (e.g. filling in a dataset description using a web form) may not require a deep technical knowledge, more advanced modelling—such as mapping raw data to ontological terms or generating knowledge graphs—typically benefits from the experience described above. 
-
 ## Practical examples from the community
 **FAIR Data Point**<br>
 The UMCs in the Netherlands are either in the process of setting up or already have a local FDP. For example, see [Amsterdam UMC’s FDP](https://fdp.healthdataspace.amsterdam/). Health-RI provides [guidance](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279183386) for setting up the FDP for the National Health Data Catalogue. 

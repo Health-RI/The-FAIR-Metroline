@@ -200,12 +200,6 @@ From here, there are three possible next steps, depending on your needs:
 Great job! After checking and improving our metadata semantics, we can now move to the next Metroline step.
 "%}
 
-## Expertise requirements for this step 
-Below are experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team).
-* **Semantic data / modelling specialists.** Can help understanding the data’s structure and ambiguity.
-* **Domain expert.** Can help understanding the data’s elements and their potential ambiguity.
-* **FAIR data steward.** Can help identifying ambiguity in the data elements.
-
 ## Practical examples from the community
 {% include metroline_steps/looking_for_examples.html %}
 

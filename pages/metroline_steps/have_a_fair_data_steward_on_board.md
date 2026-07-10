@@ -18,7 +18,7 @@ Proper data stewardship ensures research data is Findable, Accessible, Interoper
 ## Why is this step important 
 Good data stewardship incorporates the FAIR data principles and ensures sustainable integration in the research cycle. It is a collective effort requiring actions and competencies from researchers, project teams, institutes, research disciplines and funders. Each organisation tailors its research data management (RDM) policy to its own context, with funders and institutions defining roles and responsibilities differently, such as expectations for research teams, host institutions and third-party organisations like data centres ([Towards FAIR Data Steward as profession for the Lifesciences](https://zenodo.org/records/3474789/files/Report_FAIR%20Data%20Steward%20in%20Lifesciences_v2.pdf)).
 
-Having a FAIR data steward in your multidisciplinary team (see [Metroline Step: Build the team]({{site.baseurl}}/metroline_steps/build_the_team)) offers key benefits (see [FAIRopoly](https://www.ejprarediseases.org/fairopoly/)).
+Having a FAIR data steward in your multidisciplinary team offers key benefits (see [FAIRopoly](https://www.ejprarediseases.org/fairopoly/)).
 * **FAIR expertise.** A team member with general FAIR knowledge and expertise helps achieve FAIR objectives (see [Metroline Step: Define your FAIRification Objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives)) more easily and faster. 
 * **FAIR standards.** A FAIR data steward provides expertise in metadata standards and semantic modelling, essential for achieving interoperability between collections, studies and datasets.
 * **FAIR technologies.** They also bring knowledge of technologies and tools that automate or improve FAIRness within and beyond the institution.
@@ -88,17 +88,10 @@ Hire or consult a data steward following the formalised Dutch data steward profi
 ### Step 4 - Provide support and resources to the FAIR data steward
 If your team includes a FAIR data steward, ensure they have access to the right support and resources.
 * **Training opportunities.** Ensure data stewards receive continuous training to stay updated on best practices, tools and policies.
-* **Institutional and national networks.** Connect data stewards with institutional, national and international networks to foster collaboration and professional growth. Central networks should be the first point of contact, including institutional data steward groups (via the Local Digital Competence Centers (LDCC) or the Open Science Communities), national networks (e.g. the Data Stewards Interest Group) and international initiatives (e.g. RDA professionalising data stewardship Interest Group or the ELIXIR RDM Community). See the Building your Community page page for more details.
+* **Institutional and national networks.** Connect data stewards with institutional, national and international networks to foster collaboration and professional growth. Central networks should be the first point of contact, including institutional data steward groups (via the Local Digital Competence Centers (LDCC) or the Open Science Communities), national networks (e.g. the Data Stewards Interest Group) and international initiatives (e.g. RDA professionalising data stewardship Interest Group or the ELIXIR RDM Community).
 * **Domain-specific knowledge.** A data steward with expertise in your research field can better understand the data’s context and communicate effectively with researchers and stakeholders.
 * **Funder requirements.** Many funders now require a data steward to be part of the project team. Check grant conditions to ensure compliance with specific expectations.
 * **Publishing policies and local guidance.** Ensure data handling aligns with institutional policies and national and international regulations. Discuss early stage requirements with local guidance bodies to meet FAIR standards and repository guidelines.
-
-## Expertise requirements for this step
-Positioning a FAIR data steward in your team requires aligning their role with your FAIRification objectives and existing support structures, as described in Metroline Step: Build the Team. The following experts may be involved.
-* **FAIR data stewards.** Provide expertise in data management, metadata standards, data integration, repository platforms and privacy/security compliance.
-* **Researchers.** Work with data stewards during data generation, collection and analysis, adopting recommended tools and platforms.
-* **Infrastructure professionals.** Assess and adapt workflows and infrastructure to integrate FAIR data stewardship without duplication of roles.
-* **Project managers.** Coordinate FAIR data implementation, manage responsibilities and ensure policy compliance.
 
 ## Practical examples from the community 
 ***[European Joint Programme on Rare Diseases (EJP RD)](https://www.ejprarediseases.org/)***

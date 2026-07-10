@@ -84,14 +84,6 @@ For example, when making data FAIR, datasets can be split into smaller sets, imp
 
 **Example:** For GO-Plan, a template was developed to facilitate the identification of FAIRification objectives. This template has been successfully applied in two tutorials, with participants reporting that it effectively guided them through the process.
 
-## Expertise requirements for this step 
-Designing a solution plan is typically a collaborative effort by a range of experts, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team).
-* **FAIR experts.** Provide guidance on best practices, standards, and methodologies.
-* **Domain experts.** Define data semantics, quality standards, and use cases.
-* **Data stewards.** Ensure data and metadata comply with FAIR principles.
-* **IT specialists.** Support infrastructure needs, interoperability, and tool integration.
-* **Project managers.** Oversee planning, stakeholder coordination, and implementation tracking.
-
 ## Practical examples from the community 
 This section should show the step applied in a real project. Links to demonstrator projects. 
 

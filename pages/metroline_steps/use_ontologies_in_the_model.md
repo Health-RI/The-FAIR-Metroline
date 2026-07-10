@@ -86,12 +86,6 @@ Ontologies evolve over time, so mappings must be reviewed and updated to remain 
 
 As the volume of (meta)data and repositories grows, continuous ontology maintenance can become a significant burden. Establish governance rules that clarify which mappings will be maintained, how often they are reviewed and by whom, and make these rules part of your project and repository documentation.
 
-## Expertise requirements for this step
-Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below. 
-* **Ontology experts.** Select appropriate ontologies, apply alignment patterns and evaluate ontology quality and scope.
-* **Metadata experts.** Ensure coverage of required metadata elements and provide clear documentation for users.
-* **Semantic web technology experts.** Represent the model and its mappings in RDF, OWL and SKOS; maintain model coherence; design persistent IRIs, implement SHACL validation and automate mapping publication workflows.
-
 ## Practical examples from the community 
 * **[CARE-SM (Clinical and Registry Entries Semantic Model)](https://github.com/CARE-SM).** Annotates clinical registry concepts using OBO Foundry-aligned ontologies for precise semantics and cross-resource mapping. Also see this video.
 * **[ELIXIR (European Life-science Infrastructure for Biological Information) Bioschemas](https://bioschemas.org/).** Extends [Schema.org](https://schema.org/) and uses ontology terms to improve dataset discovery on the web. Also see this video.
