@@ -1,3 +1,10 @@
+- title: "ZonMw key items guidance"
+  url: "scenarios/zonmw_keyitems"
+  icon: "🧭"
+  description: "Guidance with examples to help you fill in ZonMw's key items."
+  type: "fair guidelines"
+  complexity: "Medium"
+
 - title: "Evaluate FAIRness of your data"
   url: "scenarios/evaluate_data_fairness"
   icon: "📊"

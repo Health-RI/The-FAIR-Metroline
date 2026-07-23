@@ -1,0 +1,134 @@
+- title: "Key item 1. making data findable with a persistent identifier"
+  status: "active"
+  icon: ""
+  description: "
+                <b>Persistent Identifier (PID)</b><br>
+                A Persistent Identifier (PID) is a long-lasting, globally unique identifier for a digital object such as a dataset, software package, biomaterial collection, publication or metadata record. Unlike a regular URL, a PID remains stable even when the location of the resource changes. PIDs help researchers, funders, and machines reliably find and cite research outputs. Common examples include DOI and ORCID. A PID should lead to a webpage (landing page) describing the resource.
+                <br><br>
+                <b>RESOURCES</b>
+                <ul>
+                  <li><a href='https://fairmetroline.org/metroline_steps/select_identifier_scheme'><b>Select identifier scheme.</b></a> Understand how to select, use and manage identifier schemes to ensure that data and metadata are uniquely identifiable, persistent and interoperable.</li>
+                  <li><a href='https://fairmetroline.org/metroline_steps/register_resource_level_metadata'><b>Register resource level metadata.</b></a> Make resources findable by selecting appropriate metadata catalogues and registering consistent, well-defined resource-level metadata.</li>
+                  <li><a href='https://fairmetroline.org/scenarios/make_dataset_findable'><b>Use case: How to make my dataset Findable?</b></a></li>
+                  <li><a href='https://www.doi.org/the-identifier/what-is-a-doi/'><b>doi.org</b></a> Learn about digital ojbect identifiers.</li> 
+                  <li><a href='https://www.go-fair.org/fair-principles/f1-meta-data-assigned-globally-unique-persistent-identifiers/'><b>The GO FAIR website.</b></a> Read about FAIR principle F1: (Meta) data are assigned globally unique and persistent identifiers.</li>
+                </ul>
+                "
+  examples:
+    - role: "1.2"
+      description: "The dataset has been deposited in Zenodo and assigned DOI https://doi.org/10.5281/zenodo.1234567"
+    - role: "1.3"
+      description: "The DOI has been added to the products section of Mijn ZonMw and refers to the dataset deposited in Zenodo."
+    - role: "1.4"
+      description: "For example, during a progress report: indicate which repository will assign one at the end of the project.<br>A DOI is not yet available because publication is planned after project completion. The dataset can currently be found through the institutional catalogue at the URL https://umcgresearchdatacatalogue.nl or DOI doi.org/10.00001/123456789"
+
+
+
+- title: "Key item 2. making data findable via a data platform or repository"
+  status: "active"
+  icon: ""
+  description: "<b>Hints</b><br>
+              Publication in a repository such as Zenodo, DataverseNL, or an institutional repository. For sensitive health data, only metadata may be publicly available, while access to the data is provided under controlled conditions
+              <br>
+              <b>Relevant FAIR Metroline pages</b>
+              <ul>
+                 <li><a href='https://fairmetroline.org/scenarios/make_dataset_findable'><b>Use case: How to make my dataset Findable?</b></a></li>
+                 <li><a href='https://fairmetroline.org/metroline_steps/assess_availability_of_your_metadata'><b>Assess availability of your metadata.</b></a> Identify, evaluate and improve the completeness and quality of their metadata to ensure it is accurate, consistent and ready for reuse and publication.</li>
+                 <li><a href='https://fairmetroline.org/metroline_steps/define_access_conditions'><b>Define access conditions.</b></a> Define and document the conditions under which data can be accessed and reused, including access levels, policies, licences and agreements, ensuring compliance with legal, ethical and FAIR requirements.</li>                                  
+                 <li><a href='https://fairmetroline.org/metroline_steps/register_resource_level_metadata'><b>Register resource level metadata.</b></a> Make resources findable by selecting appropriate metadata catalogues and registering consistent, well-defined resource-level metadata.</li>
+              </ul>"
+  examples:
+    - role: "2.X"
+      description: "Extra information. Example of how to fill this one in."
+    - role: "2.Y"
+      description: "Extra information. Example of how to fill this one in."
+
+
+- title: "Key item 3. terms of use"
+  status: "active"
+  icon: ""
+  description: "<b>Hints</b><br>
+              Open licence (e.g., CC BY 4.0), Data Use Agreement, access after approval by a Data Access Committee (DAC), informed consent for secondary use, federated access, or analysis only within a Secure Data Environment.
+              <br>
+              <b>Relevant FAIR Metroline pages</b>
+              <ul>
+                 <li><a href='https://fairmetroline.org/metroline_steps/define_access_conditions'><b>Define access conditions.</b></a> Define and document the conditions under which data can be accessed and reused, including access levels, policies, licences and agreements, ensuring compliance with legal, ethical and FAIR requirements.</li>
+                 <li><a href='https://fairmetroline.org/metroline_steps/obtain_informed_consent'><b>Obtain informed consent.</b></a> Design informed consent materials that enable ethical, legal and FAIR-compliant data collection, sharing and reuse.</li>
+              </ul>"
+  examples:
+    - role: "3.X"
+      description: "Extra information. Example of how to fill this one in."
+    - role: "3.Y"
+      description: "Extra information. Example of how to fill this one in."
+
+
+- title: "Key item 4. standards"
+  status: "active"
+  icon: ""
+  description: "<b>Hints</b><br>
+              Terminologies such as SNOMED CT, LOINC, ICD-10, or ATC ; data models such as OMOP CDM, HL7 FHIR, openEHR or CDISC; file formats such as CSV, JSON, DICOM, FASTQ, BAM or VCF; ontologies such as human phenotype ontology (HPO), gene ontology (GO)
+              <br>
+              <b>Relevant FAIR Metroline pages</b>
+              <ul>
+                 <li><a href='https://fairmetroline.org/metroline_steps/analyse_data_semantics'><b>Analyse data semantics.</b></a> Clarify and define the meaning of their data and metadata elements by identifying ambiguities and creating a clear, unambiguous codebook to support further FAIRification steps.</li>
+                 <li><a href='https://fairmetroline.org/metroline_steps/apply_common_data_elements'><b>Apply common data elements.</b></a> Identify, select and apply common data elements to standardise data collection and improve interoperability, data quality and reuse.</li>
+                 <li><a href='https://fairmetroline.org/metroline_steps/creating_a_fair_implementation_profile'><b>Creating a FIP.</b></a> Define and document a FAIR Implementation Profile by selecting the community-agreed standards, tools and resources used to implement the FAIR principles.</li>
+                 <li><a href='https://fairmetroline.org/metroline_steps/create_or_reuse_a_semantic_model'><b>Create or reuse a semantic (meta)data model.</b></a> Decide whether to reuse, extend or create a semantic model for your data or metadata so it can be represented in a structured, machine-readable and interoperable way.</li>
+                 <li><a href='https://fairmetroline.org/metroline_steps/use_ontologies_in_the_model'><b>Use ontologies in the model.</b></a> Link elements in a semantic model to ontology terms so their meanings become explicit, machine understandable and interoperable across systems.</li>
+              </ul>"
+  examples:
+    - role: "4.X"
+      description: "Extra information. Example of how to fill this one in."
+    - role: "4.Y"
+      description: "Extra information. Example of how to fill this one in."
+
+
+- title: "Key item 5: metadata"
+  status: "active"
+  icon: ""
+  description: "<b>Hints</b><br>
+              Metadata schemas such as DataCite, Dublin Core, or DCAT. Metadata published through a repository or metadata catalogue.
+              <br>
+              <b>Relevant FAIR Metroline pages</b>
+              <ul>
+                 <li><a href='https://fairmetroline.org/metroline_steps/analyse_data_semantics'><b>Analyse data semantics.</b></a> Clarify and define the meaning of their data and metadata elements by identifying ambiguities and creating a clear, unambiguous codebook to support further FAIRification steps.</li>
+                 <li><a href='https://fairmetroline.org/metroline_steps/create_or_reuse_a_semantic_model'><b>Create or reuse a semantic (meta)data model.</b></a> Decide whether to reuse, extend or create a semantic model for your data or metadata so it can be represented in a structured, machine-readable and interoperable way.</li>
+                 <li><a href='https://fairmetroline.org/metroline_steps/use_ontologies_in_the_model'><b>Use ontologies in the model.</b></a> Link elements in a semantic model to ontology terms so their meanings become explicit, machine understandable and interoperable across systems.</li>
+              </ul>"
+  examples:
+    - role: "5.X"
+      description: "Extra information. Example of how to fill this one in."
+    - role: "5.Y"
+      description: "Extra information. Example of how to fill this one in."
+
+
+- title: "Key item 6: personal data"
+  status: "active"
+  icon: ""
+  description: "<b>Hints</b><br>
+              <br>
+              <b>Relevant FAIR Metroline pages</b>
+              <ul>
+                 <li><a href='https://fairmetroline.org/metroline_steps/define_access_conditions'><b>Define access conditions.</b></a> Define and document the conditions under which data can be accessed and reused, including access levels, policies, licences and agreements, ensuring compliance with legal, ethical and FAIR requirements.</li>
+                 <li><a href='https://fairmetroline.org/metroline_steps/obtain_informed_consent'><b>Obtain informed consent.</b></a> Design informed consent materials that enable ethical, legal and FAIR-compliant data collection, sharing and reuse.</li>
+              </ul>"
+  examples:
+    - role: "6.1"
+      description: "For example - pseudonymisation or anonymisation, Data Protection Impact Assessment (DPIA)"
+    - role: "6.Y"
+      description: "Extra information. Example of how to fill this one in."
+
+- title: "Key item 7: animal research"
+  status: "active"
+  icon: ""
+  description: "<b>Hints</b><br>
+              <br>
+              <b>Relevant FAIR Metroline pages</b>
+              <ul>
+                 <li>None.</li>
+              </ul>"
+  examples:
+    - role: "7.X"
+      description: "Extra information. Example of how to fill this one in."
+    - role: "7.Y"
+      description: "Extra information. Example of how to fill this one in."
