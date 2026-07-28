@@ -7,6 +7,7 @@ page_id: analyse_data_semantics
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***… selecting a relevant subset of the data and defining driving user questions(s) are highly relying on being familiar with the data ([Generic](https://direct.mit.edu/dint/article/2/1-2/56/9988/A-Generic-Workflow-for-the-Data-FAIRification))***
 > 
@@ -198,12 +199,6 @@ From here, there are three possible next steps, depending on your needs:
 {% include info-box.html type="example" title="Example - part 5" text="
 Great job! After checking and improving our metadata semantics, we can now move to the next Metroline step.
 "%}
-
-## Expertise requirements for this step 
-Below are experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team).
-* **Semantic data / modelling specialists.** Can help understanding the data’s structure and ambiguity.
-* **Domain expert.** Can help understanding the data’s elements and their potential ambiguity.
-* **FAIR data steward.** Can help identifying ambiguity in the data elements.
 
 ## Practical examples from the community
 {% include metroline_steps/looking_for_examples.html %}

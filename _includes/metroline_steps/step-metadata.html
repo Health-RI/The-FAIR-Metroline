@@ -1,0 +1,46 @@
+<!--
+Renders a compact metadata bar for a metroline step.
+Usage: {% raw %}{% include metroline_steps/step-metadata.html step=current_step %}{% endraw %}
+
+Reads optional fields from the step data:
+  keywords   – list of keyword strings
+  expertise_required – list of role name strings
+  audience.data_holder / audience.data_user – booleans
+-->
+{% assign step = include.step %}
+{% if step.keywords or step.expertise_required or step.audience %}
+<div class="step-metadata">
+
+    {% if step.audience %}
+  <div class="step-metadata-row">
+    <span class="step-metadata-label"><i class="fa-solid fa-bullseye"></i>Relevant for</span>
+    <span class="step-metadata-value">
+      {% if step.audience.data_holder %}<span class="step-metadata-audience-chip">✓ data holder</span>{% endif %}
+      {% if step.audience.data_user %}<span class="step-metadata-audience-chip">✓ data user</span>{% endif %}
+    </span>
+  </div>
+  {% endif %}
+
+  
+  {% if step.expertise_required %}
+  <div class="step-metadata-row">
+    <span class="step-metadata-label"><i class="fa-solid fa-user-gear"></i>Expertise required</span>
+    <span class="step-metadata-value">
+      {% for role in step.expertise_required %}<span class="step-metadata-tag step-metadata-tag--role">{{ role }}</span>{% endfor %}
+    </span>
+  </div>
+  {% endif %}
+
+
+
+  {% if step.keywords %}
+  <div class="step-metadata-row">
+    <span class="step-metadata-label"><i class="fa-solid fa-tags"></i>Keywords</span>
+    <span class="step-metadata-value">
+      {% for kw in step.keywords %}<span class="step-metadata-tag">{{ kw }}</span>{% endfor %}
+    </span>
+  </div>
+  {% endif %}
+
+</div>
+{% endif %}

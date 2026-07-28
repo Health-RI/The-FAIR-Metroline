@@ -6,6 +6,7 @@ permalink: /metroline_steps/query_over_resources
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Research is formalized curiosity. It is poking and prying with a purpose. [Zora Neale Hurston](https://www.floridamemory.com/learn/exhibits/in-her-own-words/zora-neale-hurston/)***
 >
@@ -112,14 +113,6 @@ For human users, many catalog interfaces also provide **built-in visualisation**
 In [Wikidata](https://www.wikidata.org), you can visualise query results in different ways by switching between different result views. Try to run the example query from above [https://w.wiki/FsqH](https://w.wiki/FsqH) and experiment with the various visualisation and export options.
 "%}
 
-
-## Expertise requirements for this step
-To successfully perform this step, you may need help from the following experts:
-* **Researcher/domain expert.** Uses domain knowledge to formulate queries and interpret results.
-* **Data scientist.** Executes queries, processes results and handles federated queries.
-* **Semantic expert.** Ensures correct use of metadata, vocabularies and ontologies for queries.
-
-See [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team) for more information.
 
 ## Practical examples from the community
 **[SPHN Data Exploration and Analysis System (DEAS)](https://sphn.ch/2024/10/17/sphn-launches-a-new-cross-hospital-data-query-tool-deas/)**. 

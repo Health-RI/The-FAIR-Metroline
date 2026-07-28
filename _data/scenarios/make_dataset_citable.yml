@@ -1,0 +1,48 @@
+
+- step_id: 9
+  status: "upcoming"
+  short_description: "Select Identifier Scheme"
+  description: "Understand how to select, use and manage identifier schemes to ensure that data and metadata are uniquely identifiable, persistent and interoperable."
+  examples:
+    - role: "Researcher"
+      description: "I am not very familiar with how identifiers work, so I start by reading up on identifiers - how they work and what they are for."
+
+- title: "Data Management"
+  icon: "🗂️"
+  status: "upcoming"
+  short_description: "Data Management"
+  description: "Data management is the practice of collecting, organising, storing, maintaining and governing data to ensure it remains accurate, secure and usable throughout its lifecycle."
+  examples:
+    - role: "Researcher"
+      description: "To ensure that the dataset I used can be consistently referenced over time, I create a fixed snapshot of the data as it was used in my analysis.
+I reviewed local requirements and policies and decided to store the snapshot in a stable location, namely Radboudumc’s internal archive."
+
+- step_id: 10
+  status: "upcoming"
+  short_description: "Register resource level metadata"
+  description: "Make their resources findable by selecting appropriate metadata catalogues and registering consistent, well-defined resource-level metadata."
+  examples:
+    - role: "Researcher"
+      description: "I select a suitable repository that will allow me to register the dataset and assign a persistent identifier. Even though the data itself cannot be openly shared due to its sensitive nature, the repository can host the metadata and provide a landing page describing the dataset and its access conditions.
+As a Radboudumc researcher, I choose the Radboud Data Repository for this purpose."
+
+- step_id: 8
+  status: "upcoming"
+  short_description: "Assess availability of your metadata"
+  description: "Identify, evaluate and improve the completeness and quality of their metadata to ensure it is accurate, consistent and ready for reuse and publication."
+  examples:
+    - role: "Researcher"
+      description: "Before I can register the dataset, I review the metadata requirements of the Radboud Data Repository to understand which information needs to be provided. I collect and prepare the necessary metadata."
+
+- step_id: 21
+  status: "upcoming"
+  short_description: "Define access conditions"
+  description: "Define and document the conditions under which data can be accessed and reused, including access levels, policies, licences and agreements, ensuring compliance with legal, ethical and FAIR requirements."
+  examples:
+    - role: "Researcher"
+      description: "One of the metadata components is clearly defined access conditions. Given the sensitive nature of the data, access is restricted and interested researchers are required to submit a request."
+
+- title: "Dataset is citable"
+  status: "destination"
+  icon: "🎯"
+  short_description: "I proceed to register the dataset and provide the required metadata, including title, authors, description, keywords and access conditions. The repository then assigns a persistent identifier, which I can use to cite the dataset in my publication."

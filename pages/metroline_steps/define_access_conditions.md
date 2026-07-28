@@ -6,6 +6,7 @@ permalink: /metroline_steps/define_access_conditions
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***The “A” of FAIR – As Open as Possible, as Closed as Necessary. ([Landi et al. 2019](https://doi.org/10.1162/dint_a_00027))***
 >
@@ -219,15 +220,6 @@ In case of restricted access data, the Geonovum [link for Non-open data](https:/
 - **Rights.** Additional information about the data access conditions can be specified. In case of restricted access you 
 can add a link to the Data Use Agreement (human-readable) or encoded use conditions (machine-readable). 
 See [Step 3](#step-3---prepare-necessary-documentation) for information about machine-readable access conditions.
-
-## Expertise requirements for this step
-The following role from [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team)) is necessary for this step:
-- **Researcher.** Knowledge about the data/research, and the domain best practices, responsible for implementation of 
-accessibility policy and following-through (e.g. granting access).
-- **Data steward.** Implement or support the Researcher in implementation by providing knowledge about FAIR practices 
-and applicable accessibility regulations.
-- **Data curator.** Support the Researcher in the implementation.
-- **Legal expert.** Advise the Researcher on legal aspects of data sharing and reuse.
 
 ## Practical examples from the community 
 {% include metroline_steps/looking_for_examples.html %}

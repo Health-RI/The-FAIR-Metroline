@@ -6,6 +6,7 @@ permalink: /metroline_steps/design_solution_plan
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***FAIRification planning should not only focus on the selection of suitable technologies or standards, but also on prioritising the effort required to raise the FAIR level of the targeted resources for the realisation of the related objectives. [A goal-oriented method for FAIRification planning](https://doi.org/10.21203/rs.3.rs-3092538/v1)***
 >
@@ -82,14 +83,6 @@ For example, when making data FAIR, datasets can be split into smaller sets, imp
 | Improve metadata | Analyse metadata semantics           | Semantic specialist, domain expert, data Steward | Week 2   | [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics)                             | To do       |
 
 **Example:** For GO-Plan, a template was developed to facilitate the identification of FAIRification objectives. This template has been successfully applied in two tutorials, with participants reporting that it effectively guided them through the process.
-
-## Expertise requirements for this step 
-Designing a solution plan is typically a collaborative effort by a range of experts, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team).
-* **FAIR experts.** Provide guidance on best practices, standards, and methodologies.
-* **Domain experts.** Define data semantics, quality standards, and use cases.
-* **Data stewards.** Ensure data and metadata comply with FAIR principles.
-* **IT specialists.** Support infrastructure needs, interoperability, and tool integration.
-* **Project managers.** Oversee planning, stakeholder coordination, and implementation tracking.
 
 ## Practical examples from the community 
 This section should show the step applied in a real project. Links to demonstrator projects. 

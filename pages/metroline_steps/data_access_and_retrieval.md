@@ -6,6 +6,7 @@ permalink: /metroline_steps/data_access_and_retrieval
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Data locked away benefits no one, but when data is shared responsibly and carefully with bright minds everywhere, we get results that will give us all a healthier future. ([UK Biobank is safely sharing health data to drive medical research](https://www.theguardian.com/science/2025/apr/18/uk-biobank-is-safely-sharing-health-data-to-drive-medical-research))***
 >
@@ -139,15 +140,6 @@ A checksum is a short digital code that works like a fingerprint for a file, let
 {% include info-box.html type="example" title="Example - step 5" text="
 The researcher verifies file integrity using checksums and stores derived data and metadata in a secure institutional environment.
 "%}
-
-## Expertise requirements for this step 
-You may need access to or support from:
-* **Data Stewards.** Ensure proper metadata and FAIR practices.
-* **Legal and ethical advisors.** Interpret GDPR and other ethical constraints). 
-* **IT professionals.** Manage secure storage and encrypted transfers.
-* **Domain experts.** Assess data relevance and validity.
-
-Refer to [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team) for role descriptions and team structure advice.
 
 ## Practical examples from the community 
 {% include metroline_steps/looking_for_examples.html %}

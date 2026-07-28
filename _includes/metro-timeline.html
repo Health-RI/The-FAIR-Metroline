@@ -13,6 +13,7 @@
       {% endif %}
     {% endfor %}
   {% endif %}
+
   
   <!-- Use metroline step data if available, otherwise use stop data directly -->
   {% assign display_title = stop.title | default: metroline_step.title %}

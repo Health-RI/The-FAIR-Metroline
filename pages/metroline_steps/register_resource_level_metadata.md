@@ -8,6 +8,7 @@ permalink: /metroline_steps/register_resource_level_metadata
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Perfectly good data resources may go unused simply because no one knows they exist. There are many ways in which digital resources can be made discoverable, including indexing. ([GO FAIR](https://www.go-fair.org/fair-principles/f4-metadata-registered-indexed-searchable-resource/))***
 > 
@@ -142,19 +143,7 @@ The final step involves entering the metadata for each resource into the chosen 
 #### Example 
 Eva followed the [instructions](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279150593) for onboarding data in the Health-RI data catalogue to register the metadata, which is now [available](https://catalogus.healthdata.nl/datasets/2a34108d-6ff8-4b88-aaa5-51f51f68d489). 
 
-Eva entered the biosample data into the BBMRI Catalogue Form, which she [downloaded](), and submitted it to the [Health-RI Service Desk](https://www.health-ri.nl/health-ri-servicedesk). The metadata for biosample data were successfully registered, see  
-[BBMRI-ERIC Directory](https://directory.bbmri-eric.eu/ERIC/directory/#/collection/bbmri-eric:ID:NL_RB:collection:155?search=PRISMA).
-
-## Expertise requirements for this step 
-The level of expertise required for this step will depend on several factors:
-* your department’s familiarity with data-sharing practices;
-* your personal experience with metadata catalogues and metadata elements relevant to your research domain;
-* availability of metadata catalogues within your community.
-
-Depending on these variables, selecting the appropriate metadata catalogue may be a straightforward process or may require input from multiple experts. Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
-* **Researcher with domain knowledge.** Someone that understands the project, study and data to create detailed and comprehensive metadata.
-* **FAIR data steward.** Specialist who can advice on the metadata catalogues to use and can provide advice on how to fill in metadata accurately.
-* **Infrastructure professional.** When no suitable metadata catalogue is available or if you need to connect with federated catalogues (such as the [Health-RI Data Catalogue](https://healthdata.nl/)), specialised IT knowledge may be required. This is particularly important when exposing metadata on the web via a [FAIR Data Point](https://www.fairdatapoint.org/) or integrating with other systems.
+Eva entered the biosample data into the [BBMRI Catalogue Form](https://github.com/molgenis/molgenis-emx2/raw/master/docs/resources/BBMRI-NL_catalogue_form.docx) and sent it to MOLGENIS support (see [Getting started](https://catalogue.bbmri.nl/BBMRI-ERIC/pages/#/Getting%20Started)). The metadata for biosample data were successfully registered, in the [BBMRI-ERIC Directory](https://directory.bbmri-eric.eu/ERIC/directory/#/collection/bbmri-eric:ID:NL_RB:collection:155?search=PRISMA).
 
 ## Practical examples from the community 
 ***[The Netherlands ME/CFS Cohort and Biobank Consortium](https://www.health-ri.nl/en/netherlands-mecfs-cohort-and-biobank-nmcb-consortium)***

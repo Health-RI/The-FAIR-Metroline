@@ -6,6 +6,7 @@ permalink: /metroline_steps/design_ecrf
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***… It is increasingly recognized that the design of the CRF or eCRF is a key quality step in ensuring the data required by the protocol, regulatory compliance and/or safety needs/ comments, study scientific-specific hypothesis attributes, site work flow, and cross-checking of data items within a form or across different forms are addressed. ([Clinical data management: Current status, challenges, and future directions from industry perspectives](https://doi.org/10.2147/OAJCT.S8172))***
 > 
@@ -231,13 +232,6 @@ Now, when you enter data, you can select the item from the ontology's list. For 
 ### Special step 2 - Tools to help you build eCRFs
 * **iCRF Generator.** The [iCRF Generator](https://github.com/aderidder/iCRFGenerator/) is a tool that generates eCRFs for various EDC systems such as Castor EDC and REDCap from codebooks published in ART-DECOR and OpenEHR. When codebooks are properly annotated, their annotations are incorporated into the generated CRFs in accordance with the methods described above.
 * **Codebook to Castor/LimeSurvey.** Codebook to Castor/LimeSurvey. Developed by Amsterdam UMC, this tool converts an Excel-based codebook into a format compatible with RadboudUMC’s Castor Offline Design converter, which then generates a Castor-ready XML file. Nowadays, the tool also has limited LimeSurvey support. Currently, the tool is only available within Amsterdam UMC.
-
-## Expertise requirements for this step
-Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
-* **Researcher with domain knowledge.** Specifies the items that need to be collected. 
-* **Data steward with EDC knowledge/ data manager.** Builds the forms in the EDC system. They are also in charge of setting up user access and offer technical help to researchers and ensure data integrity and regulatory compliance. 
-* **FAIR data steward.** Can support team in making eCRF more FAIR. 
-* **Data entry person.** Offers insight into what works and what doesn’t in real-world data collection settings, especially when interacting with patients. While not directly building the forms, their input helps ensure that the eCRF is user-friendly, clear and suitable for practical use. 
 
 ## Practical examples from the community
 * **VASCA registry**. For more information see the following publications:

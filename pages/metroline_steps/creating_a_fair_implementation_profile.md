@@ -6,6 +6,7 @@ permalink: /metroline_steps/creating_a_fair_implementation_profile
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Ready-made and well-tested FIPs created by trusted communities will find widespread reuse among other communities and could vastly accelerate decision making on well-informed implementations of the FAIR Principles within and particularly between domains. [Reusable FAIR Implementation Profiles as Accelerators of FAIR Convergence](https://link.springer.com/chapter/10.1007/978-3-030-65847-2_13)***
 >
@@ -43,12 +44,6 @@ The FIP Wizard provides a more advanced and structured environment. You will nee
 
 ### Step 3 - Publish your FIP for reuse
 Once you’ve created your FIP using the FIP Wizard, you can publish it to make it available for reuse. When you choose to publish, the Wizard packages your FIP as a machine-actionable nanopublication and submits it to the public nanopublication network. After publication, your FIP and the FAIR-enabling resources it references become automatically searchable and reusable through [FAIR Connect](https://fairconnect.pro/) and [Nanodash](https://nanodash.knowledgepixels.com/). 
-
-## Expertise requirements for this step 
-Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
-* researcher with domain knowledge;
-* semantic expert / metadata expert;
-* ELSI expert for e.g. licensing questions.
 
 ## Practical examples from the community 
 * The Virus Outbreak Data Network ([VODAN](https://www.go-fair.org/implementation-networks/overview/vodan/))-Africa is a joint activity of CODATA, RDA, WDS, and GO FAIR which has implemented FIPs for their [VODAN-Africa project](https://fip-wizard.ds-wizard.org/projects/9cbf831d-5536-4b97-a5c6-f00522f9ec6b).

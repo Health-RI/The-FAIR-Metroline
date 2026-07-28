@@ -89,7 +89,7 @@ For each letter, gather the terms that belong to that letter group.
 
 {% comment %}
 Each glossary entry receives an id so the tooltip system
-and deep links (e.g. /glossary/#api) can link directly to it.
+and deep links (e.g. /glossary#api) can link directly to it.
 {% endcomment %}
 <div id="{{ item.term | downcase | slugify }}" class="glossary-entry">
 

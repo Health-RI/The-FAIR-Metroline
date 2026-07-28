@@ -1,0 +1,62 @@
+// Compact metadata bar shown at the top of each metroline step page
+.step-metadata {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 1.5rem;
+  border-left: 3px solid #328cc1;
+  border-radius: 0 6px 6px 0;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0 1.25rem;
+  background-color: #f5f8fd;
+  font-size: 0.875em;
+}
+
+.step-metadata-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.step-metadata-label {
+  font-weight: 700;
+  color: #183d76;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+
+  i {
+    color: #328cc1;
+    margin-right: 0.4em;
+  }
+}
+
+.step-metadata-value {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+// Keyword and role pills — outlined
+.step-metadata-tag {
+  display: inline-block;
+  padding: 0.2em 0.75em;
+  border-radius: 1rem;
+  border: 1.5px solid #b8d0f0;
+  background-color: transparent;
+  color: #183d76;
+
+  &--role {
+    border-color: #93c5fd;
+    color: #1e40af;
+  }
+}
+
+// Audience chips — filled green with checkmark
+.step-metadata-audience-chip {
+  display: inline-block;
+  padding: 0.2em 0.75em;
+  border-radius: 1rem;
+  background-color: #bbf7d0;
+  color: #065f46;
+  font-weight: 500;
+}

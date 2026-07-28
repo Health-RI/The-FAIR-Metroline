@@ -6,6 +6,7 @@ permalink: /metroline_steps/transform_and_expose_fair_metadata
 {% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Data that is not exposed in a standardised, machine-readable way might as well not exist. [The FAIR Guiding Principles for scientific data management and stewardship](https://www.nature.com/articles/sdata201618)***
 >
@@ -88,14 +89,6 @@ Start by transforming metadata into a structured format using semantic web stand
 * **[FAIR Data Station](https://fairds.fairbydesign.nl/).** Manages [ISA metadata](https://isa-tools.org/) with RDF output. This output needs to be exposed in a triplestore. 
 * **[Castor EDC (FDP Component)](https://fdp.castoredc.com/fdp).** Contains a template to fill out metadata and exposes that information in a way that is semantically compatible with DCAT and FDP specifications. 
 "%}
-
-## Expertise requirements for this step 
-Transforming and exposing FAIR (meta)data effectively requires a mix of domain knowledge, semantic expertise and technical skills. Ideally, teams should involve:
-* **Domain experts.** Provide context and ensure that the transformed (meta)data accurately reflects the research content.
-* **Semantic modellers or ontologists.** Advise on selecting and applying the right ontologies, vocabularies and semantic models.
-* **FAIR data stewards or infrastructure professionals.** Coordinate the process and set up the systems needed to store and expose data and metadata in a FAIR-compliant way.
-
-While some basic exposure tasks may not require advanced technical knowledge, setting up robust pipelines (e.g. triplestores, FAIR Data Points) and ensuring semantic interoperability benefits greatly from the combined expertise above.
 
 ## Practical examples from the community
 **VASCA Registry (Castor EDC + FAIR Data Point)**<br>

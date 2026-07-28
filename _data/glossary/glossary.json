@@ -144,6 +144,12 @@
     "aliases": []
   },
   {
+    "term": "Citizen",
+    "definition": "Individual participating in or contributing to research activities, typically outside a formal professional role.",
+    "sources": [],
+    "aliases": []
+  },
+  {
     "term": "Clinical data",
     "definition": "Clinical data is data that has to do with the health or treatment of people. They may come from clinical research, where treatments or other medical interventions are tested on human subjects, or from clinical practice, where Healthcare Professionals or patients collect data about their patients or in the case patients themselves.",
     "sources": [
@@ -313,6 +319,12 @@
     ]
   },
   {
+    "term": "Data collection specialist",
+    "definition": "Collects and records data in operational or clinical settings, ensuring accuracy and usability, often through direct interaction with participants or patients.",
+    "sources": [],
+    "aliases": []
+  },
+  {
     "term": "Data curation",
     "definition": "Managed process throughout the data lifecycle, by which data/data collections are cleansed, documented, standardised, formatted and inter-related. The goal of curation is to manage and promote the use of data from its point of creation to ensure it is fit for contemporary purpose and available for discovery and re-use. For dynamic datasets this may mean continuous enrichment or updating to keep it fit for purpose. Special forms of curation may be available in data repositories. The data curation process itself must be documented as part of curation. Thus curation and provenance are highly related.",
     "sources": [
@@ -426,6 +438,12 @@
         "url": "https://terms.codata.org/rdmt/re-use"
       }
     ],
+    "aliases": []
+  },
+  {
+    "term": "Data scientist",
+    "definition": "Analyses data using statistical and computational methods to generate models, insights and interpretations.",
+    "sources": [],
     "aliases": []
   },
   {
@@ -616,6 +634,12 @@
       "EHR",
       "Electronic Health Record (EHR)"
     ]
+  },
+  {
+    "term": "ELSI expert",
+    "definition": "Advises on ethical, legal and societal implications of data use and research practices.",
+    "sources": [],
+    "aliases": []
   },
   {
     "term": "European Commision Joint Research Centre",
@@ -834,6 +858,12 @@
     ]
   },
   {
+    "term": "Infrastructure professional",
+    "definition": "Manages and maintains computing infrastructure, including systems, storage, networking and deployment environments.",
+    "sources": [],
+    "aliases": []
+  },
+  {
     "term": "Interoperable",
     "definition": "The ability of organisations as well as software applications or devices from the same manufacturer or different manufacturers to interact towards mutually beneficial goals, involving the exchange of information and knowledge without changing the content of the data between these organisations, software applications or devices, through the processes they support.",
     "sources": [
@@ -857,17 +887,6 @@
       "KPI",
       "Key Performance Indicator (KPI)"
     ]
-  },
-  {
-    "term": "Keywords",
-    "definition": "Word that deals with a topic in a text and that are used for topic development and topic searches.",
-    "sources": [
-      {
-        "label": "Wikidata",
-        "url": "https://www.wikidata.org/wiki/Q12310022"
-      }
-    ],
-    "aliases": []
   },
   {
     "term": "knowledge management",
@@ -917,7 +936,7 @@
         "url": "https://terms.codata.org/rdmt/machine-actionable"
       }
     ],
-    "aliases": []
+    "aliases": ["Machine-actionable"]
   },
   {
     "term": "Machine-readable data",
@@ -928,7 +947,7 @@
         "url": "https://terms.codata.org/rdmt/machine-readable"
       }
     ],
-    "aliases": []
+    "aliases": ["Machine-readable"]
   },
   {
     "term": "Material Transfer Agreement",
@@ -1210,6 +1229,18 @@
     ]
   },
   {
+    "term": "Policy specialist",
+    "definition": "Develops, interprets and applies policies and frameworks to guide data management, sharing and FAIR practices.",
+    "sources": [],
+    "aliases": []
+  },
+  {
+    "term": "Project manager",
+    "definition": "Coordinates planning, resources, stakeholders and delivery to ensure project objectives are met.",
+    "sources": [],
+    "aliases": []
+  },
+  {
     "term": "Pseudonymous data",
     "definition": "‘pseudonymisation’ means the processing of personal data in such a manner that the personal data can no longer be attributed to a specific data subject without the use of additional information, provided that such additional information is kept separately and is subject to technical and organisational measures to ensure that the personal data are not attributed to an identified or identifiable natural person.",
     "sources": [
@@ -1290,6 +1321,12 @@
     "aliases": []
   },
   {
+    "term": "Researcher",
+    "definition": "Provides domain expertise, formulates research questions and interprets findings within a scientific context.",
+    "sources": [],
+    "aliases": []
+  },
+  {
     "term": "Resource Description Framework",
     "definition": "RDF is a standard model for data interchange on the Web. RDF has features that facilitate data merging even if the underlying schemas differ, and it specifically supports the evolution of schemas over time without requiring all the data consumers to be changed. RDF extends the linking structure of the Web to use URIs to name the relationship between things as well as the two ends of the link (this is usually referred to as a “triple”). Using this simple model, it allows structured and semi-structured data to be mixed, exposed, and shared across different applications.",
     "sources": [
@@ -1367,6 +1404,12 @@
         "url": "https://www.bath.ac.uk/guides/working-with-secondary-data"
       }
     ],
+    "aliases": []
+  },
+  {
+    "term": "Semantic expert",
+    "definition": "Designs and applies metadata models, ontologies and vocabularies to ensure interoperability and machine readability.",
+    "sources": [],
     "aliases": []
   },
   {
@@ -1477,6 +1520,18 @@
       "SIS",
       "Subject Information Sheet (SIS)"
     ]
+  },
+  {
+    "term": "Technical specialist",
+    "definition": "Implements and integrates specific technical solutions such as identifiers, APIs or system components within a broader infrastructure.",
+    "sources": [],
+    "aliases": []
+  },
+  {
+    "term": "Trainer",
+    "definition": "Designs and delivers training and capacity building to support effective data and tool use.",
+    "sources": [],
+    "aliases": []
   },
   {
     "term": "Trusted repository",
