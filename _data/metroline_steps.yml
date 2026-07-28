@@ -35,11 +35,11 @@
     data_holder: true
     data_user: true
 - id: 4
-  title: Organise Training
+  title: Identify and select training
   summary: This page brings forward the training and educational elements available to guide the team in their journey through the Metroline subsequent steps.
-  url: metroline_steps/organise_training
+  url: metroline_steps/identify_and_select_training
   icon: ":weight_lifting:"
-  status: READY FOR REVIEW
+  status: RELEASED
   keywords:
     - training
     - skills
