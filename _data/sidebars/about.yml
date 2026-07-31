@@ -1,3 +1,5 @@
 subitems:
   - title: About
     url: /about
+  - title: History
+    url: /about/history
