@@ -172,14 +172,6 @@ With your SIS and ICF fully FAIR ready and approved by your data protection offi
 * An accredited MREC for Non-WMO studies 
 * An accredited MREC or the CCMO for WMO studies
 
-## Expertise requirements for this step 
-The following role from [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team) is necessary for this step:
-* ELSI expert 
-  * National level
-    * [The ELSI servicedesk](https://elsi.health-ri.nl/) for general information and questions 
-  * Local level
-    * Amsterdam UMC - Privacy Bescherming & Informatie Beveiliging (<privacy@amsterdamumc.nl>)
-
 ## Practical examples from the community 
 * [COMPRAYA’s SIS](https://www.compraya.nl/files/e1-e2ppicomprayastudie_m20com_v1.9_14032023_clean.pdf) (in Dutch) contains a section about, for example, future use of data and materials (page 7).
 

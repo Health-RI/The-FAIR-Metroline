@@ -184,13 +184,6 @@ pid: https://n2t.net/hdl:20.500.12633/1HK1DTv1wPt3a
 ```
 " %}
  
-
-## Expertise requirements for this step 
-Based on the expertise described in the [Metroline: Build the team]({{site.baseurl}}/metroline_steps/build_the_team), the following expertise may be relevant:
-* **Data specialist.** Understands which identifiers are needed. 
-* **Technical specialist.** Can generate or integrate identifiers in systems. 
-* **Policy specialist.** Ensures identifier use follows agreed rules.
-
 ## Practical examples from the community 
 {% include metroline_steps/looking_for_examples.html %}
 

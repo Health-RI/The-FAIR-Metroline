@@ -1,6 +1,6 @@
 ---
-title: Organise training
-permalink: /metroline_steps/organise_training
+title: Identify and select training
+permalink: /metroline_steps/identify_and_select_training
 ---
 
 {% include glossary_tooltips.html %}
@@ -13,7 +13,7 @@ permalink: /metroline_steps/organise_training
 > {{ current_step.summary }}
 
 ## Short description 
-After building your team ([Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team)), it is a good idea to assess their training needs. This vital step involves a comprehensive assessment to pinpoint any missing expertise or skill gaps within the different roles in your team. This page creates a broad overview of training solutions that support the development of core competencies in FAIR data management. This page offers guidance on how to locate targeted training options for all roles within a given team. Specialised training that is needed for a specific Metroline Step are listed in the corresponding pages.
+Before starting the actual FAIRification, assess your team's training needs. This vital step involves a comprehensive assessment to pinpoint any missing expertise or skill gaps within the different roles in your team. This page creates a broad overview of training solutions that support the development of core competencies in FAIR data management. This page offers guidance on how to locate targeted training options for all roles within a given team. Specialised training that is needed for a specific Metroline Step are listed in the corresponding pages.
 
 ## Why is this step important
 The journey to making data FAIR is intricate, demanding both a comprehensive understanding of the FAIR principles and the practical skills for their implementation. A specialised FAIRification training will empower your team members to:  
@@ -24,25 +24,25 @@ The journey to making data FAIR is intricate, demanding both a comprehensive und
 
 ## How to
 
-### Step 1 - Consider your roles and/or those of team members
-Before diving into specific training modules, it's beneficial to understand the broader landscape of FAIR training for each specific role in your team. A comprehensive overview of roles can be found in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), and different types Data Stewards are described in [Metroline step: Have a FAIR data steward on board]({{site.baseurl}}/metroline_steps/have_a_fair_data_steward_on_board). In case your FAIRification project is on existing data you can also consider doing a Pre-FAIR assessment (see [Metroline step: Pre-FAIR Assessment]({{site.baseurl}}/metroline_steps/pre_fair_assessment)). This assessment can help you identify potential knowledge gaps within your team, allowing you to determine appropriate roles and address any training needs. Once you have a clearer picture of the role(s) in your team and you have pinpointed knowledge gaps, you can more effectively suggest and/or select training modules that address specific needs. 
+### Step 1 - Assess training needs
+Before diving into specific training modules, it's beneficial to understand the broader landscape of FAIR training for each specific role in your team. In case your FAIRification project is on existing data you can also consider doing a Pre-FAIR assessment (see [Metroline step: Pre-FAIR Assessment]({{site.baseurl}}/metroline_steps/pre_fair_assessment)). This assessment can help you identify potential knowledge gaps within your team, allowing you to determine appropriate roles and address any training needs. Once you have a clearer picture of the role(s) in your team and you have pinpointed knowledge gaps, you can more effectively suggest and/or select training modules that address specific needs. 
 
 Here are some of the different roles that people have in research projects and FAIRification of data: 
 * **Researchers.** Researchers are responsible for conducting experiments and generating new knowledge. Responsibilities include collecting, cleaning, and analyzing data. Researchers need to have a good understanding of the FAIR principles in order to make sure that their data is accessible, interoperable, and reusable. 
 * **Data stewards.** Data Stewards guide researchers to achieve the FAIR principles and meet funder’s requirements. They need to have a deep understanding of the FAIR principles in order to ensure that data is well-organised and easy to find. Within a research group, Data Stewards are often responsible for managing and curating data. 
-* **Trainer.** If you yourself are the trainer or educator, you will need specific Train-the-Trainer resources. Also, joining other colleagues' training and reviewing their materials can be very helpful to build your expertise. Lastly, any course on education and pedagogy can enrich the content and the dynamics of the training you provide. 
+* **Trainer.** If you yourself are the trainer or educator, you may benefit from attending a specialised Train-the-Trainer course or using Train-the-Trainer resources to strengthen your teaching design and delivery skills. Also, joining other colleagues' training and reviewing their materials can be very helpful to build your expertise. Lastly, any course on education and pedagogy can enrich the content and the dynamics of the training you provide. 
 
 
-### Step 2 - Criteria for selecting appropriate FAIR training
+### Step 2 - Select the appropriate FAIR training
 The next step is to reflect on the requirements, expectations, and resources needed to participate in a particular training. Here are some of the things to consider:
 * **The level of expertise required.** Some training programs are designed for beginners, while others are designed for more experienced professionals. 
 * **The focus of the training.** Some training programs may emphasise technical aspects of FAIRification, while others focus on the policy and legal aspects. Relevant training programs may vary depending on an individual's professional role and career trajectory. 
-* **The format of the training.** Training can be delivered in a variety of formats, including online courses, workshops, and conferences. 
+* **The format of the training.** Training can be delivered in a variety of formats, including online courses, workshops, webinars, hands-on sessions, BYOD and tutorials. 
 * **The time and resources available.** Consider the time you can realistically dedicate as well as practical requirements such as scheduling and registration. While many trainings are free, they may require advance sign-up. 
 
 For more tailored advice, it can be helpful to consult a FAIR training coordinator at your research institute for any training recommendations. If your institute does not have a FAIR training coordinator, you can contact your research support department or your local Digital Competence Center for assistance.
 
-### Step 3 - Where to find the appropriate training
+### Step 3 - Identify training providers and resources
 In addition to identifying which skills are needed, it is also important to know where to look for training, depending on what particular resources you’re looking into. Here we present an overview of where to find certain resources. 
 
 #### Generic FAIR and RDM training
@@ -80,12 +80,6 @@ You can also consider joining a community of trainers.
 * [Research Software Training NL](https://researchsoftwaretraining.nl/about/) is a network bringing together and facilitating training organisations in the Netherlands in the areas of research software, programming skills, applied data science, computational skills and open source. 
 
 All of these resources are emerging to adapt and tailor FAIR data solutions to meet the specific needs and constraints of every team. Additionally, every step of the Metroline contains training links or information that could be of further use. Ultimately, also contact the Training Coordinator of your institution for more relevant advise. 
-
-## Expertise requirements for this step 
-The expertise required may depend on the training that will be followed, or the task that will be performed. Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
-* **Researcher.** Provides research data and discipline specific knowledge.
-* **Data steward.** Often, data stewards act as trainers for their research group, department, faculty, or university.
-* **Trainer.** Your institutional Training Coordinator that focuses on research data management (if available) knows which training is available for the different roles in the team. They can find or create and organise tailor-made training and evaluate the effectiveness and impact of training. 
 
 ## Practical examples from the community 
 ***Radboud University Medical Center (RadboudUMC)***<br>

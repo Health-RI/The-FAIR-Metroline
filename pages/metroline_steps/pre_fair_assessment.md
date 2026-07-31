@@ -145,11 +145,6 @@ To successfully do a pre-FAIR assessment, do the following:
 
 The final evaluation will give insight into the current FAIRness of your data. Depending on the tool used, you may receive feedback on how to improve the FAIRness of your data. Thus, the outcome of the pre-FAIR assessment helps you determine the next steps to achieve your FAIRification goals.
 
-## Expertise requirements for this step
-The expertise required may depend on the assessment tool you want to use. Experts that may need to be involved, as described in [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team), are described below.
-* **FAIR data stewards.** Specialist who can help filling out the surveys and questionnaires.
-* **Research software engineers.** Specialists who can help running some of the specialised software.
-
 ## Practical examples from the community
 For an applied example of The FAIR Evaluator, see [Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic](https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-022-00263-7).
 

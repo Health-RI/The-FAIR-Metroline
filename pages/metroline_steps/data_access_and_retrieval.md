@@ -141,15 +141,6 @@ A checksum is a short digital code that works like a fingerprint for a file, let
 The researcher verifies file integrity using checksums and stores derived data and metadata in a secure institutional environment.
 "%}
 
-## Expertise requirements for this step 
-You may need access to or support from:
-* **Data Stewards.** Ensure proper metadata and FAIR practices.
-* **Legal and ethical advisors.** Interpret GDPR and other ethical constraints). 
-* **IT professionals.** Manage secure storage and encrypted transfers.
-* **Domain experts.** Assess data relevance and validity.
-
-Refer to [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team) for role descriptions and team structure advice.
-
 ## Practical examples from the community 
 {% include metroline_steps/looking_for_examples.html %}
 

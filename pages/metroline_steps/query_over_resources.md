@@ -114,14 +114,6 @@ In [Wikidata](https://www.wikidata.org), you can visualise query results in diff
 "%}
 
 
-## Expertise requirements for this step
-To successfully perform this step, you may need help from the following experts:
-* **Researcher/domain expert.** Uses domain knowledge to formulate queries and interpret results.
-* **Data scientist.** Executes queries, processes results and handles federated queries.
-* **Semantic expert.** Ensures correct use of metadata, vocabularies and ontologies for queries.
-
-See [Metroline Step: Build the Team]({{site.baseurl}}/metroline_steps/build_the_team) for more information.
-
 ## Practical examples from the community
 **[SPHN Data Exploration and Analysis System (DEAS)](https://sphn.ch/2024/10/17/sphn-launches-a-new-cross-hospital-data-query-tool-deas/)**. 
 <br>DEAS is a cross-hospital federated query tool developed by the Swiss Personalized Health Network (SPHN) to replace the previous Federated Query System. It enables researchers to securely query aggregated clinical data from multiple Swiss university hospitals without moving patient-level data.
