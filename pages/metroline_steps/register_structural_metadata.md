@@ -221,8 +221,8 @@ For surveys, patient registries and other data types, it can be helpful to expli
    caption="ART-DECOR view of structural metadata describing an example dataset’s variables." %}
 
 Depending on your field and data type, different tools may be available. Most of these tools support interoperability, which is also essential for FAIR data practices:
-* **Clinical studies and patient registries.** ART-DECOR allows you to publish structured metadata about your dataset, including data elements in XML format (see example [here](https://art-decor.org/ad/#/covid19f-/datasets/dataset)).
-* **Patient Registries.** [ERDRI.mdr](https://eu-rd-platform.jrc.ec.europa.eu/mdr/) is a metadata repository that enables the publication of sampled data elements.
+* **Clinical studies and patient registries.** [ART-DECOR]({{site.baseurl}}/art-decor) allows you to publish structured metadata about your dataset, including data elements in XML format (see example [here](https://art-decor.org/ad/#/covid19f-/datasets/dataset)).
+* **Patient Registries.** [ERDRI.mdr]({{site.baseurl}}/erdri-mdr) is a metadata repository that enables the publication of sampled data elements.
 * **Survey and/or any tabular datasets (rows and columns).** [DDI](https://ddialliance.org/) provides tools to convert your codebook into RDF or XML. Ideally, these files should be hosted in repositories that support these formats, but they can also be shared alongside your data following the guidance above.
 
 Make sure that, when structural metadata is shared separately from the dataset itself, the dataset’s resource-level metadata includes clear and maintained links to the structural metadata. For example, if your institution shares resource-level metadata via a FAIR Data Point, make sure that links to the structural metadata are also included there.
@@ -250,8 +250,12 @@ Your original codebook file alone may not be sufficient to make your data intero
 </div>
 
 To achieve interoperable metadata, consider using the following tools:
-* **FAIR Data Station.** [FAIR Data Station](https://docs.fairbydesign.nl/docs/index.html) helps generate metadata templates for Biology and Omics Studies based on selected variables. It validates your codebook and produces an RDF file.
-* **CSV on the web.** [CSV on the web](https://csvw.org/) is a standard that describes the columns and rows of a given data file in csv. Therefore, it can be used across domains. The final format can be expressed in JSON or RDF and shared alongside your dataset.
+* **FAIR Data Station.** [FAIR Data Station]({{site.baseurl}}/fair-data-station) helps generate metadata templates for Biology and Omics Studies based on selected variables. It validates your codebook and produces an RDF file.
+* **CSV on the web.** [CSV on the web]({{site.baseurl}}/csv-on-the-web) is a standard that describes the columns and rows of a given data file in csv. Therefore, it can be used across domains. The final format can be expressed in JSON or RDF and shared alongside your dataset.
+
+Recommended tool pages:
+
+{% include toolassemblies/show-tiles.html ids="art-decor, erdri-mdr, fair-data-station, csv-on-the-web" %}
 
 If you have experience using other(s), please, leave a comment!
 

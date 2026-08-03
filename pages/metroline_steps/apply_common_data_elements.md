@@ -177,7 +177,7 @@ Setting up a **Rare Disease** Patient Registry to keep **clinical** information 
   * NINDS [Common Data Elements for neuroscience](https://commondataelements.ninds.nih.gov/)
   * CDISC’s [CDASH for clinical trials](https://www.cdisc.org/standards/foundational/cdash)
 * Second, if no domain specific requirements/recommendations are available or you need additional elements, consider searching for CDEs in a general repository such as the [NIH CDE Repository](https://cde.nlm.nih.gov/home). This repository includes endorsed elements that have been reviewed by the NIH CDE Governance Committee and comply with FAIR principles. 
-* Third, if you can't find any CDEs for reuse, ask an expert in the field to help you find appropriate standards or try looking for a well-accepted codebook in, for example, [ART-DECOR](https://decor.nictiz.nl/ad/#/home).
+* Third, if you can't find any CDEs for reuse, ask an expert in the field to help you find appropriate standards or try looking for a well-accepted codebook in, for example, [ART-DECOR]({{site.baseurl}}/art-decor).
 
 {% include info-box.html type="example" title="Example" text="
 The decision is made to collect data for the patient registry following the [Common Data Elements (CDEs) for Rare Diseases](https://eu-rd-platform.jrc.ec.europa.eu/set-of-common-data-elements_en), as required by the European Commission.

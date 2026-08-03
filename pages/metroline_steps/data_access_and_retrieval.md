@@ -89,9 +89,9 @@ Select an appropriate method, this may depend on dataset’s size, sensitivity a
   * [dbGaP](https://www.ncbi.nlm.nih.gov/gap) for genomic + phenotype data
   * [Zenodo](https://zenodo.org/) for general research data
 * **Secure file transfer.** For large and sensitive datasets, use secure and authenticated transfer tools, such as:
-  * [SURFfilesender](https://filesender.surf.nl/)  
+  * [SURFfilesender]({{site.baseurl}}/surf-filesender)  
   * [SFTP](https://learn.microsoft.com/en-us/connectors/sftpwithssh/) ([FCB014 - transferring data with SFTP](https://faircookbook.elixir-europe.org/content/recipes/accessibility/sftp.html))
-  * [Aspera](https://www.ibm.com/products/aspera) ([FCB015 - Downloading data with Aspera](https://faircookbook.elixir-europe.org/content/recipes/accessibility/aspera.html))
+  * [Aspera]({{site.baseurl}}/aspera) ([FCB015 - Downloading data with Aspera](https://faircookbook.elixir-europe.org/content/recipes/accessibility/aspera.html))
 * **Secure processing environments (SPEs).** In some cases, data cannot be downloaded due to sensitivity. Instead, access is provided within a secure remote environment where data can be analysed but not exported. This approach is common for highly sensitive data (e.g. health or population data) and represents a model where access is granted without full data transfer.
 
 For datasets hosted on large-scale cloud platforms (e.g. Azure), data access may be provided through dedicated services like object storage (e.g.Azure Blob), cloud-hosted APIs, or cloud data warehouses. These platforms support scalable, high-performance data access and are often used for storing large genomics, imaging, or real-world data. Depending on the configuration, you may retrieve data using authenticated URLs, SDKs, or cloud-native tools (e.g. aws s3 cp, gsutil, or Azure CLI). Always ensure you understand the access permissions, egress costs and security settings when retrieving data from cloud environments.
@@ -107,9 +107,13 @@ Representation may also vary:
   * Flat tables (e.g. CSV, TSV) are commonly used for structured tabular data and are easy to process in spreadsheets or statistical tools.
   * Graph-based formats (e.g. RDF, JSON-LD) represent complex relationships between entities and are ideal for semantic data or knowledge graphs. The choice of representation will affect downstream integration and analysis.
 * **Size and speed of transfer.** Large files may require dedicated bandwidth or scheduled transfer.
-* **Retry/resume capabilities.** For bulk transfer of multi-gigabyte datasets such as medical or omics datasets, use tools that can resume interrupted transfers instead of restarting (e.g. [Aspera Connect](https://www.ibm.com/docs/en/aspera-on-cloud?topic=admin-aspera-connect-transfer-client), [Globus](https://www.globus.org/data-transfer), [rsync](https://en.wikipedia.org/wiki/Rsync), [wget/curl](https://www.warp.dev/terminus/curl-vs-wget) with resume flags). This saves time and reduces the risk of incomplete downloads.
+* **Retry/resume capabilities.** For bulk transfer of multi-gigabyte datasets such as medical or omics datasets, use tools that can resume interrupted transfers instead of restarting (e.g. [Aspera Connect]({{site.baseurl}}/aspera), [Globus]({{site.baseurl}}/globus), [rsync](https://en.wikipedia.org/wiki/Rsync), [wget/curl](https://www.warp.dev/terminus/curl-vs-wget) with resume flags). This saves time and reduces the risk of incomplete downloads.
 * **Encryption in transit.** Sensitive datasets should always be encrypted during transfer with access controls.
 * **Remote access without transfer.** In some cases, data cannot be moved due to size or sensitivity. Access may instead occur via secure remote environments (e.g. virtual machines, data enclaves, or cloud-based analysis platforms) where analysis is performed without downloading the data locally. Logging and documentation of the retrieval process still apply.
+
+Recommended tool pages:
+
+{% include toolassemblies/show-tiles.html ids="surf-filesender, aspera, globus" %}
 
 Keep logs of the retrieval process, including timestamps, tools used, and any transfer issues.
 

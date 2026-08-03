@@ -73,7 +73,7 @@ You are now ready to take the next step with your metadata:
 ## Practical examples from the community 
 * The [Health-RI metadata schema](https://github.com/Health-RI/health-ri-metadata) is an example of **descriptive metadata** within the context of the [Dutch National Health Data Infrastructure](https://www.healthdata.nl/en).
 * An example of **administrative metadata** is provided by [ArrayExpress](https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-11745), which includes details such as experimental protocols.
-* The [FAIRGenomes codebook](https://decor.nictiz.nl/ad/#/fairgenomes-/project/overview), hosted on ART-DECOR, serves as an example of **structural metadata**.
+* The [FAIRGenomes codebook](https://decor.nictiz.nl/ad/#/fairgenomes-/project/overview), hosted on [ART-DECOR]({{site.baseurl}}/art-decor), serves as an example of **structural metadata**.
 
 ## Training
 * [Fundamentals of Scientific Metadata: Data and Metadata](https://carpentries-incubator.github.io/scientific-metadata/instructor/data-metadata.html#metadata)  

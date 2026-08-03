@@ -1,9 +1,10 @@
-{%- assign tool_ids = include.ids | split: ", " %}
+{%- assign ids_string = include.ids | join: ", " -%}
+{%- assign tool_ids = ids_string | split: ", " %}
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-{{ include.col | default: 2 }} g-4 mb-5 navigation-tiles">
     {%- assign tool_pages = site.pages | where:"type", "tool" %}
     {%- for tool_page in tool_pages %}
     {%- assign page_id = tool_page.title | slugify %}
-    {%- if tool_ids contains page_id %}
+    {%- if tool_ids contains page_id or tool_ids contains tool_page.tool_id %}
     <div class="col">
         <a href="{{ tool_page.url | relative_url }}" class="card h-100 tool-card" aria-label="Go to the {{ tool_page.title }} page">
             <div class="card-body">

@@ -36,8 +36,10 @@
         -
       Integrations with other tools:
         - <a href='https://helpdesk.castoredc.com/hc/en-us/categories/26179696201885-eConsent'>Castor eConsent</a> - Can be integrated with Castor EDC. Setup and security implications may vary per institute.
-      Guide:
+      FAIR Metroline guidance step:
         - <a href='https://fairmetroline.org/metroline_steps/design_ecrf'>FAIR Metroline</a> - Guide on building eCRFs aligned with FAIR principles
+        - <a href='https://fairmetroline.org/metroline_steps/apply_metadata_model'>FAIR Metroline</a> - Guidance on applying (meta)data models with EDC tooling
+        - <a href='https://fairmetroline.org/metroline_steps/transform_and_expose_fair_metadata'>FAIR Metroline</a> - Guidance on transforming and exposing FAIR (meta)data
     Contact point:
   gaps_and_needs:
     Gaps:
@@ -80,7 +82,7 @@
         - Castor - see <a href='https://support.mydre.org/portal/en/kb/articles/using-castor-in-python#Castor_EDC_API_in_R'>this guide</a>
         - vantage6 - see <a href='https://support.mydre.org/portal/en/kb/articles/federated-learning-on-mydre-with-vantage6'>this guide
         - <a href='https://support.mydre.org/portal/en/kb/mydre/applications/general'>Full list</a> of applications
-      Guide:
+      FAIR Metroline guidance step:
         -
     Contact point:
   gaps_and_needs:
@@ -121,8 +123,8 @@
         -
       Integrations with other tools:
         -
-      Guide:
-        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/apply_metadata_model'>FAIR Metroline</a> - Guidance on applying (meta)data models
       Other:
         -
     Contact point:
@@ -168,7 +170,7 @@
         - XNAT using <a href='https://gitlab.com/radiology/infrastructure/utils/xnat2cbio'>xnat2cbio</a> and following the <a href='https://zenodo.org/records/14900295'>EOSC4Cancer manual</a>
         - xOpat following the <a href='https://zenodo.org/records/14900295'>EOSC4Cancer manual</a>
         - cBioPortal can easily link to other tools, although the tools must support the appropriate security measures.
-      Guide:
+      FAIR Metroline guidance step:
         -
       Other:
         - <a href='https://www.health-ri.nl/en/health-ri-service-desk'>Health-RI support</a> - Service desk for users in the Health-RI hosted environment
@@ -212,7 +214,7 @@
         - <a href='https://www.slidescore.com/docs/api.html'>Developers documentation (API)</a>
       Integrations with other tools:
         - cBioPortal - Allows embedding the Slide Score viewer within the cBioPortal interface as described <a href='https://www.slidescore.com/news/a/031_cbioportal'>here</a>
-      Guide:
+      FAIR Metroline guidance step:
         -
     Contact point:
   gaps_and_needs:
@@ -260,7 +262,7 @@
         -
       Integrations with other tools:
         - cBioPortal using <a href='https://gitlab.com/radiology/infrastructure/utils/xnat2cbio'>xnat2cbio</a> and following the <a href='https://zenodo.org/records/14900295'>EOSC4Cancer manual</a>
-      Guide:
+      FAIR Metroline guidance step:
         -
       Other:
         - <a href='https://www.health-ri.nl/en/health-ri-service-desk'>Health-RI support</a> - Service desk for users in the Health-RI hosted environment
@@ -303,7 +305,7 @@
         - <a href='https://nf-co.re/oncoanalyser/2.2.0/'>Version 2.2.0 documentation</a>
       Integrations with other tools:
         - cBioPortal - Outputs can be converted to cBioPortal format for visualization
-      Guide:
+      FAIR Metroline guidance step:
         -
     Contact point:
   gaps_and_needs:
@@ -351,7 +353,7 @@
         -
       Integrations with other tools:
         - API access is available to subscribing organisations to programmatically access data management plans.
-      Guide:
+      FAIR Metroline guidance step:
         -
     Contact point: dmponline@dcc.ac.uk
   gaps_and_needs:
@@ -397,7 +399,7 @@
       Integrations with other tools:
         - FAIR Data Station - Metadata captured in FAIR Data Station can be linked to equipment runs and generated data files.
         - FAIRDOM-SEEK - Data and metadata generated during the experiment can be registered or published through FAIRDOM-SEEK-based platforms.
-      Guide:
+      FAIR Metroline guidance step:
         -
     Contact point:
   gaps_and_needs:
@@ -453,8 +455,9 @@
       Integrations with other tools:
         - LEAF - Equipment run metadata can be linked to the structured experiment metadata.
         - FAIRDOM-SEEK - FAIRDOM-SEEK supports importing metadata produced by FAIR Data Station in recent versions; exact mappings should be validated locally.
-      Guide:
-        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/register_structural_metadata'>FAIR Metroline</a> - Guidance on structural metadata
+        - <a href='https://fairmetroline.org/metroline_steps/transform_and_expose_fair_metadata'>FAIR Metroline</a> - Guidance on transforming and exposing FAIR metadata
     Contact point:
   gaps_and_needs:
     Gaps:
@@ -481,7 +484,6 @@
     Life cycle phases:
       - Preserve
       - Share
-      - Publish
     Domains using it:
       - Systems biology
       - Industrial biotechnology
@@ -508,7 +510,7 @@
       Integrations with other tools:
         - FAIR Data Station - Metadata produced by FAIR Data Station can be imported into FAIRDOM-SEEK in supported configurations.
         - LEAF - Equipment data and related files can be registered in FAIRDOM-SEEK when linked through project metadata and identifiers.
-      Guide:
+      FAIR Metroline guidance step:
         -
     Contact point:
   gaps_and_needs:
@@ -522,3 +524,1363 @@
     - fair-data-station
     - leaf
   biotools_id: seek_for_science
+
+- id: fair-data-point
+  page_img_url: https://www.google.com/s2/favicons?domain=fairdatapoint.org&sz=128
+  at_a_glance:
+    Tool name: FAIR Data Point
+    Short description: Metadata publication platform for exposing FAIR metadata through standard, machine-readable interfaces.
+    Purpose and core functionality: A FAIR Data Point (FDP) exposes metadata according to the FAIR principles. The reference implementation includes DCAT-based metadata layers and can be customised with SHACL shapes, for example to align metadata with the Health-RI metadata schema and expose it to catalogues such as the National Health Data Catalogue.
+    Type: Metadata publication platform
+    Life cycle phases:
+      - Preserve
+      - Share
+      - Reuse
+    Domains using it:
+      - Health
+      - Life sciences
+    Website:
+      - <a href='https://www.fairdatapoint.org/'>FAIR Data Point website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://fairdatapoint.readthedocs.io/en/latest/'>FAIR Data Point reference implementation documentation</a>
+        - <a href='https://health-ri.atlassian.net/wiki/spaces/FSD/pages/891518999'>Importing SHACLs in the FDP</a>
+      Supporting software:
+        - <a href='https://github.com/Health-RI/FairDataPointSchemaTool'>Health-RI FDP Schema Tool</a> - Tooling for working with FDP schema customisation.
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - DCAT - Used by the reference implementation for dataset metadata.
+        - SHACL - Used to customise and validate metadata schemas.
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - GraphDB - RDF data can be stored in a triplestore and described through a FAIR Data Point.
+        - FAIR-in-a-box - FAIR-in-a-box can publish transformed RDF and metadata through a FAIR Data Point.
+        - Castor EDC - Castor has FAIR Data Point related functionality for FAIR metadata exposure.
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/apply_metadata_model'>FAIR Metroline</a> - Guidance on applying and customising metadata models.
+        - <a href='https://fairmetroline.org/metroline_steps/transform_and_expose_fair_metadata'>FAIR Metroline</a> - Guidance on transforming and exposing FAIR metadata.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+    - graphdb
+    - fair-in-a-box
+    - castor
+  biotools_id:
+
+- id: fair-in-a-box
+  page_img_url: https://github.com/ejp-rd-vp.png?size=200
+  at_a_glance:
+    Tool name: FAIR-in-a-box
+    Short description: Automated FAIRification workflow for transforming structured data into RDF and publishing it with FAIR metadata.
+    Purpose and core functionality: FAIR-in-a-box is an automated tool for making data FAIR by transforming CSV data into RDF, commonly using the CARE-SM model for healthcare and registry information. The workflow can connect transformed RDF to a triplestore and FAIR Data Point, and can be customised by adapting scripts and YARRRML mappings for other semantic models.
+    Type: FAIRification workflow
+    Life cycle phases:
+      - Process
+      - Preserve
+      - Share
+    Domains using it:
+      - Health
+      - Rare diseases
+    Website:
+      - <a href='https://github.com/ejp-rd-vp/FiaB'>FAIR-in-a-box GitHub repository</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://github.com/ejp-rd-vp/FiaB'>FAIR-in-a-box repository</a>
+      Supporting software:
+        - <a href='https://github.com/ejp-rd-vp/cde-in-box'>CDE-in-a-box</a> - Predecessor workflow used for common data elements.
+      Scripts and workflows:
+        - YARRRML mappings - Used to describe transformations from source data to RDF.
+      Metadata and data standards:
+        - <a href='https://github.com/CARE-SM'>CARE-SM</a> - Clinical and Registry Entries Semantic Model used by the default workflow.
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - FAIR Data Point - Transformed metadata and data can be exposed through a FAIR Data Point.
+        - GraphDB - RDF output can be stored in a triplestore.
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/apply_metadata_model'>FAIR Metroline</a> - Guidance on applying FAIR (meta)data models.
+        - <a href='https://fairmetroline.org/metroline_steps/transform_and_expose_fair_metadata'>FAIR Metroline</a> - Guidance on transforming and exposing FAIR (meta)data.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+      - Model fit - Default examples focus on CARE-SM; other models require local mapping and workflow customisation.
+    User needs:
+      - Examples for adapting the workflow to additional semantic models.
+  compatible_with:
+    - fair-data-point
+    - graphdb
+  biotools_id:
+
+- id: ontotext-refine
+  page_img_url: https://www.google.com/s2/favicons?domain=ontotext.com&sz=128
+  at_a_glance:
+    Tool name: Ontotext Refine
+    Short description: Visual data transformation tool for mapping structured data to RDF schemas in GraphDB.
+    Purpose and core functionality: Ontotext Refine supports manual mapping of structured data to RDF schemas stored in GraphDB. Its visual interface helps users choose predicates and types, define datatypes and implement transformations from tabular or structured source data into RDF.
+    Type: RDF transformation tool
+    Life cycle phases:
+      - Process
+      - Preserve
+    Domains using it:
+      - Life sciences
+      - Cross-domain
+    Website:
+      - <a href='https://platform.ontotext.com/ontorefine/'>Ontotext Refine website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        -
+      Supporting software:
+        - GraphDB - Used as the RDF store and schema environment.
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - RDF - Target representation for transformed data.
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - GraphDB
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/apply_metadata_model'>FAIR Metroline</a> - Guidance on applying FAIR (meta)data models.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+    - graphdb
+  biotools_id:
+
+- id: openrefine
+  page_img_url: https://openrefine.org/img/openrefine_logo.svg
+  at_a_glance:
+    Tool name: OpenRefine
+    Short description: Desktop tool for cleaning, reconciling and transforming tabular data, including RDF transformation through extensions.
+    Purpose and core functionality: OpenRefine helps users inspect, clean and reconcile tabular data. With RDF extensions, it can be used to transform structured data and metadata into RDF, making it useful when applying semantic models or preparing FAIR metadata and data for exposure.
+    Type: Data cleaning and RDF transformation
+    Life cycle phases:
+      - Process
+      - Preserve
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://openrefine.org/'>OpenRefine website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://openrefine.org/docs'>OpenRefine documentation</a>
+      Supporting software:
+        - <a href='https://github.com/AtesComp/rdf-transform'>RDF Transform extension</a> - Extension for RDF transformations.
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - RDF - Supported through extensions for semantic transformation.
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - Ontology reconciliation services - Can be used to reconcile local terms with ontology terms.
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/transform_and_expose_fair_metadata'>FAIR Metroline</a> - Guidance on RDF transformation.
+        - <a href='https://fairmetroline.org/metroline_steps/use_ontologies_in_the_model'>FAIR Metroline</a> - Guidance on ontology mapping and validation.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id: openrefine
+
+- id: cedar-workbench
+  page_img_url: https://www.google.com/s2/favicons?domain=metadatacenter.org&sz=128
+  at_a_glance:
+    Tool name: CEDAR Workbench
+    Short description: Metadata template workbench for creating semantically rich, machine-actionable metadata.
+    Purpose and core functionality: CEDAR Workbench supports the creation of metadata templates and annotated metadata records. It helps users structure metadata consistently and produce semantically rich descriptions that can support FAIR publication and reuse.
+    Type: Metadata template workbench
+    Life cycle phases:
+      - Plan
+      - Collect
+      - Preserve
+      - Share
+    Domains using it:
+      - Life sciences
+      - Cross-domain
+    Website:
+      - <a href='https://metadatacenter.org/'>CEDAR Workbench website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://metadatacenter.org/tools-training/outreach-and-training/'>CEDAR training and outreach</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - Metadata templates - Used to capture structured, semantically annotated metadata.
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/transform_and_expose_fair_metadata'>FAIR Metroline</a> - Guidance on metadata transformation tools.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: graphdb
+  page_img_url: https://www.google.com/s2/favicons?domain=graphdb.ontotext.com&sz=128
+  at_a_glance:
+    Tool name: GraphDB
+    Short description: RDF database and SPARQL endpoint for storing, querying and managing knowledge graphs.
+    Purpose and core functionality: GraphDB is an RDF triplestore used to store semantic data and make it queryable through SPARQL. In FAIR workflows, it can hold transformed RDF data while metadata about the dataset is published through a FAIR Data Point or another catalogue.
+    Type: RDF triplestore
+    Life cycle phases:
+      - Preserve
+      - Share
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://graphdb.ontotext.com/'>GraphDB website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://graphdb.ontotext.com/documentation/'>GraphDB documentation</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - RDF
+        - SPARQL
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - FAIR Data Point - Dataset metadata can be published through an FDP while RDF data is stored in GraphDB.
+        - Ontotext Refine - Ontotext Refine can map structured data to RDF schemas in GraphDB.
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/transform_and_expose_fair_metadata'>FAIR Metroline</a> - Guidance on storing and exposing RDF data.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+    - fair-data-point
+    - ontotext-refine
+  biotools_id:
+
+- id: blazegraph
+  page_img_url: https://blazegraph.com/images/blazegraph_logo.png
+  at_a_glance:
+    Tool name: Blazegraph
+    Short description: RDF graph database that can be used as a SPARQL endpoint for linked data.
+    Purpose and core functionality: Blazegraph is an RDF graph database used to store and query semantic data. In FAIR workflows it can serve as a triplestore for RDF data, enabling SPARQL-based access and reuse.
+    Type: RDF triplestore
+    Life cycle phases:
+      - Preserve
+      - Share
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://blazegraph.com/'>Blazegraph website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        -
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - RDF
+        - SPARQL
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/transform_and_expose_fair_metadata'>FAIR Metroline</a> - Guidance on triplestores for FAIR data exposure.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: ardc-fair-self-assessment-tool
+  page_img_url: https://www.google.com/s2/favicons?domain=ardc.edu.au&sz=128
+  at_a_glance:
+    Tool name: ARDC FAIR Self Assessment Tool
+    Short description: Online self-assessment survey for estimating the FAIRness of research data.
+    Purpose and core functionality: The ARDC FAIR Self Assessment Tool is a short online survey that provides a visual indication of the FAIRness level of research data and links to resources that can help improve the result.
+    Type: FAIR assessment self-assessment
+    Life cycle phases:
+      - Plan
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://ardc.edu.au/resources/working-with-data/fair-data/fair-self-assessment-tool/'>ARDC FAIR Self Assessment Tool</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        -
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        -
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/pre_fair_assessment'>FAIR Metroline</a> - Guidance on pre-FAIR assessment tools.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: fair-data-maturity-model
+  page_img_url: https://www.google.com/s2/favicons?domain=zenodo.org&sz=128
+  at_a_glance:
+    Tool name: FAIR Data Maturity Model
+    Short description: RDA checklist and maturity indicator model for assessing FAIRness against FAIR principles and sub-principles.
+    Purpose and core functionality: The FAIR Data Maturity Model provides FAIR maturity indicators, guidelines and a spreadsheet-based assessment that can be used to score the FAIRness of data and metadata.
+    Type: FAIR assessment model
+    Life cycle phases:
+      - Plan
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://zenodo.org/records/3909563'>FAIR Data Maturity Model on Zenodo</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://zenodo.org/records/3909563/files/FAIR%20Data%20Maturity%20Model_%20specification%20and%20guidelines_v1.00.pdf?download=1'>Specification and guidelines</a>
+      Supporting software:
+        - <a href='https://zenodo.org/records/3909563/files/FAIR_evaluation_levels_v0.02.xlsx?download=1'>FAIR evaluation levels spreadsheet</a>
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - FAIR maturity indicators - Used to score FAIR implementation maturity.
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/pre_fair_assessment'>FAIR Metroline</a> - Guidance on pre-FAIR assessment tools.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: fip-wizard
+  page_img: logos/fip-wizard_transp.svg
+  at_a_glance:
+    Tool name: FIP Wizard
+    Short description: Web-based wizard for creating, publishing and comparing FAIR Implementation Profiles.
+    Purpose and core functionality: FIP Wizard helps communities document their FAIR Implementation Profile by capturing FAIR-enabling resources through a guided questionnaire. It can generate human-readable outputs and machine-actionable nanopublications that can be explored through services such as FAIR Connect and Nanodash.
+    Type: FAIR implementation profile tool
+    Life cycle phases:
+      - Plan
+      - Share
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://fip.fair-wizard.com/'>FIP Wizard website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://wiki.gofair.foundation/docs/fip/content.html'>FIP Wizard user guide</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - FAIR Implementation Profiles - Used to describe community implementation choices for FAIR.
+        - Nanopublications - Used for machine-actionable publication of FIPs.
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - FAIR Connect - Published FIPs and FAIR-enabling resources can be searched through FAIR Connect.
+        - Nanodash - Published FIPs can be explored as nanopublications.
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/creating_a_fair_implementation_profile'>FAIR Metroline</a> - Guidance on creating a FAIR Implementation Profile.
+        - <a href='https://fairmetroline.org/metroline_steps/pre_fair_assessment'>FAIR Metroline</a> - Listed as a self-assessment and FAIR implementation planning tool.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: fair-checker
+  page_img_url: https://www.google.com/s2/favicons?domain=fair-checker.france-bioinformatique.fr&sz=128
+  at_a_glance:
+    Tool name: FAIR-Checker
+    Short description: Web tool for automated FAIR metric checks on URLs and persistent identifiers.
+    Purpose and core functionality: FAIR-Checker provides a web interface for evaluating FAIR metrics by testing a URL or DOI. It returns scores for FAIR sub-principles and provides suggestions for improving failed checks.
+    Type: FAIR assessment tool
+    Life cycle phases:
+      - Plan
+      - Reuse
+    Domains using it:
+      - Life sciences
+      - Cross-domain
+    Website:
+      - <a href='https://fair-checker.france-bioinformatique.fr/'>FAIR-Checker website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        -
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - FAIR metrics - Used for automated FAIRness checks.
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/pre_fair_assessment'>FAIR Metroline</a> - Guidance on automated FAIR assessment tools.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: fair-evaluator
+  page_img_url: https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/assets/img/fairmetrics.png
+  at_a_glance:
+    Tool name: FAIR Evaluator
+    Short description: Online service for testing metadata resources against FAIR maturity indicators.
+    Purpose and core functionality: FAIR Evaluator provides an online service to test metadata resources against FAIR maturity indicators in an automated way. It reports assessment outcomes and logs that can help identify why a test failed.
+    Type: FAIR assessment tool
+    Life cycle phases:
+      - Plan
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://w3id.org/AmIFAIR'>FAIR Evaluator website</a>
+    Resource URLs:
+      Training:
+        - <a href='https://faircookbook.elixir-europe.org/content/recipes/assessing-fairness/fair-assessment-fairevaluator.html'>FAIR Cookbook guide</a>
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://github.com/FAIRMetrics/Metrics/tree/master/MaturityIndicators'>FAIR maturity indicators</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - FAIR maturity indicators - Used as the basis for automated assessment.
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/pre_fair_assessment'>FAIR Metroline</a> - Guidance on automated FAIR assessment tools.
+        - <a href='https://fairmetroline.org/metroline_steps/assess_fairness'>FAIR Metroline</a> - Example tool for re-assessing FAIRness.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: fairassist
+  page_img_url: https://avatars.githubusercontent.com/u/29867987
+  at_a_glance:
+    Tool name: FAIRassist
+    Short description: Registry-style overview of FAIR assessment tools.
+    Purpose and core functionality: FAIRassist helps users discover FAIR assessment tools and compare options before choosing an approach for assessing data or metadata FAIRness.
+    Type: FAIR assessment tool registry
+    Life cycle phases:
+      - Plan
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://fairassist.org/'>FAIRassist website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        -
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        -
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - FAIR assessment tools - FAIRassist provides an overview for selecting suitable tools.
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/pre_fair_assessment'>FAIR Metroline</a> - Listed as a source for finding more FAIR assessment tools.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: fair-aware
+  page_img_url: https://www.google.com/s2/favicons?domain=fairaware.dans.knaw.nl&sz=128
+  at_a_glance:
+    Tool name: FAIR Aware
+    Short description: Online awareness tool for learning about FAIR data principles.
+    Purpose and core functionality: FAIR Aware is an online tool from DANS for assessing and improving general awareness of the FAIR data principles. In the FAIR Metroline it is mentioned as a complementary option when the goal is FAIR awareness rather than direct dataset assessment.
+    Type: FAIR awareness self-assessment
+    Life cycle phases:
+      - Plan
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://fairaware.dans.knaw.nl/'>FAIR Aware website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        -
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        -
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/pre_fair_assessment'>FAIR Metroline</a> - Mentioned as a general FAIR awareness option.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: art-decor
+  page_img: metroline_steps/register_structural_metadata/ART-DECOR_screenshot.png
+  at_a_glance:
+    Tool name: ART-DECOR
+    Short description: Platform for managing and publishing datasets, data elements, value sets and implementation artefacts for health data.
+    Purpose and core functionality: ART-DECOR can be used to publish structured metadata about datasets, including data elements and codebooks. In FAIR Metroline guidance it is used as an example source for reusable codebooks and structured metadata for clinical studies and patient registries.
+    Type: Structural metadata and codebook platform
+    Life cycle phases:
+      - Plan
+      - Collect
+      - Share
+      - Reuse
+    Domains using it:
+      - Health
+      - Clinical research
+    Website:
+      - <a href='https://art-decor.org/'>ART-DECOR website</a>
+      - <a href='https://decor.nictiz.nl/ad/'>ART-DECOR hosted by Nictiz</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        -
+      Supporting software:
+        - iCRF Generator - Can generate eCRFs from codebooks published in ART-DECOR.
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - XML - ART-DECOR can expose structured metadata in XML.
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - iCRF Generator - Uses ART-DECOR codebooks as input.
+        - Castor EDC - Generated eCRFs can be imported into Castor workflows.
+        - REDCap - Generated eCRFs can be imported into REDCap workflows.
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/register_structural_metadata'>FAIR Metroline</a> - Guidance on publishing structural metadata.
+        - <a href='https://fairmetroline.org/metroline_steps/design_ecrf'>FAIR Metroline</a> - Guidance on designing eCRFs from codebooks.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+    - icrf-generator
+    - castor
+    - redcap
+  biotools_id:
+
+- id: erdri-mdr
+  page_img_url: https://eu-rd-platform.jrc.ec.europa.eu/mdr/images/logo-ec--en.svg
+  at_a_glance:
+    Tool name: ERDRI.mdr
+    Short description: Metadata repository for rare disease registries and sampled data elements.
+    Purpose and core functionality: ERDRI.mdr is a metadata repository for patient registries. It enables publication of sampled data elements and supports discovery and reuse of structural metadata in rare disease contexts.
+    Type: Metadata repository
+    Life cycle phases:
+      - Share
+      - Reuse
+    Domains using it:
+      - Rare diseases
+      - Health
+    Website:
+      - <a href='https://eu-rd-platform.jrc.ec.europa.eu/mdr/'>ERDRI.mdr website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        -
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - Rare disease registry metadata - Used to describe sampled data elements.
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/register_structural_metadata'>FAIR Metroline</a> - Guidance on structural metadata publication.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: csv-on-the-web
+  page_img_url: https://www.google.com/s2/favicons?domain=w3.org&sz=128
+  at_a_glance:
+    Tool name: CSV on the Web
+    Short description: W3C standard for describing CSV tables with machine-actionable metadata.
+    Purpose and core functionality: CSV on the Web provides a vocabulary and metadata model for describing the columns, rows and semantics of CSV files. It can be used to make tabular structural metadata more machine-readable and to express metadata as JSON or RDF.
+    Type: Metadata standard
+    Life cycle phases:
+      - Preserve
+      - Share
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://csvw.org/'>CSV on the Web website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://www.w3.org/TR/tabular-data-primer/'>CSV on the Web primer</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - JSON
+        - RDF
+      Specific documentation, e.g. versioning:
+        - <a href='https://www.w3.org/TR/tabular-metadata/'>Metadata vocabulary for tabular data</a>
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/register_structural_metadata'>FAIR Metroline</a> - Guidance on interoperable structural metadata.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: icrf-generator
+  page_img: logos/healthri_transp.png
+  at_a_glance:
+    Tool name: iCRF Generator
+    Short description: Tool for generating eCRFs for systems such as Castor EDC and REDCap from structured codebooks.
+    Purpose and core functionality: iCRF Generator generates electronic case report forms for EDC systems such as Castor EDC and REDCap from codebooks published in ART-DECOR and OpenEHR. When codebooks are annotated, those annotations can be incorporated into generated CRFs.
+    Type: eCRF generation tool
+    Life cycle phases:
+      - Collect
+      - Process
+    Domains using it:
+      - Clinical research
+      - Health
+    Website:
+      - <a href='https://www.healthdata.nl/en/services/icrf-generator'>Health-RI iCRF Generator service</a>
+      - <a href='https://github.com/aderidder/iCRFGenerator/'>iCRF Generator GitHub repository</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        -
+      Supporting software:
+        - ART-DECOR - Used as a source for structured codebooks.
+        - OpenEHR - Used as a source for structured codebooks.
+      Scripts and workflows:
+        - <a href='https://github.com/aderidder/iCRFGenerator/'>iCRF Generator GitHub repository</a>
+      Metadata and data standards:
+        - ART-DECOR codebooks
+        - OpenEHR codebooks
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - Castor EDC - Generated eCRFs can be used in Castor EDC.
+        - REDCap - Generated eCRFs can be used in REDCap.
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/design_ecrf'>FAIR Metroline</a> - Guidance on tools for building eCRFs.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+    - art-decor
+    - castor
+    - redcap
+  biotools_id:
+
+- id: codebook-to-castor-limesurvey
+  page_img: logos/amsterdamumc_transp.svg
+  at_a_glance:
+    Tool name: Codebook to Castor/LimeSurvey
+    Short description: Amsterdam UMC tool for converting Excel codebooks into Castor-ready XML and limited LimeSurvey formats.
+    Purpose and core functionality: Codebook to Castor/LimeSurvey converts an Excel-based codebook into a format compatible with Radboudumc's Castor Offline Design converter, which can generate a Castor-ready XML file. It currently has limited LimeSurvey support and is only available within Amsterdam UMC.
+    Type: eCRF conversion tool
+    Life cycle phases:
+      - Collect
+      - Process
+    Domains using it:
+      - Clinical research
+      - Health
+    Website:
+      -
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        -
+      Supporting software:
+        - Castor Offline Design converter - Used downstream to generate Castor-ready XML files.
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - Excel codebooks
+        - Castor XML
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - Castor EDC
+        - LimeSurvey
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/design_ecrf'>FAIR Metroline</a> - Guidance on tools for building eCRFs.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+      - Availability - Currently only available within Amsterdam UMC.
+      - LimeSurvey support - LimeSurvey support is limited.
+    User needs:
+  compatible_with:
+    - castor
+  biotools_id:
+
+- id: redcap
+  page_img_url: https://www.google.com/s2/favicons?domain=project-redcap.org&sz=128
+  at_a_glance:
+    Tool name: REDCap
+    Short description: Electronic data capture platform for building and managing online surveys and clinical research databases.
+    Purpose and core functionality: REDCap is an electronic data capture platform used to build and manage online surveys and research databases. In FAIR Metroline guidance it is discussed as a commonly used EDC system for eCRF design, including support for structured data capture and ontology search features.
+    Type: Electronic Data Capture (EDC)
+    Life cycle phases:
+      - Collect
+    Domains using it:
+      - Clinical research
+      - Health
+    Website:
+      - <a href='https://project-redcap.org/'>REDCap website</a>
+    Resource URLs:
+      Training:
+        - <a href='https://projectredcap.org/resources/videos/'>REDCap videos and resources</a>
+      ELSI:
+        -
+      Manuals:
+        -
+      Supporting software:
+        - iCRF Generator - Can generate eCRFs for REDCap from structured codebooks.
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - Biomedical ontology services - Can be used in text fields for ontology search.
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - iCRF Generator - Generated eCRFs can target REDCap.
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/design_ecrf'>FAIR Metroline</a> - Guidance on designing eCRFs.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+    - icrf-generator
+  biotools_id:
+
+- id: protege
+  page_img_url: https://www.google.com/s2/favicons?domain=protege.stanford.edu&sz=128
+  at_a_glance:
+    Tool name: Protege
+    Short description: Ontology editor with reasoning support for building and validating OWL ontologies.
+    Purpose and core functionality: Protege supports ontology editing, inspection and reasoning. It can be used when implementing semantic models, adding ontology annotations and validating modelling choices.
+    Type: Ontology editing tool
+    Life cycle phases:
+      - Plan
+      - Process
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://protege.stanford.edu/'>Protege website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://protegewiki.stanford.edu/wiki/Main_Page'>Protege wiki</a>
+      Supporting software:
+        - HermiT - Reasoner available for ontology validation.
+        - Pellet - Reasoner available for ontology validation.
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - OWL
+        - RDF
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/use_ontologies_in_the_model'>FAIR Metroline</a> - Guidance on ontology implementation and validation.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id: protege
+
+- id: robot
+  page_img_url: https://github.com/ontodev.png?size=200
+  at_a_glance:
+    Tool name: ROBOT
+    Short description: Command-line toolkit for ontology manipulation, validation and release workflows.
+    Purpose and core functionality: ROBOT supports automated ontology workflows including conversion, validation, reasoning, reporting and release preparation. It is useful for implementing and maintaining semantic models and ontology mappings.
+    Type: Ontology build tool
+    Life cycle phases:
+      - Process
+      - Preserve
+      - Reuse
+    Domains using it:
+      - Life sciences
+      - Cross-domain
+    Website:
+      - <a href='https://robot.obolibrary.org/'>ROBOT website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://robot.obolibrary.org/'>ROBOT documentation</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        - Command-line ontology build workflows
+      Metadata and data standards:
+        - OWL
+        - OBO
+        - RDF
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/use_ontologies_in_the_model'>FAIR Metroline</a> - Guidance on ontology implementation, validation and maintenance.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id: robot
+
+- id: topbraid-shacl-api
+  page_img_url: https://github.com/TopQuadrant.png?size=200
+  at_a_glance:
+    Tool name: TopBraid SHACL API
+    Short description: SHACL validation library for validating RDF graphs against SHACL shapes.
+    Purpose and core functionality: TopBraid SHACL API can validate RDF graphs using SHACL constraints. It is useful when checking that semantic models and transformed metadata conform to expected shapes.
+    Type: SHACL validation library
+    Life cycle phases:
+      - Process
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://github.com/TopQuadrant/shacl'>TopBraid SHACL API GitHub repository</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://github.com/TopQuadrant/shacl'>TopBraid SHACL API documentation</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        - SHACL validation workflows
+      Metadata and data standards:
+        - SHACL
+        - RDF
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/use_ontologies_in_the_model'>FAIR Metroline</a> - Guidance on semantic model validation.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: pyshacl
+  page_img_url: https://github.com/RDFLib.png?size=200
+  at_a_glance:
+    Tool name: pySHACL
+    Short description: Python implementation of SHACL validation for RDF graphs.
+    Purpose and core functionality: pySHACL validates RDF graphs against SHACL shapes from Python or the command line. It is useful for automated checks in FAIRification workflows and semantic model maintenance.
+    Type: SHACL validation tool
+    Life cycle phases:
+      - Process
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://github.com/RDFLib/pySHACL'>pySHACL GitHub repository</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://github.com/RDFLib/pySHACL'>pySHACL documentation</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        - Python and command-line SHACL validation workflows
+      Metadata and data standards:
+        - SHACL
+        - RDF
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/use_ontologies_in_the_model'>FAIR Metroline</a> - Guidance on semantic model validation.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id: pyshacl
+
+- id: sssom-toolkit
+  page_img_url: https://github.com/mapping-commons.png?size=200
+  at_a_glance:
+    Tool name: SSSOM Toolkit
+    Short description: Python toolkit for validating, converting and managing Simple Standard for Sharing Ontological Mappings files.
+    Purpose and core functionality: SSSOM Toolkit supports management of ontology mappings expressed in the Simple Standard for Sharing Ontological Mappings format. It can be used to validate mapping files and keep semantic mappings reusable and maintainable.
+    Type: Ontology mapping toolkit
+    Life cycle phases:
+      - Process
+      - Preserve
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://github.com/mapping-commons/sssom-py'>SSSOM Toolkit GitHub repository</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://mapping-commons.github.io/sssom/'>SSSOM documentation</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        - SSSOM mapping validation and conversion workflows
+      Metadata and data standards:
+        - SSSOM
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/use_ontologies_in_the_model'>FAIR Metroline</a> - Guidance on managing ontology mappings.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: sparnatural
+  page_img_url: https://www.google.com/s2/favicons?domain=sparnatural.eu&sz=128
+  at_a_glance:
+    Tool name: Sparnatural
+    Short description: Visual SPARQL query builder for creating linked-data queries without writing SPARQL syntax.
+    Purpose and core functionality: Sparnatural provides a visual interface that helps users construct SPARQL queries through guided selections. It is useful for exploring linked-data resources when users need more than browsing and filtering but are not yet comfortable writing SPARQL manually.
+    Type: Visual SPARQL query builder
+    Life cycle phases:
+      - Reuse
+      - Analyse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://sparnatural.eu/'>Sparnatural website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://docs.sparnatural.eu/'>Sparnatural documentation</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - SPARQL
+        - RDF
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - SPARQL endpoints - Used to query RDF-based resources.
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/query_over_resources'>FAIR Metroline</a> - Guidance on visual or guided query tools.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: wikidata-query-builder
+  page_img_url: https://www.wikidata.org/static/favicon/wikidata.ico
+  at_a_glance:
+    Tool name: Wikidata Query Builder
+    Short description: Guided query builder for exploring Wikidata without writing SPARQL manually.
+    Purpose and core functionality: Wikidata Query Builder helps users construct queries over Wikidata by choosing entities, properties and values through a guided interface. It can be a useful entry point for learning how linked-data queries are structured.
+    Type: Visual query builder
+    Life cycle phases:
+      - Reuse
+      - Analyse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://query.wikidata.org/querybuilder/'>Wikidata Query Builder</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        -
+      Supporting software:
+        - Wikidata Query Service - Runs the generated queries.
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - SPARQL
+        - RDF
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - Wikidata Query Service
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/query_over_resources'>FAIR Metroline</a> - Guidance on visual or guided query tools.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: yasgui
+  page_img_url: https://avatars.githubusercontent.com/u/52077849
+  at_a_glance:
+    Tool name: YASGUI
+    Short description: Web-based SPARQL editor for querying RDF endpoints.
+    Purpose and core functionality: YASGUI provides a browser-based interface for writing, running and inspecting SPARQL queries against RDF endpoints. It is useful for users who need direct query access and interactive result exploration.
+    Type: SPARQL query editor
+    Life cycle phases:
+      - Reuse
+      - Analyse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://yasgui.triply.cc/'>YASGUI website</a>
+      - <a href='https://yasgui.org/'>YASGUI project page</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://triply.cc/docs/yasgui'>YASGUI documentation</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - SPARQL
+        - RDF
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - SPARQL endpoints - Used to query RDF-based resources.
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/query_over_resources'>FAIR Metroline</a> - Guidance on direct SPARQL querying.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: virtuoso-query-editor
+  page_img_url: https://www.openlinksw.com/skin/matrix/images/opllogo-minimal-blue.svg
+  at_a_glance:
+    Tool name: Virtuoso Query Editor
+    Short description: Web-based SPARQL query editor available on Virtuoso-backed endpoints.
+    Purpose and core functionality: Virtuoso Query Editor is a SPARQL interface commonly exposed by Virtuoso-backed linked-data services. It lets users write and run SPARQL queries directly against an endpoint.
+    Type: SPARQL query editor
+    Life cycle phases:
+      - Reuse
+      - Analyse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://virtuoso.openlinksw.com/'>OpenLink Virtuoso website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://docs.openlinksw.com/virtuoso/'>Virtuoso documentation</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        - SPARQL
+        - RDF
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        - SPARQL endpoints - Used to query RDF-based resources.
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/query_over_resources'>FAIR Metroline</a> - Guidance on direct SPARQL querying.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: surf-filesender
+  page_img: logos/surf_transp.svg
+  at_a_glance:
+    Tool name: SURF filesender
+    Short description: Secure file transfer service for sending large files.
+    Purpose and core functionality: SURF filesender supports secure transfer of large files and is listed in the FAIR Metroline as an option for authenticated transfer of large or sensitive datasets.
+    Type: Secure file transfer service
+    Life cycle phases:
+      - Share
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://filesender.surf.nl/'>SURF filesender website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        -
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        -
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/data_access_and_retrieval'>FAIR Metroline</a> - Guidance on secure data transfer.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: aspera
+  page_img_url: https://www.google.com/s2/favicons?domain=ibm.com&sz=128
+  at_a_glance:
+    Tool name: Aspera
+    Short description: High-speed transfer software for moving large datasets.
+    Purpose and core functionality: Aspera supports high-speed transfer of large datasets and is recommended in the FAIR Metroline where robust transfer and retry or resume capabilities are needed.
+    Type: High-speed data transfer tool
+    Life cycle phases:
+      - Share
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://www.ibm.com/products/aspera'>IBM Aspera website</a>
+    Resource URLs:
+      Training:
+        - <a href='https://faircookbook.elixir-europe.org/content/recipes/accessibility/aspera.html'>FAIR Cookbook guide to downloading data with Aspera</a>
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://www.ibm.com/docs/en/aspera-on-cloud?topic=admin-aspera-connect-transfer-client'>Aspera Connect transfer client documentation</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        -
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/data_access_and_retrieval'>FAIR Metroline</a> - Guidance on secure and resumable data transfer.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:
+
+- id: globus
+  page_img_url: https://www.google.com/s2/favicons?domain=globus.org&sz=128
+  at_a_glance:
+    Tool name: Globus
+    Short description: Managed transfer service for reliable movement of large research datasets.
+    Purpose and core functionality: Globus supports reliable, resumable transfer of large research datasets across endpoints. In the FAIR Metroline it is listed for bulk transfers where interruptions should not require restarting the transfer.
+    Type: Research data transfer service
+    Life cycle phases:
+      - Share
+      - Reuse
+    Domains using it:
+      - Cross-domain
+    Website:
+      - <a href='https://www.globus.org/data-transfer'>Globus data transfer website</a>
+    Resource URLs:
+      Training:
+        -
+      ELSI:
+        -
+      Manuals:
+        - <a href='https://docs.globus.org/how-to/'>Globus how-to documentation</a>
+      Supporting software:
+        -
+      Scripts and workflows:
+        -
+      Metadata and data standards:
+        -
+      Specific documentation, e.g. versioning:
+        -
+      Integrations with other tools:
+        -
+      FAIR Metroline guidance step:
+        - <a href='https://fairmetroline.org/metroline_steps/data_access_and_retrieval'>FAIR Metroline</a> - Guidance on resumable data retrieval and transfer.
+    Contact point:
+  gaps_and_needs:
+    Gaps:
+    User needs:
+  compatible_with:
+  biotools_id:

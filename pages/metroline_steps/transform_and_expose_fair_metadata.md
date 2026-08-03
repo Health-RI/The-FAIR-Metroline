@@ -13,11 +13,11 @@ permalink: /metroline_steps/transform_and_expose_fair_metadata
 > {{ current_step.summary }}
 
 ## Short description 
-Before following this step, make sure you have already mapped your data and metadata to appropriate (meta)data schemas, as described in [Metroline Step: Apply (meta)data model]({{site.baseurl}}/metroline_steps/apply_metadata_model).
+Before following this step, make sure you have already mapped your data and metadata to appropriate (meta)data schemas, as described in [Metroline Step: Apply (meta)data model](/metroline_steps/apply_metadata_model).
 
 This step guides you through **transforming and exposing** both your **data** and **metadata**. These are two closely related but distinct processes. While the semantic models, tools, and storage methods differ (metadata is usually made publicly accessible, while data often remains restricted due to privacy or sensitivity), both transformations are essential to make your resource FAIRer.
 
-**Transforming** involves converting your mapped (meta)data into standardized [RDF](https://www.w3.org/TR/rdf12-concepts/) format. For metadata describing datasets, this typically means using RDF vocabularies such as [DCAT](https://www.w3.org/TR/vocab-dcat-3/), a widely adopted schema for expressing dataset metadata in catalogs. Although DCAT modeling is introduced in the [Metroline Step: Apply (meta)data model]({{site.baseurl}}/metroline_steps/apply_metadata_model), this step focuses on the actual transformation and the preparation of your (meta)data for publication.
+**Transforming** involves converting your mapped (meta)data into standardized [RDF](https://www.w3.org/TR/rdf12-concepts/) format. For metadata describing datasets, this typically means using RDF vocabularies such as [DCAT](https://www.w3.org/TR/vocab-dcat-3/), a widely adopted schema for expressing dataset metadata in catalogs. Although DCAT modeling is introduced in the [Metroline Step: Apply (meta)data model](/metroline_steps/apply_metadata_model), this step focuses on the actual transformation and the preparation of your (meta)data for publication.
 
 {% include info-box.html type="info" title="Why use RDF for your (meta)data?" text="
 * **Interoperability.** Uses shared vocabularies so your (meta)data can connect seamlessly with other datasets.
@@ -33,8 +33,8 @@ While RDF may be more effort than a simple table, it is especially valuable when
 By following this step, you put the FAIR principles into practice with practical advice and tools to improve the reusability and interoperability of your metadata and data. This ensures that it can be effectively matched and reused within the scientific community and beyond.
 
 ## Why is this step important
-Transforming and exposing your (meta)data in this way makes it FAIR-ready and visible to others under your chosen access conditions (see [Metroline Step: Define access conditions]({{site.baseurl}}/metroline_steps/define_access_conditions)). Building on the metadata model from the 
-[Metroline Step: Apply (meta)data model]({{site.baseurl}}/metroline_steps/apply_metadata_model), you share your resource in a standardised, machine-readable format. This increases its findability, accessibility and reuse.
+Transforming and exposing your (meta)data in this way makes it FAIR-ready and visible to others under your chosen access conditions (see [Metroline Step: Define access conditions](/metroline_steps/define_access_conditions)). Building on the metadata model from the 
+[Metroline Step: Apply (meta)data model](/metroline_steps/apply_metadata_model), you share your resource in a standardised, machine-readable format. This increases its findability, accessibility and reuse.
 
 In other words, this step:
 * **Increases findability.** By representing your (meta)data in RDF and publishing it via trusted catalogues or FAIR Data Points, it becomes part of a searchable ecosystem. Researchers can locate it through precise queries, even if they are looking for specific variables or concepts. Without this, your resource may remain invisible outside your own project.
@@ -47,19 +47,19 @@ In other words, this step:
 This how-to provides guidance for transforming, storing and exposing data (steps 1 and 2) as well as for metadata (step 3). You can start with either, depending on your preference.
 
 ### Step 1 - Transform data
-Before you can expose your data in a FAIR way, you first need to transform it into a standardised, machine-readable format using semantic models that you previously applied in the step [Metroline Step: Apply (meta)data model]({{site.baseurl}}/metroline_steps/apply_metadata_model). This often means converting tabular or structured data into RDF. The right tool for transforming data depends on your source format and your technical skills.
+Before you can expose your data in a FAIR way, you first need to transform it into a standardised, machine-readable format using semantic models that you previously applied in the step [Metroline Step: Apply (meta)data model](/metroline_steps/apply_metadata_model). This often means converting tabular or structured data into RDF. The right tool for transforming data depends on your source format and your technical skills.
 
 {% include info-box.html type="example" title="Examples" text="
-* **[OpenRefine](https://openrefine.org/) – [RDF Transform extension](https://github.com/AtesComp/rdf-transform).** Offers a user-friendly, graphical user interface (GUI), way to transform project data into RDF. OpenRefine supports file types like tab separated (TSV), comma separated (CSV), Excel (XLS, XLSX), JSON, XML, RDF as XML, and Google spreadsheets. 
-* **[FAIR-in-a-Box](https://github.com/ejp-rd-vp/FiaB).** Convert CSV files into RDF with a step-by-step interface; useful for implementing the [Clinical and Registry Entries Semantic Model (CARE-SM)](https://github.com/CARE-SM). Although you can apply any model through OpenRefine, the process must be done manually. In contrast, FAIR-in-a-box includes built-in templates for CARE-SM, requiring only correctly structured CSV files from you.
-* **[Castor EDC](https://www.castoredc.com/).** Supports semantic export templates for transforming study data and metadata to RDF.
+* **[OpenRefine](/openrefine) – [RDF Transform extension](https://github.com/AtesComp/rdf-transform).** Offers a user-friendly, graphical user interface (GUI), way to transform project data into RDF. OpenRefine supports file types like tab separated (TSV), comma separated (CSV), Excel (XLS, XLSX), JSON, XML, RDF as XML, and Google spreadsheets. 
+* **[FAIR-in-a-Box](/fair-in-a-box).** Convert CSV files into RDF with a step-by-step interface; useful for implementing the [Clinical and Registry Entries Semantic Model (CARE-SM)](https://github.com/CARE-SM). Although you can apply any model through OpenRefine, the process must be done manually. In contrast, FAIR-in-a-box includes built-in templates for CARE-SM, requiring only correctly structured CSV files from you.
+* **[Castor EDC](/castor-edc).** Supports semantic export templates for transforming study data and metadata to RDF.
 " %}
 
 
 ### Step 2 - Store and expose data
-Once your data is transformed into RDF, it needs to be stored so it can be efficiently queried, accessed and reused. This is usually done with an RDF triplestore, a database designed for storing and retrieving semantic data using a specialised data querying language [SPARQL](https://www.w3.org/TR/sparql11-query/). Common tools include [GraphDB](http://graphdb.ontotext.com/) and [Blazegraph](https://blazegraph.com/). Triplestores can serve as a backend for web applications or services that work with semantic data.
+Once your data is transformed into RDF, it needs to be stored so it can be efficiently queried, accessed and reused. This is usually done with an RDF triplestore, a database designed for storing and retrieving semantic data using a specialised data querying language [SPARQL](https://www.w3.org/TR/sparql11-query/). Common tools include [GraphDB](/graphdb) and [Blazegraph](/blazegraph). Triplestores can serve as a backend for web applications or services that work with semantic data.
 
-To make both data and metadata discoverable and accessible, you can publish RDF metadata through a [FAIR Data Point](https://www.fairdatapoint.org/) (FDP). An FDP provides a standard way to publish metadata, structured in three layers: **Catalogue**, **Dataset** and **Distribution**.
+To make both data and metadata discoverable and accessible, you can publish RDF metadata through a [FAIR Data Point](/fair-data-point) (FDP). An FDP provides a standard way to publish metadata, structured in three layers: **Catalogue**, **Dataset** and **Distribution**.
 
 Importantly, an FDP is intended for **publishing metadata**, not for hosting datasets themselves. For privacy sensitive or access controlled data, the FDP should describe the dataset and point (through its **Distribution** or **Data Service**) to the secure system where the data resides, for example, a trusted repository, triplestore, or API, where your chosen reuse conditions (such as requiring authentication or data access agreements) are enforced.
 
@@ -82,13 +82,17 @@ To make your metadata FAIR, it must be semantically enriched, machine-readable a
 Start by transforming metadata into a structured format using semantic web standards like [RDF](https://www.w3.org/RDF/), and vocabularies such as [DCAT](https://www.w3.org/TR/vocab-dcat-3/), [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/) or relevant domain ontologies. This ensures interoperability and aligns your metadata with community best practices. For the health domain, [HealthDCAT-AP](https://healthdcat-ap.github.io/) and the more specific [Heath-RI core metadata](https://github.com/Health-RI/health-ri-metadata/tree/master) scheme are a good starting point.
 
 {% include info-box.html type="example" title="Examples of metadata transformation tools" text="
-* **[FAIR Data Point reference implementation](https://docs.fairdatapoint.org/en/latest/).** For publishing metadata layers in line with [DCAT](https://www.w3.org/TR/vocab-dcat-3/) specifications, aligning with national and European cataloguing standards. The FDP itself is a metadata exposure tool consistent with DCAT and the FDP specification, serving as a discoverable and interoperable metadata layer.
-* **[FAIR-in-a-Box](https://github.com/ejp-rd-vp/FiaB).** Covers both data and metadata and includes CSV to RDF conversion and metadata templates.
-* **[OpenRefine](https://openrefine.org/).** RDF transform extension for transforming structured metadata to RDF.
-* **[CEDAR Workbench](https://metadatacenter.org/).** Supports the creation of semantically rich metadata through templates to produce annotated datasets.
-* **[FAIR Data Station](https://fairds.fairbydesign.nl/).** Manages [ISA metadata](https://isa-tools.org/) with RDF output. This output needs to be exposed in a triplestore. 
-* **[Castor EDC (FDP Component)](https://fdp.castoredc.com/fdp).** Contains a template to fill out metadata and exposes that information in a way that is semantically compatible with DCAT and FDP specifications. 
+* **[FAIR Data Point](/fair-data-point).** For publishing metadata layers in line with [DCAT](https://www.w3.org/TR/vocab-dcat-3/) specifications, aligning with national and European cataloguing standards. The FDP itself is a metadata exposure tool consistent with DCAT and the FDP specification, serving as a discoverable and interoperable metadata layer.
+* **[FAIR-in-a-Box](/fair-in-a-box).** Covers both data and metadata and includes CSV to RDF conversion and metadata templates.
+* **[OpenRefine](/openrefine).** RDF transform extension for transforming structured metadata to RDF.
+* **[CEDAR Workbench](/cedar-workbench).** Supports the creation of semantically rich metadata through templates to produce annotated datasets.
+* **[FAIR Data Station](/fair-data-station).** Manages [ISA metadata](https://isa-tools.org/) with RDF output. This output needs to be exposed in a triplestore. 
+* **[Castor EDC (FDP Component)](/castor-edc).** Contains a template to fill out metadata and exposes that information in a way that is semantically compatible with DCAT and FDP specifications. 
 "%}
+
+Recommended tool pages:
+
+{% include toolassemblies/show-tiles.html ids="openrefine, fair-in-a-box, castor, graphdb, blazegraph, fair-data-point, cedar-workbench, fair-data-station" %}
 
 ## Practical examples from the community
 **VASCA Registry (Castor EDC + FAIR Data Point)**<br>
