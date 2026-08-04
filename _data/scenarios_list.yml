@@ -13,13 +13,6 @@
   complexity: "Medium"
 
 
-- title: "How to analyse and publish tumor data"
-  url: "tool-scenarios/transform_onco_data"
-  icon: "🧬"
-  description: "Process tumor sequencing data with oncoanalyser and publish results in cBioPortal for cancer research visualization and analysis."
-  type: "analysis"
-  complexity: "High"
-
 - title: "How to make a  new dataset interoperable from the start"
   url: "scenarios/make_dataset_interoperable"
   icon: "🧩"

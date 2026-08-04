@@ -13,6 +13,7 @@
     Short description: Cloud-based electronic data capture system for clinical research studies.
     Purpose and core functionality: Castor EDC is a cloud-based electronic data capture system designed to simplify clinical data collection and ensure interoperability. It integrates easily with broader clinical trial systems and ranks in the top 5% of EDC tools for build speed, with over 90% of studies deployed within 4 weeks.
     Type: Electronic Data Capture (EDC)
+    FAIR support category: Capture & collection
     Life cycle phases:
       - Collect
     Domains using it: Oncology
@@ -56,6 +57,7 @@
     Short description: Trusted Processing Environment (TPE) for secure, GDPR-compliant data analysis in collaborative academic settings.
     Purpose and core functionality: myDRE is a Trusted Processing Environment (TPE) designed for secure, GDPR-compliant data analysis in collaborative academic settings. It enables institutions to set up isolated virtual workspaces with managed access, shared storage and scalable computing—supporting up to 50 users per project. myDRE is offered as a paid service based on actual usage and helps reduce pressure on central IT teams by offering a managed, secure research infrastructure.
     Type: Trusted Processing Environment (TPE)
+    FAIR support category: Access & transfer
     Life cycle phases:
       - Process
       - Analyse
@@ -98,9 +100,13 @@
     Tool name: MOLGENIS
     Short description: Customizable platform for managing and analyzing large scientific datasets with support for bioinformatics scripts.
     Purpose and core functionality: Molgenis helps to find, capture, exchange, manage and analyse and exploit the large amounts of data that is being produced by scientific organisations. It is a fully customizable and scalable software infrastructure that offers the possibility to plug-in (bioinformatics) scripts.<br>The MOLGENIS software package helps setting up an online database application, making  data query-able and allowing to share data with collaborators. Enabling to store, edit, analyse, and share data.
-    Type: Data management, data analysis
+    Type: FAIR data management and catalogue platform
+    FAIR support category: Publication & discovery
     Life cycle phases:
-      - Analyse
+      - Collect
+      - Preserve
+      - Share
+      - Reuse
     Domains using it:
     Website:
       - <a href='https://molgenis.org/'>MOLGENIS website</a>
@@ -133,95 +139,6 @@
     User needs:
   compatible_with:
   biotools_id: molgenis
-- id: cbioportal
-  page_img: toolassemblies/tools/cbioportal.png
-  at_a_glance:
-    Tool name: cBioPortal
-    Short description: cBioPortal is an open-source platform for visualizing and exploring multidimensional cancer genomics data through an intuitive web interface.
-    Purpose and core functionality: cBioPortal simplifies access to complex cancer genomic data through visualisation and intuitive exploration. It enables researchers and clinicians to interpret multimodal datasets, extract biological insights and support clinical decisions.
-    Type: Data analysis
-    Life cycle phases:
-      - Process
-      - Analyse
-      - Preserve
-      - Share
-    Domains using it: Oncology
-    Website:
-      - <a href='https://www.cbioportal.org/'>cBioPortal website</a>
-      - <a href='https://www.healthdata.nl/en/services/health-ri-cbioportal'>Health-RI Service</a>
-      - <a href='https://cbioportal.health-ri.nl/'>Health-RI hosted instance</a>
-    Resource URLs:
-      Training:
-        -
-      ELSI:
-        -
-      Manuals:
-        - <a href='https://docs.cbioportal.org/user-guide/'>User guide</a>
-      Supporting software:
-        -
-      Scripts and workflows:
-        -
-      Metadata and data standards:
-        - <a href='https://docs.cbioportal.org/supported-data-types/'>Supported data types</a>
-      Specific documentation, e.g. versioning:
-        - <a href='https://docs.cbioportal.org/'>Documentation</a> includes development, deployment and usage documentation
-      Integrations with other tools:
-        - Slide Score - Enables slide viewer embedding within cBioPortal interface as described <a href='https://www.slidescore.com/news/a/031_cbioportal'>here</a>
-        - XNAT using <a href='https://gitlab.com/radiology/infrastructure/utils/xnat2cbio'>xnat2cbio</a> and following the <a href='https://zenodo.org/records/14900295'>EOSC4Cancer manual</a>
-        - xOpat following the <a href='https://zenodo.org/records/14900295'>EOSC4Cancer manual</a>
-        - cBioPortal can easily link to other tools, although the tools must support the appropriate security measures.
-      FAIR Metroline guidance step:
-        -
-      Other:
-        - <a href='https://www.health-ri.nl/en/health-ri-service-desk'>Health-RI support</a> - Service desk for users in the Health-RI hosted environment
-        - <a href='https://www.aacr.org/professionals/research/aacr-project-genie/aacr-project-genie-data/'>GENIE data</a> - Large multi-institutional cancer dataset compatible with cBioPortal
-    Contact point:
-  gaps_and_needs:
-    Gaps:
-    User needs:
-  compatible_with: slide-score, xnat, xOpat
-  biotools_id: cbioportal
-- id: slidescore
-  page_img: toolassemblies/tools/slidescore.png
-  at_a_glance:
-    Tool name: Slide Score
-    Short description: Web-based viewer for high-resolution digital microscopy images, focused on histopathology slides, enabling collaborative evaluation and scoring.
-    Purpose and core functionality: Slide Score is a web-based viewer for high-resolution digital microscopy images, with a focus on histopathology slides. It enables users to upload images, create scoring forms (question sets) and invite experts—such as pathologists—for collaborative evaluation and scoring.
-    Type: Data analysis
-    Life cycle phases:
-      - Process
-      - Analyse
-      - Preserve
-      - Share
-    Domains using it: Oncology
-    Website:
-      - <a href='https://www.slidescore.com/'>Slide Score website</a>
-    Resource URLs:
-      Training:
-        -
-      ELSI:
-        -
-      Manuals:
-        - <a href='https://www.slidescore.com/docs/start.html'>Slide Score Documentation</a>
-      Supporting software:
-        -
-      Scripts and workflows:
-        -
-        -
-      Metadata and data standards:
-        -
-      Specific documentation, e.g. versioning:
-        - <a href='https://www.slidescore.com/docs/api.html'>Developers documentation (API)</a>
-      Integrations with other tools:
-        - cBioPortal - Allows embedding the Slide Score viewer within the cBioPortal interface as described <a href='https://www.slidescore.com/news/a/031_cbioportal'>here</a>
-      FAIR Metroline guidance step:
-        -
-    Contact point:
-  gaps_and_needs:
-    Gaps:
-    User needs:
-  compatible_with: cbioportal
-  biotools_id:
 - id: xnat
   page_img: toolassemblies/tools/xnat.png
   institutes:
@@ -230,15 +147,15 @@
     - UMCG
   at_a_glance:
     Tool name: XNAT
-    Short description: XNAT is an open-source imaging informatics platform designed to support imaging-based research.
-    Purpose and core functionality: XNAT is an open-source imaging informatics platform designed to support imaging-based research. It offers tools to import, archive, process and securely distribute imaging and related study data. With a flexible architecture and growing plugin ecosystem, XNAT is suited to diverse clinical and research workflows.
-    Type: Data analysis
+    Short description: XNAT is an open-source imaging informatics platform for archiving, describing, finding and securely sharing imaging research data.
+    Purpose and core functionality: XNAT is an open-source imaging informatics platform designed to support imaging-based research. It offers tools to import, archive, describe, search and securely distribute imaging and related study data. In a FAIR workflow, XNAT can support findability and accessibility by preserving imaging metadata, making imaging datasets searchable, managing controlled access and exporting image dataset metadata toward catalogues or FAIR Data Points with supporting tools such as img2catalog.
+    Type: Imaging data management platform
+    FAIR support category: Publication & discovery
     Life cycle phases:
-      - Reuse
-      - Process
-      - Analyse
+      - Collect
       - Preserve
       - Share
+      - Reuse
     Domains using it: Oncology
     Website:
       - <a href='https://www.xnat.org/'>XNAT website</a>
@@ -272,49 +189,6 @@
     User needs:
   compatible_with:
   biotools_id: xnat
-- id: oncoanalyser
-  page_img: https://raw.githubusercontent.com/nf-core/oncoanalyser/60a62eb5cdde30ea3ee03b2a32791bf3421ca599/assets/nf-core-oncoanalyser_logo_light.png
-  at_a_glance:
-    Tool name: Oncoanalyser
-    Short description: Nextflow-based bioinformatics pipeline for processing tumor sequencing data from tumor-normal pairs to generate variant calls, copy number profiles and other genomic outputs.
-    Purpose and core functionality: Oncoanalyser is a Nextflow-based bioinformatics pipeline for processing tumor sequencing data. It supports whole genome, exome and targeted panel sequencing from tumor-normal pairs to generate variant calls, copy number profiles, structural variants and other genomic outputs.
-    Type: Data analysis
-    Life cycle phases:
-      - Process
-      - Analyse
-    Domains using it: Oncology
-    Website:
-      - <a href='https://nf-co.re/oncoanalyser/'>Oncoanalyser website</a>
-    Resource URLs:
-      Training:
-        - <a href='https://nf-co.re/oncoanalyser/2.2.0/docs/usage/'>Usage documentation</a>
-      ELSI:
-        -
-      Manuals:
-        - <a href='https://nf-co.re/oncoanalyser/2.2.0/docs/output/'>Output documentation</a>
-        - <a href='https://nf-co.re/oncoanalyser/2.2.0/parameters/'>Parameters guide</a>
-      Supporting software:
-        - <a href='https://www.nextflow.io/'>Nextflow</a> - Workflow orchestration system required to run Oncoanalyser
-        - <a href='https://sylabs.io/singularity/'>Singularity</a> or <a href='https://www.docker.com/'>Docker</a> - Container runtime for reproducible execution
-      Scripts and workflows:
-        - <a href='https://github.com/nf-core/oncoanalyser'>GitHub repository</a>
-      Metadata and data standards:
-        - <a href='https://samtools.github.io/hts-specs/VCFv4.2.pdf'>VCF format</a> - Variant call output format
-        - <a href='https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format/'>MAF format</a> - Mutation annotation format for cancer data
-      Specific documentation, e.g. versioning:
-        - <a href='https://nf-co.re/oncoanalyser/2.2.0/'>Version 2.2.0 documentation</a>
-      Integrations with other tools:
-        - cBioPortal - Outputs can be converted to cBioPortal format for visualization
-      FAIR Metroline guidance step:
-        -
-    Contact point:
-  gaps_and_needs:
-    Gaps:
-      - Format conversion - Direct conversion from Oncoanalyser outputs to cBioPortal-compatible formats requires additional scripting or tools
-      - HPC access - Requires access to high-performance computing infrastructure for whole genome analysis
-    User needs:
-  compatible_with: cbioportal
-  biotools_id: oncoanalyser
 - id: dmponline
   page_img: toolassemblies/tools/dmponline.png
   institutes:
@@ -331,6 +205,7 @@
     Short description: Web-based tool for creating, reviewing, and sharing Data Management Plans (DMPs) that meet institutional and funder requirements.
     Purpose and core functionality: DMPonline is a web-based Data Management Planning (DMP) tool developed and maintained by the Digital Curation Centre (DCC) in partnership with the University of California Curation Center (UC3). It helps researchers create, review, and share Data Management Plans that comply with requirements from institutions and research funders. The tool provides the latest funder templates, tailored guidance, and example answers. Users can collaborate on plans, browse publicly shared DMPs for inspiration, and export plans in multiple formats. DMPonline is free to use for all researchers and is hosted by subscribing institutions and universities worldwide, with over 177,000 users across 804 organisations in 89 countries.
     Type: Data Management Planning
+    FAIR support category: Planning & assessment
     Life cycle phases:
       - Plan
     Domains using it:
@@ -372,6 +247,7 @@
     Short description: Lightweight Equipment Adapter Framework for automated data and metadata acquisition from research equipment.
     Purpose and core functionality: LEAF is an open-source, modular framework for extracting data and metadata from research equipment and transferring them via MQTT to a chosen endpoint. In this scenario, it represents the data-acquisition layer that captures operational equipment data close to the source. The exact adapters, endpoints and operational deployment should be confirmed by the WUR and IBISBA teams.
     Type: Equipment data acquisition
+    FAIR support category: Capture & collection
     Life cycle phases:
       - Collect
       - Process
@@ -424,6 +300,7 @@
     Short description: Tool for recording, validating and exporting structured FAIR metadata from the start of a research project.
     Purpose and core functionality: FAIR Data Station supports researchers and data stewards in recording and validating structured metadata, including investigation, study, observation unit, sample, assay and data-file information. In this scenario, it is used to describe the experiment and connect operational data capture with downstream registration in FAIRDOM-SEEK. The exact template fields and controlled vocabularies should be provided by the WUR and IBISBA teams.
     Type: Metadata capture and validation
+    FAIR support category: Capture & collection
     Life cycle phases:
       - Plan
       - Collect
@@ -481,6 +358,7 @@
     Short description: Open-source research data management platform for organising, sharing and publishing heterogeneous research assets.
     Purpose and core functionality: FAIRDOM-SEEK is a web-based platform for cataloguing, sharing and publishing research data, models, simulations, processes and outcomes. It uses an ISA-style structure for investigations, studies and assays, supports permissions and publication workflows, and can be used as the basis for project or community hubs such as the IBISBA Knowledge Hub. In this scenario, it is the destination where the structured experiment, metadata, files and related outputs are registered for controlled sharing and reuse.
     Type: Research data management platform
+    FAIR support category: Publication & discovery
     Life cycle phases:
       - Preserve
       - Share
@@ -532,6 +410,7 @@
     Short description: Metadata publication platform for exposing FAIR metadata through standard, machine-readable interfaces.
     Purpose and core functionality: A FAIR Data Point (FDP) exposes metadata according to the FAIR principles. The reference implementation includes DCAT-based metadata layers and can be customised with SHACL shapes, for example to align metadata with the Health-RI metadata schema and expose it to catalogues such as the National Health Data Catalogue.
     Type: Metadata publication platform
+    FAIR support category: Publication & discovery
     Life cycle phases:
       - Preserve
       - Share
@@ -582,6 +461,7 @@
     Short description: Automated FAIRification workflow for transforming structured data into RDF and publishing it with FAIR metadata.
     Purpose and core functionality: FAIR-in-a-box is an automated tool for making data FAIR by transforming CSV data into RDF, commonly using the CARE-SM model for healthcare and registry information. The workflow can connect transformed RDF to a triplestore and FAIR Data Point, and can be customised by adapting scripts and YARRRML mappings for other semantic models.
     Type: FAIRification workflow
+    FAIR support category: Semantics & validation
     Life cycle phases:
       - Process
       - Preserve
@@ -630,6 +510,7 @@
     Short description: Visual data transformation tool for mapping structured data to RDF schemas in GraphDB.
     Purpose and core functionality: Ontotext Refine supports manual mapping of structured data to RDF schemas stored in GraphDB. Its visual interface helps users choose predicates and types, define datatypes and implement transformations from tabular or structured source data into RDF.
     Type: RDF transformation tool
+    FAIR support category: Semantics & validation
     Life cycle phases:
       - Process
       - Preserve
@@ -672,6 +553,7 @@
     Short description: Desktop tool for cleaning, reconciling and transforming tabular data, including RDF transformation through extensions.
     Purpose and core functionality: OpenRefine helps users inspect, clean and reconcile tabular data. With RDF extensions, it can be used to transform structured data and metadata into RDF, making it useful when applying semantic models or preparing FAIR metadata and data for exposure.
     Type: Data cleaning and RDF transformation
+    FAIR support category: Semantics & validation
     Life cycle phases:
       - Process
       - Preserve
@@ -713,6 +595,7 @@
     Short description: Metadata template workbench for creating semantically rich, machine-actionable metadata.
     Purpose and core functionality: CEDAR Workbench supports the creation of metadata templates and annotated metadata records. It helps users structure metadata consistently and produce semantically rich descriptions that can support FAIR publication and reuse.
     Type: Metadata template workbench
+    FAIR support category: Capture & collection
     Life cycle phases:
       - Plan
       - Collect
@@ -756,6 +639,7 @@
     Short description: RDF database and SPARQL endpoint for storing, querying and managing knowledge graphs.
     Purpose and core functionality: GraphDB is an RDF triplestore used to store semantic data and make it queryable through SPARQL. In FAIR workflows, it can hold transformed RDF data while metadata about the dataset is published through a FAIR Data Point or another catalogue.
     Type: RDF triplestore
+    FAIR support category: Semantics & validation
     Life cycle phases:
       - Preserve
       - Share
@@ -801,6 +685,7 @@
     Short description: RDF graph database that can be used as a SPARQL endpoint for linked data.
     Purpose and core functionality: Blazegraph is an RDF graph database used to store and query semantic data. In FAIR workflows it can serve as a triplestore for RDF data, enabling SPARQL-based access and reuse.
     Type: RDF triplestore
+    FAIR support category: Semantics & validation
     Life cycle phases:
       - Preserve
       - Share
@@ -843,6 +728,7 @@
     Short description: Online self-assessment survey for estimating the FAIRness of research data.
     Purpose and core functionality: The ARDC FAIR Self Assessment Tool is a short online survey that provides a visual indication of the FAIRness level of research data and links to resources that can help improve the result.
     Type: FAIR assessment self-assessment
+    FAIR support category: Planning & assessment
     Life cycle phases:
       - Plan
       - Reuse
@@ -883,6 +769,7 @@
     Short description: RDA checklist and maturity indicator model for assessing FAIRness against FAIR principles and sub-principles.
     Purpose and core functionality: The FAIR Data Maturity Model provides FAIR maturity indicators, guidelines and a spreadsheet-based assessment that can be used to score the FAIRness of data and metadata.
     Type: FAIR assessment model
+    FAIR support category: Planning & assessment
     Life cycle phases:
       - Plan
       - Reuse
@@ -923,6 +810,7 @@
     Short description: Web-based wizard for creating, publishing and comparing FAIR Implementation Profiles.
     Purpose and core functionality: FIP Wizard helps communities document their FAIR Implementation Profile by capturing FAIR-enabling resources through a guided questionnaire. It can generate human-readable outputs and machine-actionable nanopublications that can be explored through services such as FAIR Connect and Nanodash.
     Type: FAIR implementation profile tool
+    FAIR support category: Planning & assessment
     Life cycle phases:
       - Plan
       - Share
@@ -967,6 +855,7 @@
     Short description: Web tool for automated FAIR metric checks on URLs and persistent identifiers.
     Purpose and core functionality: FAIR-Checker provides a web interface for evaluating FAIR metrics by testing a URL or DOI. It returns scores for FAIR sub-principles and provides suggestions for improving failed checks.
     Type: FAIR assessment tool
+    FAIR support category: Planning & assessment
     Life cycle phases:
       - Plan
       - Reuse
@@ -1008,6 +897,7 @@
     Short description: Online service for testing metadata resources against FAIR maturity indicators.
     Purpose and core functionality: FAIR Evaluator provides an online service to test metadata resources against FAIR maturity indicators in an automated way. It reports assessment outcomes and logs that can help identify why a test failed.
     Type: FAIR assessment tool
+    FAIR support category: Planning & assessment
     Life cycle phases:
       - Plan
       - Reuse
@@ -1049,6 +939,7 @@
     Short description: Registry-style overview of FAIR assessment tools.
     Purpose and core functionality: FAIRassist helps users discover FAIR assessment tools and compare options before choosing an approach for assessing data or metadata FAIRness.
     Type: FAIR assessment tool registry
+    FAIR support category: Planning & assessment
     Life cycle phases:
       - Plan
       - Reuse
@@ -1089,6 +980,7 @@
     Short description: Online awareness tool for learning about FAIR data principles.
     Purpose and core functionality: FAIR Aware is an online tool from DANS for assessing and improving general awareness of the FAIR data principles. In the FAIR Metroline it is mentioned as a complementary option when the goal is FAIR awareness rather than direct dataset assessment.
     Type: FAIR awareness self-assessment
+    FAIR support category: Planning & assessment
     Life cycle phases:
       - Plan
       - Reuse
@@ -1129,6 +1021,7 @@
     Short description: Platform for managing and publishing datasets, data elements, value sets and implementation artefacts for health data.
     Purpose and core functionality: ART-DECOR can be used to publish structured metadata about datasets, including data elements and codebooks. In FAIR Metroline guidance it is used as an example source for reusable codebooks and structured metadata for clinical studies and patient registries.
     Type: Structural metadata and codebook platform
+    FAIR support category: Capture & collection
     Life cycle phases:
       - Plan
       - Collect
@@ -1179,6 +1072,7 @@
     Short description: Metadata repository for rare disease registries and sampled data elements.
     Purpose and core functionality: ERDRI.mdr is a metadata repository for patient registries. It enables publication of sampled data elements and supports discovery and reuse of structural metadata in rare disease contexts.
     Type: Metadata repository
+    FAIR support category: Capture & collection
     Life cycle phases:
       - Share
       - Reuse
@@ -1220,6 +1114,7 @@
     Short description: W3C standard for describing CSV tables with machine-actionable metadata.
     Purpose and core functionality: CSV on the Web provides a vocabulary and metadata model for describing the columns, rows and semantics of CSV files. It can be used to make tabular structural metadata more machine-readable and to express metadata as JSON or RDF.
     Type: Metadata standard
+    FAIR support category: Capture & collection
     Life cycle phases:
       - Preserve
       - Share
@@ -1262,6 +1157,7 @@
     Short description: Tool for generating eCRFs for systems such as Castor EDC and REDCap from structured codebooks.
     Purpose and core functionality: iCRF Generator generates electronic case report forms for EDC systems such as Castor EDC and REDCap from codebooks published in ART-DECOR and OpenEHR. When codebooks are annotated, those annotations can be incorporated into generated CRFs.
     Type: eCRF generation tool
+    FAIR support category: Capture & collection
     Life cycle phases:
       - Collect
       - Process
@@ -1310,6 +1206,7 @@
     Short description: Amsterdam UMC tool for converting Excel codebooks into Castor-ready XML and limited LimeSurvey formats.
     Purpose and core functionality: Codebook to Castor/LimeSurvey converts an Excel-based codebook into a format compatible with Radboudumc's Castor Offline Design converter, which can generate a Castor-ready XML file. It currently has limited LimeSurvey support and is only available within Amsterdam UMC.
     Type: eCRF conversion tool
+    FAIR support category: Capture & collection
     Life cycle phases:
       - Collect
       - Process
@@ -1356,6 +1253,7 @@
     Short description: Electronic data capture platform for building and managing online surveys and clinical research databases.
     Purpose and core functionality: REDCap is an electronic data capture platform used to build and manage online surveys and research databases. In FAIR Metroline guidance it is discussed as a commonly used EDC system for eCRF design, including support for structured data capture and ontology search features.
     Type: Electronic Data Capture (EDC)
+    FAIR support category: Capture & collection
     Life cycle phases:
       - Collect
     Domains using it:
@@ -1397,6 +1295,7 @@
     Short description: Ontology editor with reasoning support for building and validating OWL ontologies.
     Purpose and core functionality: Protege supports ontology editing, inspection and reasoning. It can be used when implementing semantic models, adding ontology annotations and validating modelling choices.
     Type: Ontology editing tool
+    FAIR support category: Semantics & validation
     Life cycle phases:
       - Plan
       - Process
@@ -1440,6 +1339,7 @@
     Short description: Command-line toolkit for ontology manipulation, validation and release workflows.
     Purpose and core functionality: ROBOT supports automated ontology workflows including conversion, validation, reasoning, reporting and release preparation. It is useful for implementing and maintaining semantic models and ontology mappings.
     Type: Ontology build tool
+    FAIR support category: Semantics & validation
     Life cycle phases:
       - Process
       - Preserve
@@ -1484,6 +1384,7 @@
     Short description: SHACL validation library for validating RDF graphs against SHACL shapes.
     Purpose and core functionality: TopBraid SHACL API can validate RDF graphs using SHACL constraints. It is useful when checking that semantic models and transformed metadata conform to expected shapes.
     Type: SHACL validation library
+    FAIR support category: Semantics & validation
     Life cycle phases:
       - Process
       - Reuse
@@ -1525,6 +1426,7 @@
     Short description: Python implementation of SHACL validation for RDF graphs.
     Purpose and core functionality: pySHACL validates RDF graphs against SHACL shapes from Python or the command line. It is useful for automated checks in FAIRification workflows and semantic model maintenance.
     Type: SHACL validation tool
+    FAIR support category: Semantics & validation
     Life cycle phases:
       - Process
       - Reuse
@@ -1566,6 +1468,7 @@
     Short description: Python toolkit for validating, converting and managing Simple Standard for Sharing Ontological Mappings files.
     Purpose and core functionality: SSSOM Toolkit supports management of ontology mappings expressed in the Simple Standard for Sharing Ontological Mappings format. It can be used to validate mapping files and keep semantic mappings reusable and maintainable.
     Type: Ontology mapping toolkit
+    FAIR support category: Semantics & validation
     Life cycle phases:
       - Process
       - Preserve
@@ -1607,6 +1510,7 @@
     Short description: Visual SPARQL query builder for creating linked-data queries without writing SPARQL syntax.
     Purpose and core functionality: Sparnatural provides a visual interface that helps users construct SPARQL queries through guided selections. It is useful for exploring linked-data resources when users need more than browsing and filtering but are not yet comfortable writing SPARQL manually.
     Type: Visual SPARQL query builder
+    FAIR support category: Publication & discovery
     Life cycle phases:
       - Reuse
       - Analyse
@@ -1648,6 +1552,7 @@
     Short description: Guided query builder for exploring Wikidata without writing SPARQL manually.
     Purpose and core functionality: Wikidata Query Builder helps users construct queries over Wikidata by choosing entities, properties and values through a guided interface. It can be a useful entry point for learning how linked-data queries are structured.
     Type: Visual query builder
+    FAIR support category: Publication & discovery
     Life cycle phases:
       - Reuse
       - Analyse
@@ -1689,6 +1594,7 @@
     Short description: Web-based SPARQL editor for querying RDF endpoints.
     Purpose and core functionality: YASGUI provides a browser-based interface for writing, running and inspecting SPARQL queries against RDF endpoints. It is useful for users who need direct query access and interactive result exploration.
     Type: SPARQL query editor
+    FAIR support category: Publication & discovery
     Life cycle phases:
       - Reuse
       - Analyse
@@ -1731,6 +1637,7 @@
     Short description: Web-based SPARQL query editor available on Virtuoso-backed endpoints.
     Purpose and core functionality: Virtuoso Query Editor is a SPARQL interface commonly exposed by Virtuoso-backed linked-data services. It lets users write and run SPARQL queries directly against an endpoint.
     Type: SPARQL query editor
+    FAIR support category: Publication & discovery
     Life cycle phases:
       - Reuse
       - Analyse
@@ -1772,6 +1679,7 @@
     Short description: Secure file transfer service for sending large files.
     Purpose and core functionality: SURF filesender supports secure transfer of large files and is listed in the FAIR Metroline as an option for authenticated transfer of large or sensitive datasets.
     Type: Secure file transfer service
+    FAIR support category: Access & transfer
     Life cycle phases:
       - Share
       - Reuse
@@ -1812,6 +1720,7 @@
     Short description: High-speed transfer software for moving large datasets.
     Purpose and core functionality: Aspera supports high-speed transfer of large datasets and is recommended in the FAIR Metroline where robust transfer and retry or resume capabilities are needed.
     Type: High-speed data transfer tool
+    FAIR support category: Access & transfer
     Life cycle phases:
       - Share
       - Reuse
@@ -1852,6 +1761,7 @@
     Short description: Managed transfer service for reliable movement of large research datasets.
     Purpose and core functionality: Globus supports reliable, resumable transfer of large research datasets across endpoints. In the FAIR Metroline it is listed for bulk transfers where interruptions should not require restarting the transfer.
     Type: Research data transfer service
+    FAIR support category: Access & transfer
     Life cycle phases:
       - Share
       - Reuse

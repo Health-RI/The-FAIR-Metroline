@@ -9,6 +9,10 @@ layout: page
 <p class="lead tool-lead-description">{{ page.description }}</p>
 {% endif %}
 
+{% if page.fair_support_category %}
+<p><strong>FAIR support category:</strong> {{ page.fair_support_category }}</p>
+{% endif %}
+
 {% comment %} ===== DATA LIFE CYCLE (local) ===== {% endcomment %}
 {% if page.phase %}
 <h2>Data life cycle</h2>

@@ -1,7 +1,9 @@
-{%- if include.domains == true or include.phases == true or include.institutes == true or include.search == true %}
+{%- assign show_fair_support_categories = include.fair_support_categories == true or include.tool_roles == true %}
+{%- if include.domains == true or include.phases == true or include.institutes == true or show_fair_support_categories or include.search == true %}
 {%- assign alldomains = "" %}
 {%- assign allphases = "" %}
 {%- assign allinstitutes = "" %}
+{%- assign allroles = "" %}
 {%- for current_page in site.pages | sorted %}
 {%- if current_page.search_exclude != true and current_page.type == include.type %}
 {%- if current_page.domain %}
@@ -28,6 +30,13 @@
 {%- assign allinstitutes = allinstitutes | append: pageinstitutes %}
 {%- endif %}
 {%- endif %}
+{%- if current_page.fair_support_category %}
+{%- if allroles %}
+{%- assign allroles = allroles | append: ", " | append: current_page.fair_support_category %}
+{%- else %}
+{%- assign allroles = allroles | append: current_page.fair_support_category %}
+{%- endif %}
+{%- endif %}
 {%- endif %}
 {%- endfor %}
 {%- assign alldomains = alldomains | split: ", " | uniq | sort %}
@@ -38,6 +47,7 @@
 {%- endfor %}
 {%- assign allphases = allphases | split: "|" %}
 {%- assign allinstitutes = allinstitutes | split: ", " | uniq | sort %}
+{%- assign allroles = allroles | split: ", " | uniq | sort %}
 <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-{{ include.col | default: 2 }} my-4">
     {%- if include.domains == true %}
     <div class="col">
@@ -91,6 +101,24 @@
         </div>
     </div>
     {%- endif %}
+    {%- if show_fair_support_categories %}
+    <div class="col">
+        <div class="input-group">
+            <label class="input-group-text" for="role-input">Filter by FAIR support category</label>
+            <select class="form-select" id="role-input" aria-label="Filter by FAIR support category">
+                <option value="">All categories</option>
+                {%- for role in allroles %}
+                {%- if role != "" %}
+                <option value="{{role | slugify}}">{{role}}</option>
+                {%- endif %}
+                {%- endfor %}
+            </select>
+            <button class="btn btn-primary" title="Button to clear FAIR support category selection" type="button" id="clearrolefilter">
+                <i class="fa-solid fa-backspace"></i>
+            </button>
+        </div>
+    </div>
+    {%- endif %}
     {%- if include.search == true %}
     <div class="col">
         <div class="input-group">
@@ -127,6 +155,7 @@
     {%- assign domains_classes = "" %}
     {%- assign phases_classes = "" %}
     {%- assign institutes_classes = "" %}
+    {%- assign role_classes = "" %}
     {%- assign except = include.except | split: ", " %}
     {%- if current_page.title and current_page.search_exclude != true %}
     {%- unless except contains current_page.name %}
@@ -157,7 +186,10 @@
     {%- endfor %}{{institutes_output}}
     {%- endcapture -%}
     {%- endif %}
-<div class="col" data-domains="{{domains_classes}}" data-phases="{{phases_classes}}" data-institutes="{{institutes_classes}}">
+    {%- if current_page.fair_support_category %}
+    {%- assign role_classes = current_page.fair_support_category | slugify %}
+    {%- endif %}
+<div class="col" data-domains="{{domains_classes}}" data-phases="{{phases_classes}}" data-institutes="{{institutes_classes}}" data-role="{{role_classes}}">
     <a href="{{ current_page.url | relative_url }}" class="card h-100 tool-card" aria-label="Go to the {{ current_page.title }} page">
         <div class="card-body">
 
@@ -184,6 +216,15 @@
             {%- endif %}
 
             <div class="tool-card-meta">
+                {%- if current_page.fair_support_category %}
+                <div class="tool-tags-group">
+                    <span class="tool-tags-label">FAIR support category:</span>
+                    <div class="tool-tags">
+                        <span class="badge tool-role-badge">{{ current_page.fair_support_category }}</span>
+                    </div>
+                </div>
+                {%- endif %}
+
                 {%- if current_page.domain %}
                 {%- assign pagedomains = current_page.domain | sort %}
                 <div class="tool-tags-group">
@@ -218,7 +259,7 @@
 </div>
 
 
-{%- if include.domains == true or include.phases == true or include.institutes == true or include.search == true %}
+{%- if include.domains == true or include.phases == true or include.institutes == true or show_fair_support_categories or include.search == true %}
 <script type="text/javascript">
     /**
      * Apply all active filters
@@ -228,25 +269,29 @@
         const domainSelect = document.getElementById('domains-input');
         const phaseSelect = document.getElementById('phases-input');
         const instituteSelect = document.getElementById('institutes-input');
+        const roleSelect = document.getElementById('role-input');
         const searchInput = document.getElementById('title-search');
 
         const selectedDomain = domainSelect ? domainSelect.value : '';
         const selectedPhase = phaseSelect ? phaseSelect.value : '';
         const selectedInstitute = instituteSelect ? instituteSelect.value : '';
+        const selectedRole = roleSelect ? roleSelect.value : '';
         const searchFilter = searchInput ? searchInput.value.toLowerCase() : '';
 
         for (col of cols) {
             const colDomains = col.getAttribute("data-domains") ? col.getAttribute("data-domains").split(" ") : [];
             const colPhases = col.getAttribute("data-phases") ? col.getAttribute("data-phases").split(" ") : [];
             const colInstitutes = col.getAttribute("data-institutes") ? col.getAttribute("data-institutes").split(" ") : [];
+            const colRole = col.getAttribute("data-role") || '';
 
             const domainMatch = !selectedDomain || colDomains.indexOf(selectedDomain) !== -1;
             const phaseMatch = !selectedPhase || colPhases.indexOf(selectedPhase) !== -1;
             const instituteMatch = !selectedInstitute || colInstitutes.indexOf(selectedInstitute) !== -1;
+            const roleMatch = !selectedRole || colRole === selectedRole;
             const body = col.querySelector(".card-body");
             const searchMatch = !searchFilter || (body && body.innerText.toLowerCase().indexOf(searchFilter) > -1);
 
-            if (domainMatch && phaseMatch && instituteMatch && searchMatch) {
+            if (domainMatch && phaseMatch && instituteMatch && roleMatch && searchMatch) {
                 col.classList.remove("d-none");
             } else {
                 col.classList.add("d-none");
@@ -258,6 +303,7 @@
         if (selectedDomain) params.set('domain', selectedDomain);
         if (selectedPhase) params.set('phase', selectedPhase);
         if (selectedInstitute) params.set('institute', selectedInstitute);
+        if (selectedRole) params.set('role', selectedRole);
         const newUrl = params.toString() ? `?${params}` : location.pathname;
         history.replaceState({}, '', newUrl);
     }
@@ -276,6 +322,11 @@
         var institutes = document.getElementById('institutes-input');
         if (institutes) {
             institutes.addEventListener("change", applyFilters);
+        }
+
+        var roles = document.getElementById('role-input');
+        if (roles) {
+            roles.addEventListener("change", applyFilters);
         }
 
         var cleardomains = document.getElementById("cleardomainfilter");
@@ -310,6 +361,17 @@
                 }
             });
         }
+
+        var clearroles = document.getElementById("clearrolefilter");
+        if (clearroles) {
+            clearroles.addEventListener("click", function () {
+                var roles = document.getElementById('role-input');
+                if (roles) {
+                    roles.selectedIndex = -1;
+                    applyFilters();
+                }
+            });
+        }
     });
 
     $(document).ready(function () {
@@ -329,6 +391,7 @@
         const urlDomain = urlParams.get('domain');
         const urlPhase = urlParams.get('phase');
         const urlInstitute = urlParams.get('institute');
+        const urlRole = urlParams.get('role') || urlParams.get('fair-role');
 
         if (urlDomain) {
             const domainSelect = document.getElementById('domains-input');
@@ -348,9 +411,15 @@
                 instituteSelect.value = urlInstitute;
             }
         }
+        if (urlRole) {
+            const roleSelect = document.getElementById('role-input');
+            if (roleSelect) {
+                roleSelect.value = urlRole;
+            }
+        }
 
         // Apply filters if any URL parameters were present
-        if (urlDomain || urlPhase || urlInstitute) {
+        if (urlDomain || urlPhase || urlInstitute || urlRole) {
             applyFilters();
         }
     });

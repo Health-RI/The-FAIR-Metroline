@@ -32,6 +32,15 @@
                 {%- endif %}
 
                 <div class="tool-card-meta">
+                    {%- if tool_page.fair_support_category %}
+                    <div class="tool-tags-group">
+                        <span class="tool-tags-label">FAIR support category:</span>
+                        <div class="tool-tags">
+                            <span class="badge tool-role-badge">{{ tool_page.fair_support_category }}</span>
+                        </div>
+                    </div>
+                    {%- endif %}
+
                     {%- if tool_page.domain %}
                     {%- assign pagedomains = tool_page.domain | sort %}
                     <div class="tool-tags-group">
