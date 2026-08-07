@@ -28,7 +28,7 @@ Decide which type of tool fits your goal(s) best. Broadly, the tools fall into t
 
 In both cases, the result gives an indication about the FAIRness of the (meta)data. Additionally, tools may give advice how to improve FAIRness. It is important to bear in mind that outcomes of tools may vary due to, for example, differences in tests performed and subjectivity of self-assessments surveys. See [FAIR Assessment Tools: Towards an “Apples to Apples” Comparisons](https://www.eosc.eu/sites/default/files/2023-01/Report%20on%20the%20FAIR%20Evaluation%20events_final_sub.pdf) for more information this.
 
-While we focus specifically on the FAIRness of (meta)data in this step, it is also possible to assess general FAIR awareness, for example by using the [FAIR Aware tool]({{site.baseurl}}/fair-aware) provided by DANS.
+While we focus specifically on the FAIRness of (meta)data in this step, it is also possible to assess general FAIR awareness, for example by using the {% include toolassemblies/show-badges.html ids="fair-aware" %} tool provided by DANS.
 
 ### Step 2 - Consider using a well-known FAIR assessment tool
 The tool pages below provide an overview of some of the more popular tools from both categories.
@@ -40,7 +40,7 @@ The tool pages below provide an overview of some of the more popular tools from 
 {% include toolassemblies/show-tiles.html ids="fair-checker, fair-evaluator" %}
 
 To find even more tools:  
-* **[FAIRassist]({{site.baseurl}}/fairassist).** Offers an overview of available tools;
+* **{% include toolassemblies/show-badges.html ids="fairassist" %}.** Offers an overview of available tools;
 * **[RDMkit](https://rdmkit.elixir-europe.org/compliance_monitoring#how-can-you-measure-and-document-data-management-capabilities).** Discusses several solutions, such as the FAIR metrics and FAIRshake;
 * **[FAIR assessment tools: evaluating use and performance](https://www.sciencedirect.com/science/article/pii/S2452074822000246).** Paper comparing several tools.
 
@@ -55,7 +55,7 @@ To successfully do a pre-FAIR assessment, do the following:
 The final evaluation will give insight into the current FAIRness of your data. Depending on the tool used, you may receive feedback on how to improve the FAIRness of your data. Thus, the outcome of the pre-FAIR assessment helps you determine the next steps to achieve your FAIRification goals.
 
 ## Practical examples from the community
-For an applied example of The FAIR Evaluator, see [Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic](https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-022-00263-7).
+For an applied example of The {% include toolassemblies/show-badges.html ids="fair-evaluator" %}, see [Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic](https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-022-00263-7).
 
 ## Training
 **DMP Instructional Trainings**<br>

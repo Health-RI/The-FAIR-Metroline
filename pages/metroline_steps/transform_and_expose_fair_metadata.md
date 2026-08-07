@@ -57,9 +57,9 @@ Before you can expose your data in a FAIR way, you first need to transform it in
 
 
 ### Step 2 - Store and expose data
-Once your data is transformed into RDF, it needs to be stored so it can be efficiently queried, accessed and reused. This is usually done with an RDF triplestore, a database designed for storing and retrieving semantic data using a specialised data querying language [SPARQL](https://www.w3.org/TR/sparql11-query/). Common tools include [GraphDB](/graphdb) and [Blazegraph](/blazegraph). Triplestores can serve as a backend for web applications or services that work with semantic data.
+Once your data is transformed into RDF, it needs to be stored so it can be efficiently queried, accessed and reused. This is usually done with an RDF triplestore, a database designed for storing and retrieving semantic data using a specialised data querying language [SPARQL](https://www.w3.org/TR/sparql11-query/). Common tools include {% include toolassemblies/show-badges.html ids="graphdb" %} and {% include toolassemblies/show-badges.html ids="blazegraph" %}. Triplestores can serve as a backend for web applications or services that work with semantic data.
 
-To make both data and metadata discoverable and accessible, you can publish RDF metadata through a [FAIR Data Point](/fair-data-point) (FDP). An FDP provides a standard way to publish metadata, structured in three layers: **Catalogue**, **Dataset** and **Distribution**.
+To make both data and metadata discoverable and accessible, you can publish RDF metadata through a {% include toolassemblies/show-badges.html ids="fair-data-point" %} (FDP). An FDP provides a standard way to publish metadata, structured in three layers: **Catalogue**, **Dataset** and **Distribution**.
 
 Importantly, an FDP is intended for **publishing metadata**, not for hosting datasets themselves. For privacy sensitive or access controlled data, the FDP should describe the dataset and point (through its **Distribution** or **Data Service**) to the secure system where the data resides, for example, a trusted repository, triplestore, or API, where your chosen reuse conditions (such as requiring authentication or data access agreements) are enforced.
 
@@ -92,11 +92,11 @@ Start by transforming metadata into a structured format using semantic web stand
 
 Recommended tool pages:
 
-{% include toolassemblies/show-tiles.html ids="openrefine, fair-in-a-box, castor, graphdb, blazegraph, fair-data-point, cedar-workbench, fair-data-station" %}
+{% include toolassemblies/show-badges.html ids="openrefine, fair-in-a-box, castor, graphdb, blazegraph, fair-data-point, cedar-workbench, fair-data-station" %}
 
 ## Practical examples from the community
 **VASCA Registry (Castor EDC + FAIR Data Point)**<br>
-The VASCA registry (Registry of Vascular Anomalies) implemented the CDE semantic data model and uses the DCAT metadata schema to publish metadata in three layers: catalogue, dataset and distribution. It stores machine-readable RDF data in Castor EDC’s FAIR Data Point, supporting de novo FAIRification, meaning data is FAIR from the moment it is collected through the eCRF.
+The VASCA registry (Registry of Vascular Anomalies) implemented the CDE semantic data model and uses the DCAT metadata schema to publish metadata in three layers: catalogue, dataset and distribution. It stores machine-readable RDF data in {% include toolassemblies/show-badges.html ids="castor" %}’s FAIR Data Point, supporting de novo FAIRification, meaning data is FAIR from the moment it is collected through the eCRF.
 
 More information:
 * [VASCA registry metadata (human-readable)](https://fdp.castoredc.com/fdp/catalog/vasca)

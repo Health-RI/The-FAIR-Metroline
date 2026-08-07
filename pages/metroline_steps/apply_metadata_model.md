@@ -21,7 +21,7 @@ This step provides guidance on how to apply a metadata model to describe researc
 
 While some methods and tools focus specifically on either metadata or data, others have a general purpose and can be used for both layers. Typically, a tool for applying a model works by transforming or restructuring original data according to the structure and semantics defined by the model.
 
-For example, for a tool like FAIR-in-a-box (see also table below), this may involve reading data from a CSV file and transforming it into RDF that is compliant with a domain-specific model like the [CARE-SM](https://github.com/CARE-SM/CARE-Semantic-Model) (Clinical And Registries Entries Semantic Model) data model. In such cases, each element in the file—whether a column header or data value—is linked to a formal concept from the model. This enables the resource to be understood not just by humans but also by machines. A similar example involving a different approach is the use of an electronic data capture platform such as Castor. Here, users can configure mappings between data elements in the electronic case report form and a semantic data model. This is further described in [this paper](https://www.sciencedirect.com/science/article/pii/S1532046421002264).
+For example, for a tool like {% include toolassemblies/show-badges.html ids="fair-in-a-box" %} (see also table below), this may involve reading data from a CSV file and transforming it into RDF that is compliant with a domain-specific model like the [CARE-SM](https://github.com/CARE-SM/CARE-Semantic-Model) (Clinical And Registries Entries Semantic Model) data model. In such cases, each element in the file—whether a column header or data value—is linked to a formal concept from the model. This enables the resource to be understood not just by humans but also by machines. A similar example involving a different approach is the use of an electronic data capture platform such as Castor. Here, users can configure mappings between data elements in the electronic case report form and a semantic data model. This is further described in [this paper](https://www.sciencedirect.com/science/article/pii/S1532046421002264).
 
 Many metadata-focused tools also provide mechanisms to expose your resource online under clear access conditions, increasing its findability. This may include generating metadata records in RDF and publishing the metadata via catalogues or registries that support standard protocols such as SPARQL.
 
@@ -35,7 +35,7 @@ The metadata and data that are structured with ontologies and follow standard sc
 ### Step 1 - Use specialised tools to apply and customise a FAIR (meta)data model to your resources
 The following tool pages describe tools that can support applying a (meta)data model to your resource(s).
 
-{% include toolassemblies/show-tiles.html ids="fair-data-point, fair-in-a-box, castor, ontotext-refine, molgenis" %}
+{% include toolassemblies/show-badges.html ids="fair-data-point, fair-in-a-box, castor, ontotext-refine, molgenis" %}
 
 ## Practical examples from the community
 **FAIR Data Point**<br>
@@ -48,7 +48,7 @@ For more information, see the following two publications:
 * [De-novo FAIRification via an Electronic Data Capture system by automated transformation of filled electronic Case Report Forms into machine-readable data](https://doi.org/10.1016/j.jbi.2021.103897)
 
 **PRISMA**<br>
-PRISMA implemented the Health-RI metadata schema in the FAIR Data Point and applied it to metadata from the [PRISMA study](https://www.prisma-studie.nl/). You can view PRISMA metadata in the [Radboudumc FAIR Data Point](https://fdp.radboudumc.nl/catalog/fa48b19f-f390-4023-872d-f0f0024bfcec). 
+PRISMA implemented the Health-RI metadata schema in the {% include toolassemblies/show-badges.html ids="fair-data-point" %} and applied it to metadata from the [PRISMA study](https://www.prisma-studie.nl/). You can view PRISMA metadata in the [Radboudumc FAIR Data Point](https://fdp.radboudumc.nl/catalog/fa48b19f-f390-4023-872d-f0f0024bfcec). 
 
 ## Training
 * [A portal to (Meta)data](https://zenodo.org/records/15676294), a presentation-lecture on gathering metadata elements at different levels.

@@ -138,7 +138,7 @@ You can find relevant standards and codebooks by:
 Below are listed some of the resources you could explore:
 * For clinical and biomedical data:
   * [CDASH](https://www.cdisc.org/standards/foundational/cdash). Standardised way to collect and structure clinical trial data. 
-  * [ART-DECOR]({{site.baseurl}}/art-decor). A tool for developing, managing, and sharing clinical data sets, templates, and terminologies. 
+  * {% include toolassemblies/show-badges.html ids="art-decor" %}. A tool for developing, managing, and sharing clinical data sets, templates, and terminologies. 
   * [OpenEHR](https://openehr.org/). A widely used standard for structuring and sharing electronic health records (EHR).
 * For metadata standards:
   * [FAIRsharing](https://fairsharing.org/). A curated registry of metadata standards, repositories, and data policies across scientific domains. 

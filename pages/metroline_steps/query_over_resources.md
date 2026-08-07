@@ -16,7 +16,7 @@ permalink: /metroline_steps/query_over_resources
 When machine-readable (meta)data is exposed (see [Metroline step: Transform and Expose FAIR metadata]({{site.baseurl}}/metroline_steps/transform_and_expose_fair_metadata)), it becomes an accessible FAIR resource. In other words, a dataset or metadata collection which can be found, queried, and reused. Such resources are often hosted or described in catalogues and/or via [FAIR Data Points](https://www.fairdatapoint.org/), which expose (meta)data in a standardised way. This ability to discover and reuse data using the metadata resources is what makes FAIR so powerful: it turns isolated data into actionable knowledge for science.
 
 These catalogues offer different levels of interaction:
-* **Browsing.** You can navigate through a FAIR Data Point (FDP) or catalogue to discover available datasets, for example in the [The National Health Data Catalogue](https://catalogus.healthdata.nl/en) or [EBI BioStudies](https://www.ebi.ac.uk/biostudies/studies/).
+* **Browsing.** You can navigate through a {% include toolassemblies/show-badges.html ids="fair-data-point" %} (FDP) or catalogue to discover available datasets, for example in the [The National Health Data Catalogue](https://catalogus.healthdata.nl/en) or [EBI BioStudies](https://www.ebi.ac.uk/biostudies/studies/).
 * **Filtering and faceted search.** Similar to filtering products in a webshop, results can be narrowed by disease, data type, species, or other metadata attributes, as supported by the [European Health Research Data and Sample Catalogue](https://molgeniscatalogue.org/).
 * **Visual query builders.** Some platforms provide user-friendly query forms that automatically generate queries behind the scenes, as seen in [Wikidata](https://query.wikidata.org/querybuilder/?uselang=en) or the [European Nucleotide Archive](https://www.ebi.ac.uk/ena/browser/search).
 * **Direct querying.** For more advanced use, researchers and developers can write and run their own queries using external clients or scripts, for example through [database queries with R](https://solutions.posit.co/connections/db/getting-started/database-queries/).
@@ -61,7 +61,7 @@ To begin, we search for “Inflammatory bowel disease” in the search bar on [W
 "%}
 
 ### Step 2  - Use visual or guided tools to construct queries
-Some linked-data portals offer visual query builders that help users construct SPARQL queries without needing to learn the syntax. These tools automatically translate your selections (such as ticking checkboxes or choosing from dropdown menus) into SPARQL and run the query in the background. Such as [Sparnatural]({{site.baseurl}}/sparnatural) or [Wikidata Query Builder]({{site.baseurl}}/wikidata-query-builder).
+Some linked-data portals offer visual query builders that help users construct SPARQL queries without needing to learn the syntax. These tools automatically translate your selections (such as ticking checkboxes or choosing from dropdown menus) into SPARQL and run the query in the background. Such as {% include toolassemblies/show-badges.html ids="sparnatural" %} or {% include toolassemblies/show-badges.html ids="wikidata-query-builder" %}.
 
 The results are typically displayed in a table or graph, making it easy to explore data without writing any code. This approach is ideal for users who want to go beyond simple browsing but aren’t yet ready to write SPARQL manually. 
 
@@ -83,7 +83,7 @@ We want to continue our exploration of inflammatory bowel disease. In our first 
 Note: The following steps are meant specifically for querying catalogues and repositories with SPARQL endpoint. If you are trying to query a catalogue based on another querying approach (e.g. SQL), these may not be directly applicable.
 
 When you need more flexibility, connect directly to the SPARQL endpoint. Depending on the catalog you can use:
-* A web-based interface (e.g. [YASGUI]({{site.baseurl}}/yasgui) or [Virtuoso Query Editor]({{site.baseurl}}/virtuoso-query-editor)).
+* A web-based interface (e.g. {% include toolassemblies/show-badges.html ids="yasgui" %} or {% include toolassemblies/show-badges.html ids="virtuoso-query-editor" %}).
 * External clients and libraries in Python, JavaScript, C#, or Java.
 
 Try simple queries first, such as listing datasets or retrieving specific metadata fields.
@@ -91,7 +91,7 @@ As you become more comfortable, you can write more complex queries that join rel
 
 Recommended tool pages:
 
-{% include toolassemblies/show-tiles.html ids="sparnatural, wikidata-query-builder, yasgui, virtuoso-query-editor" %}
+{% include toolassemblies/show-badges.html ids="sparnatural, wikidata-query-builder, yasgui, virtuoso-query-editor" %}
 
 {% include info-box.html type="example" title="Example step 3. : Use Wikidata query service" text="
 We saw that the gene IL23R is associated with the disease psoriasis. Now, let’s take it a step further and run a more complex SPARQL query using the [Wikidata query service](https://query.wikidata.org/) to find which genes are associated with both Inflammatory Bowel Disease (IBD) and psoriasis.

@@ -65,7 +65,7 @@ Even if your FAIRification efforts are complete for now, evolving requirements, 
 To help keep an overview of the original FAIRification objectives, their status, and possible changes in the process, it might be useful to update this information in your datamanagement plan. Consider going back to [Metroline Step: Define FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives) to redefine the original FAIR objectives.
 
 ## Practical examples from the community 
-For an applied example of The FAIR Evaluator tool, see Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic. 
+For an applied example of The {% include toolassemblies/show-badges.html ids="fair-evaluator" %} tool, see Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic. 
 
 ## Training
 Considering looking into the following resources:

@@ -15,7 +15,7 @@ permalink: /metroline_steps/design_ecrf
 ## Short description 
 Capturing clinical data plays a vital role in health research. Traditionally, this information was recorded on paper case report forms (CRFs) and later manually entered into a database. Today, however, data is increasingly collected directly using electronic case report forms (eCRFs) within electronic data capture (EDC) systems. This shift has significantly improved the quality and reduced the costs associated with data collection. 
 
-A variety of EDC platforms are available to support clinical data capture. Most Dutch University Medical Centres (UMCs) hold site licences for one or more of these platforms. Use of these platforms is mandatory for research that falls under Good Clinical Practice (GCP) as defined in the [ICH E6(R3) guideline](https://www.ema.europa.eu/en/documents/scientific-guideline/ich-e6-r3-guideline-good-clinical-practice-gcp-step-5_en.pdf) and the NFU also indicates that their use is mandatory for all WMO research within the Netherlands as specified in its [guideline on the quality assurance of human subject research](https://www.umcnl.nl/app/uploads/2025/10/Richtlijn-kwaliteitsborging-mensgebonden-onderzoek-2023.pdf). Commonly used systems in the Netherlands include [Castor EDC]({{site.baseurl}}/castor-edc) and [REDCap]({{site.baseurl}}/redcap). These tools offer a wide range of functionalities, including real-time data validation during entry, integrated questionnaires, study planning modules, streamlined import/export processes and monitoring features that promote data quality and regulatory compliance. Some of these functionalities also support the efficient design of eCRFs, which is the key focus of this page. 
+A variety of EDC platforms are available to support clinical data capture. Most Dutch University Medical Centres (UMCs) hold site licences for one or more of these platforms. Use of these platforms is mandatory for research that falls under Good Clinical Practice (GCP) as defined in the [ICH E6(R3) guideline](https://www.ema.europa.eu/en/documents/scientific-guideline/ich-e6-r3-guideline-good-clinical-practice-gcp-step-5_en.pdf) and the NFU also indicates that their use is mandatory for all WMO research within the Netherlands as specified in its [guideline on the quality assurance of human subject research](https://www.umcnl.nl/app/uploads/2025/10/Richtlijn-kwaliteitsborging-mensgebonden-onderzoek-2023.pdf). Commonly used systems in the Netherlands include {% include toolassemblies/show-badges.html ids="castor" %} and {% include toolassemblies/show-badges.html ids="redcap" %}. These tools offer a wide range of functionalities, including real-time data validation during entry, integrated questionnaires, study planning modules, streamlined import/export processes and monitoring features that promote data quality and regulatory compliance. Some of these functionalities also support the efficient design of eCRFs, which is the key focus of this page. 
 
 This page provides guidance on the design of eCRFs, including considerations before creating one, and best practices to keep in mind while to ensure high data quality and reliability.  
 
@@ -84,7 +84,7 @@ When study-specific variables are not covered by existing standards, define them
 * **Record metadata and validation rules.** Add context for each variable, including units of measurement, allowed ranges (e.g. age 0–120), and dependencies (e.g. "only ask if symptom = yes"). 
 
 {% capture infobox_text3 %}
-To build the codebook, the researcher uses the elements as specified in the [VASCA codebook](https://decor.nictiz.nl/ad/#/vasca-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.113.1.0/2020-06-24T16:32:36), available in ART-DECOR. These elements are based on the [VASCA Rare Disease Common Data Elements](https://vascern.eu/app/uploads/2023/05/Element-List-VASCA-WG_120423.pdf).   
+To build the codebook, the researcher uses the elements as specified in the [VASCA codebook](https://decor.nictiz.nl/ad/#/vasca-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.113.1.0/2020-06-24T16:32:36), available in {% include toolassemblies/show-badges.html ids="art-decor" %}. These elements are based on the [VASCA Rare Disease Common Data Elements](https://vascern.eu/app/uploads/2023/05/Element-List-VASCA-WG_120423.pdf).   
 
 The researcher's codebook contains:
 
@@ -230,12 +230,12 @@ Now, when you enter data, you can select the item from the ontology's list. For 
    %}
 
 ### Special step 2 - Tools to help you build eCRFs
-* **iCRF Generator.** The [iCRF Generator]({{site.baseurl}}/icrf-generator) is a tool that generates eCRFs for various EDC systems such as Castor EDC and REDCap from codebooks published in ART-DECOR and OpenEHR. When codebooks are properly annotated, their annotations are incorporated into the generated CRFs in accordance with the methods described above.
-* **Codebook to Castor/LimeSurvey.** [Codebook to Castor/LimeSurvey]({{site.baseurl}}/codebook-to-castor-limesurvey) was developed by Amsterdam UMC. This tool converts an Excel-based codebook into a format compatible with Radboudumc’s Castor Offline Design converter, which then generates a Castor-ready XML file. Nowadays, the tool also has limited LimeSurvey support. Currently, the tool is only available within Amsterdam UMC.
+* **iCRF Generator.** The {% include toolassemblies/show-badges.html ids="icrf-generator" %} is a tool that generates eCRFs for various EDC systems such as Castor EDC and REDCap from codebooks published in ART-DECOR and OpenEHR. When codebooks are properly annotated, their annotations are incorporated into the generated CRFs in accordance with the methods described above.
+* **Codebook to Castor/LimeSurvey.** {% include toolassemblies/show-badges.html ids="codebook-to-castor-limesurvey" %} was developed by Amsterdam UMC. This tool converts an Excel-based codebook into a format compatible with Radboudumc’s Castor Offline Design converter, which then generates a Castor-ready XML file. Nowadays, the tool also has limited LimeSurvey support. Currently, the tool is only available within Amsterdam UMC.
 
 Recommended tool pages:
 
-{% include toolassemblies/show-tiles.html ids="castor, redcap, icrf-generator, codebook-to-castor-limesurvey, art-decor" %}
+{% include toolassemblies/show-badges.html ids="castor, redcap, icrf-generator, codebook-to-castor-limesurvey, art-decor" %}
 
 ## Practical examples from the community
 * **VASCA registry**. For more information see the following publications:

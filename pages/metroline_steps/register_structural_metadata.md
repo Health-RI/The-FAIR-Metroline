@@ -184,7 +184,7 @@ A group of Data Stewards conducted a campus-wide survey to assess current data m
 ### Step 2 - Select the most appropriate data repository for publishing
 Once the codebook is ready (see [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics)), you can determine where and how it should be published. Depending on the research domain or data type, repository requirements and metadata standards may already influence how structural metadata is collected and formatted earlier in the research lifecycle. Structural metadata can be published in various forms, and the most suitable option often depends on the context of the research project and the [FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives).
 
-For certain projects, it might be practical to publish the codebook together with the research data in a repository, creating a cohesive and accessible package. However, in some projects where data cannot be published (e.g. due to privacy concerns, legal restrictions, or intellectual property rights), it is appropriate to publish the codebook independently in a specialised catalogue, such as an [ART-DECOR](https://decor.nictiz.nl/ad) instance hosted by Nictiz.
+For certain projects, it might be practical to publish the codebook together with the research data in a repository, creating a cohesive and accessible package. However, in some projects where data cannot be published (e.g. due to privacy concerns, legal restrictions, or intellectual property rights), it is appropriate to publish the codebook independently in a specialised catalogue, such as an {% include toolassemblies/show-badges.html ids="art-decor" %} instance hosted by Nictiz.
 
 When selecting a repository or catalogue:
 * Use domain-specific repositories where possible (a repository that is commonly used in your research domain). If you don’t know what repositories are used in your domain, you can make use of [re3data](https://www.re3data.org/) or [FAIRsharing](https://fairsharing.org/) to browse through repositories. Many filters can be applied (e.g., generation of a persistent identifier, selecting a country, data access level,  etc.), making it possible to select a data repository that fits your needs.
@@ -222,10 +222,10 @@ For surveys, patient registries and other data types, it can be helpful to expli
 
 Depending on your field and data type, different tools may be available. Most of these tools support interoperability, which is also essential for FAIR data practices:
 * **Clinical studies and patient registries.** [ART-DECOR]({{site.baseurl}}/art-decor) allows you to publish structured metadata about your dataset, including data elements in XML format (see example [here](https://art-decor.org/ad/#/covid19f-/datasets/dataset)).
-* **Patient Registries.** [ERDRI.mdr]({{site.baseurl}}/erdri-mdr) is a metadata repository that enables the publication of sampled data elements.
+* **Patient Registries.** {% include toolassemblies/show-badges.html ids="erdri-mdr" %} is a metadata repository that enables the publication of sampled data elements.
 * **Survey and/or any tabular datasets (rows and columns).** [DDI](https://ddialliance.org/) provides tools to convert your codebook into RDF or XML. Ideally, these files should be hosted in repositories that support these formats, but they can also be shared alongside your data following the guidance above.
 
-Make sure that, when structural metadata is shared separately from the dataset itself, the dataset’s resource-level metadata includes clear and maintained links to the structural metadata. For example, if your institution shares resource-level metadata via a FAIR Data Point, make sure that links to the structural metadata are also included there.
+Make sure that, when structural metadata is shared separately from the dataset itself, the dataset’s resource-level metadata includes clear and maintained links to the structural metadata. For example, if your institution shares resource-level metadata via a {% include toolassemblies/show-badges.html ids="fair-data-point" %}, make sure that links to the structural metadata are also included there.
 
 #### Interoperability
 Your original codebook file alone may not be sufficient to make your data interoperable. Two key characteristics are required:
@@ -250,12 +250,12 @@ Your original codebook file alone may not be sufficient to make your data intero
 </div>
 
 To achieve interoperable metadata, consider using the following tools:
-* **FAIR Data Station.** [FAIR Data Station]({{site.baseurl}}/fair-data-station) helps generate metadata templates for Biology and Omics Studies based on selected variables. It validates your codebook and produces an RDF file.
-* **CSV on the web.** [CSV on the web]({{site.baseurl}}/csv-on-the-web) is a standard that describes the columns and rows of a given data file in csv. Therefore, it can be used across domains. The final format can be expressed in JSON or RDF and shared alongside your dataset.
+* **FAIR Data Station.** {% include toolassemblies/show-badges.html ids="fair-data-station" %} helps generate metadata templates for Biology and Omics Studies based on selected variables. It validates your codebook and produces an RDF file.
+* **CSV on the web.** {% include toolassemblies/show-badges.html ids="csv-on-the-web" %} is a standard that describes the columns and rows of a given data file in csv. Therefore, it can be used across domains. The final format can be expressed in JSON or RDF and shared alongside your dataset.
 
 Recommended tool pages:
 
-{% include toolassemblies/show-tiles.html ids="art-decor, erdri-mdr, fair-data-station, csv-on-the-web" %}
+{% include toolassemblies/show-badges.html ids="art-decor, erdri-mdr, fair-data-station, csv-on-the-web" %}
 
 If you have experience using other(s), please, leave a comment!
 

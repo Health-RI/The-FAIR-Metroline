@@ -1,0 +1,44 @@
+{%- assign ids_string = include.ids | join: ", " -%}
+{%- assign tool_ids = ids_string | split: ", " %}
+<span class="tool-badges-inline">
+    {%- assign tool_pages = site.pages | where:"type", "tool" %}
+    {%- for tool_page in tool_pages %}
+    {%- assign page_id = tool_page.title | slugify %}
+    {%- if tool_ids contains page_id or tool_ids contains tool_page.tool_id %}
+    {%- if tool_page.page_img %}
+    {%- if tool_page.page_img contains "http://" or tool_page.page_img contains "https://" %}
+    {%- assign file_url = tool_page.page_img -%}
+    {%- else %}
+    {%- capture file_url -%}
+    {{ "/assets/img/" | append: tool_page.page_img | relative_url }}
+    {%- endcapture -%}
+    {%- endif %}
+    {%- endif %}
+    <span class="tool-badge">
+        <a href="{{ tool_page.url | relative_url }}" class="tool-badge-link">
+            {%- if tool_page.page_img %}
+            <img class="tool-badge-icon" alt="" src="{{ file_url }}">
+            {%- endif %}
+            <span class="tool-badge-text">{{ tool_page.title }}</span>
+        </a>
+        <span class="tool-badge-popover" role="tooltip">
+            {%- if tool_page.page_img %}
+            <span class="tool-badge-popover-icon">
+                <img alt="logo of {{ tool_page.title }}" src="{{ file_url }}">
+            </span>
+            {%- endif %}
+            <span class="tool-badge-popover-body">
+                <span class="tool-badge-popover-title">{{ tool_page.title }}</span>
+                {%- if tool_page.description %}
+                <span class="tool-badge-popover-description">{{ tool_page.description }}</span>
+                {%- endif %}
+                {%- if tool_page.domain %}
+                {%- assign pagedomains = tool_page.domain | sort %}
+                <span class="tool-badge-popover-domain">{{ pagedomains | join: ", " }}</span>
+                {%- endif %}
+            </span>
+        </span>
+    </span>
+    {%- endif %}
+    {%- endfor %}
+</span>

@@ -166,7 +166,7 @@ The [Health-RI metadata schema](https://github.com/Health-RI/health-ri-metadata/
 - The Dutch Health-RI initiative has developed a core metadata schema for its [National Health Data Catalogue](https://www.healthdata.nl/en/services/national-health-data-catalogue).
 - Based on DCAT-AP and extended with [HealthDCAT-AP](https://healthdcat-ap.github.io/).
 - Defines a structured set of metadata elements with controlled vocabularies, usage guidelines, and SHACL validation rules.
-- Supports mapping local metadata to the Health-RI model, enabling conversion to RDF and publication via a [FAIR Data Point](https://www.fairdatapoint.org/).
+- Supports mapping local metadata to the Health-RI model, enabling conversion to RDF and publication via a {% include toolassemblies/show-badges.html ids="fair-data-point" %}.
 
 **CARE Semantic Model (CARE-SM)**
 
