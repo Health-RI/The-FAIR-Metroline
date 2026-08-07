@@ -35,7 +35,7 @@ Each FAIR principle addresses a different aspect of enabling the discovery, acce
 * **Interoperable.** Interoperability requires data to use standardised formats and shared vocabularies so that they can be combined with other data and interpreted consistently. Using common formats and vocabularies helps ensure that data can be exchanged and understood correctly. Interoperability is often considered the most challenging aspect of FAIR implementation.
 * **Reusable.** To support reuse, data should be accompanied by sufficient information about their origin, context and quality. This includes provenance information, which describes how the data were created, and a licence, which specifies how the data may be used and shared. Together, this information helps others understand, evaluate and reuse the data appropriately.
 
-FAIR is straightforward in principle but can be challenging to implement in practice. This introduction focuses on the core concepts. For more detailed guidance on topics such as identifiers, metadata standards and semantic interoperability, explore the Scenarios and Guidance sections.
+FAIR is straightforward in principle but can be challenging to implement in practice. This introduction focuses on the core concepts. For more detailed guidance on topics such as identifiers, metadata standards and semantic interoperability, explore the [Scenarios]({{site.baseurl}}/fair_metroline_scenarios) and [Guidance]({{site.baseurl}}/fair_metroline_steps) sections.
 
 Want to know more? 
 * See the FAIR guiding principles by the [GO FAIR Foundation](https://www.gofair.foundation/fair-principles) 
