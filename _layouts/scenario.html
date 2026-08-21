@@ -30,8 +30,6 @@ custom_js: metro-timeline
   {% include scenario-overview.html complexity=scenario.complexity environment=scenario.environment outcome=scenario.outcome complexity_tooltip=scenario.complexity_tooltip environment_tooltip=scenario.environment_tooltip outcome_tooltip=scenario.outcome_tooltip %}
 {% endif %}
 
-<h2>Your Journey</h2>
-
 {% assign timeline_path_parts = scenario.timeline_data | split: "." %}
 {% if timeline_path_parts.size == 2 %}
   {% if timeline_path_parts[0] == "scenarios" %}
@@ -41,10 +39,23 @@ custom_js: metro-timeline
   {% endif %}
 {% endif %}
 
+<!--Check and add prerequisites-->
+
+{% if timeline_stops %}
+  {% assign prerequisites = timeline_stops | where_exp: "item", "item.status == 'prerequisite'" %}
+  {% assign journey_stops = timeline_stops | where_exp: "item", "item.status != 'prerequisite'" %}
+  {% if prerequisites.size > 0 %}
+    <h2>Prerequisites</h2>
+    {% include scenario-prerequisites.html prerequisites=prerequisites %}
+  {% endif %}
+{% endif %}
+
+<h2>Your Journey</h2>
+
 {% if scenario.type == "tools" %}
-  {% include tool-scenario-timeline.html stops=timeline_stops %}
+  {% include tool-scenario-timeline.html stops=journey_stops %}
 {% else %}
-  {% include metro-timeline.html stops=timeline_stops %}
+  {% include metro-timeline.html stops=journey_stops %}
 {% endif %}
 
 {% else %}

@@ -1,3 +1,14 @@
+- step_id: 1
+  status: "prerequisite"
+  short_description: "Be sure you are clear about your FAIRifcation Objectives"
+
+- step_id: 3
+  status: "prerequisite"
+  short_description: "When necessary, make sure you enlist the help from a FAIR data steward, if possible"
+
+- step_id: 4
+  status: "prerequisite"
+  short_description: "If there are gaps in your (team’s) knowledge, considering following training"
 
 - step_id: 13
   status: "upcoming"

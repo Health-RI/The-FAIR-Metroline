@@ -8,14 +8,6 @@ custom_js: metro-timeline
 ## Scenario Overview
 Design new dataset so it is interoperable from the start, including alignment to existing standards or reference datasets.
 
-Before getting started:
-
-* Be sure you are clear about your [FAIRifcation Objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives)
-* When necessary, make sure you enlist the help from a [FAIR data steward]({{site.baseurl}}/metroline_steps/have_a_fair_data_steward_on_board), if possible
-* If there are gaps in your (team's) knowledge, considering following [training]({{site.baseurl}}/metroline_steps/organise_training)
-
-
-
 <div class="metro-examples">
   <h4>Examples</h4>
   <div class="example-tabs">
@@ -37,7 +29,16 @@ Before getting started:
   outcome_tooltip="A dataset that is interoperable and a codebook that describes the data elements."
 %}
 
+{% assign journey_stops = site.data.scenarios.make_dataset_interoperable | where_exp: "item", "item.status != 'prerequisite'" %}
+{% assign prerequisites = site.data.scenarios.make_dataset_interoperable | where_exp: "item", "item.status == 'prerequisite'" %}
+
+{% if prerequisites.size > 0 %}
+## Prerequisites
+
+{% include scenario-prerequisites.html prerequisites=prerequisites %}
+{% endif %}
+
 ## Your Journey
 
-{% include metro-timeline.html stops=site.data.scenarios.make_dataset_interoperable %}
+{% include metro-timeline.html stops=journey_stops %}
 

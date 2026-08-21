@@ -80,6 +80,52 @@
   flex-grow: 1;
 }
 
+.prerequisite-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  max-width: 100%;
+}
+
+.prerequisite-card {
+  border-radius: 0;
+  padding: 1.25rem 1.25rem 1rem;
+  box-shadow: none;
+  cursor: default;
+  overflow: visible;
+}
+
+.prerequisite-card::before {
+  display: none;
+}
+
+.prerequisite-card:hover {
+  border-color: rgba($light, 0.15);
+  box-shadow: none;
+  transform: none;
+}
+
+.prerequisite-card .scenario-card-icon {
+  display: none;
+}
+
+.prerequisite-card .scenario-card-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.prerequisite-card .scenario-card-description {
+  margin-bottom: 0.75rem;
+  font-size: 0.96rem;
+}
+
+.prerequisite-read-more {
+  margin-top: auto;
+  align-self: flex-start;
+  width: auto;
+}
+
 // Scenario-specific metadata styling
 .scenario-card-meta {
   display: flex;
