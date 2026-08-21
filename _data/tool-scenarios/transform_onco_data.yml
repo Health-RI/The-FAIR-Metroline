@@ -1,5 +1,5 @@
 - title: "Set up HPC environment"
-  status: "completed"
+  status: "prerequisite"
   icon: ""
   short_description: "Ensure you have access to computational infrastructure."
   description: "You have access to an HPC cluster or cloud environment with sufficient compute resources and storage to run the analysis pipeline. The environment should have Nextflow and container support (Singularity/Docker) installed."
@@ -10,7 +10,7 @@
       description: "I've set up a cloud compute environment with the necessary quotas and installed Nextflow to orchestrate the pipeline execution."
 
 - title: "Collect and stage tumor sequencing data"
-  status: "completed"
+  status: "prerequisite"
   icon: ""
   short_description: "Ensure sequencing files are accessible from the compute environment."
   description: "You've obtained the tumor and normal sequencing data files (FASTQ or BAM format) from your sequencing facility and made them accessible from your HPC or cloud storage. The data should be organized and reachable from where you'll run the analysis pipeline."

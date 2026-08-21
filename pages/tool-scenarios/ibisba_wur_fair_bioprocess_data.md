@@ -17,7 +17,17 @@ You have sensors to collect data and you setup a pipeline to collected, FARIfy a
 
 {% include scenario-overview.html complexity="High" environment="Local or Cloud" outcome="Managed dataset" %}
 
+{% assign journey_stops = site.data.tool-scenarios.ibisba_wur_fair_bioprocess_data | where_exp: "item", "item.status != 'prerequisite'" %}
+{% assign prerequisites = site.data.tool-scenarios.ibisba_wur_fair_bioprocess_data | where_exp: "item", "item.status == 'prerequisite'" %}
+
+{% if prerequisites.size > 0 %}
+## Prerequisites
+Before starting this scenario, you should have the following prerequisites in place.
+
+{% include scenario-prerequisites.html prerequisites=prerequisites %}
+{% endif %}
+
 ## Your Journey
 
-{% include tool-scenario-timeline.html stops=site.data.tool-scenarios.ibisba_wur_fair_bioprocess_data%}
+{% include tool-scenario-timeline.html stops=journey_stops%}
 

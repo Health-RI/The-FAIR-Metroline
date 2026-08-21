@@ -34,6 +34,7 @@ Design new dataset so it is interoperable from the start, including alignment to
 
 {% if prerequisites.size > 0 %}
 ## Prerequisites
+Before starting this scenario, you should have the following prerequisites in place.
 
 {% include scenario-prerequisites.html prerequisites=prerequisites %}
 {% endif %}
