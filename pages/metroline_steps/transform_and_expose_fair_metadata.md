@@ -46,7 +46,12 @@ In other words, this step:
 ## How to
 This how-to provides guidance for transforming, storing and exposing data (steps 1 and 2) as well as for metadata (step 3). You can start with either, depending on your preference.
 
-### Step 1 - Transform data
+{% include how-to-summary-start.html
+   number="1"
+   title="Transform data"
+   summary="Convert mapped data into a standardised, machine-readable representation, typically RDF, using an appropriate semantic model and a transformation approach suited to the source format and available expertise."
+%}
+
 Before you can expose your data in a FAIR way, you first need to transform it into a standardised, machine-readable format using semantic models that you previously applied in the step [Metroline Step: Apply (meta)data model]({{site.baseurl}}/metroline_steps/apply_metadata_model). This often means converting tabular or structured data into RDF. The right tool for transforming data depends on your source format and your technical skills.
 
 {% include info-box.html type="example" title="Examples" text="
@@ -56,7 +61,15 @@ Before you can expose your data in a FAIR way, you first need to transform it in
 " %}
 
 
-### Step 2 - Store and expose data
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Store and expose data"
+   summary="For data, store the transformed content in appropriate infrastructure, such as an RDF triplestore or other service, and expose metadata that directs users to where the data and its access conditions are managed."
+%}
+
 Once your data is transformed into RDF, it needs to be stored so it can be efficiently queried, accessed and reused. This is usually done with an RDF triplestore, a database designed for storing and retrieving semantic data using a specialised data querying language [SPARQL](https://www.w3.org/TR/sparql11-query/). Common tools include [GraphDB](http://graphdb.ontotext.com/) and [Blazegraph](https://blazegraph.com/). Triplestores can serve as a backend for web applications or services that work with semantic data.
 
 To make both data and metadata discoverable and accessible, you can publish RDF metadata through a [FAIR Data Point](https://www.fairdatapoint.org/) (FDP). An FDP provides a standard way to publish metadata, structured in three layers: **Catalogue**, **Dataset** and **Distribution**.
@@ -76,7 +89,15 @@ Combining a triplestore with an FDP provides both user-friendly search interface
 
 Choosing the right storage and exposure method depends on your data’s scale, your intended users and your infrastructure. For many research projects, combining a triplestore with an FDP is a robust, standards-based solution for FAIR metadata and data sharing.
 
-### Step 3 – Transform, store and expose metadata
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Transform, store and expose metadata"
+   summary="For metadata, transform it into a semantically enriched, machine-readable format using suitable standards and vocabularies, then publish it through standard interfaces so it can be discovered and reused across platforms and domains."
+%}
+
 To make your metadata FAIR, it must be semantically enriched, machine-readable and exposed through standard interfaces. This enables both humans and machines to discover and reuse metadata across platforms and domains.
 
 Start by transforming metadata into a structured format using semantic web standards like [RDF](https://www.w3.org/RDF/), and vocabularies such as [DCAT](https://www.w3.org/TR/vocab-dcat-3/), [Dublin Core](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/) or relevant domain ontologies. This ensures interoperability and aligns your metadata with community best practices. For the health domain, [HealthDCAT-AP](https://healthdcat-ap.github.io/) and the more specific [Heath-RI core metadata](https://github.com/Health-RI/health-ri-metadata/tree/master) scheme are a good starting point.
@@ -89,6 +110,9 @@ Start by transforming metadata into a structured format using semantic web stand
 * **[FAIR Data Station](https://fairds.fairbydesign.nl/).** Manages [ISA metadata](https://isa-tools.org/) with RDF output. This output needs to be exposed in a triplestore. 
 * **[Castor EDC (FDP Component)](https://fdp.castoredc.com/fdp).** Contains a template to fill out metadata and exposes that information in a way that is semantically compatible with DCAT and FDP specifications. 
 "%}
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community
 **VASCA Registry (Castor EDC + FAIR Data Point)**<br>

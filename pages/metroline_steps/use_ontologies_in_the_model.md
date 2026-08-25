@@ -35,11 +35,24 @@ Where needed, seek support early from relevant experts, such as ontology, metada
 
 The steps below describe how to connect model elements to ontology terms and manage these mappings over time. In the steps below, a mapping means a recorded link between a model element, such as a class, attribute or value, and an ontology term.
 
-### Step 1 - Identify what needs annotation
+{% include how-to-summary-start.html
+   number="1"
+   title="Identify what needs annotation"
+   summary="Identify model elements that represent concepts or values, such as classes, attributes, value sets and common data elements, and record their current labels, definitions and intended use."
+%}
+
 * List the model elements that represent concepts or enumerated values, such as classes, attributes, value sets and common data elements.
 * Record current labels, definitions and intended use to guide later term selection.
 
-### Step 2 - Select appropriate ontologies
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Select appropriate ontologies"
+   summary="Search trusted sources and assess candidate ontologies for coverage, granularity, community adoption, maintenance, licensing, persistent identifiers and versioning, reusing existing mappings where possible and recording the selected sources and versions."
+%}
+
 * Search trusted registries that cover your domain and application scope, such as [BioPortal](https://bioportal.bioontology.org/), [Ontology Lookup Service (OLS)](https://www.ebi.ac.uk/ols/index), [Open Biological and Biomedical Ontologies (OBO) Foundry](https://obofoundry.org/), [Linked Open Vocabularies (LOV)](https://lov.linkeddata.es/dataset/lov/) and [BARTOC (Basic Register of Thesauri, Ontologies & Classifications)](https://bartoc.org/).
 * Evaluate the ontologies' coverage, granularity, community adoption, maintenance status and licence conditions. For more information, see for example [Ten Simple Rules for Selecting a Bio-ontology](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004743), the [OBO Foundry Principles](https://obofoundry.org/principles/fp-000-summary.html) and the [NCBO Ontology Recommender 2.0](https://bioportal.bioontology.org/recommender).
 * Prefer ontologies with persistent, dereferenceable IRIs (Internationalised Resource Identifiers, globally unique web identifiers that can be resolved online to retrieve information about a concept), clear versioning and open licences (e.g. Creative Commons Attribution (CC BY), Open Data Commons Attribution License (ODC-By) and Creative Commons Zero (CC0)).
@@ -47,7 +60,15 @@ The steps below describe how to connect model elements to ontology terms and man
 * For domain-specific models, also check whether established code lists or terminology subsets exist that can inform ontology term selection or support reuse of existing mappings.
 * Document chosen sources and versions before mapping.
 
-### Step 3 – Bind model elements to ontology terms
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Bind model elements to ontology terms"
+   summary="Map each element to the most specific suitable ontology term, recording its label, IRI, mapping relationship, provenance and ontology version; document gaps where no exact term exists and use as few ontologies as practical."
+%}
+
 * Choose the most specific term that fits the intended meaning and avoid overly broad terms.
 * Record both the label and IRI for each mapping (e.g. an IRI such as `https://purl.obolibrary.org/obo/NCIT_C28421` for "Male").
 * Capture mapping intent where useful, using predicates from Simple Knowledge Organization System (SKOS), such as `skos:exactMatch`, `skos:closeMatch`, `owl:equivalentClass` and `rdfs:subClassOf`. See the [SKOS documentation](https://www.w3.org/2009/08/skos-reference/skos.html) for further guidance.
@@ -59,7 +80,15 @@ A local value \"Neck cancer\" has no exact term, so you temporarily map it to \"
 "%}
 * Use the fewest ontologies possible to make interoperability and maintenance easier. Using a large number of different ontologies, for instance, may make it difficult to check that terms are not contradictory.
 
-### Step 4 – Implement, validate and share
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="4"
+   title="Implement, validate and share"
+   summary="Represent the annotated model and mappings in machine-readable semantic formats, use appropriate persistent identifiers, validate mappings and constraints and publish the model and mappings with clear metadata, versions and licensing, even when the underlying data cannot be openly shared."
+%}
+
 * Represent the model, including its annotations and mappings, in a machine-readable semantic web format such as RDF or OWL. This enables the semantic (meta)data model to become interoperable and reusable through ontology mappings. Where validation rules are needed, express constraints using [Shapes Constraint Language (SHACL)](https://www.w3.org/TR/shacl/).
 * Use dereferenceable IRIs for both your model elements and referenced ontology terms.
 * Where you control the identifiers, create persistent IRIs that dereference to both human-readable and machine-readable descriptions. For external ontology terms, reuse their IRIs as-is. If a required term's IRI does not dereference, still use it as-is and add a reference link, for example using `rdfs:seeAlso`, to a stable catalogue record.
@@ -75,7 +104,15 @@ A local value \"Neck cancer\" has no exact term, so you temporarily map it to \"
 * Mappings and annotations themselves can be shared under permissive licences, for example CC BY 4.0 or CC0, unless source ontology licences impose restrictions.
 * Even when data cannot be openly shared, for example due to privacy or legal restrictions, publish the model and mappings so that others can understand, align with and interoperate with your work.
 
-### Step 5 – Maintain and govern mappings
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="5"
+   title="Maintain and govern mappings"
+   summary="Review mappings as ontologies evolve, manage deprecated or changed terms through version control and documentation, revalidate after updates and establish clear responsibilities and review schedules for ongoing maintenance."
+%}
+
 Ontologies evolve over time, so mappings must be reviewed and updated to remain valid and interpretable. Regular maintenance helps ensure that your model stays aligned with current standards and avoids broken or outdated references.
 
 * **Plan reviews appropriate to the scope of the model.** For reusable models, registries or mappings maintained beyond a single study, check for new ontology releases at fixed intervals, for example every 6 or 12 months. For single-study models, at minimum record the ontology versions used and review mappings when the model is updated, before publication or when reuse is expected.
@@ -85,6 +122,9 @@ Ontologies evolve over time, so mappings must be reviewed and updated to remain 
 * **Re-validate.** After each update, re-run SHACL validation or reasoning checks to confirm that the model remains coherent.
 
 As the volume of (meta)data and repositories grows, continuous ontology maintenance can become a significant burden. Establish governance rules that clarify which mappings will be maintained, how often they are reviewed and by whom, and make these rules part of your project and repository documentation.
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community 
 * **[CARE-SM (Clinical and Registry Entries Semantic Model)](https://github.com/CARE-SM).** Annotates clinical registry concepts using OBO Foundry-aligned ontologies for precise semantics and cross-resource mapping. Also see this video.

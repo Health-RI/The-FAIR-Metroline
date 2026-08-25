@@ -42,7 +42,12 @@ While this guidance aims to provide up-to-date and accurate information, you sho
 "%}
 
 
-### Step 1 - Follow WMO informed consent requirements for data reuse
+{% include how-to-summary-start.html
+   number="1"
+   title="Follow WMO informed consent requirements for data reuse"
+   summary="Use CCMO-approved SIS and ICF templates to obtain consent for data reuse clearly and apply appropriate consent procedures for minors, incapacitated adults and non-Dutch-speaking participants."
+%}
+
 The CCMO has published SIS models for both adults and children and **strongly** recommends their usage. The models are available in both [English](https://english.ccmo.nl/investigators/standard-research-file-for-research-subject-to-the-dutch-wmo-act/e-information-research-subjects/e1-e2.-information-sheet-and-consent-form-research-subjects) and [Dutch](https://www.ccmo.nl/onderzoekers/standaardonderzoeksdossier/e-informatie-onderzoeksdeelnemers/e1-informatiebrief-en-toestemmingsformulier-onderzoeksdeelnemers). The MREC/CCMO reviewing committee only assesses the Dutch SIS and ICF. However, if a participant who is not adequately fluent in Dutch is asked to participate in a study, the information must be provided in a language the participant is proficient in.
 
 **Subject Information Sheet (SIS)**
@@ -72,7 +77,15 @@ If the subject becomes temporarily incapacitated, consent must still be obtained
 
 Next, proceed to [step 3](#step-3---address-additional-fair-consent-requirements-for-data-sharing-linkage-and-retention).
 
-### Step 2 - Follow non-WMO informed consent requirements for data reuse
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Follow non-WMO informed consent requirements for data reuse"
+   summary="Use MREC-approved SIS and ICF templates to obtain clear consent for data reuse and ensure child-specific forms are adapted with expert guidance."
+%}
+
 First, check with your local MREC which SIS and ICF templates they have available and accept. Verify whether these templates contain FAIR components. The ELSI Servicedesk provides [standardised text](https://elsi.health-ri.nl/sites/elsi/files/2024-10/Alinea%20hergebruik%20DEF.docx) that can be used in the SIS and ICF (only available in Dutch). 
 
 **Subject Information Sheet (SIS)**
@@ -93,7 +106,15 @@ _Participants < 16 years old (children)_
 
 If the MREC requires you to use a specific SIS/ICF template for children, check whether it contains FAIR components. If it does not contain FAIR components, consider reusing the entry described above and consult your local experts, such as a data protection / privacy officer, for exact integration before subjecting the documents for review .
 
-### Step 3 - Address additional FAIR consent requirements for data sharing, linkage and retention
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Address additional FAIR consent requirements for data sharing, linkage and retention"
+   summary="Ensure SIS and ICF documents cover consent for sharing with non-EU and commercial parties, database linkages and data retention, using approved text and consulting experts where no template exists."
+%}
+
 The information below is translated from Amsterdam UMC’s [Dutch Non-WMO template](https://metc.amsterdamumc.org/wp-content/uploads/2024/09/E1E2.-Niet-WMO-model-informatiebrief-onderzoek-niet-WMO-versie-d.d.-15-08-2024.docx) and the ELSI Servicedesk’s [standardised text](https://elsi.health-ri.nl/sites/elsi/files/2024-10/Alinea%20hergebruik%20DEF.docx). If you decide to use any of these passages, please verify with your local experts.
 
 #### 3.1 Sharing data with parties outside of the EU
@@ -148,7 +169,15 @@ Please note that fixed retention periods apply to the type of research. You are 
 Depending on local policies, you could consider:
 * At least [xx] years or as long as necessary for scientific research.
 
-### Step 4 - Address special consent considerations for cohorts, deceased participants and other cases
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="4"
+   title="Address special consent considerations for cohorts, deceased participants and other cases"
+   summary="Plan informed consent in long-term and special-case studies to cover scope, legal changes, participant transitions, dropouts, future linkages, retention periods, posthumous use, anonymised data and non-human research."
+%}
+
 #### 4.1 Cohort studies
 If you are setting up an ICF and SIS for a cohort study, keep the following in mind:  
 * **Check your consent for scope.** If your current consent has a specific scope, reuse must fall within this scope.
@@ -167,10 +196,21 @@ If data is anonymised, it is no longer considered personal data under regulation
 #### 4.4 Research involving animals. 
 Here, informed consent is not applicable in the same way it is for human research. Instead, ethical approval is required to ensure the humane treatment of animals. This is out of scope. For more information check [Dierexperimentencommissie (DEC) | Centrale Commissie Dierproeven](https://www.centralecommissiedierproeven.nl/onderwerpen/organisaties/dierexperimentencommissie-dec) (available in Dutch).
 
-### Step 5 - Submit your FAIR-ready SIS and ICF for final committee review
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="5"
+   title="Submit your FAIR-ready SIS and ICF for final committee review"
+   summary="Once approved by your data protection officer, have your SIS and ICF reviewed by an accredited MREC for Non-WMO studies or by the CCMO for WMO studies."
+%}
+
 With your SIS and ICF fully FAIR ready and approved by your data protection officer, get it reviewed by the appropriate committee:
 * An accredited MREC for Non-WMO studies 
 * An accredited MREC or the CCMO for WMO studies
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community 
 * [COMPRAYA’s SIS](https://www.compraya.nl/files/e1-e2ppicomprayastudie_m20com_v1.9_14032023_clean.pdf) (in Dutch) contains a section about, for example, future use of data and materials (page 7).

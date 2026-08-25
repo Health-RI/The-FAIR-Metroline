@@ -26,10 +26,23 @@ Setting clear FAIRification objectives is essential for several reasons.
 FAIR objectives help identify which steps in the [FAIR Metroline]({{site.baseurl}}/index) are relevant to your FAIRification journey, ensuring a structured and efficient approach.
 
 ## How to
-### Step 1 - Get familiar with the FAIR principles
+{% include how-to-summary-start.html
+   number="1"
+   title="Get familiar with the FAIR principles"
+   summary="Get acquainted with the FAIR principles through informative resources."
+%}
+
 Get acquainted with the FAIR principles through resources like the [GO FAIR Foundation (GFF) website](https://www.gofair.foundation/) and your institute’s Research Data Management (RDM) department. These principles are foundational for defining FAIRification objectives.
 
-### Step 2 - Identify FAIR requirements
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Identify FAIR requirements"
+   summary="Consider requirements from funders, institutions and your project to ensure alignment from the start using planning tools like DMP Online and DSW"
+%}
+
 As you define your FAIRification objectives, take time to review the relevant requirements from various sources.
 * **Funders and consortia.** Check whether your project funders, the consortium you are involved in, or the journal where you intend to publish have specific FAIR requirements. [FAIRsharing](https://fairsharing.org/) offers a comprehensive overview of these policies.
 * **Institutional requirements.** Investigate any FAIR requirements set by your institute. For example, you may be required to upload your (meta)data to designated repositories or catalogues to comply with institutional policies.
@@ -37,7 +50,15 @@ As you define your FAIRification objectives, take time to review the relevant re
 
 As the Data Management Plan (DMP) is usually created early in a project, it’s important to set your FAIRification objectives at the outset. Tools like [DMP Online](https://dmponline.dcc.ac.uk/) and the [Data Stewardship Wizard (DSW)](https://ds-wizard.org/)  can help align your FAIRification goals with institutional and funder expectations.
 
-### Step 3 - Weigh FAIRification impact, benefits and effort
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Weigh FAIRification impact, benefits and effort"
+   summary="Evaluate the potential benefits of FAIRification early to ensure your objectives provide meaningful value to the stakeholders and justify the effort."
+%}
+
 Consider the impact of your FAIRification efforts early on to ensure your objectives align with the broader benefits. For instance:
 * **Benefits for the researcher.** Your FAIRification efforts can lead to more visibility, recognition and reuse of the work, potentially leading to new collaboration opportunities, more publications, more citations, etc.
 * **Cost-benefit ratio.** Does the end result outweigh the efforts you are putting in?
@@ -45,20 +66,47 @@ Consider the impact of your FAIRification efforts early on to ensure your object
 * **Stakeholder benefits.** What other stakeholders (e.g. patients, general population, clinicians) would benefit from making your data more FAIR?
 * **Research question.** How does the driving research question impact your FAIRification objectives?
 
-### Step 4 - Decide the appropriate FAIRification level
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="4"
+   title="Decide the appropriate FAIRification level"
+   summary="Determine the appropriate level of FAIRification for your project through a pre-assessment, balancing effort with the complexity and goals of your data."
+%}
+
 Decide on the desired FAIR level for your project or study. Conducting a pre-FAIR assessment (see [Metroline step: Pre-FAIR Assessment]({{site.baseurl}}/metroline_steps/pre_fair_assessment)) helps to determine whether a lightweight FAIR approach (e.g. improving from non-structured to structured metadata) or a more extensive one (e.g. transforming a relational database into fully ontologised linked data) is suitable for your needs.
 
-### Step 5 - Identify the resources required for the FAIRification
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="5"
+   title="Identify the resources required for the FAIRification"
+   summary="Identify the expertise, tools and support required for FAIRification to ensure your project has the necessary resources in place from the start."
+%}
+
 Identify the resources you will need to complete your FAIRification process and assess their availability. Consider the following:
 * Is there someone in your team who has run a FAIRification project before?
 * Is there expertise or central support available in your institute?
 * Do you need to hire specific expertise?
 * Do you need specific software or additional hardware to meet your FAIRification objectives?
 
-### Step 6 - Create an actionable plan around clear objectives
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="6"
+   title="Create an actionable plan around clear objectives"
+   summary="Translate your FAIRification goals into a concrete, actionable plan by specifying steps, resources and research-driven motivations."
+%}
+
 Organise and describe the steps and resources identified in the previous step necessary for reaching your FAIRification objective(s). This can be a separate plan (see [Metroline Step: Design Solution Plan]({{site.baseurl}}/metroline_steps/design_solution_plan)) or part of your Data Management Plan (DMP). Make sure to formulate your FAIRification objectives as specifically as possible and, where possible, incorporate research questions. For example:
 * I require interoperable data, because I need to connect two different datasets to answer question X;
 * I want to make my data more findable for researchers in my field by publishing it in repository Z.
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community 
 Below you can find several examples of projects with the FAIR objectives they set.

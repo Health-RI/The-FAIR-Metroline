@@ -24,7 +24,12 @@ The journey to making data FAIR is intricate, demanding both a comprehensive und
 
 ## How to
 
-### Step 1 - Assess training needs
+{% include how-to-summary-start.html
+   number="1"
+   title="Assess training needs"
+   summary="Identify the roles within the team and assess their existing knowledge and skill gaps so that training can be targeted to the competencies each role requires."
+%}
+
 Before diving into specific training modules, it's beneficial to understand the broader landscape of FAIR training for each specific role in your team. In case your FAIRification project is on existing data you can also consider doing a Pre-FAIR assessment (see [Metroline step: Pre-FAIR Assessment]({{site.baseurl}}/metroline_steps/pre_fair_assessment)). This assessment can help you identify potential knowledge gaps within your team, allowing you to determine appropriate roles and address any training needs. Once you have a clearer picture of the role(s) in your team and you have pinpointed knowledge gaps, you can more effectively suggest and/or select training modules that address specific needs. 
 
 Here are some of the different roles that people have in research projects and FAIRification of data: 
@@ -33,7 +38,15 @@ Here are some of the different roles that people have in research projects and F
 * **Trainer.** If you yourself are the trainer or educator, you may benefit from attending a specialised Train-the-Trainer course or using Train-the-Trainer resources to strengthen your teaching design and delivery skills. Also, joining other colleagues' training and reviewing their materials can be very helpful to build your expertise. Lastly, any course on education and pedagogy can enrich the content and the dynamics of the training you provide. 
 
 
-### Step 2 - Select the appropriate FAIR training
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Select the appropriate FAIR training"
+   summary="Choose training based on the participant's level of expertise, professional role, training focus, delivery format and available time and resources."
+%}
+
 The next step is to reflect on the requirements, expectations, and resources needed to participate in a particular training. Here are some of the things to consider:
 * **The level of expertise required.** Some training programs are designed for beginners, while others are designed for more experienced professionals. 
 * **The focus of the training.** Some training programs may emphasise technical aspects of FAIRification, while others focus on the policy and legal aspects. Relevant training programs may vary depending on an individual's professional role and career trajectory. 
@@ -42,7 +55,15 @@ The next step is to reflect on the requirements, expectations, and resources nee
 
 For more tailored advice, it can be helpful to consult a FAIR training coordinator at your research institute for any training recommendations. If your institute does not have a FAIR training coordinator, you can contact your research support department or your local Digital Competence Center for assistance.
 
-### Step 3 - Identify training providers and resources
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Identify training providers and resources"
+   summary="Look first for suitable training within your organisation, then use relevant FAIR and RDM training portals, courses and communities to find resources appropriate to researchers, data stewards or trainers."
+%}
+
 In addition to identifying which skills are needed, it is also important to know where to look for training, depending on what particular resources you’re looking into. Here we present an overview of where to find certain resources. 
 
 #### Generic FAIR and RDM training
@@ -80,6 +101,9 @@ You can also consider joining a community of trainers.
 * [Research Software Training NL](https://researchsoftwaretraining.nl/about/) is a network bringing together and facilitating training organisations in the Netherlands in the areas of research software, programming skills, applied data science, computational skills and open source. 
 
 All of these resources are emerging to adapt and tailor FAIR data solutions to meet the specific needs and constraints of every team. Additionally, every step of the Metroline contains training links or information that could be of further use. Ultimately, also contact the Training Coordinator of your institution for more relevant advise. 
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community 
 ***Radboud University Medical Center (RadboudUMC)***<br>

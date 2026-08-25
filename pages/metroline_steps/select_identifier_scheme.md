@@ -38,7 +38,12 @@ Persistent identifiers matter because they provide the stability and clarity tha
 ## How to
 Below are nine principles for implementing identifiers in FAIR data management. Steps 1–8 are researcher-focused steps, whilst Step 9 reflects an institutional responsibility.
 
-### Step 1 - Reuse community identifiers whenever possible
+{% include how-to-summary-start.html
+   number="1"
+   title="Reuse community identifiers whenever possible"
+   summary="Check authoritative registries for existing identifiers and reuse recognised community identifiers where available to avoid duplication and connect your data to established research infrastructures."
+%}
+
 Reusing existing identifiers prevents duplication and immediately connects your data to the wider research ecosystem. Many entities already have authoritative identifiers that you can adopt directly.
 * **Benefit.** Strengthens interoperability and aligns your dataset with established knowledge graphs.
 * **How.** Check registries for existing identifiers before creating new ones. For example, [ORCID](https://orcid.org/) is commonly used for creators, [ROR](https://ror.org/) for institutions and [FundRef](https://www.crossref.org/services/funder-registry/) for funders. [Identifiers.org](http://identifiers.org/) can help locate identifiers for many scientific entities. Health-RI is also developing guidance to support harmonised identifier use. References will be added as soon as they become available.
@@ -59,7 +64,15 @@ funder.fundref: https://doi.org/10.13039/100000001
 ```
 " %}
 
-### Step 2 - Mint new identifiers when none exist
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Mint new identifiers when none exist"
+   summary="When no suitable identifier exists, register the resource with an appropriate persistent identifier service so it receives a stable, globally unique reference together with associated metadata."
+%}
+
 When no suitable identifier is available, assigning a persistent identifier to a digital object (“minting”) gives the resource a stable, globally unique reference that can be reliably cited and reused.
 * **Benefit.** Ensures the resource has a persistent, globally unique and widely recognised identifier that supports reliable citation, discovery and reuse.
 * **How.** Register the digital object with a persistent identifier service, which assigns and records a globally unique identifier together with associated metadata. For example, [DataCite](https://datacite.org/) can mint DOIs, while [MINIDs](https://minid.readthedocs.io/en/latest/index.html) (Minimal Viable Identifiers) provide lightweight identifiers backed by a registry service. Typically, client software computes metadata such as checksums locally and submits this information to the identifier service, which returns the minted identifier. See FAIR Cookbook's [Unique, persistent identifiers](https://faircookbook.elixir-europe.org/content/recipes/findability/identifiers.html) and [Minting identifiers with Minid](https://faircookbook.elixir-europe.org/content/recipes/findability/identifiers-minids.html) for additional guidance.
@@ -70,12 +83,28 @@ minid --register --title \"Dataset X\" DatasetX.tar.gz --locations http://exampl
 ```
 " %}
 
-### Step 3 - Assign an identifier to each dataset
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Assign an identifier to each dataset"
+   summary="Give each published dataset a persistent identifier, typically through the repository in which it is deposited, so it can be reliably discovered, cited and referenced over time."
+%}
+
 Every dataset needs a stable anchor that supports discovery, citation and long-term accessibility. Assigning a PID formalises the dataset as a citable and traceable resource. This typically occurs when the dataset is published in a repository, rather than during data collection.
 * **Benefit.** Catalogue services and automated workflows can reliably reference the dataset over time.
 * **How.** Register the dataset metadata with a PID authority such as [DataCite](https://datacite.org/) or [Crossref](https://www.crossref.org/) to obtain a persistent identifier (PID) that functions as the dataset’s primary reference. Other PID systems may also be suitable depending on the repository or community practices.
 
-### Step 4 - Use identifiers consistently throughout the metadata
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="4"
+   title="Use identifiers consistently throughout the metadata"
+   summary="Reference people, organisations, licences and related resources using appropriate standard identifiers and apply them consistently throughout the metadata."
+%}
+
 Metadata should reference people, organisations, licences and related resources using standard identifiers. This removes ambiguity and allows machines to interpret relationships correctly.
 * **Benefit.** Removes ambiguity in metadata, improves interoperability and supports automated processing across systems.
 * **How.** Reference people, organisations, licences and related resources using standard identifiers consistently. For example, [ORCID](https://orcid.org/) can be used for authors, [ROR](https://ror.org/) for organisations and [SPDX identifiers](https://spdx.org/licenses/) for licences. Other identifiers may be used depending on community norms or repository requirements.
@@ -92,7 +121,15 @@ organization.ror: https://ror.org/046ak2485
 ```
 " %}
 
-### Step 5 - Assign identifiers to relevant data entities and values
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="5"
+   title="Assign identifiers to relevant data entities and values"
+   summary="Use identifiers for records, variables, samples or values where this supports reuse, integration or automated processing, selecting suitable domain-specific identifiers or controlled vocabularies where appropriate."
+%}
+
 Internal elements such as records, variables or samples may benefit from stable identifiers, but not every element requires one. Only assign identifiers where reuse, integration or automated processing is expected. When in doubt, consult a data steward to decide which elements should receive identifiers.
 * **Benefit.** Allows tools to reference and interpret the individual records and values inside a dataset reliably, which supports automation and reuse across datasets.
 * **How.** Use controlled vocabularies, ontologies or domain-specific identifiers where appropriate. For example, [RRIDs](https://scicrunch.org/resources) can identify biological resources, whilst [InChI](https://www.inchi-trust.org/) or [SMILES](https://www.daylight.com/dayhtml/doc/theory/theory.smiles.html) can represent chemical structures. Other identifier systems may be appropriate depending on the dataset and community practices.
@@ -117,7 +154,15 @@ chemical_smiles: CCO
 ```
 " %}
 
-### Step 6 - Make identifiers resolvable
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="6"
+   title="Make identifiers resolvable"
+   summary="Ensure identifiers intended for discovery and access resolve to an accessible landing page or metadata record so humans and machines can find and interpret the referenced resource."
+%}
+
 Identifiers become actionable when they resolve to a landing page or metadata record. Resolution enables both humans and machines to discover and interpret the resource.
 * **Benefit.** Supports findability and accessibility through standard web protocols.
 * **How.** Ensure that identifiers resolve to a landing page or metadata record that humans and machines can access. For example, DOIs registered with [DataCite](https://datacite.org/) or [Crossref](https://www.crossref.org/) provide resolvable links. Other persistent identifier systems can also be used. Guidance from FAIR Cookbook's [Creating resolvable identifiers](https://faircookbook.elixir-europe.org/content/recipes/infrastructure/gupri.html) can support implementation.
@@ -130,7 +175,15 @@ Identifiers become actionable when they resolve to a landing page or metadata re
 
 " %}
 
-### Step 7 - Use namespaces for local identifiers
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="7"
+   title="Use namespaces for local identifiers"
+   summary="Add and document a consistent namespace or prefix for local identifiers when data are shared beyond their original context to prevent collisions between systems."
+%}
+
 Local identifiers are often only unique within a single project or system. Adding a namespace or prefix makes it clear where the identifier comes from and prevents collisions when data are shared across systems.
 * **Benefit.** Prevents collisions and keeps identifiers reliable as they move across systems.
 * **How.** Assign a consistent prefix to local identifiers and document it in metadata to ensure global uniqueness. When possible, register the namespace with services such as [Identifiers.org](http://identifiers.org/) to make identifiers globally traceable and resolvable. Prefixes can include a project or organisational code. Other approaches to namespace management may also be used depending on community practices.
@@ -145,7 +198,15 @@ pubmed_id: https://identifiers.org/pubmed:22140103
 ```
 " %}
 
-### Step 8 - Map equivalences between identifier systems
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="8"
+   title="Map equivalences between identifier systems"
+   summary="Record mappings between different identifiers that refer to the same entity when this is needed to support interoperability and integration across systems."
+%}
+
 Different communities often use different identifiers for the same concept. Mapping these supports interoperability across systems.
 * **Benefit.** Creates bridges between identifier schemes and supports cross-dataset integration.
 * **How.** Map equivalent identifiers across different systems to support interoperability. For example, use [BridgeDb](https://www.bridgedb.org/) or the [SSSOM standard](https://github.com/mapping-commons/sssom) and refer to FAIR Cookbook's [Interlinking data from different sources](https://faircookbook.elixir-europe.org/content/recipes/interoperability/identifier-mapping.html) for guidance on identifier mapping. Other mapping frameworks may also be appropriate depending on the community and identifier systems in use.
@@ -168,7 +229,15 @@ predicate_id: sssom:exactMatch
 ```
 " %}
 
-### Step 9 - Ensure governance and infrastructure for persistence
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="9"
+   title="Ensure governance and infrastructure for persistence"
+   summary="At institutional or community level, establish or rely on stable services, responsibilities and policies that keep identifiers resolvable, persistent and trustworthy over time."
+%}
+
 Identifier quality depends on stable services that guarantee resolution and long-term accessibility. Good governance protects identifiers from decay.
 * **Benefit.** Maintains trust and usability of identifiers across decades.
 * **How.** Establish or rely on stable services that guarantee identifier resolution and long-term accessibility. PID infrastructures such as [GUPRI](https://faircookbook.elixir-europe.org/content/recipes/infrastructure/gupri.html) (Globally Unique, Persistent, Resolvable Identifier) help ensure persistent resolution and long-term stewardship. Governance arrangements and technical infrastructure are usually managed at the institutional or community level rather than by individual researchers. To make governance concrete, consider questions such as:
@@ -184,6 +253,9 @@ pid: https://n2t.net/hdl:20.500.12633/1HK1DTv1wPt3a
 ```
 " %}
  
+
+{% include how-to-summary-end.html %}
+
 ## Practical examples from the community 
 {% include metroline_steps/looking_for_examples.html %}
 
