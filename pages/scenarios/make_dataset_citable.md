@@ -46,5 +46,5 @@ Before getting started:
 
 ## Your Journey
 
-{% include metro-timeline.html stops=site.data.scenarios.make_dataset_citable %}
+{% include timeline.html stops=site.data.scenarios.make_dataset_citable %}
 

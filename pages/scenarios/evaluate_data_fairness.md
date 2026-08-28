@@ -32,4 +32,4 @@ As a researcher, you may need to understand how FAIR your data currently is to c
 
 ## Your Journey
 
-{% include metro-timeline.html stops=site.data.scenarios.evaluate_data_fairness %}
+{% include timeline.html stops=site.data.scenarios.evaluate_data_fairness %}

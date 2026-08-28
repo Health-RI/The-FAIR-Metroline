@@ -1,0 +1,33 @@
+<div class="scenario-cards-grid prerequisite-cards-grid">
+  {% for prerequisite in include.prerequisites %}
+  {% assign metroline_step = nil %}
+    {% assign metroline_step = nil %}
+    {% if prerequisite.step_id %}
+      {% for step in site.data.metroline_steps %}
+        {% if step.id == prerequisite.step_id %}
+          {% assign metroline_step = step %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% assign display_title = prerequisite.title | default: metroline_step.title %}
+    {% assign display_icon = prerequisite.icon | default: metroline_step.icon %}
+    {% assign display_summary = prerequisite.description | default: prerequisite.short_description | default: metroline_step.summary %}
+
+    {% if display_title %}
+      <article class="scenario-card prerequisite-card">
+        {% if display_icon %}
+          <div class="scenario-card-icon">{{ display_icon }}</div>
+        {% endif %}
+        <h3 class="scenario-card-title">{{ display_title }}</h3>
+        {% if display_summary %}
+          <p class="scenario-card-description">{{ display_summary }}</p>
+        {% endif %}
+        {% if prerequisite.step_id and metroline_step and metroline_step.url %}
+          <a href="{{ metroline_step.url | relative_url }}" class="btn-link prerequisite-read-more">Read more</a>
+        {% endif %}
+      </article>
+    {% endif %}
+  {% endfor %}
+</div>

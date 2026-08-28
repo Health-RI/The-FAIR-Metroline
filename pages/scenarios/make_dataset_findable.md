@@ -34,5 +34,5 @@ Accessible because of funder or institutional requirements.
 
 ## Your Journey
 
-{% include metro-timeline.html stops=site.data.scenarios.make_dataset_findable %}
+{% include timeline.html stops=site.data.scenarios.make_dataset_findable %}
 

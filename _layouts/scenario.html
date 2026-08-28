@@ -52,11 +52,7 @@ custom_js: metro-timeline
 
 <h2>Your Journey</h2>
 
-{% if scenario.type == "tools" %}
-  {% include tool-scenario-timeline.html stops=journey_stops %}
-{% else %}
-  {% include metro-timeline.html stops=journey_stops %}
-{% endif %}
+{% include timeline.html stops=journey_stops %}
 
 {% else %}
 

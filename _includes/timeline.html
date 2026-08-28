@@ -1,0 +1,230 @@
+<!-- Unified Timeline Component -->
+{% assign has_tool_features = false %}
+{% for stop in include.stops %}
+  {% if stop.tool_ids and stop.tool_ids.size > 0 %}
+    {% assign has_tool_features = true %}
+  {% endif %}
+  {% if stop.tools and stop.tools.size > 0 %}
+    {% assign has_tool_features = true %}
+  {% endif %}
+{% endfor %}
+
+
+<div class="metro-timeline{% if has_tool_features %} tool-scenario-timeline{% endif %}">
+  {% for stop in include.stops %}
+    {% assign step_refs = "" | split: "" %}
+    {% if stop.step_ids %}
+      {% assign step_refs = stop.step_ids %}
+    {% elsif stop.step_id %}
+      {% assign step_ref = stop.step_id %}
+      {% assign step_refs = step_refs | push: step_ref %}
+    {% endif %}
+
+    {% assign step_resources = "" | split: "" %}
+    {% for step_ref in step_refs %}
+      {% assign metroline_step = nil %}
+      {% for step in site.data.metroline_steps %}
+        {% if step.id == step_ref %}
+          {% assign metroline_step = step %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      {% if metroline_step %}
+        {% assign step_resources = step_resources | push: metroline_step %}
+      {% endif %}
+    {% endfor %}
+    {% assign first_step_resource = step_resources | first %}
+    {% assign display_title = stop.title | default: first_step_resource.title %}
+
+    <div class="metro-stop" data-stop-id="{{ forloop.index }}">
+      <div class="metro-stop-header">
+        <div class="metro-marker">
+          <div class="metro-dot"></div>
+          {% if forloop.last == false %}
+          <div class="metro-line"></div>
+          {% endif %}
+        </div>
+
+        <div class="metro-content">
+          <div class="metro-title-wrapper">
+            <div class="timeline-icon-group">
+              {% if stop.tool_ids and stop.tool_ids.size > 0 %}
+                {% assign first_tool_id = stop.tool_ids[0] %}
+                {% assign tool_data = site.data.tools | where: "id", first_tool_id | first %}
+                {% if tool_data and tool_data.page_img %}
+                  {% if tool_data.page_img contains "http://" or tool_data.page_img contains "https://" %}
+                    {% assign tool_img_url = tool_data.page_img %}
+                  {% else %}
+                    {% assign tool_img_url = "/assets/img/" | append: tool_data.page_img %}
+                  {% endif %}
+                  <span class="title-media title-tool-media">
+                    <img src="{{ tool_img_url }}" alt="{{ tool_data.at_a_glance['Tool name'] }}" class="title-tool-logo">
+                    {% if stop.tool_ids.size > 1 %}
+                    <span class="badge bg-primary title-badge">+{{ stop.tool_ids.size | minus: 1 }}</span>
+                    {% endif %}
+                  </span>
+                {% endif %}
+              {% elsif stop.tools and stop.tools.size > 0 and stop.tools[0].logo %}
+                <span class="title-media title-tool-media">
+                  <img src="{{ stop.tools[0].logo }}" alt="{{ stop.tools[0].name }}" class="title-tool-logo">
+                  {% if stop.tools.size > 1 %}
+                  <span class="badge bg-primary title-badge">+{{ stop.tools.size | minus: 1 }}</span>
+                  {% endif %}
+                </span>
+              {% elsif stop.icon %}
+                <span class="title-icon">{{ stop.icon }}</span>
+              {% endif %}
+
+              {% if step_resources.size > 0 %}
+                <span class="title-media title-step-media" title="{{ first_step_resource.title }}">
+                  <span class="title-icon timeline-step-icon">{{ first_step_resource.icon }}</span>
+                  {% if step_resources.size > 1 %}
+                  <span class="badge bg-primary title-badge">+{{ step_resources.size | minus: 1 }}</span>
+                  {% endif %}
+                </span>
+              {% endif %}
+            </div>
+
+            <div class="timeline-title-body">
+              <h3 class="metro-title">
+                {{ display_title }}
+                {% if stop.tags %}{% for tag in stop.tags %}<span class="metro-tag">{{ tag }}</span>{% endfor %}{% endif %}
+              </h3>
+            </div>
+          </div>
+
+          {% if stop.short_description or stop.description or stop.examples or stop.link or step_resources.size > 0 or stop.tool_ids or stop.tools %}
+          <button class="metro-toggle" aria-expanded="false">
+            <span class="toggle-icon">▼</span>
+          </button>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if stop.short_description or stop.description or stop.examples or stop.link or step_resources.size > 0 or stop.tool_ids or stop.tools %}
+      <div class="metro-details" style="display: none;">
+        <div class="metro-description">
+          {% if stop.short_description %}
+          <p class="short-description">{{ stop.short_description }}</p>
+          {% endif %}
+
+          {% if stop.description %}
+          <div class="full-description">{{ stop.description }}</div>
+          {% endif %}
+
+          {% if stop.tool_ids or stop.tools %}
+          <div class="tool-list">
+            <h4>Tools and resources</h4>
+            <div class="tools">
+              {% if stop.tool_ids %}
+                {% for tool_id in stop.tool_ids %}
+                {% assign tool_data = site.data.tools | where: "id", tool_id | first %}
+                {% if tool_data %}
+                {% assign tool_name = tool_data.at_a_glance['Tool name'] | default: tool_id %}
+                {% assign tool_slug = tool_name | downcase | replace: ' ', '-' | replace: '/', '-' | replace: '(', '' | replace: ')', '' %}
+                <div class="tool-item">
+                  {% if tool_data.page_img %}
+                  {% if tool_data.page_img contains "http://" or tool_data.page_img contains "https://" %}
+                    {% assign tool_img_url = tool_data.page_img %}
+                  {% else %}
+                    {% assign tool_img_url = "/assets/img/" | append: tool_data.page_img %}
+                  {% endif %}
+                  <img src="{{ tool_img_url }}" alt="{{ tool_name }} logo" class="tool-logo">
+                  {% else %}
+                  <div class="tool-icon">
+                    <i class="fas fa-wrench"></i>
+                  </div>
+                  {% endif %}
+                  <div class="tool-info">
+                    <strong>{{ tool_name }}</strong>
+                    <a href="/{{ tool_slug }}" class="tool-link">
+                      <i class="fas fa-arrow-right"></i> View tool details
+                    </a>
+                  </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+              {% endif %}
+
+              {% if stop.tools %}
+                {% for tool in stop.tools %}
+                <div class="tool-item">
+                  {% if tool.logo %}
+                  <img src="{{ tool.logo }}" alt="{{ tool.name }} logo" class="tool-logo">
+                  {% else %}
+                  <div class="tool-icon">
+                    <i class="fas fa-wrench"></i>
+                  </div>
+                  {% endif %}
+                  <div class="tool-info">
+                    <strong>{{ tool.name }}</strong>
+                    {% if tool.url %}
+                    <a href="{{ tool.url }}" target="_blank" class="tool-link">
+                      <i class="fas fa-external-link-alt"></i> Documentation
+                    </a>
+                    {% endif %}
+                  </div>
+                </div>
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
+
+          {% if step_resources.size > 0 %}
+          <div class="tool-list guidance-list">
+            <h4>Guidance steps</h4>
+            <div class="tools">
+              {% for step_resource in step_resources %}
+              <div class="tool-item resource-step">
+                <div class="tool-icon">{{ step_resource.icon }}</div>
+                <div class="tool-info">
+                  <strong>{{ step_resource.title }}</strong>
+                  {% if step_resource.url %}
+                  <a href="{{ step_resource.url | prepend: '/' }}" class="tool-link">
+                    <i class="fas fa-arrow-right"></i> View step details
+                  </a>
+                  {% endif %}
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+
+          {% if stop.examples %}
+          <div class="metro-examples">
+            <h4>Examples</h4>
+            <div class="example-tabs">
+              {% for example in stop.examples %}
+              <button class="example-tab {% if forloop.first %}active{% endif %}" data-example="{{ forloop.index }}">
+                {{ example.role }}
+              </button>
+              {% endfor %}
+            </div>
+            <div class="example-content">
+              {% for example in stop.examples %}
+              <div class="example-panel {% if forloop.first %}active{% endif %}" data-example="{{ forloop.index }}">
+                <h5>{{ example.role }}</h5>
+                <p>{{ example.description }}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+
+          {% if stop.link %}
+          <div class="metro-link">
+            <a href="{{ stop.link }}" class="btn-link">
+              📄 View full step details
+            </a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+<script src="/assets/js/metro-timeline.js"></script>

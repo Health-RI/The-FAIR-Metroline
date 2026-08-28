@@ -41,5 +41,5 @@ Before starting this scenario, you should have the following prerequisites in pl
 
 ## Your Journey
 
-{% include metro-timeline.html stops=journey_stops %}
+{% include timeline.html stops=journey_stops %}
 
