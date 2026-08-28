@@ -80,44 +80,38 @@
   flex-grow: 1;
 }
 
-.prerequisite-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin: 1.5rem 0 2rem;
+.prerequisite-timeline {
   max-width: 100%;
+  margin: 1.5rem 0 2rem;
 }
 
-.prerequisite-card {
-  border-radius: 0;
-  padding: 1.25rem 1.25rem 1rem;
-  box-shadow: none;
-  cursor: default;
-  overflow: visible;
-}
-
-.prerequisite-card::before {
-  display: none;
-}
-
-.prerequisite-card:hover {
-  border-color: rgba($light, 0.15);
-  box-shadow: none;
-  transform: none;
-}
-
-.prerequisite-card .scenario-card-icon {
-  display: none;
-}
-
-.prerequisite-card .scenario-card-title {
-  margin-bottom: 0.5rem;
-  font-size: 1.05rem;
-}
-
-.prerequisite-card .scenario-card-description {
+.prerequisite-stop {
   margin-bottom: 0.75rem;
-  font-size: 0.96rem;
+}
+
+.prerequisite-stop .metro-content {
+  min-height: 64px;
+  padding: 0.75rem 1rem;
+  margin-left: 0;
+}
+
+.prerequisite-stop .metro-title {
+  font-size: 0.95rem;
+}
+
+.prerequisite-stop .metro-details {
+  margin-left: 0;
+  display: block;
+  padding: 0.85rem 1rem;
+}
+
+.prerequisite-stop .short-description {
+  margin-bottom: 0.75rem;
+  font-size: 0.92rem;
+}
+
+.prerequisite-stop .metro-details .metro-description {
+  padding-top: 0.25rem;
 }
 
 .prerequisite-read-more {

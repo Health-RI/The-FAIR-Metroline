@@ -1,6 +1,5 @@
-<div class="scenario-cards-grid prerequisite-cards-grid">
+<div class="metro-timeline prerequisite-timeline">
   {% for prerequisite in include.prerequisites %}
-  {% assign metroline_step = nil %}
     {% assign metroline_step = nil %}
     {% if prerequisite.step_id %}
       {% for step in site.data.metroline_steps %}
@@ -16,18 +15,37 @@
     {% assign display_summary = prerequisite.description | default: prerequisite.short_description | default: metroline_step.summary %}
 
     {% if display_title %}
-      <article class="scenario-card prerequisite-card">
-        {% if display_icon %}
-          <div class="scenario-card-icon">{{ display_icon }}</div>
-        {% endif %}
-        <h3 class="scenario-card-title">{{ display_title }}</h3>
-        {% if display_summary %}
-          <p class="scenario-card-description">{{ display_summary }}</p>
-        {% endif %}
-        {% if prerequisite.step_id and metroline_step and metroline_step.url %}
-          <a href="{{ metroline_step.url | relative_url }}" class="btn-link prerequisite-read-more">Read more</a>
-        {% endif %}
-      </article>
+      <div class="metro-stop prerequisite-stop">
+        <div class="metro-stop-header">
+          <div class="metro-content">
+            <div class="metro-title-wrapper">
+              <div class="timeline-icon-group">
+                {% if display_icon %}
+                  <span class="title-icon">{{ display_icon }}</span>
+                {% endif %}
+              </div>
+
+              <div class="timeline-title-body">
+                <h3 class="metro-title">{{ display_title }}</h3>
+              </div>
+            </div>
+            <button class="metro-toggle" aria-expanded="false">
+              <span class="toggle-icon">▼</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="metro-details prerequisite-details" style="display: none;">
+          <div class="metro-description">
+            {% if display_summary %}
+              <p class="short-description">{{ display_summary }}</p>
+            {% endif %}
+            {% if prerequisite.step_id and metroline_step and metroline_step.url %}
+              <a href="{{ metroline_step.url | relative_url }}" class="btn-link prerequisite-read-more">Read more</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
     {% endif %}
   {% endfor %}
 </div>
