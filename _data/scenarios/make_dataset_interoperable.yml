@@ -1,22 +1,27 @@
 - title: "Define FAIRification objectives"
   status: "prerequisite"
   short_description: "Be sure you are clear about your FAIRifcation Objectives"
-  step_id: 1
+  step_ids:
+    - 1
 
 - title: "Have a FAIR data steward on board"
   status: "prerequisite"
   short_description: "When necessary, make sure you enlist the help from a FAIR data steward, if possible"
-  step_id: 3
+  step_ids:
+    - 3
 
 - title: "Identify and select training"
   status: "prerequisite"
   short_description: "If there are gaps in your (team’s) knowledge, considering following training"
-  step_id: 4
+  step_ids:
+    - 4
 
-- step_id: 13
+- title: "Analyse data semantics"
   status: "upcoming"
   short_description: "Analyse data semantics"
   description: "Clarify and define the meaning of data and metadata elements by identifying ambiguities and creating a clear, unambiguous codebook to support further FAIRification steps."
+  step_ids:
+    - 13
   examples:
     - role: "Researcher"
       description: "The first step is to accurately specify the data that will be collected.
@@ -25,18 +30,22 @@ Thus, we refined it to “phenotypic sex” with values “female”, “male”
 This specification leads to a first rough version of a codebook.<br>
 Next, we search for existing initiatives online to align with. For genomics, parts of the <a href='https://decor.nictiz.nl/ad/#/fairgenomes-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.120.1.0/2021-07-20T24:00:00'>FAIR Genomes codebook</a> can be reused. For example, for 'Female' will use the code 'http://purl.obolibrary.org/obo/PATO_0000383'."
 
-- step_id: 12
+- title: "Apply common data elements"
   status: "upcoming"
   short_description: "Apply Common data elements"
   description: "Identify, select and apply common data elements to standardise data collection and improve interoperability, data quality and reuse."
+  step_ids:
+    - 12
   examples:
     - role: "Researcher"
       description: "Since FAIR Genomes does not have a definition for bmi, we check the <a href='https://cde.nlm.nih.gov'>NIH CDE Repository</a> for Common data elements to reuse. We find we need to add the elements described <a href='https://cde.nlm.nih.gov/formView?tinyId=t6XCi_Ob5'>here</a> to properly register the bmi."
 
-- step_id: 14
+- title: "Design eCRF"
   status: "upcoming"
   short_description: "Design eCRF"
   description: "Design effective electronic case report forms by translating well-defined data elements into structured, validated forms that support high-quality, interoperable and reusable data collection."
+  step_ids:
+    - 14
   examples:
     - role: "Researcher"
       description: "With the codebook now containing the definitions for bmi and sex, we use it as the basis for the eCRF."
