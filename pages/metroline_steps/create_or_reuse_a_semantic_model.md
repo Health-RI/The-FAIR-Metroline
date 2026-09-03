@@ -36,7 +36,12 @@ The following steps provide a general framework for this process. They are meant
 
 To illustrate these steps, we'll use a *running example:* the "HRI Clinic," a small practice looking to standardise its patient visit records. Each record contains the patient's name, the visit date, the reason for the visit (e.g., "annual check-up" or "flu symptoms"), and the doctor they saw.
 
-### Step 1 – Prepare your data for modelling
+{% include how-to-summary-start.html
+   number="1"
+   title="Prepare your data for modelling"
+   summary="Define the scope of the semantic model by identifying which concepts and information should be represented and what falls outside the model."
+%}
+
 This initial step ensures exactly what pieces of information should be included in the semantic model. This simply means deciding what's "in" and what's "out" by identifying the specific concepts from your subject area that the model will represent.
 
 {% include info-box.html type="example" title="Example - step 1" text="
@@ -45,7 +50,15 @@ As preparation, the HRI Clinic defines the following main elements as part of th
 
 Additional information on preparation can be found in the [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics) page.
 
-### Step 2 – Search for existing models
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Search for existing models"
+   summary="Search repositories and relevant literature for reusable models and assess candidates based on scope and domain coverage, granularity, community adoption, licensing and openness."
+%}
+
 Before creating a new model, first investigate existing semantic metadata models to see if one (or more) can be reused. To support this decision (taken in step 3), gather the following information from each potential reuse candidate model:
 
 - **Scope and domain coverage**. Does the model represent the entities and relationships relevant to your context?
@@ -83,7 +96,15 @@ If a model is partially suitable, it can often be extended or mapped.
 After conducting a literature review, the HRI Clinic team decided to use the CARE-SM model to annotate their data. This model already describes information relevant to their scope and is mapped to other resources, such as OMOP and HL7 FHIR.
 " %}
 
-### Step 3 – Reuse, extend, or create
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Reuse, extend, or create"
+   summary="Prefer reusing a suitable model as-is, extend an existing model when it only partly fits or create a new model only when reuse or extension is not feasible, while documenting the rationale for your choice."
+%}
+
 Once candidate models or vocabularies are identified, decide whether to reuse one as-is, use parts of it and extend it to fit your context, or create a new one. Most semantic modelling methodologies have workflows or guidelines to support your decision. Use the information gathered from the previous step, the methodologies guidance and the following general recommendations during your decision making process.
 
 - **Reuse**
@@ -105,7 +126,15 @@ Always document the rationale behind your choice. This supports transparency, fa
 The HRI Clinic decides to use only parts of the CARE-SM for their use case. Specifically, they reuse the *Demographics* and *Treatment and Interventions* modules, which are sufficient for their purposes. Within those modules, they select only the concepts related to their use case.
 " %}
 
-### Step 4 – Use standard technologies, document and share
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="4"
+   title="Use standard technologies, document and share"
+   summary="Encode the model using established semantic web technologies, use persistent URIs and clear labels and publish it with appropriate metadata, licensing and versioning in a stable, accessible location to support FAIR reuse."
+%}
+
 Use established semantic web technologies to encode your model in a machine-readable and interoperable way. A common best practice is to implement the model using semantic web technologies. These technologies help encode your model in a way that both humans and machines can interpret consistently.
 
 - **RDF** – For structuring data as triples
@@ -127,6 +156,9 @@ Even when your data cannot be openly shared (e.g. due to privacy or legal restri
 {% include info-box.html type="example" title="Example - step 4" text="
 The HRI Clinic modelling team decides to use RDF to structure their data into triples and OWL to define their data's rules and relationships. The clinic publishes their simplified version of CARE-SM on GitHub (including a clear license, version and credit to the original model).
 " %}
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community
 Below are examples of how research communities and infrastructures have created or reused semantic (meta)data models to improve interoperability and support FAIR implementation. These cases demonstrate reuse, extension, alignment with standards, and use of semantic web technologies.

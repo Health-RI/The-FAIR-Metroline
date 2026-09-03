@@ -53,7 +53,12 @@ Benefits for the scientific community.
 ## How to 
 Registering resource level metadata depends on the context of your project and your expertise in metadata and FAIR principles. Here, we present a generic workflow applicable to most scenarios, but it is advisable to customise this workflow to accommodate your context. This workflow emphasises selecting appropriate metadata catalogues for resources, rather than the technical aspects of metadata schemas. 
 
-### Step 1 - Inventorise resource types
+{% include how-to-summary-start.html
+   number="1"
+   title="Inventorise resource types"
+   summary="Inventorise the resources and identify their types and categories."
+%}
+
 The first step is to identify and categorise the specific types of resources you are managing. While there is no universally accepted standard list, typical examples of resource types include datasets, code and articles. Within the category of datasets, there are further distinctions such as sociodemographic data, clinical data, imaging data, omics data, and biobank data. The type of resource impacts your choice of metadata catalogue. 
 
 **Outcome:** a list of relevant resources along with their respective types.
@@ -64,7 +69,15 @@ Researcher Eva wants to document metadata for her resource, the [PRISMA](https:/
     * Dataset type 1: Biosample data
     * Dataset type 2: Questionnaire data
 
-### Step 2 - Determine metadata elements for each resource type
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Determine metadata elements for each resource type"
+   summary="Identify and list metadata elements per resource type and align with domain practices by reusing established metadata where possible."
+%}
+
 In this step, you need to define the conceptual units of information, known as metadata elements, and collect those elements in a spreadsheet per resource type. Below is an example spreadsheet to capture the resource (sub)type and metadata element with description.
 
 | Resource type | Resource subtype | Metadata element   | Description                                                        |
@@ -95,7 +108,15 @@ To ensure comprehensive metadata, she referred to existing standards:
 * for Biosamples, she used the guidelines from the [Metadata Group on Biobank and Collections](https://www.health-ri.nl/en/about/organisation/biobanks-collections) in Health-RI;
 * for questionnaire data, she selected information she deemed relevant, as she was unable to find established community standards.
 
-### Step 3 - Search for metadata catalogues per resource type 
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Search for metadata catalogues per resource type"
+   summary="Identify and evaluate metadata catalogues to ensure proper registration and long-term accessibility of your data."
+%}
+
 The next step is to identify metadata catalogues. Platforms like [FAIRsharing](https://fairsharing.org/) help researchers locate appropriate metadata catalogues.
 
 Considerations for Metadata Catalogue selection are described below.
@@ -123,7 +144,15 @@ After determining the necessary metadata elements for PRISMA data in step 2, Eva
   * Biosamples. [BBMRI-ERIC data catalogue](https://directory.bbmri-eric.eu/ERIC/directory/#/catalogue);
   * Questionnaires. [The Qualitative Data Repository](https://qdr.syr.edu/).
 
-### Step 4 - Select the appropriate metadata catalogues
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="4"
+   title="Select the appropriate metadata catalogues"
+   summary="Evaluate the pros and cons of metadata catalogue candidates and make the decisions most appropriate for your context."
+%}
+
 In this step, you will evaluate the pros and cons of Metadata Catalogue candidates and make the decisions most appropriate for your context. The general suggestion is to prioritise community standards ([R1.3](https://www.go-fair.org/fair-principles/r1-3-metadata-meet-domain-relevant-community-standards/)) - is there a metadata catalogue which is widely used in your community?
 * **Yes.** It is recommended to choose it and adapt your metadata requirements (Step 2) to the predefined metadata elements of the Catalogue. 
 * **No.** It is recommended to compare your metadata requirements (Step 2) with the predefined metadata elements from the list of all repository candidates (Step 3) and choose the best matching one (instead of multiple ones).
@@ -135,7 +164,15 @@ Eva selected the appropriate metadata catalogues for each type of dataset.
 * **Biosample data.** BBMRI-ERIC data catalogue.
 * **Questionnaire data.** Metadata about the questionnaire data will first be made available on the Health-RI data catalogue together with high-level information about the study. When the questionnaire data is published in a data repository this entry will be updated to reflect the new location of the dataset.
 
-### Step 5 - Enter resource metadata required in the selected metadata catalogues
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="5"
+   title="Enter resource metadata required in the selected metadata catalogues"
+   summary="Enter and align metadata across selected catalogues for each resource."
+%}
+
 The final step involves entering the metadata for each resource into the chosen metadata catalogues, following the specific instructions provided by each metadata catalogue. If a resource is registered in multiple metadata catalogues, ensure that the metadata is consistent across all platforms and that the metadata sets are interlinked where possible. Automated updates of metadata are recommended when available.
 
 **Outcome:** successfully registered resource-level metadata in a FAIR manner, ensuring the resources are Findable, Accessible, Interoperable, and Reusable.
@@ -144,6 +181,9 @@ The final step involves entering the metadata for each resource into the chosen 
 Eva followed the [instructions](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279150593) for onboarding data in the Health-RI data catalogue to register the metadata, which is now [available](https://catalogus.healthdata.nl/datasets/2a34108d-6ff8-4b88-aaa5-51f51f68d489). 
 
 Eva entered the biosample data into the [BBMRI Catalogue Form](https://github.com/molgenis/molgenis-emx2/raw/master/docs/resources/BBMRI-NL_catalogue_form.docx) and sent it to MOLGENIS support (see [Getting started](https://catalogue.bbmri.nl/BBMRI-ERIC/pages/#/Getting%20Started)). The metadata for biosample data were successfully registered, in the [BBMRI-ERIC Directory](https://directory.bbmri-eric.eu/ERIC/directory/#/collection/bbmri-eric:ID:NL_RB:collection:155?search=PRISMA).
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community 
 ***[The Netherlands ME/CFS Cohort and Biobank Consortium](https://www.health-ri.nl/en/netherlands-mecfs-cohort-and-biobank-nmcb-consortium)***

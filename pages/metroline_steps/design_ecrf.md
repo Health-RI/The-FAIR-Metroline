@@ -27,7 +27,13 @@ Properly designing your eCRF is important for a variety of reasons:
 * **Supports reproducibility.** eCRFs often function as a [codebook](https://guides.library.upenn.edu/c.php?g=564157&p=9554907) (sometimes also referred to as data dictionary), helping to document how data was collected and structured which is essential for reproducible research. 
 
 ## How to
-### Step 1 - Clarify your role and responsibilities
+
+{% include how-to-summary-start.html
+   number="1"
+   title="Clarify your role and responsibilities"
+   summary="Define responsibilities early so researchers and data managers can align on what must be collected, terminology, units and study scope."
+%}
+
 Your tasks will differ depending on your role: 
 * **Researcher.** Focus on what needs to be collected. If you lack technical experience, collaborate early with a data manager or system expert to translate your needs into a workable form structure. 
 * **Data manager.** If you're not familiar with the subject matter, sit with the researcher early and often. Clarify key variables and the scope of the project (e.g. single-center or multi-center study) and ensure consistent use of terms and units. 
@@ -43,7 +49,14 @@ A data manager has been asked by a researcher to build an electronic Case Report
 * Cutis marmorata telangiectatica congenita 
 " %}
 
-### Step 2 - Understand your EDC system
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Understand your EDC system"
+   summary="Learn the capabilities, limitations and workflows of your EDC system before building the eCRF, using training, local expertise, examples or templates where needed."
+%}
+
 Each EDC (Electronic Data Capture) system has its own quirks, limitations and strengths. Before you start building, invest time in learning how your EDC works. 
 
 Are you already familiar with the system? If not, consider: 
@@ -56,7 +69,14 @@ Are you already familiar with the system? If not, consider:
 To get more familiar with Castor EDC, the data manager decides to follow several courses from the [Castor academy](https://academy.castoredc.com/). Similar resources are available for [REDCap](https://projectredcap.org/resources/videos/). 
 " %}
 
-### Step 3 - Define your data with your FAIRification goals in mind
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Define your data with your FAIRification goals in mind"
+   summary="Develop a codebook that defines the data, structure and relevant mappings to standards or ontologies, reusing existing data elements where possible and carefully defining study-specific elements with clear labels, formats, value sets, metadata and validation rules where needed."
+%}
+
 Before building your eCRF, start by developing the codebook. The codebook serves as the blueprint for your forms: it defines the data you intend to collect, specifies how that data should be structured and, where applicable, outlines how it maps to external standards or ontologies to support FAIRification. A codebook should be set up in such a way that data analysis can be performed without any knowledge of the eCRF 
 
 Start by clarifying your goals for the data: 
@@ -99,7 +119,14 @@ Columns concerned with units, verifications, etc are left out, since they're emp
 
 {% include info-box.html type="example" title="Example - step 3" text=infobox_text3 %}
 
-### Step 4 - Build your form using good eCRF design practices
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="4"
+   title="Build your form using good eCRF design practices"
+   summary="Build the eCRF from the codebook using logical field grouping, conditional logic, input validation, clear instructions, visible units and ranges, appropriate input controls and consistent layouts."
+%}
+
 Once your codebook is ready, use it as the foundation for constructing your eCRF. The goal is not only technical accuracy, but also usability and robustness in practice. 
 * **Group related fields logically.** Organise fields by topic (e.g. demographics, lab values) or by visit/timepoint. Logical grouping improves data entry flow and reduces the risk of errors. 
 * **Use conditional logic to reduce clutter.** Show only questions that are relevant based on earlier responses (e.g. "If pregnant = yes, show gestational age"). This keeps forms concise and easier to navigate. 
@@ -119,13 +146,20 @@ The data manager now implements the codebook items in Castor EDC.
    src="/assets/img/metroline_steps/design_ecrf/step4_castor_1.png" 
    size="large"
    %}
-See [Special step 1](#special-step-1---adding-annotations-in-castor-edc-and-redcap) below to read how to add annotation for the &quot;Rare disease's diagnosis&quot; field.
+See [Supplementary step 1](#step-s1---adding-annotations-in-castor-edc) below to read how to add annotation for the &quot;Rare disease's diagnosis&quot; field.
 
 {% endcapture %}
 
 {% include info-box.html type="example" title="Example - step 4" text=infobox_text4 %}
 
-#### Step 5 - Testing the eCRFs
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="5"
+   title="Testing the eCRFs"
+   summary="Test the eCRFs thoroughly with the form builder, data entry personnel and data analyst to verify implementation, usability and suitability of the resulting data for analysis before going live."
+%}
+
 Once your eCRFs are built, they must be thoroughly tested before going live. Involve testers from different roles to ensure both technical accuracy and practical usability. 
 * **Form builder.** This person should be the first to test and verify that all elements are implemented correctly.** If the form includes validations, test edge cases carefully. If you can break your own form, others probably will too, even if unintentionally. 
 * **Data entry personnel.** A form that works technically may still be difficult to use in practice. Involve the people who will be entering data, such as research nurses, to check whether the form is intuitive and efficient. In multi-centre studies, include testers from different sites to uncover centre-specific issues. 
@@ -148,15 +182,27 @@ Since everyone is pleased with the eCRF, they decide the study can go live and d
 Before going live and starting data collection, verify that the EDC study settings comply with regulatory and centre requirements. For example, for WMO studies it may be necessary to enable two-factor authentication and configure forms for (S)AEs or SUSARs.
 " %}
 
-### Step 6 - Updating your eCRFs
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="6"
+   title="Updating your eCRFs"
+   summary="Support users after launch, monitor recurring data-entry issues and carefully assess, test, document and communicate any eCRF changes because they may affect data integrity, protocols, ethics approval and downstream analysis."
+%}
+
 After the study has started, continue supporting data entry by offering short training sessions. This is especially useful in multi-centre settings. Let personnel familiarise themselves with the eCRF using dummy data in a test site. Use this opportunity to gather feedback and clarify any misunderstandings. 
 
 As the study progresses, monitoring may reveal patterns such as fields being consistently left blank or incorrectly filled. These may indicate unclear instructions, design flaws or a mismatch between the form and actual workflows. 
 
 While adjustments may be necessary, modifying a live eCRF can have serious consequences. Changes may affect the protocol, data integrity, ethics approval and downstream analysis. Potential risks should be carefully assessed and, if required, changes should be managed through formal amendments. Plan for the possibility of data migration and revalidation. Whenever possible, make adjustments in a non-live copy of the study to prevent incidents and contamination of real data. Some systems offer dedicated functionality for this (for example, Castor's [FormSync](https://www.castoredc.com/webinars/introducing-form-sync/)). Always document changes thoroughly and communicate them clearly to all involved parties. 
 
-### Special step 1 - Adding annotations in Castor EDC and REDCap
-#### Castor EDC
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="S1"
+   title="Adding annotations in Castor EDC"
+   summary="Add terminology references to eCRF fields using Castor EDC's Data Standardization functionality, including option annotations where needed, so that these annotations are retained in the study structure and XML export."
+%}
 In Castor EDC an item's terminology references can be added via the item's "Data standardization". Before you can do so, you first need to add the terminology in the Annotations section of the Settings: 
 {% include image_with_caption.html 
    src="/assets/img/metroline_steps/design_ecrf/specialstep1_castor_1.png" 
@@ -194,7 +240,13 @@ The annotations are included when you do an XML-export of your study structure.
    %}
 For more information, see [Castor's helpdesk page](https://helpdesk.castoredc.com/hc/en-us/articles/27129462683805-Metadata-Annotations-Settings-in-CDMS).
 
-#### REDCap
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="S2"
+   title="Adding annotations in REDCap"
+   summary="Use REDCap field annotations to document or map fields to external standards and, where relevant, use biomedical ontology search functionality to support standardised data entry."
+%}
 In REDCap, the mapping a field to a standard can be done using the "Action Tags / Field Annotation".  Field annotations in REDCap serve as internal notes or metadata for individual fields. They are not visible on any user-facing pages but can be retrieved through the Data Dictionary download or API metadata export. 
 
 These annotations are flexible in use, allowing users to document what a field represents, guide data entry or analysis, or map fields to external standards such as SNOMED, CDISC or LOINC. The notation format is unrestricted. Users may use simple codes or complex structures such as XML. 
@@ -229,9 +281,19 @@ Now, when you enter data, you can select the item from the ontology's list. For 
    size="medium"
    %}
 
-### Special step 2 - Tools to help you build eCRFs
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="S3"
+   title="Tools to help you build eCRFs"
+   summary="Consider using tools that generate or transform eCRFs from structured codebooks."
+%}
+
 * **iCRF Generator.** The [iCRF Generator](https://github.com/aderidder/iCRFGenerator/) is a tool that generates eCRFs for various EDC systems such as Castor EDC and REDCap from codebooks published in ART-DECOR and OpenEHR. When codebooks are properly annotated, their annotations are incorporated into the generated CRFs in accordance with the methods described above.
 * **Codebook to Castor/LimeSurvey.** Codebook to Castor/LimeSurvey. Developed by Amsterdam UMC, this tool converts an Excel-based codebook into a format compatible with RadboudUMC’s Castor Offline Design converter, which then generates a Castor-ready XML file. Nowadays, the tool also has limited LimeSurvey support. Currently, the tool is only available within Amsterdam UMC.
+
+{% include how-to-summary-end.html %}
+
 
 ## Practical examples from the community
 * **VASCA registry**. For more information see the following publications:

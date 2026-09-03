@@ -45,7 +45,12 @@ Querying FAIR data is important because it is how you actually use the data. FAI
 ## How to
 This how-to gives information about querying FAIR resources, starting with simple browsing and filtering, moving to visual query tools, and advancing to federated multi-source querying with SPARQL.
 
-### Step 1 Start with browsing and filtering
+{% include how-to-summary-start.html
+   number="1"
+   title="Start with browsing and filtering"
+   summary="Explore catalogues or FAIR Data Points by browsing metadata, searching with keywords and filtering results to understand what resources are available before constructing more complex queries."
+%}
+
 The easiest way to explore FAIR data is through a catalogue or FAIR Data Point interface, such as the 
 [National Health Data Portal](https://www.healthdata.nl/), [FAIRsharing.org](http://fairsharing.org/) or Local FAIR Data Points (see [Metroline Step: Transform and expose FAIR (meta)data]({{site.baseurl}}/metroline_steps/transform_and_expose_fair_metadata) to learn more about FAIR Data Points). 
 
@@ -60,7 +65,15 @@ This helps you discover what exists before performing any (complex) queries.
 To begin, we search for “Inflammatory bowel disease” in the search bar on [Wikidata.org](http://www.wikidata.org/). This leads us to the item [Q917447](https://www.wikidata.org/wiki/Q917447) which represents IBD in Wikidata. This item confirms that IBD is a recognised disease entity with structured metadata (such as classifications, related conditions, and identifiers) providing a solid starting point for further data exploration. We gained insight into what the catalogue contains, what metadata is available, and how we might formulate more specific queries to retrieve related information.
 "%}
 
-### Step 2  - Use visual or guided tools to construct queries
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Use visual or guided tools to construct queries"
+   summary="Use visual query builders to create and run structured queries through user-friendly selections when more targeted exploration is needed without writing query syntax directly."
+%}
+
 Some linked-data portals offer visual query builders that help users construct SPARQL queries without needing to learn the syntax. These tools automatically translate your selections (such as ticking checkboxes or choosing from dropdown menus) into SPARQL and run the query in the background. Such as [SPARQL Query builder](https://sparnatural.eu/) or [Wikidata Query Builder](https://query.wikidata.org/querybuilder/).
 
 The results are typically displayed in a table or graph, making it easy to explore data without writing any code. This approach is ideal for users who want to go beyond simple browsing but aren’t yet ready to write SPARQL manually. 
@@ -79,7 +92,15 @@ We want to continue our exploration of inflammatory bowel disease. In our first 
 
 "%}
 
-### Step 3 - Access the SPARQL endpoint to write and refine SPARQL queries
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Access the SPARQL endpoint to write and refine SPARQL queries"
+   summary="Connect to a SPARQL endpoint when greater flexibility is required, starting with simple queries and refining them to retrieve, filter, join or aggregate information as needed."
+%}
+
 Note: The following steps are meant specifically for querying catalogues and repositories with SPARQL endpoint. If you are trying to query a catalogue based on another querying approach (e.g. SQL), these may not be directly applicable.
 
 When you need more flexibility, connect directly to the SPARQL endpoint. Depending on the catalog you can use:
@@ -97,13 +118,29 @@ See and run the query yourself at this link: [https://w.wiki/FsqH](https://w.wik
 The results show all genes linked to both psoriasis and an IBD condition. For each gene, you can also see the specific IBD disease it is associated with (such as Crohn’s disease or ulcerative colitis) providing a richer context for analysis.
 "%}
 
-### Step 4 - Combine multiple FAIR sources (federated queries)
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="4"
+   title="Combine multiple FAIR sources (federated queries)"
+   summary="Use federated querying when a research question spans multiple FAIR sources so information can be combined across endpoints without moving the underlying data."
+%}
+
 When your question spans several data sources, use **federated querying**. This allows you to connect endpoints across registries, institutions, or countries, combining data without moving it.
 
 In SPARQL, federated queries are implemented using the SERVICE keyword, which lets you call another SPARQL endpoint within your query. This enables seamless integration of data across different FAIR sources. See documentation on SPARQL federated querying [here](https://www.w3.org/TR/sparql12-federated-query/).
 
 
-### Step 5 - Export and reuse query results
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="5"
+   title="Export and reuse query results"
+   summary="Export query results in suitable formats for downstream analysis or integrate queries directly into analytical workflows, using built-in visualisation where useful."
+%}
+
 Query results can be downloaded in **multiple formats** (e.g. CSV, JSON, XML) for reuse in data analysis tools like Python, R, or Excel.
 Depending on the query language and platform, it may also be possible to **integrate queries** directly into your workflow (for example, by calling SPARQL endpoints from Python or R scripts) so that results flow into subsequent analysis steps without the need to download files manually.
 
@@ -113,6 +150,9 @@ For human users, many catalog interfaces also provide **built-in visualisation**
 In [Wikidata](https://www.wikidata.org), you can visualise query results in different ways by switching between different result views. Try to run the example query from above [https://w.wiki/FsqH](https://w.wiki/FsqH) and experiment with the various visualisation and export options.
 "%}
 
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community
 **[SPHN Data Exploration and Analysis System (DEAS)](https://sphn.ch/2024/10/17/sphn-launches-a-new-cross-hospital-data-query-tool-deas/)**. 

@@ -27,7 +27,12 @@ Assessing FAIRness after FAIRification ensures that your dataset truly meets you
 Aligning with these key points does not only support accountability but also reinforces the credibility and acceptance of your work. 
 
 ## How to 
-### Step 1 – Check if you reached your (original) FAIRification objectives 
+{% include how-to-summary-start.html
+   number="1"
+   title="Check if you reached your (original) FAIRification objectives"
+   summary="Review each FAIRification objective to assess whether it was achieved, whether further improvements are feasible or new objectives emerged."
+%}
+
 You set out by defining [FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives) at the beginning of your project. You should now check if you reached these objectives, reflecting on them one by one. Keep in mind: 
 * How important was the objective? 
   * The objective is a must-have. For example, if one goal is to meet specific funder, institutional, and/or journal requirements, not reaching it may not be an option. 
@@ -39,11 +44,27 @@ You set out by defining [FAIRification objectives]({{site.baseurl}}/metroline_st
 * Did any new requirements emerge during the project?
   * FAIRification is an iterative process; your goals may have evolved. 
 
-### Step 2 – Re-assess the FAIRness of your data with tools
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Re-assess the FAIRness of your data with tools"
+   summary="Re-assess objectively the FAIRness of your data, making use of dedicated tools."
+%}
+
 After reflecting on your original objectives in step 1, it’s important to objectively assess your data’s FAIRness at this stage. You can do this by using FAIR assessment tools. 
 * If you performed a pre-FAIR assessment earlier in the process, consider repeating the same approach at this stage to evaluate progress over time. This may involve automated tools or checklist-based self-assessments. Information about different FAIR evaluation methods can be found in [Metroline step: Pre-FAIR assessment]({{site.baseurl}}/metroline_steps/pre_fair_assessment).
 
-### Step 3 – Enhance the validation with complementary methods
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Enhance the validation with complementary methods"
+   summary="Use complementary fairness assessment methods such as peer reviews, tests and taking user perspective to get more insights."
+%}
+
 In addition to using assessment tools, you should consider complementary methods to validate and further evaluate the FAIRness of your data and metadata. These options enhance the insights from step 2 and give you practical feedback. 
 * **Conduct a peer review.** Engage external reviewers or peers to conduct an independent assessment for objectivity. 
 * **Conduct tests.** If, for example, you set out to create machine actionable metadata, run actual tests to verify if this the case. 
@@ -52,17 +73,36 @@ In addition to using assessment tools, you should consider complementary methods
   * Test whether machine-actionable metadata actually works by using real scripts or applications to access and interpret it.
   * Ask intended users or colleagues to test useability and accessibility in the ways you intended.
 
-### Step 4 - Document the results 
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="4"
+   title="Document the results"
+   summary="Create a record of the FAIRification journey, internally for reproducibility and planning, and externally together with the dataset to guide data reuse."
+%}
+
 For internal use, this documentation can serve as a project record for your team or institution, supporting transparency, reproducibility, and future planning.
 
 For external publication, it's good practice to also publish a summary of the FAIRification process alongside the dataset. This provides clarity to others on how FAIR the data is, what limitations exist, and how reuse should be approached.
 * Record any gaps or deviations from the initial FAIRification goals. 
 * Provide recommendations for further improvements if needed. 
 
-### Step 5 - Continuously monitor and update the resources 
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="5"
+   title="Continuously monitor and update the resources"
+   summary="Maintain FAIR compliance over time by regularly reviewing your resources and updating your Data Management Plan."
+%}
+
 Even if your FAIRification efforts are complete for now, evolving requirements, such as changes in metadata standards, may require future updates. It is therefore essential to continue monitoring your resource to ensure it remains FAIR over time. 
 
 To help keep an overview of the original FAIRification objectives, their status, and possible changes in the process, it might be useful to update this information in your datamanagement plan. Consider going back to [Metroline Step: Define FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives) to redefine the original FAIR objectives.
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community 
 For an applied example of The FAIR Evaluator tool, see Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic. 

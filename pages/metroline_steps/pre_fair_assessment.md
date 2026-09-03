@@ -21,7 +21,12 @@ The how-to section describes a variety of assessment tools based on the FAIR pri
 This step will help you assess the current FAIRness level of your data. Comparing the current FAIRness to the previously defined [FAIRification objectives](define_fairification_objectives) will help you shape the necessary steps and requirements needed to achieve your FAIRification goals and help you create your [solution plan](design_solution_plan), a workplan specifically designed for reaching these goals. Furthermore, the assessment can be repeated in the [Assess FAIRness](assess_fairness) step, allowing you to compare the results and check the progress of your data towards FAIRness.
 
 ## How to
-### Step 1 - Choose the right tool type for your FAIR Assessment
+{% include how-to-summary-start.html
+   number="1"
+   title="Choose the right tool type for your FAIR Assessment"
+   summary="Decide whether to use a manual questionnaire or an automated tool based on your data and use case."
+%}
+
 Decide which type of tool fits your goal(s) best. Broadly, the tools fall into two categories. 
 * **Online self-assessment surveys.** Here, the user is presented with an online form, which is filled in manually.
 * **(Semi) automated tests.**  Here (semi) automated tests are performed on a dataset by providing the tool with, for example, a link to an already published dataset. 
@@ -30,7 +35,15 @@ In both cases, the result gives an indication about the FAIRness of the (meta)da
 
 While we focus specifically on the FAIRness of (meta)data in this step, it is also possible to assess general FAIR awareness, for example by using the [FAIR Aware tool](https://fairaware.dans.knaw.nl/) provided by DANS.
 
-### Step 2 - Consider using a well-known FAIR assessment tool
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Consider using a well-known FAIR assessment tool"
+   summary="Consider reusing trusted tools like FAIR-Checker, FAIR Evaluator or the ARDC self-assessment."
+%}
+
 The tables below provide an overview of some of the more popular tools from both categories. 
 
 #### Online self-assessment surveys
@@ -136,14 +149,25 @@ To find even more tools:
 * **[FAIR assessment tools: evaluating use and performance](https://www.sciencedirect.com/science/article/pii/S2452074822000246).** Paper comparing several tools.
 
 
-### Step 3 - Prepare before you start your FAIR assessment
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Prepare before you start your FAIR assessment"
+   summary="Read the guidance, explore example assessments and involve experts to ensure a solid start."
+%}
+
 To successfully do a pre-FAIR assessment, do the following:
 * learn from examples (see the [practical examples](#practical-examples-from-the-community) section);
 * familiarise yourself with the tool you intend to use;
-* involve the necessary experts (see [expertise requirements](#expertise-requirements-for-this-step) section);
+* involve the necessary experts;
 * perform the assessment.
 
 The final evaluation will give insight into the current FAIRness of your data. Depending on the tool used, you may receive feedback on how to improve the FAIRness of your data. Thus, the outcome of the pre-FAIR assessment helps you determine the next steps to achieve your FAIRification goals.
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community
 For an applied example of The FAIR Evaluator, see [Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic](https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-022-00263-7).

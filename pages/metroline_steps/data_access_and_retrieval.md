@@ -27,7 +27,12 @@ Correct and responsible data access and retrieval ensures you:
 * **Enable reproducibility.** Documenting where the data came from and how it was retrieved allows the process to be repeated if needed (e.g. queries, APIs, permissions, or filtering steps used). This ensures that others can repeat the retrieval process accurately, making the data truly reproducible.
 
 ## How to
-### Step 1 - Identify the data source
+{% include how-to-summary-start.html
+   number="1"
+   title="Identify the data source"
+   summary="Locate a trusted source and assess whether it provides sufficient metadata, provenance, licensing, data quality information and FAIR characteristics to support your intended use."
+%}
+
 Locate a trusted source that holds the dataset of interest. This may include:
 * Certified or trusted data repositories (providing metadata and data) and data catalogues (providing metadata with references to data). These can be subject-specific, (e.g. [BBMRI-ERIC Sample and Data Portal](https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/), institutional (e.g. [Radboud Data Repository](https://data.ru.nl/)) or national (e.g. [National Health Data Portal](https://www.healthdata.nl/en))
 * Electronic health or patient record systems (e.g. HiX)
@@ -57,7 +62,15 @@ If the source does not have a PID, for instance in case of extractions of electr
 A researcher studying cardiovascular disease wants to reuse genomic and clinical data from a biobank catalogue to perform a secondary analysis.
 "%}
 
-### Step 2 – Determine access requirements
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Determine access requirements"
+   summary="Establish whether access is public, restricted or non-public and confirm the applicable licences, usage rights, approvals, agreements and legal or ethical requirements before obtaining the data."
+%}
+
 Check if access is public, restricted, or non-public. The type of data often determines the access level: very sensitive or personally identifiable data are more likely to require restricted or non-public access.
 * **Public.** Data is openly available without restrictions, often under open license (e.g. [CC-BY](https://creativecommons.org/licenses/by/4.0/), [CC0](https://creativecommons.org/public-domain/cc0/)). Typically includes aggregated, anonymized, or non-sensitive datasets.
 * **Restricted.** Data access requires registration or agreement to conditions (e.g. academic/non-commercial use only). 
@@ -76,7 +89,15 @@ If you would like to know more about Access conditions and how they are defined,
 The researcher discovers that the dataset is non-public and must submit an application to a data access committee and sign a Data Use Agreement before access is granted.
 "%}
 
-### Step 3 – Choose a retrieval method
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Choose a retrieval method"
+   summary="Select a retrieval approach suited to the dataset's size, sensitivity and intended use, such as an API, database query, web interface, secure transfer mechanism or secure processing environment."
+%}
+
 Select an appropriate method, this may depend on dataset’s size, sensitivity and intended use:
 * **Application Programming Interfaces.** Automated and scalable, ideal for frequent or programmatic retrieval. This can be REST, GraphQL or other API types, often returning JSON, CSV or RDF. APIs are ideal for automation and integrating retrieval into workflows.
   <br>Some data infrastructures support hybrid access, where metadata or filtered results are retrieved via an API, and the corresponding files or bulk data are downloaded separately (e.g. via HTTP(s), cloud storage or (s)FTP). This approach is useful when querying large datasets to identify subsets before initiating bulk transfer, optimising both performance and bandwidth. 
@@ -100,7 +121,15 @@ For datasets hosted on large-scale cloud platforms (e.g. Azure), data access may
 After approval, the researcher learns that the data cannot be downloaded directly but must be accessed via a secure processing environment, where analysis can be performed remotely.
 "%}
 
-### Step 4 – Data retrieval and transfer considerations
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="4"
+   title="Data retrieval and transfer considerations"
+   summary="Check that the file format, structure, transfer method, security and available documentation are suitable for your intended analysis, and record the tools, queries and retrieval process used."
+%}
+
 Consider the following:
 * **File format and structure.** Determine whether files are in CSV, JSON, RDF, XML, HDF5, imaging formats or other, as this will affect processing. Some formats (e.g. many small files vs. one large archive, plain text vs. compressed formats (.zip, .tar.gz)) can affect download time, transfer reliability (see Step 5 below for more information on checking integrity) and whether special tools are needed to retrieve or unpack the data.
 Representation may also vary:
@@ -122,7 +151,15 @@ From a data user perspective, these technical characteristics should be evaluate
 The researcher accesses the environment, exports approved results, and logs the tools and queries used for transparency.
 "%}
 
-### Step 5 – Validate and store safely
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="5"
+   title="Validate and store safely"
+   summary="Verify data integrity after retrieval, apply required privacy safeguards, store the data securely with appropriate access controls and preserve relevant metadata, provenance and retrieval documentation."
+%}
+
 Verify data integrity and store it in a secure, access-controlled environment with appropriate metadata.
 
 After retrieval, you should:
@@ -140,6 +177,9 @@ A checksum is a short digital code that works like a fingerprint for a file, let
 {% include info-box.html type="example" title="Example - step 5" text="
 The researcher verifies file integrity using checksums and stores derived data and metadata in a secure institutional environment.
 "%}
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community 
 {% include metroline_steps/looking_for_examples.html %}
