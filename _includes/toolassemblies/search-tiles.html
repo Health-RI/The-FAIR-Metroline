@@ -40,13 +40,13 @@
 {%- assign allinstitutes = allinstitutes | split: ", " | uniq | sort %}
 <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-{{ include.col | default: 2 }} my-4">
     {%- if include.domains == true %}
-    {% include toolassemblies/tile-filter-select.html id="domains-input" key="domains" param="domain" label="Filter by domain" all_label="All domains" clear_label="domains" options=alldomains %}
+    {% include tile-filtering/tile-filter-select.html id="domains-input" key="domains" param="domain" label="Filter by domain" all_label="All domains" clear_label="domains" options=alldomains %}
     {%- endif %}
     {%- if include.phases == true %}
-    {% include toolassemblies/tile-filter-select.html id="phases-input" key="phases" param="phase" label="Filter by phase" all_label="All phases" clear_label="phases" options=allphases %}
+    {% include tile-filtering/tile-filter-select.html id="phases-input" key="phases" param="phase" label="Filter by phase" all_label="All phases" clear_label="phases" options=allphases %}
     {%- endif %}
     {%- if include.institutes == true %}
-    {% include toolassemblies/tile-filter-select.html id="institutes-input" key="institutes" param="institute" label="Filter by institute" all_label="All institutes" clear_label="institutes" options=allinstitutes %}
+    {% include tile-filtering/tile-filter-select.html id="institutes-input" key="institutes" param="institute" label="Filter by institute" all_label="All institutes" clear_label="institutes" options=allinstitutes %}
     {%- endif %}
     {%- if include.search == true %}
     <div class="col">
@@ -93,11 +93,11 @@
     {%- assign pagedomains = current_page.domain | sort %}
     {%- endif %}
     {%- capture card_meta %}
-        {%- include toolassemblies/tag-group.html label="Domains" values=pagedomains badge="bg-primary" %}
-        {%- include toolassemblies/tag-group.html label="Phases" values=current_page.phase badge="bg-secondary" %}
+        {%- include tile-filtering/tag-group.html label="Domains" values=pagedomains badge="bg-primary" %}
+        {%- include tile-filtering/tag-group.html label="Phases" values=current_page.phase badge="bg-secondary" %}
     {%- endcapture %}
     {%- assign card_meta = card_meta | strip %}
-    {%- include toolassemblies/navigation-card.html
+    {%- include tile-filtering/navigation-card.html
         url=current_page.url
         title=current_page.title
         description=current_page.description
@@ -111,5 +111,5 @@
 </div>
 
 {%- if include.domains == true or include.phases == true or include.institutes == true or include.search == true %}
-{% include toolassemblies/tile-filters-script.html %}
+{% include tile-filtering/tile-filters-script.html %}
 {%- endif %}

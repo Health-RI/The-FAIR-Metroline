@@ -35,10 +35,10 @@ title: FAIR Metroline steps
 {% assign audience_options = "Data holder|Data user" | split: "|" %}
 
 <div class="row g-4 row-cols-1 row-cols-md-2 my-4">
-  {% include toolassemblies/tile-filter-select.html id="group-input" key="group" label="Filter by group" all_label="All groups" clear_label="group" options=allgroups %}
-  {% include toolassemblies/tile-filter-select.html id="keywords-input" key="keywords" param="keyword" label="Filter by keyword" all_label="All keywords" clear_label="keyword" options=allkeywords %}
-  {% include toolassemblies/tile-filter-select.html id="expertise-input" key="expertise" label="Filter by expertise" all_label="All expertise" clear_label="expertise" options=allexpertise %}
-  {% include toolassemblies/tile-filter-select.html id="audience-input" key="audience" label="Filter by audience" all_label="All audiences" clear_label="audience" options=audience_options %}
+  {% include tile-filtering/tile-filter-select.html id="group-input" key="group" label="Filter by group" all_label="All groups" clear_label="group" options=allgroups %}
+  {% include tile-filtering/tile-filter-select.html id="keywords-input" key="keywords" param="keyword" label="Filter by keyword" all_label="All keywords" clear_label="keyword" options=allkeywords %}
+  {% include tile-filtering/tile-filter-select.html id="expertise-input" key="expertise" label="Filter by expertise" all_label="All expertise" clear_label="expertise" options=allexpertise %}
+  {% include tile-filtering/tile-filter-select.html id="audience-input" key="audience" label="Filter by audience" all_label="All audiences" clear_label="audience" options=audience_options %}
 </div>
 
 <div class="steps row row-cols-1 row-cols-md-2 g-4 mb-5 navigation-tiles">
@@ -58,13 +58,13 @@ title: FAIR Metroline steps
   {% assign group_tags = step.group | split: "|" %}
   <div class="col step" data-keywords="{{ keyword_classes | strip }}" data-expertise="{{ expertise_classes | strip }}" data-audience="{{ audience_classes | strip }}" data-group="{{ group_class | strip }}">
     {% capture card_meta %}
-      {% include toolassemblies/tag-group.html label="Keywords" values=step.keywords badge="bg-primary" %}
-      {% include toolassemblies/tag-group.html label="Expertise" values=step.expertise_required badge="bg-secondary" %}
-      {% include toolassemblies/tag-group.html label="Audience" values=audience_tags badge="bg-primary" %}
-      {% include toolassemblies/tag-group.html label="Group" values=group_tags badge="bg-secondary" %}
+      {% include tile-filtering/tag-group.html label="Keywords" values=step.keywords badge="bg-primary" %}
+      {% include tile-filtering/tag-group.html label="Expertise" values=step.expertise_required badge="bg-secondary" %}
+      {% include tile-filtering/tag-group.html label="Audience" values=audience_tags badge="bg-primary" %}
+      {% include tile-filtering/tag-group.html label="Group" values=group_tags badge="bg-secondary" %}
     {% endcapture %}
     {% assign card_meta = card_meta | strip %}
-    {% include toolassemblies/navigation-card.html
+    {% include tile-filtering/navigation-card.html
       url=step.url
       title=step.title
       description=step.summary
@@ -76,15 +76,4 @@ title: FAIR Metroline steps
 {% endfor %}
 </div>
 
-<style>
-  .step-card-icon span {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    line-height: 1;
-    min-height: 4rem;
-  }
-</style>
-
-{% include toolassemblies/tile-filters-script.html %}
+{% include tile-filtering/tile-filters-script.html %}
