@@ -29,21 +29,53 @@ FIPs capture the implementation strategies of various communities and can be use
 By promoting the use of community standards, FIPs directly support FAIR principle R1.3: “(Meta)data meet domain-relevant community standards.”  
 
 ## How to
-### Step 1 - Choose your creation method
+{% include how-to-summary-start.html
+   number="1"
+   title="Choose your creation method"
+   summary="Choose between the FIP mini-questionnaire for a simple human-readable profile or the FIP Wizard for a more structured profile that also supports machine-actionable outputs."
+%}
+
 A FIP can be created in two ways: 
 * **Option 2a.** Using the [FIP mini-questionnaire](https://docs.google.com/spreadsheets/d/1yx8r2St6ha-lmQtg02Fvwu8nB21uWiTOM8tLIgJ70oE/edit#gid=127295437) in Google Sheets.
 * **Option 2b.** Using the [FIP Wizard](https://fip.fair-wizard.com/), a dedicated version of the online data management platform Data Stewardship Wizard.
 
 Both approaches guide you through the same set of questions covering all FAIR Principles, but they differ in setup and output format. 
 
-### Step 2a - Create a FIP using the mini-questionnaire
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2a"
+   title="Create a FIP using the mini-questionnaire"
+   summary="Complete a copy of the mini-questionnaire to document your community's FAIR implementation choices in an accessible human-readable format, noting that it is less suitable for automated comparison and large-scale analysis."
+%}
+
 To start, create your own copy of the FIP mini-questionnaire and begin filling it out. This method is quick and accessible, requiring no special setup. The result is a human-readable FIP that captures your community’s FAIR implementation choices. However, this format is less suitable for machine processing, which makes large-scale analysis or automated comparison between different FIPs more difficult. 
 
-### Step 2b - Create a FIP using the FIP Wizard
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2b"
+   title="Create a FIP using the FIP Wizard"
+   summary="Use the FIP Wizard to answer the FIP questions in a structured environment and generate both human-readable and machine-actionable outputs that support analysis, comparison and sharing across communities."
+%}
+
 The FIP Wizard provides a more advanced and structured environment. You will need to create an account and consult the FIP Wizard user guide to understand the workflow. The system uses a question-and-answer format and generates both human-readable outputs (PDF, Word, Excel, CSV) and machine-actionable outputs ([nanopublications](https://nanopub.net/)). This makes it easier to analyse, compare, and share FIPs across communities. You can consult the [FIP Wzard User Guide](https://wiki.gofair.foundation/docs/fip/content.html) when creating a FIP in the FIP Wizard. 
 
-### Step 3 - Publish your FIP for reuse
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Publish your FIP for reuse"
+   summary="Publish a FIP created in the FIP Wizard as a machine-actionable nanopublication so the profile and its FAIR-enabling resources can be discovered, reused and compared through FAIR Connect and Nanodash."
+%}
+
 Once you’ve created your FIP using the FIP Wizard, you can publish it to make it available for reuse. When you choose to publish, the Wizard packages your FIP as a machine-actionable nanopublication and submits it to the public nanopublication network. After publication, your FIP and the FAIR-enabling resources it references become automatically searchable and reusable through [FAIR Connect](https://fairconnect.pro/) and [Nanodash](https://nanodash.knowledgepixels.com/). 
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community 
 * The Virus Outbreak Data Network ([VODAN](https://www.go-fair.org/implementation-networks/overview/vodan/))-Africa is a joint activity of CODATA, RDA, WDS, and GO FAIR which has implemented FIPs for their [VODAN-Africa project](https://fip-wizard.ds-wizard.org/projects/9cbf831d-5536-4b97-a5c6-f00522f9ec6b).

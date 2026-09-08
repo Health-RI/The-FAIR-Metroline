@@ -31,7 +31,12 @@ In other words, this step:
 Keep in mind your [FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives). Structural metadata can support subsequent FAIRification activities, such as development of semantic models (see e.g. [FAIR Metroline Step: Create or reuse a semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model)), by making data structures and definitions available to others.
 
 ## How to
-### Step 1 - Prepare your codebook
+{% include how-to-summary-start.html
+   number="1"
+   title="Prepare your codebook"
+   summary="Ensure your codebook is complete and aligned with community standards, clearly defining which data elements to collect and how their metadata are structured in your research domain."
+%}
+
 
 For more information on how to choose which data elements to collect and how to create the codebook, see the following pages: [Metroline Step: Apply common data elements]({{site.baseurl}}/metroline_steps/apply_common_data_elements), [Create a Codebook](https://ddialliance.org/create-a-codebook) and [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics).
 
@@ -181,7 +186,15 @@ A group of Data Stewards conducted a campus-wide survey to assess current data m
 {% include info-box.html type="example" title="Example" text=infobox_text1%}
 
 
-### Step 2 - Select the most appropriate data repository for publishing
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Select the most appropriate data repository for publishing"
+   summary="Select an appropriate repository for publishing your codebook based on the project context and FAIR objectives."
+%}
+
 Once the codebook is ready (see [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics)), you can determine where and how it should be published. Depending on the research domain or data type, repository requirements and metadata standards may already influence how structural metadata is collected and formatted earlier in the research lifecycle. Structural metadata can be published in various forms, and the most suitable option often depends on the context of the research project and the [FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives).
 
 For certain projects, it might be practical to publish the codebook together with the research data in a repository, creating a cohesive and accessible package. However, in some projects where data cannot be published (e.g. due to privacy concerns, legal restrictions, or intellectual property rights), it is appropriate to publish the codebook independently in a specialised catalogue, such as an [ART-DECOR](https://decor.nictiz.nl/ad) instance hosted by Nictiz.
@@ -198,7 +211,15 @@ When selecting a repository or catalogue:
 The researchers decided to make use of the institutional data repository (Radboud Data Repository) to publish their data. Following best practices, they included the codebook alongside the dataset to enhance understandability.
 "%}
 
-### Step 3 - Publish the codebook in the selected data repository
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Publish the codebook in the selected data repository"
+   summary="Publish your codebook in the selected repository making sure it is open access."
+%}
+
 This step involves publishing the structural metadata in the selected data repository. 
 Preferably the metadata is machine-actionable (see [Step 4](#step-4---enhance-findability-and-interoperability-of-structural-metadata)), but publishing your codebook as-is at this point may already suffice to reach your [FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives).
 Make sure that the codebook is published open access, even when the data is under restricted access. Some repositories that support this are DANS Data Stations Life Sciences (generic repository), Radboud Data Repository, and DataverseNL (institutional repositories).
@@ -207,7 +228,15 @@ Make sure that the codebook is published open access, even when the data is unde
 The codebook was uploaded in a [Data Sharing Collection](https://doi.org/10.34973/6s67-q643) from the Radboud Data Repository along with the dataset. This repository allows certain files in a collection to be flagged as [documentation files](https://data.ru.nl/doc/help/helppages/user-manual/archive-publish/fair-review.html). By marking the codebook as documentation, it is ensured that anyone downloading information about the dataset could immediately access and understand the content of the dataset, without needing to open the actual file.
 "%}
  
-### Step 4 - Enhance findability and interoperability of structural metadata
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="4"
+   title="Enhance findability and interoperability of structural metadata"
+   summary="Use structured, machine-readable formats and specialised tools to improve findability and interoperability across platforms and domains."
+%}
+
 {% include info-box.html type="tip" title="Tip" text="This particular step might require onboarding of a data steward to assist with the process."%}
 
 While stopping at Step 3 is already a good practice, ensuring that information about your data content is documented and made available, there are cases where you may want to further increase your FAIR maturity through additional mechanisms.
@@ -274,6 +303,9 @@ Guidance on maintaining metadata integrity can be found in the following Metroli
 {% endcapture %}
 
 {% include info-box.html type="example" title="Example" text=infobox_text2 %}
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community 
 {% include metroline_steps/looking_for_examples.html %}

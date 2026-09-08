@@ -63,7 +63,13 @@ For easier understanding, we will follow the example of the below set of metadat
 In this example, we are working with existing metadata. According to the flowchart, we should start with [Check for an existing standard/codebook a)](#a-for-existing-metadata-1).
 " %}
 
-### Step 1 - Compile and assess (meta)data information
+{% include how-to-summary-start.html
+   number="1"
+   title="Compile and assess (meta)data information"
+   summary="Compile and examine all (meta)data elements, values and structures, whether existing or planned, to identify issues with the data."
+   id="step-1---compile-and-assess-metadata-information"
+%}
+
 Compile all the information of (meta)data elements, (meta)data values, and (meta)data structure. Examine the (meta)data in the way it is currently stored, including its format (e.g. JSON, CSV) and how the information is organised within it. This step helps to identify inconsistencies, ambiguities, and errors in the data. 
 
 If you are not the original creator of the data, if possible, try to get the creator involved to help with the questions you may have.
@@ -118,7 +124,16 @@ Also keep in mind the relationships between your data elements and make sure it 
 
 You should end up with a compiled table of information, like you can see in the table below [step a)](#a-for-existing-metadata) and continue to Step [Check for an existing standard/codebook b)](#b-for-new-metadata) (for new (meta)data).
 
-### Step 2 - Check existing standard/codebook for your (meta)data
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Check existing standard/codebook for your (meta)data"
+   summary="Check if your (meta)data aligns with existing codebooks or standards, reusing fully if possible, adapting with documentation if needed, or defining new structures where no suitable standard exists."
+   id="step-2---check-existing-standardcodebook-for-your-metadata"
+%}
+
 #### a) For existing (meta)data
 Check if your (meta)data comes with a codebook or metadata standard. In case it does, it is recommended to still check if the semantics of the codebook or standard are clear or need improvement. Jump to this part of the how-to [here](#step-3---check-and-improve-metadata-semantics).
 
@@ -157,7 +172,16 @@ If you find a codebook or standard that might fit your (meta)data, check if the 
 
 {% include info-box.html type="example" title="Example - part 3" text="After having compiled all elements in our metadata, let’s say we explored the relevant repositories and, for the purpose of following the example through all of the steps, couldn’t find one that would be applicable to our example metadata. According to the flowchart, we should now move to the Check and improve (meta)data semantics step." %}
 
-### Step 3 - Check and improve (meta)data semantics
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Check and improve (meta)data semantics"
+   summary="Review and refine the definitions and value ranges of (meta)data elements to remove unclarities and ambiguities."
+   id="step-3---check-and-improve-metadata-semantics"
+%}
+
 In order to end up with clearly defined (meta)data elements, we should check the semantics to identify things that are unclear or ambiguous. Next, we can improve these ambiguities. For this, first check:
 * Is the **definition or description** of the (meta)data elements clear and unambiguous? For those with ambiguous meaning, try to improve their definition.
   In the example of collecting data on a patient’s 'sex', it might be unclear if it means ‘biological sex at birth'  or ‘administrative gender’.
@@ -188,8 +212,16 @@ For example, we split the element Creator into Creator Name and Creator Identifi
 
 " %}
 
-### Step 4 - Go to the next Metroline Step
-Congratulations, you have now successfully analyzed your (meta)data semantics. You should now have a set of data elements (variables) with clear and unambiguous semantics - a codebook. For metadata, you should be left with a set of clearly defined metadata elements.
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="4"
+   title="Go to the next Metroline Step"
+   summary="Use the resulting codebook or clearly defined metadata elements to continue with creating or reusing a semantic model, registering structural metadata or directly applying a suitable model if one has already been identified."
+%}
+
+Congratulations, you have now successfully analysed your (meta)data semantics. You should now have a set of data elements (variables) with clear and unambiguous semantics - a codebook. For metadata, you should be left with a set of clearly defined metadata elements.
 
 From here, there are three possible next steps, depending on your needs:
 * [Metroline Step: Create or reuse a semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model). This step uses work done in this step as a basis to find correct ontologies that can be coupled to your data elements.
@@ -199,6 +231,9 @@ From here, there are three possible next steps, depending on your needs:
 {% include info-box.html type="example" title="Example - part 5" text="
 Great job! After checking and improving our metadata semantics, we can now move to the next Metroline step.
 "%}
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community
 {% include metroline_steps/looking_for_examples.html %}

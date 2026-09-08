@@ -66,7 +66,12 @@ For information on how to register metadata, see [Metroline Step: Assess availab
 [Metroline Step: Register resource level metadata]({{site.baseurl}}/metroline_steps/register_resource_level_metadata), 
 [Metroline Step: Register structural metadata]({{site.baseurl}}/metroline_steps/register_structural_metadata).
 
-### Step 1 - Establish data sensitivity level
+{% include how-to-summary-start.html
+   number="1"
+   title="Establish data sensitivity level"
+   summary="Assess factors affecting data sharing, including personal or sensitive data, intellectual property, the legal basis for sharing and applicable institutional, funder and domain requirements."
+%}
+
 When setting up a data access policy, you need to establish data sensitivity. 
 To do that be sure to identify any aspects that affect data sharing:
 1. **Personal or sensitive data.** Check whether your data contains personal information or sensitive data.
@@ -109,7 +114,15 @@ To do that be sure to identify any aspects that affect data sharing:
    Domains working with (sensitive) personal data have data catalogues and repositories available to support the “as open as possible, 
    as closed as necessary” mission (e.g. [ClinicalTrials.gov](http://clinicaltrials.gov/) for publishing the metadata).
 
-### Step 2 - Decide the level of data access
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Decide the level of data access"
+   summary="Choose an appropriate access level, such as open, registered, restricted, closed or embargoed access, based on data sensitivity and reuse conditions, allowing different access levels for different data components where appropriate."
+%}
+
 Based on the established considerations in [Step 1](#step-1---establish-data-sensitivity-level), choose which data access level fits the data the best. 
 There are different levels of accessibility, which cater to different data security needs.
 Keep in mind that different levels can be applicable to different kinds of data, even within the same research project.
@@ -150,7 +163,16 @@ support (e.g. data steward) in case you have difficulties choosing the appropria
 Make sure that the decided level of data accessibility aligns with the established FAIR objectives 
 (see [Metroline Step: Define FAIRification objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives)).
 
-### Step 3 -  Prepare necessary documentation
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Prepare necessary documentation"
+   summary="Define the applicable licence or, for restricted data, the Data Access Policy and Data Use Agreement, specifying who may access the data, permitted reuse and relevant legal, privacy and ethical conditions, and consider encoding reuse conditions in a machine-readable form."
+   id="step-3---prepare-necessary-documentation"
+%}
+
 Based on the issues identified in [Step 1](#step-1---establish-data-sensitivity-level) that affect data sharing and chosen 
 access level in [Step 2](#step-2---decide-the-level-of-data-access), documentation specifying the access and reuse conditions of the data need to be prepared.
 
@@ -186,7 +208,16 @@ You can view all elements in the tables provided in the publication ([Criterion 
 and [process type CCE terms](https://www.nature.com/articles/s41597-024-03279-z/tables/2)).  
 The [DUC-CCE profiler](https://ducejprd.le.ac.uk/) is a practical tool to specify a DUC-CCE profile. A machine-readable export can be generated.
 
-### Step 4 -  Publish data and metadata in a data repository
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="4"
+   title="Publish data and metadata in a data repository"
+   summary="Select a trusted, domain-appropriate repository that supports the chosen access level and publish metadata openly, including access documentation for restricted datasets."
+   id="step-4---publish-data-and-metadata-in-a-data-repository"
+%}
+
 Make sure to choose a repository that supports the access level as defined in [Step 2](#step-2---decide-the-level-of-data-access).
 If your data is published under restricted access, make sure to publish the metadata and the Data Access Policy and 
 Data Use Agreement as open access documentation.
@@ -200,7 +231,15 @@ encryption and governance for sensitive data (such as pseudonymised personal inf
 You can browse through the [Registry of Research Data Repositories (re3data)](https://www.re3data.org/), [FAIRsharing](https://fairsharing.org/) 
 or [Data Repository Finder](https://data-repository-finder.ll.mit.edu/) to select a repository that fits your needs.
 
-### Step 5 - Publish metadata in National Health Data Catalog (Optional)
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="5"
+   title="Publish metadata in National Health Data Catalog (Optional)"
+   summary="If the repository cannot adequately describe access conditions, consider registering metadata in the National Health Data Catalog using properties for access rights, licence and additional reuse conditions."
+%}
+
 If the metadata of the data repository doesn’t support metadata properties to describe the access conditions, consider 
 publishing metadata in the [National Health Data Catalog](https://www.healthdata.nl/en/about-catalogue). 
 This metadata schema includes the following properties which can be used to describe the access conditions of your data:
@@ -220,6 +259,9 @@ In case of restricted access data, the Geonovum [link for Non-open data](https:/
 - **Rights.** Additional information about the data access conditions can be specified. In case of restricted access you 
 can add a link to the Data Use Agreement (human-readable) or encoded use conditions (machine-readable). 
 See [Step 3](#step-3---prepare-necessary-documentation) for information about machine-readable access conditions.
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community 
 {% include metroline_steps/looking_for_examples.html %}

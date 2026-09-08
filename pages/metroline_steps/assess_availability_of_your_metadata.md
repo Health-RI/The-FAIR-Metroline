@@ -37,14 +37,27 @@ Furthermore it is:
 ## How to
 The steps below help you identify existing metadata about your resource and their possible location.
 
-### Step 1 - Identify where information about your resource is stored
+{% include how-to-summary-start.html
+   number="1"
+   title="Identify where information about your resource is stored"
+   summary="Start by locating existing metadata in institutional systems and documents, to build on what is already available."
+%}
+
 Start by considering where information about your resource is already contained. Typically, institutions have systems that require a certain level of documentation. Investigate these systems. 
 
 _**Example:** Eva, a researcher at Radboudumc, wants to assess what metadata is available about her project. She starts by consulting her Data Management Plan (DMP). She then remembers that she added metadata about her project to the [PaNaMa](https://panama-rms.eu/) registry and the [Radboud Data Repository](https://data.ru.nl/)._ 
 
 **Step output:** Systems and documents identified. These could include the DMP, project or research management systems such as PaNaMa, systems involved in ethical approval and (local) data repositories. 
 
-### Step 2 - Extract, review and validate your metadata
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Extract, review and validate your metadata"
+   summary="Extract and assess existing metadata for errors, outdated information, and inconsistencies to ensure it remains accurate, complete, and aligned with current standards and project context."
+%}
+
 Once you've identified where your metadata might reside, it's time to extract and evaluate it. Errors and inconsistencies can naturally creep into your records over time, especially when many people are involved. Guidelines and project contexts can also change. This step helps ensure that the metadata is still understandable and accurate. Use the following questions to guide you. 
 
 * Are there typos in the metadata? 
@@ -57,7 +70,15 @@ _**Example:** After reviewing her metadata across various platforms, Eva realise
 
 **Step output:** A list of identified issues in the metadata to be resolved/updated. 
 
-### Step 3 - Update the metadata through the necessary corrections
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Update the metadata through the necessary corrections"
+   summary="Update and complete your metadata using one source of truth in the organisation or project."
+%}
+
 **Tip:** Try to find “one source of truth” in your organisation/project. For instance for resources you would change the information in the place where the DOI points to. 
 
 _**Example:** Eva decides to update her Data Management Plan because it's crucial for her PhD thesis. She also updates and fills out missing fields in the Radboud Data Repository to make her dataset available for reuse by others._ 
@@ -69,6 +90,9 @@ You are now ready to take the next step with your metadata:
 * **Share or publish your metadata.** [Metroline Step: Register resource level metadata]({{site.baseurl}}/metroline_steps/register_resource_level_metadata) 
 * **Expand your metadata to include domain specific metadata.** [Domain-specific metadata schema development](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/545783826)
 * **follow a semantic model to describe your metadata (under construction.** [Metroline Step: Create or reuse a semantic (meta)data model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model) )
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community 
 * The [Health-RI metadata schema](https://github.com/Health-RI/health-ri-metadata) is an example of **descriptive metadata** within the context of the [Dutch National Health Data Infrastructure](https://www.healthdata.nl/en).
