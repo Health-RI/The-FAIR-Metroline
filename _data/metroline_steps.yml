@@ -117,16 +117,18 @@
     data_user: true
 - id: 9
   title: Select Identifier Scheme
-  summary: In simple terms, selecting an identifier scheme is like deciding how to label books in a library. If every book has a clear catalogue number, author, and subject, readers can always find what they need. Without a consistent scheme, books would be scattered and confusing. For datasets, choosing the right identifier scheme ensures that your data can be discovered, cited and reused. Similar to well-organised books that are easy to find in a structured library.
+  summary: "In simple terms, selecting an identifier scheme is like deciding how books, authors and libraries should be identified in a catalogue. A book may have an ISBN, an author may have their own identifier and a library may use another identifier system. Using the right identifier scheme for each type of entity makes it easier to distinguish, find and connect them reliably. The same applies to research data: appropriate identifiers help data and related entities to be discovered, referenced and reused."
   url: metroline_steps/select_identifier_scheme
   icon: ":passport_control:"
-  status: READY FOR REVIEW
+  status: RELEASED
   keywords:
     - identifiers
     - persistence
   expertise_required:
-    - policy specialist
-    - technical specialist
+    - Researcher
+    - Data steward
+    - Technical specialist
+    - Infrastructure professional
   audience:
     data_holder: true
     data_user: true

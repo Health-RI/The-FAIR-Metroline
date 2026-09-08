@@ -3,265 +3,332 @@ title: Select identifier scheme
 permalink: /metroline_steps/select_identifier_scheme
 ---
 
+{% include glossary_tooltips.html %}
 {% include assign_current_step.html %}
 {% include development_status.html step=current_step %}
+{% include metroline_steps/step-metadata.html step=current_step %}
 
 >***Data that are not discoverable cannot be reused, and data that cannot be reused are not FAIR. [Wilkinson et al., 2016](https://doi.org/10.1038/sdata.2016.18)***
 >
 > {{ current_step.summary }}
 
 ## Short description 
-[Identifiers](https://rdmkit.elixir-europe.org/identifiers) are the anchors of FAIR (findable, accessible, interoperable, reusable) data. They give each resource, whether a dataset or an element in a metadata schema, a unique and reliable point of reference. In FAIR settings this applies across datasets, metadata records, people, organisations, licences and even individual data values. Effective identifiers must be globally unique, persistent, machine actionable and resolvable, and they should be used consistently so that resources can be connected without ambiguity. Domains such as chemistry show the value of this clearly because identifiers like [InChI](https://www.inchi-trust.org/) or [SMILES](https://www.daylight.com/dayhtml/doc/theory/theory.smiles.html) capture molecular structures in a reproducible way that allows data to be shared and interpreted across tools and disciplines.
+[Identifiers](https://rdmkit.elixir-europe.org/identifiers) are the anchors of FAIR (findable, accessible, interoperable and reusable) data. They provide unambiguous references to entities such as datasets, people, organisations, projects, samples, biological resources and concepts, allowing these entities to be found, referenced and connected across data, metadata and systems.
 
-In practice, responsibilities for identifier management are shared. Most technical and policy decisions, such as a) selecting identifier schemes, b) registering namespaces, or c) creating mappings between schemes, are typically supported by data stewards or research support staff. For researchers, the most important tasks are to reuse existing identifiers where possible, apply them consistently and consult support services when new identifiers are required. At the same time, researchers remain responsible for the content of their metadata and data, and should be involved in decisions about updates that may require versioning or the minting of a new identifier.
+For identifiers intended to support FAIR exchange and long-term reference, the following properties are particularly important:
+* **Globally unique.** Uniquely identifies an entity across systems and contexts.
+* **Persistent.** Remains valid over time.
+* **Machine actionable.** Can be interpreted and processed by software.
+* **Resolvable.** Leads users or machines to metadata, a landing page or other information about the identified entity.
 
-Given the crucial role of persistent identifiers in enabling FAIR data and, in turn, a robust national health-data infrastructure, Health-RI is also developing guidance on PIDs. More details will be added as soon as they become available.
+Different identifier schemes serve different purposes and should not be considered interchangeable. The appropriate scheme depends on the type of entity being identified and the context in which the identifier will be used. Local identifier schemes may, for example, be appropriate for records or samples managed within a project or organisation.
 
-Below are 5 [widely used identifier systems](https://zenodo.org/records/17350042) across FAIR and open‑science communities. They illustrate the range of resolvable, persistent identifiers commonly applied in research infrastructures. 
+Examples of [widely used identifier schemes](https://zenodo.org/records/17350042) include:
 
-| Identifier | What it Identifies | Resolvable | Typical Use |
-| --- | --- | --- | --- |
-| DOI (DataCite) | Datasets, publications, software | Yes | Citing datasets |
-| ORCID | Individual researchers | Yes | Identifying contributors |
-| ROR ID | Research organisations | Yes | Standardising affiliations |
-| ISSN / ISBN | Journals (ISSN), books (ISBN) | Yes | Identifying publications |
-| RAID | Research projects and activities | Yes | Linking outputs to projects |
+| Identifier scheme                                                                | What it identifies                                                        | Example use                                                |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| [DOI](https://www.doi.org/)                                                      | Datasets, publications, software and other research outputs               | Citing and persistently referencing a published dataset    |
+| [ORCID](https://orcid.org/)                                                      | Researchers and other contributors                                        | Identifying a dataset creator or contributor               |
+| [ROR](https://ror.org/)                                                          | Research organisations                                                    | Identifying an affiliation                                 |
+| [ISBN](https://www.isbn-international.org/) and [ISSN](https://portal.issn.org/) | Books and serial publications                                             | Identifying a book or journal                              |
+| [RAiD](https://www.raid.org/)                                                    | Research projects and activities                                          | Connecting projects with people, organisations and outputs |
+| [RRID](https://www.rrids.org/)                                                   | Research resources such as antibodies, organisms, cell lines and software | Identifying a resource used in an experiment               |
+| [InChI](https://www.inchi-trust.org/about-the-inchi-standard)                    | Chemical substances represented by their molecular structure              | Identifying a chemical substance in a standardised way     |
 
+
+An entity may have identifiers in more than one scheme depending on the context in which it is identified. For example, an internal employee identifier may be appropriate within an organisation, while an ORCID iD is more suitable for identifying the same researcher across organisations and research infrastructures.
+
+Given the importance of persistent identifiers for FAIR data and the national health data infrastructure, [Health-RI](https://www.health-ri.nl/en) is also developing further guidance on persistent identifiers. More details will be added when they become available.
+
+This step explains how to determine what needs to be identified, select an appropriate identifier scheme, check whether an identifier already exists within that scheme and arrange for a new identifier when necessary. It also addresses the consistent application and management of identifiers.
 
 ## Why is this step important
-Persistent identifiers matter because they provide the stability and clarity that allow data and metadata to function reliably in FAIR ecosystems. This is enabled through the key properties described below.
-* **Globally unique.** Prevents collisions so a resource is never confused with another, which supports reliable discovery and stable referencing across systems.
-* **Persistent.** Remains valid over time, even when systems or storage locations change, which keeps data citable and usable in the long term.
-* **Machine actionable.** Has a defined structure that software can interpret directly, which removes ambiguity and enables automation.
-* **Resolvable.** Can be followed through a recognised protocol to metadata or to the resource itself, which strengthens discoverability and accessibility.
+Identifiers provide the clarity needed to reference and connect data, metadata and related entities reliably. Where identifiers are intended to be shared across systems or remain usable over time, persistent identifiers are particularly important because they provide the stability required in FAIR ecosystems.
+
+* **Improve findability.** Stable identifiers allow data, metadata and related resources to be discovered and referenced reliably across systems.
+* **Prevent ambiguity.** Identifiers distinguish entities with similar names or descriptions and ensure that references point to the intended person, organisation, resource or concept.
+* **Support interoperability.** Reusing recognised identifier schemes helps different systems refer to the same entities consistently and connect datasets to people, organisations, projects and related resources.
+* **Enable machine actionability.** Identifiers represented in a standard form allow software to recognise entities and process relationships between them.
+* **Support accessibility over time.** Resolvable identifiers can lead people and machines to metadata, landing pages or information about how a resource can be accessed, even when its location changes.
+* **Enable reuse and citation.** Persistent identifiers allow research outputs and related entities to be referenced, cited and linked over time.
+
+The required properties depend on the intended use. Local identifiers must be unique and consistently managed within their context, while identifiers used across systems or over time should generally be globally unique, persistent and resolvable.
 
 ## How to
-Below are nine principles for implementing identifiers in FAIR data management. Steps 1–8 are researcher-focused steps, whilst Step 9 reflects an institutional responsibility.
+Responsibilities for identifiers are shared. Researchers and domain experts help determine what needs to be identified and verify that identifiers refer to the correct entities. Data stewards and research support staff can advise on suitable identifier schemes, namespace management and consistent identifier use, while technical and infrastructure specialists may support identifier generation, resolution and long-term maintenance.
+
+For researchers, the most important tasks are to reuse existing identifiers within appropriate schemes, apply them consistently and consult support services when new identifiers are required.
 
 {% include how-to-summary-start.html
    number="1"
-   title="Reuse community identifiers whenever possible"
-   summary="Check authoritative registries for existing identifiers and reuse recognised community identifiers where available to avoid duplication and connect your data to established research infrastructures."
+   title="Determine what needs to be identified"
+   summary="Identify which entities need to be referenced, linked, cited or exchanged, where the identifier will be used and how long it needs to remain valid."
+   id="step-1-determine-what-needs-to-be-identified"
 %}
 
-Reusing existing identifiers prevents duplication and immediately connects your data to the wider research ecosystem. Many entities already have authoritative identifiers that you can adopt directly.
-* **Benefit.** Strengthens interoperability and aligns your dataset with established knowledge graphs.
-* **How.** Check registries for existing identifiers before creating new ones. For example, [ORCID](https://orcid.org/) is commonly used for creators, [ROR](https://ror.org/) for institutions and [FundRef](https://www.crossref.org/services/funder-registry/) for funders. [Identifiers.org](http://identifiers.org/) can help locate identifiers for many scientific entities. Health-RI is also developing guidance to support harmonised identifier use. References will be added as soon as they become available.
+Begin by identifying the entities that require unambiguous references and why those references are needed.
 
-{% include info-box.html type="example" title="Example. Reusing identifiers." text="
-```
-# ORCID for researcher
-creator: \"Jane Doe\"
-creator.orcid: https://orcid.org/0000-0002-1584-4316
+* **Benefit.** Clarifying the entity type and intended use prevents the selection of an unsuitable identifier scheme. It also helps avoid assigning identifiers where they provide no practical value.
+* **How.** Determine which entities need to be referenced, linked, cited or exchanged. These may include people, organisations, projects, datasets, software, samples, biological resources, variables, concepts or other records. Consider where the identifier will be used and how long it must remain valid. An identifier used only within one project may have different requirements from one that will be published or exchanged between organisations.
 
-# ROR for organisations
-organization: \"Freie Universität Berlin\"
-organization.ror: https://ror.org/046ak2485
+{% include info-box.html type="example" title="Example." text="
+A research project may need:
+* identifiers for its researchers;
+* an identifier for the coordinating organisation;
+* an identifier for the published dataset;
+* identifiers for biological resources used in the study;
+* local identifiers for samples managed within the project.
 
-# FundRef for funders
-funder: \"National Science Foundation\"
-funder.fundref: https://doi.org/10.13039/100000001
-```
+These entities have different characteristics and should not automatically be identified using the same type of scheme.
 " %}
-
 
 {% include how-to-summary-end.html %}
 
 {% include how-to-summary-start.html
    number="2"
-   title="Mint new identifiers when none exist"
-   summary="When no suitable identifier exists, register the resource with an appropriate persistent identifier service so it receives a stable, globally unique reference together with associated metadata."
+   title="Select an appropriate identifier scheme"
+   summary="Choose a scheme suited to the entity type, intended use and relevant community, considering adoption, system support, uniqueness, persistence, resolvability and long-term governance."
+   id="step-2-select-an-appropriate-identifier-scheme"
 %}
 
-When no suitable identifier is available, assigning a persistent identifier to a digital object (“minting”) gives the resource a stable, globally unique reference that can be reliably cited and reused.
-* **Benefit.** Ensures the resource has a persistent, globally unique and widely recognised identifier that supports reliable citation, discovery and reuse.
-* **How.** Register the digital object with a persistent identifier service, which assigns and records a globally unique identifier together with associated metadata. For example, [DataCite](https://datacite.org/) can mint DOIs, while [MINIDs](https://minid.readthedocs.io/en/latest/index.html) (Minimal Viable Identifiers) provide lightweight identifiers backed by a registry service. Typically, client software computes metadata such as checksums locally and submits this information to the identifier service, which returns the minted identifier. See FAIR Cookbook's [Unique, persistent identifiers](https://faircookbook.elixir-europe.org/content/recipes/findability/identifiers.html) and [Minting identifiers with Minid](https://faircookbook.elixir-europe.org/content/recipes/findability/identifiers-minids.html) for additional guidance.
+Select a scheme that is appropriate for the entity type, intended use and relevant community. Consult a data steward or relevant infrastructure provider when several schemes appear suitable or when no clear community practice exists.
 
-{% include info-box.html type="example" title="Example. Minting an identifier with MINID." text="
-```
-minid --register --title \"Dataset X\" DatasetX.tar.gz --locations http://example.org/DatasetX.tar.gz
-```
+* **Benefit.** A suitable identifier scheme ensures that the identifier can be interpreted and used correctly by the people, repositories and systems that rely on it.
+* **How.** Consider the following principles:
+  * follow established practices in the relevant research domain and prefer widely adopted community schemes;
+  * ensure that the scheme is supported by the repositories, catalogues and systems in which the identifiers will be used;
+  * check whether the scheme provides the required uniqueness, persistence and resolvability;
+  * consider whether it has credible governance and long-term stewardship.
+
+{% include info-box.html type="example" title="Example." text="
+ORCID is an appropriate scheme for identifying a researcher across research organisations and infrastructures. An internal employee number may continue to identify the same person within an organisation, but it is not a substitute for an ORCID iD in external research metadata.
 " %}
-
 
 {% include how-to-summary-end.html %}
 
 {% include how-to-summary-start.html
    number="3"
-   title="Assign an identifier to each dataset"
-   summary="Give each published dataset a persistent identifier, typically through the repository in which it is deposited, so it can be reliably discovered, cited and referenced over time."
+   title="Check whether the entity already has an identifier in the selected scheme"
+   summary="Search the authoritative registry or service associated with the selected scheme and reuse an existing identifier after confirming that it refers to the correct entity."
+   id="step-3-check-whether-the-entity-already-has-an-identifier-in-the-selected-scheme"
 %}
 
-Every dataset needs a stable anchor that supports discovery, citation and long-term accessibility. Assigning a PID formalises the dataset as a citable and traceable resource. This typically occurs when the dataset is published in a repository, rather than during data collection.
-* **Benefit.** Catalogue services and automated workflows can reliably reference the dataset over time.
-* **How.** Register the dataset metadata with a PID authority such as [DataCite](https://datacite.org/) or [Crossref](https://www.crossref.org/) to obtain a persistent identifier (PID) that functions as the dataset’s primary reference. Other PID systems may also be suitable depending on the repository or community practices.
+Before arranging for a new identifier, determine whether the entity has already been assigned an identifier within the selected scheme.
 
+* **Benefit.** Reusing an existing identifier prevents duplicate identifiers or records within the same scheme and preserves connections to information already available in registries, catalogues and knowledge graphs.
+* **How.** Search the authoritative registry or service associated with the selected scheme. Confirm that the record refers to the correct entity before reusing the identifier.
+
+Note that an entity may have identifiers in more than one scheme. When data from different systems are combined, document the relationships between these identifiers where needed to support correct integration. Detailed guidance on identifier mapping is beyond the scope of this page. BridgeDb can support mappings between identifiers used by biological databases, while SSSOM can be used to represent mappings between ontology or vocabulary terms.
+
+{% include info-box.html type="example" title="Example." text="
+```
+organisation:
+  name: Freie Universität Berlin
+  ror: https://ror.org/046ak2485
+```
+In this example, the existing ROR ID is reused after confirming that the record refers to the intended organisation. This avoids requesting or using a duplicate record within the same scheme for the same entity.
+" %}
 
 {% include how-to-summary-end.html %}
 
 {% include how-to-summary-start.html
    number="4"
-   title="Use identifiers consistently throughout the metadata"
-   summary="Reference people, organisations, licences and related resources using appropriate standard identifiers and apply them consistently throughout the metadata."
+   title="Obtain a new identifier when necessary"
+   summary="If no identifier exists in the selected scheme, obtain one through an appropriate identifier service or repository, or create a locally managed identifier when identification is only required within a defined context."
+   id="step-4-obtain-a-new-identifier-when-necessary"
 %}
 
-Metadata should reference people, organisations, licences and related resources using standard identifiers. This removes ambiguity and allows machines to interpret relationships correctly.
-* **Benefit.** Removes ambiguity in metadata, improves interoperability and supports automated processing across systems.
-* **How.** Reference people, organisations, licences and related resources using standard identifiers consistently. For example, [ORCID](https://orcid.org/) can be used for authors, [ROR](https://ror.org/) for organisations and [SPDX identifiers](https://spdx.org/licenses/) for licences. Other identifiers may be used depending on community norms or repository requirements.
+When the entity does not yet have an identifier in the selected scheme, obtain one.
 
-{% include info-box.html type="example" title="Example. Metadata snippet with persistent identifiers." text="
-```
-# ORCID for researcher
-creator: \"Jane Doe\"
-creator.orcid: https://orcid.org/0000-0002-1584-4316
+* **Benefit.** A new identifier gives the entity a reference within the selected scheme and allows it to be distinguished from other entities.
+* **How.** The appropriate method depends on the entity, scheme and intended use:
+  * register the entity with an established identifier service when it falls within the scope of that service;
+  * deposit a digital research output in a repository that assigns a persistent identifier, such as a DOI;
+  * generate a locally managed identifier when the entity only needs to be identified within a defined project, organisation or system.
 
-# ROR for organisations
-organization: \"Freie Universität Berlin\"
-organization.ror: https://ror.org/046ak2485
-```
+{% include info-box.html type="example" title="Example." text="
+When a dataset is published through a repository, the repository may register a DOI and associate it with the dataset metadata. A sample created within a study may instead receive a locally generated identifier, such as `SAMPLE001` because it only needs to be identified within the project or system in which it is managed.
 " %}
-
 
 {% include how-to-summary-end.html %}
 
 {% include how-to-summary-start.html
    number="5"
-   title="Assign identifiers to relevant data entities and values"
-   summary="Use identifiers for records, variables, samples or values where this supports reuse, integration or automated processing, selecting suitable domain-specific identifiers or controlled vocabularies where appropriate."
+   title="Apply identifiers consistently"
+   summary="Record identifiers in dedicated fields using the representation preferred by the identifier scheme or metadata model and use the same identifier wherever the same entity is referenced."
+   id="step-5-apply-identifiers-consistently"
 %}
 
-Internal elements such as records, variables or samples may benefit from stable identifiers, but not every element requires one. Only assign identifiers where reuse, integration or automated processing is expected. When in doubt, consult a data steward to decide which elements should receive identifiers.
-* **Benefit.** Allows tools to reference and interpret the individual records and values inside a dataset reliably, which supports automation and reuse across datasets.
-* **How.** Use controlled vocabularies, ontologies or domain-specific identifiers where appropriate. For example, [RRIDs](https://scicrunch.org/resources) can identify biological resources, whilst [InChI](https://www.inchi-trust.org/) or [SMILES](https://www.daylight.com/dayhtml/doc/theory/theory.smiles.html) can represent chemical structures. Other identifier systems may be appropriate depending on the dataset and community practices.
+Record selected identifiers consistently in data, metadata and supporting systems.
 
+* **Benefit.** Consistent application removes ambiguity, improves machine processing and allows reliable connections to be made between entities.
+* **How.** Store identifiers in dedicated fields rather than embedding them in free text. Use the preferred representation specified by the identifier scheme or metadata model. Apply the same identifier consistently wherever the same entity is referenced.
 
-{% include info-box.html type="example" title="Example. Identifiers for internal entities and values." text="
+{% include info-box.html type="example" title="Example." text="
 ```
-# Local structured identifier for a sample
-sample_id: SAMPLE001
+dataset:
+  identifier: https://doi.org/10.5281/zenodo.6958051
+affiliation:
+  name: Freie Universität Berlin
+  ror: https://ror.org/046ak2485
+```
+Here, the dataset DOI and organisation ROR ID are recorded in dedicated metadata fields.
 
-# RRID for a biological resource
-sample_rrid: RRID:AB_2783747
-
-# RRID for a cell line
+The same principle applies to domain-specific entities. For example:
+```
+antibody_rrid: RRID:AB_2783747
 cell_line_rrid: RRID:CVCL_0302
-
-# InChI representation of a chemical structure
 chemical_inchi: InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3
-
-# SMILES representation of a chemical structure
-chemical_smiles: CCO
 ```
+RRIDs identify registered research resources such as antibodies and cell lines. InChI provides a standardised, structure-derived identifier for a chemical substance.
 " %}
-
 
 {% include how-to-summary-end.html %}
 
 {% include how-to-summary-start.html
    number="6"
-   title="Make identifiers resolvable"
-   summary="Ensure identifiers intended for discovery and access resolve to an accessible landing page or metadata record so humans and machines can find and interpret the referenced resource."
+   title="Use and verify resolvable identifiers"
+   summary="For identifiers intended to support discovery or access across systems, use the recognised resolvable form and verify that it leads to the correct metadata, landing page or record."
+   id="step-6-use-and-verify-resolvable-identifiers"
 %}
 
-Identifiers become actionable when they resolve to a landing page or metadata record. Resolution enables both humans and machines to discover and interpret the resource.
-* **Benefit.** Supports findability and accessibility through standard web protocols.
-* **How.** Ensure that identifiers resolve to a landing page or metadata record that humans and machines can access. For example, DOIs registered with [DataCite](https://datacite.org/) or [Crossref](https://www.crossref.org/) provide resolvable links. Other persistent identifier systems can also be used. Guidance from FAIR Cookbook's [Creating resolvable identifiers](https://faircookbook.elixir-europe.org/content/recipes/infrastructure/gupri.html) can support implementation.
+After obtaining and recording an identifier, use its recognised resolvable form where it is intended to support discovery or access across systems.
 
-{% include info-box.html type="example" title="Example. Resolvable and unresolvable identifier." text="
-| Identifier type  | Identifier                              | Result                                                                                                           |
-| ---------------- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Unresolvable DOI | https://doi.org/10.1234/example.dataset | The dataset cannot be reliably discovered or interpreted because no landing page or metadata record is available |
-| Resolvable DOI   | https://doi.org/10.5281/zenodo.6958051  | The dataset can be discovered and interpreted through a landing page with metadata                               |
+* **Benefit.** Resolution allows people and machines to retrieve metadata or other information about the identified entity through a stable reference. Resolution does not necessarily provide direct access to the identified resource. A landing page may instead provide metadata and explain how access can be requested.
+* **How.** For identifiers obtained through a repository or established identifier service, use the resolvable form provided or recommended by that service. For example, a DOI assigned when a dataset is deposited should normally be recorded as a https://doi.org/ URL.
+
+Check that the identifier resolves to the intended landing page or record. When a repository or identifier service is responsible for the resolution mechanism, report broken or incorrect resolution to that provider.
+
+Some scientific database identifiers do not have a single standard web address. A resolver such as [Identifiers.org](http://identifiers.org/) can provide a consistent resolvable form for these identifiers. For example, the PubMed identifier `22140103` can be expressed as:
+```
+https://identifiers.org/pubmed:22140103
+```
+Use the identifier scheme's own recognised resolver, such as doi.org for DOIs, where one is available.
+
+
+{% include info-box.html type="example" title="Example." text="
+
+| Identifier | How resolution is provided                                                                            |
+| --- |-------------------------------------------------------------------------------------------------------|
+| `https://doi.org/10.5281/zenodo.6958051` | Zenodo registers the DOI and maintains the landing page to which it resolves                          |
+| `https://ror.org/046ak2485` | ROR provides and maintains the resolvable organisation record                                         |
+| `https://identifiers.org/pubmed:22140103` | [Identifiers.org](http://identifiers.org/) resolves the identifier to the corresponding PubMed record |
+
+A researcher depositing a dataset would normally use and verify the DOI supplied by the repository rather than create the resolution mechanism. By contrast, a local identifier such as `SAMPLE001` may remain non-resolvable when it is used only within the project or system in which it is managed.
 
 " %}
-
 
 {% include how-to-summary-end.html %}
 
 {% include how-to-summary-start.html
    number="7"
-   title="Use namespaces for local identifiers"
-   summary="Add and document a consistent namespace or prefix for local identifiers when data are shared beyond their original context to prevent collisions between systems."
+   title="Manage namespaces for local identifiers"
+   summary="Define and document where local identifiers are unique and, when they are exchanged beyond that context, use a stable and distinctive namespace or prefix to prevent collisions."
+   id="step-7-manage-namespaces-for-local-identifiers"
 %}
 
-Local identifiers are often only unique within a single project or system. Adding a namespace or prefix makes it clear where the identifier comes from and prevents collisions when data are shared across systems.
-* **Benefit.** Prevents collisions and keeps identifiers reliable as they move across systems.
-* **How.** Assign a consistent prefix to local identifiers and document it in metadata to ensure global uniqueness. When possible, register the namespace with services such as [Identifiers.org](http://identifiers.org/) to make identifiers globally traceable and resolvable. Prefixes can include a project or organisational code. Other approaches to namespace management may also be used depending on community practices.
+Document the context in which local identifiers are unique and add a namespace when identifiers are exchanged outside that context.
 
-{% include info-box.html type="example" title="Example. Namespace prefixes and globally resolvable identifiers." text="
-```
-# Namespace prefix added to a local identifier to prevent identifier collisions across systems
-local_sample_id: PROJ123:SAMPLE001
+* **Benefit.** Namespaces prevent identifiers from different projects, organisations or systems from being confused when their local identifier values are identical.
+* **How.** Define the scope within which each local identifier is unique. Document the identifier format, the party responsible for managing it and the rules for assigning identifiers. When identifiers will be exchanged outside their original context, combine the local identifier with a stable and documented namespace or prefix.
 
-# Globally resolvable identifier using a registered namespace
-pubmed_id: https://identifiers.org/pubmed:22140103
+The namespace must itself be sufficiently distinctive within the environment in which the identifiers will be exchanged. A generic prefix that could independently be used by several projects may not prevent collisions.
+
+
+{% include info-box.html type="example" title="Example." text="
+
 ```
+local_sample_id: SAMPLE001
+qualified_sample_id: PROJ123:SAMPLE001
+```
+`SAMPLE001` may be sufficient within one project. Outside that project, however, another organisation or study may use the same value for a different sample. `PROJ123:SAMPLE001` makes the project context explicit and reduces the risk of confusion.
+
+The project should document what `PROJ123` represents and who manages the namespace. Identifier values should not be reassigned to different entities.
+
 " %}
-
 
 {% include how-to-summary-end.html %}
 
 {% include how-to-summary-start.html
    number="8"
-   title="Map equivalences between identifier systems"
-   summary="Record mappings between different identifiers that refer to the same entity when this is needed to support interoperability and integration across systems."
+   title="Maintain identifiers and their associated information"
+   summary="Assign responsibility for keeping identifiers, metadata and resolution information accurate over time, manage changes and versions according to provider policies and never reassign an identifier to a different entity."
+   id="step-8-maintain-identifiers-and-their-associated-information"
 %}
 
-Different communities often use different identifiers for the same concept. Mapping these supports interoperability across systems.
-* **Benefit.** Creates bridges between identifier schemes and supports cross-dataset integration.
-* **How.** Map equivalent identifiers across different systems to support interoperability. For example, use [BridgeDb](https://www.bridgedb.org/) or the [SSSOM standard](https://github.com/mapping-commons/sssom) and refer to FAIR Cookbook's [Interlinking data from different sources](https://faircookbook.elixir-europe.org/content/recipes/interoperability/identifier-mapping.html) for guidance on identifier mapping. Other mapping frameworks may also be appropriate depending on the community and identifier systems in use.
+Ensure that identifiers remain correctly associated with their entities and continue to function for as long as required.
 
-{% include info-box.html type="example" title="Example. Mapping equivalent identifiers using SSSOM." text="
+* **Benefit.** Persistent identifiers support FAIR data only when they remain reliable over time. Ongoing maintenance preserves findability, keeps links to metadata and access information working and ensures that data and related entities can continue to be referenced and reused correctly.
+* **How.** Determine:
+  * who is responsible for maintaining the identifier and associated metadata;
+  * how resolution information will be updated when the location of a resource changes;
+  * what happens when a project, system or service ends;
+  * whether a changed resource should retain its identifier, receive a version identifier or receive a new identifier;
+  * how obsolete, merged or replaced entities will be represented;
+  * whether institutional or community persistent identifier policies apply.
+Never reassign an existing identifier to a different entity. Follow the versioning and update policies of the identifier provider or repository.
 
-| Element | Identifier |
-| --- | --- |
-| BRCA2 in Ensembl | ENSEMBL:ENSG00000139618 |
-| BRCA2 in NCBI Gene | NCBIGene:675 |
-| Relationship | sssom:exactMatch |
+{% include info-box.html type="example" title="Example." text="
+A dataset moves to a different storage location after publication. Its DOI remains the same, while the DOI metadata are updated so that the identifier continues to resolve to the correct landing page. This preserves the dataset's findability and allows existing references to remain valid.
 
-```
-# Same mapping expressed with SSSOM fields
-subject_id: ENSEMBL:ENSG00000139618
-subject_label: BRCA2
-object_id: NCBIGene:675
-object_label: BRCA2
-predicate_id: sssom:exactMatch
-```
+If a substantially revised dataset is published as a new version, the repository's versioning policy determines whether it receives a new DOI and how the versions are linked. Clear version relationships help users identify, cite and reuse the intended version.
+
 " %}
-
 
 {% include how-to-summary-end.html %}
 
-{% include how-to-summary-start.html
-   number="9"
-   title="Ensure governance and infrastructure for persistence"
-   summary="At institutional or community level, establish or rely on stable services, responsibilities and policies that keep identifiers resolvable, persistent and trustworthy over time."
-%}
+## Practical examples from the community
+This section includes additional worked examples of identifier types and implementation scenarios that may be relevant in specific contexts. Examples from community projects will be added as they become available.
 
-Identifier quality depends on stable services that guarantee resolution and long-term accessibility. Good governance protects identifiers from decay.
-* **Benefit.** Maintains trust and usability of identifiers across decades.
-* **How.** Establish or rely on stable services that guarantee identifier resolution and long-term accessibility. PID infrastructures such as [GUPRI](https://faircookbook.elixir-europe.org/content/recipes/infrastructure/gupri.html) (Globally Unique, Persistent, Resolvable Identifier) help ensure persistent resolution and long-term stewardship. Governance arrangements and technical infrastructure are usually managed at the institutional or community level rather than by individual researchers. To make governance concrete, consider questions such as:
-  * Who is responsible for maintaining resolution if a system changes?
-  * What happens to identifiers when a project ends? 
-  * Does your institution have a PID policy?
-  
-  These questions help ensure identifiers remain persistent, resolvable and trustworthy over time.
+### Identifying funding organisations
+Funding organisations can be identified using persistent identifiers. ROR IDs can be used to identify research organisations, including funders, and are increasingly used for funding metadata. Crossref is transitioning its Open Funder Registry towards the use of ROR IDs.
 
-{% include info-box.html type="example" title="Example. Persistent identifier resolved through the n2t.net/Handle system, ensuring long-term accessibility." text="
+{% include info-box.html type="example" title="Example." text="
 ```
-pid: https://n2t.net/hdl:20.500.12633/1HK1DTv1wPt3a
+funder:
+  name: National Science Foundation
+  identifier: https://ror.org/021nxhr62
 ```
 " %}
- 
+Where an Open Funder Registry identifier is still used, it can also provide an unambiguous reference to the funding organisation. The Open Funder Registry was formerly known as FundRef.
 
-{% include how-to-summary-end.html %}
+### Identifying licences
+Standard licence identifiers can be used to represent licences consistently in metadata.
 
-## Practical examples from the community 
-{% include metroline_steps/looking_for_examples.html %}
+{% include info-box.html type="example" title="Example." text="
+
+```
+licence:
+  identifier: CC-BY-4.0
+```
+" %}
+`CC-BY-4.0` is the SPDX short identifier for the Creative Commons Attribution 4.0 International licence. SPDX maintains standardised identifiers for licences used for software, data, hardware and documentation.
+
+### Minting a persistent identifier
+Some identifier schemes use the term minting for creating a new identifier. Researchers will often encounter this when publishing a research output through a repository.
+
+{% include info-box.html type="example" title="Example." text="
+```
+Dataset deposited in repository
+→ DOI registered
+→ https://doi.org/10.5281/zenodo.6958051
+```
+" %}
+In this case, the repository registers the DOI and associates it with metadata and a landing page. The researcher normally does not operate the identifier infrastructure directly.
+
+Some workflows use other identifier systems. For example, a MINID (Minimal Viable Identifier) is designed as a lightweight identifier for making research data findable, accessible, interoperable and reusable. A MINID can be registered using the MINID client:
+
+```
+minid register --title "Dataset X" DatasetX.tar.gz --locations http://example.org/DatasetX.tar.gz
+```
+
+### Alternative persistent identifier infrastructures
+DOIs are not the only infrastructure for persistent identifiers. The Handle System is another infrastructure for creating and resolving persistent identifiers. DOI resolution itself is built on Handle System infrastructure.
+
+Projects or organisations operating such infrastructure are responsible for its configuration, governance and continued operation.
 
 ## Training
-* **Digital Preservation Coalition's [Novice to Know-How: Online Digital Preservation Training](https://www.dpconline.org/digipres/prof-development/n2kh-online-training).** This training provides specific advice on how to choose PID schemes and the criteria for choosing an adequate one for digital preservation and findability. This training also covers best practices and range of options available. 
+The Digital Preservation Coalition’s [Novice to Know-How: Online Digital Preservation Training](https://www.dpconline.org/digipres/prof-development/n2kh-online-training) provides guidance on persistent identifiers, criteria for choosing suitable persistent identifier schemes and the role of identifiers in digital preservation and findability.
 
 ## Suggestions
-{% include metroline_steps/suggestions_development.html src=page.title%}
-
+{% include metroline_steps/suggestions_released.html src=page.title%}
