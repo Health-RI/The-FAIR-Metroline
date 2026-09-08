@@ -118,7 +118,7 @@ Before arranging for a new identifier, determine whether the entity has already 
 * **Benefit.** Reusing an existing identifier prevents duplicate identifiers or records within the same scheme and preserves connections to information already available in registries, catalogues and knowledge graphs.
 * **How.** Search the authoritative registry or service associated with the selected scheme. Confirm that the record refers to the correct entity before reusing the identifier.
 
-Note that an entity may have identifiers in more than one scheme. When data from different systems are combined, document the relationships between these identifiers where needed to support correct integration. Detailed guidance on identifier mapping is beyond the scope of this page. BridgeDb can support mappings between identifiers used by biological databases, while SSSOM can be used to represent mappings between ontology or vocabulary terms.
+  Note that an entity may have identifiers in more than one scheme. When data from different systems are combined, document the relationships between these identifiers where needed to support correct integration. Detailed guidance on identifier mapping is beyond the scope of this page. [BridgeDb](https://www.bridgedb.org/) can support mappings between identifiers used by biological databases, while [SSSOM](https://mapping-commons.github.io/sssom) can be used to represent mappings between ontology or vocabulary terms.
 
 {% include info-box.html type="example" title="Example." text="
 ```
@@ -197,13 +197,13 @@ After obtaining and recording an identifier, use its recognised resolvable form 
 * **Benefit.** Resolution allows people and machines to retrieve metadata or other information about the identified entity through a stable reference. Resolution does not necessarily provide direct access to the identified resource. A landing page may instead provide metadata and explain how access can be requested.
 * **How.** For identifiers obtained through a repository or established identifier service, use the resolvable form provided or recommended by that service. For example, a DOI assigned when a dataset is deposited should normally be recorded as a https://doi.org/ URL.
 
-Check that the identifier resolves to the intended landing page or record. When a repository or identifier service is responsible for the resolution mechanism, report broken or incorrect resolution to that provider.
+  Check that the identifier resolves to the intended landing page or record. When a repository or identifier service is responsible for the resolution mechanism, report broken or incorrect resolution to that provider.
 
-Some scientific database identifiers do not have a single standard web address. A resolver such as [Identifiers.org](http://identifiers.org/) can provide a consistent resolvable form for these identifiers. For example, the PubMed identifier `22140103` can be expressed as:
-```
-https://identifiers.org/pubmed:22140103
-```
-Use the identifier scheme's own recognised resolver, such as doi.org for DOIs, where one is available.
+  Some scientific database identifiers do not have a single standard web address. A resolver such as [Identifiers.org](http://identifiers.org/) can provide a consistent resolvable form for these identifiers. For example, the PubMed identifier `22140103` can be expressed as:
+  ```
+  https://identifiers.org/pubmed:22140103
+  ```
+  Use the identifier scheme's own recognised resolver, such as doi.org for DOIs, where one is available.
 
 
 {% include info-box.html type="example" title="Example." text="
@@ -232,7 +232,7 @@ Document the context in which local identifiers are unique and add a namespace w
 * **Benefit.** Namespaces prevent identifiers from different projects, organisations or systems from being confused when their local identifier values are identical.
 * **How.** Define the scope within which each local identifier is unique. Document the identifier format, the party responsible for managing it and the rules for assigning identifiers. When identifiers will be exchanged outside their original context, combine the local identifier with a stable and documented namespace or prefix.
 
-The namespace must itself be sufficiently distinctive within the environment in which the identifiers will be exchanged. A generic prefix that could independently be used by several projects may not prevent collisions.
+  The namespace must itself be sufficiently distinctive within the environment in which the identifiers will be exchanged. A generic prefix that could independently be used by several projects may not prevent collisions.
 
 
 {% include info-box.html type="example" title="Example." text="
@@ -266,7 +266,8 @@ Ensure that identifiers remain correctly associated with their entities and cont
   * whether a changed resource should retain its identifier, receive a version identifier or receive a new identifier;
   * how obsolete, merged or replaced entities will be represented;
   * whether institutional or community persistent identifier policies apply.
-Never reassign an existing identifier to a different entity. Follow the versioning and update policies of the identifier provider or repository.
+  
+  Never reassign an existing identifier to a different entity. Follow the versioning and update policies of the identifier provider or repository.
 
 {% include info-box.html type="example" title="Example." text="
 A dataset moves to a different storage location after publication. Its DOI remains the same, while the DOI metadata are updated so that the identifier continues to resolve to the correct landing page. This preserves the dataset's findability and allows existing references to remain valid.
