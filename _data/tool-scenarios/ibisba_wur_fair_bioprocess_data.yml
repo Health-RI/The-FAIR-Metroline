@@ -1,5 +1,5 @@
 - title: "Define the experiment and metadata scope"
-  status: "completed"
+  status: "prerequisite"
   icon: ""
   short_description: "Agree what needs to be captured before the experiment starts."
   description: "Before data capture starts, the research team agrees which operational signals, sample identifiers, protocols, instrument settings, processing outputs and provenance records need to be linked. This illustrative scenario assumes a bioprocess or fermentation-style experiment where equipment data is captured during a run and later connected to study and assay metadata. The exact terminology should be reviewed by the WUR and IBISBA teams."

@@ -3,11 +3,7 @@
 .tool-scenario-timeline {
   
   .metro-title-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    flex: 1;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   
   .title-tool-logo {
