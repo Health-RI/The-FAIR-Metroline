@@ -16,41 +16,54 @@
   step_ids:
     - 4
 
-- title: "Analyse data semantics"
+- title: "Create a basic codebook for your data"
   status: "upcoming"
-  short_description: "Analyse data semantics"
-  description: "Clarify and define the meaning of data and metadata elements by identifying ambiguities and creating a clear, unambiguous codebook to support further FAIRification steps."
+  description: "
+      <ol>
+      <li>Define the data elements you need to collect, including their intended meaning and allowed values.</li>
+      <li>Resolve any remaining ambiguity.</li>
+      <li>Record these definitions in a first version of your codebook.</li>
+    </ol>
+  "
   step_ids:
     - 13
   examples:
     - role: "Researcher"
-      description: "The first step is to accurately specify the data that will be collected.
-We intended to use the variable “sex”, but this is ambiguous (biological vs administrative vs self-reported). 
-Thus, we refined it to “phenotypic sex” with values “female”, “male” and “hermaphrodite”.
-This specification leads to a first rough version of a codebook.<br>
-Next, we search for existing initiatives online to align with. For genomics, parts of the <a href='https://decor.nictiz.nl/ad/#/fairgenomes-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.120.1.0/2021-07-20T24:00:00'>FAIR Genomes codebook</a> can be reused. For example, for 'Female' will use the code 'http://purl.obolibrary.org/obo/PATO_0000383'."
+      description: "TFor sex, I clarify that I mean phenotypic sex, with the values female, male and hermaphrodite."
 
-- title: "Apply common data elements"
+- itle: "Improve the codebook"
   status: "upcoming"
-  short_description: "Apply Common data elements"
-  description: "Identify, select and apply common data elements to standardise data collection and improve interoperability, data quality and reuse."
+  description: "
+    <ol>
+      <li>Look for existing standardised definitions that match the data elements in your codebook.</li>
+      <li>Reuse domain-specific standards where available.</li>
+      <li>If these do not cover an element, look for more generic standards such as Common Data Elements.</li>
+      <li>Add the selected definitions, terminology and value sets to your codebook.</li>
+    </ol>
+  "
   step_ids:
     - 12
   examples:
     - role: "Researcher"
-      description: "Since FAIR Genomes does not have a definition for bmi, we check the <a href='https://cde.nlm.nih.gov'>NIH CDE Repository</a> for Common data elements to reuse. We find we need to add the elements described <a href='https://cde.nlm.nih.gov/formView?tinyId=t6XCi_Ob5'>here</a> to properly register the bmi."
+      description: "For phenotypic sex, I reuse the <a href='https://decor.nictiz.nl/ad/#/fairgenomes-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.120.1.0/2021-07-20T24:00:00'>FAIR Genomes definition and terminology</a>. 
+  The value female, for example, is represented by PATO:0000383. FAIR Genomes does not provide a suitable definition for BMI, so I look for relevant <a href='https://cde.nlm.nih.gov/formView?tinyId=t6XCi_Ob5'>Common Data Elements</a> and use these to define the elements needed to record BMI."
 
-- title: "Design eCRF"
+- title: "Use the codebook to build eCRFs"
   status: "upcoming"
-  short_description: "Design eCRF"
-  description: "Design effective electronic case report forms by translating well-defined data elements into structured, validated forms that support high-quality, interoperable and reusable data collection."
+  description: "
+    <ol>
+      <li>Use the codebook to create the eCRF in your EDC system.</li>
+      <li>Configure fields, values and terminology according to the codebook.</li>
+      <li>Test the eCRF with the people who will collect and use the data.</li>
+      <li>Adjust the form where necessary before starting data collection.</li>
+    </ol>
+  "
   step_ids:
     - 14
   examples:
     - role: "Researcher"
-      description: "With the codebook now containing the definitions for bmi and sex, we use it as the basis for the eCRF."
+      description:  "My UMC uses Castor EDC, so I build the eCRF in Castor and test it together with the research nurse and the researcher who will analyse the data."
 
-- title: "Data collected are interoperable"
+- title: "Collect data"
   status: "destination"
-  icon: "🎯"
-  short_description: "Our data are will now be collected in alignment with standards and will be more interoperable with other researchers' data."
+  description: "You can now collect data using clearly defined data elements that are aligned with existing standards where possible. This makes the resulting data easier to compare and combine with data from other studies."
