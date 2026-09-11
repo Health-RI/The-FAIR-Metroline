@@ -658,6 +658,17 @@
     ]
   },
   {
+    "term": "Entity",
+    "definition": "Something that has separate and distinct existence and objective or conceptual reality (ISO 19119:2016). It can be a real-world phenomenon like a tree or house, or conceptual like a local authority or company.",
+    "sources": [
+      {
+        "label": "Gov UK",
+        "url": "https://www.gov.uk/government/publications/linked-identifier-schemes-best-practice-guide/linked-identifier-schemes-best-practice-guide"
+      }
+    ],
+    "aliases": []
+  },
+  {
     "term": "European Reference Networks",
     "definition": "The European Reference Networks (ERNs) are cross-border networks that bring together European hospital centres of expertise and reference to tackle rare, low prevalence and complex diseases and conditions requiring highly specialised healthcare.",
     "sources": [
@@ -817,6 +828,28 @@
       {
         "label": "EUR-Lex",
         "url": "https://eur-lex.europa.eu/eli/reg_impl/2023/138/oj/eng"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Identifier",
+    "definition": "An unambiguous reference to the resource within a given context.",
+    "sources": [
+      {
+        "label": "DublinCore",
+        "url": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/identifier/"
+      }
+    ],
+    "aliases": []
+  },
+  {
+    "term": "Identifier scheme",
+    "definition": "An identifier scheme is an agreed shared vocabulary of identifiers used to describe people, places, things or concepts. It is also a holistic term referring to the data standards (authoritative lists like registers), organisations (such as registration agencies) and processes (like assigning identifiers) required to create, implement and maintain identifiers.",
+    "sources": [
+      {
+        "label": "Open Data Institute",
+        "url": "https://theodi.org/insights/guides/using-identifiers"
       }
     ],
     "aliases": []
@@ -1073,6 +1106,17 @@
     "aliases": []
   },
   {
+    "term": "Namespace",
+    "definition": "A uniquely identified set of names or identifier values that prevents ambiguity when identical values from different sources are combined.",
+    "sources": [
+      {
+        "label": "CODATA",
+        "url": "https://terms.codata.org/rdmt/namespace"
+      }
+    ],
+    "aliases": []
+  },
+  {
     "term": "Nanopublication",
     "definition": "Small knowledge graph snippet with metadata that is to be treated as an independent (scientific) publication.",
     "sources": [
@@ -1324,6 +1368,17 @@
     "term": "Researcher",
     "definition": "Provides domain expertise, formulates research questions and interprets findings within a scientific context.",
     "sources": [],
+    "aliases": []
+  },
+  {
+    "term": "Resolvable",
+    "definition": "An identifier system is called (generally) resolvable if there exists a resolution service/resolver for that system which is capable of unambiguously mapping an identifier from that system to the location (URL) of the object (or metadata about the object) that it identifies.",
+    "sources": [
+      {
+        "label": "PID4NFDI Cookbook",
+        "url": "https://pid4nfdi-training.readthedocs.io/en/latest/PID-def.html"
+      }
+    ],
     "aliases": []
   },
   {
