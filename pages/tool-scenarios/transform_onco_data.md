@@ -22,7 +22,7 @@ You start with raw tumor sequencing files, run an analysis workflow to generate 
 {% assign prerequisites = site.data.tool-scenarios.transform_onco_data | where_exp: "item", "item.status == 'prerequisite'" %}
 
 {% if prerequisites.size > 0 %}
-## Prerequisites
+### Prerequisites
 Before starting this scenario, you should have the following prerequisites in place.
 
 {% include scenario-prerequisites.html prerequisites=prerequisites %}

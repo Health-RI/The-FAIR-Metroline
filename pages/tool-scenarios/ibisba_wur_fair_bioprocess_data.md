@@ -21,7 +21,7 @@ You have sensors to collect data and you setup a pipeline to collected, FARIfy a
 {% assign prerequisites = site.data.tool-scenarios.ibisba_wur_fair_bioprocess_data | where_exp: "item", "item.status == 'prerequisite'" %}
 
 {% if prerequisites.size > 0 %}
-## Prerequisites
+### Prerequisites
 Before starting this scenario, you should have the following prerequisites in place.
 
 {% include scenario-prerequisites.html prerequisites=prerequisites %}

@@ -33,7 +33,7 @@ Design new dataset so it is interoperable from the start, including alignment to
 {% assign prerequisites = site.data.scenarios.make_dataset_interoperable | where_exp: "item", "item.status == 'prerequisite'" %}
 
 {% if prerequisites.size > 0 %}
-## Prerequisites
+### Prerequisites
 Before starting this scenario, you should have the following prerequisites in place.
 
 {% include scenario-prerequisites.html prerequisites=prerequisites %}
