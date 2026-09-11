@@ -29,7 +29,7 @@
     - 13
   examples:
     - role: "Researcher"
-      description: "TFor sex, I clarify that I mean phenotypic sex, with the values female, male and hermaphrodite."
+      description: "For sex, I clarify that I mean phenotypic sex, with the values female, male and hermaphrodite."
 
 - itle: "Improve the codebook"
   status: "upcoming"
