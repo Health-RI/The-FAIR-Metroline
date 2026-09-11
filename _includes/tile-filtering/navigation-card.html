@@ -1,0 +1,42 @@
+{%- if include.aria_label %}
+{%- assign card_aria_label = include.aria_label %}
+{%- else %}
+{%- assign card_aria_label = include.title | prepend: "Go to the " | append: " page" %}
+{%- endif %}
+<a href="{{ include.url | relative_url }}" class="card h-100 tool-card" aria-label="{{ card_aria_label }}">
+    <div class="card-body">
+
+        {%- if include.image %}
+        {%- if include.image contains "http://" or include.image contains "https://" %}
+        {%- assign file_url = include.image -%}
+        {%- else %}
+        {%- capture file_url -%}
+        {{ "/assets/img/" | append: include.image | relative_url }}
+        {%- endcapture -%}
+        {%- endif %}
+        <div class="tool-card-icon">
+            <img
+                alt="logo of {{ include.title }}"
+                src="{{ file_url }}"
+            >
+        </div>
+        {%- elsif include.icon %}
+        <div class="tool-card-icon {{ include.icon_class }}" aria-hidden="true">
+            <span>{{ include.icon }}</span>
+        </div>
+        {%- endif %}
+
+        <h3 class="tool-card-title">{{ include.title }}</h3>
+
+        {%- if include.description %}
+        <p class="tool-card-description">{{ include.description }}</p>
+        {%- endif %}
+
+        {%- if include.meta %}
+        <div class="tool-card-meta">
+            {{ include.meta }}
+        </div>
+        {%- endif %}
+
+    </div>
+</a>

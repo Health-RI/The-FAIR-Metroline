@@ -471,7 +471,6 @@
 - id: fairdom-seek
   page_img: "https://seek4science.org/assets/images/fairdom-seek-logo-alt.svg"
   institutes:
-    - FAIRDOM
     - IBISBA
   at_a_glance:
     Tool name: FAIRDOM-SEEK
@@ -481,7 +480,6 @@
     Life cycle phases:
       - Preserve
       - Share
-      - Publish
     Domains using it:
       - Systems biology
       - Industrial biotechnology
