@@ -112,6 +112,27 @@
           <div class="full-description">{{ stop.description }}</div>
           {% endif %}
 
+          {% if stop.examples %}
+          <div class="metro-examples">
+            <h4>Examples</h4>
+            <div class="example-tabs">
+              {% for example in stop.examples %}
+              <button class="example-tab {% if forloop.first %}active{% endif %}" data-example="{{ forloop.index }}">
+                {{ example.role }}
+              </button>
+              {% endfor %}
+            </div>
+            <div class="example-content">
+              {% for example in stop.examples %}
+              <div class="example-panel {% if forloop.first %}active{% endif %}" data-example="{{ forloop.index }}">
+                <h5>{{ example.role }}</h5>
+                <p>{{ example.description }}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+
           {% if stop.tool_ids or stop.tools %}
           <div class="tool-list">
             <h4>Tools and resources</h4>
@@ -186,27 +207,6 @@
                   </a>
                   {% endif %}
                 </div>
-              </div>
-              {% endfor %}
-            </div>
-          </div>
-          {% endif %}
-
-          {% if stop.examples %}
-          <div class="metro-examples">
-            <h4>Examples</h4>
-            <div class="example-tabs">
-              {% for example in stop.examples %}
-              <button class="example-tab {% if forloop.first %}active{% endif %}" data-example="{{ forloop.index }}">
-                {{ example.role }}
-              </button>
-              {% endfor %}
-            </div>
-            <div class="example-content">
-              {% for example in stop.examples %}
-              <div class="example-panel {% if forloop.first %}active{% endif %}" data-example="{{ forloop.index }}">
-                <h5>{{ example.role }}</h5>
-                <p>{{ example.description }}</p>
               </div>
               {% endfor %}
             </div>
