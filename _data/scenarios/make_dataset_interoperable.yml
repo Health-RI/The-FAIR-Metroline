@@ -31,7 +31,7 @@
     - role: "Researcher"
       description: "For sex, I clarify that I mean phenotypic sex, with the values female, male and hermaphrodite."
 
-- itle: "Improve the codebook"
+- title: "Improve the codebook"
   status: "upcoming"
   description: "
     <ol>
@@ -43,6 +43,7 @@
   "
   step_ids:
     - 12
+    - 13
   examples:
     - role: "Researcher"
       description: "For phenotypic sex, I reuse the <a href='https://decor.nictiz.nl/ad/#/fairgenomes-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.120.1.0/2021-07-20T24:00:00'>FAIR Genomes definition and terminology</a>. 
@@ -60,6 +61,8 @@
   "
   step_ids:
     - 14
+  tool_ids:
+    - castor
   examples:
     - role: "Researcher"
       description:  "My UMC uses Castor EDC, so I build the eCRF in Castor and test it together with the research nurse and the researcher who will analyse the data."
