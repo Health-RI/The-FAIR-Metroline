@@ -11,6 +11,10 @@ module Jekyll
       tools_data = site.data['tools']
       return unless tools_data
 
+      # DEMO: entries in _data/tools_v2.yml (new schema) override tools.yml and use the tool_v2 layout
+      v2_entries = (site.data['tools_v2'] || []).to_h { |t| [t['id'], t] }
+      steps_by_tool = metroline_steps_by_tool(site)
+
       # For each tool, create a page
       tools_data.each do |tool|
         tool_id = tool['id']
@@ -40,8 +44,49 @@ module Jekyll
         biotools_id = tool['biotools_id']
 
         # Create the page
-        site.pages << ToolPage.new(site, tool_id, tool_name, slug, domain, phase, institutes, image_path, short_description, biotools_id, fair_support_category)
+        page = ToolPage.new(site, tool_id, tool_name, slug, domain, phase, institutes, image_path, short_description, biotools_id, fair_support_category)
+        page.data['metroline_steps'] = steps_by_tool[tool_id] || []
+        apply_v2(site, page, v2_entries[tool_id]) if v2_entries[tool_id]
+        site.pages << page
       end
+    end
+
+    private
+
+    # Which Metroline step pages mention each tool through show-badges / show-tiles.
+    def metroline_steps_by_tool(site)
+      index = Hash.new { |h, k| h[k] = [] }
+      site.pages.each do |p|
+        next unless p.path.start_with?('pages/metroline_steps/')
+
+        p.content.scan(/show-(?:badges|tiles)\.html\s+ids="([^"]+)"/).flatten
+         .flat_map { |ids| ids.split(',').map(&:strip) }.uniq.each do |id|
+          index[id] << { 'title' => p.data['title'], 'url' => p.url }
+        end
+      end
+      index
+    end
+
+    def apply_v2(site, page, entry)
+      enriched = ToolEnrichment.enrich(site, entry)
+      d = page.data
+      d['layout'] = 'tool_v2'
+      d['v2'] = entry
+      d['enriched'] = enriched
+      d['title'] = entry['name'] || enriched['name'] || d['title']
+      d['description'] = entry['short_description'] if entry['short_description']
+      d['page_img'] = entry['logo'] if entry['logo']
+      d['tool_type'] = entry['tool_type']
+      d['fair_support_category'] = entry.dig('fair', 'support_category')
+      d['fair_letters'] = Array(entry.dig('fair', 'principles')).map { |p| p[0] }.uniq
+      d['phase'] = Array(entry['lifecycle_phases']).sort_by { |p| LIFECYCLE_ORDER.index(p) || 999 } if entry['lifecycle_phases']
+      d['domain'] = entry['domains'] if entry['domains']
+      d['institutes'] = entry.dig('adoption', 'institutes') if entry.dig('adoption', 'institutes')
+      d['metroline_steps'] = entry.dig('fair', 'metroline_steps') if entry.dig('fair', 'metroline_steps')
+
+      license = entry.dig('licensing', 'license') || enriched['license']
+      d['license'] = license
+      d['open_source'] = entry.dig('licensing', 'open_source').then { |o| o.nil? ? (license && license != 'Proprietary') : o }
     end
   end
 

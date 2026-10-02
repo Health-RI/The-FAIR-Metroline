@@ -1,0 +1,353 @@
+# DRAFT — schema for one entry in _data/tools.yml (JSON Schema 2020-12, written as YAML).
+#
+# Design rules
+#   1. Remote first: a tool with `identifiers.biotools` (or `identifiers.rsd`) only needs
+#      the FAIR-Metroline-specific fields locally. Everything marked `x-source` is filled
+#      from that registry at build time; a local value always overrides the remote one.
+#   2. Curate what no registry knows: FAIR role, Metroline fit, sensitive-data suitability,
+#      Dutch adoption, gaps. These are the fields that make this catalogue worth having.
+#   3. Never type a metric by hand: citation counts, stars and release dates are fetched.
+#   4. `tool_type` decides which extra block applies (executable / registry / assessment / standard).
+#
+# `x-source` lists where a field can be fetched from, in order of preference:
+#   biotools  -> https://bio.tools/api/tool/<id>?format=json
+#   rsd       -> Research Software Directory (https://research-software-directory.org) API
+#   github    -> GitHub REST API (repo, latest release, CITATION.cff)
+#   europepmc -> citation counts for publication DOIs / PMIDs
+#   derived   -> computed from other fields or from the site itself
+
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://fairmetroline.org/schemas/tool.schema.json
+title: FAIR Metroline tool entry
+type: object
+additionalProperties: false
+required: [id, tool_type, fair]
+
+properties:
+
+  # ── Identity ────────────────────────────────────────────────────────────────
+  id:
+    description: Stable slug, used in show-badges / show-tiles includes. Never rename.
+    type: string
+    pattern: "^[a-z0-9]+(-[a-z0-9]+)*$"
+
+  tool_type:
+    description: >
+      What kind of resource this is, because each kind is judged on different things.
+      executable = software you run or use as a service (EDC, triplestore, SHACL validator, file transfer);
+      registry   = a catalogue/repository that lists or hosts things (FAIRassist, ERDRI-MDR, ART-DECOR as codebook registry);
+      assessment = self-assessment, checklist, maturity model or automated FAIR evaluator;
+      standard   = a specification you apply rather than a tool you run (CSV on the Web).
+    enum: [executable, registry, assessment, standard]
+
+  name:
+    type: string
+    x-source: [biotools.name, rsd.brand_name]
+
+  logo:
+    description: Either a path under assets/img/ or an absolute URL.
+    type: string
+    x-source: [rsd.image]
+
+  short_description:
+    description: One sentence, used on badges and cards. Aim for <= 160 characters.
+    type: string
+    maxLength: 200
+
+  description:
+    description: Longer explanation (Markdown). Focus on what it does for FAIR, not marketing.
+    type: string
+    x-source: [biotools.description, rsd.description]
+
+  # ── FAIR role (always curated locally) ─────────────────────────────────────
+  fair:
+    type: object
+    additionalProperties: false
+    required: [support_category]
+    properties:
+      support_category:
+        enum:
+          - Planning & assessment
+          - Capture & collection
+          - Semantics & validation
+          - Publication & discovery
+          - Access & transfer
+      principles:
+        description: >
+          FAIR (sub)principles the tool helps you meet. Letters F/A/I/R for the badge
+          strip are derived from these.
+        type: array
+        uniqueItems: true
+        items:
+          enum: [F1, F2, F3, F4, A1, A1.1, A1.2, A2, I1, I2, I3, R1, R1.1, R1.2, R1.3]
+      contribution:
+        description: One or two sentences on HOW it helps (e.g. "assigns resolvable PIDs to datasets via DCAT records").
+        type: string
+      metroline_steps:
+        description: >
+          Optional override. By default this is derived from the step pages that
+          include the tool via show-badges/show-tiles.
+        type: array
+        items: {type: string}
+        x-source: [derived]
+
+  lifecycle_phases:
+    type: array
+    uniqueItems: true
+    items: {enum: [Plan, Collect, Process, Analyse, Preserve, Share, Reuse]}
+
+  domains:
+    description: Always a list. Use "Cross-domain" only on its own.
+    type: array
+    items: {type: string}
+    x-source: [biotools.topic]          # EDAM topics can propose domains
+
+  audience:
+    type: object
+    additionalProperties: false
+    properties:
+      roles:
+        type: array
+        items: {enum: [researcher, data steward, data manager, developer, IT / infrastructure, policy maker]}
+      skill_level: {enum: [beginner, intermediate, expert]}
+
+  # ── Identifiers & links ───────────────────────────────────────────────────
+  identifiers:
+    description: Registry IDs. These drive automatic enrichment.
+    type: object
+    additionalProperties: false
+    properties:
+      biotools: {type: string, description: "bio.tools ID, e.g. pyshacl"}
+      rsd:      {type: string, description: "Research Software Directory slug"}
+      github:   {type: string, pattern: "^[^/]+/[^/]+$", description: "owner/repo"}
+      software_doi: {type: string, description: "Zenodo concept DOI or similar (cite-all-versions)"}
+      fairsharing:  {type: string, description: "FAIRsharing record, mainly for standards and registries"}
+      rrid:     {type: string}
+      wikidata: {type: string, pattern: "^Q[0-9]+$"}
+
+  links:
+    type: object
+    additionalProperties: false
+    properties:
+      homepage:       {$ref: "#/$defs/url", x-source: [biotools.homepage, rsd.get_started_url]}
+      repository:     {$ref: "#/$defs/url", x-source: [biotools.link(Repository), derived(identifiers.github)]}
+      how_to_use:     {$ref: "#/$defs/links", description: "Manuals, quick-start guides, user docs", x-source: [biotools.documentation(General|Quick start guide|User manual)]}
+      download:       {$ref: "#/$defs/links", x-source: [biotools.download, github.releases]}
+      training:       {$ref: "#/$defs/links", x-source: [biotools.documentation(Training material)]}
+      api:            {$ref: "#/$defs/links", x-source: [biotools.documentation(API documentation)]}
+      issue_tracker:  {$ref: "#/$defs/url", x-source: [biotools.link(Issue tracker)]}
+      instances:
+        description: Hosted instances people in NL can actually use (e.g. Health-RI XNAT, Nictiz ART-DECOR).
+        type: array
+        items:
+          type: object
+          required: [url]
+          properties:
+            url: {$ref: "#/$defs/url"}
+            label: {type: string}
+            provider: {type: string}
+            access: {enum: [open, registration, institutional, restricted]}
+
+  # ── Citation ──────────────────────────────────────────────────────────────
+  citation:
+    type: object
+    additionalProperties: false
+    properties:
+      how_to_cite:
+        description: Free text shown in a "How to cite" box with a copy button.
+        type: string
+        x-source: [github.CITATION.cff, biotools.documentation(Citation instructions)]
+      primary_publication: {type: string, description: "DOI of the paper to cite"}
+      publications:
+        type: array
+        items: {type: string, description: "DOI or PMID"}
+        x-source: [biotools.publication]
+
+  # ── Licence & cost ────────────────────────────────────────────────────────
+  licensing:
+    type: object
+    additionalProperties: false
+    properties:
+      license:
+        description: SPDX identifier, or "Proprietary".
+        type: string
+        x-source: [biotools.license, rsd.license, github.license]
+      open_source:
+        type: boolean
+        x-source: [derived(license)]
+      cost:
+        enum: [free, free with restrictions, commercial, institutional licence]
+        x-source: [biotools.cost]
+      accessibility:
+        enum: [open, registration required, restricted]
+        x-source: [biotools.accessibility]
+
+  # ── Adoption (mostly fetched, never hand-typed) ───────────────────────────
+  adoption:
+    type: object
+    additionalProperties: false
+    properties:
+      institutes:
+        description: Curated. Names must match _data/affiliations.yml.
+        type: array
+        items: {type: string}
+      communities:
+        description: Curated, e.g. "ELIXIR NL", "EJP RD", "Health-RI".
+        type: array
+        items: {type: string}
+      metrics:
+        description: Filled by the enrichment step; do not edit by hand.
+        type: object
+        readOnly: true
+        properties:
+          citation_count: {type: integer, x-source: [europepmc, biotools.publication.metadata.citationCount]}
+          rsd_mentions:   {type: integer, x-source: [rsd.mentions]}
+          github_stars:   {type: integer, x-source: [github]}
+          contributors:   {type: integer, x-source: [github]}
+          latest_release: {type: string, format: date, x-source: [github.releases, biotools.version]}
+          last_commit:    {type: string, format: date, x-source: [github]}
+          fetched_at:     {type: string, format: date-time}
+
+  maturity:
+    enum: [emerging, mature, legacy]
+    x-source: [biotools.maturity]
+
+  # ── Fit for (sensitive) health data, always curated locally ──────────────
+  data_handling:
+    type: object
+    additionalProperties: false
+    properties:
+      personal_data:
+        description: Can you put personal or pseudonymised data into it?
+        enum: [suitable, conditional, not suitable, not applicable]
+      notes: {type: string, description: "e.g. needs a DPA, EU hosting, ISO 27001, NEN 7510"}
+      hosting_region: {enum: [EU, NL, non-EU, self-hosted, not applicable]}
+
+  # ── Relations ─────────────────────────────────────────────────────────────
+  works_with:
+    description: Replaces both `compatible_with` and the free-text "Integrations".
+    type: array
+    items:
+      type: object
+      required: [tool]
+      properties:
+        tool: {type: string, description: "id of another entry, or a plain name if not in the catalogue"}
+        how:  {type: string}
+        url:  {$ref: "#/$defs/url"}
+  alternatives:
+    type: array
+    items: {type: string}
+
+  # ── Type-specific blocks ─────────────────────────────────────────────────
+  executable:
+    type: object
+    additionalProperties: false
+    properties:
+      interfaces:
+        type: array
+        items: {enum: [web application, desktop application, command-line tool, library, web API, workflow, plug-in]}
+        x-source: [biotools.toolType]
+      deployment:
+        type: array
+        items: {enum: [SaaS, self-hosted, local install, institutional service]}
+      platforms:  {type: array, items: {type: string}, x-source: [biotools.operatingSystem]}
+      languages:  {type: array, items: {type: string}, x-source: [biotools.language, github.language]}
+      inputs:     {$ref: "#/$defs/io"}
+      outputs:    {$ref: "#/$defs/io"}
+      standards:
+        description: Standards it implements, validates, produces or consumes. Shown as chips.
+        type: array
+        items:
+          type: object
+          required: [name]
+          properties:
+            name: {type: string}
+            url:  {$ref: "#/$defs/url"}
+            role: {enum: [implements, produces, consumes, validates]}
+
+  registry:
+    type: object
+    additionalProperties: false
+    properties:
+      lists: {type: string, description: "What is registered, e.g. FAIR assessment tools, codebooks, data elements"}
+      size:  {type: string, description: "Approximate number of records, with a date"}
+      curation: {enum: [curated, community-submitted, automated harvest]}
+      submission_url: {$ref: "#/$defs/url"}
+      machine_access: {type: array, items: {enum: [API, SPARQL, OAI-PMH, bulk download, none]}}
+
+  assessment:
+    type: object
+    additionalProperties: false
+    properties:
+      mode: {enum: [manual questionnaire, automated, hybrid]}
+      assesses: {type: array, items: {enum: [dataset, metadata record, repository, project / organisation, awareness]}}
+      framework: {type: string, description: "e.g. RDA FAIR Data Maturity Model, FAIRsFAIR metrics, Gen2 FAIR metrics"}
+      result: {enum: [score, maturity level, report, checklist]}
+      duration: {type: string, description: "Rough time to complete, e.g. 15 min"}
+      requires_pid: {type: boolean, description: "Needs a resolvable identifier as input (automated evaluators)"}
+
+  standard:
+    type: object
+    additionalProperties: false
+    properties:
+      governing_body: {type: string}
+      version: {type: string}
+      status: {enum: [recommendation, draft, community standard, deprecated]}
+      serialisations: {type: array, items: {type: string}}
+      tooling: {type: array, items: {type: string}, description: "ids of tools that implement it"}
+
+  # ── Curation ─────────────────────────────────────────────────────────────
+  gaps_and_needs:
+    type: object
+    additionalProperties: false
+    properties:
+      gaps:       {type: array, items: {type: string}}
+      user_needs: {type: array, items: {type: string}}
+
+  curation:
+    type: object
+    additionalProperties: false
+    properties:
+      last_reviewed: {type: string, format: date}
+      contact: {type: string}
+
+# If there is no registry to fetch from, the basics must be written locally.
+allOf:
+  - if:
+      not:
+        anyOf:
+          - {required: [identifiers], properties: {identifiers: {required: [biotools]}}}
+          - {required: [identifiers], properties: {identifiers: {required: [rsd]}}}
+    then:
+      required: [name, short_description, links]
+      properties:
+        links: {required: [homepage]}
+  - if: {properties: {tool_type: {const: executable}}}
+    then: {properties: {registry: false, assessment: false, standard: false}}
+  - if: {properties: {tool_type: {const: registry}}}
+    then: {properties: {executable: false, assessment: false, standard: false}}
+  - if: {properties: {tool_type: {const: assessment}}}
+    then: {properties: {executable: false, registry: false, standard: false}}
+  - if: {properties: {tool_type: {const: standard}}}
+    then: {properties: {executable: false, registry: false, assessment: false}}
+
+$defs:
+  url: {type: string, format: uri}
+  links:
+    type: array
+    items:
+      type: object
+      required: [url]
+      properties:
+        url: {$ref: "#/$defs/url"}
+        label: {type: string}
+        note: {type: string}
+  io:
+    type: array
+    items:
+      type: object
+      required: [name]
+      properties:
+        name: {type: string}
+        format: {type: string, description: "e.g. CSV, XLSX, Turtle, DICOM"}
+        edam_format: {type: string, description: "EDAM format URI when known"}

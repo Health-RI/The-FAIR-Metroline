@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "fair-metroline",
+      "runtimeExecutable": "docker",
+      "runtimeArgs": ["run", "--rm", "--name", "fair-metroline-preview", "-p", "4001:4000", "-v", "/Users/vedran/git/The-FAIR-Metroline:/site", "fair-metroline"],
+      "port": 4001
+    }
+  ]
+}
