@@ -1,0 +1,65 @@
+{% comment %}
+  related-use-cases.html
+  Shows all tool use cases that use the specified tool_id
+  Usage: {% include toolassemblies/related-use-cases.html tool_id="oncoanalyser" %}
+{% endcomment %}
+
+{% assign current_tool_id = include.tool_id %}
+{% assign related_use_cases = "" | split: "" %}
+
+{% comment %} Loop through all tool-use-cases data files {% endcomment %}
+{% for use_case_file in site.data.tool-use-cases %}
+  {% assign use_case_id = use_case_file[0] %}
+  {% assign use_case_steps = use_case_file[1] %}
+  
+  {% comment %} Check if any step in this use case uses the current tool {% endcomment %}
+  {% assign tool_found = false %}
+  {% for step in use_case_steps %}
+    {% if step.tool_ids contains current_tool_id %}
+      {% assign tool_found = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  
+  {% comment %} If tool found, add this use case to related use cases {% endcomment %}
+  {% if tool_found %}
+    {% assign related_use_cases = related_use_cases | push: use_case_id %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Display the related use cases if any found {% endcomment %}
+{% if related_use_cases.size > 0 %}
+<div class="related-use-cases mt-5">
+  <h2>Related use cases</h2>
+  <div class="use-case-cards-grid use-case-cards-compact">
+    {% for use_case_id in related_use_cases %}
+      {% comment %} Find the use case metadata from use_cases_list.yml {% endcomment %}
+      {% assign use_case_meta = site.data.use_cases_list | where_exp: "item", "item.url contains use_case_id" | first %}
+      
+      {% if use_case_meta %}
+      <a href="/{{ use_case_meta.url }}" class="use-case-card">
+        {%- if use_case_meta.icon %}
+        <div class="use-case-card-icon">{{ use_case_meta.icon }}</div>
+        {%- endif %}
+        
+        <h3 class="use-case-card-title">{{ use_case_meta.title }}</h3>
+
+        {% if use_case_meta.description %}
+        <p class="use-case-card-description">{{ use_case_meta.description }}</p>
+        {% endif %}
+
+        <div class="use-case-card-meta">
+          {% if use_case_meta.type %}
+          <span class="use-case-type">{{ use_case_meta.type | replace: "_", " " | capitalize }}</span>
+          {% endif %}
+
+          {% if use_case_meta.complexity %}
+          <span class="use-case-complexity">{{ use_case_meta.complexity }} complexity</span>
+          {% endif %}
+        </div>
+      </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

@@ -10,7 +10,7 @@
 {% endfor %}
 
 
-<div class="metro-timeline{% if has_tool_features %} tool-scenario-timeline{% endif %}">
+<div class="metro-timeline{% if has_tool_features %} tool-use-case-timeline{% endif %}">
   {% for stop in include.stops %}
     {% assign step_refs = "" | split: "" %}
     {% if stop.step_ids %}

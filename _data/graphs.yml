@@ -54,7 +54,7 @@ analyse_data_semantics:
       click J "#b-for-new-metadata"
       click N "#step-go-to-the-next-metroline-step"
 
-scenario_evaluate_fairness:
+use_case_evaluate_fairness:
   - id: graph1
     label: Evaluate FAIRness
     initial_node_id: A

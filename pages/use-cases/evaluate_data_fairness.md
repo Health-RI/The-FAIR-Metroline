@@ -1,13 +1,14 @@
 ---
 title: How to evaluate the FAIRness of your data?
-permalink: scenarios/evaluate_data_fairness
+permalink: use-cases/evaluate_data_fairness
+redirect_from: /scenarios/evaluate_data_fairness
 page_id: evaluate_data_fairness
 custom_js: metro-timeline
 ---
 
-## Scenario Overview
+## Use Case Overview
 
-As a researcher, you may need to understand how FAIR your data currently is to comply with institutional requirements or to identify areas for improvement. In this scenario, you assess the current FAIRness level of your dataset to check compliance and pinpoint specific areas for improvement in how your data is described, accessed, and reused.
+As a researcher, you may need to understand how FAIR your data currently is to comply with institutional requirements or to identify areas for improvement. In this use case, you assess the current FAIRness level of your dataset to check compliance and pinpoint specific areas for improvement in how your data is described, accessed, and reused.
 
 <div class="metro-examples">
   <h4>Examples</h4>
@@ -21,7 +22,7 @@ As a researcher, you may need to understand how FAIR your data currently is to c
   </div>
 </div>
 
-{% include scenario-overview.html
+{% include use-case-overview.html
   complexity="Low"
   experts="Data Steward"
   outcome="FAIRness Assessment Report"
@@ -32,4 +33,4 @@ As a researcher, you may need to understand how FAIR your data currently is to c
 
 ## Your Journey
 
-{% include timeline.html stops=site.data.scenarios.evaluate_data_fairness %}
+{% include timeline.html stops=site.data.use-cases.evaluate_data_fairness %}
