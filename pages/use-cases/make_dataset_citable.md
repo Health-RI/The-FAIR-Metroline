@@ -1,11 +1,12 @@
 ---
 title: I want my existing dataset to be citable in my publication
-permalink: scenarios/make_dataset_citable
+permalink: use-cases/make_dataset_citable
+redirect_from: /scenarios/make_dataset_citable
 page_id: make_dataset_citable
 custom_js: metro-timeline
 ---
 
-## Scenario Overview
+## Use Case Overview
 I'm publishing a research paper based on an existing dataset. 
 I want to make sure that the dataset is citable in my publication.
 The dataset may contain sensitive data, so open access may not be an option. 
@@ -35,7 +36,7 @@ Before getting started:
   </div>
 </div>
 
-{% include scenario-overview.html
+{% include use-case-overview.html
   complexity="Low / Medium"
   experts="Data Steward"
   outcome="Citable dataset"
@@ -46,5 +47,5 @@ Before getting started:
 
 ## Your Journey
 
-{% include timeline.html stops=site.data.scenarios.make_dataset_citable %}
+{% include timeline.html stops=site.data.use-cases.make_dataset_citable %}
 

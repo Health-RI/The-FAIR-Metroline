@@ -1,0 +1,60 @@
+---
+layout: default
+custom_js: metro-timeline
+---
+
+{% assign use_case_id = page.page_id %}
+{% assign use_case = nil %}
+
+{% for s in site.data.use_cases_list %}
+  {% if s.page_id == use_case_id %}
+    {% assign use_case = s %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if use_case %}
+
+<h1>{{ use_case.title }}</h1>
+
+<h2>Background</h2>
+<p>{{ use_case.background }}</p>
+
+<h2>Use Case Overview</h2>
+
+<p>{{ use_case.overview }}</p>
+
+{% if use_case.experts %}
+  {% include use-case-overview.html complexity=use_case.complexity experts=use_case.experts outcome=use_case.outcome complexity_tooltip=use_case.complexity_tooltip experts_tooltip=use_case.experts_tooltip outcome_tooltip=use_case.outcome_tooltip %}
+{% elsif use_case.environment %}
+  {% include use-case-overview.html complexity=use_case.complexity environment=use_case.environment outcome=use_case.outcome complexity_tooltip=use_case.complexity_tooltip environment_tooltip=use_case.environment_tooltip outcome_tooltip=use_case.outcome_tooltip %}
+{% endif %}
+
+{% assign timeline_path_parts = use_case.timeline_data | split: "." %}
+{% if timeline_path_parts.size == 2 %}
+  {% if timeline_path_parts[0] == "use-cases" %}
+    {% assign timeline_stops = site.data.use-cases[timeline_path_parts[1]] %}
+  {% endif %}
+{% endif %}
+
+<!--Check and add prerequisites-->
+
+{% if timeline_stops %}
+  {% assign prerequisites = timeline_stops | where_exp: "item", "item.status == 'prerequisite'" %}
+  {% assign journey_stops = timeline_stops | where_exp: "item", "item.status != 'prerequisite'" %}
+  {% if prerequisites.size > 0 %}
+    <h3>Prerequisites</h3>
+    {% include use-case-prerequisites.html prerequisites=prerequisites %}
+  {% endif %}
+{% endif %}
+
+<h2>Your Journey</h2>
+
+{% include timeline.html stops=journey_stops %}
+
+{% else %}
+
+<h1>Use case not found</h1>
+<p>The requested use case could not be found. Please return to the <a href="{{ '/fair_metroline_use_cases' | relative_url }}">use cases overview</a>.</p>
+
+{% endif %}

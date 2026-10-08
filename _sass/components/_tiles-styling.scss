@@ -1,11 +1,11 @@
 // ============================================
 // SHARED CARD BASE STYLES
-// Used by both tool and scenario cards
+// Used by both tool and use case cards
 // ============================================
 
 // Shared card elements
 .tool-card-icon,
-.scenario-card-icon {
+.use-case-card-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,8 +137,8 @@
 
 // Tool-specific metadata styling
 .tool-type,
-.scenario-type,
-.scenario-complexity {
+.use-case-type,
+.use-case-complexity {
   font-size: 0.75rem;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
@@ -225,7 +225,7 @@
   }
 
   .tool-card-title,
-  .scenario-card-title {
+  .use-case-card-title {
     font-size: 1.1rem;
   }
 }

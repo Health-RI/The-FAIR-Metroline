@@ -1,11 +1,12 @@
 ---
 title: How to make a  new dataset interoperable from the start?
-permalink: scenarios/make_dataset_interoperable
+permalink: use-cases/make_dataset_interoperable
+redirect_from: /scenarios/make_dataset_interoperable
 page_id: make_dataset_interoperable
 custom_js: metro-timeline
 ---
 
-## Scenario Overview
+## Use Case Overview
 Research data can be difficult to combine and reuse when the same concepts are defined or collected differently across studies. Even seemingly straightforward data elements may differ in their meaning, values, units or formats.
 When designing a new dataset, you can address these differences from the start by clearly defining what you want to collect and aligning your data elements with existing standards where possible. This makes it easier to understand, compare and combine your data with data from other studies, whether for your own analyses or for reuse by others.
 
@@ -23,7 +24,7 @@ When designing a new dataset, you can address these differences from the start b
   </div>
 </div>
 
-{% include scenario-overview.html
+{% include use-case-overview.html
   complexity="Medium"
   experts="Data steward"
   outcome="Interoperable dataset"
@@ -32,14 +33,14 @@ When designing a new dataset, you can address these differences from the start b
   outcome_tooltip="A dataset that is aligned with other datasets and a codebook that describes the data elements."
 %}
 
-{% assign journey_stops = site.data.scenarios.make_dataset_interoperable | where_exp: "item", "item.status != 'prerequisite'" %}
-{% assign prerequisites = site.data.scenarios.make_dataset_interoperable | where_exp: "item", "item.status == 'prerequisite'" %}
+{% assign journey_stops = site.data.use-cases.make_dataset_interoperable | where_exp: "item", "item.status != 'prerequisite'" %}
+{% assign prerequisites = site.data.use-cases.make_dataset_interoperable | where_exp: "item", "item.status == 'prerequisite'" %}
 
 {% if prerequisites.size > 0 %}
 ### Prerequisites
-Before starting this scenario, you should have the following prerequisites in place.
+Before starting this use case, you should have the following prerequisites in place.
 
-{% include scenario-prerequisites.html prerequisites=prerequisites %}
+{% include use-case-prerequisites.html prerequisites=prerequisites %}
 {% endif %}
 
 ## Your Journey

@@ -1,11 +1,12 @@
 ---
 title: How to make my dataset Findable?
-permalink: scenarios/make_dataset_findable
+permalink: use-cases/make_dataset_findable
+redirect_from: /scenarios/make_dataset_findable
 page_id: make_dataset_findable
 custom_js: metro-timeline
 ---
 
-## Scenario Overview
+## Use Case Overview
 As a researcher, you may need to make your dataset Findable and 
 Accessible because of funder or institutional requirements.
 
@@ -23,7 +24,7 @@ Accessible because of funder or institutional requirements.
   </div>
 </div>
 
-{% include scenario-overview.html
+{% include use-case-overview.html
   complexity="Medium"
   experts="Data Steward"
   outcome="Findable Dataset"
@@ -34,5 +35,5 @@ Accessible because of funder or institutional requirements.
 
 ## Your Journey
 
-{% include timeline.html stops=site.data.scenarios.make_dataset_findable %}
+{% include timeline.html stops=site.data.use-cases.make_dataset_findable %}
 
