@@ -1,6 +1,6 @@
 ---
 title: How to analyse tumor data and publish the results
-permalink: tool-use-cases/transform_onco_data
+permalink: use-cases/transform_onco_data
 redirect_from: /tool-scenarios/transform_onco_data
 page_id: transform_onco_data
 custom_js: metro-timeline
@@ -19,8 +19,8 @@ You start with raw tumor sequencing files, run an analysis workflow to generate 
 {% include use-case-overview.html complexity="High" environment="HPC or Cloud" outcome="Published dataset" %}
 
 
-{% assign journey_stops = site.data.tool-use-cases.transform_onco_data | where_exp: "item", "item.status != 'prerequisite'" %}
-{% assign prerequisites = site.data.tool-use-cases.transform_onco_data | where_exp: "item", "item.status == 'prerequisite'" %}
+{% assign journey_stops = site.data.use-cases.transform_onco_data | where_exp: "item", "item.status != 'prerequisite'" %}
+{% assign prerequisites = site.data.use-cases.transform_onco_data | where_exp: "item", "item.status == 'prerequisite'" %}
 
 {% if prerequisites.size > 0 %}
 ### Prerequisites

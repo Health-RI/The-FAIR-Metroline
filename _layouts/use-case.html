@@ -34,8 +34,6 @@ custom_js: metro-timeline
 {% if timeline_path_parts.size == 2 %}
   {% if timeline_path_parts[0] == "use-cases" %}
     {% assign timeline_stops = site.data.use-cases[timeline_path_parts[1]] %}
-  {% elsif timeline_path_parts[0] == "tool-use-cases" %}
-    {% assign timeline_stops = site.data.tool-use-cases[timeline_path_parts[1]] %}
   {% endif %}
 {% endif %}
 

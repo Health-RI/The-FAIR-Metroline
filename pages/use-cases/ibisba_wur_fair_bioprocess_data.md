@@ -1,6 +1,6 @@
 ---
 title: How can we connect equipment data, metadata and repositories?
-permalink: tool-use-cases/ibisba_wur_fair_bioprocess_data
+permalink: use-cases/ibisba_wur_fair_bioprocess_data
 redirect_from: /tool-scenarios/ibisba_wur_fair_bioprocess_data
 page_id: ibisba_wur_fair_bioprocess_data
 custom_js: metro-timeline
@@ -18,8 +18,8 @@ You have sensors to collect data and you setup a pipeline to collected, FARIfy a
 
 {% include use-case-overview.html complexity="High" environment="Local or Cloud" outcome="Managed dataset" %}
 
-{% assign journey_stops = site.data.tool-use-cases.ibisba_wur_fair_bioprocess_data | where_exp: "item", "item.status != 'prerequisite'" %}
-{% assign prerequisites = site.data.tool-use-cases.ibisba_wur_fair_bioprocess_data | where_exp: "item", "item.status == 'prerequisite'" %}
+{% assign journey_stops = site.data.use-cases.ibisba_wur_fair_bioprocess_data | where_exp: "item", "item.status != 'prerequisite'" %}
+{% assign prerequisites = site.data.use-cases.ibisba_wur_fair_bioprocess_data | where_exp: "item", "item.status == 'prerequisite'" %}
 
 {% if prerequisites.size > 0 %}
 ### Prerequisites

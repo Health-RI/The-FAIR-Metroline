@@ -1,14 +1,14 @@
 {% comment %}
   related-use-cases.html
-  Shows all tool use cases that use the specified tool_id
+  Shows all use cases that use the specified tool_id
   Usage: {% include toolassemblies/related-use-cases.html tool_id="oncoanalyser" %}
 {% endcomment %}
 
 {% assign current_tool_id = include.tool_id %}
 {% assign related_use_cases = "" | split: "" %}
 
-{% comment %} Loop through all tool-use-cases data files {% endcomment %}
-{% for use_case_file in site.data.tool-use-cases %}
+{% comment %} Loop through all use-cases data files {% endcomment %}
+{% for use_case_file in site.data.use-cases %}
   {% assign use_case_id = use_case_file[0] %}
   {% assign use_case_steps = use_case_file[1] %}
   
