@@ -1,67 +1,82 @@
-# DEMO: compact tool entries (schema: _schemas/tool.schema.yml), rendered with _layouts/tool_compact.html.
-# An entry here overrides the matching id in _data/tools.yml.
+# DEMO tool entries (schema: _schemas/tool.schema.yml), rendered with _layouts/tool_profile.html.
+# An entry here overrides the matching id in _data/tools.yml; anything not given here is reused from
+# tools.yml (purpose text, manuals, training, templates, life cycle phases),
+# fetched from ids.biotools / ids.github, or derived (Metroline steps, scenarios).
 #
-# kind — what the reader does with it:
-#   document  = you read it or fill it in (checklist, questionnaire, spreadsheet, standard, maturity model)
-#   catalogue = you look things up or register things in it (registry, catalogue, metadata repository)
-#   service   = you log in to something someone else runs (account or licence)
-#   software  = you install or run it yourself
-# Licence, release activity and citation are fetched from ids.biotools / ids.github at build time.
-# Metroline steps are derived from the step pages that mention the tool.
+# tool_type: bio.tools toolType values (fetched when the tool is in bio.tools), or for resources
+#            bio.tools does not register: Self-assessment / checklist, Registry / catalogue,
+#            Standard / specification. See _data/tool_types.yml.
+# fair:      tags F, A, I, R and/or planning (FAIR assessment and planning). Letter level only.
+# domains:   NWO research fields (_data/research_fields.yml), or Cross-domain.
+# keywords:  from _data/keywords.yml (standards such as RDF link to their specification).
 
 - id: robot
-  kind: software
   name: ROBOT
-  description: Command-line toolkit to build, check and release ontologies.
-  fair_support_category: Semantics & validation
+  short_description: Command-line toolkit to build, check and release ontologies.
+  tool_type: [Command-line tool, Library]   # bio.tools record has no tool type yet, so set locally
+  fair: [I, R]
+  domains: [Biological sciences]
+  keywords: [ontology, OWL, OBO format, RDF, SPARQL]
   links:
     homepage: https://robot.obolibrary.org/
-    docs: https://robot.obolibrary.org/
   ids:
     biotools: robot
     github: ontodev/robot
   related: [protege, sssom-toolkit]
 
 - id: castor
-  kind: service
   name: Castor EDC
-  description: Cloud-based electronic data capture for clinical studies; most Dutch UMCs hold a licence.
-  fair_support_category: Capture & collection
-  access: institutional licence
+  short_description: Cloud-based electronic data capture for clinical studies; most Dutch UMCs hold a licence.
+  tool_type: [Web application]
+  fair: [I, R]
+  domains: [Clinical medicine, Health sciences]
+  cost: Commercial
+  access: Restricted access
   links:
     homepage: https://www.castoredc.com/
-    docs: https://helpdesk.castoredc.com/
-  note: Suitable for personal data under your institute's processing agreement.   # verify
+  keywords: [eCRF, RDF]   # RDF: export via semantic export templates
   institutes: [Amsterdam UMC, Erasmus MC, Leiden UMC, Maastricht UMC+, Radboudumc, UMCG]
-  related: [redcap, icrf-generator, codebook-to-castor-limesurvey]
+  related: [redcap, art-decor, icrf-generator, codebook-to-castor-limesurvey]
 
 - id: fairassist
-  kind: catalogue
   name: FAIRassist
-  description: Overview of FAIR assessment tools and metrics, to help you choose an assessment approach.
-  fair_support_category: Planning & assessment
-  access: free
+  short_description: Overview of FAIR assessment tools and metrics, to help you choose an assessment approach.
+  tool_type: [Registry / catalogue]
+  fair: [planning]
+  domains: [Cross-domain]
+  cost: Free of charge
+  access: Open access
   links:
     homepage: https://fairassist.org/
+  ids:
+    github: FAIRsharing/FAIRassist-App
   related: [fair-evaluator, fair-checker, fair-aware]
 
 - id: fair-aware
-  kind: document
   name: FAIR Aware
-  description: Short online questionnaire that tests how well you know the FAIR principles before you deposit data.
-  fair_support_category: Planning & assessment
-  access: free
+  short_description: Short online questionnaire that tests how well you know the FAIR principles before you deposit data.
+  tool_type: [Self-assessment / checklist]
+  fair: [planning]
+  domains: [Cross-domain]
+  cost: Free of charge
+  access: Open access
   links:
     homepage: https://fairaware.dans.knaw.nl/
   ids:
     github: FAIRsFAIR/fair-aware
+  related: [ardc-fair-self-assessment-tool, fair-data-maturity-model]
 
 - id: csv-on-the-web
-  kind: document
   name: CSV on the Web
-  description: W3C standard for describing the columns and meaning of CSV files in machine-readable metadata.
-  fair_support_category: Capture & collection
-  access: free
+  short_description: W3C standard for describing the columns and meaning of CSV files in machine-readable metadata.
+  tool_type: [Standard / specification]
+  fair: [I, R]
+  domains: [Cross-domain]
+  cost: Free of charge
+  access: Open access
   links:
     homepage: https://csvw.org/
     docs: https://www.w3.org/TR/tabular-data-primer/
+  keywords: [CSV, JSON-LD, RDF]
+  ids:
+    github: w3c/csvw

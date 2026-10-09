@@ -452,7 +452,7 @@
     - graphdb
     - fair-in-a-box
     - castor
-  biotools_id:
+  biotools_id: FAIRDataPoint
 
 - id: fair-in-a-box
   page_img_url: https://github.com/ejp-rd-vp.png?size=200
@@ -586,7 +586,7 @@
     Gaps:
     User needs:
   compatible_with:
-  biotools_id: openrefine
+  biotools_id:
 
 - id: cedar-workbench
   page_img_url: https://www.google.com/s2/favicons?domain=metadatacenter.org&sz=128
@@ -630,7 +630,7 @@
     Gaps:
     User needs:
   compatible_with:
-  biotools_id:
+  biotools_id: cedar_workbench
 
 - id: graphdb
   page_img_url: https://www.google.com/s2/favicons?domain=graphdb.ontotext.com&sz=128
@@ -888,7 +888,7 @@
     Gaps:
     User needs:
   compatible_with:
-  biotools_id:
+  biotools_id: fair-checker
 
 - id: fair-evaluator
   page_img_url: https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/assets/img/fairmetrics.png
@@ -1197,7 +1197,7 @@
     - art-decor
     - castor
     - redcap
-  biotools_id:
+  biotools_id: icrf_generator
 
 - id: codebook-to-castor-limesurvey
   page_img: logos/amsterdamumc_transp.svg
@@ -1286,7 +1286,7 @@
     User needs:
   compatible_with:
     - icrf-generator
-  biotools_id:
+  biotools_id: redcap
 
 - id: protege
   page_img_url: https://www.google.com/s2/favicons?domain=protege.stanford.edu&sz=128
@@ -1459,7 +1459,7 @@
     Gaps:
     User needs:
   compatible_with:
-  biotools_id: pyshacl
+  biotools_id:
 
 - id: sssom-toolkit
   page_img_url: https://github.com/mapping-commons.png?size=200

@@ -1,0 +1,424 @@
+// ============================================
+// TOOL PROFILE PAGE (DEMO) — _layouts/tool_profile.html
+// ============================================
+
+$tp-border: #dee2e6;
+$tp-muted: #6c757d;
+$tp-soft: #f8f9fa;
+$tp-fair: (F: #1f6fb2, A: #2a8c82, I: #6a4fb3, R: #b5562a);
+
+// The logo sits in the header, so hide the theme's large page image on these pages
+body:has(.tp-hero) .page-img-lg {
+  display: none;
+}
+
+// ---------- Header ----------
+.tp-hero {
+  border: 1px solid $tp-border;
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  background: #fff;
+}
+
+.tp-hero-main {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.tp-logo {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid $tp-border;
+  padding: 4px;
+  background: #fff;
+}
+
+.tp-hero-text { flex: 1; }
+
+.tp-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.tp-type {
+  padding: 0.12rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: #e7f0fa;
+  color: #1f5f9e;
+  cursor: help;
+
+  &--local { background: #fbf1e6; color: #96531c; }
+}
+
+.tp-lead {
+  margin: 0;
+  font-size: 1.12rem;
+  line-height: 1.4;
+}
+
+.tp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 2rem;
+  margin: 0.9rem 0 0;
+}
+
+.tp-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.tp-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $tp-muted;
+}
+
+.tp-fair {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.tp-fair-l,
+.tp-fair-plan {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.6rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #adb5bd;
+  background: $tp-soft;
+  border: 1px solid $tp-border;
+  cursor: help;
+}
+
+.tp-fair-l { width: 1.6rem; }
+
+.tp-fair-plan {
+  padding: 0 0.6rem;
+  font-weight: 600;
+  background: #455a64;
+  border-color: #455a64;
+  color: #fff;
+  cursor: default;
+
+  .tp-fair-l + & { margin-left: 0.4rem; }
+}
+
+@each $letter, $color in $tp-fair {
+  .tp-fair-#{$letter}.on { background: $color; border-color: $color; color: #fff; }
+}
+
+.tp-cycle {
+  display: inline-flex;
+  border: 1px solid $tp-border;
+  border-radius: 6px;
+  overflow: hidden;
+
+  span {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.74rem;
+    font-weight: 500;
+    color: #adb5bd;
+    background: $tp-soft;
+    border-right: 1px solid $tp-border;
+    cursor: help;
+
+    &:last-child { border-right: none; }
+
+    &.on {
+      background: mix($primary, #fff, 14%);
+      color: $primary;
+      font-weight: 700;
+    }
+  }
+}
+
+.tp-keywords {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.tp-keyword {
+  padding: 0.15rem 0.6rem;
+  border: 1px solid $tp-border;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background: $tp-soft;
+  color: #455a64;
+
+  &--std {
+    font-weight: 600;
+    color: $primary;
+    text-decoration: none;
+
+    &:hover { border-color: $primary; text-decoration: none; }
+  }
+}
+
+.tp-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.7rem 1.25rem;
+  margin: 1rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid $tp-border;
+
+  dt {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: $tp-muted;
+  }
+
+  dd { margin: 0.1rem 0 0; font-size: 0.95rem; }
+}
+
+.tp-domain {
+  display: inline-block;
+  margin: 0 0.3rem 0.2rem 0;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: $primary;
+  color: #fff;
+}
+
+.tp-pill {
+  display: inline-block;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  vertical-align: middle;
+  background: #eceff1;
+  color: #455a64;
+
+  &--ok, &--mature { background: #e8f5e9; color: #2e7d32; }
+  &--emerging { background: #e3f2fd; color: #1565c0; }
+  &--legacy { background: #fdecea; color: #c62828; }
+}
+
+.tp-muted { color: $tp-muted; font-size: 0.85rem; }
+
+.tp-activity {
+  &--active { color: #2e7d32; }
+  &--quiet { color: #b26a00; }
+  &--archived { color: #c62828; font-weight: 600; }
+}
+
+// ---------- How to cite ----------
+.tp-cite { margin-bottom: 1.5rem; }
+
+.tp-cite-title {
+  font-size: 1.05rem;
+  margin: 0 0 0.4rem;
+}
+
+.tp-cite-box {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.7rem 1rem;
+  border-left: 4px solid $primary;
+  border-radius: 0 8px 8px 0;
+  background: $tp-soft;
+
+  p { flex: 1; margin: 0; font-size: 0.92rem; }
+}
+
+// ---------- Sections ----------
+.tp-section {
+  margin-bottom: 1.6rem;
+
+  > h2 {
+    font-size: 1.3rem;
+    margin: 0 0 0.6rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid $tp-border;
+  }
+}
+
+.tp-subhead {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $tp-muted;
+  margin: 0.8rem 0 0.5rem;
+}
+
+// Metroline steps and scenarios: one card design for both
+.tp-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.6rem;
+}
+
+.tp-card {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid $tp-border;
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    border-color: $primary;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+  }
+}
+
+.tp-card-icon {
+  flex: 0 0 1.6rem;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  text-align: center;
+
+  img.emoji { width: 1.3rem; height: 1.3rem; }
+}
+
+.tp-card-body {
+  strong {
+    display: block;
+    font-size: 0.95rem;
+    color: $primary;
+  }
+
+  > span {
+    display: block;
+    margin-top: 0.15rem;
+    font-size: 0.82rem;
+    line-height: 1.35;
+    color: $tp-muted;
+  }
+}
+
+// Links as cards
+.tp-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 0.55rem;
+}
+
+.tp-link {
+  display: block;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid $tp-border;
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  word-break: break-word;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    border-color: $primary;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+  }
+}
+
+.tp-link-kind {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $primary;
+}
+
+.tp-link-label { font-size: 0.9rem; }
+
+// Adoption tiles
+.tp-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.6rem;
+}
+
+.tp-metric {
+  padding: 0.7rem;
+  border: 1px solid $tp-border;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.tp-metric-value {
+  display: block;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.tp-metric-label { font-size: 0.78rem; color: $tp-muted; }
+
+.tp-source {
+  margin: 0.4rem 0 0;
+  font-size: 0.78rem;
+  color: $tp-muted;
+}
+
+.tp-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+
+  img { height: 32px; width: auto; max-width: 130px; object-fit: contain; }
+}
+
+.tp-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 0.15rem 0.6rem;
+    border: 1px solid $tp-border;
+    border-radius: 6px;
+    background: $tp-soft;
+    font-size: 0.88rem;
+  }
+}
+
+.tp-list {
+  margin: 0;
+  padding-left: 1.1rem;
+
+  li { margin-bottom: 0.25rem; }
+}
+
+.tp-related {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+
+  > span:first-child { font-size: 0.85rem; color: $tp-muted; }
+}

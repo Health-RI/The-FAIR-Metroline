@@ -1,0 +1,201 @@
+---
+layout: page
+---
+{% comment %}
+  DEMO tool profile page (_schemas/tool.schema.yml).
+  page.v2       = curated entry from _data/tools_v2.yml
+  page.enriched = fetched at build time from bio.tools / GitHub (_plugins/tool_enrichment.rb)
+  page.links, page.metroline_steps, page.scenarios = built by _plugins/tool_page_generator.rb
+  Content not in tools_v2.yml is reused from the tool's entry in _data/tools.yml.
+  Every section is skipped when it has nothing to show.
+{% endcomment %}
+{% assign v = page.v2 %}
+{% assign e = page.enriched %}
+{% assign tool = site.data.tools | where: "id", page.tool_id | first %}
+{% assign res = tool.at_a_glance["Resource URLs"] %}
+
+{% if page.page_img contains "http://" or page.page_img contains "https://" %}
+  {% assign logo_url = page.page_img %}
+{% elsif page.page_img %}
+  {% assign logo_url = "/assets/img/" | append: page.page_img | relative_url %}
+{% endif %}
+
+{% comment %} ===== HEADER ===== {% endcomment %}
+<section class="tp-hero">
+  <div class="tp-hero-main">
+    {% if logo_url %}<img class="tp-logo" src="{{ logo_url }}" alt="">{% endif %}
+    <div class="tp-hero-text">
+      {% if page.tool_types.size > 0 %}
+      <div class="tp-types">
+        {% for t in page.tool_types %}
+        {% assign tdef = site.data.tool_types | where: "name", t | first %}
+        <span class="tp-type{% if tdef.source == 'local' %} tp-type--local{% endif %}" title="{{ tdef.text }}">{{ t }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+      <p class="tp-lead">{{ page.description }}</p>
+    </div>
+  </div>
+
+  <div class="tp-tags">
+    {% assign fair_letters = page.fair_tags | where_exp: "t", "t != 'planning'" %}
+    {% if fair_letters.size > 0 or page.fair_tags contains 'planning' %}
+    <div class="tp-tag-row">
+      <span class="tp-label">FAIR</span>
+      <span class="tp-fair">
+        {% if fair_letters.size > 0 %}
+        <span class="tp-fair-l tp-fair-F{% if page.fair_tags contains 'F' %} on{% endif %}" title="Findable">F</span>
+        <span class="tp-fair-l tp-fair-A{% if page.fair_tags contains 'A' %} on{% endif %}" title="Accessible">A</span>
+        <span class="tp-fair-l tp-fair-I{% if page.fair_tags contains 'I' %} on{% endif %}" title="Interoperable">I</span>
+        <span class="tp-fair-l tp-fair-R{% if page.fair_tags contains 'R' %} on{% endif %}" title="Reusable">R</span>
+        {% endif %}
+        {% if page.fair_tags contains 'planning' %}<span class="tp-fair-plan">FAIR assessment &amp; planning</span>{% endif %}
+      </span>
+    </div>
+    {% endif %}
+    {% if page.phase %}
+    <div class="tp-tag-row">
+      <span class="tp-label">Life cycle</span>
+      <span class="tp-cycle" aria-label="Data life cycle phases">
+        {% for stage in site.data.lifecycle_stages %}<span class="{% if page.phase contains stage.name %}on{% endif %}" title="{{ stage.text }}">{{ stage.name }}</span>{% endfor %}
+      </span>
+    </div>
+    {% endif %}
+  </div>
+
+  <dl class="tp-facts">
+    {% if page.license %}<div><dt>Licence</dt><dd>{{ page.license }}{% if page.open_source %} <span class="tp-pill tp-pill--ok">Open source</span>{% endif %}</dd></div>{% endif %}
+    {% if page.cost %}<div><dt>Cost</dt><dd>{{ page.cost }}</dd></div>{% endif %}
+    {% if page.access %}<div><dt>Access</dt><dd>{{ page.access }}</dd></div>{% endif %}
+    {% if page.maturity %}<div><dt>Maturity</dt><dd><span class="tp-pill tp-pill--{{ page.maturity | downcase }}">{{ page.maturity }}</span> <span class="tp-muted">bio.tools</span></dd></div>{% endif %}
+    {% if page.maintenance and page.is_software or page.maintenance.status == "archived" %}<div><dt>Activity</dt><dd class="tp-activity tp-activity--{{ page.maintenance.status }}">{{ page.maintenance.label }}</dd></div>{% endif %}
+    {% if page.domain %}<div><dt>Domains</dt><dd>{% for d in page.domain %}<span class="tp-domain">{{ d }}</span>{% endfor %}</dd></div>{% endif %}
+  </dl>
+</section>
+
+{% comment %} ===== HOW TO CITE ===== {% endcomment %}
+{% assign cite = v.how_to_cite | default: e.how_to_cite %}
+{% assign homepage = page.links | where: "kind", "Website" | first %}
+<section class="tp-cite">
+  <h2 class="tp-cite-title">How to cite</h2>
+  {% if cite %}
+  <div class="tp-cite-box">
+    <p id="tp-cite-text">{{ cite }}</p>
+    <button type="button" class="btn btn-sm btn-outline-primary" onclick="navigator.clipboard.writeText(document.getElementById('tp-cite-text').innerText);this.innerText='Copied'">Copy</button>
+  </div>
+  {% else %}
+  <p class="tp-muted">No citation instructions from the developers. Cite it by name and URL{% if homepage %}, for example: <em>{{ page.title }}. {{ homepage.url }} (accessed {{ site.time | date: "%-d %B %Y" }})</em>{% endif %}.</p>
+  {% endif %}
+</section>
+
+<div class="tp-sections">
+
+{% comment %} ===== ABOUT ===== {% endcomment %}
+{% assign about = v.description | default: tool.at_a_glance["Purpose and core functionality"] %}
+{% if about %}
+<section class="tp-section">
+  <h2>About</h2>
+  <p>{{ about }}</p>
+</section>
+{% endif %}
+
+{% comment %} ===== WHERE IT FITS: Metroline steps + scenarios ===== {% endcomment %}
+{% if page.metroline_steps.size > 0 or page.scenarios.size > 0 %}
+<section class="tp-section">
+  <h2>Where it fits in the FAIR Metroline</h2>
+  {% if page.metroline_steps.size > 0 %}
+  <h3 class="tp-subhead">Metroline steps</h3>
+  <div class="tp-cards">
+    {% for st in page.metroline_steps %}
+    <a class="tp-card" href="{{ st.url | relative_url }}">
+      <span class="tp-card-icon" aria-hidden="true">{{ st.icon }}</span>
+      <span class="tp-card-body">
+        <strong>{{ st.title }}</strong>
+        {% if st.summary %}<span>{{ st.summary | strip_html | truncatewords: 14 }}</span>{% endif %}
+      </span>
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% if page.scenarios.size > 0 %}
+  <h3 class="tp-subhead">Scenarios</h3>
+  <div class="tp-cards">
+    {% for sc in page.scenarios %}
+    <a class="tp-card" href="/{{ sc.url }}">
+      <span class="tp-card-icon" aria-hidden="true">{{ sc.icon }}</span>
+      <span class="tp-card-body">
+        <strong>{{ sc.title }}</strong>
+        <span>{% if sc.via.size > 0 %}Uses it in: {{ sc.via | join: ", " }}{% else %}Uses this tool directly{% endif %}{% if sc.complexity %} · {{ sc.complexity }} complexity{% endif %}</span>
+      </span>
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+{% endif %}
+
+{% comment %} ===== LINKS ===== {% endcomment %}
+{% if page.links.size > 0 %}
+<section class="tp-section">
+  <h2>Links</h2>
+  <div class="tp-links">
+    {% for l in page.links %}
+    <a class="tp-link" href="{{ l.url }}" target="_blank" rel="noopener"{% if l.note != blank %} title="{{ l.note }}"{% endif %}>
+      <span class="tp-link-kind">{{ l.kind }}</span>
+      <span class="tp-link-label">{{ l.label }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% comment %} ===== ADOPTION AND ACTIVITY ===== {% endcomment %}
+{% assign has_metrics = false %}
+{% if e.citation_count > 0 or e.github_stars or e.latest_release or e.last_commit %}{% assign has_metrics = true %}{% endif %}
+{% if has_metrics or page.institutes %}
+<section class="tp-section">
+  <h2>Adoption and activity</h2>
+  {% if has_metrics %}
+  <div class="tp-metrics">
+    {% if e.citation_count > 0 %}<div class="tp-metric"><span class="tp-metric-value">{{ e.citation_count }}</span><span class="tp-metric-label">citations</span></div>{% endif %}
+    {% if e.github_stars %}<div class="tp-metric"><span class="tp-metric-value">{{ e.github_stars }}</span><span class="tp-metric-label">GitHub stars</span></div>{% endif %}
+    {% if e.latest_release %}<div class="tp-metric"><span class="tp-metric-value">{{ e.latest_release }}</span><span class="tp-metric-label">latest release{% if e.latest_release_date %} · {{ e.latest_release_date | date: "%b %Y" }}{% endif %}</span></div>{% endif %}
+    {% if e.last_commit %}<div class="tp-metric"><span class="tp-metric-value">{{ e.last_commit | date: "%b %Y" }}</span><span class="tp-metric-label">last code change</span></div>{% endif %}
+  </div>
+  <p class="tp-source">From{% if v.ids.biotools %} bio.tools{% endif %}{% if v.ids.biotools and v.ids.github %} and{% endif %}{% if v.ids.github %} GitHub{% endif %}{% if e.fetched_at %}, {{ e.fetched_at | date: "%-d %b %Y" }}{% endif %}.</p>
+  {% endif %}
+  {% if page.institutes %}
+  <h3 class="tp-subhead">Used by</h3>
+  <div class="tp-logos">
+    {% for institute in page.institutes %}
+    {% assign affiliation = site.data.affiliations | where: "name", institute | first %}
+    {% if affiliation %}<a href="{{ affiliation.url }}" target="_blank" title="{{ institute }}"><img src="/{{ affiliation.image_url }}" alt="{{ institute }}"></a>
+    {% else %}<span class="badge bg-info">{{ institute }}</span>{% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+{% endif %}
+
+{% comment %} ===== KEYWORDS (from _data/keywords.yml; standards link to their specification) ===== {% endcomment %}
+{% if v.keywords %}
+<section class="tp-section">
+  <h2>Keywords</h2>
+  <div class="tp-keywords">
+    {% for k in v.keywords %}
+    {% assign kw = site.data.keywords | where: "name", k | first %}
+    {% if kw.url %}<a class="tp-keyword tp-keyword--std" href="{{ kw.url }}" target="_blank" rel="noopener" title="{{ kw.text }}">{{ k }}</a>{% else %}<span class="tp-keyword">{{ k }}</span>{% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% comment %} ===== RELATED TOOLS: curated links to other catalogue entries ===== {% endcomment %}
+{% if v.related %}
+<section class="tp-section">
+  <h2>Related tools</h2>
+  <div class="tp-related"><span>Related in this catalogue</span>{% include toolassemblies/show-badges.html ids=v.related %}</div>
+</section>
+{% endif %}
+
+</div>

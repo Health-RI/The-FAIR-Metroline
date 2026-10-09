@@ -1,0 +1,17 @@
+# Domain vocabulary: NWO research fields, second level (https://www.nwo.nl/en/nwo-research-fields,
+# in use from 1 July 2026). The six top-level groups match the OECD Fields of Science and Technology.
+# "Cross-domain" is our addition for resources that are not specific to one field; use it on its own.
+- group: Cross-domain
+  fields: [Cross-domain]
+- group: Natural sciences
+  fields: [Mathematics, Computer and information sciences, Physical sciences, Chemical sciences, Earth and related environmental sciences, Biological sciences, "Astronomy, Astrophysics"]
+- group: Engineering and technology
+  fields: [Civil engineering, "Electrical engineering, electronic engineering, information engineering", Mechanical engineering, Chemical engineering, Materials engineering, Medical engineering, Environmental engineering, Environmental biotechnology, Industrial biotechnology, Nanotechnology, Design Engineering]
+- group: Medical and health sciences
+  fields: [Basic medicine, Clinical medicine, Health sciences, Medical biotechnology, Other medical sciences]
+- group: Agricultural and veterinary sciences
+  fields: ["Agriculture, forestry, and fisheries", Animal and dairy science, Veterinary sciences, Agricultural biotechnology, Food and nutrition sciences]
+- group: Social sciences
+  fields: [Psychology and cognitive sciences, Economics and Business administration, Education, Sociology, Law, Political sciences, Social and economic geography, Media and Communication sciences, Other social sciences]
+- group: Humanities and the arts
+  fields: [History and archaeology, Languages and literature, "Philosophy, ethics and religion", "Arts (arts, history of arts, performing arts, music)", Other humanities]

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'time'
+
 module Jekyll
   # Generator plugin to create individual tool pages from _data/tools.yml
   class ToolPageGenerator < Generator
@@ -11,9 +13,10 @@ module Jekyll
       tools_data = site.data['tools']
       return unless tools_data
 
-      # DEMO: entries in _data/tools_v2.yml (new schema) override tools.yml and use the tool_v2 layout
+      # DEMO: entries in _data/tools_v2.yml (new schema) override tools.yml and use the tool_profile layout
       v2_entries = (site.data['tools_v2'] || []).to_h { |t| [t['id'], t] }
       steps_by_tool = metroline_steps_by_tool(site)
+      scenarios_by_tool = scenarios_by_tool(site, steps_by_tool)
 
       # For each tool, create a page
       tools_data.each do |tool|
@@ -46,7 +49,8 @@ module Jekyll
         # Create the page
         page = ToolPage.new(site, tool_id, tool_name, slug, domain, phase, institutes, image_path, short_description, biotools_id, fair_support_category)
         page.data['metroline_steps'] = steps_by_tool[tool_id] || []
-        apply_v2(site, page, v2_entries[tool_id]) if v2_entries[tool_id]
+        page.data['scenarios'] = scenarios_by_tool[tool_id] || []
+        apply_v2(site, page, v2_entries[tool_id], tool) if v2_entries[tool_id]
         site.pages << page
       end
     end
@@ -56,37 +60,124 @@ module Jekyll
     # Which Metroline step pages mention each tool through show-badges / show-tiles.
     def metroline_steps_by_tool(site)
       index = Hash.new { |h, k| h[k] = [] }
+      steps_meta = (site.data['metroline_steps'] || []).to_h { |st| ["/#{st['url']}", st] }
       site.pages.each do |p|
         next unless p.path.start_with?('pages/metroline_steps/')
 
         p.content.scan(/show-(?:badges|tiles)\.html\s+ids="([^"]+)"/).flatten
          .flat_map { |ids| ids.split(',').map(&:strip) }.uniq.each do |id|
-          index[id] << { 'title' => p.data['title'], 'url' => p.url }
+          meta = steps_meta[p.url] || {}
+          index[id] << { 'id' => meta['id'], 'title' => p.data['title'], 'url' => p.url,
+                         'summary' => meta['summary'], 'icon' => meta['icon'] }
         end
       end
       index
     end
 
-    def apply_v2(site, page, entry)
-      enriched = ToolEnrichment.enrich(site, entry)
+    # Scenarios per tool: tool scenarios list tool_ids explicitly; FAIR guideline scenarios are
+    # related when they pass through a Metroline step that mentions the tool.
+    def scenarios_by_tool(site, steps_by_tool)
+      list = site.data['scenarios_list'] || []
+      meta = ->(sid) { list.find { |s| s['url'].to_s.split('/').last == sid } }
+      out = Hash.new { |h, k| h[k] = [] }
+
+      (site.data['tool-scenarios'] || {}).each do |sid, steps|
+        next unless (m = meta.call(sid))
+
+        Array(steps).flat_map { |st| Array(st['tool_ids']) }.uniq.each { |tid| out[tid] << m.merge('via' => []) }
+      end
+
+      (site.data['scenarios'] || {}).each do |sid, steps|
+        next unless (m = meta.call(sid))
+
+        step_ids = Array(steps).map { |st| st['step_id'] }.compact
+        steps_by_tool.each do |tid, tool_steps|
+          via = tool_steps.select { |ts| step_ids.include?(ts['id']) }.map { |ts| ts['title'] }
+          out[tid] << m.merge('via' => via) unless via.empty?
+        end
+      end
+      out
+    end
+
+    def apply_v2(site, page, entry, tool)
+      e = ToolEnrichment.enrich(site, entry)
       d = page.data
-      d['layout'] = 'tool_v2'
+      d['layout'] = 'tool_profile'
+      d['toc'] = false
       d['v2'] = entry
-      d['enriched'] = enriched
-      d['title'] = entry['name'] || enriched['name'] || d['title']
+      d['enriched'] = e
+      d['title'] = entry['name'] || e['name'] || d['title']
       d['description'] = entry['short_description'] if entry['short_description']
       d['page_img'] = entry['logo'] if entry['logo']
-      d['tool_type'] = entry['tool_type']
-      d['fair_support_category'] = entry.dig('fair', 'support_category')
-      d['fair_letters'] = Array(entry.dig('fair', 'principles')).map { |p| p[0] }.uniq
-      d['phase'] = Array(entry['lifecycle_phases']).sort_by { |p| LIFECYCLE_ORDER.index(p) || 999 } if entry['lifecycle_phases']
+      d['tool_types'] = Array(entry['tool_type']).empty? ? Array(e['tool_types']) : Array(entry['tool_type'])
+      local_types = (site.data['tool_types'] || []).select { |t| t['source'] == 'local' }.map { |t| t['name'] }
+      d['is_software'] = !d['tool_types'].empty? && (d['tool_types'] - local_types).any?
+      d['fair_tags'] = Array(entry['fair'])
+      d['phase'] = Array(entry['lifecycle']).sort_by { |p| LIFECYCLE_ORDER.index(p) || 999 } if entry['lifecycle']
       d['domain'] = entry['domains'] if entry['domains']
-      d['institutes'] = entry.dig('adoption', 'institutes') if entry.dig('adoption', 'institutes')
-      d['metroline_steps'] = entry.dig('fair', 'metroline_steps') if entry.dig('fair', 'metroline_steps')
+      d['institutes'] = entry['institutes'] if entry['institutes']
 
-      license = entry.dig('licensing', 'license') || enriched['license']
+      license = entry['license'] || e['license']
+      open_source = license && license != 'Proprietary'
       d['license'] = license
-      d['open_source'] = entry.dig('licensing', 'open_source').then { |o| o.nil? ? (license && license != 'Proprietary') : o }
+      d['open_source'] = open_source
+      d['cost'] = entry['cost'] || e['cost'] || (open_source ? 'Free of charge' : nil)
+      d['access'] = entry['access'] || e['accessibility'] || (open_source ? 'Open access' : nil)
+      d['maturity'] = entry['maturity'] || e['maturity']
+      d['maintenance'] = maintenance(e, site.time)
+      d['links'] = collect_links(entry, e, tool)
+    end
+
+    # One list of links for the page: curated, then reused from tools.yml, then fetched. De-duplicated by URL.
+    def collect_links(entry, e, tool)
+      res = tool.dig('at_a_glance', 'Resource URLs') || {}
+      ids = entry['ids'] || {}
+      website = entry.dig('links', 'homepage') || e['homepage'] || parse_links(tool.dig('at_a_glance', 'Website')).first&.dig('url')
+      links = []
+      links << { 'kind' => 'Website', 'url' => website, 'label' => website.to_s.sub(%r{\Ahttps?://}, '').sub(%r{/\z}, '') } if website
+      links << { 'kind' => 'Documentation', 'url' => entry.dig('links', 'docs'), 'label' => 'Documentation' } if entry.dig('links', 'docs')
+      parse_links(res['Manuals']).each { |l| links << l.merge('kind' => 'Documentation') }
+      Array(e['how_to_use']).each { |l| links << { 'kind' => 'Documentation', 'url' => l['url'], 'label' => l['label'] } }
+      parse_links(res['Training']).each { |l| links << l.merge('kind' => 'Training') }
+      parse_links(res['Scripts and workflows']).each { |l| links << l.merge('kind' => 'Templates and examples') }
+      parse_links(res['Specific documentation, e.g. versioning']).each { |l| links << l.merge('kind' => 'Versions') }
+      download = entry.dig('links', 'download') || Array(e['download']).first&.dig('url') || e['releases_url']
+      links << { 'kind' => 'Download', 'url' => download, 'label' => download.include?('github.com') ? 'Releases on GitHub' : 'Download' } if download
+      repo = ids['github'] ? "https://github.com/#{ids['github']}" : e['repository']
+      links << { 'kind' => 'Source code', 'url' => repo, 'label' => repo.sub(%r{\Ahttps?://}, '').sub(%r{/\z}, '') } if repo
+      links << { 'kind' => 'Report an issue', 'url' => e['issue_tracker'], 'label' => 'Issue tracker' } if e['issue_tracker']
+      links << { 'kind' => 'Registry', 'url' => "https://bio.tools/#{ids['biotools']}", 'label' => 'bio.tools' } if ids['biotools']
+      links << { 'kind' => 'Registry', 'url' => "https://research-software-directory.org/software/#{ids['rsd']}", 'label' => 'Research Software Directory' } if ids['rsd']
+      links << { 'kind' => 'Registry', 'url' => "https://doi.org/#{ids['fairsharing']}", 'label' => 'FAIRsharing' } if ids['fairsharing']
+      links << { 'kind' => 'DOI', 'url' => "https://doi.org/#{ids['doi']}", 'label' => ids['doi'] } if ids['doi']
+      parse_links(res['Other']).each { |l| links << l.merge('kind' => 'Other') }
+
+      seen = {}
+      links.select { |l| l['url'] && !seen[l['url'].sub(%r{/\z}, '')] && (seen[l['url'].sub(%r{/\z}, '')] = true) }
+    end
+
+    # tools.yml stores links as "<a href='url'>label</a> - note"; items without a link are skipped.
+    def parse_links(items)
+      Array(items).compact.filter_map do |item|
+        m = item.to_s.match(%r{<a\s+href=['"]([^'"]+)['"][^>]*>(.*?)</a>(.*)}m)
+        next unless m
+
+        { 'url' => m[1], 'label' => m[2].gsub(/<[^>]+>/, '').strip,
+          'note' => m[3].sub(/\A[\s)]*[-–]\s*/, '').gsub(/<[^>]+>/, '').strip }
+      end
+    end
+
+    # One-line activity signal from GitHub: archived, active (code change in the last 12 months) or quiet.
+    def maintenance(e, now)
+      return { 'status' => 'archived', 'label' => 'Archived: no longer maintained' } if e['archived']
+
+      last_change = e['last_commit'] && Time.parse(e['last_commit'])
+      return nil unless last_change
+
+      release = e['latest_release_date'] && Time.parse(e['latest_release_date'])
+      when_text = release ? "last release #{release.strftime('%b %Y')}" : "last change #{last_change.strftime('%b %Y')}"
+      active = (now - last_change) < 365 * 24 * 3600
+      { 'status' => active ? 'active' : 'quiet', 'label' => "#{active ? 'Active' : 'No recent activity'} · #{when_text}" }
     end
   end
 

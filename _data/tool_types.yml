@@ -1,0 +1,23 @@
+# Tool type vocabulary.
+# source: biotools = biotoolsSchema toolType (https://github.com/bio-tools/biotoolsSchema);
+#         for tools in bio.tools the value is fetched, a local value only overrides it.
+# source: local    = for resources that bio.tools does not register.
+- {name: Bioinformatics portal, source: biotools, text: "Web portal that bundles several tools, databases or services"}
+- {name: Command-line tool, source: biotools, text: "Run from a terminal or in scripts"}
+- {name: Database portal, source: biotools, text: "Web front end to a database you can search or browse"}
+- {name: Desktop application, source: biotools, text: "Installed and used through a graphical interface on your own computer"}
+- {name: Library, source: biotools, text: "Code you call from your own programs"}
+- {name: Mobile application, source: biotools, text: "App for phones or tablets"}
+- {name: Ontology, source: biotools, text: "A structured vocabulary of terms and their relations"}
+- {name: Plug-in, source: biotools, text: "Extension that adds functions to another tool"}
+- {name: Script, source: biotools, text: "A small program or set of commands for one task"}
+- {name: SPARQL endpoint, source: biotools, text: "Service that answers SPARQL queries over RDF data"}
+- {name: Suite, source: biotools, text: "A collection of tools distributed together"}
+- {name: Web application, source: biotools, text: "Used in the browser, nothing to install"}
+- {name: Web API, source: biotools, text: "Programmatic interface over HTTP"}
+- {name: Web service, source: biotools, text: "Service offered over the web for other software to use"}
+- {name: Workbench, source: biotools, text: "Environment that combines tools into one interface"}
+- {name: Workflow, source: biotools, text: "A chain of tools run as one pipeline"}
+- {name: Self-assessment / checklist, source: local, text: "Questionnaire, checklist, spreadsheet or maturity model you fill in"}
+- {name: Registry / catalogue, source: local, text: "Catalogue or registry where you look up or register resources"}
+- {name: Standard / specification, source: local, text: "A standard, format or specification you apply"}

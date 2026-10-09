@@ -1,0 +1,21 @@
+# Keywords that tool entries can use (tools_v2.yml: keywords: [...]). One shared list keeps spelling
+# consistent and makes keywords usable for search and filtering. Add a keyword here before using it.
+#
+# A keyword names something concrete a reader would search for: a standard, a format or an artefact.
+# Avoid generic activities such as "validation" or "data capture"; the tool type and FAIR tags cover those.
+# Standards and formats carry a link to their specification.
+
+# Standards and formats
+- {name: RDF, url: "https://www.w3.org/RDF/", text: "W3C data model for linked data"}
+- {name: OWL, url: "https://www.w3.org/OWL/", text: "W3C language for ontologies"}
+- {name: OBO format, url: "https://owlcollab.github.io/oboformat/doc/obo-syntax.html", text: "Text format for OBO Foundry ontologies"}
+- {name: SPARQL, url: "https://www.w3.org/TR/sparql11-query/", text: "W3C query language for RDF"}
+- {name: SHACL, url: "https://www.w3.org/TR/shacl/", text: "W3C language for validating RDF against shapes"}
+- {name: JSON-LD, url: "https://www.w3.org/TR/json-ld11/", text: "JSON serialisation of linked data"}
+- {name: DCAT, url: "https://www.w3.org/TR/vocab-dcat-3/", text: "W3C vocabulary for data catalogues"}
+- {name: CSV, url: "https://www.rfc-editor.org/rfc/rfc4180", text: "Comma-separated values files"}
+
+# Artefacts
+- {name: ontology}
+- {name: codebook}
+- {name: eCRF}

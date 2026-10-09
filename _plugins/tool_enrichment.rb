@@ -12,17 +12,18 @@ module Jekyll
   # live-reload rebuilds don't hit the APIs. Failures are logged and ignored.
   module ToolEnrichment
     CACHE_TTL = 24 * 3600
+    CACHE_VERSION = 3 # bump when new fields are fetched, so cached entries refresh
 
     module_function
 
     def enrich(site, entry)
-      ids = entry['identifiers'] || {}
+      ids = entry['ids'] || entry['identifiers'] || {}
       key = [ids['biotools'], ids['github']].compact.join('|')
       return {} if key.empty?
 
       cache = load_cache(site)
       hit = cache[key]
-      return hit['data'] if hit && Time.now.to_i - hit['at'] < CACHE_TTL
+      return hit['data'] if hit && hit['v'] == CACHE_VERSION && Time.now.to_i - hit['at'] < CACHE_TTL
 
       data = {}
       data.merge!(from_biotools(ids['biotools'])) if ids['biotools']
@@ -32,8 +33,10 @@ module Jekyll
         data['how_to_cite'] = gh['how_to_cite'] if gh['how_to_cite'] # CITATION.cff is the authors' own choice
       end
       data['fetched_at'] = Time.now.utc.strftime('%Y-%m-%d')
+      # Keep the last good values for anything this fetch could not get (e.g. GitHub rate limit)
+      data = hit['data'].merge(data) if hit
 
-      cache[key] = { 'at' => Time.now.to_i, 'data' => data }
+      cache[key] = { 'at' => Time.now.to_i, 'v' => CACHE_VERSION, 'data' => data }
       save_cache(site, cache)
       data
     end
@@ -50,11 +53,15 @@ module Jekyll
       {
         'name' => d['name'],
         'homepage' => d['homepage'],
+        'tool_types' => d['toolType'],
+        'topics' => Array(d['topic']).map { |t| t['term'] }.compact,
+        'operations' => Array(d['function']).flat_map { |f| Array(f['operation']).map { |o| o['term'] } }.compact.uniq,
         'license' => d['license'],
         'languages' => d['language'],
         'platforms' => d['operatingSystem'],
         'maturity' => d['maturity'],
         'cost' => d['cost'],
+        'accessibility' => d['accessibility'],
         'repository' => links.find { |l| Array(l['type']).include?('Repository') }&.dig('url'),
         'issue_tracker' => links.find { |l| Array(l['type']).include?('Issue tracker') }&.dig('url'),
         'how_to_use' => docs.reject { |x| Array(x['type']).include?('Citation instructions') }
@@ -74,9 +81,11 @@ module Jekyll
       out = {
         'repository' => d['html_url'],
         'issue_tracker' => d['has_issues'] ? "#{d['html_url']}/issues" : nil,
+        'archived' => d['archived'],
         'github_stars' => d['stargazers_count'],
         'last_commit' => d['pushed_at']&.slice(0, 10),
         'latest_release' => release && release['tag_name'],
+        'releases_url' => release && "#{d['html_url']}/releases",
         'latest_release_date' => release && release['published_at']&.slice(0, 10),
         'languages' => [d['language']].compact,
         'license' => d.dig('license', 'spdx_id').then { |l| l == 'NOASSERTION' ? nil : l }

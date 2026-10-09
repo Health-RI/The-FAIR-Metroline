@@ -4,8 +4,8 @@
     {
       "name": "fair-metroline",
       "runtimeExecutable": "docker",
-      "runtimeArgs": ["run", "--rm", "--name", "fair-metroline-preview", "-p", "4001:4000", "-v", "/Users/vedran/git/The-FAIR-Metroline:/site", "fair-metroline"],
-      "port": 4001
+      "runtimeArgs": ["run", "--rm", "--name", "fair-metroline-preview", "-p", "4000:4000", "-v", "/Users/vedran/git/The-FAIR-Metroline:/site", "fair-metroline"],
+      "port": 4000
     }
   ]
 }
