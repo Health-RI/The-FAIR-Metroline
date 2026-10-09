@@ -162,6 +162,7 @@ properties:
   access: {enum: [Open access, Open access (with restrictions), Restricted access]}
   license: {type: string, description: "Only to override the fetched licence (SPDX identifier or Proprietary)"}
   maturity: {enum: [Emerging, Mature, Legacy], description: "Only to override bio.tools maturity"}
+  deprecated: {type: boolean, description: "Set when the maintainers have stopped the tool; the page shows a warning instead of activity"}
   how_to_cite: {type: string, description: "Only if not available from CITATION.cff or bio.tools"}
 
   institutes:
@@ -176,7 +177,7 @@ properties:
     type: array
     uniqueItems: true
     items:
-      enum: [RDF, OWL, OBO format, SPARQL, SHACL, JSON-LD, DCAT, CSV, ontology, codebook, eCRF]
+      enum: [RDF, OWL, OBO format, SPARQL, SHACL, JSON-LD, DCAT, CSV, DICOM, FHIR, CDISC ODM, CARE-SM, ISA, SSSOM, Bioschemas, nanopublication, RDA DMP Common Standard, MQTT, ontology, codebook, eCRF]
 
   related:
     description: ids of related catalogue entries; shown as Related tools.

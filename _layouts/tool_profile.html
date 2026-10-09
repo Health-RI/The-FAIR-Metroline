@@ -68,7 +68,7 @@ layout: page
     {% if page.cost %}<div><dt>Cost</dt><dd>{{ page.cost }}</dd></div>{% endif %}
     {% if page.access %}<div><dt>Access</dt><dd>{{ page.access }}</dd></div>{% endif %}
     {% if page.maturity %}<div><dt>Maturity</dt><dd><span class="tp-pill tp-pill--{{ page.maturity | downcase }}">{{ page.maturity }}</span> <span class="tp-muted">bio.tools</span></dd></div>{% endif %}
-    {% if page.maintenance and page.is_software or page.maintenance.status == "archived" %}<div><dt>Activity</dt><dd class="tp-activity tp-activity--{{ page.maintenance.status }}">{{ page.maintenance.label }}</dd></div>{% endif %}
+    {% if page.maintenance and page.is_software %}<div><dt>Activity</dt><dd class="tp-activity tp-activity--{{ page.maintenance.status }}">{{ page.maintenance.label }}</dd></div>{% endif %}
     {% if page.domain %}<div><dt>Domains</dt><dd>{% for d in page.domain %}<span class="tp-domain">{{ d }}</span>{% endfor %}</dd></div>{% endif %}
   </dl>
 </section>

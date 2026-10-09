@@ -14,6 +14,16 @@
 - {name: JSON-LD, url: "https://www.w3.org/TR/json-ld11/", text: "JSON serialisation of linked data"}
 - {name: DCAT, url: "https://www.w3.org/TR/vocab-dcat-3/", text: "W3C vocabulary for data catalogues"}
 - {name: CSV, url: "https://www.rfc-editor.org/rfc/rfc4180", text: "Comma-separated values files"}
+- {name: DICOM, url: "https://www.dicomstandard.org/current", text: "Standard for medical images and related information"}
+- {name: FHIR, url: "https://hl7.org/fhir/", text: "HL7 standard for exchanging healthcare data"}
+- {name: CDISC ODM, url: "https://www.cdisc.org/standards/data-exchange/odm", text: "CDISC XML standard (ODM-XML) for exchanging clinical study metadata and data, such as eCRF definitions"}
+- {name: CARE-SM, url: "https://care-sm.readthedocs.io/en/latest/", text: "Clinical and Registry Entries Semantic Model for patient registry data in RDF"}
+- {name: ISA, url: "https://isa-specs.readthedocs.io/en/latest/", text: "Investigation-Study-Assay framework for describing experimental metadata"}
+- {name: SSSOM, url: "https://w3id.org/sssom/", text: "Simple Standard for Sharing Ontological Mappings, a tabular format for term mappings with provenance"}
+- {name: Bioschemas, url: "https://bioschemas.org/", text: "Schema.org-based markup for describing life-science resources on web pages"}
+- {name: nanopublication, url: "https://nanopub.net/guidelines/working_draft/", text: "Small RDF graph with provenance that is published and cited on its own"}
+- {name: RDA DMP Common Standard, url: "https://github.com/RDA-DMP-Common/RDA-DMP-Common-Standard", text: "RDA standard for machine-actionable data management plans (maDMP)"}
+- {name: MQTT, url: "https://mqtt.org/mqtt-specification/", text: "OASIS messaging protocol for streaming sensor and device data"}
 
 # Artefacts
 - {name: ontology}

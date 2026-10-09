@@ -9,9 +9,12 @@ require 'fileutils'
 module Jekyll
   # Build-time enrichment of tool entries from bio.tools and GitHub.
   # Results are cached in .jekyll-cache/tools_enriched.json for CACHE_TTL seconds so
-  # live-reload rebuilds don't hit the APIs. Failures are logged and ignored.
+  # live-reload rebuilds don't hit the APIs. Failures are logged and ignored; a fetch that
+  # failed is retried after RETRY_TTL. Set GITHUB_TOKEN to lift GitHub's limit of 60 requests
+  # per hour for unauthenticated clients (about two requests are needed per tool).
   module ToolEnrichment
     CACHE_TTL = 24 * 3600
+    RETRY_TTL = 3600
     CACHE_VERSION = 3 # bump when new fields are fetched, so cached entries refresh
 
     module_function
@@ -23,12 +26,21 @@ module Jekyll
 
       cache = load_cache(site)
       hit = cache[key]
-      return hit['data'] if hit && hit['v'] == CACHE_VERSION && Time.now.to_i - hit['at'] < CACHE_TTL
+      if hit && hit['v'] == CACHE_VERSION
+        ttl = hit['complete'] == false ? RETRY_TTL : CACHE_TTL
+        return hit['data'] if Time.now.to_i - hit['at'] < ttl
+      end
 
       data = {}
-      data.merge!(from_biotools(ids['biotools'])) if ids['biotools']
+      complete = true
+      if ids['biotools']
+        bt = from_biotools(ids['biotools'])
+        complete &&= !bt.empty?
+        data.merge!(bt)
+      end
       if ids['github']
         gh = from_github(ids['github'])
+        complete &&= !gh.empty?
         data = merge_missing(data, gh)
         data['how_to_cite'] = gh['how_to_cite'] if gh['how_to_cite'] # CITATION.cff is the authors' own choice
       end
@@ -36,7 +48,7 @@ module Jekyll
       # Keep the last good values for anything this fetch could not get (e.g. GitHub rate limit)
       data = hit['data'].merge(data) if hit
 
-      cache[key] = { 'at' => Time.now.to_i, 'v' => CACHE_VERSION, 'data' => data }
+      cache[key] = { 'at' => Time.now.to_i, 'v' => CACHE_VERSION, 'complete' => complete, 'data' => data }
       save_cache(site, cache)
       data
     end
@@ -130,7 +142,9 @@ module Jekyll
     def get_text(url, accept = '*/*')
       uri = URI(url)
       res = Net::HTTP.start(uri.host, uri.port, use_ssl: true, open_timeout: 5, read_timeout: 10) do |http|
-        http.get(uri.request_uri, 'Accept' => accept, 'User-Agent' => 'fair-metroline-build')
+        headers = { 'Accept' => accept, 'User-Agent' => 'fair-metroline-build' }
+        headers['Authorization'] = "Bearer #{ENV['GITHUB_TOKEN']}" if uri.host == 'api.github.com' && ENV['GITHUB_TOKEN']
+        http.get(uri.request_uri, headers)
       end
       res.is_a?(Net::HTTPSuccess) ? res.body : nil
     rescue StandardError => e

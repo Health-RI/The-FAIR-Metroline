@@ -74,6 +74,9 @@ module Jekyll
       index
     end
 
+    # Licence values from registries that do not mean "open source"
+    NOT_OPEN_LICENSES = ['Proprietary', 'Other', 'Not licensed', 'NOASSERTION'].freeze
+
     # Scenarios per tool: tool scenarios list tool_ids explicitly; FAIR guideline scenarios are
     # related when they pass through a Metroline step that mentions the tool.
     def scenarios_by_tool(site, steps_by_tool)
@@ -118,13 +121,17 @@ module Jekyll
       d['institutes'] = entry['institutes'] if entry['institutes']
 
       license = entry['license'] || e['license']
-      open_source = license && license != 'Proprietary'
+      open_source = license && !NOT_OPEN_LICENSES.include?(license)
       d['license'] = license
       d['open_source'] = open_source
       d['cost'] = entry['cost'] || e['cost'] || (open_source ? 'Free of charge' : nil)
       d['access'] = entry['access'] || e['accessibility'] || (open_source ? 'Open access' : nil)
       d['maturity'] = entry['maturity'] || e['maturity']
-      d['maintenance'] = maintenance(e, site.time)
+      d['maintenance'] = if entry['deprecated']
+                           { 'status' => 'archived', 'label' => 'Deprecated: no longer maintained' }
+                         else
+                           maintenance(e, site.time)
+                         end
       d['links'] = collect_links(entry, e, tool)
     end
 
@@ -136,7 +143,8 @@ module Jekyll
       links = []
       links << { 'kind' => 'Website', 'url' => website, 'label' => website.to_s.sub(%r{\Ahttps?://}, '').sub(%r{/\z}, '') } if website
       links << { 'kind' => 'Documentation', 'url' => entry.dig('links', 'docs'), 'label' => 'Documentation' } if entry.dig('links', 'docs')
-      parse_links(res['Manuals']).each { |l| links << l.merge('kind' => 'Documentation') }
+      # Curated docs replace the (sometimes outdated) manual links in tools.yml
+      parse_links(res['Manuals']).each { |l| links << l.merge('kind' => 'Documentation') } unless entry.dig('links', 'docs')
       Array(e['how_to_use']).each { |l| links << { 'kind' => 'Documentation', 'url' => l['url'], 'label' => l['label'] } }
       parse_links(res['Training']).each { |l| links << l.merge('kind' => 'Training') }
       parse_links(res['Scripts and workflows']).each { |l| links << l.merge('kind' => 'Templates and examples') }
