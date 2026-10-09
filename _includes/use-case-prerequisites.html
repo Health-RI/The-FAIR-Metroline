@@ -1,51 +1,55 @@
-<div class="metro-timeline prerequisite-timeline">
-  {% for prerequisite in include.prerequisites %}
-    {% assign metroline_step = nil %}
-    {% if prerequisite.step_id %}
+{% comment %}
+  Prerequisites of a use case, shown as a quiet "Before you start" list above the journey.
+  Per prerequisite (status: prerequisite in _data/use-cases/<id>.yml):
+    text         one sentence, always shown (falls back to short_description, then title)
+    description  optional, shown when the item is expanded
+    step_ids     optional Metroline step ids, shown as guidance links (step_id also works)
+    tool_ids     optional tool ids, shown as tool badges
+    links        optional list of {label, url}
+  An item only expands when it has something beyond its sentence.
+  Usage: {% include use-case-prerequisites.html prerequisites=prerequisites %}
+{% endcomment %}
+{% if include.prerequisites.size > 0 %}
+<aside class="prereq" aria-label="Before you start">
+  <p class="prereq-heading"><span aria-hidden="true"></span>Before you start</p>
+  <ul class="prereq-list">
+    {% for p in include.prerequisites %}
+    {% assign text = p.text | default: p.short_description | default: p.title %}
+
+    {% comment %} Metroline steps from step_ids (list) or step_id (single), compared as strings {% endcomment %}
+    {% assign wanted = p.step_ids | join: "," | split: "," %}
+    {% if p.step_id %}{% assign wanted = p.step_id | append: "" | split: "," %}{% endif %}
+    {% assign steps = "" | split: "" %}
+    {% for sid in wanted %}
       {% for step in site.data.metroline_steps %}
-        {% if step.id == prerequisite.step_id %}
-          {% assign metroline_step = step %}
-          {% break %}
-        {% endif %}
+        {% assign this_id = step.id | append: "" %}
+        {% if this_id == sid %}{% assign steps = steps | push: step %}{% break %}{% endif %}
       {% endfor %}
-    {% endif %}
+    {% endfor %}
 
-    {% assign display_title = prerequisite.title | default: metroline_step.title %}
-    {% assign display_icon = prerequisite.icon | default: metroline_step.icon %}
-    {% assign display_summary = prerequisite.description | default: prerequisite.short_description | default: metroline_step.summary %}
+    {% assign has_more = false %}
+    {% if p.description or steps.size > 0 or p.tool_ids or p.links %}{% assign has_more = true %}{% endif %}
 
-    {% if display_title %}
-      <div class="metro-stop prerequisite-stop">
-        <div class="metro-stop-header">
-          <div class="metro-content">
-            <div class="metro-title-wrapper">
-              <div class="timeline-icon-group">
-                {% if display_icon %}
-                  <span class="title-icon">{{ display_icon }}</span>
-                {% endif %}
-              </div>
-
-              <div class="timeline-title-body">
-                <h3 class="metro-title">{{ display_title }}</h3>
-              </div>
-            </div>
-            <button class="metro-toggle" aria-expanded="false">
-              <span class="toggle-icon">▼</span>
-            </button>
+    <li>
+      {% if has_more %}
+      <details>
+        <summary><span class="prereq-text">{{ text }}</span><span class="prereq-chevron" aria-hidden="true"></span></summary>
+        <div class="prereq-more">
+          {% if p.description %}<p>{{ p.description }}</p>{% endif %}
+          {% if steps.size > 0 or p.links %}
+          <div class="prereq-chips">
+            {% for step in steps %}<a class="prereq-chip" href="{{ step.url | prepend: '/' | relative_url }}"><span class="prereq-chip-kind">Guidance</span>{{ step.title }}</a>{% endfor %}
+            {% for l in p.links %}<a class="prereq-chip" href="{{ l.url }}"><span class="prereq-chip-kind">See also</span>{{ l.label | default: l.url }}</a>{% endfor %}
           </div>
+          {% endif %}
+          {% if p.tool_ids %}<div class="prereq-tools">{% include toolassemblies/show-badges.html ids=p.tool_ids %}</div>{% endif %}
         </div>
-
-        <div class="metro-details prerequisite-details" style="display: none;">
-          <div class="metro-description">
-            {% if display_summary %}
-              <p class="short-description">{{ display_summary }}</p>
-            {% endif %}
-            {% if prerequisite.step_id and metroline_step and metroline_step.url %}
-              <a href="{{ metroline_step.url | relative_url }}" class="btn-link prerequisite-read-more">Read more</a>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-    {% endif %}
-  {% endfor %}
-</div>
+      </details>
+      {% else %}
+      <span class="prereq-text">{{ text }}</span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</aside>
+{% endif %}
