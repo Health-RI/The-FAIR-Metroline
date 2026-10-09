@@ -1,18 +1,15 @@
-- title: "Define FAIRification objectives"
-  status: "prerequisite"
-  short_description: "Be sure you are clear about your FAIRifcation Objectives"
+- status: "prerequisite"
+  text: "You know what you want to achieve: your FAIRification objectives are clear."
   step_ids:
     - 1
 
-- title: "Have a FAIR data steward on board"
-  status: "prerequisite"
-  short_description: "When necessary, make sure you enlist the help from a FAIR data steward, if possible"
+- status: "prerequisite"
+  text: "A FAIR data steward can help you when needed."
   step_ids:
     - 3
 
-- title: "Identify and select training"
-  status: "prerequisite"
-  short_description: "If there are gaps in your (team’s) knowledge, considering following training"
+- status: "prerequisite"
+  text: "Your team has followed training where its knowledge has gaps."
   step_ids:
     - 4
 
