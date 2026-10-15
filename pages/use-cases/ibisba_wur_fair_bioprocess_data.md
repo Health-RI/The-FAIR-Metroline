@@ -22,9 +22,6 @@ You have sensors to collect data and you setup a pipeline to collected, FARIfy a
 {% assign prerequisites = site.data.use-cases.ibisba_wur_fair_bioprocess_data | where_exp: "item", "item.status == 'prerequisite'" %}
 
 {% if prerequisites.size > 0 %}
-### Prerequisites
-Before starting this use case, you should have the following prerequisites in place.
-
 {% include use-case-prerequisites.html prerequisites=prerequisites %}
 {% endif %}
 

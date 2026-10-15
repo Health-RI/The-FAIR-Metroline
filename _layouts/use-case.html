@@ -43,7 +43,6 @@ custom_js: metro-timeline
   {% assign prerequisites = timeline_stops | where_exp: "item", "item.status == 'prerequisite'" %}
   {% assign journey_stops = timeline_stops | where_exp: "item", "item.status != 'prerequisite'" %}
   {% if prerequisites.size > 0 %}
-    <h3>Prerequisites</h3>
     {% include use-case-prerequisites.html prerequisites=prerequisites %}
   {% endif %}
 {% endif %}

@@ -37,9 +37,6 @@ When designing a new dataset, you can address these differences from the start b
 {% assign prerequisites = site.data.use-cases.make_dataset_interoperable | where_exp: "item", "item.status == 'prerequisite'" %}
 
 {% if prerequisites.size > 0 %}
-### Prerequisites
-Before starting this use case, you should have the following prerequisites in place.
-
 {% include use-case-prerequisites.html prerequisites=prerequisites %}
 {% endif %}
 
