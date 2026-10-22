@@ -40,16 +40,21 @@
 {%- endif %}
 {%- endfor %}
 {%- assign alldomains = alldomains | split: ", " | uniq | sort %}
+{%- comment %} Phases in life-cycle order, but only those that some page has (unverified ones are not shown) {%- endcomment %}
+{%- assign usedphases = allphases | split: ", " | uniq %}
 {%- assign allphases = "" %}
 {%- for _stage in site.data.lifecycle_stages %}
+{%- if usedphases contains _stage.name %}
 {%- unless allphases == "" %}{%- assign allphases = allphases | append: "|" %}{%- endunless %}
 {%- assign allphases = allphases | append: _stage.name %}
+{%- endif %}
 {%- endfor %}
 {%- assign allphases = allphases | split: "|" %}
 {%- assign allinstitutes = allinstitutes | split: ", " | uniq | sort %}
 {%- assign allroles = allroles | split: ", " | uniq | sort %}
 <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-{{ include.col | default: 2 }} my-4">
-    {%- if include.domains == true %}
+    {%- comment %} A filter is only shown when at least one page has a value for it {%- endcomment %}
+    {%- if include.domains == true and alldomains.size > 0 %}
     <div class="col">
         <div class="input-group">
             <label class="input-group-text" for="domains-input">Filter by domain</label>
@@ -67,7 +72,7 @@
         </div>
     </div>
     {%- endif %}
-    {%- if include.phases == true %}
+    {%- if include.phases == true and allphases.size > 0 %}
     <div class="col">
         <div class="input-group">
             <label class="input-group-text" for="phases-input">Filter by phase</label>
@@ -83,7 +88,7 @@
         </div>
     </div>
     {%- endif %}
-    {%- if include.institutes == true %}
+    {%- if include.institutes == true and allinstitutes.size > 0 %}
     <div class="col">
         <div class="input-group">
             <label class="input-group-text" for="institutes-input">Filter by institute</label>
@@ -101,7 +106,7 @@
         </div>
     </div>
     {%- endif %}
-    {%- if show_fair_support_categories %}
+    {%- if show_fair_support_categories and allroles.size > 0 %}
     <div class="col">
         <div class="input-group">
             <label class="input-group-text" for="role-input">Filter by FAIR support category</label>

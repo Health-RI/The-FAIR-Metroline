@@ -1,0 +1,12 @@
+{%- comment -%}
+  Renders one block of a tool page. Where the verified (live) and full (live + pending) views differ,
+  both are rendered: the full one is shown only with ?unverified=1 (see _layouts/tool_profile.html).
+  Usage: {% include tool-profile/block.html name="facts" %}
+{%- endcomment -%}
+{%- assign _block_file = "tool-profile/" | append: include.name | append: ".html" -%}
+{%- if page.differs[include.name] -%}
+<div class="tp-only-verified">{% include {{ _block_file }} p=page.live %}</div>
+<div class="tp-only-unverified">{% include {{ _block_file }} p=page.full %}</div>
+{%- else -%}
+{% include {{ _block_file }} p=page.live %}
+{%- endif -%}

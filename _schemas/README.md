@@ -6,16 +6,32 @@
 
 Jekyll ignores this folder because its name starts with `_`.
 
-## Where each piece of information comes from
+## Verified and pending values
+
+Every value in an entry of `_data/tools_v2.yml` is either verified or pending:
+
+- **Verified** values sit at the top level of the entry. A reviewer checked them (green or yellow in the review
+  sheet). The live site shows only these.
+- **Pending** values sit under `pending:` with the same field names. Nobody has checked them yet, or they need
+  a decision. The live site hides them, and every page section without verified content is hidden, so there
+  are no gaps. To see them on a tool page, add `?unverified=1` to its URL: pending values then show with a
+  dashed border. The choice is remembered while you browse other tool pages; `?unverified=0` turns it off.
+  (The pending values are in the page HTML, hidden; anyone who knows the parameter can see them.)
+- When a pending value is checked, move it to the top level.
 
 | | Source | Fields |
 |---|---|---|
-| **Curated** | editors, in `tools_v2.yml` | name, short description, FAIR tags, domains, keywords, homepage, registry ids; optional: tool type, cost/access, institutes, related |
-| **Fetched** at build time | bio.tools, GitHub | tool type, licence, cost, access, maturity, activity, how to cite, citations, stars, latest release, source code, issue tracker, download |
-| **Reused** | the tool's entry in `_data/tools.yml` | About text, life cycle phases, documentation, training, templates |
-| **Derived** | the site | Metroline steps (from `show-badges` / `show-tiles` in step pages); scenarios (tool scenarios by `tool_ids`, guideline scenarios through the tool's steps) |
+| **Written by editors** | `tools_v2.yml` | name, short description, About text, tool types, FAIR tags, life cycle, domains, licence(s), cost, code availability, homepage (and whether it opens the tool), documentation, download, other links, logo, registry ids, keywords, institutes, related tools |
+| **Fetched** at build time | bio.tools, GitHub | activity, metrics, citations, source code and issue tracker links; only once the registry ids are verified |
+| **Derived** | the site | Metroline steps (from `show-badges` / `show-tiles` in step pages) and use cases (through those steps) |
 
-A local value always wins. Every page section is hidden when it has no content.
+Nothing falls back to the old `_data/tools.yml` any more.
+
+## Homepage button
+
+`links.homepage_opens_tool: true` when the homepage link opens the working tool itself: the page shows a filled
+**Open the tool** button. With `false` the link goes to a page about the tool: an outlined **Visit website**
+button. `hosted: true` adds "Online service, nothing to install".
 
 ## Tool type
 

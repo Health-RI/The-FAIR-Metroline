@@ -422,3 +422,76 @@ body:has(.tp-hero) .page-img-lg {
 
   > span:first-child { font-size: 0.85rem; color: $tp-muted; }
 }
+
+// ---------- Homepage button ----------
+// "Open the tool" when the homepage link opens the working tool, "Visit website" when it goes to a
+// page about the tool (links.homepage_opens_tool in tools_v2.yml).
+.tp-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.tp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  border: 2px solid $primary;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover { text-decoration: none; }
+
+  &--tool {
+    background: $primary;
+    color: #fff;
+
+    &:hover { background: darken($primary, 6%); color: #fff; }
+  }
+
+  &--site {
+    background: #fff;
+    color: $primary;
+
+    &:hover { background: mix($primary, #fff, 8%); color: $primary; }
+  }
+}
+
+.tp-hosted {
+  font-size: 0.85rem;
+  color: $tp-muted;
+}
+
+.tp-link--tool {
+  border-color: $primary;
+
+  .tp-link-kind { color: $primary; }
+}
+
+// ---------- Unverified values (?unverified=1 on a tool page) ----------
+// Blocks whose full version (verified + pending) differs from the verified one are rendered twice;
+// the <html> class show-unverified, set by the script in _layouts/tool_profile.html, picks one.
+html:not(.show-unverified) .tp-only-unverified,
+html.show-unverified .tp-only-verified {
+  display: none !important;
+}
+
+.tp-preview-note {
+  padding: 0.45rem 0.8rem;
+  border: 1px dashed #b26a00;
+  border-radius: 6px;
+  background: #fff8ec;
+  color: #8a5300;
+  font-size: 0.85rem;
+}
+
+.tp-pending {
+  outline: 2px dashed #e0a030;
+  outline-offset: 3px;
+  border-radius: 4px;
+}

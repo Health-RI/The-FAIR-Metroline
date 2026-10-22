@@ -231,11 +231,11 @@ Now, when you enter data, you can select the item from the ontology's list. For 
 
 ### Special step 2 - Tools to help you build eCRFs
 * **iCRF Generator.** The {% include toolassemblies/show-badges.html ids="icrf-generator" %} is a tool that generates eCRFs for various EDC systems such as Castor EDC and REDCap from codebooks published in ART-DECOR and OpenEHR. When codebooks are properly annotated, their annotations are incorporated into the generated CRFs in accordance with the methods described above.
-* **Codebook to Castor/LimeSurvey.** {% include toolassemblies/show-badges.html ids="codebook-to-castor-limesurvey" %} was developed by Amsterdam UMC. This tool converts an Excel-based codebook into a format compatible with Radboudumc’s Castor Offline Design converter, which then generates a Castor-ready XML file. Nowadays, the tool also has limited LimeSurvey support. Currently, the tool is only available within Amsterdam UMC.
+* **Codebook to Castor/LimeSurvey.** This tool was developed by Amsterdam UMC. This tool converts an Excel-based codebook into a format compatible with Radboudumc’s Castor Offline Design converter, which then generates a Castor-ready XML file. Nowadays, the tool also has limited LimeSurvey support. Currently, the tool is only available within Amsterdam UMC.
 
 Recommended tool pages:
 
-{% include toolassemblies/show-badges.html ids="castor, redcap, icrf-generator, codebook-to-castor-limesurvey, art-decor" %}
+{% include toolassemblies/show-badges.html ids="castor, redcap, icrf-generator, art-decor" %}
 
 ## Practical examples from the community
 * **VASCA registry**. For more information see the following publications:

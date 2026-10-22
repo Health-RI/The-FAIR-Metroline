@@ -1,0 +1,11 @@
+{%- assign p = include.p -%}{%- assign pf = p.pending_fields -%}
+{%- if p.license or p.cost or p.code_availability or p.maturity or p.domain or p.maintenance and p.is_software -%}
+<dl class="tp-facts">
+  {% if p.license %}<div{% if pf contains 'license' %} class="tp-pending"{% endif %}><dt>Licence</dt><dd>{{ p.license }}{% if p.open_source %} <span class="tp-pill tp-pill--ok">Open source</span>{% endif %}</dd></div>{% endif %}
+  {% if p.cost %}<div{% if pf contains 'cost' %} class="tp-pending"{% endif %}><dt>Cost</dt><dd>{{ p.cost }}</dd></div>{% endif %}
+  {% if p.code_availability %}<div{% if pf contains 'code_availability' %} class="tp-pending"{% endif %}><dt>Source code</dt><dd>{{ p.code_availability }}</dd></div>{% endif %}
+  {% if p.maturity %}<div{% if pf contains 'maturity' %} class="tp-pending"{% endif %}><dt>Maturity</dt><dd><span class="tp-pill tp-pill--{{ p.maturity | downcase }}">{{ p.maturity }}</span></dd></div>{% endif %}
+  {% if p.maintenance and p.is_software %}<div{% if pf contains 'ids' %} class="tp-pending"{% endif %}><dt>Activity</dt><dd class="tp-activity tp-activity--{{ p.maintenance.status }}">{{ p.maintenance.label }}</dd></div>{% endif %}
+  {% if p.domain %}<div{% if pf contains 'domains' %} class="tp-pending"{% endif %}><dt>Domains</dt><dd>{% for d in p.domain %}<span class="tp-domain">{{ d }}</span>{% endfor %}</dd></div>{% endif %}
+</dl>
+{%- endif -%}

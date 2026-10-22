@@ -1,0 +1,7 @@
+{%- assign p = include.p -%}{%- assign pf = p.pending_fields -%}
+{%- if p.about -%}
+<section class="tp-section">
+  <h2>About</h2>
+  <p{% if pf contains 'description' %} class="tp-pending"{% endif %}>{{ p.about }}</p>
+</section>
+{%- endif -%}

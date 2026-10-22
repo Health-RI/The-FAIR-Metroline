@@ -51,7 +51,7 @@ Before you can expose your data in a FAIR way, you first need to transform it in
 
 {% include info-box.html type="example" title="Examples" text="
 * **[OpenRefine](/openrefine) – [RDF Transform extension](https://github.com/AtesComp/rdf-transform).** Offers a user-friendly, graphical user interface (GUI), way to transform project data into RDF. OpenRefine supports file types like tab separated (TSV), comma separated (CSV), Excel (XLS, XLSX), JSON, XML, RDF as XML, and Google spreadsheets. 
-* **[FAIR-in-a-Box](/fair-in-a-box).** Convert CSV files into RDF with a step-by-step interface; useful for implementing the [Clinical and Registry Entries Semantic Model (CARE-SM)](https://github.com/CARE-SM). Although you can apply any model through OpenRefine, the process must be done manually. In contrast, FAIR-in-a-box includes built-in templates for CARE-SM, requiring only correctly structured CSV files from you.
+* **[FAIR-in-a-Box](https://github.com/ejp-rd-vp/FiaB).** Convert CSV files into RDF with a step-by-step interface; useful for implementing the [Clinical and Registry Entries Semantic Model (CARE-SM)](https://github.com/CARE-SM). Although you can apply any model through OpenRefine, the process must be done manually. In contrast, FAIR-in-a-box includes built-in templates for CARE-SM, requiring only correctly structured CSV files from you.
 * **[Castor EDC](/castor-edc).** Supports semantic export templates for transforming study data and metadata to RDF.
 " %}
 
@@ -83,7 +83,7 @@ Start by transforming metadata into a structured format using semantic web stand
 
 {% include info-box.html type="example" title="Examples of metadata transformation tools" text="
 * **[FAIR Data Point](/fair-data-point).** For publishing metadata layers in line with [DCAT](https://www.w3.org/TR/vocab-dcat-3/) specifications, aligning with national and European cataloguing standards. The FDP itself is a metadata exposure tool consistent with DCAT and the FDP specification, serving as a discoverable and interoperable metadata layer.
-* **[FAIR-in-a-Box](/fair-in-a-box).** Covers both data and metadata and includes CSV to RDF conversion and metadata templates.
+* **[FAIR-in-a-Box](https://github.com/ejp-rd-vp/FiaB).** Covers both data and metadata and includes CSV to RDF conversion and metadata templates.
 * **[OpenRefine](/openrefine).** RDF transform extension for transforming structured metadata to RDF.
 * **[CEDAR Workbench](/cedar-workbench).** Supports the creation of semantically rich metadata through templates to produce annotated datasets.
 * **[FAIR Data Station](/fair-data-station).** Manages [ISA metadata](https://isa-tools.org/) with RDF output. This output needs to be exposed in a triplestore. 
@@ -92,7 +92,7 @@ Start by transforming metadata into a structured format using semantic web stand
 
 Recommended tool pages:
 
-{% include toolassemblies/show-badges.html ids="openrefine, fair-in-a-box, castor, graphdb, blazegraph, fair-data-point, cedar-workbench, fair-data-station" %}
+{% include toolassemblies/show-badges.html ids="openrefine, castor, graphdb, blazegraph, fair-data-point, cedar-workbench, fair-data-station" %}
 
 ## Practical examples from the community
 **VASCA Registry (Castor EDC + FAIR Data Point)**<br>

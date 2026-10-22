@@ -1,0 +1,27 @@
+{%- assign p = include.p -%}{%- assign pf = p.pending_fields -%}{%- assign m = p.metrics -%}
+{%- assign has_metrics = false -%}
+{%- if m.citation_count > 0 or m.github_stars or m.latest_release or m.last_commit -%}{%- assign has_metrics = true -%}{%- endif -%}
+{%- if has_metrics or p.institutes -%}
+<section class="tp-section">
+  <h2>Adoption and activity</h2>
+  {% if has_metrics %}
+  <div class="tp-metrics{% if pf contains 'ids' %} tp-pending{% endif %}">
+    {% if m.citation_count > 0 %}<div class="tp-metric"><span class="tp-metric-value">{{ m.citation_count }}</span><span class="tp-metric-label">citations</span></div>{% endif %}
+    {% if m.github_stars %}<div class="tp-metric"><span class="tp-metric-value">{{ m.github_stars }}</span><span class="tp-metric-label">GitHub stars</span></div>{% endif %}
+    {% if m.latest_release %}<div class="tp-metric"><span class="tp-metric-value">{{ m.latest_release }}</span><span class="tp-metric-label">latest release{% if m.latest_release_date %} · {{ m.latest_release_date | date: "%b %Y" }}{% endif %}</span></div>{% endif %}
+    {% if m.last_commit %}<div class="tp-metric"><span class="tp-metric-value">{{ m.last_commit | date: "%b %Y" }}</span><span class="tp-metric-label">last code change</span></div>{% endif %}
+  </div>
+  <p class="tp-source">From{% if p.ids.biotools %} bio.tools{% endif %}{% if p.ids.biotools and p.ids.github %} and{% endif %}{% if p.ids.github %} GitHub{% endif %}{% if m.fetched_at %}, {{ m.fetched_at | date: "%-d %b %Y" }}{% endif %}.</p>
+  {% endif %}
+  {% if p.institutes %}
+  <h3 class="tp-subhead">Used by</h3>
+  <div class="tp-logos{% if pf contains 'institutes' %} tp-pending{% endif %}">
+    {% for institute in p.institutes %}
+    {% assign affiliation = site.data.affiliations | where: "name", institute | first %}
+    {% if affiliation %}<a href="{{ affiliation.url }}" target="_blank" title="{{ institute }}"><img src="/{{ affiliation.image_url }}" alt="{{ institute }}"></a>
+    {% else %}<span class="badge bg-info">{{ institute }}</span>{% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+{%- endif -%}

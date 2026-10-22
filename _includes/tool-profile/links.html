@@ -1,0 +1,14 @@
+{%- assign p = include.p -%}
+{%- if p.links.size > 0 -%}
+<section class="tp-section">
+  <h2>Links</h2>
+  <div class="tp-links">
+    {% for l in p.links %}
+    <a class="tp-link{% if l.kind == 'Open the tool' %} tp-link--tool{% endif %}{% if l.pending %} tp-pending{% endif %}" href="{{ l.url }}" target="_blank" rel="noopener">
+      <span class="tp-link-kind">{{ l.kind }}</span>
+      <span class="tp-link-label">{{ l.label }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{%- endif -%}
