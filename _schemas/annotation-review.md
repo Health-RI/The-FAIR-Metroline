@@ -39,6 +39,7 @@ registry ID, GitHub repository and homepage was checked live. This list, checked
 
 ## Rules applied across all tools
 
+- **Domains:** since 2026-10-13 seven domains (`_data/domains.yml`): Cross-domain, Clinical research, Patient registries & rare diseases, Oncology, Medical imaging, Life sciences, Omics.
 - **FAIR tags:** triplestores and SPARQL endpoints (GraphDB, Blazegraph) are A + I; query front ends
   (Sparnatural, Wikidata Query Builder, YASGUI, Virtuoso) are I; transfer services and myDRE are A; DMP,
   assessment and FIP tools are *FAIR assessment & planning* only.
@@ -62,8 +63,6 @@ registry ID, GitHub repository and homepage was checked live. This list, checked
 
 - Decide whether to drop Preserve from the life cycle reused from tools.yml for FAIR Data Station,
   FAIR-in-a-box, GraphDB and CEDAR Workbench, as none of them is an archive (now: Preserve included).
-- Decide whether to keep Industrial biotechnology for FAIR Data Station and FAIRDOM-SEEK, which comes from
-  the IBISBA/WUR scenario while their core scope is biology (now: [Biological sciences, Industrial biotechnology]).
 - Decide whether to write an About text for FAIRDOM-SEEK, SURFfilesender and IBM Aspera, whose reused
   tools.yml text refers to "this scenario" or to the FAIR Metroline itself (now: tools.yml text).
 
@@ -73,10 +72,7 @@ Tools covered above are not repeated here.
 
 **myDRE** (`mydre`)
 - Decide whether cost should be Institutional licence, as researchers usually get access through their organisation's subscription (now: Commercial, as for Castor EDC).
-- Decide whether domains should be Clinical medicine and Health sciences, as most users are UMCs, although the vendor and the NWO LSRI listing present it as open to all disciplines (now: Cross-domain).
-
-**XNAT** (`xnat`)
-- Confirm Basic medicine in domains, added for XNAT's large neuroimaging user base (now: [Clinical medicine, Basic medicine]).
+- Decide whether myDRE should get a health domain such as Clinical research, as most users are UMCs, although the vendor and the NWO LSRI listing present it as open to all disciplines (now: Cross-domain).
 
 **DMPonline** (`dmponline`)
 - Confirm that the listed institutes subscribe to DMPonline, as the About text says "several Dutch universities and UMCs" on the basis of this list (now: eight institutes copied from tools.yml).

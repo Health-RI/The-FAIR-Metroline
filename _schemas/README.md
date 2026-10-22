@@ -2,7 +2,7 @@
 
 - `tool.schema.yml`: JSON Schema for one tool entry
 - Demo entries: `_data/tools_v2.yml`, rendered by `_layouts/tool_profile.html`
-- Vocabularies: `_data/tool_types.yml` (tool types), `_data/research_fields.yml` (domains), `_data/keywords.yml` (keywords)
+- Vocabularies: `_data/tool_types.yml` (tool types), `_data/domains.yml` (domains), `_data/keywords.yml` (keywords)
 
 Jekyll ignores this folder because its name starts with `_`.
 
@@ -38,20 +38,14 @@ links principles to types of resource rather than individual tools.
 
 ## Domains
 
-The second level of the NWO research fields (https://www.nwo.nl/en/nwo-research-fields, in use from
-1 July 2026). Its six top-level groups match the OECD Fields of Science, so the list is not
-NWO-specific. Mapping of the values in today's `tools.yml`:
-
-| Current | NWO research field |
-|---|---|
-| Life sciences, Systems biology, Microbial research | Biological sciences |
-| Health | Health sciences |
-| Clinical research, Oncology, Rare diseases | Clinical medicine |
-| Industrial biotechnology | Industrial biotechnology |
-| Cross-domain | Cross-domain (our addition) |
-
-Oncology and rare diseases become too coarse in this list. If those communities matter for
-filtering, keep them as a separate optional `communities` tag.
+Seven domains in `_data/domains.yml`: Cross-domain, Clinical research, Patient registries & rare diseases,
+Oncology, Medical imaging, Life sciences and Omics. A tool can have several; Cross-domain
+is used on its own. They follow the communities this catalogue serves (and the domains in the old
+`tools.yml`), not a general classification: an earlier draft used the NWO research fields
+(https://www.nwo.nl/en/nwo-research-fields, 43 fields across all of science), which was far too broad.
+Add a domain only when several tools or a use case need it (for example green sciences:
+plant, food and environmental research). Bioinformatics is not a domain: it is a way of working
+across domains; add it when analysis tools return to the catalogue.
 
 ## Why not use the bio.tools schema or CodeMeta as the whole schema
 

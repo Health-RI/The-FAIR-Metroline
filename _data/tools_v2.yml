@@ -7,7 +7,7 @@
 #            bio.tools does not register: Self-assessment / checklist, Registry / catalogue,
 #            Standard / specification. See _data/tool_types.yml.
 # fair:      tags F, A, I, R and/or planning (FAIR assessment and planning). Letter level only.
-# domains:   NWO research fields (_data/research_fields.yml), or Cross-domain.
+# domains:   from _data/domains.yml (7 domains); a tool can have several; Cross-domain on its own.
 # keywords:  from _data/keywords.yml (standards such as RDF link to their specification).
 
 - id: castor
@@ -15,7 +15,7 @@
   short_description: Cloud-based electronic data capture for clinical studies; most Dutch UMCs hold a licence.
   tool_type: [Web application]
   fair: [I, R]
-  domains: [Clinical medicine, Health sciences]
+  domains: [Clinical research, Oncology]
   cost: Commercial
   access: Restricted access
   links:
@@ -59,7 +59,7 @@
     for cohort and biobank catalogues such as the European Health Research Data and Sample Catalogue,
     and, through MOLGENIS Armadillo, for federated analysis with DataSHIELD.
   fair: [F, I]
-  domains: [Clinical medicine, Health sciences]
+  domains: [Patient registries & rare diseases, Omics]
   links:
     homepage: https://molgenis.org/
     docs: https://molgenis.github.io/molgenis-emx2/
@@ -74,7 +74,7 @@
   name: XNAT
   short_description: Open-source platform to archive, search and share medical imaging data such as DICOM scans, with project-based access control.
   fair: [F, A]
-  domains: [Clinical medicine, Basic medicine]
+  domains: [Medical imaging, Oncology]
   links:
     homepage: https://www.xnat.org/
   keywords: [DICOM]
@@ -126,7 +126,7 @@
     managed service.
   tool_type: [Desktop application, Library]
   fair: [R]
-  domains: [Industrial biotechnology, Biological sciences]
+  domains: [Life sciences]
   cost: Free of charge
   access: Open access
   links:
@@ -149,7 +149,7 @@
     existing ENA BioProjects, connect to iRODS/Yoda and be used through a REST API. A public instance
     runs at fairds.fairbydesign.nl, and you can also run your own.
   fair: [I, R]
-  domains: [Biological sciences, Industrial biotechnology]
+  domains: [Life sciences, Omics]
   links:
     homepage: https://fairbydesign.nl/
     docs: https://fairbydesign.nl/docs/fairdatastation/introduction/
@@ -165,7 +165,7 @@
   name: FAIRDOM-SEEK
   short_description: Web platform, self-hosted or used via FAIRDOMHub, to catalogue, share and publish data, models and SOPs organised as investigations, studies and assays.
   fair: [F, R]
-  domains: [Biological sciences, Industrial biotechnology]
+  domains: [Life sciences, Omics]
   links:
     homepage: https://seek4science.org/
     docs: https://docs.seek4science.org/   # bio.tools docs link (/help/) returns 404
@@ -201,7 +201,7 @@
     for FAIR Data Point metadata, Sextans Fix for CARE-SM data transformation).
   tool_type: [Workflow, Suite]   # not in bio.tools
   fair: [F, I]
-  domains: [Clinical medicine, Health sciences]
+  domains: [Patient registries & rare diseases]
   deprecated: true   # maintainers point to the Sextans Suite
   links:
     homepage: https://github.com/ejp-rd-vp/FiaB
@@ -387,7 +387,7 @@
   short_description: Web platform for building and publishing health-data codebooks (data elements, value sets, terminology bindings); Nictiz hosts a Dutch instance.
   tool_type: [Web application]   # not in bio.tools
   fair: [I, R]
-  domains: [Clinical medicine, Health sciences]
+  domains: [Clinical research]
   cost: Free of charge
   access: Open access (with restrictions)   # published projects are public; editing accounts are granted on request
   links:
@@ -408,7 +408,7 @@
     setting up or changing a registry can select existing data elements to reuse.
   tool_type: [Registry / catalogue]
   fair: [F, I]
-  domains: [Clinical medicine, Health sciences]
+  domains: [Patient registries & rare diseases]
   cost: Free of charge
   access: Open access (with restrictions)
   links:
@@ -446,7 +446,7 @@
   tool_type: [Desktop application]   # bio.tools record says Command-line tool, Script, which is wrong (it is a GUI wizard)
   fair: [I, R]
   lifecycle: [Collect]
-  domains: [Clinical medicine, Health sciences]
+  domains: [Clinical research]
   links:
     homepage: https://www.healthdata.nl/en/services/icrf-generator
   keywords: [eCRF, codebook, CDISC ODM]
@@ -460,7 +460,7 @@
   short_description: Amsterdam UMC internal tool that prepares an Excel codebook for import into Castor EDC via Radboudumc's converter; LimeSurvey support is limited.
   fair: [R]
   lifecycle: [Collect]
-  domains: [Clinical medicine, Health sciences]
+  domains: [Clinical research]
   access: Restricted access
   links:
     homepage: https://amsterdamumc.service-now.com/esc?id=kb_article&sysparm_article=KB0015163
@@ -471,7 +471,7 @@
   name: REDCap
   short_description: Web-based electronic data capture for eCRFs, surveys and study databases; non-profit institutions run their own instance at no licence cost.
   fair: [I, R]
-  domains: [Clinical medicine, Health sciences]
+  domains: [Clinical research]
   license: Proprietary   # bio.tools says Other; REDCap is closed source, licensed free to non-profit consortium members
   cost: Free of charge (with restrictions)
   access: Restricted access
@@ -502,7 +502,7 @@
   short_description: Command-line toolkit to build, check and release ontologies.
   tool_type: [Command-line tool, Library]   # bio.tools record has no tool type yet, so set locally
   fair: [I, R]
-  domains: [Biological sciences]
+  domains: [Life sciences]
   keywords: [ontology, OWL, OBO format, RDF, SPARQL]
   links:
     homepage: https://robot.obolibrary.org/
