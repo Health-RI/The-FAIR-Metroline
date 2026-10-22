@@ -1,30 +1,22 @@
-{%- assign ids_string = include.ids | join: ", " -%}
-{%- assign tool_ids = ids_string | split: ", " %}
+{%- comment -%}
+  Inline tool badges with a preview on hover, e.g. {% include toolassemblies/show-badges.html ids="castor" %}
+{%- endcomment -%}
+{%- assign tool_ids = include.ids | join: ", " | split: ", " -%}
 <span class="tool-badges-inline">
-    {%- assign tool_pages = site.pages | where:"type", "tool" %}
+    {%- assign tool_pages = site.pages | where: "type", "tool" %}
     {%- for tool_page in tool_pages %}
-    {%- assign page_id = tool_page.title | slugify %}
-    {%- if tool_ids contains page_id or tool_ids contains tool_page.tool_id %}
-    {%- if tool_page.page_img %}
-    {%- if tool_page.page_img contains "http://" or tool_page.page_img contains "https://" %}
-    {%- assign file_url = tool_page.page_img -%}
-    {%- else %}
-    {%- capture file_url -%}
-    {{ "/assets/img/" | append: tool_page.page_img | relative_url }}
-    {%- endcapture -%}
-    {%- endif %}
-    {%- endif %}
+    {%- if tool_ids contains tool_page.tool_id %}
     <span class="tool-badge">
         <a href="{{ tool_page.url | relative_url }}" class="tool-badge-link">
-            {%- if tool_page.page_img %}
-            <img class="tool-badge-icon" alt="" src="{{ file_url }}">
+            {%- if tool_page.logo_url %}
+            <img class="tool-badge-icon" alt="" src="{{ tool_page.logo_url }}">
             {%- endif %}
             <span class="tool-badge-text">{{ tool_page.title }}</span>
         </a>
         <span class="tool-badge-popover" role="tooltip">
-            {%- if tool_page.page_img %}
+            {%- if tool_page.logo_url %}
             <span class="tool-badge-popover-icon">
-                <img alt="logo of {{ tool_page.title }}" src="{{ file_url }}">
+                <img alt="logo of {{ tool_page.title }}" src="{{ tool_page.logo_url }}">
             </span>
             {%- endif %}
             <span class="tool-badge-popover-body">

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'date'
 require 'json'
 require 'net/http'
 require 'uri'
@@ -15,12 +16,12 @@ module Jekyll
   module ToolEnrichment
     CACHE_TTL = 24 * 3600
     RETRY_TTL = 3600
-    CACHE_VERSION = 3 # bump when new fields are fetched, so cached entries refresh
+    CACHE_VERSION = 4 # bump when new fields are fetched, so cached entries refresh
 
     module_function
 
-    def enrich(site, entry)
-      ids = entry['ids'] || entry['identifiers'] || {}
+    # Registry data for one tool; `ids` holds its biotools and github ids
+    def enrich(site, ids)
       key = [ids['biotools'], ids['github']].compact.join('|')
       return {} if key.empty?
 
@@ -44,8 +45,8 @@ module Jekyll
         data = merge_missing(data, gh)
         data['how_to_cite'] = gh['how_to_cite'] if gh['how_to_cite'] # CITATION.cff is the authors' own choice
       end
-      data['fetched_at'] = Time.now.utc.strftime('%Y-%m-%d')
-      # Keep the last good values for anything this fetch could not get (e.g. GitHub rate limit)
+      data['fetched_at'] = Time.now.utc.strftime('%Y-%m-%d') unless data.empty?
+      # Keep the last good values (and their date) for anything this fetch could not get (e.g. GitHub rate limit)
       data = hit['data'].merge(data) if hit
 
       cache[key] = { 'at' => Time.now.to_i, 'v' => CACHE_VERSION, 'complete' => complete, 'data' => data }
@@ -63,25 +64,15 @@ module Jekyll
       primary = pubs.find { |p| Array(p['type']).include?('Primary') } || pubs.first
 
       {
-        'name' => d['name'],
-        'homepage' => d['homepage'],
         'tool_types' => d['toolType'],
-        'topics' => Array(d['topic']).map { |t| t['term'] }.compact,
-        'operations' => Array(d['function']).flat_map { |f| Array(f['operation']).map { |o| o['term'] } }.compact.uniq,
         'license' => d['license'],
-        'languages' => d['language'],
-        'platforms' => d['operatingSystem'],
         'maturity' => d['maturity'],
-        'cost' => d['cost'],
-        'accessibility' => d['accessibility'],
         'repository' => links.find { |l| Array(l['type']).include?('Repository') }&.dig('url'),
         'issue_tracker' => links.find { |l| Array(l['type']).include?('Issue tracker') }&.dig('url'),
         'how_to_use' => docs.reject { |x| Array(x['type']).include?('Citation instructions') }
                             .map { |x| { 'url' => x['url'], 'label' => Array(x['type']).join(', ') } },
-        'download' => Array(d['download']).map { |x| { 'url' => x['url'], 'label' => x['type'] } },
         'citation_count' => pubs.sum { |p| p.dig('metadata', 'citationCount').to_i },
-        'how_to_cite' => primary && format_publication(primary),
-        'primary_doi' => primary && primary['doi']
+        'how_to_cite' => primary && format_publication(primary)
       }.reject { |_, v| v.nil? || v == [] || v == '' }
     end
 
@@ -97,9 +88,7 @@ module Jekyll
         'github_stars' => d['stargazers_count'],
         'last_commit' => d['pushed_at']&.slice(0, 10),
         'latest_release' => release && release['tag_name'],
-        'releases_url' => release && "#{d['html_url']}/releases",
         'latest_release_date' => release && release['published_at']&.slice(0, 10),
-        'languages' => [d['language']].compact,
         'license' => d.dig('license', 'spdx_id').then { |l| l == 'NOASSERTION' ? nil : l }
       }
       cff = get_text("https://raw.githubusercontent.com/#{repo}/HEAD/CITATION.cff")
@@ -118,7 +107,7 @@ module Jekyll
     end
 
     def format_cff(text)
-      c = YAML.safe_load(text)
+      c = YAML.safe_load(text, permitted_classes: [Date, Time])
       authors = Array(c['authors']).map { |a| [a['given-names'], a['family-names']].compact.join(' ').then { |n| n.empty? ? a['name'] : n } }
       doi = c['doi'] && "https://doi.org/#{c['doi']}"
       [authors.join(', '), c['date-released'] && "(#{c['date-released'].to_s[0, 4]})", "#{c['title']}.", c['version'] && "Version #{c['version']}.", doi]
@@ -143,7 +132,8 @@ module Jekyll
       uri = URI(url)
       res = Net::HTTP.start(uri.host, uri.port, use_ssl: true, open_timeout: 5, read_timeout: 10) do |http|
         headers = { 'Accept' => accept, 'User-Agent' => 'fair-metroline-build' }
-        headers['Authorization'] = "Bearer #{ENV['GITHUB_TOKEN']}" if uri.host == 'api.github.com' && ENV['GITHUB_TOKEN']
+        token = ENV['GITHUB_TOKEN'] || ENV['JEKYLL_GITHUB_TOKEN']   # the CI workflow sets JEKYLL_GITHUB_TOKEN
+        headers['Authorization'] = "Bearer #{token}" if uri.host == 'api.github.com' && token
         http.get(uri.request_uri, headers)
       end
       res.is_a?(Net::HTTPSuccess) ? res.body : nil

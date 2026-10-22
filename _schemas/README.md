@@ -1,7 +1,7 @@
 # Tool schema (draft)
 
 - `tool.schema.yml`: JSON Schema for one tool entry
-- Demo entries: `_data/tools_v2.yml`, rendered by `_layouts/tool_profile.html`
+- Entries: `_data/tools_v2.yml`, rendered by `_layouts/tool_profile.html` (pages made by `_plugins/tool_page_generator.rb`)
 - Vocabularies: `_data/tool_types.yml` (tool types), `_data/domains.yml` (domains), `_data/keywords.yml` (keywords)
 
 Jekyll ignores this folder because its name starts with `_`.
@@ -25,7 +25,12 @@ Every value in an entry of `_data/tools_v2.yml` is either verified or pending:
 | **Fetched** at build time | bio.tools, GitHub | activity, metrics, citations, source code and issue tracker links; only once the registry ids are verified |
 | **Derived** | the site | Metroline steps (from `show-badges` / `show-tiles` in step pages) and use cases (through those steps) |
 
-Nothing falls back to the old `_data/tools.yml` any more.
+When a field has more than one source, the page takes, in order: the verified value, the value fetched with
+verified ids, the pending value, the value fetched with pending ids. Ids can be verified one at a time (for
+example `biotools` verified, `github` still pending). A written licence, even `unconfirmed`, is never
+replaced by a fetched one.
+
+No page content comes from the old `_data/tools.yml` any more; it only still decides the page URLs.
 
 ## Homepage button
 
@@ -43,8 +48,8 @@ kinds of resource that FAIR Metroline lists, so they get local types:
 - **Registry / catalogue**: FAIRassist, ERDRI.mdr
 - **Standard / specification**: CSV on the Web
 
-Hosted services such as Castor or SURF FileSender use bio.tools types (Web application); the
-`cost` and `access` fields say how you get access.
+Hosted services such as Castor or SURF FileSender use bio.tools types (Web application); `cost` and
+`hosted` say how you get access.
 
 ## FAIR tags
 
@@ -66,7 +71,7 @@ across domains; add it when analysis tools return to the catalogue.
 ## Why not use the bio.tools schema or CodeMeta as the whole schema
 
 Both describe software only, and only 11 of the current 40 tools are in bio.tools. We reuse
-bio.tools' vocabularies (tool type, cost, access, maturity) and store registry identifiers to
+bio.tools' vocabularies (tool type, cost, maturity) and store registry identifiers to
 fetch from. If we want standards-based metadata later, the site can emit schema.org JSON-LD per
 page from the tool type, with no extra work for editors.
 

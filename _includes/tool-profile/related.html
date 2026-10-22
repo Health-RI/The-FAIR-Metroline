@@ -1,7 +1,0 @@
-{%- assign p = include.p -%}{%- assign pf = p.pending_fields -%}
-{%- if p.related -%}
-<section class="tp-section">
-  <h2>Related tools</h2>
-  <div class="tp-related{% if pf contains 'related' %} tp-pending{% endif %}"><span>Related in this catalogue</span>{% include toolassemblies/show-badges.html ids=p.related %}</div>
-</section>
-{%- endif -%}

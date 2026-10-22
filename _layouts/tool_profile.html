@@ -2,11 +2,12 @@
 layout: page
 ---
 {% comment %}
-  Tool profile page (_schemas/tool.schema.yml), built by _plugins/tool_page_generator.rb.
-  page.live = verified values only (shown by default); page.full = verified + pending values.
-  Add ?unverified=1 to the URL to see the pending values (dashed border); ?unverified=0 hides them again.
-  The choice is remembered for the browser tab, so it stays on while clicking through tool pages.
-  Every block is skipped when it has nothing to show, so unverified fields never leave gaps.
+  Tool page, built by _plugins/tool_page_generator.rb from _data/tools_v2.yml (page.tool).
+
+  Verified values show as they are. Pending values (not verified yet) carry the class tp-pending and are
+  hidden unless the visitor adds ?unverified=1 to the URL; they then show with a dashed border. A section
+  without any verified value is marked tp-pending as a whole, so the live page never shows an empty one.
+  ?unverified=0 hides pending values again; the choice is remembered while browsing other tool pages.
 {% endcomment %}
 <script>
   (function () {
@@ -21,63 +22,201 @@ layout: page
     }
   })();
 </script>
+{% assign p = page.tool %}
 
-<p class="tp-preview-note tp-only-unverified">
-  Showing values that are not verified yet (dashed border){% unless page.has_pending %}; this tool has none{% endunless %}.
+<p class="tp-preview-note tp-pending">
+  Showing values that are not verified yet (dashed border){% unless p.has_pending %}; this tool has none{% endunless %}.
   They are hidden on the live site. <a href="?unverified=0">Hide them</a>
 </p>
 
 {% comment %} ===== HEADER ===== {% endcomment %}
 <section class="tp-hero">
-  {% include tool-profile/block.html name="hero" %}
-  {% include tool-profile/block.html name="tags" %}
-  {% include tool-profile/block.html name="facts" %}
+  <div class="tp-hero-main">
+    {% if p.logo_url %}<img class="tp-logo{% if p.pending contains 'logo' %} tp-pending{% endif %}" src="{{ p.logo_url }}" alt="">{% endif %}
+    <div class="tp-hero-text">
+      {% if p.short_description %}<p class="tp-lead{% if p.pending contains 'short_description' %} tp-pending{% endif %}">{{ p.short_description }}</p>{% endif %}
+
+      {% assign n_types = p.tool_types.size %}
+      {% if n_types > 0 or p.tool_types_pending.size > 0 %}
+      <div class="tp-types{% if n_types == 0 %} tp-pending{% endif %}">
+        {% for t in p.tool_types limit: 3 %}{% assign tdef = site.data.tool_types | where: "name", t | first %}<span class="tp-type{% if tdef.source == 'local' %} tp-type--local{% endif %}" title="{{ tdef.text }}">{{ t }}</span>{% endfor %}
+        {% if n_types > 3 %}{% assign more_types = p.tool_types | slice: 3, n_types %}<span class="tp-type tp-type--more" title="{{ more_types | join: ', ' }}">+{{ n_types | minus: 3 }}</span>{% endif %}
+        {% for t in p.tool_types_pending %}{% assign tdef = site.data.tool_types | where: "name", t | first %}<span class="tp-type tp-pending{% if tdef.source == 'local' %} tp-type--local{% endif %}" title="{{ tdef.text }}">{{ t }}</span>{% endfor %}
+      </div>
+      {% endif %}
+
+      {% if p.homepage %}
+      <div class="tp-cta">
+        <a class="tp-btn {% if p.opens_tool %}tp-btn--tool{% else %}tp-btn--site{% endif %}{% if p.opens_tool_pending == true %} tp-verified-alt{% endif %}{% if p.pending contains 'links.homepage' %} tp-pending{% endif %}" href="{{ p.homepage }}" target="_blank" rel="noopener">{% if p.opens_tool %}Open the tool{% else %}Visit website{% endif %} <span aria-hidden="true">↗</span></a>
+        {% if p.opens_tool_pending == true %}<a class="tp-btn tp-btn--tool tp-pending" href="{{ p.homepage }}" target="_blank" rel="noopener">Open the tool <span aria-hidden="true">↗</span></a>{% endif %}
+        {% if p.docs %}<a class="tp-cta-link{% if p.pending contains 'links.docs' %} tp-pending{% endif %}" href="{{ p.docs }}" target="_blank" rel="noopener">Documentation</a>{% endif %}
+        {% if p.docs_note %}<span class="tp-muted{% if p.pending contains 'links.docs_note' %} tp-pending{% elsif p.docs %} tp-verified-alt{% endif %}">Documentation: {{ p.docs_note | downcase }}</span>{% endif %}
+        {% for dl in p.downloads %}<a class="tp-cta-link{% if p.pending contains 'links.download' %} tp-pending{% endif %}" href="{{ dl.url }}" target="_blank" rel="noopener">{{ dl.label }}</a>{% endfor %}
+        {% if p.hosted %}<span class="tp-muted{% if p.pending contains 'hosted' %} tp-pending{% endif %}">Online service, nothing to install</span>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% assign fair_all = p.fair | concat: p.fair_pending %}
+  {% assign phase_all = p.phase | concat: p.phase_pending %}
+  {% if fair_all.size > 0 or phase_all.size > 0 %}
+  <div class="tp-tags{% if p.fair.size == 0 and p.phase.size == 0 %} tp-pending{% endif %}">
+    {% if fair_all.size > 0 %}
+    {% assign letters = fair_all | where_exp: "t", "t != 'planning'" %}
+    <div class="tp-tag-row{% if p.fair.size == 0 %} tp-pending{% endif %}">
+      <span class="tp-label">FAIR</span>
+      <span class="tp-fair">
+        {% if letters.size > 0 %}
+        {% assign letters_verified = p.fair | where_exp: "t", "t != 'planning'" %}
+        {% assign names = "Findable,Accessible,Interoperable,Reusable" | split: "," %}
+        <span class="tp-fair-letters{% if letters_verified.size == 0 %} tp-pending{% endif %}">{% for name in names %}{% assign l = name | slice: 0 %}<span class="tp-fair-l tp-fair-{{ l }}{% if p.fair contains l %} on{% elsif p.fair_pending contains l %} tp-on-pending{% endif %}" title="{{ name }}">{{ l }}</span>{% endfor %}</span>
+        {% endif %}
+        {% if fair_all contains 'planning' %}<span class="tp-fair-plan{% unless p.fair contains 'planning' %} tp-pending{% endunless %}">FAIR assessment &amp; planning</span>{% endif %}
+      </span>
+    </div>
+    {% endif %}
+    {% if phase_all.size > 0 %}
+    <div class="tp-tag-row{% if p.phase.size == 0 %} tp-pending{% endif %}">
+      <span class="tp-label">Life cycle</span>
+      <span class="tp-cycle">
+        {% for stage in site.data.lifecycle_stages %}<span class="{% if p.phase contains stage.name %}on{% elsif p.phase_pending contains stage.name %}tp-on-pending{% endif %}" title="{{ stage.text }}">{{ stage.name }}</span>{% endfor %}
+      </span>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% comment %} Facts: a fact is pending when its value is; the list is pending when no fact is verified {% endcomment %}
+  {% assign lic_all = p.license | concat: p.license_pending %}
+  {% assign dom_all = p.domains | concat: p.domains_pending %}
+  {% assign any_fact = false %}{% assign verified_fact = false %}
+  {% if lic_all.size > 0 or p.cost or p.code_availability or p.maturity or p.activity or dom_all.size > 0 %}{% assign any_fact = true %}{% endif %}
+  {% if p.license.size > 0 or p.domains.size > 0 %}{% assign verified_fact = true %}{% endif %}
+  {% if p.cost %}{% unless p.pending contains 'cost' %}{% assign verified_fact = true %}{% endunless %}{% endif %}
+  {% if p.code_availability %}{% unless p.pending contains 'code_availability' %}{% assign verified_fact = true %}{% endunless %}{% endif %}
+  {% if p.maturity %}{% unless p.pending contains 'maturity' %}{% assign verified_fact = true %}{% endunless %}{% endif %}
+  {% if p.activity %}{% unless p.activity_pending %}{% assign verified_fact = true %}{% endunless %}{% endif %}
+  {% if any_fact %}
+  <dl class="tp-facts{% unless verified_fact %} tp-pending{% endunless %}">
+    {% if lic_all.size > 0 %}<div{% if p.license.size == 0 %} class="tp-pending"{% endif %}><dt>Licence</dt><dd>{{ p.license | join: " / " }}{% if p.license_pending.size > 0 %}<span class="tp-pending">{% if p.license.size > 0 %} / {% endif %}{{ p.license_pending | join: " / " }}</span>{% endif %}</dd></div>{% endif %}
+    {% if p.cost %}<div{% if p.pending contains 'cost' %} class="tp-pending"{% endif %}><dt>Cost</dt><dd>{{ p.cost }}</dd></div>{% endif %}
+    {% if p.code_availability %}<div{% if p.pending contains 'code_availability' %} class="tp-pending"{% endif %}><dt>Source code</dt><dd>{{ p.code_availability }}</dd></div>{% endif %}
+    {% if p.maturity %}<div{% if p.pending contains 'maturity' %} class="tp-pending"{% endif %}><dt>Maturity</dt><dd><span class="tp-pill tp-pill--{{ p.maturity | downcase }}">{{ p.maturity }}</span></dd></div>{% endif %}
+    {% if p.activity %}<div{% if p.activity_pending %} class="tp-pending"{% endif %}><dt>Activity</dt><dd class="tp-activity tp-activity--{{ p.activity.status }}">{{ p.activity.label }}</dd></div>{% endif %}
+    {% if dom_all.size > 0 %}<div{% if p.domains.size == 0 %} class="tp-pending"{% endif %}><dt>Domains</dt><dd>{% for d in p.domains %}<span class="tp-domain">{{ d }}</span>{% endfor %}{% for d in p.domains_pending %}<span class="tp-domain tp-pending">{{ d }}</span>{% endfor %}</dd></div>{% endif %}
+  </dl>
+  {% endif %}
 </section>
 
-{% include tool-profile/block.html name="cite" %}
+{% comment %} ===== ABOUT ===== {% endcomment %}
+{% if p.about %}
+<section class="tp-section{% if p.pending contains 'description' %} tp-pending{% endif %}">
+  <h2>About</h2>
+  <p>{{ p.about }}</p>
+</section>
+{% endif %}
 
-<div class="tp-sections">
-
-{% include tool-profile/block.html name="about" %}
-
-{% comment %} ===== WHERE IT FITS: derived from the guidance pages, the same in both views ===== {% endcomment %}
+{% comment %} ===== WHERE IT FITS: derived from the guidance pages ===== {% endcomment %}
 {% if page.metroline_steps.size > 0 or page.scenarios.size > 0 %}
 <section class="tp-section">
   <h2>Where it fits in the FAIR Metroline</h2>
   {% if page.metroline_steps.size > 0 %}
-  <h3 class="tp-subhead">Metroline steps</h3>
+  <h3 class="tp-label tp-subhead">Metroline steps</h3>
   <div class="tp-cards">
-    {% for st in page.metroline_steps %}
-    <a class="tp-card" href="{{ st.url | relative_url }}">
-      <span class="tp-card-icon" aria-hidden="true">{{ st.icon }}</span>
-      <span class="tp-card-body">
-        <strong>{{ st.title }}</strong>
-        {% if st.summary %}<span>{{ st.summary | strip_html | truncatewords: 14 }}</span>{% endif %}
-      </span>
-    </a>
-    {% endfor %}
+    {% for st in page.metroline_steps %}<a class="tp-card" href="{{ st.url | relative_url }}"><span class="tp-card-icon" aria-hidden="true">{{ st.icon }}</span><strong>{{ st.title }}</strong></a>{% endfor %}
   </div>
   {% endif %}
   {% if page.scenarios.size > 0 %}
-  <h3 class="tp-subhead">Scenarios</h3>
+  <h3 class="tp-label tp-subhead">Use cases</h3>
   <div class="tp-cards">
-    {% for sc in page.scenarios %}
-    <a class="tp-card" href="/{{ sc.url }}">
-      <span class="tp-card-icon" aria-hidden="true">{{ sc.icon }}</span>
-      <span class="tp-card-body">
-        <strong>{{ sc.title }}</strong>
-        <span>{% if sc.via.size > 0 %}Uses it in: {{ sc.via | join: ", " }}{% else %}Uses this tool directly{% endif %}{% if sc.complexity %} · {{ sc.complexity }} complexity{% endif %}</span>
-      </span>
-    </a>
+    {% for sc in page.scenarios %}<a class="tp-card" href="/{{ sc.url }}"><span class="tp-card-icon" aria-hidden="true">{{ sc.icon }}</span><strong>{{ sc.title }}</strong></a>{% endfor %}
+  </div>
+  {% endif %}
+</section>
+{% endif %}
+
+{% comment %} ===== HOW TO CITE: only when there is a citation ===== {% endcomment %}
+{% if p.how_to_cite %}
+<section class="tp-section{% if p.pending contains 'how_to_cite' %} tp-pending{% endif %}">
+  <h2>How to cite</h2>
+  <div class="tp-cite-box">
+    <p>{{ p.how_to_cite }}</p>
+    <button type="button" class="btn btn-sm btn-outline-primary" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText);this.innerText='Copied'">Copy</button>
+  </div>
+</section>
+{% endif %}
+
+{% comment %} ===== RELATED TOOLS ===== {% endcomment %}
+{% if p.related.size > 0 or p.related_pending.size > 0 %}
+<section class="tp-section{% if p.related.size == 0 %} tp-pending{% endif %}">
+  <h2>Related tools</h2>
+  {% if p.related.size > 0 %}{% include toolassemblies/show-badges.html ids=p.related %}{% endif %}
+  {% if p.related_pending.size > 0 %}<span class="tp-pending">{% include toolassemblies/show-badges.html ids=p.related_pending %}</span>{% endif %}
+</section>
+{% endif %}
+
+{% comment %} ===== ADOPTION: registry metrics (pending while fetched with pending ids) and institutes ===== {% endcomment %}
+{% assign m = p.metrics %}
+{% assign inst_all = p.institutes | concat: p.institutes_pending %}
+{% if m.size > 0 or inst_all.size > 0 %}
+{% assign adoption_verified = false %}
+{% if m.size > 0 and p.metrics_pending != true %}{% assign adoption_verified = true %}{% endif %}
+{% if p.institutes.size > 0 %}{% assign adoption_verified = true %}{% endif %}
+<section class="tp-section{% unless adoption_verified %} tp-pending{% endunless %}">
+  <h2>Adoption and activity</h2>
+  {% if m.size > 0 %}
+  <div{% if p.metrics_pending %} class="tp-pending"{% endif %}>
+    <div class="tp-metrics">
+      {% if m.citation_count %}<div class="tp-metric"><span class="tp-metric-value">{{ m.citation_count }}</span><span class="tp-muted">citations</span></div>{% endif %}
+      {% if m.github_stars %}<div class="tp-metric"><span class="tp-metric-value">{{ m.github_stars }}</span><span class="tp-muted">GitHub stars</span></div>{% endif %}
+      {% if m.latest_release %}<div class="tp-metric"><span class="tp-metric-value">{{ m.latest_release }}</span><span class="tp-muted">latest release{% if m.latest_release_date %} · {{ m.latest_release_date | date: "%b %Y" }}{% endif %}</span></div>{% endif %}
+      {% if m.last_commit %}<div class="tp-metric"><span class="tp-metric-value">{{ m.last_commit | date: "%b %Y" }}</span><span class="tp-muted">last code change</span></div>{% endif %}
+    </div>
+    <p class="tp-muted tp-source">From {{ m.source }}{% if m.fetched_at %}, {{ m.fetched_at | date: "%-d %b %Y" }}{% endif %}.</p>
+  </div>
+  {% endif %}
+  {% if inst_all.size > 0 %}
+  <h3 class="tp-label tp-subhead{% if p.institutes.size == 0 %} tp-pending{% endif %}">Used by</h3>
+  <div class="tp-logos">
+    {% for institute in inst_all %}
+    {% assign affiliation = site.data.affiliations | where: "name", institute | first %}
+    {% assign inst_pending = false %}{% if p.institutes_pending contains institute %}{% assign inst_pending = true %}{% endif %}
+    {% if affiliation %}<a class="{% if inst_pending %}tp-pending{% endif %}" href="{{ affiliation.url }}" target="_blank" title="{{ institute }}"><img src="/{{ affiliation.image_url }}" alt="{{ institute }}"></a>
+    {% else %}<span class="badge bg-info{% if inst_pending %} tp-pending{% endif %}">{{ institute }}</span>{% endif %}
     {% endfor %}
   </div>
   {% endif %}
 </section>
 {% endif %}
 
-{% include tool-profile/block.html name="links" %}
-{% include tool-profile/block.html name="adoption" %}
-{% include tool-profile/block.html name="keywords" %}
-{% include tool-profile/block.html name="related" %}
+{% comment %} ===== MORE LINKS: everything not already in the header ===== {% endcomment %}
+{% if p.more_links.size > 0 %}
+{% assign links_verified = p.more_links | where: "pending", false %}
+<section class="tp-section{% if links_verified.size == 0 %} tp-pending{% endif %}">
+  <h2>More links</h2>
+  <div class="tp-links">
+    {% for l in p.more_links %}
+    <a class="tp-link{% if l.pending %} tp-pending{% endif %}" href="{{ l.url }}" target="_blank" rel="noopener">
+      <span class="tp-label tp-link-kind">{{ l.kind }}</span>
+      <span>{{ l.label }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 
-</div>
+{% comment %} ===== KEYWORDS ===== {% endcomment %}
+{% if p.keywords.size > 0 or p.keywords_pending.size > 0 %}
+<section class="tp-section{% if p.keywords.size == 0 %} tp-pending{% endif %}">
+  <h2>Keywords</h2>
+  <div class="tp-keywords">
+    {% assign kw_all = p.keywords | concat: p.keywords_pending %}
+    {% for k in kw_all %}
+    {% assign kw = site.data.keywords | where: "name", k | first %}
+    {% assign kw_class = "tp-keyword" %}{% if kw.url %}{% assign kw_class = "tp-keyword tp-keyword--std" %}{% endif %}{% if p.keywords_pending contains k %}{% assign kw_class = kw_class | append: " tp-pending" %}{% endif %}
+    {% if kw.url %}<a class="{{ kw_class }}" href="{{ kw.url }}" target="_blank" rel="noopener" title="{{ kw.text }}">{{ k }}</a>{% else %}<span class="{{ kw_class }}">{{ k }}</span>{% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

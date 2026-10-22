@@ -1,74 +1,12 @@
-{%- assign ids_string = include.ids | join: ", " -%}
-{%- assign tool_ids = ids_string | split: ", " %}
+{%- comment -%}
+  Cards for the given tools, e.g. {% include toolassemblies/show-tiles.html ids="castor, redcap" %}
+{%- endcomment -%}
+{%- assign tool_ids = include.ids | join: ", " | split: ", " -%}
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-{{ include.col | default: 2 }} g-4 mb-5 navigation-tiles">
-    {%- assign tool_pages = site.pages | where:"type", "tool" %}
-    {%- for tool_page in tool_pages %}
-    {%- assign page_id = tool_page.title | slugify %}
-    {%- if tool_ids contains page_id or tool_ids contains tool_page.tool_id %}
-    <div class="col">
-        <a href="{{ tool_page.url | relative_url }}" class="card h-100 tool-card" aria-label="Go to the {{ tool_page.title }} page">
-            <div class="card-body">
-
-                {%- if tool_page.page_img %}
-                {%- if tool_page.page_img contains "http://" or tool_page.page_img contains "https://" %}
-                {%- assign file_url = tool_page.page_img -%}
-                {%- else %}
-                {%- capture file_url -%}
-                {{ "/assets/img/" | append: tool_page.page_img | relative_url }}
-                {%- endcapture -%}
-                {%- endif %}
-                <div class="tool-card-icon">
-                    <img
-                        alt="logo of {{ tool_page.title }}"
-                        src="{{ file_url }}"
-                    >
-                </div>
-                {%- endif %}
-
-                <h3 class="tool-card-title">{{ tool_page.title }}</h3>
-
-                {%- if tool_page.description %}
-                <p class="tool-card-description">{{ tool_page.description }}</p>
-                {%- endif %}
-
-                <div class="tool-card-meta">
-                    {%- if tool_page.fair_support_category %}
-                    <div class="tool-tags-group">
-                        <span class="tool-tags-label">FAIR support category:</span>
-                        <div class="tool-tags">
-                            <span class="badge tool-role-badge">{{ tool_page.fair_support_category }}</span>
-                        </div>
-                    </div>
-                    {%- endif %}
-
-                    {%- if tool_page.domain %}
-                    {%- assign pagedomains = tool_page.domain | sort %}
-                    <div class="tool-tags-group">
-                        <span class="tool-tags-label">Domains:</span>
-                        <div class="tool-tags">
-                            {%- for domain in pagedomains %}
-                            <span class="badge bg-primary">{{ domain }}</span>
-                            {%- endfor %}
-                        </div>
-                    </div>
-                    {%- endif %}
-
-                    {%- if tool_page.phase %}
-                    {%- assign pagephases = tool_page.phase %}
-                    <div class="tool-tags-group">
-                        <span class="tool-tags-label">Phases:</span>
-                        <div class="tool-tags">
-                            {%- for phase in pagephases %}
-                            <span class="badge bg-secondary">{{ phase }}</span>
-                            {%- endfor %}
-                        </div>
-                    </div>
-                    {%- endif %}
-                </div>
-
-            </div>
-        </a>
-    </div>
-    {%- endif %}
-    {%- endfor %}
+  {%- assign tool_pages = site.pages | where: "type", "tool" %}
+  {%- for tool_page in tool_pages %}
+  {%- if tool_ids contains tool_page.tool_id %}
+  <div class="col">{% include toolassemblies/tool-card.html tool=tool_page %}</div>
+  {%- endif %}
+  {%- endfor %}
 </div>

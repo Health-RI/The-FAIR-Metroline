@@ -3,8 +3,8 @@
 # Imported on 2026-10-22 from the manual review (_review/tools4fair-annotation-form_new_v1.xlsx):
 # - top-level values were verified by a reviewer (green or yellow in the sheet);
 # - `pending:` holds values nobody has checked yet (white) or that still need a decision (purple).
-#   The live site shows only verified values and hides empty sections; the preview build
-#   (_config_preview.yml) also shows pending values, marked as unverified.
+#   The live site shows only verified values and hides empty sections; add ?unverified=1 to a tool
+#   page URL to see the pending values too, with a dashed border.
 #   When a pending value is checked, move it up to the top level.
 # - values and tools that were crossed out in the sheet are not included.
 #
@@ -27,7 +27,7 @@
     homepage_opens_tool: false
     docs: "https://helpdesk.castoredc.com/hc/en-us"
   logo: toolassemblies/tools/castor.png
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     description: >-
       Castor EDC is a cloud-based electronic data capture system designed to simplify clinical data
       collection and ensure interoperability. It integrates easily with broader clinical trial systems and
@@ -43,6 +43,7 @@
         - {kind: Training, url: "https://www.castoredc.com/resources/webinars/"}
         - {kind: Templates and examples, url: "https://forms.castoredc.com/"}
     keywords: [eCRF, RDF]
+    institutes: [Amsterdam UMC, Erasmus MC, Leiden UMC, Maastricht UMC+, Radboudumc, UMCG]
     related: [redcap, art-decor, icrf-generator]
 
 - id: mydre
@@ -57,7 +58,7 @@
     homepage_opens_tool: false
     docs: "https://support.mydre.org/portal/en/kb/mydre"
   logo: toolassemblies/tools/andrea.png
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     short_description: "Secure cloud workspaces where project teams store and analyse sensitive data, with approved and logged upload and download; used by [all] Dutch UMCs."
     description: >-
       myDRE is a Trusted Processing Environment run by anDREa B.V. on Microsoft Azure. An organisation
@@ -98,7 +99,7 @@
     docs: "https://molgenis.github.io/molgenis-emx2/"
     download: "https://github.com/molgenis/molgenis-emx2"
   logo: toolassemblies/tools/molgenis.png
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [F, I]
     lifecycle: [Collect, Preserve, Share, Reuse]
     code_availability: Open source
@@ -115,6 +116,7 @@
       biotools: molgenis
       github: molgenis/molgenis-emx2
       doi: 10.1093/bioinformatics/btw155
+    institutes: [UMCG]
     related: [fair-data-point, fairdom-seek]
 
 - id: xnat
@@ -136,7 +138,7 @@
     docs: "https://wiki.xnat.org/"
     download: "https://www.xnat.org/download/"
   logo: toolassemblies/tools/xnat.png
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [F, A]
     lifecycle: [Collect, Preserve, Share, Reuse]
     code_availability: Open source
@@ -155,6 +157,7 @@
       biotools: xnat
       github: NrgXnat/xnat
       doi: "10.1385/ni:5:1:11"
+    institutes: [Erasmus MC, Leiden UMC, UMCG]
     related: [fair-data-point]
 
 - id: dmponline
@@ -180,7 +183,7 @@
     homepage_opens_tool: true
     docs: "https://dmponline.dcc.ac.uk/help"
   logo: toolassemblies/tools/dmponline.png
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [planning]
     lifecycle: [Plan]
     code_availability: Open source
@@ -192,6 +195,7 @@
     keywords: [RDA DMP Common Standard]
     ids:
       github: DMPRoadmap/roadmap
+    institutes: [Leiden UMC, Radboudumc, Vrije Universiteit Amsterdam, UMC Utrecht, "Wageningen University & Research", Universiteit Utrecht, Technische Universiteit Delft, Erasmus Universiteit Rotterdam]
     related: [fip-wizard, fair-aware]
 
 - id: leaf
@@ -216,7 +220,7 @@
     docs: "https://leaf-framework.org/docs/"
     download: "https://leaf-framework.org/download/"
   logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAEJ8d9O9pkiFQvrOcfA-gGxDEMXzW80nlYfPGRxJZlw&s"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [R]
     lifecycle: [Collect, Process]
     code_availability: Open source
@@ -224,6 +228,7 @@
       other:
         - {kind: Templates and examples, url: "https://gitlab.com/m-unlock"}
     keywords: [MQTT]
+    institutes: ["Wageningen University & Research"]
     related: [fair-data-station, fairdom-seek]
 
 - id: fair-data-station
@@ -247,7 +252,7 @@
     docs: "https://fairbydesign.nl/docs/fairdatastation/introduction/"
     download: "https://gitlab.com/fairbydesign/fairds/-/releases"
   logo: toolassemblies/tools/fair-ds.png
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I, R]
     lifecycle: [Plan, Collect, Preserve, Share]
     code_availability: Open source
@@ -260,6 +265,7 @@
       biotools: fair_data_station
       rsd: fair-data-station
       doi: 10.1101/2022.08.03.502622
+    institutes: ["Wageningen University & Research"]
     related: [fairdom-seek, leaf, cedar-workbench]
 
 - id: fairdom-seek
@@ -282,7 +288,7 @@
     docs: "https://docs.seek4science.org/"
     download: "https://github.com/seek4science/seek"
   logo: "https://seek4science.org/assets/images/fairdom-seek-logo-alt.svg"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [F, R]
     lifecycle: [Preserve, Share]
     code_availability: Open source
@@ -320,7 +326,7 @@
     homepage_opens_tool: false
     docs: "https://docs.fairdatapoint.org/en/latest/"
     download: "https://github.com/FAIRDataTeam/FAIRDataPoint"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [F, A]
     lifecycle: [Preserve, Share, Reuse]
     code_availability: Open source
@@ -354,14 +360,14 @@
     transformations from tabular or structured source data into RDF.
   tool_type: [Desktop application, Web application, Web service, Workbench]
   domains: [Cross-domain]
-  license: [empty is now unconfirmed]
+  license: [unconfirmed]
   cost: Free of charge
   links:
     homepage: "https://platform.ontotext.com/ontorefine/"
     homepage_opens_tool: false
     docs_note: Download it at the bottom of the product page
     download: "https://platform.ontotext.com/ontorefine/install-migrate.html#installation"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I]
     lifecycle: [Process]
     code_availability: Open source
@@ -385,7 +391,7 @@
     docs: "https://openrefine.org/docs"
     download: "https://openrefine.org/download"
   logo: "https://openrefine.org/img/openrefine_logo.svg"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I]
     lifecycle: [Process]
     code_availability: Open source
@@ -415,7 +421,7 @@
     homepage: "https://metadatacenter.org/"
     homepage_opens_tool: false
     docs: "https://metadatacenter.readthedocs.io/en/latest/"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I, R]
     lifecycle: [Plan, Collect, Preserve, Share]
     code_availability: Open source
@@ -430,6 +436,7 @@
     ids:
       biotools: cedar_workbench
       github: metadatacenter/cedar-template-editor
+      fairsharing: 10.25504/FAIRsharing.V527H4
     how_to_cite: >-
       
       https://biokeanos.com/source/Center%20for%20Expanded%20Data%20Annotation%20and%20Retrieval%20Workbench
@@ -451,7 +458,7 @@
     homepage_opens_tool: false
     docs: "https://graphdb.ontotext.com/documentation/"
     download: "https://graphdb.ontotext.com/documentation/11.5/how-to-install-graphdb.html"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [A, I]
     lifecycle: [Preserve, Share, Reuse]
     logo: "https://www.google.com/s2/favicons?domain=graphdb.ontotext.com&sz=128"
@@ -474,7 +481,7 @@
     docs: "https://github.com/blazegraph/database/wiki"
     download: "https://github.com/blazegraph/database"
   logo: "https://blazegraph.com/images/blazegraph_logo.png"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [A, I]
     lifecycle: [Preserve, Share, Reuse]
     code_availability: Open source
@@ -502,7 +509,7 @@
     homepage: "https://ardc.edu.au/resource/fair-data-self-assessment-tool/"
     homepage_opens_tool: true
     docs_note: On the website
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [planning]
     lifecycle: [Plan, Reuse]
     code_availability: Open source
@@ -528,7 +535,7 @@
     homepage: "https://www.rd-alliance.org/groups/fair-data-maturity-model-wg/outputs/fair-data-maturity-model-specification-and-guidelines/"
     homepage_opens_tool: false
     docs_note: On the website
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     short_description: "RDA recommendation with 41 indicators, priorities and scoring levels to judge how FAIR your (meta)data are, plus a spreadsheet to fill in."
     fair: [planning]
     lifecycle: [Plan, Reuse]
@@ -559,7 +566,7 @@
     homepage_opens_tool: true
     docs_note: Built into the tool
   logo: logos/fip-wizard_transp.svg
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [planning]
     lifecycle: [Plan, Share, Reuse]
     code_availability: Open source
@@ -583,7 +590,7 @@
     homepage: "https://fair-checker.france-bioinformatique.fr/"
     homepage_opens_tool: true
     download: "https://github.com/IFB-ElixirFr/fair-checker"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [planning]
     lifecycle: [Plan, Reuse]
     code_availability: Open source
@@ -618,7 +625,7 @@
     docs: "https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/#%2F!"
     download: "https://github.com/FAIRsharing/FAIR-Evaluator-FrontEnd"
   logo: "https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/assets/img/fairmetrics.png"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [planning]
     lifecycle: [Plan, Reuse]
     code_availability: Open source
@@ -648,7 +655,7 @@
     homepage_opens_tool: true
     docs_note: On the website
   logo: "https://avatars.githubusercontent.com/u/29867987"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [planning]
     lifecycle: [Plan, Reuse]
     code_availability: Open source
@@ -676,7 +683,7 @@
     homepage_opens_tool: true
     docs: "https://www.fairsfair.eu/fair-aware"
   logo: "https://www.google.com/s2/favicons?domain=fairaware.dans.knaw.nl&sz=128"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [planning]
     lifecycle: [Plan, Reuse]
     code_availability: Open source
@@ -705,7 +712,7 @@
     other:
       - {kind: Link, url: "https://art-decor.org/ad/#/home"}
   logo: metroline_steps/register_structural_metadata/ART-DECOR_screenshot.png
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I, R]
     lifecycle: [Plan, Collect, Share, Reuse]
     license: [GPL-3.0-only, LGPL-2.1-only]
@@ -733,7 +740,7 @@
     homepage_opens_tool: true
     docs: "https://eu-rd-platform.jrc.ec.europa.eu/system/files/public/erdri-manuals/ERDRI.mdr%20User%20Guide.pdf"
   logo: "https://eu-rd-platform.jrc.ec.europa.eu/mdr/images/logo-ec--en.svg"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [F, I]
     lifecycle: [Share, Reuse]
     keywords: [codebook]
@@ -754,7 +761,7 @@
     homepage_opens_tool: false
     docs: "https://www.w3.org/TR/tabular-data-primer/"
   logo: "https://www.google.com/s2/favicons?domain=w3.org&sz=128"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I, R]
     lifecycle: [Preserve, Share, Reuse]
     license: [W3C Document License]
@@ -781,7 +788,7 @@
     docs_note: On the website and in the GitHub repository
     download: "https://github.com/aderidder/iCRFGenerator/"
   logo: logos/healthri_transp.png
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     description: >-
       The iCRF Generator is an open-source Java desktop application, developed at Amsterdam UMC, with a
       wizard in which you pick items from published online codebooks, such as the Dutch Clinical Building
@@ -823,7 +830,7 @@
     download:
       - {label: Request a licence, url: "https://projectredcap.org/join/"}
       - {label: Server requirements, url: "https://projectredcap.org/software/requirements/"}
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I, R]
     lifecycle: [Collect]
     code_availability: Restricted access
@@ -862,7 +869,7 @@
       - {label: Desktop version, url: "https://protege.stanford.edu/software/#desktop-protege"}
       - {label: Desktop releases on GitHub, url: "https://github.com/protegeproject/protege-distribution/releases"}
   logo: "https://www.google.com/s2/favicons?domain=protege.stanford.edu&sz=128"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I]
     lifecycle: [Plan, Process, Reuse]
     code_availability: Open source
@@ -895,7 +902,7 @@
     docs_note: On the website
     download: "https://github.com/ontodev/robot/releases/tag/v1.9.11"
   logo: "https://github.com/ontodev.png?size=200"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I, R]
     lifecycle: [Process, Preserve, Reuse]
     code_availability: Open source
@@ -930,7 +937,7 @@
     download:
       - {label: GitHub releases, url: "https://github.com/TopQuadrant/shacl/releases"}
   logo: "https://github.com/TopQuadrant.png?size=200"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I, R]
     lifecycle: [Process, Reuse]
     code_availability: Open source
@@ -959,7 +966,7 @@
     docs: "https://github.com/RDFLib/pySHACL#readme"
     download: "https://pypi.org/project/pyshacl/"
   logo: "https://github.com/RDFLib.png?size=200"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I, R]
     lifecycle: [Process, Reuse]
     code_availability: Open source
@@ -989,7 +996,7 @@
     homepage_opens_tool: false
     docs: "https://github.com/mapping-commons/sssom-py"
     download: "https://mapping-commons.github.io/sssom-py/installation/"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I, R]
     lifecycle: [Process, Preserve, Reuse]
     code_availability: Open source
@@ -1020,7 +1027,7 @@
     homepage_opens_tool: false
     docs: "https://docs.sparnatural.eu/"
     download: "https://github.com/sparna-git/Sparnatural/releases/tag/13.1.0"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I]
     lifecycle: [Analyse, Reuse]
     code_availability: Open source
@@ -1051,7 +1058,7 @@
     homepage_opens_tool: true
     docs: "https://www.wikidata.org/wiki/Wikidata:Query_Builder"
   logo: "https://www.wikidata.org/static/favicon/wikidata.ico"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I]
     lifecycle: [Analyse, Reuse]
     code_availability: Open source
@@ -1078,7 +1085,7 @@
     homepage: "https://yasgui.triply.cc/"
     homepage_opens_tool: true
     download: "https://github.com/rdfjs/Yasgui/tree/main"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I]
     lifecycle: [Analyse, Reuse]
     code_availability: Open source
@@ -1107,7 +1114,7 @@
     homepage_opens_tool: true
     docs: "https://docs.openlinksw.com/virtuoso/rdfsparqlprotocolendpoint/"
   logo: "https://www.openlinksw.com/skin/matrix/images/opllogo-minimal-blue.svg"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [I]
     lifecycle: [Analyse, Reuse]
     cost: Free and paid
@@ -1138,7 +1145,7 @@
     homepage_opens_tool: false
     docs: "https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/198967769/FAQs#English"
   logo: logos/surf_transp.svg
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [A]
     lifecycle: [Share, Reuse]
     code_availability: Restricted access
@@ -1159,7 +1166,7 @@
     homepage_opens_tool: false
     docs: "https://www.ibm.com/downloads/documents/us-en/10a99803c42fd98c"
     download: "https://www.ibm.com/products/aspera/downloads"
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [A]
     lifecycle: [Share, Reuse]
     links:
@@ -1187,7 +1194,7 @@
     docs: "https://docs.globus.org/"
     download:
       - {label: Set-up for admins and developers, url: "https://docs.globus.org/getting-started/"}
-  pending:   # not verified yet: hidden on the live site, shown in preview
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     fair: [A]
     lifecycle: [Share, Reuse]
     logo: "https://www.google.com/s2/favicons?domain=globus.org&sz=128"

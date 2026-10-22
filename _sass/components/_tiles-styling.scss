@@ -123,8 +123,7 @@
   }
 }
 
-// Tool-specific metadata styling
-.tool-type,
+// Scenario metadata styling
 .scenario-type,
 .scenario-complexity {
   font-size: 0.75rem;
@@ -135,11 +134,6 @@
   letter-spacing: 0.5px;
   display: inline-block;
   width: fit-content;
-}
-
-.tool-type {
-  background: $menu-unselected-bg;
-  color: $primary;
 }
 
 .tool-tags-group {
@@ -177,12 +171,6 @@
       background: $menu-unselected-bg !important;
       color: $secondary !important;
       border: none;
-    }
-
-    &.tool-role-badge {
-      background: rgba($secondary, 0.1) !important;
-      color: $secondary !important;
-      border: 1px solid rgba($secondary, 0.16);
     }
   }
 }
