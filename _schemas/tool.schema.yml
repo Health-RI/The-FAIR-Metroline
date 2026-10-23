@@ -92,7 +92,7 @@ $defs:
       code_availability: {enum: [Open source, Closed source, Restricted access]}
       maturity: {enum: [Emerging, Mature, Legacy]}
       deprecated: {type: boolean, description: "The maintainers have stopped the tool; the page shows a warning"}
-      hosted: {type: boolean, description: "Used online, nothing to install (the reviewers' 'SaaS')"}
+      hosted: {type: boolean, description: "Used online (the reviewers' 'SaaS')"}
 
       links:
         type: object

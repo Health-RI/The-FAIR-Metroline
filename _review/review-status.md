@@ -73,7 +73,7 @@ Cells in Documentation and Download that held a note instead of a URL:
 | SURFfilesender | Download | SaaS | hosted: true |
 | Globus | Download | SaaS for users, for admin and developers: https://docs.globus.org/gett | Set-up for admins and developers |
 
-Mapping rules: `SaaS` → `hosted: true` ("Online service, nothing to install"); `nvt` → no download link;
+Mapping rules: `SaaS` → `hosted: true` ("Online service"); `nvt` → no download link;
 `platform website` → `docs_note: On the website`; `github readme` → the README of the GitHub homepage;
 several labelled URLs → a labelled download list.
 

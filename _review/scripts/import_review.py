@@ -281,7 +281,7 @@ HEADER = """# Tool entries (schema: _schemas/tool.schema.yml), rendered with _la
 #            Standard / specification (_data/tool_types.yml).
 # fair:      F, A, I, R and/or planning. domains: _data/domains.yml. keywords: _data/keywords.yml.
 # links.homepage_opens_tool: true when the homepage link opens the working tool itself.
-# hosted:    true for online services with nothing to install.
+# hosted:    true for online services.
 """
 text = HEADER + "\n" + "\n\n".join("- " + "\n".join(emit(e, 2, ORDER))[2:] for e in entries) + "\n"
 OUT.write_text(text)

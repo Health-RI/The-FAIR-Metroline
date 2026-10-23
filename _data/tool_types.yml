@@ -13,7 +13,7 @@
 - {name: Script, source: biotools, text: "A small program or set of commands for one task"}
 - {name: SPARQL endpoint, source: biotools, text: "Service that answers SPARQL queries over RDF data"}
 - {name: Suite, source: biotools, text: "A collection of tools distributed together"}
-- {name: Web application, source: biotools, text: "Used in the browser, nothing to install"}
+- {name: Web application, source: biotools, text: "Used in the browser"}
 - {name: Web API, source: biotools, text: "Programmatic interface over HTTP"}
 - {name: Web service, source: biotools, text: "Service offered over the web for other software to use"}
 - {name: Workbench, source: biotools, text: "Environment that combines tools into one interface"}

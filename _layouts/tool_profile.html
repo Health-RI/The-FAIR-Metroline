@@ -52,7 +52,7 @@ layout: page
         {% if p.docs %}<a class="tp-cta-link{% if p.pending contains 'links.docs' %} tp-pending{% endif %}" href="{{ p.docs }}" target="_blank" rel="noopener">Documentation</a>{% endif %}
         {% if p.docs_note %}<span class="tp-muted{% if p.pending contains 'links.docs_note' %} tp-pending{% elsif p.docs %} tp-verified-alt{% endif %}">Documentation: {{ p.docs_note | downcase }}</span>{% endif %}
         {% for dl in p.downloads %}<a class="tp-cta-link{% if p.pending contains 'links.download' %} tp-pending{% endif %}" href="{{ dl.url }}" target="_blank" rel="noopener">{{ dl.label }}</a>{% endfor %}
-        {% if p.hosted %}<span class="tp-muted{% if p.pending contains 'hosted' %} tp-pending{% endif %}">Online service, nothing to install</span>{% endif %}
+        {% if p.hosted %}<span class="tp-muted{% if p.pending contains 'hosted' %} tp-pending{% endif %}">Online service</span>{% endif %}
       </div>
       {% endif %}
     </div>

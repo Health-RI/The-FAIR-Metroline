@@ -12,7 +12,7 @@
 #            Standard / specification (_data/tool_types.yml).
 # fair:      F, A, I, R and/or planning. domains: _data/domains.yml. keywords: _data/keywords.yml.
 # links.homepage_opens_tool: true when the homepage link opens the working tool itself.
-# hosted:    true for online services with nothing to install.
+# hosted:    true for online services.
 
 - id: castor
   name: Castor EDC

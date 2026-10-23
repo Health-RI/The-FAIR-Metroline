@@ -38,7 +38,7 @@ working (Castor's page used to be `/castor-edc`). Templates find a tool's page w
 
 `links.homepage_opens_tool: true` when the homepage link opens the working tool itself: the page shows a filled
 **Open the tool** button. With `false` the link goes to a page about the tool: an outlined **Visit website**
-button. `hosted: true` adds "Online service, nothing to install".
+button. `hosted: true` adds "Online service".
 
 ## Tool type
 
