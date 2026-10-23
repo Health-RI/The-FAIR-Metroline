@@ -32,10 +32,18 @@ Applying the data model to your data and metadata model to your metadata is cruc
 The metadata and data that are structured with ontologies and follow standard schemas make it easier for other resources to find your resource’s metadata and understand its data. 
 
 ## How to
-### Step 1 - Use specialised tools to apply and customise a FAIR (meta)data model to your resources
+{% include how-to-summary-start.html
+   number="1"
+   title="Use specialised tools to apply and customise a FAIR (meta)data model to your resources"
+   summary="Select and configure tools like FAIR Data Point, FAIR-in-a-box, Castor EDC, Ontotext Refine or MOLGENIS to expose, transform and manage your data and metadata in line with FAIR principles and your chosen model."
+%}
+
 The following tool pages describe tools that can support applying a (meta)data model to your resource(s).
 
 {% include toolassemblies/show-badges.html ids="fair-data-point, castor, ontotext-refine, molgenis" %}
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community
 **FAIR Data Point**<br>

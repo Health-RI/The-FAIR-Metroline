@@ -2,7 +2,8 @@
   Tool catalogue (pages/toolassemblies/tool_selection.md): a card per tool page, filters for domain,
   life-cycle phase and institute, and a search box. Cards and filters use verified values only; a filter
   is shown only when at least one tool has a value for it. Filters can be set from the URL, for example
-  ?domain=clinical-research&phase=collect&institute=umcg.
+  ?domain=clinical-research&phase=collect&institute=umcg. Filters, cards and the filter script are the shared
+  _includes/tile-filtering components.
 {%- endcomment -%}
 {%- assign tools = site.pages | where: "type", "tool" | sort_natural: "title" -%}
 {%- assign none = "" | split: "" -%}
@@ -21,84 +22,32 @@
 {%- endfor -%}
 
 <div class="row g-4 row-cols-1 row-cols-md-2 my-4">
-  {%- assign filter_keys = "domain,phase,institute" | split: "," -%}
-  {%- for key in filter_keys -%}
-  {%- case key -%}
-    {%- when "domain" -%}{%- assign values = all_domains -%}{%- assign all_label = "All domains" -%}
-    {%- when "phase" -%}{%- assign values = all_phases -%}{%- assign all_label = "All phases" -%}
-    {%- when "institute" -%}{%- assign values = all_institutes -%}{%- assign all_label = "All institutes" -%}
-  {%- endcase -%}
-  {%- if values.size > 0 %}
+  {%- if all_domains.size > 0 %}
+  {% include tile-filtering/tile-filter-select.html id="domains-input" key="domains" param="domain" label="Filter by domain" all_label="All domains" clear_label="domains" options=all_domains %}
+  {%- endif %}
+  {%- if all_phases.size > 0 %}
+  {% include tile-filtering/tile-filter-select.html id="phases-input" key="phases" param="phase" label="Filter by phase" all_label="All phases" clear_label="phases" options=all_phases %}
+  {%- endif %}
+  {%- if all_institutes.size > 0 %}
+  {% include tile-filtering/tile-filter-select.html id="institutes-input" key="institutes" param="institute" label="Filter by institute" all_label="All institutes" clear_label="institutes" options=all_institutes %}
+  {%- endif %}
   <div class="col">
     <div class="input-group">
-      <label class="input-group-text" for="{{ key }}-filter">Filter by {{ key }}</label>
-      <select class="form-select" id="{{ key }}-filter">
-        <option value="">{{ all_label }}</option>
-        {%- for value in values %}
-        <option value="{{ value | slugify }}">{{ value }}</option>
-        {%- endfor %}
-      </select>
-      <button class="btn btn-primary" title="Clear the {{ key }} filter" type="button" id="{{ key }}-clear">
-        <i class="fa-solid fa-backspace"></i>
-      </button>
-    </div>
-  </div>
-  {%- endif -%}
-  {%- endfor %}
-  <div class="col">
-    <div class="input-group">
-      <span class="input-group-text" id="tool-search-label"><i class="fa-solid fa-magnifying-glass"></i></span>
-      <input type="text" id="tool-search" class="form-control" placeholder="Search titles and descriptions..." aria-label="Search tools" aria-describedby="tool-search-label">
-      <button class="btn btn-primary" title="Clear the search" type="button" id="tool-search-clear">
+      <span class="input-group-text" id="search-label-tiles"><i class="fa-solid fa-magnifying-glass"></i></span>
+      <input type="text" id="title-search" class="form-control tile-search-control" onkeyup="applyTileFilters();" placeholder="Search titles and descriptions..." aria-label="Search tools" aria-describedby="search-label-tiles">
+      <button class="btn btn-primary" title="Clear the search" type="button" id="clearsearch">
         <i class="fa-solid fa-backspace"></i>
       </button>
     </div>
   </div>
 </div>
 
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 mb-5 navigation-tiles">
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-5 navigation-tiles">
   {%- for t in tools %}
-  <div class="col" data-domain="{% for d in t.domain %}{{ d | slugify }} {% endfor %}" data-phase="{% for ph in t.phase %}{{ ph | slugify }} {% endfor %}" data-institute="{% for i in t.institutes %}{{ i | slugify }} {% endfor %}">
+  <div class="col" data-domains="{% for d in t.domain %}{{ d | slugify }} {% endfor %}" data-phases="{% for ph in t.phase %}{{ ph | slugify }} {% endfor %}" data-institutes="{% for i in t.institutes %}{{ i | slugify }} {% endfor %}">
     {% include toolassemblies/tool-card.html tool=t %}
   </div>
   {%- endfor %}
 </div>
 
-<script>
-  (function () {
-    var filters = ['domain', 'phase', 'institute'];
-
-    function applyFilters() {
-      var selected = {};
-      filters.forEach(function (f) {
-        var el = document.getElementById(f + '-filter');
-        selected[f] = el ? el.value : '';
-      });
-      var query = document.getElementById('tool-search').value.toLowerCase();
-      document.querySelectorAll('.navigation-tiles .col').forEach(function (col) {
-        var show = filters.every(function (f) {
-          return !selected[f] || (col.dataset[f] || '').split(' ').indexOf(selected[f]) !== -1;
-        }) && (!query || col.innerText.toLowerCase().indexOf(query) !== -1);
-        col.classList.toggle('d-none', !show);
-      });
-      var params = new URLSearchParams();
-      filters.forEach(function (f) { if (selected[f]) { params.set(f, selected[f]); } });
-      history.replaceState({}, '', params.toString() ? '?' + params : location.pathname);
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      var url = new URLSearchParams(location.search);
-      filters.forEach(function (f) {
-        var el = document.getElementById(f + '-filter');
-        if (!el) { return; }
-        if (url.get(f)) { el.value = url.get(f); }
-        el.addEventListener('change', applyFilters);
-        document.getElementById(f + '-clear').addEventListener('click', function () { el.value = ''; applyFilters(); });
-      });
-      var search = document.getElementById('tool-search');
-      search.addEventListener('input', applyFilters);
-      document.getElementById('tool-search-clear').addEventListener('click', function () { search.value = ''; applyFilters(); });
-      if (filters.some(function (f) { return url.get(f); })) { applyFilters(); }
-    });
-  })();
-</script>
+{% include tile-filtering/tile-filters-script.html %}

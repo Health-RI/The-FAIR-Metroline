@@ -1,6 +1,7 @@
 ---
 title: How to analyse tumor data and publish the results
-permalink: tool-scenarios/transform_onco_data
+permalink: use-cases/transform_onco_data
+redirect_from: /tool-scenarios/transform_onco_data
 page_id: transform_onco_data
 custom_js: metro-timeline
 ---
@@ -11,13 +12,20 @@ You need to process tumor sequencing data to extract key genomic alterations. Ca
 
 
 
-## Scenario Overview
+## Use Case Overview
 
 You start with raw tumor sequencing files, run an analysis workflow to generate variants and copy number profiles, then format the outputs so they can be uploaded to a cancer genomics portal for exploration.
 
-{% include scenario-overview.html complexity="High" environment="HPC or Cloud" outcome="Published dataset" %}
+{% include use-case-overview.html complexity="High" environment="HPC or Cloud" outcome="Published dataset" %}
+
+
+{% assign journey_stops = site.data.use-cases.transform_onco_data | where_exp: "item", "item.status != 'prerequisite'" %}
+{% assign prerequisites = site.data.use-cases.transform_onco_data | where_exp: "item", "item.status == 'prerequisite'" %}
+
+{% if prerequisites.size > 0 %}
+{% include use-case-prerequisites.html prerequisites=prerequisites %}
+{% endif %}
 
 ## Your Journey
 
-{% include tool-scenario-timeline.html stops=site.data.tool-scenarios.transform_onco_data %}
-
+{% include timeline.html stops=journey_stops%}

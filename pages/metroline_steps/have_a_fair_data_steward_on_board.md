@@ -25,7 +25,12 @@ Having a FAIR data steward in your multidisciplinary team offers key benefits (s
 * **FAIR use cases.** Instead of reinventing the wheel, a FAIR data steward connects your team to community best practices and use cases for FAIRifying data.
 
 ## How to
-### Step 1 - Determine the type of data steward your team needs
+{% include how-to-summary-start.html
+   number="1"
+   title="Determine the type of data steward your team needs"
+   summary="Identify the type(s) of data steward your team needs to ensure all FAIR-related competencies and responsibilities are effectively covered."
+%}
+
 To ensure effective data stewardship, consider which type of data steward best fits your team. The [NPOS/ELIXIR Data Stewardship Competency Framework](https://competency.ebi.ac.uk/framework/datasteward/1.0) distinguishes three key roles, all with FAIR as their core focus.
 * **Policy oriented.** Develops and implements RDM policies within a team or organisation.
 * **Research oriented.** Works directly with researchers, providing hands-on support for data management.
@@ -50,7 +55,15 @@ The eight NPOS/ELIXIR competence areas are described below.
 
 A formalised Dutch data steward profile has been adopted by many research performing organisations to professionalise data stewardship roles and create consistency across institutions. This profile is further detailed in Step 3.
 
-### Step 2 - Determine the steward’s position in the organisation
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Determine the steward's position in the organisation"
+   summary="Determine the most effective placement for a data steward: central, project-based, departmental, or external, based on your team’s structure, needs, and available resources."
+%}
+
 Decide where the data steward will be based within your organisation. Depending on the structure and needs of your research team, a data steward may be:
 * **Part-time within a central unit.** Hired from a library, knowledge hub or IT team to support multiple projects.
 * **Dedicated to a project.** Embedded within the research team for hands-on data stewardship.
@@ -63,7 +76,15 @@ Some researchers may allocate their own budget to hire a data steward. In additi
 
 For further details on data steward allocation, see the **NPOS report on professionalising data stewardship in the Netherlands** ([chapter 2.3](https://doi.org/10.5281/zenodo.4623713)).
 
-### Step 3 - Hire or consult a data steward
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Hire or consult a data steward"
+   summary="Recruit or consult a data steward using the formalised Dutch profile to ensure clearly defined responsibilities, institutional consistency, and professional growth in data stewardship."
+%}
+
 Hire or consult a data steward following the formalised Dutch data steward profile, which has been adopted to professionalise data stewardship roles and create consistency across institutions. This profile ensures clear role definitions and career prospects for data stewards. The areas below outline what a data steward may be responsible for, based on the formal Dutch job classification system (see the earlier cited report, Annex 5 and beyond).
 
 {% include image_with_caption.html 
@@ -85,13 +106,24 @@ Hire or consult a data steward following the formalised Dutch data steward profi
 * **Coaching & process improvement.** Improve work processes at different levels.
 * **Soft skills.** Apply competencies such as accuracy, persuasiveness, communication, collaboration and networking.
 
-### Step 4 - Provide support and resources to the FAIR data steward
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="4"
+   title="Provide support and resources to the FAIR data steward"
+   summary="Ensure data stewards have the necessary support, training, networks, domain expertise and guidance to meet FAIR, institutional, funder and regulatory requirements."
+%}
+
 If your team includes a FAIR data steward, ensure they have access to the right support and resources.
 * **Training opportunities.** Ensure data stewards receive continuous training to stay updated on best practices, tools and policies.
 * **Institutional and national networks.** Connect data stewards with institutional, national and international networks to foster collaboration and professional growth. Central networks should be the first point of contact, including institutional data steward groups (via the Local Digital Competence Centers (LDCC) or the Open Science Communities), national networks (e.g. the Data Stewards Interest Group) and international initiatives (e.g. RDA professionalising data stewardship Interest Group or the ELIXIR RDM Community).
 * **Domain-specific knowledge.** A data steward with expertise in your research field can better understand the data’s context and communicate effectively with researchers and stakeholders.
 * **Funder requirements.** Many funders now require a data steward to be part of the project team. Check grant conditions to ensure compliance with specific expectations.
 * **Publishing policies and local guidance.** Ensure data handling aligns with institutional policies and national and international regulations. Discuss early stage requirements with local guidance bodies to meet FAIR standards and repository guidelines.
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community 
 ***[European Joint Programme on Rare Diseases (EJP RD)](https://www.ejprarediseases.org/)***

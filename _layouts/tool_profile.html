@@ -118,7 +118,7 @@ layout: page
 {% endif %}
 
 {% comment %} ===== WHERE IT FITS: derived from the guidance pages ===== {% endcomment %}
-{% if page.metroline_steps.size > 0 or page.scenarios.size > 0 %}
+{% if page.metroline_steps.size > 0 or page.use_cases.size > 0 %}
 <section class="tp-section">
   <h2>Where it fits in the FAIR Metroline</h2>
   {% if page.metroline_steps.size > 0 %}
@@ -127,10 +127,10 @@ layout: page
     {% for st in page.metroline_steps %}<a class="tp-card" href="{{ st.url | relative_url }}"><span class="tp-card-icon" aria-hidden="true">{{ st.icon }}</span><strong>{{ st.title }}</strong></a>{% endfor %}
   </div>
   {% endif %}
-  {% if page.scenarios.size > 0 %}
+  {% if page.use_cases.size > 0 %}
   <h3 class="tp-label tp-subhead">Use cases</h3>
   <div class="tp-cards">
-    {% for sc in page.scenarios %}<a class="tp-card" href="/{{ sc.url }}"><span class="tp-card-icon" aria-hidden="true">{{ sc.icon }}</span><strong>{{ sc.title }}</strong></a>{% endfor %}
+    {% for uc in page.use_cases %}<a class="tp-card" href="{{ uc.url | prepend: '/' | relative_url }}"><span class="tp-card-icon" aria-hidden="true">{{ uc.icon }}</span><strong>{{ uc.title }}</strong></a>{% endfor %}
   </div>
   {% endif %}
 </section>

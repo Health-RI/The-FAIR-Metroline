@@ -1,27 +1,33 @@
-- step_id: 1
+- title: "Define your goals for evaluating FAIRness."
   status: "active"
   short_description: "Define your goals for evaluating FAIRness."
   description: "Start by identifying your goal: assessing how FAIR your dataset currently is to determine whether it meets your institutional requirements. Understanding baseline FAIRness helps you prioritize improvements."
+  step_ids:
+    - 1
   examples:
     - role: "Researcher"
       description: "I reviewed the FAIR requirements from my institute and planned publication venue, then checked which aspects of my dataset are most relevant to assess, such as identifiers, metadata, access conditions, and licensing."
 
-- step_id: 3
+- title: "Connect with a data steward for expert guidance."
   status: "upcoming"
   short_description: "Connect with a data steward for expert guidance."
   description: "Reach out to a FAIR data steward who brings expertise in FAIR principles and assessment tools. Having professional support ensures accurate evaluation and actionable recommendations."
+  step_ids:
+    - 3
   examples:
     - role: "Researcher"
       description: "I discussed my dataset, repository options, and metadata with a data steward, who helped me decide which FAIR criteria were most relevant and which assessment approach fit my situation."
 
-- step_id: 5
+- title: "Assess your data's current FAIRness level."
   status: "upcoming"
   short_description: "Assess your data's current FAIRness level."
   description: "Together with your data steward, conduct a pre-FAIR assessment using an appropriate tool (like ARDC FAIR self-assessment or FAIR-Checker) to evaluate how well your data meets FAIR principles and identify specific gaps."
+  step_ids:
+    - 5
   examples:
     - role: "Researcher"
       description: "I completed a FAIR assessment of my dataset and metadata using FAIR-Checker, then reviewed the results to identify gaps such as limited metadata, missing persistent identifiers, or unclear reuse conditions."
-      
+
 - title: "FAIR assessment complete"
   status: "destination"
   icon: "🎯"

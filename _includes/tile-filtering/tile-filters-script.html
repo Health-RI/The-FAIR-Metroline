@@ -1,0 +1,86 @@
+<script type="text/javascript">
+    function applyTileFilters() {
+        const tiles = document.querySelectorAll(".navigation-tiles .col");
+        const filters = document.querySelectorAll(".tile-filter-control");
+        const searchInput = document.querySelector(".tile-search-control");
+        const searchFilter = searchInput ? searchInput.value.toLowerCase() : "";
+
+        for (const tile of tiles) {
+            let filterMatch = true;
+
+            for (const filter of filters) {
+                const selectedValue = filter.value;
+                if (!selectedValue) continue;
+
+                const filterKey = filter.getAttribute("data-filter-key");
+                const tileValues = tile.getAttribute(`data-${filterKey}`) || "";
+                const values = tileValues.split(" ").filter(Boolean);
+                if (values.indexOf(selectedValue) === -1) {
+                    filterMatch = false;
+                    break;
+                }
+            }
+
+            const body = tile.querySelector(".card-body");
+            const searchMatch = !searchFilter || (body && body.innerText.toLowerCase().indexOf(searchFilter) > -1);
+
+            if (filterMatch && searchMatch) {
+                tile.classList.remove("d-none");
+            } else {
+                tile.classList.add("d-none");
+            }
+        }
+
+        const params = new URLSearchParams();
+        for (const filter of filters) {
+            const queryParam = filter.getAttribute("data-query-param");
+            if (filter.value) params.set(queryParam, filter.value);
+        }
+        const newUrl = params.toString() ? `?${params}` : location.pathname;
+        history.replaceState({}, "", newUrl);
+    }
+
+    $(document).ready(function () {
+        const filters = document.querySelectorAll(".tile-filter-control");
+        for (const filter of filters) {
+            filter.addEventListener("change", applyTileFilters);
+        }
+
+        const clearButtons = document.querySelectorAll(".tile-filter-clear");
+        for (const clearButton of clearButtons) {
+            clearButton.addEventListener("click", function () {
+                const target = document.getElementById(clearButton.getAttribute("data-target"));
+                if (target) {
+                    target.value = "";
+                    applyTileFilters();
+                }
+            });
+        }
+
+        const clearSearch = document.getElementById("clearsearch");
+        if (clearSearch) {
+            clearSearch.addEventListener("click", function () {
+                const search = document.querySelector(".tile-search-control");
+                if (search) {
+                    search.value = "";
+                    applyTileFilters();
+                }
+            });
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        let hasUrlFilters = false;
+        for (const filter of filters) {
+            const queryParam = filter.getAttribute("data-query-param");
+            const urlValue = urlParams.get(queryParam);
+            if (urlValue) {
+                filter.value = urlValue;
+                hasUrlFilters = true;
+            }
+        }
+
+        if (hasUrlFilters) {
+            applyTileFilters();
+        }
+    });
+</script>

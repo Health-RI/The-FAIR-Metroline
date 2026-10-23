@@ -1,27 +1,19 @@
-{%- comment -%} One tool card, used by the catalogue (search-tiles.html) and in guidance pages (show-tiles.html). {%- endcomment -%}
+{%- comment -%}
+  One tool card, used by the catalogue (search-tiles.html) and in guidance pages (show-tiles.html):
+  the shared navigation card with the tool's verified domains and life-cycle phases.
+{%- endcomment -%}
 {%- assign t = include.tool -%}
-<a href="{{ t.url | relative_url }}" class="card h-100 tool-card" aria-label="Go to the {{ t.title }} page">
-  <div class="card-body">
-    {%- if t.logo_url %}
-    <div class="tool-card-icon"><img alt="logo of {{ t.title }}" src="{{ t.logo_url }}"></div>
-    {%- endif %}
-    <h3 class="tool-card-title">{{ t.title }}</h3>
-    {%- if t.description %}
-    <p class="tool-card-description">{{ t.description }}</p>
-    {%- endif %}
-    <div class="tool-card-meta">
-      {%- if t.domain %}
-      <div class="tool-tags-group">
-        <span class="tool-tags-label">Domains:</span>
-        <div class="tool-tags">{% assign sorted_domains = t.domain | sort %}{% for d in sorted_domains %}<span class="badge bg-primary">{{ d }}</span>{% endfor %}</div>
-      </div>
-      {%- endif %}
-      {%- if t.phase %}
-      <div class="tool-tags-group">
-        <span class="tool-tags-label">Phases:</span>
-        <div class="tool-tags">{% for ph in t.phase %}<span class="badge bg-secondary">{{ ph }}</span>{% endfor %}</div>
-      </div>
-      {%- endif %}
-    </div>
-  </div>
-</a>
+{%- assign tool_domains = nil -%}
+{%- if t.domain %}{%- assign tool_domains = t.domain | sort -%}{%- endif -%}
+{%- capture card_meta %}
+    {%- include tile-filtering/tag-group.html label="Domains" values=tool_domains badge="bg-primary" %}
+    {%- include tile-filtering/tag-group.html label="Phases" values=t.phase badge="bg-secondary" %}
+{%- endcapture %}
+{%- assign card_meta = card_meta | strip %}
+{%- include tile-filtering/navigation-card.html
+    url=t.url
+    title=t.title
+    description=t.description
+    image_url=t.logo_url
+    meta=card_meta
+%}

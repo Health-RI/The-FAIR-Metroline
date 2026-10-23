@@ -156,7 +156,12 @@ Benefits of using Common Data Elements are highlighted below.
 ## How to
 To promote standardisation, data sharing and interoperability, researchers should start with reusing existing Common Data Elements (CDEs) whenever possible. CDEs define individual variables, while relationships between these elements within or across datasets are typically described in semantic data models (see [Metroline step: Create or reuse a semantic model]({{site.baseurl}}/metroline_steps/create_or_reuse_a_semantic_model)). Follow the steps below to identify and apply suitable CDEs for your study or data collection effort.
 
-### Step 1 - Clarify your research context to target the right CDE repositories
+{% include how-to-summary-start.html
+   number="1"
+   title="Clarify your research context to target the right CDE repositories"
+   summary="Consider your research domain, population, data type and key measures to effectively guide the search for relevant CDEs."
+%}
+
 Before searching for CDEs, clarify the following:
 * What **research domain** are you working in (e.g. oncology, neurology, rare diseases)?
 * Are you working with a **specific disease** or **population**?
@@ -170,7 +175,15 @@ Setting up a **Rare Disease** Patient Registry to keep **clinical** information 
 "%}
 
 
-### Step 2 - Find the appropriate CDEs
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Find the appropriate CDEs"
+   summary="Check first for regulatory or domain-specific CDEs, then search general repositories and consult experts or established codebooks if none are found."
+%}
+
 * First, check if there are regulatory or domain specific CDE requirements/recommendations. For example:
   * The European Commission's [Common Data elements for Rare Diseases Registration](https://eu-rd-platform.jrc.ec.europa.eu/set-of-common-data-elements_en)
   * The CRDC [Standard Data Elements for oncology](https://cadsr.cancer.gov/onedata/Home.jsp)
@@ -183,7 +196,15 @@ Setting up a **Rare Disease** Patient Registry to keep **clinical** information 
 The decision is made to collect data for the patient registry following the [Common Data Elements (CDEs) for Rare Diseases](https://eu-rd-platform.jrc.ec.europa.eu/set-of-common-data-elements_en), as required by the European Commission.
 "%}
 
-### Step 3 - Reuse CDEs where possible, adapt with care and document every change
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Reuse CDEs where possible, adapt with care and document every change"
+   summary="Reuse CDEs where possible, adapt with clear documentation when needed and add missing variables carefully to maintain semantic interoperability."
+%}
+
 Once you've identified relevant Common Data Elements (CDEs), you can:
 * **Reuse directly.** If the CDE fully meets your needs (it has a clear definition, appropriate value set and proper ontology mappings) use the CDE as-is. This is the most robust path to semantic interoperability and consistency. 
 * **Adapt with care.** If a CDE is structurally useful but needs minor changes, for example additional categories or translation, document all modifications clearly in for instance a data dictionary or codebook. Be aware that any adaptations may reduce comparability with other datasets.
@@ -227,6 +248,9 @@ The [initial data elements](https://eu-rd-platform.jrc.ec.europa.eu/set-of-commo
 {% endcapture %}
 
 {% include info-box.html type="example" title="Example" text=infobox_text1 %}
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community 
 **Patient Registries on Rare Diseases**<br>

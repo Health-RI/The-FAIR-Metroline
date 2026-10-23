@@ -1,0 +1,69 @@
+- status: "prerequisite"
+  text: "You know what you want to achieve: your FAIRification objectives are clear."
+  step_ids:
+    - 1
+
+- status: "prerequisite"
+  text: "A FAIR data steward can help you when needed."
+  step_ids:
+    - 3
+
+- status: "prerequisite"
+  text: "Your team has followed training where its knowledge has gaps."
+  step_ids:
+    - 4
+
+- title: "Create a basic codebook for your data"
+  status: "upcoming"
+  description: "
+      <ol>
+      <li>Define the data elements you need to collect, including their intended meaning and allowed values.</li>
+      <li>Resolve any remaining ambiguity.</li>
+      <li>Record these definitions in a first version of your codebook.</li>
+    </ol>
+  "
+  step_ids:
+    - 13
+  examples:
+    - role: "Researcher"
+      description: "For sex, I clarify that I mean phenotypic sex, with the values female, male and hermaphrodite."
+
+- title: "Improve the codebook"
+  status: "upcoming"
+  description: "
+    <ol>
+      <li>Look for existing standardised definitions that match the data elements in your codebook.</li>
+      <li>Reuse domain-specific standards where available.</li>
+      <li>If these do not cover an element, look for more generic standards such as Common Data Elements.</li>
+      <li>Add the selected definitions, terminology and value sets to your codebook.</li>
+    </ol>
+  "
+  step_ids:
+    - 12
+    - 13
+  examples:
+    - role: "Researcher"
+      description: "For phenotypic sex, I reuse the <a href='https://decor.nictiz.nl/ad/#/fairgenomes-/datasets/dataset/2.16.840.1.113883.2.4.3.11.60.120.1.0/2021-07-20T24:00:00'>FAIR Genomes definition and terminology</a>. 
+  The value female, for example, is represented by PATO:0000383. FAIR Genomes does not provide a suitable definition for BMI, so I look for relevant <a href='https://cde.nlm.nih.gov/formView?tinyId=t6XCi_Ob5'>Common Data Elements</a> and use these to define the elements needed to record BMI."
+
+- title: "Use the codebook to build eCRFs"
+  status: "upcoming"
+  description: "
+    <ol>
+      <li>Use the codebook to create the eCRF in your EDC system.</li>
+      <li>Configure fields, values and terminology according to the codebook.</li>
+      <li>Test the eCRF with the people who will collect and use the data.</li>
+      <li>Adjust the form where necessary before starting data collection.</li>
+    </ol>
+  "
+  step_ids:
+    - 14
+  tool_ids:
+    - castor
+  examples:
+    - role: "Researcher"
+      description:  "My UMC uses Castor EDC, so I build the eCRF in Castor and test it together with the research nurse and the researcher who will analyse the data."
+
+- title: "Collect data"
+  status: "destination"
+  description: "You can now collect data using clearly defined data elements that are aligned with existing standards where possible. This makes the resulting data easier to compare and combine with data from other studies."

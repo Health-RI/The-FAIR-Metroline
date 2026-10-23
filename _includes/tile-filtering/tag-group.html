@@ -1,0 +1,10 @@
+{%- if include.values %}
+<div class="tool-tags-group">
+    <span class="tool-tags-label">{{ include.label }}:</span>
+    <div class="tool-tags">
+        {%- for tag in include.values %}
+        <span class="badge {{ include.badge | default: 'bg-primary' }}">{{ tag }}</span>
+        {%- endfor %}
+    </div>
+</div>
+{%- endif %}

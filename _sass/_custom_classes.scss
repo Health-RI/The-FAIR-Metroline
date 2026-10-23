@@ -9,20 +9,21 @@
 @import "components/mermaid-styling";
 @import "components/stepcontent-wrapping";
 @import "components/table-styling";
-@import "components/scenario-overview";
-@import "components/tool-scenario-timeline";
+@import "components/use-case-overview";
+@import "components/tool-use-case-timeline";
 @import "components/tiles-styling";
 @import "components/top-nav-bar-styling";
 @import "components/sidebar-styling";
 @import "components/input-components-styling";
 @import "components/back-to-top-styling";
 @import "components/footer-styling";
-@import "components/scenario-cards";
+@import "components/use-case-cards";
 @import "components/homepage";
 @import "components/glossary-tooltips";
 @import "components/step-metadata";
 @import "components/tool-badges";
 @import "components/tool-profile";
+@import "components/how-to-summary";
 
 // Fix "On this page" button text color
 #btn-toc-hide.bg-light {

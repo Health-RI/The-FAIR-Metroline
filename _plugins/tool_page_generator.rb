@@ -23,14 +23,14 @@ module Jekyll
       @local_types = (site.data['tool_types'] || []).select { |t| t['source'] == 'local' }.map { |t| t['name'] }
       @known_ids = entries.map { |e| e['id'] }
       steps = metroline_steps_by_tool(site)
-      scenarios = scenarios_by_tool(site, steps)
+      use_cases = use_cases_by_tool(site, steps)
 
       entries.each do |entry|
         id = entry['id']
         page = ToolPage.new(site, id)
         page.data['redirect_from'] = entry['redirect_from'] if entry['redirect_from']
         page.data['metroline_steps'] = steps[id] || []
-        page.data['scenarios'] = scenarios[id] || []
+        page.data['use_cases'] = use_cases[id] || []
         fill(site, page, entry)
         site.pages << page
       end
@@ -279,26 +279,21 @@ module Jekyll
       index
     end
 
-    # Use cases per tool: tool scenarios list tool_ids explicitly; FAIR guideline scenarios are related
-    # when they pass through a Metroline step that mentions the tool.
-    def scenarios_by_tool(site, steps_by_tool)
-      list = site.data['scenarios_list'] || []
-      meta = ->(sid) { list.find { |s| s['url'].to_s.split('/').last == sid } }
+    # Use cases per tool (_data/use-cases, listed in _data/use_cases_list.yml): a use case relates to a
+    # tool when one of its journey stops lists the tool (tool_ids) or a Metroline step that mentions it
+    # (step_ids). Prerequisite stops are steps taken before the use case starts, so they do not count.
+    def use_cases_by_tool(site, steps_by_tool)
+      data = site.data['use-cases'] || {}
       out = Hash.new { |h, k| h[k] = [] }
+      (site.data['use_cases_list'] || []).each do |meta|
+        key = meta['timeline_data'].to_s.split('.').last || meta['url'].to_s.split('/').last
+        stops = Array(data[key]).reject { |st| st['status'] == 'prerequisite' }
+        next if stops.empty?
 
-      (site.data['tool-scenarios'] || {}).each do |sid, steps|
-        next unless (m = meta.call(sid))
-
-        Array(steps).flat_map { |st| Array(st['tool_ids']) }.uniq.each { |tid| out[tid] << m }
-      end
-
-      (site.data['scenarios'] || {}).each do |sid, steps|
-        next unless (m = meta.call(sid))
-
-        step_ids = Array(steps).map { |st| st['step_id'] }.compact
-        steps_by_tool.each do |tid, tool_steps|
-          out[tid] << m if tool_steps.any? { |ts| step_ids.include?(ts['id']) }
-        end
+        tool_ids = stops.flat_map { |st| Array(st['tool_ids']) }
+        step_ids = stops.flat_map { |st| Array(st['step_ids']) }
+        steps_by_tool.each { |tid, tool_steps| tool_ids << tid if tool_steps.any? { |ts| step_ids.include?(ts['id']) } }
+        tool_ids.uniq.each { |tid| out[tid] << meta }
       end
       out
     end

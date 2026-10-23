@@ -1,0 +1,16 @@
+<div class="col">
+    <div class="input-group">
+        <label class="input-group-text" for="{{ include.id }}">{{ include.label }}</label>
+        <select class="form-select tile-filter-control" id="{{ include.id }}" aria-label="{{ include.label }}" data-filter-key="{{ include.key }}" data-query-param="{{ include.param | default: include.key }}">
+            <option value="">{{ include.all_label }}</option>
+            {%- for option in include.options %}
+            {%- if option != "" %}
+            <option value="{{ option | slugify }}">{{ option }}</option>
+            {%- endif %}
+            {%- endfor %}
+        </select>
+        <button class="btn btn-primary tile-filter-clear" title="Button to clear {{ include.clear_label | default: include.key }} selection" type="button" data-target="{{ include.id }}">
+            <i class="fa-solid fa-backspace"></i>
+        </button>
+    </div>
+</div>

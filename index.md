@@ -8,7 +8,7 @@ page_id: main
 </h5>
 
 <div class="homepage-nav-grid">
-  <a href="/fair_metroline_scenarios" class="homepage-nav-card">
+  <a href="/fair_metroline_use_cases" class="homepage-nav-card">
     <div class="nav-card-icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 2L2 7l10 5 10-5-10-5z"/>
@@ -16,7 +16,7 @@ page_id: main
         <path d="M2 12l10 5 10-5"/>
       </svg>
     </div>
-    <div class="nav-card-title">Scenarios</div>
+    <div class="nav-card-title">Use Cases</div>
     <p class="nav-card-description">Explore real-world examples and use cases for making your data FAIR</p>
   </a>
 
@@ -45,28 +45,28 @@ page_id: main
 <div class="fair-intro-ribbon">
   <div class="fair-intro-ribbon-content">
     <strong>New to FAIR?</strong>
-    Learn the basics of the FAIR principles before exploring scenarios and guidance.<br>
+    Learn the basics of the FAIR principles before exploring use cases and guidance.<br>
     <a href="/fair_basics" class="fair-intro-link">
       Introduction to FAIR →
     </a>
   </div>
 </div>
 
-<div class="homepage-recent-scenarios mt-5">
-  <h2 class="section-title">Recently Added Scenarios</h2>
-  <div class="scenario-cards-grid scenario-cards-compact">
-    {% assign scenarios = site.data.scenarios_list | slice: -2, 2 %}
-    {% for scenario in scenarios %}
-    <a href="{{ scenario.url | relative_url }}" class="scenario-card">
-      <div class="scenario-card-icon">{{ scenario.icon }}</div>
-      <h3 class="scenario-card-title">{{ scenario.title }}</h3>
-      <p class="scenario-card-description">{{ scenario.description }}</p>
-      <div class="scenario-card-meta">
-        {% if scenario.type %}
-        <span class="scenario-type">{{ scenario.type | capitalize }}</span>
+<div class="homepage-recent-use-cases mt-5">
+  <h2 class="section-title">Recently Added Use Cases</h2>
+  <div class="use-case-cards-grid use-case-cards-compact">
+    {% assign use_cases = site.data.use_cases_list | slice: -2, 2 %}
+    {% for use_case in use_cases %}
+    <a href="{{ use_case.url | relative_url }}" class="use-case-card">
+      <div class="use-case-card-icon">{{ use_case.icon }}</div>
+      <h3 class="use-case-card-title">{{ use_case.title }}</h3>
+      <p class="use-case-card-description">{{ use_case.description }}</p>
+      <div class="use-case-card-meta">
+        {% if use_case.type %}
+        <span class="use-case-type">{{ use_case.type | capitalize }}</span>
         {% endif %}
-        {% if scenario.complexity %}
-        <span class="scenario-complexity">{{ scenario.complexity }}</span>
+        {% if use_case.complexity %}
+        <span class="use-case-complexity">{{ use_case.complexity }}</span>
         {% endif %}
       </div>
     </a>
@@ -86,10 +86,10 @@ page_id: main
 
 <div class="homepage-about mt-5 pt-5">
   <h2>About FAIR Metroline</h2>
-  <p>The FAIR Metroline provides step-by-step guidance, practical scenarios, and tooling recommendations to help you make your health and life sciences data FAIR (Findable, Accessible, Interoperable and Reusable). Learn more about <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> and <a href="https://www.health-ri.nl/en/about/organisation/fair-data">Health-RI's FAIR data initiatives</a>.</p>
+  <p>The FAIR Metroline provides step-by-step guidance, practical use cases, and tooling recommendations to help you make your health and life sciences data FAIR (Findable, Accessible, Interoperable and Reusable). Learn more about <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> and <a href="https://www.health-ri.nl/en/about/organisation/fair-data">Health-RI's FAIR data initiatives</a>.</p>
 
-  <p>The platform is under active development in alignment with the <a href="https://catalogus.healthdata.nl/">Dutch National Health Data Catalogue</a>, with ongoing contributions of scenarios and tools from UMCs and life science researchers across the Netherlands. See the <a href="/network">list of contributors</a> for more details.</p>
+  <p>The platform is under active development in alignment with the <a href="https://catalogus.healthdata.nl/">Dutch National Health Data Catalogue</a>, with ongoing contributions of use cases and tools from UMCs and life science researchers across the Netherlands. See the <a href="/network">list of contributors</a> for more details.</p>
 
   <h3>How to contribute</h3>
-  <p>The FAIR Metroline is a cooperative effort between Health-RI and its network of academic medical centers, research institutes, and healthcare organizations. We welcome contributions of new scenarios, tools, and practical guidance. Learn more about <a href="/contributing/contributing">how to contribute</a>, <a href="/contact">share your feedback</a>, or contact us at <a href="mailto:fairservicedesk@health-ri.nl">fairservicedesk@health-ri.nl</a>.</p>
+  <p>The FAIR Metroline is a cooperative effort between Health-RI and its network of academic medical centers, research institutes, and healthcare organizations. We welcome contributions of new use cases, tools, and practical guidance. Learn more about <a href="/contributing/contributing">how to contribute</a>, <a href="/contact">share your feedback</a>, or contact us at <a href="mailto:fairservicedesk@health-ri.nl">fairservicedesk@health-ri.nl</a>.</p>
 </div>

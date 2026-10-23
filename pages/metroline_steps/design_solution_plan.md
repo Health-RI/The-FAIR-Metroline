@@ -26,12 +26,25 @@ A well-defined solution plan helps to:
 * **Enhance data quality,** leading to better insights, improved compliance with FAIR principles, and increased efficiency in research processes.
 
 ## How to 
-### Step 1 - Identify and prioritise critical FAIR issues
+{% include how-to-summary-start.html
+   number="1"
+   title="Identify and prioritise critical FAIR issues"
+   summary="Use pre-FAIR assessment results to rank key issues by urgency, impact and feasibility, ensuring the most critical data challenges are tackled first."
+%}
+
 Using the pre-FAIR assessment findings, identify and rank key issues based on urgency, impact, and feasibility. Prioritisation ensures that critical gaps, such as incomplete metadata, lack of persistent identifiers, or missing documentation, are addressed first.
 
 **Example:** If metadata incompleteness is blocking data reuse, improving metadata standards should take precedence over less critical issues.
 
-### Step 2 - Define SMART objectives for the prioritised issues
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="2"
+   title="Define SMART objectives for the prioritised issues"
+   summary="Define Specific, Measurable, Achievable, Relevant and Time-bound objectives for each prioritised issue to ensure focused and measurable progress."
+%}
+
 For each prioritised issue, define SMART objectives, goals that are 
 * **Specific.** Clearly state what needs to be achieved.
 * **Measurable.** Define indicators to track progress and outcomes.
@@ -47,19 +60,43 @@ These SMART objectives will guide the implementation of your solution plan and p
 
 **Example of alignment with FAIRification objective:** The SMART goal from the example above is aligned with the following FAIRification objective: “Metadata must be [mapped](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676) to the [DCAT-AP core schema](https://github.com/Health-RI/health-ri-metadata/) and provided via a [FAIR Data Point](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279183386)”.
 
-### Step 3 - Identify constraints and adapt the plan
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="3"
+   title="Identify constraints and adapt the plan"
+   summary="Review your infrastructure, policies and governance context to identify constraints, and adjust your FAIRification objectives and plans."
+%}
+
 Evaluate the current infrastructure, policies, and governance environment. Identify constraints such as legal barriers, technical limitations, or resource availability. Develop mitigation strategies to address them. You might have to revisit Step 2 (Refine your FAIRification objectives) depending on the constraints found in this step.
 
 **Example:** If data governance policies prevent external repository use, consider alternative institutional solutions and update your solution plan accordingly.
 
-### Step 4 - Align to best practices using appropriate tools and methodologies
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="4"
+   title="Align to best practices using appropriate tools and methodologies"
+   summary="Choose appropriate tools, frameworks and methodologies, guided by resources like FAIRsharing and the FAIR Cookbook, to effectively address data gaps and align with FAIR principles."
+%}
+
 Choose tools, frameworks, and methodologies that best address identified gaps. Resources such as [FAIRsharing](http://fairsharing.org/), [FAIR Cookbook](https://faircookbook.elixir-europe.org/content/home.html), [FAIR Implementation Profiles (FIPs)]({{site.baseurl}}/metroline_steps/creating_a_fair_implementation_profile) and this FAIR Metroline ensure alignment with best practices. Discussing your plan with FAIR experts who work in similar projects can also help in selecting the most suitable resources. 
 
 **Tip:** In many cases, existing tools and methodologies can be reused or adapted. The [FAIRification process framework](https://faircookbook.elixir-europe.org/content/recipes/introduction/fairification-process.html) (FAIR Cookbook) provides structured guidance on selecting and applying tools at different stages of FAIRification. It offers practical recipes that can help ensure your chosen methodologies align with FAIR best practices. For a structured approach to implementing FAIR principles, explore the [How to GO FAIR](https://www.go-fair.org/how-to-go-fair/) guide, which provides methodologies and best practices for FAIRification.
 
 **Example:** In your pre-FAIR assessment, you identified that the current weblink pointing to your work is not persistent as it is constantly changing. You need persistent identifiers to ensure that your work remains findable, accessible, and citable over time, even if locations change. This is in line with your FAIRification objectives ‘a persistent identifier for my metadata is provided’ and ‘persistent identifiers for my datasets are provided’. The [FAIR Cookbook](https://faircookbook.elixir-europe.org/content/recipes/findability/identifiers.html) provides guidance on how to implement persistent identifiers and also [lists](https://faircookbook.elixir-europe.org/content/recipes/findability/identifiers.html#identifier-resolution-services) providers of such services.
 
-### Step 5 - Involve key stakeholders to develop the solution plan
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="5"
+   title="Involve key stakeholders to develop the solution plan"
+   summary="Involve data stewards, domain experts and IT teams to co-develop a solution plan that ensures feasibility and sustainability."
+%}
+
 Involve key stakeholders, including those from the pre-FAIR assessment phase, data stewards, domain experts, and IT teams to develop a feasible solution plan. It is essential to balance the technical requirements (such as metadata standards) with organisational goals (such as compliance with the research code) . This alignment ensures that: 
 * Solutions are technically implementable within existing infrastructure. 
 * Organisational policies and funding constraints are considered. 
@@ -70,7 +107,15 @@ For additional guidance on coordinating data management efforts across teams, se
 
 **Tip:** Regular check-ins help maintain engagement and prevent misalignment.
 
-### Step 6 - Develop a structured roadmap to implement the plan
+
+{% include how-to-summary-end.html %}
+
+{% include how-to-summary-start.html
+   number="6"
+   title="Develop a structured roadmap to implement the plan"
+   summary="Translate your FAIRification objectives into a phased, agile implementation roadmap with clear actions, responsibilities, timelines, and KPIs."
+%}
+
 Translate the objectives from Step 2 into an implementation roadmap (see the table below for a roadmap example) outlining key actions, responsibilities, timelines, and resources. Define key performance indicators (KPIs) to track progress and enable adjustments.
 
 An iterative, agile approach helps structure the roadmap, allowing flexibility and continuous refinement. [The FAIRification process framework](https://faircookbook.elixir-europe.org/content/recipes/introduction/fairification-process.html) (FAIR Cookbook) emphasises breaking implementation into manageable phases to ensure steady progress while adapting to evolving requirements.
@@ -83,6 +128,9 @@ For example, when making data FAIR, datasets can be split into smaller sets, imp
 | Improve metadata | Analyse metadata semantics           | Semantic specialist, domain expert, data Steward | Week 2   | [Metroline Step: Analyse data semantics]({{site.baseurl}}/metroline_steps/analyse_data_semantics)                             | To do       |
 
 **Example:** For GO-Plan, a template was developed to facilitate the identification of FAIRification objectives. This template has been successfully applied in two tutorials, with participants reporting that it effectively guided them through the process.
+
+
+{% include how-to-summary-end.html %}
 
 ## Practical examples from the community 
 This section should show the step applied in a real project. Links to demonstrator projects. 

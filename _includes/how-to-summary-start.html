@@ -1,0 +1,14 @@
+<details class="how-to-summary" markdown="1">
+<summary>
+<span class="how-to-summary__number">{{ include.number | escape }}</span>
+<div class="how-to-summary__main">
+{% capture how_to_summary_default_id %}step-{{ include.number | slugify }}---{{ include.title | slugify }}{% endcapture %}
+<h3
+  id="{{ include.id | default: how_to_summary_default_id }}"
+  class="how-to-summary__title"
+>{{ include.title | escape }}</h3>
+<span class="how-to-summary__text">{{ include.summary | escape }}</span>
+</div>
+<span class="how-to-summary__toggle">{{ include.toggle | default: "Read more" | escape }}</span>
+</summary>
+<div class="how-to-summary__body" markdown="1">

@@ -1,6 +1,7 @@
 ---
 title: Evaluating the FAIRness of your data
-permalink: experimental/scenarios/evaluate_fairness_v2
+permalink: experimental/use-cases/evaluate_fairness_v2
+redirect_from: /experimental/scenarios/evaluate_fairness_v2
 page_id: test_page
 ---
 

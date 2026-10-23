@@ -276,7 +276,7 @@
     FAIRDOM-SEEK is a web-based platform for cataloguing, sharing and publishing research data, models,
     simulations, processes and outcomes. It uses an ISA-style structure for investigations, studies and
     assays, supports permissions and publication workflows, and can be used as the basis for project or
-    community hubs such as the IBISBA Knowledge Hub. In this scenario, it is the destination where the
+    community hubs such as the IBISBA Knowledge Hub. In this use case, it is the destination where the
     structured experiment, metadata, files and related outputs are registered for controlled sharing and
     reuse.
   tool_type: [Web application, Web API, Web service, Registry / catalogue, Database portal]

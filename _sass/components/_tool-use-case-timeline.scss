@@ -1,13 +1,9 @@
-// Tool Scenario Timeline - extends metro-timeline with tool-specific styling
+// Tool Use Case Timeline - extends metro-timeline with tool-specific styling
 
-.tool-scenario-timeline {
+.tool-use-case-timeline {
   
   .metro-title-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    flex: 1;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   
   .title-tool-logo {
