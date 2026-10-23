@@ -1,5 +1,5 @@
 ---
-title: I want my existing dataset to be citable in my publication
+title: Make an existing dataset citable in a publication
 permalink: use-cases/make_dataset_citable
 redirect_from: /scenarios/make_dataset_citable
 page_id: make_dataset_citable
@@ -7,18 +7,9 @@ custom_js: metro-timeline
 ---
 
 ## Use Case Overview
-I'm publishing a research paper based on an existing dataset. 
-I want to make sure that the dataset is citable in my publication.
-The dataset may contain sensitive data, so open access may not be an option. 
-However, I still want to make sure that the dataset is findable and referenceable, which requires the assignment of a persistent identifier, even if access to the data remains restricted.
+Many journals require researchers to explain where the data underlying their publications can be found and how they can be accessed. Some also require datasets to be deposited in a suitable repository before a paper can be accepted. These requirements help others verify research findings and, where permitted, reuse the data. However, sensitive data, such as medical data, cannot always be shared openly.
 
-Before getting started:
-
-* Be sure you are clear about your [FAIRifcation Objectives]({{site.baseurl}}/metroline_steps/define_fairification_objectives)
-* When necessary, make sure you enlist the help from a [FAIR data steward]({{site.baseurl}}/metroline_steps/have_a_fair_data_steward_on_board), if possible
-* If there are gaps in your (team's) knowledge, considering following [training]({{site.baseurl}}/metroline_steps/organise_training)
-
-
+When preparing a publication based on an existing dataset, you can make the data underlying your results identifiable and citable by preserving the version used in your research, registering its metadata and obtaining a persistent identifier. This allows others to identify and reference the dataset, even when the underlying data remain in a restricted archive. Publicly available metadata can also describe the access conditions and explain how access can be requested, where permitted.
 
 <div class="metro-examples">
   <h4>Examples</h4>
@@ -27,11 +18,7 @@ Before getting started:
   </div>
   <div class="example-content">
     <div class="example-panel active" data-example="1">
-      <p>I am a Radboudumc researcher preparing a research article on lung nodules detected in chest CT scans.</p>
-      <p>The study uses an existing dataset consisting of CT images from 50 patients, along with corresponding radiology reports.</p>
-      <p>The dataset was originally collected as part of routine clinical care and was later extracted for research purposes after verifying that appropriate consent had been obtained. During the analysis, I used a subset of the data and derived additional variables, including nodule size and classification labels.</p>
-      <p>As I prepare the manuscript for submission, I need to ensure that the dataset underlying the results can be properly cited. This enables readers to identify exactly which data were used and supports transparency, traceability and reproducibility.</p>
-      <p>Because the dataset contains sensitive medical imaging data, it cannot be made openly reusable. Journals recognise such constraints, for example in Nature’s guidance on sharing expectations for sensitive data. However, the dataset still needs to be findable and referenceable. This requires the assignment of a persistent identifier, even if access to the data remains restricted.</p>
+      <p>I am a Radboudumc researcher preparing an article on lung nodules using existing chest CT scans and radiology reports from 50 patients. I analysed a subset of these data and derived additional variables, including nodule size and classification labels. My journal requires me to document the availability of the data supporting my findings. I want to make the exact dataset used in my research citable, even though the sensitive medical data cannot be shared openly.</p>
     </div>
   </div>
 </div>
@@ -39,13 +26,19 @@ Before getting started:
 {% include use-case-overview.html
   complexity="Low / Medium"
   experts="Data Steward"
-  outcome="Citable dataset"
+  outcome="Dataset is citable in your publication"
   complexity_tooltip="Complying to local and publisher policies requires expertise."
   experts_tooltip="A data steward is needed to navigate and implement the local and publisher policies compliance."
   outcome_tooltip="Persistent identifier for dataset to be used in publication."
 %}
 
+{% assign journey_stops = site.data.use-cases.make_dataset_citable | where_exp: "item", "item.status != 'prerequisite'" %}
+{% assign prerequisites = site.data.use-cases.make_dataset_citable | where_exp: "item", "item.status == 'prerequisite'" %}
+
+{% if prerequisites.size > 0 %}
+{% include use-case-prerequisites.html prerequisites=prerequisites %}
+{% endif %}
+
 ## Your Journey
 
-{% include timeline.html stops=site.data.use-cases.make_dataset_citable %}
-
+{% include timeline.html stops=journey_stops %}

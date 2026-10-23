@@ -20,11 +20,10 @@
   type: "fair guidelines"
   complexity: "Medium"
 
-- title: "I want my existing dataset to be citable in my publication"
+- title: "Make an existing dataset citable in a publication"
   url: "use-cases/make_dataset_citable"
   icon: "📑"
-  description: "I want to make my existing dataset citable in my publication, so I need to prepare the data according
-  to the publication constraints and make it findable."
+  description: "I want to make the dataset underlying my publication citable, while meeting journal requirements and respecting institutional policies and any restrictions on data access."
   type: "fair guidelines"
   complexity: "Medium"
 
