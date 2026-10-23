@@ -37,10 +37,13 @@ By promoting the use of community standards, FIPs directly support FAIR principl
 
 A FIP can be created in two ways: 
 * **Option 2a.** Using the [FIP mini-questionnaire](https://docs.google.com/spreadsheets/d/1yx8r2St6ha-lmQtg02Fvwu8nB21uWiTOM8tLIgJ70oE/edit#gid=127295437) in Google Sheets.
-* **Option 2b.** Using the [FIP Wizard](https://fip.fair-wizard.com/), a dedicated version of the online data management platform Data Stewardship Wizard.
+* **Option 2b.** Using the {% include toolassemblies/show-badges.html ids="fip-wizard" %}, a dedicated version of the online data management platform Data Stewardship Wizard.
 
 Both approaches guide you through the same set of questions covering all FAIR Principles, but they differ in setup and output format. 
 
+Recommended tool page:
+
+{% include toolassemblies/show-badges.html ids="fip-wizard" %}
 
 {% include how-to-summary-end.html %}
 

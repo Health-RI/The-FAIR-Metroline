@@ -1,7 +1,8 @@
 ---
 title: FAIR Metroline use cases
 permalink: fair_metroline_use_cases
-redirect_from: /fair_metroline_scenarios
+# the tumour data use case was archived (_archive/pages/tool-scenarios/transform_onco_data.md)
+redirect_from: [/fair_metroline_scenarios, /tool-scenarios/transform_onco_data, /use-cases/transform_onco_data]
 ---
 
 The FAIR Metroline provides you with FAIR guidance. However, which steps are actually relevant for your FAIRification journey depends on your FAIR objectives. For example, if your objective is to make your existing data Findable and Accessible in a catalogue, a step like Design eCRF will not be relevant.

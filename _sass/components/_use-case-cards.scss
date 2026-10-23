@@ -227,12 +227,8 @@ $prereq-border: #e2e9f3;
   background: $menu-unselected-bg;
   color: $primary;
 
-  &.tool {
-    background: rgba($top-nav-icon, 0.2);
-    color: darken($top-nav-icon, 30%);
-  }
-
-  &.fair {
+  // the include renders the use case type slugified, e.g. "fair guidelines" -> fair-guidelines
+  &.fair-guidelines {
     background: rgba($link-color, 0.15);
     color: $link-color;
   }

@@ -49,16 +49,10 @@
           <div class="metro-title-wrapper">
             <div class="timeline-icon-group">
               {% if stop.tool_ids and stop.tool_ids.size > 0 %}
-                {% assign first_tool_id = stop.tool_ids[0] %}
-                {% assign tool_data = site.data.tools | where: "id", first_tool_id | first %}
-                {% if tool_data and tool_data.page_img %}
-                  {% if tool_data.page_img contains "http://" or tool_data.page_img contains "https://" %}
-                    {% assign tool_img_url = tool_data.page_img %}
-                  {% else %}
-                    {% assign tool_img_url = "/assets/img/" | append: tool_data.page_img %}
-                  {% endif %}
+                {% assign first_tool = site.pages | where: "tool_id", stop.tool_ids[0] | first %}
+                {% if first_tool.logo_url %}
                   <span class="title-media title-tool-media">
-                    <img src="{{ tool_img_url }}" alt="{{ tool_data.at_a_glance['Tool name'] }}" class="title-tool-logo">
+                    <img src="{{ first_tool.logo_url }}" alt="{{ first_tool.title }}" class="title-tool-logo">
                     {% if stop.tool_ids.size > 1 %}
                     <span class="badge bg-primary title-badge">+{{ stop.tool_ids.size | minus: 1 }}</span>
                     {% endif %}
@@ -139,26 +133,19 @@
             <div class="tools">
               {% if stop.tool_ids %}
                 {% for tool_id in stop.tool_ids %}
-                {% assign tool_data = site.data.tools | where: "id", tool_id | first %}
-                {% if tool_data %}
-                {% assign tool_name = tool_data.at_a_glance['Tool name'] | default: tool_id %}
-                {% assign tool_slug = tool_name | downcase | replace: ' ', '-' | replace: '/', '-' | replace: '(', '' | replace: ')', '' %}
+                {% assign tool_page = site.pages | where: "tool_id", tool_id | first %}
+                {% if tool_page %}
                 <div class="tool-item">
-                  {% if tool_data.page_img %}
-                  {% if tool_data.page_img contains "http://" or tool_data.page_img contains "https://" %}
-                    {% assign tool_img_url = tool_data.page_img %}
-                  {% else %}
-                    {% assign tool_img_url = "/assets/img/" | append: tool_data.page_img %}
-                  {% endif %}
-                  <img src="{{ tool_img_url }}" alt="{{ tool_name }} logo" class="tool-logo">
+                  {% if tool_page.logo_url %}
+                  <img src="{{ tool_page.logo_url }}" alt="{{ tool_page.title }} logo" class="tool-logo">
                   {% else %}
                   <div class="tool-icon">
                     <i class="fas fa-wrench"></i>
                   </div>
                   {% endif %}
                   <div class="tool-info">
-                    <strong>{{ tool_name }}</strong>
-                    <a href="/{{ tool_slug }}" class="tool-link">
+                    <strong>{{ tool_page.title }}</strong>
+                    <a href="{{ tool_page.url | relative_url }}" class="tool-link">
                       <i class="fas fa-arrow-right"></i> View tool details
                     </a>
                   </div>

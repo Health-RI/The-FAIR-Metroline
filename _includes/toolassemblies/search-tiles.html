@@ -1,115 +1,53 @@
-{%- if include.domains == true or include.phases == true or include.institutes == true or include.search == true %}
-{%- assign alldomains = "" %}
-{%- assign allphases = "" %}
-{%- assign allinstitutes = "" %}
-{%- for current_page in site.pages | sorted %}
-{%- if current_page.search_exclude != true and current_page.type == include.type %}
-{%- if current_page.domain %}
-{%- assign pagedomains = current_page.domain | join: ", " %}
-{%- if alldomains %}
-{%- assign alldomains = alldomains | append: ", " | append: pagedomains %}
-{%- else %}
-{%- assign alldomains = alldomains | append: pagedomains %}
-{%- endif %}
-{%- endif %}
-{%- if current_page.phase %}
-{%- assign pagephases = current_page.phase | join: ", " %}
-{%- if allphases %}
-{%- assign allphases = allphases | append: ", " | append: pagephases %}
-{%- else %}
-{%- assign allphases = allphases | append: pagephases %}
-{%- endif %}
-{%- endif %}
-{%- if current_page.institutes %}
-{%- assign pageinstitutes = current_page.institutes | join: ", " %}
-{%- if allinstitutes %}
-{%- assign allinstitutes = allinstitutes | append: ", " | append: pageinstitutes %}
-{%- else %}
-{%- assign allinstitutes = allinstitutes | append: pageinstitutes %}
-{%- endif %}
-{%- endif %}
-{%- endif %}
-{%- endfor %}
-{%- assign alldomains = alldomains | split: ", " | uniq | sort %}
-{%- assign allphases = "" %}
-{%- for _stage in site.data.lifecycle_stages %}
-{%- unless allphases == "" %}{%- assign allphases = allphases | append: "|" %}{%- endunless %}
-{%- assign allphases = allphases | append: _stage.name %}
-{%- endfor %}
-{%- assign allphases = allphases | split: "|" %}
-{%- assign allinstitutes = allinstitutes | split: ", " | uniq | sort %}
-<div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-{{ include.col | default: 2 }} my-4">
-    {%- if include.domains == true %}
-    {% include tile-filtering/tile-filter-select.html id="domains-input" key="domains" param="domain" label="Filter by domain" all_label="All domains" clear_label="domains" options=alldomains %}
-    {%- endif %}
-    {%- if include.phases == true %}
-    {% include tile-filtering/tile-filter-select.html id="phases-input" key="phases" param="phase" label="Filter by phase" all_label="All phases" clear_label="phases" options=allphases %}
-    {%- endif %}
-    {%- if include.institutes == true %}
-    {% include tile-filtering/tile-filter-select.html id="institutes-input" key="institutes" param="institute" label="Filter by institute" all_label="All institutes" clear_label="institutes" options=allinstitutes %}
-    {%- endif %}
-    {%- if include.search == true %}
-    <div class="col">
-        <div class="input-group">
-            <span class="input-group-text" id="search-label-tiles"><i class="fa-solid fa-magnifying-glass"></i></span>
-            <input type="text" id="title-search" class="form-control tile-search-control" onkeyup="applyTileFilters();" placeholder="Search titles and descriptions..." aria-label="Search titles and descriptions" aria-describedby="search-label-tiles">
-            <button class="btn btn-primary" title="Button to clear search" type="button" id="clearsearch">
-                <i class="fa-solid fa-backspace"></i>
-            </button>
-        </div>
+{%- comment -%}
+  Tool catalogue (pages/toolassemblies/tool_selection.md): a card per tool page, filters for domain,
+  life-cycle phase and institute, and a search box. Cards and filters use verified values only; a filter
+  is shown only when at least one tool has a value for it. Filters can be set from the URL, for example
+  ?domain=clinical-research&phase=collect&institute=umcg. Filters, cards and the filter script are the shared
+  _includes/tile-filtering components.
+{%- endcomment -%}
+{%- assign tools = site.pages | where: "type", "tool" | sort_natural: "title" -%}
+{%- assign none = "" | split: "" -%}
+{%- assign all_domains = none -%}{%- assign used_phases = none -%}{%- assign all_institutes = none -%}
+{%- for t in tools -%}
+  {%- if t.domain -%}{%- assign all_domains = all_domains | concat: t.domain -%}{%- endif -%}
+  {%- if t.phase -%}{%- assign used_phases = used_phases | concat: t.phase -%}{%- endif -%}
+  {%- if t.institutes -%}{%- assign all_institutes = all_institutes | concat: t.institutes -%}{%- endif -%}
+{%- endfor -%}
+{%- assign all_domains = all_domains | uniq | sort -%}
+{%- assign all_institutes = all_institutes | uniq | sort -%}
+{%- comment -%} phases in life-cycle order {%- endcomment -%}
+{%- assign all_phases = none -%}
+{%- for stage in site.data.lifecycle_stages -%}
+  {%- if used_phases contains stage.name -%}{%- assign all_phases = all_phases | push: stage.name -%}{%- endif -%}
+{%- endfor -%}
+
+<div class="row g-4 row-cols-1 row-cols-md-2 my-4">
+  {%- if all_domains.size > 0 %}
+  {% include tile-filtering/tile-filter-select.html id="domains-input" key="domains" param="domain" label="Filter by domain" all_label="All domains" clear_label="domains" options=all_domains %}
+  {%- endif %}
+  {%- if all_phases.size > 0 %}
+  {% include tile-filtering/tile-filter-select.html id="phases-input" key="phases" param="phase" label="Filter by phase" all_label="All phases" clear_label="phases" options=all_phases %}
+  {%- endif %}
+  {%- if all_institutes.size > 0 %}
+  {% include tile-filtering/tile-filter-select.html id="institutes-input" key="institutes" param="institute" label="Filter by institute" all_label="All institutes" clear_label="institutes" options=all_institutes %}
+  {%- endif %}
+  <div class="col">
+    <div class="input-group">
+      <span class="input-group-text" id="search-label-tiles"><i class="fa-solid fa-magnifying-glass"></i></span>
+      <input type="text" id="title-search" class="form-control tile-search-control" onkeyup="applyTileFilters();" placeholder="Search titles and descriptions..." aria-label="Search tools" aria-describedby="search-label-tiles">
+      <button class="btn btn-primary" title="Clear the search" type="button" id="clearsearch">
+        <i class="fa-solid fa-backspace"></i>
+      </button>
     </div>
-    {%- endif %}
-</div>
-{%- endif %}
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-{{ include.col | default: 2 }} g-4 mb-5 navigation-tiles">
-    {%- if include.custom %}
-    {%- assign related_pages = include.custom | split: ", " %}
-    {%- unless include.sort == false %}
-    {%- assign related_pages = related_pages | sort %}
-    {%- endunless %}
-    {%- elsif include.type %}
-    {%- assign related_pages = site.pages | where:"type", include.type %}
-    {%- else %}
-    {%- assign related_pages = site.pages %}
-    {%- endif %}
-    {%- unless include.sort == false %}
-    {%- assign related_pages = related_pages | sort: 'title'%}
-    {%- endunless %}
-    {%- for related_page in related_pages %}
-    {%- if include.custom %}
-    {%- assign current_page = site.pages | where:"page_id", related_page | first %}
-    {%- else %}
-    {%- assign current_page = related_page %}
-    {%- endif %}
-    {%- assign except = include.except | split: ", " %}
-    {%- if current_page.title and current_page.search_exclude != true %}
-    {%- unless except contains current_page.name %}
-    {%- capture domains_classes -%}{%- for domain in current_page.domain %}{{ domain | slugify }} {% endfor -%}{%- endcapture -%}
-    {%- capture phases_classes -%}{%- for phase in current_page.phase %}{{ phase | slugify }} {% endfor -%}{%- endcapture -%}
-    {%- capture institutes_classes -%}{%- for institute in current_page.institutes %}{{ institute | slugify }} {% endfor -%}{%- endcapture -%}
-<div class="col" data-domains="{{ domains_classes | strip }}" data-phases="{{ phases_classes | strip }}" data-institutes="{{ institutes_classes | strip }}">
-    {%- assign pagedomains = "" | split: "" %}
-    {%- if current_page.domain %}
-    {%- assign pagedomains = current_page.domain | sort %}
-    {%- endif %}
-    {%- capture card_meta %}
-        {%- include tile-filtering/tag-group.html label="Domains" values=pagedomains badge="bg-primary" %}
-        {%- include tile-filtering/tag-group.html label="Phases" values=current_page.phase badge="bg-secondary" %}
-    {%- endcapture %}
-    {%- assign card_meta = card_meta | strip %}
-    {%- include tile-filtering/navigation-card.html
-        url=current_page.url
-        title=current_page.title
-        description=current_page.description
-        image=current_page.page_img
-        meta=card_meta
-    %}
-</div>
-{% endunless %}
-{%- endif %}
-{%- endfor %}
+  </div>
 </div>
 
-{%- if include.domains == true or include.phases == true or include.institutes == true or include.search == true %}
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-5 navigation-tiles">
+  {%- for t in tools %}
+  <div class="col" data-domains="{% for d in t.domain %}{{ d | slugify }} {% endfor %}" data-phases="{% for ph in t.phase %}{{ ph | slugify }} {% endfor %}" data-institutes="{% for i in t.institutes %}{{ i | slugify }} {% endfor %}">
+    {% include toolassemblies/tool-card.html tool=t %}
+  </div>
+  {%- endfor %}
+</div>
+
 {% include tile-filtering/tile-filters-script.html %}
-{%- endif %}

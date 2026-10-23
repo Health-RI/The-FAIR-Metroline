@@ -1,0 +1,159 @@
+# Schema for one tool entry in _data/tools_v2.yml (JSON Schema 2020-12, written as YAML).
+# Rendered by _layouts/tool_profile.html.
+#
+# Top-level values are verified by a reviewer. `pending` holds the same kinds of values that have not
+# been checked yet (or need a decision); the live site hides them, ?unverified=1 on a tool page shows them.
+# Values a page needs but nobody writes by hand are derived: Metroline steps and use cases (from the
+# guidance pages) and, once registry ids are verified, data fetched from bio.tools / GitHub.
+
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://fairmetroline.org/schemas/tool.schema.json
+title: FAIR Metroline tool entry
+type: object
+required: [id, name, links]
+allOf: [{$ref: "#/$defs/fields"}]
+properties:
+  id:
+    description: >-
+      Stable slug: the page URL (/id) and the name the show-badges / show-tiles includes use. Never
+      rename; if it must change, add the old URL to redirect_from.
+    type: string
+    pattern: "^[a-z0-9]+(-[a-z0-9]+)*$"
+  redirect_from:
+    description: Earlier URLs of the tool page; they redirect to /id.
+    type: array
+    items: {type: string, pattern: "^/[a-z0-9.-]+$"}
+  links:
+    required: [homepage]
+  pending:
+    description: Values not verified yet. Same fields as the top level; hidden on the live site.
+    $ref: "#/$defs/fields"
+    unevaluatedProperties: false
+unevaluatedProperties: false
+
+$defs:
+  url: {type: string, format: uri}
+
+  fields:
+    type: object
+    properties:
+      name: {type: string}
+
+      short_description:
+        description: One sentence; shown in the header, badges and tiles.
+        type: string
+        maxLength: 160
+
+      description:
+        description: The About paragraph.
+        type: string
+
+      tool_type:
+        description: >
+          bio.tools toolType values, or for resources bio.tools does not register: Self-assessment /
+          checklist, Registry / catalogue, Standard / specification. Definitions: _data/tool_types.yml.
+        type: array
+        uniqueItems: true
+        items:
+          enum: [Bioinformatics portal, Command-line tool, Database portal, Desktop application, Library,
+                 Mobile application, Ontology, Plug-in, Script, SPARQL endpoint, Suite, Web application,
+                 Web API, Web service, Workbench, Workflow,
+                 Self-assessment / checklist, Registry / catalogue, Standard / specification]
+
+      fair:
+        description: FAIR letters the tool helps with, or planning for FAIR assessment and planning resources.
+        type: array
+        uniqueItems: true
+        items: {enum: [F, A, I, R, planning]}
+
+      lifecycle:
+        type: array
+        uniqueItems: true
+        items: {enum: [Plan, Collect, Process, Analyse, Preserve, Share, Reuse]}
+
+      domains:
+        description: Values from _data/domains.yml; a tool can have several; Cross-domain on its own.
+        type: array
+        uniqueItems: true
+        items:
+          enum: [Cross-domain, Clinical research, Patient registries & rare diseases, Oncology, Medical imaging, Life sciences, Omics]
+
+      license:
+        description: >
+          One or more licences (dual licensing): SPDX ids or Proprietary, optionally with the edition
+          in brackets. "unconfirmed" means a reviewer could not find it; the page then shows no licence.
+        type: array
+        items: {type: string}
+
+      cost:
+        description: '"Unconfirmed" means a reviewer could not find it; the page then shows no cost.'
+        enum: [Free of charge, Free of charge (with restrictions), Commercial, Institutional licence, Free and paid, Unconfirmed]
+
+      code_availability: {enum: [Open source, Closed source, Restricted access]}
+      maturity: {enum: [Emerging, Mature, Legacy]}
+      deprecated: {type: boolean, description: "The maintainers have stopped the tool; the page shows a warning"}
+      hosted: {type: boolean, description: "Used online (the reviewers' 'SaaS')"}
+
+      links:
+        type: object
+        additionalProperties: false
+        properties:
+          homepage: {$ref: "#/$defs/url"}
+          homepage_opens_tool:
+            type: boolean
+            description: >
+              true: the homepage link opens the working tool itself (button "Open the tool");
+              false: it goes to a page about the tool (button "Visit website").
+          docs: {$ref: "#/$defs/url"}
+          docs_note: {type: string, description: "Where the documentation is when it has no URL of its own, e.g. 'On the website'"}
+          download:
+            description: One URL, or labelled links when there are several ways to get the tool.
+            oneOf:
+              - {$ref: "#/$defs/url"}
+              - type: array
+                items:
+                  type: object
+                  additionalProperties: false
+                  required: [label, url]
+                  properties: {label: {type: string}, url: {$ref: "#/$defs/url"}}
+          download_note: {type: string, description: "A note on getting the tool when it is not one link (pending decisions only)"}
+          other:
+            description: Further links shown on the page (documentation, training, templates, ...).
+            type: array
+            items:
+              type: object
+              additionalProperties: false
+              required: [kind, url]
+              properties: {kind: {type: string}, url: {$ref: "#/$defs/url"}}
+
+      logo: {type: string, description: "Path under assets/img/ or an absolute URL"}
+
+      ids:
+        description: Registry identifiers; when verified, they drive the data fetched from bio.tools and GitHub.
+        type: object
+        additionalProperties: false
+        properties:
+          biotools: {type: string}
+          github: {type: string, pattern: "^[^/]+/[^/]+$"}
+          rsd: {type: string}
+          fairsharing: {type: string, pattern: "^10\\.25504/FAIRsharing\\."}
+          doi: {type: string, pattern: "^10\\."}
+
+      how_to_cite: {type: string}
+
+      keywords:
+        description: Keywords from _data/keywords.yml (concrete standards, formats or artefacts).
+        type: array
+        uniqueItems: true
+        items:
+          enum: [RDF, OWL, OBO format, SPARQL, SHACL, JSON-LD, DCAT, CSV, DICOM, FHIR, CDISC ODM, CARE-SM, ISA, SSSOM, Bioschemas, nanopublication, RDA DMP Common Standard, MQTT, ontology, codebook, eCRF]
+
+      institutes:
+        description: Dutch institutes known to use it. Names must match _data/affiliations.yml.
+        type: array
+        items: {type: string}
+
+      related:
+        description: ids of related catalogue entries.
+        type: array
+        items: {type: string}

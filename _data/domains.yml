@@ -1,2 +1,10 @@
-- Oncology
-- Others
+# Domains for tool entries (tools_v2.yml: domains: [...]). A tool can have several; use Cross-domain on
+# its own. Keep the list short: add a domain only when several tools or a use case need it
+# (for example green sciences: plant, food and environmental research).
+- {name: Cross-domain, text: "Generic tools, not specific to one research area"}
+- {name: Clinical research, text: "Studies with participants: eCRFs, electronic data capture, codebooks"}
+- {name: Patient registries & rare diseases, text: "Patient registries and rare disease research, e.g. CARE-SM and EJP RD tooling"}
+- {name: Oncology, text: "Cancer research data"}
+- {name: Medical imaging, text: "Imaging data such as DICOM scans and imaging archives"}
+- {name: Life sciences, text: "Non-clinical biological research: lab and bioprocess data, systems biology, bio-ontologies"}
+- {name: Omics, text: "Genomics, transcriptomics, proteomics, metagenomics and other omics data"}

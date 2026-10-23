@@ -6,7 +6,9 @@
 <a href="{{ include.url | relative_url }}" class="card h-100 tool-card" aria-label="{{ card_aria_label }}">
     <div class="card-body">
 
-        {%- if include.image %}
+        {%- comment %} image_url is a ready URL; image is a path under /assets/img/ or a full URL {% endcomment %}
+        {%- assign file_url = include.image_url -%}
+        {%- if include.image and file_url == nil %}
         {%- if include.image contains "http://" or include.image contains "https://" %}
         {%- assign file_url = include.image -%}
         {%- else %}
@@ -14,6 +16,8 @@
         {{ "/assets/img/" | append: include.image | relative_url }}
         {%- endcapture -%}
         {%- endif %}
+        {%- endif %}
+        {%- if file_url %}
         <div class="tool-card-icon">
             <img
                 alt="logo of {{ include.title }}"

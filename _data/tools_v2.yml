@@ -1,0 +1,1202 @@
+# Tool entries (schema: _schemas/tool.schema.yml), rendered with _layouts/tool_profile.html.
+#
+# Imported on 2026-10-22 from the manual review (_review/tools4fair-annotation-form_new_v1.xlsx):
+# - top-level values were verified by a reviewer (green or yellow in the sheet);
+# - `pending:` holds values nobody has checked yet (white) or that still need a decision (purple).
+#   The live site shows only verified values and hides empty sections; add ?unverified=1 to a tool
+#   page URL to see the pending values too, with a dashed border.
+#   When a pending value is checked, move it up to the top level.
+# - values and tools that were crossed out in the sheet are not included.
+#
+# tool_type: bio.tools toolType values, or Self-assessment / checklist, Registry / catalogue,
+#            Standard / specification (_data/tool_types.yml).
+# fair:      F, A, I, R and/or planning. domains: _data/domains.yml. keywords: _data/keywords.yml.
+# links.homepage_opens_tool: true when the homepage link opens the working tool itself.
+# hosted:    true for online services.
+
+- id: castor
+  name: Castor EDC
+  redirect_from: [/castor-edc]
+  short_description: Cloud-based electronic data capture for clinical studies; multiple Dutch UMCs hold a licence.
+  tool_type: [Web application, Web API, Web service, Mobile application]
+  domains: [Clinical research]
+  license: [Proprietary]
+  cost: Commercial
+  hosted: true
+  links:
+    homepage: "https://www.castoredc.com/"
+    homepage_opens_tool: false
+    docs: "https://helpdesk.castoredc.com/hc/en-us"
+  logo: toolassemblies/tools/castor.png
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    description: >-
+      Castor EDC is a cloud-based electronic data capture system designed to simplify clinical data
+      collection and ensure interoperability. It integrates easily with broader clinical trial systems and
+      ranks in the top [5%] of EDC tools for build speed, with over [90%] of studies deployed within 4
+      weeks.
+    fair: [I, R]
+    lifecycle: [Collect]
+    code_availability: Closed source
+    links:
+      other:
+        - {kind: Documentation, url: "https://helpdesk.castoredc.com/"}
+        - {kind: Training, url: "https://academy.castoredc.com/"}
+        - {kind: Training, url: "https://www.castoredc.com/resources/webinars/"}
+        - {kind: Templates and examples, url: "https://forms.castoredc.com/"}
+    keywords: [eCRF, RDF]
+    institutes: [Amsterdam UMC, Erasmus MC, Leiden UMC, Maastricht UMC+, Radboudumc, UMCG]
+    related: [redcap, art-decor, icrf-generator]
+
+- id: mydre
+  name: myDRE
+  tool_type: [Web application, Workbench, Web API, Web service]
+  domains: [Cross-domain]
+  license: [Proprietary]
+  cost: Institutional licence
+  hosted: true
+  links:
+    homepage: "https://andrea-cloud.com/mydre"
+    homepage_opens_tool: false
+    docs: "https://support.mydre.org/portal/en/kb/mydre"
+  logo: toolassemblies/tools/andrea.png
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    short_description: "Secure cloud workspaces where project teams store and analyse sensitive data, with approved and logged upload and download; used by [all] Dutch UMCs."
+    description: >-
+      myDRE is a Trusted Processing Environment run by anDREa B.V. on Microsoft Azure. An organisation
+      takes a subscription and creates a workspace per research project; each workspace has its own
+      storage and Windows or Linux virtual machines, on which researchers use the software they need
+      (organisations can provide machine templates with, for example, Python, R and SPSS). Access is
+      role-based and can include collaborators from other organisations, every action is logged, and data
+      can only enter or leave a workspace through an approval step. Costs are the organisation's
+      subscription plus pay-per-use Azure consumption. myDRE is used by [all] Dutch UMCs, for example to
+      analyse sensitive health data or to run nodes for federated analysis.
+    fair: [A]
+    lifecycle: [Process, Analyse]
+    code_availability: Closed source
+    links:
+      other:
+        - {kind: Training, url: "https://sites.google.com/andrea-cloud.com/e-learning/1-welcome"}
+    related: [castor, surf-filesender]
+
+- id: molgenis
+  name: MOLGENIS
+  short_description: "Open-source platform that turns your data model into a web database, registry or data catalogue, with ontology annotations and RDF output."
+  description: >-
+    MOLGENIS is open-source software, coordinated by the Genomics Coordination Center at UMCG, for
+    building research databases. You describe your data as a model of tables, columns and relationships,
+    and MOLGENIS generates a web application with data-entry forms, upload and download, search and
+    access permissions. The current version, MOLGENIS EMX2, adds GraphQL and RDF interfaces and lets you
+    annotate tables and columns with ontology terms; its data catalogue model follows DCAT and the
+    Health-RI core metadata schema. MOLGENIS is used for patient registries and for cohort and biobank
+    catalogues such as the European Health Research Data and Sample Catalogue, and, through MOLGENIS
+    Armadillo, for federated analysis with DataSHIELD.
+  tool_type: [Web application, Workbench, Web API, Web service, Suite, Registry / catalogue, Database portal]
+  domains: ["Patient registries & rare diseases", Omics, Clinical research, Oncology, Life sciences]
+  license: [LGPL-3.0]
+  cost: Free of charge
+  links:
+    homepage: "https://molgenis.org/"
+    homepage_opens_tool: false
+    docs: "https://molgenis.github.io/molgenis-emx2/"
+    download: "https://github.com/molgenis/molgenis-emx2"
+  logo: toolassemblies/tools/molgenis.png
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [F, I]
+    lifecycle: [Collect, Preserve, Share, Reuse]
+    code_availability: Open source
+    maturity: Mature
+    links:
+      other:
+        - {kind: Documentation, url: "https://molgenis.gitbooks.io/molgenis/content/"}
+        - {kind: Templates and examples, url: "https://molgenis.gitbook.io/molgenis-pipelines"}
+        - {kind: Templates and examples, url: "https://molgenis.github.io/vip/"}
+        - {kind: Download, url: "https://github.com/molgenis/molgenis"}
+        - {kind: Report an issue, url: "https://github.com/molgenis/molgenis-emx2/issues"}
+    keywords: [RDF, DCAT]
+    ids:
+      biotools: molgenis
+      github: molgenis/molgenis-emx2
+      doi: 10.1093/bioinformatics/btw155
+    institutes: [UMCG]
+    related: [fair-data-point, fairdom-seek]
+
+- id: xnat
+  name: XNAT
+  short_description: "Open-source platform to archive, search and share medical imaging data such as DICOM scans, with project-based access control."
+  description: >-
+    XNAT is an open-source imaging informatics platform designed to support imaging-based research. It
+    offers tools to import, archive, describe, search and securely distribute imaging and related study
+    data. In a FAIR workflow, XNAT can support findability and accessibility by preserving imaging
+    metadata, making imaging datasets searchable, managing controlled access and exporting image dataset
+    metadata toward catalogues or FAIR Data Points with supporting tools such as img2catalog.
+  tool_type: [Web application, Workbench, Web API, Web service, Workflow, Plug-in]
+  domains: [Medical imaging, Clinical research]
+  license: [BSD-2-Clause]
+  cost: Free of charge
+  links:
+    homepage: "https://www.xnat.org/"
+    homepage_opens_tool: false
+    docs: "https://wiki.xnat.org/"
+    download: "https://www.xnat.org/download/"
+  logo: toolassemblies/tools/xnat.png
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [F, A]
+    lifecycle: [Collect, Preserve, Share, Reuse]
+    code_availability: Open source
+    maturity: Mature
+    links:
+      other:
+        - {kind: Documentation, url: "https://wiki.xnat.org/documentation/how-to-use-xnat"}
+        - {kind: Documentation, url: "https://wiki.xnat.org/documentation/"}
+        - {kind: Documentation, url: "https://wiki.xnat.org/xnat-api/xnat-rest-api-directory"}
+        - {kind: Training, url: "https://www.xnat.org/about/xnat-academy.php"}
+        - {kind: Download, url: "https://xnat.org/download/"}
+        - {kind: Report an issue, url: "https://github.com/NrgXnat/xnat/issues"}
+        - {kind: Other, url: "https://www.health-ri.nl/en/health-ri-service-desk"}
+    keywords: [DICOM]
+    ids:
+      biotools: xnat
+      github: NrgXnat/xnat
+      doi: "10.1385/ni:5:1:11"
+    institutes: [Erasmus MC, Leiden UMC, UMCG]
+    related: [fair-data-point]
+
+- id: dmponline
+  name: DMPonline
+  short_description: "Free web tool from the Digital Curation Centre for writing, sharing and reviewing data management plans with funder and institutional templates."
+  description: >-
+    DMPonline is a web tool for writing data management plans (DMPs), run by the Digital Curation Centre
+    (DCC) at the University of Edinburgh. After you answer a few questions about your funder and
+    organisation, it shows the matching template, with guidance and example answers from funders and
+    institutions. You can write a plan with collaborators, share it for feedback, publish it as a public
+    DMP and export it in several formats. DMPonline is free for all researchers; subscribing
+    organisations, including several Dutch universities and UMCs, add their own templates, guidance and
+    branding and can harvest plans through an API that follows the RDA DMP Common Standard. It runs on
+    the open-source DMPRoadmap software, developed jointly by the DCC and the University of California
+    Curation Center (UC3).
+  tool_type: [Web application, Web API, Web service]
+  domains: [Cross-domain]
+  license: [AGPL-3.0]
+  cost: Free of charge
+  hosted: true
+  links:
+    homepage: "https://dmponline.dcc.ac.uk/"
+    homepage_opens_tool: true
+    docs: "https://dmponline.dcc.ac.uk/help"
+  logo: toolassemblies/tools/dmponline.png
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [planning]
+    lifecycle: [Plan]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Templates and examples, url: "https://github.com/DMPRoadmap/roadmap"}
+        - {kind: Download, url: "https://github.com/DMPRoadmap/roadmap/releases"}
+        - {kind: Report an issue, url: "https://github.com/DMPRoadmap/roadmap/issues"}
+    keywords: [RDA DMP Common Standard]
+    ids:
+      github: DMPRoadmap/roadmap
+    institutes: [Leiden UMC, Radboudumc, Vrije Universiteit Amsterdam, UMC Utrecht, "Wageningen University & Research", Universiteit Utrecht, Technische Universiteit Delft, Erasmus Universiteit Rotterdam]
+    related: [fip-wizard, fair-aware]
+
+- id: leaf
+  name: LEAF
+  short_description: "Open-source framework whose adapters collect data and metadata automatically from lab equipment, such as bioreactors, and stream them via MQTT."
+  description: >-
+    LEAF (Lightweight Equipment Adapter Framework) is open-source software from Wageningen University &
+    Research for collecting data and metadata directly from research equipment such as bioreactors and
+    other lab instruments. For each type of equipment an adapter reads the manufacturer's output,
+    converts it into one common structure (InfluxDB line protocol by default) and sends it via MQTT to
+    an endpoint you choose, so data are available while an experiment runs instead of being exported by
+    hand afterwards. LEAF is installed as a desktop app or as a Python package, and ready-made adapters
+    are listed in an online marketplace. The optional OAK backend (MQTT broker, time-series database and
+    Grafana dashboards) can be run yourself or as a managed service.
+  tool_type: [Web application, Workbench, Database portal]
+  domains: [Clinical research]
+  license: [MPL-2.0]
+  cost: Free of charge
+  links:
+    homepage: "https://leaf-framework.org/"
+    homepage_opens_tool: false
+    docs: "https://leaf-framework.org/docs/"
+    download: "https://leaf-framework.org/download/"
+  logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAEJ8d9O9pkiFQvrOcfA-gGxDEMXzW80nlYfPGRxJZlw&s"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [R]
+    lifecycle: [Collect, Process]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Templates and examples, url: "https://gitlab.com/m-unlock"}
+    keywords: [MQTT]
+    institutes: ["Wageningen University & Research"]
+    related: [fair-data-station, fairdom-seek]
+
+- id: fair-data-station
+  name: FAIR Data Station
+  short_description: "Web application to record ISA-structured study metadata in Excel templates, validate it against community checklists and convert it to RDF."
+  description: >-
+    FAIR Data Station is an open-source web application developed at Wageningen University & Research as
+    part of FAIR by Design. Its Metadata Configurator builds Excel metadata templates for the ISA levels
+    investigation, study, observation unit, sample and assay, drawing on community checklists such as
+    those of ENA and MIxS. The Station validates filled-in templates and converts valid metadata to RDF
+    for downstream processing. It can also generate ENA submission files, import existing ENA
+    BioProjects, connect to iRODS/Yoda and be used through a REST API. A public instance runs at
+    fairds.fairbydesign.nl, and you can also run your own.
+  tool_type: [Web application, Web API, Web service, Workbench]
+  domains: [Life sciences, Omics]
+  license: [MIT]
+  cost: Free of charge
+  links:
+    homepage: "https://fairbydesign.nl/"
+    homepage_opens_tool: false
+    docs: "https://fairbydesign.nl/docs/fairdatastation/introduction/"
+    download: "https://gitlab.com/fairbydesign/fairds/-/releases"
+  logo: toolassemblies/tools/fair-ds.png
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I, R]
+    lifecycle: [Plan, Collect, Preserve, Share]
+    code_availability: Open source
+    maturity: Mature
+    links:
+      other:
+        - {kind: Documentation, url: "http://docs.fairbydesign.nl"}
+    keywords: [RDF, ISA]
+    ids:
+      biotools: fair_data_station
+      rsd: fair-data-station
+      doi: 10.1101/2022.08.03.502622
+    institutes: ["Wageningen University & Research"]
+    related: [fairdom-seek, leaf, cedar-workbench]
+
+- id: fairdom-seek
+  name: FAIRDOM-SEEK
+  short_description: "Web platform, self-hosted or used via FAIRDOMHub, to catalogue, share and publish data, models and SOPs organised as investigations, studies and assays."
+  description: >-
+    FAIRDOM-SEEK is a web-based platform for cataloguing, sharing and publishing research data, models,
+    simulations, processes and outcomes. It uses an ISA-style structure for investigations, studies and
+    assays, supports permissions and publication workflows, and can be used as the basis for project or
+    community hubs such as the IBISBA Knowledge Hub. In this use case, it is the destination where the
+    structured experiment, metadata, files and related outputs are registered for controlled sharing and
+    reuse.
+  tool_type: [Web application, Web API, Web service, Registry / catalogue, Database portal]
+  domains: [Life sciences, Omics]
+  license: [BSD-3-Clause]
+  cost: Free of charge
+  links:
+    homepage: "https://seek4science.org/"
+    homepage_opens_tool: false
+    docs: "https://docs.seek4science.org/"
+    download: "https://github.com/seek4science/seek"
+  logo: "https://seek4science.org/assets/images/fairdom-seek-logo-alt.svg"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [F, R]
+    lifecycle: [Preserve, Share]
+    code_availability: Open source
+    maturity: Mature
+    links:
+      other:
+        - {kind: Documentation, url: "https://docs.seek4science.org/help/"}
+        - {kind: Versions, url: "https://docs.seek4science.org/tech/releases/"}
+        - {kind: Download, url: "https://docs.seek4science.org/get-seek.html"}
+        - {kind: Report an issue, url: "https://github.com/seek4science/seek/issues"}
+    keywords: [ISA]
+    ids:
+      biotools: seek_for_science
+      github: seek4science/seek
+      doi: 10.1016/b978-0-12-385118-5.00029-3
+    how_to_cite: >-
+      Wolstencroft K., Owen S., Du Preez F., et al. (2011) The SEEK: A platform for sharing data and
+      models in systems biology. Methods in Enzymology. https://doi.org/10.1016/b978-0-12-385118-5.00029-3
+    related: [fair-data-station, leaf, molgenis]
+
+- id: fair-data-point
+  name: FAIR Data Point
+  short_description: "Server software that publishes metadata about your catalogues, datasets and distributions as DCAT-based RDF, so people and machines can find it."
+  description: >-
+    A FAIR Data Point (FDP) exposes metadata according to the FAIR principles. The reference
+    implementation exposes metadata using DCAT and related RDF vocabularies includes DCAT-based metadata
+    layers and can be customised with SHACL shapes, for example to align metadata with the Health-RI
+    metadata schema and expose it to catalogues such as the National Health Data Catalogue.
+  tool_type: [Web API, Web application, Standard / specification, Registry / catalogue, Database portal, Web service]
+  domains: [Cross-domain]
+  license: [MIT]
+  cost: Free of charge
+  links:
+    homepage: "https://www.fairdatapoint.org/"
+    homepage_opens_tool: false
+    docs: "https://docs.fairdatapoint.org/en/latest/"
+    download: "https://github.com/FAIRDataTeam/FAIRDataPoint"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [F, A]
+    lifecycle: [Preserve, Share, Reuse]
+    code_availability: Open source
+    maturity: Emerging
+    links:
+      other:
+        - {kind: Documentation, url: "https://github.com/FAIRDataTeam/FAIRDataPoint/wiki"}
+        - {kind: Download, url: "https://github.com/FAIRDataTeam/FAIRDataPoint/blob/develop/Dockerfile"}
+        - {kind: Report an issue, url: "https://github.com/FAIRDataTeam/FAIRDataPoint/issues"}
+    logo: "https://www.google.com/s2/favicons?domain=fairdatapoint.org&sz=128"
+    keywords: [DCAT, RDF, SHACL]
+    ids:
+      biotools: FAIRDataPoint
+      github: FAIRDataTeam/FAIRDataPoint
+    how_to_cite: >-
+      Luiz Olavo Bonino da Silva Santos, Kees Burger, Rajaram Kaliyaperumal, Marek Suchánek, Jan Slifka,
+      Mark Wilkinson FAIR Data Point.
+    related: [graphdb, castor]
+
+- id: sextans-suite
+  name: Sextans-Suite
+  links:
+    homepage: "https://github.com/wilkinsonlab/Sextans-Suite/"
+
+- id: ontotext-refine
+  name: Ontotext Refine
+  short_description: "OpenRefine-based tool from Ontotext to clean tabular, JSON or XML data and map it visually to RDF for loading into GraphDB."
+  description: >-
+    Ontotext Refine supports manual mapping of structured data to RDF schemas stored in GraphDB. Its
+    visual interface helps users choose predicates and types, define datatypes and implement
+    transformations from tabular or structured source data into RDF.
+  tool_type: [Desktop application, Web application, Web service, Workbench]
+  domains: [Cross-domain]
+  license: [unconfirmed]
+  cost: Free of charge
+  links:
+    homepage: "https://platform.ontotext.com/ontorefine/"
+    homepage_opens_tool: false
+    docs_note: Download it at the bottom of the product page
+    download: "https://platform.ontotext.com/ontorefine/install-migrate.html#installation"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I]
+    lifecycle: [Process]
+    code_availability: Open source
+    logo: "https://www.google.com/s2/favicons?domain=ontotext.com&sz=128"
+    keywords: [RDF, CSV, SPARQL]
+    related: [openrefine, graphdb]
+
+- id: openrefine
+  name: OpenRefine
+  short_description: "Desktop tool to clean messy tables, match values to external identifiers such as Wikidata, and convert tables to RDF with an extension."
+  description: >-
+    OpenRefine helps users inspect, clean and reconcile tabular data. With RDF extensions, it can be
+    used to transform structured data and metadata into RDF, making it useful when applying semantic
+    models or preparing FAIR metadata and data for exposure.
+  tool_type: [Desktop application, Plug-in, Web application, Web API, Web service, Workbench]
+  domains: [Cross-domain]
+  license: [BSD-3-Clause]
+  cost: Free of charge
+  links:
+    homepage: "https://openrefine.org/"
+    docs: "https://openrefine.org/docs"
+    download: "https://openrefine.org/download"
+  logo: "https://openrefine.org/img/openrefine_logo.svg"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I]
+    lifecycle: [Process]
+    code_availability: Open source
+    links:
+      homepage_opens_tool: true
+      other:
+        - {kind: Download, url: "https://github.com/OpenRefine/OpenRefine/releases"}
+        - {kind: Report an issue, url: "https://github.com/OpenRefine/OpenRefine/issues"}
+    keywords: [CSV, RDF]
+    ids:
+      github: OpenRefine/OpenRefine
+      rsd: openrefine
+    related: [ontotext-refine, graphdb]
+
+- id: cedar-workbench
+  name: CEDAR Workbench
+  short_description: "Web platform to design metadata templates and fill them in with values from ontologies, producing metadata as JSON-LD or RDF."
+  description: >-
+    CEDAR Workbench supports the creation of metadata templates and annotated metadata records. It helps
+    users structure metadata consistently and produce semantically rich descriptions that can support
+    FAIR publication and reuse.
+  tool_type: [Web application, Web API, Workbench, Web service, Suite]
+  domains: [Life sciences]
+  license: [BSD-2-Clause]
+  cost: Free of charge
+  links:
+    homepage: "https://metadatacenter.org/"
+    homepage_opens_tool: false
+    docs: "https://metadatacenter.readthedocs.io/en/latest/"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I, R]
+    lifecycle: [Plan, Collect, Preserve, Share]
+    code_availability: Open source
+    maturity: Mature
+    links:
+      download_note: "(1) https://metadatacenter.readthedocs.io/en/latest/install-overview/ vs (2) https://github.com/metadatacenter/cedar-mkdocs"
+      other:
+        - {kind: Documentation, url: "https://metadatacenter.org/help/"}
+        - {kind: Report an issue, url: "https://github.com/metadatacenter/cedar-template-editor/issues"}
+    logo: "https://www.google.com/s2/favicons?domain=metadatacenter.org&sz=128"
+    keywords: [JSON-LD, RDF, ontology]
+    ids:
+      biotools: cedar_workbench
+      github: metadatacenter/cedar-template-editor
+      fairsharing: 10.25504/FAIRsharing.V527H4
+    how_to_cite: >-
+      
+      https://biokeanos.com/source/Center%20for%20Expanded%20Data%20Annotation%20and%20Retrieval%20Workbench
+    related: [fair-data-station, fair-data-point]
+
+- id: graphdb
+  name: GraphDB
+  short_description: "RDF database (triplestore) with a SPARQL endpoint, reasoning and SHACL validation; the Free edition needs a free licence key, Enterprise is paid."
+  description: >-
+    GraphDB is an RDF triplestore used to store semantic data and make it queryable through SPARQL. In
+    FAIR workflows, it can hold transformed RDF data while metadata about the dataset is published
+    through a FAIR Data Point or another catalogue.
+  tool_type: [SPARQL endpoint, Desktop application, Workbench, Database portal, Web application, Web service]
+  domains: [Cross-domain]
+  license: [Proprietary]
+  cost: Free of charge (with restrictions)
+  links:
+    homepage: "https://graphdb.ontotext.com/"
+    homepage_opens_tool: false
+    docs: "https://graphdb.ontotext.com/documentation/"
+    download: "https://graphdb.ontotext.com/documentation/11.5/how-to-install-graphdb.html"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [A, I]
+    lifecycle: [Preserve, Share, Reuse]
+    logo: "https://www.google.com/s2/favicons?domain=graphdb.ontotext.com&sz=128"
+    keywords: [RDF, SPARQL, OWL, SHACL]
+    related: [blazegraph, fair-data-point, ontotext-refine]
+
+- id: blazegraph
+  name: Blazegraph
+  short_description: "Open-source RDF database (triplestore) with a SPARQL endpoint; no longer developed, its code repository was archived in March 2026."
+  description: >-
+    Blazegraph is an RDF graph database used to store and query semantic data. In FAIR workflows it can
+    serve as a triplestore for RDF data, enabling SPARQL-based access and reuse.
+  tool_type: [SPARQL endpoint, Desktop application, Web application, Web API, Web service]
+  domains: [Cross-domain]
+  license: [GPL-2.0]
+  cost: Free of charge
+  links:
+    homepage: "https://blazegraph.com/"
+    homepage_opens_tool: false
+    docs: "https://github.com/blazegraph/database/wiki"
+    download: "https://github.com/blazegraph/database"
+  logo: "https://blazegraph.com/images/blazegraph_logo.png"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [A, I]
+    lifecycle: [Preserve, Share, Reuse]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Download, url: "https://github.com/blazegraph/database/releases"}
+        - {kind: Report an issue, url: "https://github.com/blazegraph/database/issues"}
+    keywords: [RDF, SPARQL]
+    ids:
+      github: blazegraph/database
+    related: [graphdb, fair-data-point]
+
+- id: ardc-fair-self-assessment-tool
+  name: ARDC FAIR Data Self-Assessment Tool
+  short_description: Online self-assessment questionnaire of 12 questions that cover the FAIR principles while providing improvement guidance.
+  description: >-
+    The ARDC FAIR Self Assessment Tool is a short online survey that provides a questionnaire-based
+    self-assessment of FAIRness maturrity of research data and links to resources that can help improve
+    the result.
+  tool_type: [Self-assessment / checklist, Web application]
+  domains: [Cross-domain]
+  license: [GPL-3.0-only]
+  cost: Free of charge
+  links:
+    homepage: "https://ardc.edu.au/resource/fair-data-self-assessment-tool/"
+    homepage_opens_tool: true
+    docs_note: On the website
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [planning]
+    lifecycle: [Plan, Reuse]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Download, url: "https://github.com/au-research/FAIR-Data-Assessment-Tool/releases"}
+        - {kind: Report an issue, url: "https://github.com/au-research/FAIR-Data-Assessment-Tool/issues"}
+    logo: "https://www.google.com/s2/favicons?domain=ardc.edu.au&sz=128"
+    ids:
+      github: au-research/FAIR-Data-Assessment-Tool
+    related: [fair-aware, fair-data-maturity-model, fair-checker]
+
+- id: fair-data-maturity-model
+  name: FAIR Data Maturity Model
+  description: >-
+    The FAIR Data Maturity Model provides FAIR maturity indicators, guidelines and a spreadsheet-based
+    assessment that can be used to score the FAIRness of data and metadata.
+  tool_type: [Self-assessment / checklist, Standard / specification]
+  domains: [Cross-domain]
+  license: [CC-BY-4.0]
+  cost: Free of charge
+  links:
+    homepage: "https://www.rd-alliance.org/groups/fair-data-maturity-model-wg/outputs/fair-data-maturity-model-specification-and-guidelines/"
+    homepage_opens_tool: false
+    docs_note: On the website
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    short_description: "RDA recommendation with 41 indicators, priorities and scoring levels to judge how FAIR your (meta)data are, plus a spreadsheet to fill in."
+    fair: [planning]
+    lifecycle: [Plan, Reuse]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Documentation, url: "https://zenodo.org/records/3909563/files/FAIR%20Data%20Maturity%20Model_%20specification%20and%20guidelines_v1.00.pdf?download=1"}
+    logo: "https://www.google.com/s2/favicons?domain=zenodo.org&sz=128"
+    ids:
+      doi: 10.15497/rda00050
+    related: [ardc-fair-self-assessment-tool, fair-aware, fairassist]
+
+- id: fip-wizard
+  name: FIP Wizard
+  short_description: "Online questionnaire for recording your community's FAIR Implementation Profile and publishing it as nanopublications."
+  description: >-
+    FIP Wizard helps communities document their FAIR Implementation Profile by capturing FAIR-enabling
+    resources through a guided questionnaire. It can generate human-readable outputs and
+    machine-actionable nanopublications that can be explored through services such as FAIR Connect and
+    Nanodash.
+  tool_type: [Web application, Self-assessment / checklist, Registry / catalogue, Web service]
+  domains: [Cross-domain]
+  license: [MIT]
+  cost: Free of charge
+  hosted: true
+  links:
+    homepage: "https://fip.fair-wizard.com/"
+    homepage_opens_tool: true
+    docs_note: Built into the tool
+  logo: logos/fip-wizard_transp.svg
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [planning]
+    lifecycle: [Plan, Share, Reuse]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Documentation, url: "https://wiki.gofair.foundation/docs/fip/content.html"}
+    keywords: [nanopublication]
+    related: [ardc-fair-self-assessment-tool, fair-data-maturity-model, dmponline]
+
+- id: fair-checker
+  name: FAIR-Checker
+  short_description: "Web tool that tests a web page or DOI against FAIR metrics using the metadata embedded in the page, and suggests how to fix failed checks."
+  description: >-
+    FAIR-Checker provides a web interface for evaluating FAIR metrics by testing a URL or DOI. It
+    returns scores for FAIR sub-principles and provides suggestions for improving failed checks.
+  tool_type: [Web application, Self-assessment / checklist, Web API, Web service]
+  domains: [Cross-domain]
+  license: [MIT]
+  cost: Free of charge
+  links:
+    homepage: "https://fair-checker.france-bioinformatique.fr/"
+    homepage_opens_tool: true
+    download: "https://github.com/IFB-ElixirFr/fair-checker"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [planning]
+    lifecycle: [Plan, Reuse]
+    code_availability: Open source
+    maturity: Emerging
+    links:
+      docs: "https://fair-checker.france-bioinformatique.fr/docs/index.html"
+      other:
+        - {kind: Download, url: "https://github.com/IFB-ElixirFr/FAIR-checker/releases"}
+        - {kind: Report an issue, url: "https://github.com/IFB-ElixirFr/FAIR-checker/issues"}
+    logo: "https://www.google.com/s2/favicons?domain=fair-checker.france-bioinformatique.fr&sz=128"
+    keywords: [JSON-LD, RDF, Bioschemas]
+    ids:
+      biotools: fair-checker
+      github: IFB-ElixirFr/FAIR-checker
+      doi: 10.1186/s13326-023-00289-5
+    related: [fair-evaluator, fairassist]
+
+- id: fair-evaluator
+  name: FAIR Evaluator
+  short_description: Online service that runs automated FAIR maturity indicator tests on the identifier of a dataset or metadata record and reports which tests pass or fail.
+  description: >-
+    FAIR Evaluator provides an online service to test digital objects and metadata resources against
+    FAIR maturity indicators in an automated way. It reports assessment outcomes and logs that can help
+    identify why a test failed.
+  tool_type: [Web application, Web API, Self-assessment / checklist, Web service]
+  domains: [Cross-domain]
+  license: [MIT]
+  cost: Free of charge
+  links:
+    homepage: "https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/collections/new/evaluate"
+    homepage_opens_tool: true
+    docs: "https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/#!/#%2F!"
+    download: "https://github.com/FAIRsharing/FAIR-Evaluator-FrontEnd"
+  logo: "https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/assets/img/fairmetrics.png"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [planning]
+    lifecycle: [Plan, Reuse]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Documentation, url: "https://github.com/FAIRMetrics/Metrics/tree/master/MaturityIndicators"}
+        - {kind: Training, url: "https://faircookbook.elixir-europe.org/content/recipes/assessing-fairness/fair-assessment-fairevaluator.html"}
+        - {kind: Download, url: "https://github.com/FAIRMetrics/Metrics/releases"}
+        - {kind: Report an issue, url: "https://github.com/FAIRMetrics/Metrics/issues"}
+    ids:
+      github: FAIRMetrics/Metrics
+    related: [fair-checker, fairassist]
+
+- id: fairassist
+  name: FAIRassist
+  short_description: "Overview of FAIR assessment tools and metrics, to help you choose an assessment approach."
+  description: >-
+    FAIRassist helps users discover FAIR assessment tools and compare options before choosing an
+    approach for assessing data or metadata FAIRness.
+  tool_type: [Registry / catalogue, Database portal, Web application, Web API, Web service]
+  domains: [Cross-domain]
+  license: [AGPL-3.0]
+  cost: Free of charge
+  hosted: true
+  links:
+    homepage: "https://fairassist.org/"
+    homepage_opens_tool: true
+    docs_note: On the website
+  logo: "https://avatars.githubusercontent.com/u/29867987"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [planning]
+    lifecycle: [Plan, Reuse]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Report an issue, url: "https://github.com/FAIRsharing/FAIRassist-App/issues"}
+    ids:
+      github: FAIRsharing/FAIRassist-App
+    related: [fair-evaluator, fair-checker, fair-aware]
+
+- id: fair-aware
+  name: FAIR Aware
+  short_description: Short online questionnaire that tests how well you know the FAIR principles before you deposit data.
+  description: >-
+    FAIR Aware is an online tool from DANS for assessing and improving general awareness of the FAIR
+    data principles. In the FAIR Metroline it is mentioned as a complementary option when the goal is
+    FAIR awareness rather than direct dataset assessment.
+  tool_type: [Self-assessment / checklist, Web application]
+  domains: [Cross-domain]
+  license: [unconfirmed]
+  cost: Free of charge
+  hosted: true
+  links:
+    homepage: "https://fairaware.dans.knaw.nl/"
+    homepage_opens_tool: true
+    docs: "https://www.fairsfair.eu/fair-aware"
+  logo: "https://www.google.com/s2/favicons?domain=fairaware.dans.knaw.nl&sz=128"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [planning]
+    lifecycle: [Plan, Reuse]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Download, url: "https://github.com/FAIRsFAIR/fair-aware/releases"}
+    ids:
+      github: FAIRsFAIR/fair-aware
+    related: [ardc-fair-self-assessment-tool, fair-data-maturity-model]
+
+- id: art-decor
+  name: ART-DECOR
+  short_description: "Web platform for building and publishing health-data codebooks (data elements, value sets, terminology bindings); Nictiz hosts a Dutch instance."
+  description: >-
+    ART-DECOR can be used to publish structured metadata about datasets, including data elements and
+    codebooks. In FAIR Metroline guidance it is used as an example source for reusable codebooks and
+    structured metadata for clinical studies and patient registries.
+  tool_type: [Web application, Standard / specification, Registry / catalogue, Suite, Workbench]
+  domains: [Clinical research, "Patient registries & rare diseases"]
+  cost: Free of charge
+  hosted: true
+  links:
+    homepage: "https://art-decor.org/"
+    homepage_opens_tool: true
+    docs: "https://docs.art-decor.org/"
+    other:
+      - {kind: Link, url: "https://art-decor.org/ad/#/home"}
+  logo: metroline_steps/register_structural_metadata/ART-DECOR_screenshot.png
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I, R]
+    lifecycle: [Plan, Collect, Share, Reuse]
+    license: [GPL-3.0-only, LGPL-2.1-only]
+    keywords: [codebook, FHIR]
+    related: [icrf-generator, erdri-mdr, castor, redcap]
+
+- id: erdri-mdr
+  name: ERDRI.mdr
+  short_description: "European Commission repository where rare disease registries publish their data element definitions, so others can look them up and reuse them."
+  description: >-
+    ERDRI.mdr is the Central Metadata Repository of the European Rare Disease Registry Infrastructure
+    (ERDRI), run by the European Commission's Joint Research Centre. It stores the data elements used by
+    participating rare disease registries, with their names and definitions; each registry uploads its
+    data elements as an Excel file, and every upload becomes a new numbered version. Anyone can browse
+    it read-only, with limited detail, without an account; verified registry users can add their
+    registry's data elements, and people setting up or changing a registry can select existing data
+    elements to reuse.
+  tool_type: [Registry / catalogue, Database portal, Web application]
+  domains: ["Patient registries & rare diseases", Clinical research]
+  license: [unconfirmed]
+  cost: Free of charge
+  hosted: true
+  links:
+    homepage: "https://eu-rd-platform.jrc.ec.europa.eu/mdr/"
+    homepage_opens_tool: true
+    docs: "https://eu-rd-platform.jrc.ec.europa.eu/system/files/public/erdri-manuals/ERDRI.mdr%20User%20Guide.pdf"
+  logo: "https://eu-rd-platform.jrc.ec.europa.eu/mdr/images/logo-ec--en.svg"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [F, I]
+    lifecycle: [Share, Reuse]
+    keywords: [codebook]
+    related: [art-decor, csv-on-the-web, fair-data-point]
+
+- id: csv-on-the-web
+  name: CSV on the Web
+  short_description: W3C standard for describing CSV data and its semantics using machine-readable metadata.
+  description: >-
+    CSV on the Web provides a vocabulary and metadata model for describing the columns, rows and
+    semantics of CSV files. It can be used to make tabular structural metadata more machine-readable and
+    to express metadata as JSON or RDF.
+  tool_type: [Standard / specification]
+  domains: [Cross-domain]
+  cost: Free of charge
+  links:
+    homepage: "https://csvw.org/"
+    homepage_opens_tool: false
+    docs: "https://www.w3.org/TR/tabular-data-primer/"
+  logo: "https://www.google.com/s2/favicons?domain=w3.org&sz=128"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I, R]
+    lifecycle: [Preserve, Share, Reuse]
+    license: [W3C Document License]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Versions, url: "https://www.w3.org/TR/tabular-metadata/"}
+        - {kind: Download, url: "https://github.com/w3c/csvw/releases"}
+        - {kind: Report an issue, url: "https://github.com/w3c/csvw/issues"}
+    keywords: [CSV, JSON-LD, RDF]
+    ids:
+      github: w3c/csvw
+
+- id: icrf-generator
+  name: iCRF Generator
+  short_description: "Desktop tool that generates eCRFs for Castor EDC, REDCap and other EDC systems from items in online codebooks such as ART-DECOR."
+  tool_type: [Desktop application, Workbench]
+  domains: [Clinical research]
+  license: [GPL-3.0]
+  cost: Free of charge
+  links:
+    homepage: "https://www.healthdata.nl/en/services/icrf-generator"
+    homepage_opens_tool: false
+    docs_note: On the website and in the GitHub repository
+    download: "https://github.com/aderidder/iCRFGenerator/"
+  logo: logos/healthri_transp.png
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    description: >-
+      The iCRF Generator is an open-source Java desktop application, developed at Amsterdam UMC, with a
+      wizard in which you pick items from published online codebooks, such as the Dutch Clinical Building
+      Blocks (zibs), the Basic Health Data Set and the VASCA rare disease codebook in ART-DECOR. It writes
+      these items as eCRF definitions for Castor EDC, REDCap, OpenClinica 3 / LibreClinica, MOLGENIS EMX
+      or CDISC ODM-XML, and keeps the terminology codes (for example SNOMED CT) that the codebook already
+      contains. Sections, repeating groups and other study-specific details are added afterwards in the
+      EDC system. Support for openEHR codebooks is currently not working; see the GitHub README.
+    fair: [I, R]
+    lifecycle: [Collect]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Templates and examples, url: "https://github.com/aderidder/iCRFGenerator/"}
+        - {kind: Download, url: "https://github.com/aderidder/iCRFGenerator/releases"}
+        - {kind: Report an issue, url: "https://github.com/aderidder/iCRFGenerator/issues"}
+    keywords: [eCRF, codebook, CDISC ODM]
+    ids:
+      biotools: icrf_generator
+      github: aderidder/iCRFGenerator
+      doi: 10.12688/f1000research.21576.1
+    related: [art-decor, castor, redcap]
+
+- id: redcap
+  name: REDCap
+  short_description: "Web-based electronic data capture for eCRFs, surveys and study databases; non-profit institutions run their own instance at no licence cost."
+  description: >-
+    REDCap is an electronic data capture platform used to build and manage online surveys and research
+    databases. In FAIR Metroline guidance it is discussed as a commonly used EDC system for eCRF design,
+    including support for structured data capture and ontology search features.
+  tool_type: [Web application, Workbench, Mobile application, Plug-in, Web API, Web service]
+  domains: [Clinical research]
+  license: [Proprietary]
+  cost: Free of charge (with restrictions)
+  links:
+    homepage: "https://projectredcap.org/"
+    homepage_opens_tool: false
+    docs: "https://projectredcap.org/resources/"
+    download:
+      - {label: Request a licence, url: "https://projectredcap.org/join/"}
+      - {label: Server requirements, url: "https://projectredcap.org/software/requirements/"}
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I, R]
+    lifecycle: [Collect]
+    code_availability: Restricted access
+    maturity: Mature
+    links:
+      other:
+        - {kind: Documentation, url: "https://projectredcap.org/about/"}
+        - {kind: Documentation, url: "https://projectredcap.org/software/requirements/"}
+        - {kind: Training, url: "https://projectredcap.org/resources/videos/"}
+    logo: "https://www.google.com/s2/favicons?domain=project-redcap.org&sz=128"
+    keywords: [eCRF, CDISC ODM]
+    ids:
+      biotools: redcap
+      doi: 10.1038/s41393-018-0169-9
+    how_to_cite: >-
+      Harvey L.A. (2018) REDCap: Web-based software for all types of data storage and collection
+      editorial. Spinal Cord. https://doi.org/10.1038/s41393-018-0169-9
+    related: [castor, icrf-generator, art-decor]
+
+- id: protege
+  name: Protégé
+  short_description: Ontology editor for building OWL ontologies and checking them with reasoners such as HermiT; WebProtégé offers collaborative editing in the browser.
+  description: >-
+    Protégé supports ontology editing, inspection and reasoning. It can be used when implementing
+    semantic models, adding ontology annotations and validating modelling choices.
+  tool_type: [Web application, Desktop application, Ontology, Plug-in, Workbench]
+  domains: [Cross-domain]
+  license: [BSD-2-Clause]
+  cost: Free of charge
+  links:
+    homepage: "https://protege.stanford.edu/"
+    homepage_opens_tool: true
+    docs: "https://protegewiki.stanford.edu/wiki/WebProtege"
+    download:
+      - {label: WebProtégé (online), url: "https://protegewiki.stanford.edu/wiki/WebProtege"}
+      - {label: Desktop version, url: "https://protege.stanford.edu/software/#desktop-protege"}
+      - {label: Desktop releases on GitHub, url: "https://github.com/protegeproject/protege-distribution/releases"}
+  logo: "https://www.google.com/s2/favicons?domain=protege.stanford.edu&sz=128"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I]
+    lifecycle: [Plan, Process, Reuse]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Documentation, url: "https://protege.stanford.edu/products.php#web-protege"}
+        - {kind: Download, url: "https://github.com/protegeproject/protege/releases"}
+        - {kind: Report an issue, url: "https://github.com/protegeproject/protege/issues"}
+    keywords: [ontology, OWL, RDF]
+    ids:
+      biotools: protege
+      github: protegeproject/protege
+      doi: 10.1093/bioinformatics/btu256
+    related: [robot, sssom-toolkit, pyshacl]
+
+- id: robot
+  name: ROBOT
+  short_description: "Command-line toolkit to build, check and release ontologies."
+  description: >-
+    ROBOT supports automated ontology workflows including conversion, validation, reasoning, reporting
+    and release preparation. It is useful for implementing and maintaining semantic models and ontology
+    mappings.
+  tool_type: [Command-line tool, Library, Workflow, Ontology, Script, Plug-in]
+  domains: [Life sciences]
+  license: [BSD-3-Clause]
+  cost: Free of charge
+  links:
+    homepage: "https://robot.obolibrary.org/"
+    homepage_opens_tool: false
+    docs_note: On the website
+    download: "https://github.com/ontodev/robot/releases/tag/v1.9.11"
+  logo: "https://github.com/ontodev.png?size=200"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I, R]
+    lifecycle: [Process, Preserve, Reuse]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Download, url: "https://github.com/ontodev/robot/releases"}
+        - {kind: Report an issue, url: "https://github.com/ontodev/robot/issues"}
+    keywords: [ontology, OWL, OBO format, RDF, SPARQL]
+    ids:
+      biotools: robot
+      github: ontodev/robot
+      doi: 10.1186/s12859-019-3002-3
+    how_to_cite: >-
+      Jackson R.C., Balhoff J.P., Douglass E., et al. (2019) ROBOT: A Tool for Automating Ontology
+      Workflows. BMC Bioinformatics. https://doi.org/10.1186/s12859-019-3002-3
+    related: [protege, sssom-toolkit]
+
+- id: topbraid-shacl-api
+  name: TopBraid SHACL API
+  short_description: "Java library, built on Apache Jena, that checks RDF data against SHACL shapes and can also be run from the command line."
+  description: >-
+    TopBraid SHACL API can validate RDF graphs using SHACL constraints. It is useful when checking that
+    semantic models and transformed metadata conform to expected shapes.
+  tool_type: [Library, Command-line tool, Ontology, Workflow]
+  domains: [Cross-domain]
+  license: [unconfirmed]
+  cost: Commercial
+  links:
+    homepage: "https://github.com/TopQuadrant/shacl"
+    homepage_opens_tool: false
+    docs: "https://github.com/TopQuadrant/shacl#readme"
+    download:
+      - {label: GitHub releases, url: "https://github.com/TopQuadrant/shacl/releases"}
+  logo: "https://github.com/TopQuadrant.png?size=200"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I, R]
+    lifecycle: [Process, Reuse]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Download, url: "https://github.com/TopQuadrant/shacl/releases"}
+        - {kind: Report an issue, url: "https://github.com/TopQuadrant/shacl/issues"}
+    keywords: [SHACL, RDF]
+    ids:
+      github: TopQuadrant/shacl
+    related: [pyshacl, fair-data-point]
+
+- id: pyshacl
+  name: pySHACL
+  short_description: Python library and command-line tool that checks RDF data against SHACL shapes and reports which constraints are violated.
+  description: >-
+    pySHACL validates RDF graphs against SHACL shapes from Python or the command line. It is useful for
+    automated checks in FAIRification workflows and semantic model maintenance.
+  tool_type: [Library, Command-line tool, Ontology, Workflow]
+  domains: [Cross-domain]
+  license: [Apache-2.0]
+  cost: Free of charge
+  links:
+    homepage: "https://github.com/RDFLib/pySHACL"
+    homepage_opens_tool: false
+    docs: "https://github.com/RDFLib/pySHACL#readme"
+    download: "https://pypi.org/project/pyshacl/"
+  logo: "https://github.com/RDFLib.png?size=200"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I, R]
+    lifecycle: [Process, Reuse]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Download, url: "https://github.com/RDFLib/pySHACL/releases"}
+        - {kind: Report an issue, url: "https://github.com/RDFLib/pySHACL/issues"}
+    keywords: [SHACL, RDF]
+    ids:
+      github: RDFLib/pySHACL
+    related: [topbraid-shacl-api, fair-data-point]
+
+- id: sssom-toolkit
+  name: sssom-py
+  short_description: "Python library and command-line tool to validate, convert, merge and compare ontology mapping files in the SSSOM format."
+  description: >-
+    sssom-py is the Python library and command-line tool for the Simple Standard for Sharing Ontological
+    Mappings (SSSOM). It parses, validates, merges and compares mapping files and converts them between
+    TSV, RDF, OWL and JSON, so that ontology mappings and their provenance stay reusable and
+    maintainable.
+  tool_type: [Library, Command-line tool, Ontology, Workflow]
+  domains: [Life sciences, Omics]
+  license: [BSD-3-Clause]
+  cost: Free of charge
+  links:
+    homepage: "https://mapping-commons.github.io/sssom-py/"
+    homepage_opens_tool: false
+    docs: "https://github.com/mapping-commons/sssom-py"
+    download: "https://mapping-commons.github.io/sssom-py/installation/"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I, R]
+    lifecycle: [Process, Preserve, Reuse]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Documentation, url: "https://mapping-commons.github.io/sssom/"}
+        - {kind: Download, url: "https://github.com/mapping-commons/sssom-py/releases"}
+        - {kind: Report an issue, url: "https://github.com/mapping-commons/sssom-py/issues"}
+    logo: "https://github.com/mapping-commons.png?size=200"
+    keywords: [SSSOM, ontology, RDF, OWL]
+    ids:
+      github: mapping-commons/sssom-py
+    related: [robot, protege]
+
+- id: sparnatural
+  name: Sparnatural
+  short_description: "Browser component, added to a website, that lets users query a knowledge graph by picking classes and properties instead of writing SPARQL."
+  description: >-
+    Sparnatural provides a visual interface that helps users construct SPARQL queries through guided
+    selections. It is useful for exploring linked-data resources when users need more than browsing and
+    filtering but are not yet comfortable writing SPARQL manually.
+  tool_type: [Plug-in, Workbench, Web application, Ontology]
+  domains: [Cross-domain]
+  license: [Apache-2.0]
+  cost: Free of charge
+  links:
+    homepage: "https://sparnatural.eu/"
+    homepage_opens_tool: false
+    docs: "https://docs.sparnatural.eu/"
+    download: "https://github.com/sparna-git/Sparnatural/releases/tag/13.1.0"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I]
+    lifecycle: [Analyse, Reuse]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Download, url: "https://github.com/sparna-git/Sparnatural/releases"}
+        - {kind: Report an issue, url: "https://github.com/sparna-git/Sparnatural/issues"}
+    logo: "https://www.google.com/s2/favicons?domain=sparnatural.eu&sz=128"
+    keywords: [SPARQL, RDF, SHACL]
+    ids:
+      github: sparna-git/Sparnatural
+    related: [wikidata-query-builder, yasgui, graphdb]
+
+- id: wikidata-query-builder
+  name: Wikidata Query Builder
+  short_description: "Web form for simple queries over Wikidata; you pick properties and values, and it writes and runs the SPARQL query for you."
+  description: >-
+    Wikidata Query Builder helps users construct queries over Wikidata by choosing entities, properties
+    and values through a guided interface. It can be a useful entry point for learning how linked-data
+    queries are structured.
+  tool_type: [Web application, Workbench]
+  domains: [Cross-domain]
+  license: [BSD-3-Clause]
+  cost: Free of charge
+  hosted: true
+  links:
+    homepage: "https://query.wikidata.org/querybuilder/"
+    homepage_opens_tool: true
+    docs: "https://www.wikidata.org/wiki/Wikidata:Query_Builder"
+  logo: "https://www.wikidata.org/static/favicon/wikidata.ico"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I]
+    lifecycle: [Analyse, Reuse]
+    code_availability: Open source
+    links:
+      other:
+        - {kind: Report an issue, url: "https://github.com/wikimedia/wikidata-query-builder/issues"}
+    keywords: [SPARQL]
+    ids:
+      github: wikimedia/wikidata-query-builder
+    related: [sparnatural, yasgui]
+
+- id: yasgui
+  name: Yasgui
+  short_description: "Browser-based editor for writing, running and sharing SPARQL queries against any SPARQL endpoint."
+  description: >-
+    YASGUI provides a browser-based interface for writing, running and inspecting SPARQL queries against
+    RDF endpoints. It is useful for users who need direct query access and interactive result
+    exploration.
+  tool_type: [Web application, SPARQL endpoint, Workbench]
+  domains: [Cross-domain]
+  license: [MIT]
+  cost: Free of charge
+  links:
+    homepage: "https://yasgui.triply.cc/"
+    homepage_opens_tool: true
+    download: "https://github.com/rdfjs/Yasgui/tree/main"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I]
+    lifecycle: [Analyse, Reuse]
+    code_availability: Open source
+    links:
+      docs: "https://docs.triply.cc/yasgui/"
+      other:
+        - {kind: Download, url: "https://github.com/rdfjs/Yasgui/releases"}
+        - {kind: Report an issue, url: "https://github.com/rdfjs/Yasgui/issues"}
+    logo: "https://avatars.githubusercontent.com/u/52077849"
+    keywords: [SPARQL, RDF]
+    ids:
+      github: rdfjs/Yasgui
+    related: [virtuoso-query-editor, sparnatural, wikidata-query-builder]
+
+- id: virtuoso-query-editor
+  name: Virtuoso SPARQL Query Editor
+  short_description: Built-in web form on Virtuoso SPARQL endpoints (usually at /sparql) for typing and running SPARQL queries.
+  description: >-
+    Virtuoso Query Editor is a SPARQL interface commonly exposed by Virtuoso-backed linked-data
+    services. It lets users write and run SPARQL queries directly against an endpoint.
+  tool_type: [Web application, Workbench, SPARQL endpoint]
+  domains: [Cross-domain]
+  license: [GPL-2.0-only (Virtuoso Open Source Edition), Proprietary (Virtuoso Enterprise Edition)]
+  links:
+    homepage: "https://www.genome.jp/sparql/linkdb"
+    homepage_opens_tool: true
+    docs: "https://docs.openlinksw.com/virtuoso/rdfsparqlprotocolendpoint/"
+  logo: "https://www.openlinksw.com/skin/matrix/images/opllogo-minimal-blue.svg"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [I]
+    lifecycle: [Analyse, Reuse]
+    cost: Free and paid
+    code_availability: Open source
+    links:
+      download_note: "1: https://vos.openlinksw.com/owiki/wiki/VOS/VOSSparqlProtocol, or 2: https://vos.openlinksw.com/owiki/wiki/VOS/VOSSparqlProtocol"
+      other:
+        - {kind: Download, url: "https://github.com/openlink/virtuoso-opensource/releases"}
+        - {kind: Report an issue, url: "https://github.com/openlink/virtuoso-opensource/issues"}
+    keywords: [SPARQL, RDF]
+    ids:
+      github: openlink/virtuoso-opensource
+    related: [yasgui, sparnatural, graphdb]
+
+- id: surf-filesender
+  name: SURFfilesender
+  short_description: SURF service for sending large files (up to 1 TB) securely with your institution login; recipients need no account.
+  description: >-
+    SURF filesender supports secure transfer of large files and is listed in the FAIR Metroline as an
+    option for authenticated transfer of large or sensitive datasets.
+  tool_type: [Web application, Web service]
+  domains: [Cross-domain]
+  license: [BSD-3-Clause]
+  cost: Free of charge
+  hosted: true
+  links:
+    homepage: "https://www.surf.nl/en/services/storage-data-management/surffilesender"
+    homepage_opens_tool: false
+    docs: "https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/198967769/FAQs#English"
+  logo: logos/surf_transp.svg
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [A]
+    lifecycle: [Share, Reuse]
+    code_availability: Restricted access
+    related: [globus, aspera, mydre]
+
+- id: aspera
+  name: IBM Aspera
+  short_description: "IBM's high-speed file transfer software; its free clients are used to upload to and download from repositories such as ENA and SRA."
+  description: >-
+    Aspera supports high-speed transfer of large datasets and is recommended in the FAIR Metroline where
+    robust transfer and retry or resume capabilities are needed.
+  tool_type: [Desktop application, Command-line tool, Web service, Web application, Workflow]
+  domains: [Cross-domain]
+  license: [Proprietary]
+  cost: Commercial
+  links:
+    homepage: "https://www.ibm.com/products/aspera"
+    homepage_opens_tool: false
+    docs: "https://www.ibm.com/downloads/documents/us-en/10a99803c42fd98c"
+    download: "https://www.ibm.com/products/aspera/downloads"
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [A]
+    lifecycle: [Share, Reuse]
+    links:
+      other:
+        - {kind: Documentation, url: "https://www.ibm.com/docs/en/aspera-on-cloud?topic=admin-aspera-connect-transfer-client"}
+        - {kind: Training, url: "https://faircookbook.elixir-europe.org/content/recipes/accessibility/aspera.html"}
+    logo: "https://www.google.com/s2/favicons?domain=ibm.com&sz=128"
+    related: [globus, surf-filesender]
+
+- id: globus
+  name: Globus
+  short_description: Service that moves and shares large research files between storage systems and resumes interrupted transfers automatically.
+  description: >-
+    Globus supports reliable, resumable transfer of large research datasets across endpoints. In the
+    FAIR Metroline it is listed for bulk transfers where interruptions should not require restarting the
+    transfer.
+  tool_type: [Web application, Web service, Command-line tool, Workflow]
+  domains: [Cross-domain]
+  license: [Proprietary]
+  cost: Free of charge (with restrictions)
+  hosted: true
+  links:
+    homepage: "https://www.globus.org/"
+    homepage_opens_tool: false
+    docs: "https://docs.globus.org/"
+    download:
+      - {label: Set-up for admins and developers, url: "https://docs.globus.org/getting-started/"}
+  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
+    fair: [A]
+    lifecycle: [Share, Reuse]
+    logo: "https://www.google.com/s2/favicons?domain=globus.org&sz=128"
+    related: [aspera, surf-filesender]

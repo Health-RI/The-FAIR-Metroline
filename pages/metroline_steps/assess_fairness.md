@@ -105,7 +105,7 @@ To help keep an overview of the original FAIRification objectives, their status,
 {% include how-to-summary-end.html %}
 
 ## Practical examples from the community 
-For an applied example of The FAIR Evaluator tool, see Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic. 
+For an applied example of The {% include toolassemblies/show-badges.html ids="fair-evaluator" %} tool, see Applying the FAIR principles to data in a hospital: challenges and opportunities in a pandemic. 
 
 ## Training
 Considering looking into the following resources:

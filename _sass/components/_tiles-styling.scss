@@ -135,8 +135,7 @@
   }
 }
 
-// Tool-specific metadata styling
-.tool-type,
+// Use case metadata styling
 .use-case-type,
 .use-case-complexity {
   font-size: 0.75rem;
@@ -147,11 +146,6 @@
   letter-spacing: 0.5px;
   display: inline-block;
   width: fit-content;
-}
-
-.tool-type {
-  background: $menu-unselected-bg;
-  color: $primary;
 }
 
 .tool-tags-group {

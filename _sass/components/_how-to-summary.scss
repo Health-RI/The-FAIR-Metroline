@@ -6,7 +6,8 @@
   border-radius: 6px;
   background: linear-gradient(180deg, #fff 0%, mix($primary, #fff, 3%) 100%);
   box-shadow: 0 0.25rem 0.75rem rgba($primary, 0.08);
-  overflow: hidden;
+  // flow-root instead of overflow: hidden, so tool badge previews (_tool-badges.scss) are not clipped
+  display: flow-root;
 }
 
 .how-to-summary[open] {
@@ -94,6 +95,8 @@
   border-top: 1px solid mix($primary, #fff, 15%);
   padding: 1rem 1.15rem 1.15rem;
   background-color: #fff;
+  // inside the box's 6px corners (4px left border, 1px elsewhere)
+  border-radius: 0 0 5px 2px;
 }
 
 .how-to-summary__body > :first-child {
