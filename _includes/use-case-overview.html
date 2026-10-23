@@ -1,0 +1,50 @@
+<!-- Use Case Overview Component -->
+<div class="use-case-overview">
+  {% if include.complexity %}
+  <div class="overview-card" {% if include.complexity_tooltip %}data-tooltip="{{ include.complexity_tooltip }}"{% endif %}>
+    <div class="card-header">
+      <div class="card-icon complexity-icon">
+        <i class="fas fa-chart-line"></i>
+      </div>
+      <h3 class="card-label">Complexity</h3>
+    </div>
+    <p class="card-value">{{ include.complexity }}</p>
+  </div>
+  {% endif %}
+
+  {% if include.experts %}
+  <div class="overview-card" {% if include.experts_tooltip %}data-tooltip="{{ include.experts_tooltip }}"{% endif %}>
+    <div class="card-header">
+      <div class="card-icon experts-icon">
+        <i class="fas fa-users"></i>
+      </div>
+      <h3 class="card-label">Key Experts</h3>
+    </div>
+    <p class="card-value">{{ include.experts }}</p>
+  </div>
+  {% endif %}
+
+  {% if include.environment %}
+  <div class="overview-card" {% if include.environment_tooltip %}data-tooltip="{{ include.environment_tooltip }}"{% endif %}>
+    <div class="card-header">
+      <div class="card-icon experts-icon">
+        <i class="fas fa-server"></i>
+      </div>
+      <h3 class="card-label">Environment</h3>
+    </div>
+    <p class="card-value">{{ include.environment }}</p>
+  </div>
+  {% endif %}
+
+  {% if include.outcome %}
+  <div class="overview-card" {% if include.outcome_tooltip %}data-tooltip="{{ include.outcome_tooltip }}"{% endif %}>
+    <div class="card-header">
+      <div class="card-icon outcome-icon">
+        <i class="fas fa-bullseye"></i>
+      </div>
+      <h3 class="card-label">Outcome</h3>
+    </div>
+    <p class="card-value">{{ include.outcome }}</p>
+  </div>
+  {% endif %}
+</div>

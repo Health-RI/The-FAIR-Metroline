@@ -1,27 +1,12 @@
-{%- assign tool_ids = include.ids | split: ", " %}
+{%- comment -%}
+  Cards for the given tools, e.g. {% include toolassemblies/show-tiles.html ids="castor, redcap" %}
+{%- endcomment -%}
+{%- assign tool_ids = include.ids | join: ", " | split: ", " -%}
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-{{ include.col | default: 2 }} g-4 mb-5 navigation-tiles">
-    {%- assign tool_pages = site.pages | where:"type", "tool" %}
-    {%- for tool_page in tool_pages %}
-    {%- assign page_id = tool_page.title | slugify %}
-    {%- if tool_ids contains page_id %}
-    <div class="col">
-        {%- assign pagedomains = "" | split: "" %}
-        {%- if tool_page.domain %}
-        {%- assign pagedomains = tool_page.domain | sort %}
-        {%- endif %}
-        {%- capture card_meta %}
-            {%- include tile-filtering/tag-group.html label="Domains" values=pagedomains badge="bg-primary" %}
-            {%- include tile-filtering/tag-group.html label="Phases" values=tool_page.phase badge="bg-secondary" %}
-        {%- endcapture %}
-        {%- assign card_meta = card_meta | strip %}
-        {%- include tile-filtering/navigation-card.html
-            url=tool_page.url
-            title=tool_page.title
-            description=tool_page.description
-            image=tool_page.page_img
-            meta=card_meta
-        %}
-    </div>
-    {%- endif %}
-    {%- endfor %}
+  {%- assign tool_pages = site.pages | where: "type", "tool" %}
+  {%- for tool_page in tool_pages %}
+  {%- if tool_ids contains tool_page.tool_id %}
+  <div class="col">{% include toolassemblies/tool-card.html tool=tool_page %}</div>
+  {%- endif %}
+  {%- endfor %}
 </div>

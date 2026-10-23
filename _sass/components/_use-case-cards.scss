@@ -1,0 +1,289 @@
+// ============================================
+// USE CASE CARDS
+// Inherits shared styles from _tiles-styling.scss
+// Unique features: loading line animation & zoom effect
+// ============================================
+
+.use-case-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  max-width: 1200px;
+}
+
+.use-case-card {
+  background: white;
+  border: 1px solid rgba($light, 0.15);
+  border-radius: 8px;
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  // UNIQUE: Loading line animation at the top
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, $primary, $link-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    border-color: $light;
+    box-shadow: 0 4px 8px -2px rgba($light, 0.25);
+
+    // UNIQUE: Loading line appears on hover
+    &::before {
+      transform: scaleX(1);
+    }
+
+    // UNIQUE: More pronounced zoom effect
+    .use-case-card-icon {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.use-case-card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+  line-height: 1;
+  display: block;
+  width: fit-content;
+}
+
+.use-case-card-title {
+  color: $primary;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+.use-case-card-description {
+  color: $secondary;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  flex-grow: 1;
+}
+
+// Prerequisites: a quiet "Before you start" card above the journey.
+// Each item is one sentence; items with more information expand (native <details>).
+$prereq-tint: #f5f8fd;
+$prereq-border: #e2e9f3;
+
+.prereq {
+  max-width: 800px;
+  margin: 1.25rem 0 2rem;
+  padding: 0.8rem 1.1rem 0.7rem;
+  border: 1px solid $prereq-border;
+  border-radius: 10px;
+  background: $prereq-tint;
+  font-size: 0.92rem;
+  color: $secondary;
+}
+
+.prereq-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $primary;
+}
+
+
+.prereq-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    position: relative;
+    padding: 0.3rem 0 0.3rem 1.65rem;
+    border-top: 1px solid $prereq-border;
+
+    &:first-child { border-top: none; }
+
+    // check in a soft circle
+    &::before {
+      content: "\2713";
+      position: absolute;
+      left: 0;
+      top: 0.42rem;
+      width: 1.1rem;
+      height: 1.1rem;
+      border-radius: 50%;
+      background: $menu-unselected-bg;
+      color: $link-color;
+      font-size: 0.68rem;
+      font-weight: 700;
+      line-height: 1.1rem;
+      text-align: center;
+    }
+  }
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    cursor: pointer;
+    list-style: none;
+    border-radius: 6px;
+
+    &::-webkit-details-marker { display: none; }
+
+    &:hover .prereq-text { color: $primary; }
+    &:hover .prereq-chevron { border-color: $primary; }
+  }
+
+  details[open] .prereq-chevron { transform: rotate(-135deg); margin-top: 0.3rem; }
+}
+
+.prereq-text { transition: color 0.15s ease; }
+
+// chevron drawn with borders, turns when the item opens
+.prereq-chevron {
+  flex: 0 0 auto;
+  width: 0.45rem;
+  height: 0.45rem;
+  margin: -0.2rem 0.2rem 0 0;
+  border: solid $link-color;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: transform 0.15s ease;
+}
+
+.prereq-more {
+  margin: 0.35rem 0 0.25rem;
+  font-size: 0.88rem;
+
+  p { margin: 0 0 0.45rem; }
+}
+
+.prereq-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.prereq-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  padding: 0.2rem 0.65rem;
+  border: 1px solid $prereq-border;
+  border-radius: 999px;
+  background: $white;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: $link-color;
+  text-decoration: none;
+
+  &::after { content: "\2192"; }
+
+  &:hover {
+    border-color: $link-color;
+    text-decoration: none;
+  }
+}
+
+.prereq-chip-kind {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $secondary;
+}
+
+.prereq-tools { margin-top: 0.4rem; }
+
+// Use-case-specific metadata styling
+.use-case-card-meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid $menu-unselected-bg;
+}
+
+.use-case-type {
+  background: $menu-unselected-bg;
+  color: $primary;
+
+  // the include renders the use case type slugified, e.g. "fair guidelines" -> fair-guidelines
+  &.fair-guidelines {
+    background: rgba($link-color, 0.15);
+    color: $link-color;
+  }
+}
+
+.use-case-complexity {
+  background: #f0f0f0;
+  color: #666;
+}
+
+// ============================================
+// RESPONSIVE ADJUSTMENTS
+// ============================================
+
+@media (max-width: 768px) {
+  .use-case-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .use-case-card {
+    padding: 1.5rem;
+  }
+
+  .use-case-card-icon {
+    font-size: 2.5rem;
+  }
+}
+
+// Compact version for "Related use cases" section
+.use-case-cards-compact {
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
+  
+  .use-case-card {
+    padding: 1.5rem;
+  }
+  
+  .use-case-card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .use-case-card-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .use-case-card-description {
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .use-case-card-meta {
+    padding-top: 0.75rem;
+    gap: 0.4rem;
+  }
+}

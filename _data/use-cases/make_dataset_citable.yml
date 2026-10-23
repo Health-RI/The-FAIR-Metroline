@@ -1,0 +1,93 @@
+- status: "prerequisite"
+  text: "You know what you want to achieve: your FAIRification objectives are clear."
+  step_ids:
+    - 1
+
+- status: "prerequisite"
+  text: "A FAIR data steward can help you when needed."
+  step_ids:
+    - 3
+
+- status: "prerequisite"
+  text: "Your team has followed training where its knowledge has gaps."
+  step_ids:
+    - 4
+
+- title: "Identify and preserve the dataset to be cited"
+  status: "upcoming"
+  description: "
+      <ol>
+        <li>Identify exactly which data underpin the results in your publication, including any subsets or derived variables.</li>
+        <li>Create a fixed version of these data so that the dataset being cited does not change over time.</li>
+        <li>Store this version securely, following your institution's data management policies, and document its provenance.</li>
+      </ol>
+  "
+  examples:
+    - role: "Researcher"
+      description: "I create a fixed snapshot containing the specific CT scans, radiology reports and derived variables used in my analysis. I store this version in Radboudumc's internal archive and document its relationship to the original clinical data."
+
+- title: "Check publication requirements and choose a suitable repository"
+  status: "upcoming"
+  description: "
+      <ol>
+        <li>Check your journal's data availability requirements, including whether the data must be deposited in a repository and whether restricted access is permitted.</li>
+        <li>Look for a repository that meets these requirements and can register your dataset, even if the underlying data cannot be made openly accessible.</li>
+        <li>Check whether the repository provides a persistent identifier and a publicly accessible landing page describing the dataset.</li>
+        <li>Determine which identifier scheme is appropriate, taking into account the repository's capabilities and requirements.</li>
+      </ol>
+  "
+  step_ids:
+    - 9
+    - 10
+  examples:
+    - role: "Researcher"
+      description: "I check my journal's data availability requirements and investigate whether the Radboud Data Repository can meet them by registering my restricted dataset and assigning a DOI. The DOI would resolve to a publicly accessible landing page describing the dataset, while the underlying data remain in the internal archive."
+
+- title: "Prepare the dataset metadata"
+  status: "upcoming"
+  description: "
+      <ol>
+        <li>Review the metadata requirements of the selected repository.</li>
+        <li>Collect the necessary information, such as the dataset title, creators, description, keywords and version.</li>
+        <li>Ensure that the metadata accurately describe the specific dataset used in your publication.</li>
+      </ol>
+  "
+  step_ids:
+    - 8
+  examples:
+    - role: "Researcher"
+      description: "I prepare the metadata describing the CT images, radiology reports and derived variables used in my research. I make sure the description corresponds to the fixed dataset version that I preserved."
+
+- title: "Define the access conditions"
+  status: "upcoming"
+  description: "
+      <ol>
+        <li>Determine whether and under which conditions other researchers may access the dataset, considering applicable legal, ethical and institutional requirements.</li>
+        <li>Document the access conditions and restrictions on reuse, preferably as part of the dataset's metadata.</li>
+        <li>Where access requests are permitted, describe how interested researchers can request access.</li>
+      </ol>
+  "
+  step_ids:
+    - 21
+  examples:
+    - role: "Researcher"
+      description: "I check the applicable permissions and restrictions on accessing and reusing the clinical data. Because the data are sensitive, access is restricted. I document the conditions and, where supported by the metadata schema, include them in the publicly available metadata, along with information on how researchers can request access where permitted."
+
+- title: "Register the dataset and cite it"
+  status: "upcoming"
+  description: "
+      <ol>
+        <li>Register the dataset metadata in the selected repository, including the access conditions.</li>
+        <li>Obtain the persistent identifier and verify that it resolves to a landing page describing the correct dataset version.</li>
+        <li>Include the dataset citation in your publication, together with an appropriate data availability statement.</li>
+      </ol>
+  "
+  step_ids:
+    - 10
+  examples:
+    - role: "Researcher"
+      description: "I register the dataset metadata and obtain a DOI. I verify that the DOI resolves to a landing page describing the correct dataset version. I then cite the dataset in my publication and include a data availability statement explaining the access restrictions and how the data may be requested."
+
+- title: "Dataset is citable in your publication"
+  status: "destination"
+  description: "The dataset underlying your research results has a preserved, identifiable version and a repository record with a persistent identifier. You can cite it in your publication, even when access to the underlying data is restricted."

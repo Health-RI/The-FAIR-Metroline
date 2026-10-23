@@ -1,0 +1,386 @@
+// ============================================
+// TOOL PAGE — _layouts/tool_profile.html
+// ============================================
+
+$tp-border: #dee2e6;
+$tp-muted: #6c757d;
+$tp-soft: #f8f9fa;
+$tp-fair: (F: #1f6fb2, A: #2a8c82, I: #6a4fb3, R: #b5562a);
+
+// Small upper-case labels: FAIR / Life cycle, fact names, sub-headings, link kinds
+.tp-label,
+.tp-facts dt {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $tp-muted;
+}
+
+.tp-muted { color: $tp-muted; font-size: 0.85rem; }
+
+// ---------- Header ----------
+.tp-hero {
+  border: 1px solid $tp-border;
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  background: #fff;
+}
+
+.tp-hero-main {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.tp-logo {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border: 1px solid $tp-border;
+  border-radius: 8px;
+  padding: 4px;
+  background: #fff;
+}
+
+.tp-hero-text { flex: 1; }
+
+.tp-lead {
+  margin: 0 0 0.5rem;
+  font-size: 1.12rem;
+  line-height: 1.4;
+}
+
+.tp-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.tp-type {
+  padding: 0.12rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: #e7f0fa;
+  color: #1f5f9e;
+  cursor: help;
+
+  &--local { background: #fbf1e6; color: #96531c; }
+  &--more { background: $tp-soft; color: $tp-muted; }
+}
+
+// Main button: "Open the tool" when the homepage opens the working tool, otherwise "Visit website"
+.tp-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-top: 0.75rem;
+}
+
+.tp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 1rem;
+  border: 2px solid $primary;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover { text-decoration: none; }
+
+  &--tool {
+    background: $primary;
+    color: #fff;
+
+    &:hover { background: darken($primary, 6%); color: #fff; }
+  }
+
+  &--site {
+    background: #fff;
+    color: $primary;
+
+    &:hover { background: mix($primary, #fff, 8%); color: $primary; }
+  }
+}
+
+.tp-cta-link { font-size: 0.92rem; font-weight: 600; }
+
+.tp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 2rem;
+  margin-top: 0.9rem;
+}
+
+.tp-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.tp-fair,
+.tp-fair-letters {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.tp-fair-l,
+.tp-fair-plan {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.6rem;
+  border: 1px solid $tp-border;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.tp-fair-l {
+  width: 1.6rem;
+  font-weight: 700;
+  color: #adb5bd;
+  background: $tp-soft;
+  cursor: help;
+}
+
+.tp-fair-plan {
+  padding: 0 0.6rem;
+  font-weight: 600;
+  color: #fff;
+  background: #455a64;
+  border-color: #455a64;
+}
+
+@each $letter, $color in $tp-fair {
+  .tp-fair-#{$letter}.on,
+  html.show-unverified .tp-fair-#{$letter}.tp-on-pending { background: $color; border-color: $color; color: #fff; }
+}
+
+.tp-cycle {
+  display: inline-flex;
+  border: 1px solid $tp-border;
+  border-radius: 6px;
+  overflow: hidden;
+
+  span {
+    padding: 0.2rem 0.5rem;
+    border-right: 1px solid $tp-border;
+    font-size: 0.74rem;
+    font-weight: 500;
+    color: #adb5bd;
+    background: $tp-soft;
+    cursor: help;
+
+    &:last-child { border-right: none; }
+  }
+
+  span.on,
+  html.show-unverified & span.tp-on-pending {
+    font-weight: 700;
+    color: $primary;
+    background: mix($primary, #fff, 14%);
+  }
+}
+
+.tp-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.7rem 1.25rem;
+  margin: 1rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid $tp-border;
+
+  dd { margin: 0.1rem 0 0; font-size: 0.95rem; }
+}
+
+.tp-domain {
+  display: inline-block;
+  margin: 0 0.3rem 0.2rem 0;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  background: $primary;
+}
+
+.tp-pill {
+  display: inline-block;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #455a64;
+  background: #eceff1;
+
+  &--mature { color: #2e7d32; background: #e8f5e9; }
+  &--emerging { color: #1565c0; background: #e3f2fd; }
+  &--legacy { color: #c62828; background: #fdecea; }
+}
+
+.tp-activity {
+  &--active { color: #2e7d32; }
+  &--quiet { color: #b26a00; }
+  &--archived { color: #c62828; font-weight: 600; }
+}
+
+// ---------- Sections ----------
+.tp-section {
+  margin-bottom: 1.6rem;
+
+  > h2 {
+    margin: 0 0 0.6rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid $tp-border;
+    font-size: 1.3rem;
+  }
+}
+
+.tp-subhead { margin: 0.8rem 0 0.5rem; }
+
+// Metroline steps, use cases and links share one card style
+.tp-cards,
+.tp-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.55rem;
+}
+
+.tp-card,
+.tp-link {
+  padding: 0.55rem 0.8rem;
+  border: 1px solid $tp-border;
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    border-color: $primary;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+  }
+}
+
+.tp-card {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  strong { font-size: 0.95rem; color: $primary; }
+}
+
+.tp-card-icon {
+  flex: 0 0 1.4rem;
+  font-size: 1.2rem;
+  text-align: center;
+
+  img.emoji { width: 1.2rem; height: 1.2rem; }
+}
+
+.tp-link {
+  display: block;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+.tp-link-kind { display: block; font-size: 0.68rem; color: $primary; }
+
+.tp-cite-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.7rem 1rem;
+  border-left: 4px solid $primary;
+  border-radius: 0 8px 8px 0;
+  background: $tp-soft;
+
+  p { flex: 1; margin: 0; font-size: 0.92rem; }
+}
+
+.tp-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.6rem;
+}
+
+.tp-metric {
+  padding: 0.7rem;
+  border: 1px solid $tp-border;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.tp-metric-value {
+  display: block;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.tp-source { margin: 0.4rem 0 0; font-size: 0.78rem; }
+
+.tp-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+
+  img { width: auto; height: 32px; max-width: 130px; object-fit: contain; }
+}
+
+.tp-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.tp-keyword {
+  padding: 0.15rem 0.6rem;
+  border: 1px solid $tp-border;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: #455a64;
+  background: $tp-soft;
+
+  &--std {
+    font-weight: 600;
+    color: $primary;
+    text-decoration: none;
+
+    &:hover { border-color: $primary; text-decoration: none; }
+  }
+}
+
+// ---------- Unverified values ----------
+// Pending values (class tp-pending) are hidden unless the page was opened with ?unverified=1, which
+// sets the class show-unverified on <html> (script in _layouts/tool_profile.html). They then show with
+// a dashed border, and a verified value they replace (class tp-verified-alt) is hidden.
+html:not(.show-unverified) .tp-pending,
+html.show-unverified .tp-verified-alt {
+  display: none !important;
+}
+
+html.show-unverified .tp-pending,
+html.show-unverified .tp-on-pending {
+  outline: 2px dashed #e0a030;
+  outline-offset: 2px;
+}
+
+.tp-preview-note {
+  padding: 0.45rem 0.8rem;
+  border: 1px dashed #b26a00;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #8a5300;
+  background: #fff8ec;
+
+  html.show-unverified & { outline: none; }
+}

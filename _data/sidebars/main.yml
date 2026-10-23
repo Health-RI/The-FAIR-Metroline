@@ -1,8 +1,8 @@
 subitems:
   - title: Home
     url: /
-  - title: Scenarios
-    url: /fair_metroline_scenarios
+  - title: Use cases
+    url: /fair_metroline_use_cases
   - title: Tools
     url: /toolassemblies/tool_selection
   - title: FAIR steps

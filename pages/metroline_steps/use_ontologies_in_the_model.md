@@ -95,11 +95,16 @@ A local value \"Neck cancer\" has no exact term, so you temporarily map it to \"
 * Include ontology citations and versions in the model metadata and changelog.
 * Validate mappings and constraints automatically as part of your quality checks. Resolve any unsatisfiable classes or constraint violations before publication and keep validation reports as part of your documentation.
 * Recommended tools for implementation and validation include:
-  * [Protégé](https://protege.stanford.edu/) for ontology editing and reasoning (includes support for HermiT and Pellet);
-  * [ROBOT (Ontology Build Tool)](https://robot.obolibrary.org/) for command-line ontology manipulation;
-  * [OpenRefine](https://openrefine.org/) for cleaning and reconciling tabular data with ontologies;
-  * [TopBraid SHACL API](https://github.com/TopQuadrant/shacl) or [pySHACL (Python implementation of SHACL)](https://github.com/RDFLib/pySHACL) for SHACL validation;
-  * [SSSOM Toolkit](https://github.com/mapping-commons/sssom-py) for managing mappings in SSSOM format.
+  * {% include toolassemblies/show-badges.html ids="protege" %} for ontology editing and reasoning (includes support for HermiT and Pellet);
+  * {% include toolassemblies/show-badges.html ids="robot" %} for command-line ontology manipulation;
+  * {% include toolassemblies/show-badges.html ids="openrefine" %} for cleaning and reconciling tabular data with ontologies;
+  * {% include toolassemblies/show-badges.html ids="topbraid-shacl-api" %} or {% include toolassemblies/show-badges.html ids="pyshacl" %} for SHACL validation;
+  * {% include toolassemblies/show-badges.html ids="sssom-toolkit" %} for managing mappings in SSSOM format.
+
+Recommended tool pages:
+
+{% include toolassemblies/show-badges.html ids="protege, robot, openrefine, topbraid-shacl-api, pyshacl, sssom-toolkit" %}
+
 * Publish the annotated model and mappings in a stable, publicly accessible location with a clear licence, for example GitHub, FAIRsharing or institutional repositories.
 * Mappings and annotations themselves can be shared under permissive licences, for example CC BY 4.0 or CC0, unless source ontology licences impose restrictions.
 * Even when data cannot be openly shared, for example due to privacy or legal restrictions, publish the model and mappings so that others can understand, align with and interoperate with your work.

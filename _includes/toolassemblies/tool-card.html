@@ -1,0 +1,19 @@
+{%- comment -%}
+  One tool card, used by the catalogue (search-tiles.html) and in guidance pages (show-tiles.html):
+  the shared navigation card with the tool's verified domains and life-cycle phases.
+{%- endcomment -%}
+{%- assign t = include.tool -%}
+{%- assign tool_domains = nil -%}
+{%- if t.domain %}{%- assign tool_domains = t.domain | sort -%}{%- endif -%}
+{%- capture card_meta %}
+    {%- include tile-filtering/tag-group.html label="Domains" values=tool_domains badge="bg-primary" %}
+    {%- include tile-filtering/tag-group.html label="Phases" values=t.phase badge="bg-secondary" %}
+{%- endcapture %}
+{%- assign card_meta = card_meta | strip %}
+{%- include tile-filtering/navigation-card.html
+    url=t.url
+    title=t.title
+    description=t.description
+    image_url=t.logo_url
+    meta=card_meta
+%}

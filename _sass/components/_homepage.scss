@@ -115,10 +115,10 @@
 }
 
 // ============================================
-// RECENT SCENARIOS SECTION
+// RECENT USE CASES SECTION
 // ============================================
 
-.homepage-recent-scenarios {
+.homepage-recent-use-cases {
   max-width: 1200px;
   margin: 4rem 0;
 
@@ -129,7 +129,7 @@
     margin-bottom: 2rem;
   }
 
-  .scenario-cards-grid {
+  .use-case-cards-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     max-width: 800px;
   }
@@ -202,7 +202,7 @@
     font-size: 1.25rem;
   }
 
-  .homepage-recent-scenarios .section-title {
+  .homepage-recent-use-cases .section-title {
     font-size: 1.5rem;
   }
 }
