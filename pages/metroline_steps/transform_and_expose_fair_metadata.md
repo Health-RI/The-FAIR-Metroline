@@ -52,7 +52,7 @@ Before you can expose your data in a FAIR way, you first need to transform it in
 {% include info-box.html type="example" title="Examples" text="
 * **[OpenRefine](/openrefine) – [RDF Transform extension](https://github.com/AtesComp/rdf-transform).** Offers a user-friendly, graphical user interface (GUI), way to transform project data into RDF. OpenRefine supports file types like tab separated (TSV), comma separated (CSV), Excel (XLS, XLSX), JSON, XML, RDF as XML, and Google spreadsheets. 
 * **[FAIR-in-a-Box](https://github.com/ejp-rd-vp/FiaB).** Convert CSV files into RDF with a step-by-step interface; useful for implementing the [Clinical and Registry Entries Semantic Model (CARE-SM)](https://github.com/CARE-SM). Although you can apply any model through OpenRefine, the process must be done manually. In contrast, FAIR-in-a-box includes built-in templates for CARE-SM, requiring only correctly structured CSV files from you.
-* **[Castor EDC](/castor-edc).** Supports semantic export templates for transforming study data and metadata to RDF.
+* **[Castor EDC](/castor).** Supports semantic export templates for transforming study data and metadata to RDF.
 " %}
 
 
@@ -87,7 +87,7 @@ Start by transforming metadata into a structured format using semantic web stand
 * **[OpenRefine](/openrefine).** RDF transform extension for transforming structured metadata to RDF.
 * **[CEDAR Workbench](/cedar-workbench).** Supports the creation of semantically rich metadata through templates to produce annotated datasets.
 * **[FAIR Data Station](/fair-data-station).** Manages [ISA metadata](https://isa-tools.org/) with RDF output. This output needs to be exposed in a triplestore. 
-* **[Castor EDC (FDP Component)](/castor-edc).** Contains a template to fill out metadata and exposes that information in a way that is semantically compatible with DCAT and FDP specifications. 
+* **[Castor EDC (FDP Component)](/castor).** Contains a template to fill out metadata and exposes that information in a way that is semantically compatible with DCAT and FDP specifications. 
 "%}
 
 Recommended tool pages:

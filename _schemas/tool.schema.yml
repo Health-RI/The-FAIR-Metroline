@@ -14,9 +14,15 @@ required: [id, name, links]
 allOf: [{$ref: "#/$defs/fields"}]
 properties:
   id:
-    description: Stable slug used by the show-badges / show-tiles includes. Never rename.
+    description: >-
+      Stable slug: the page URL (/id) and the name the show-badges / show-tiles includes use. Never
+      rename; if it must change, add the old URL to redirect_from.
     type: string
     pattern: "^[a-z0-9]+(-[a-z0-9]+)*$"
+  redirect_from:
+    description: Earlier URLs of the tool page; they redirect to /id.
+    type: array
+    items: {type: string, pattern: "^/[a-z0-9.-]+$"}
   links:
     required: [homepage]
   pending:

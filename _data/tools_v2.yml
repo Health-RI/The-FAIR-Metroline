@@ -16,6 +16,7 @@
 
 - id: castor
   name: Castor EDC
+  redirect_from: [/castor-edc]
   short_description: Cloud-based electronic data capture for clinical studies; multiple Dutch UMCs hold a licence.
   tool_type: [Web application, Web API, Web service, Mobile application]
   domains: [Clinical research]

@@ -9,7 +9,8 @@ module Jekyll
   # but marked: the page hides them unless the visitor adds ?unverified=1 to the URL.
   class ToolPageGenerator < Generator
     safe true
-    priority :normal
+    # Before jekyll-redirect-from, which only sees pages that exist when it runs
+    priority :high
 
     # Licence and cost values that mean "not known"; they are never shown
     NOT_SHOWN = ['unconfirmed', 'not applicable'].freeze
@@ -23,12 +24,11 @@ module Jekyll
       @known_ids = entries.map { |e| e['id'] }
       steps = metroline_steps_by_tool(site)
       scenarios = scenarios_by_tool(site, steps)
-      # Page URLs still follow the names in the old _data/tools.yml, so existing links keep working
-      old_names = (site.data['tools'] || []).to_h { |t| [t['id'], t.dig('at_a_glance', 'Tool name')] }
 
       entries.each do |entry|
         id = entry['id']
-        page = ToolPage.new(site, id, slugify(old_names[id] || entry['name'] || id))
+        page = ToolPage.new(site, id)
+        page.data['redirect_from'] = entry['redirect_from'] if entry['redirect_from']
         page.data['metroline_steps'] = steps[id] || []
         page.data['scenarios'] = scenarios[id] || []
         fill(site, page, entry)
@@ -263,10 +263,6 @@ module Jekyll
       url.to_s.sub(%r{\Ahttps?://(www\.)?}, '').chomp('/')
     end
 
-    def slugify(name)
-      name.downcase.gsub(/[^a-z0-9]+/, '-').gsub(/\A-|-\z/, '')
-    end
-
     # Which Metroline step pages mention each tool through show-badges / show-tiles.
     def metroline_steps_by_tool(site)
       index = Hash.new { |h, k| h[k] = [] }
@@ -308,17 +304,17 @@ module Jekyll
     end
   end
 
-  # A generated tool page; all content comes from ToolPageGenerator#fill
+  # A generated tool page at /<tool id>; all content comes from ToolPageGenerator#fill
   class ToolPage < Page
-    def initialize(site, tool_id, slug)
+    def initialize(site, tool_id)
       @site = site
       @base = site.source
       @dir = 'toolassemblies/tools'
-      @name = "#{slug}.html"
+      @name = "#{tool_id}.html"
       process(@name)
       self.data = {
         'type' => 'tool', 'tool_id' => tool_id, 'layout' => 'tool_profile',
-        'permalink' => "/#{slug}", 'sidebar' => 'main', 'toc' => false
+        'permalink' => "/#{tool_id}", 'sidebar' => 'main', 'toc' => false
       }
       self.content = ''
     end

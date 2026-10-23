@@ -30,7 +30,9 @@ verified ids, the pending value, the value fetched with pending ids. Ids can be 
 example `biotools` verified, `github` still pending). A written licence, even `unconfirmed`, is never
 replaced by a fetched one.
 
-No page content comes from the old `_data/tools.yml` any more; it only still decides the page URLs.
+Each tool page is at `/<id>`. To change an id, list the old URL under `redirect_from` so links keep
+working (Castor's page used to be `/castor-edc`). Templates find a tool's page with
+`site.pages | where: "tool_id", id`; the old `_data/tools.yml` is gone.
 
 ## Homepage button
 
@@ -62,7 +64,7 @@ links principles to types of resource rather than individual tools.
 Seven domains in `_data/domains.yml`: Cross-domain, Clinical research, Patient registries & rare diseases,
 Oncology, Medical imaging, Life sciences and Omics. A tool can have several; Cross-domain
 is used on its own. They follow the communities this catalogue serves (and the domains in the old
-`tools.yml`), not a general classification: an earlier draft used the NWO research fields
+tools list), not a general classification: an earlier draft used the NWO research fields
 (https://www.nwo.nl/en/nwo-research-fields, 43 fields across all of science), which was far too broad.
 Add a domain only when several tools or a use case need it (for example green sciences:
 plant, food and environmental research). Bioinformatics is not a domain: it is a way of working
@@ -82,6 +84,6 @@ Picked from `_data/keywords.yml`: concrete things a reader would search for, eit
 activities such as "validation" or "data capture" are left out; the tool type and FAIR tags cover those.
 The shared list keeps spelling consistent and makes keywords usable for search later.
 
-There is no separate standards section: `tools.yml` "Metadata and data standards" mixes in platforms
+There is no separate standards section: the old tools list's "Metadata and data standards" mixed in platforms
 such as ART-DECOR, and bio.tools is no help either (only 3 of our 11 bio.tools records list any
 formats, and those are incomplete).
