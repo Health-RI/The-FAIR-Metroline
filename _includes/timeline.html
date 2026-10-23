@@ -189,6 +189,9 @@
                 <div class="tool-info">
                   <strong>{{ step_resource.title }}</strong>
                   {% if step_resource.url %}
+                  {% if step_resource.one_liner %}
+                  {{ step_resource.one_liner }}
+                  {% endif %}
                   <a href="{{ step_resource.url | prepend: '/' }}" class="tool-link">
                     <i class="fas fa-arrow-right"></i> View step details
                   </a>
