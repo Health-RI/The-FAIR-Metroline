@@ -5,15 +5,15 @@
   type: "fair guidelines"
   complexity: "Low"
 
-- title: "How to make my dataset Findable?"
+- title: "Make an existing dataset findable in a catalogue"
   url: "use-cases/make_dataset_findable"
   icon: "🔍"
-  description: "Register your dataset in institutional catalogs with proper metadata to comply with data policies and enable discovery."
+  description: "Register your dataset in a catalog with proper metadata to comply with data policies and enable discovery."
   type: "fair guidelines"
   complexity: "Medium"
 
 
-- title: "How to make a  new dataset interoperable from the start"
+- title: "How to make a new dataset interoperable from the start"
   url: "use-cases/make_dataset_interoperable"
   icon: "🧩"
   description: "I want to design my new dataset so it is interoperable from the start, including alignment to existing standards or reference datasets."
