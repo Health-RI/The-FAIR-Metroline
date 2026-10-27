@@ -47,10 +47,8 @@ for f in sorted(glob.glob(f'{SITE}/**/*.html', recursive=True)):
 
     vt = e.get('tool_type', [])
     vt = [t for t in vt if t in local] + [t for t in vt if t not in local]
-    got = [txt(s) for s in live.select('.tp-type:not(.tp-type--more)')]
-    if got != vt[:3]: bad('types', got, vt[:3])
-    more = live.select_one('.tp-type--more')
-    if (more['title'] if more else None) != (', '.join(vt[3:]) or None): bad('more types', more and more['title'], vt[3:])
+    got = [txt(s) for s in live.select('.tp-type')]
+    if got != vt: bad('types', got, vt)
 
     got = [txt(s) for s in live.select('.tp-domain')]
     if got != e.get('domains', []): bad('domains', got, e.get('domains', []))

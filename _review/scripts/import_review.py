@@ -68,10 +68,16 @@ DOWNLOAD_SPECIAL = {   # tool id -> download links for verified cells that hold 
     "topbraid-shacl-api": [{"label": "GitHub releases", "url": "https://github.com/TopQuadrant/shacl/releases"}],
 }
 TOOL_IDS = {"Sextans-Suite": "sextans-suite"}
+# editors' changes after the review, kept on re-import; listed on the status page so the sheet can follow
+LEFT_OUT = {"sextans-suite"}                                              # not in the catalogue for now
+LOGOS = {   # logo instead of the sheet's
+    "yasgui": "https://avatars.githubusercontent.com/u/7573184?v=4",
+    "topbraid-shacl-api": "https://media.licdn.com/dms/image/v2/C4E0BAQGZbqII1tkEEQ/company-logo_200_200/company-logo_200_200/0/1662058039652/topquadrant_logo?e=2147483647&v=beta&t=KLfeEeC2EBFwWu7O5XPB5KSR3o7mxcsE5Zt-JBrDtO4",
+}
 KEYWORDS = {"digital object identifier": "DOI", "doi": "DOI"}   # sheet spelling -> _data/keywords.yml
 NO_VALUE = {"unknown"}                                            # a reviewed cell saying there is no value
 
-report = {"removed_tools": [], "struck_values": [], "decide": [], "notes_mapped": []}
+report = {"removed_tools": [], "left_out": [], "overrides": [], "struck_values": [], "decide": [], "notes_mapped": []}
 entries = []
 for r in range(3, tw.max_row + 1):
     raw_id = tw.cell(row=r, column=COL["Tool id"]).value
@@ -80,6 +86,8 @@ for r in range(3, tw.max_row + 1):
     if tw.cell(row=r, column=COL["Tool id"]).font.strike:
         report["removed_tools"].append(raw_id); continue
     tid = TOOL_IDS.get(raw_id, raw_id)
+    if tid in LEFT_OUT:
+        report["left_out"].append(raw_id); continue
     prev = old.get(tid, {})
     top, pend = {"id": tid}, {}
     if current.get(tid, {}).get("redirect_from"): top["redirect_from"] = current[tid]["redirect_from"]
@@ -178,6 +186,9 @@ for r in range(3, tw.max_row + 1):
     elif st:
         pend["logo"] = str(c.value).strip()
         if st == "decide": report["decide"].append((tid, "Logo", c.value))
+    if tid in LOGOS:
+        report["overrides"].append((tid, "Logo URL", c.value, LOGOS[tid]))
+        top["logo"] = LOGOS[tid]; pend.pop("logo", None)
     # other links: "Kind — URL", or a bare URL
     for j in cols("Other link 1", "Other link 7"):
         c = tw.cell(row=r, column=j); st = status(c)

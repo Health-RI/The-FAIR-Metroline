@@ -39,8 +39,7 @@ layout: page
       {% assign n_types = p.tool_types.size %}
       {% if n_types > 0 or p.tool_types_pending.size > 0 %}
       <div class="tp-types{% if n_types == 0 %} tp-pending{% endif %}">
-        {% for t in p.tool_types limit: 3 %}{% assign tdef = site.data.tool_types | where: "name", t | first %}<span class="tp-type{% if tdef.source == 'local' %} tp-type--local{% endif %}" title="{{ tdef.text }}">{{ t }}</span>{% endfor %}
-        {% if n_types > 3 %}{% assign more_types = p.tool_types | slice: 3, n_types %}<span class="tp-type tp-type--more" title="{{ more_types | join: ', ' }}">+{{ n_types | minus: 3 }}</span>{% endif %}
+        {% for t in p.tool_types %}{% assign tdef = site.data.tool_types | where: "name", t | first %}<span class="tp-type{% if tdef.source == 'local' %} tp-type--local{% endif %}" title="{{ tdef.text }}">{{ t }}</span>{% endfor %}
         {% for t in p.tool_types_pending %}{% assign tdef = site.data.tool_types | where: "name", t | first %}<span class="tp-type tp-pending{% if tdef.source == 'local' %} tp-type--local{% endif %}" title="{{ tdef.text }}">{{ t }}</span>{% endfor %}
       </div>
       {% endif %}

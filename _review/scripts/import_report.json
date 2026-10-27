@@ -3,6 +3,23 @@
   "fair-in-a-box",
   "codebook-to-castor-limesurvey"
  ],
+ "left_out": [
+  "Sextans-Suite"
+ ],
+ "overrides": [
+  [
+   "topbraid-shacl-api",
+   "Logo URL",
+   "https://github.com/TopQuadrant.png?size=200",
+   "https://media.licdn.com/dms/image/v2/C4E0BAQGZbqII1tkEEQ/company-logo_200_200/company-logo_200_200/0/1662058039652/topquadrant_logo?e=2147483647&v=beta&t=KLfeEeC2EBFwWu7O5XPB5KSR3o7mxcsE5Zt-JBrDtO4"
+  ],
+  [
+   "yasgui",
+   "Logo URL",
+   "https://avatars.githubusercontent.com/u/6156399?s=60&v=1024",
+   "https://avatars.githubusercontent.com/u/7573184?v=4"
+  ]
+ ],
  "struck_values": [],
  "decide": [
   [

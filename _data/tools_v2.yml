@@ -338,12 +338,6 @@
       Mark Wilkinson FAIR Data Point.
     related: [graphdb, castor]
 
-- id: sextans-suite
-  name: Sextans-Suite
-  links:
-    homepage: "https://github.com/wilkinsonlab/Sextans-Suite/"
-  keywords: [RDF, CSV, CARE-SM]
-
 - id: ontotext-refine
   name: Ontotext Refine
   short_description: "OpenRefine-based tool from Ontotext to clean tabular, JSON or XML data and map it visually to RDF for loading into GraphDB."
@@ -929,7 +923,7 @@
     other:
       - {kind: Download, url: "https://github.com/TopQuadrant/shacl/releases"}
       - {kind: Report an issue, url: "https://github.com/TopQuadrant/shacl/issues"}
-  logo: "https://github.com/TopQuadrant.png?size=200"
+  logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGZbqII1tkEEQ/company-logo_200_200/company-logo_200_200/0/1662058039652/topquadrant_logo?e=2147483647&v=beta&t=KLfeEeC2EBFwWu7O5XPB5KSR3o7mxcsE5Zt-JBrDtO4"
   keywords: [SHACL, RDF, SPARQL, OWL]
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     ids:
@@ -1076,7 +1070,7 @@
     other:
       - {kind: Download, url: "https://github.com/rdfjs/Yasgui/releases"}
       - {kind: Report an issue, url: "https://github.com/rdfjs/Yasgui/issues"}
-  logo: "https://avatars.githubusercontent.com/u/6156399?s=60&v=1024"
+  logo: "https://avatars.githubusercontent.com/u/7573184?v=4"
   keywords: [SPARQL]
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     ids:

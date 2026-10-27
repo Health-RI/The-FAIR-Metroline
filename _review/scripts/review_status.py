@@ -43,6 +43,7 @@ lines = [
     "  live site; add `?unverified=1` to a tool page URL to see them with a dashed border (`?unverified=0` hides them).",
     "  When a value is checked, mark it green or yellow in the sheet and import again.",
     f"- **Removed** (crossed out): {', '.join(report['removed_tools']) or 'none'}.",
+    f"- **Left out by the editors** for now: {', '.join(report['left_out']) or 'none'}.",
     "- **Not in the sheet**: related tools (the Related columns were removed) and institutes (Used by) are carried",
     "  over from the current file and `tools_v2_before_import.yml`, unverified unless they already were.",
     "",
@@ -52,6 +53,16 @@ lines = [
     "|---|---|---|",
 ]
 lines += [f"| {names.get(t, t)} | {f} | {short(v)} |" for t, f, v in report["decide"]]
+lines += [
+    "",
+    "## Changed by the editors after the review",
+    "",
+    "Set in `import_review.py`, so a new import keeps them; update the sheet to match.",
+    "",
+    "| Tool | Column | Value in the sheet | Used instead |",
+    "|---|---|---|---|",
+]
+lines += [f"| {names.get(t, t)} | {col} | {short(was, 70)} | {short(now, 70)} |" for t, col, was, now in report["overrides"]]
 lines += [
     "",
     "## Reviewer notes turned into structured values",

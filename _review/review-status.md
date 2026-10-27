@@ -8,6 +8,7 @@ Imported on 2026-10-27 from the manual review (_review/tools4fair-annotation-for
   live site; add `?unverified=1` to a tool page URL to see them with a dashed border (`?unverified=0` hides them).
   When a value is checked, mark it green or yellow in the sheet and import again.
 - **Removed** (crossed out): fair-in-a-box, codebook-to-castor-limesurvey.
+- **Left out by the editors** for now: Sextans-Suite.
 - **Not in the sheet**: related tools (the Related columns were removed) and institutes (Used by) are carried
   over from the current file and `tools_v2_before_import.yml`, unverified unless they already were.
 
@@ -74,6 +75,15 @@ Imported on 2026-10-27 from the manual review (_review/tools4fair-annotation-for
 | Virtuoso SPARQL Query Editor | code_availability | Open source |
 | Virtuoso SPARQL Query Editor | GitHub repo | openlink/virtuoso-opensource |
 
+## Changed by the editors after the review
+
+Set in `import_review.py`, so a new import keeps them; update the sheet to match.
+
+| Tool | Column | Value in the sheet | Used instead |
+|---|---|---|---|
+| TopBraid SHACL API | Logo URL | https://github.com/TopQuadrant.png?size=200 | https://media.licdn.com/dms/image/v2/C4E0BAQGZbqII1tkEEQ/company-logo… |
+| Yasgui | Logo URL | https://avatars.githubusercontent.com/u/6156399?s=60&v=1024 | https://avatars.githubusercontent.com/u/7573184?v=4 |
+
 ## Reviewer notes turned into structured values
 
 | Tool | Column | Note | Became |
@@ -111,7 +121,7 @@ a URL followed by a remark in brackets → the URL; keyword `unknown` → no key
 
 | Field | Verified | Pending |
 |---|---|---|
-| name | 39 | 0 |
+| name | 38 | 0 |
 | short_description | 38 | 0 |
 | description | 38 | 0 |
 | tool_type | 38 | 0 |
@@ -123,7 +133,7 @@ a URL followed by a remark in brackets → the URL; keyword `unknown` → no key
 | code_availability | 37 | 1 |
 | maturity | 1 | 8 |
 | hosted | 11 | 0 |
-| links.homepage | 39 | 0 |
+| links.homepage | 38 | 0 |
 | links.homepage_opens_tool | 38 | 0 |
 | links.docs | 31 | 0 |
 | links.docs_note | 7 | 0 |
@@ -132,7 +142,7 @@ a URL followed by a remark in brackets → the URL; keyword `unknown` → no key
 | logo | 38 | 0 |
 | ids | 0 | 27 |
 | how_to_cite | 0 | 5 |
-| keywords | 34 | 0 |
+| keywords | 33 | 0 |
 | institutes | 0 | 6 |
 | related | 0 | 37 |
 
@@ -149,7 +159,6 @@ a URL followed by a remark in brackets → the URL; keyword `unknown` → no key
 | FAIR Data Station | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | maturity, ids, institutes, related |
 | FAIRDOM-SEEK | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | maturity, ids, how_to_cite, related |
 | FAIR Data Point | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | maturity, ids, how_to_cite, related |
-| Sextans-Suite | name, links.homepage, keywords |  |
 | Ontotext Refine | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs_note, links.download, links.other, logo, keywords | related |
 | OpenRefine | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | ids, related |
 | CEDAR Workbench | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | maturity, ids, how_to_cite, related |
