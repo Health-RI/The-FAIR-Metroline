@@ -123,7 +123,7 @@ module Jekyll
       list_or_registry.call('license', 'license', 'license')
       %w[license license_pending].each { |k| v[k] = v[k].reject { |l| NOT_SHOWN.include?(l.to_s.downcase) } }
       scalar.call('cost')
-      scalar.call('code_availability')
+      list.call('code_availability')
       scalar.call('maturity', 'maturity', fetched.call('maturity'))
       scalar.call('hosted')
       scalar.call('how_to_cite', 'how_to_cite', fetched.call('how_to_cite'))

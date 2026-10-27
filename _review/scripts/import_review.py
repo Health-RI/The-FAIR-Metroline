@@ -5,13 +5,13 @@ checked yet, purple (and pink) = still to decide, strikethrough = must not be ad
 Verified values go to the top level of an entry; unchecked and undecided values go to `pending:`
 (hidden on the live site, shown in preview). Struck values and struck tools are dropped.
 """
-import json, re, sys
+import datetime, json, re, sys
 from pathlib import Path
 import yaml
 from openpyxl import load_workbook
 
 REPO = Path(__file__).resolve().parents[2]
-XLSX = REPO / "_review/tools4fair-annotation-form_new_v1.xlsx"
+XLSX = REPO / "_review/tools4fair-annotation-form_new_v2.xlsx"
 OUT = REPO / "_data/tools_v2.yml"
 
 wb = load_workbook(XLSX)
@@ -20,8 +20,9 @@ tw = wb["Tools"]
 # version before the first import, not from OUT: re-running the import must not lose them.
 BEFORE = Path(__file__).with_name("tools_v2_before_import.yml")
 old = {e["id"]: e for e in yaml.safe_load(open(BEFORE))}
-# Old page URLs (redirect_from) were added after the import, so they come from the current file
-redirects = {e["id"]: e["redirect_from"] for e in yaml.safe_load(open(OUT)) if e.get("redirect_from")}
+# Fields the sheet does not (or no longer) hold come from the current file: old page URLs
+# (redirect_from) and related tools (the Related columns were removed from the sheet)
+current = {e["id"]: e for e in yaml.safe_load(open(OUT))}
 
 def colour(c):
     f = c.fill
@@ -42,14 +43,15 @@ def status(c):
 
 COL = {}
 for j in range(1, tw.max_column + 1):
-    COL.setdefault(str(tw.cell(row=2, column=j).value), j)
+    COL.setdefault(str(tw.cell(row=2, column=j).value).strip(), j)
 def cols(first, last):
     a, b = COL[first], COL[last]
     return list(range(a, b + 1))
 # multi-value fields include the reviewers' extra unlabelled columns
 TYPE_COLS = list(range(COL["Tool type 1"], COL["F"]))           # F..L
-DOMAIN_COLS = list(range(COL["Domain 1"], COL["Licence"]))      # Y..AD
-LICENCE_COLS = [j for j in range(1, tw.max_column + 1) if tw.cell(row=2, column=j).value == "Licence"]
+DOMAIN_COLS = cols("Domain 1", "Domain 5")
+LICENCE_COLS = cols("Licence 1", "Licence 2")
+CODE_COLS = cols("Code availability 1", "Code availability 2")
 FAIR = [("F", "F"), ("A", "A"), ("I", "I"), ("R", "R"), ("Assessment & planning", "planning")]
 STAGES = ["Plan", "Collect", "Process", "Analyse", "Preserve", "Share", "Reuse"]
 
@@ -63,15 +65,11 @@ DOCS_NOTES = {   # text in a verified Documentation cell -> (docs URL or None, d
 }
 SAAS = re.compile(r"^saas\b", re.I)
 DOWNLOAD_SPECIAL = {   # tool id -> download links for verified cells that hold several labelled URLs
-    "redcap": [{"label": "Request a licence", "url": "https://projectredcap.org/join/"},
-               {"label": "Server requirements", "url": "https://projectredcap.org/software/requirements/"}],
-    "protege": [{"label": "WebProtégé (online)", "url": "https://protegewiki.stanford.edu/wiki/WebProtege"},
-                {"label": "Desktop version", "url": "https://protege.stanford.edu/software/#desktop-protege"},
-                {"label": "Desktop releases on GitHub", "url": "https://github.com/protegeproject/protege-distribution/releases"}],
-    "globus": [{"label": "Set-up for admins and developers", "url": "https://docs.globus.org/getting-started/"}],
     "topbraid-shacl-api": [{"label": "GitHub releases", "url": "https://github.com/TopQuadrant/shacl/releases"}],
 }
 TOOL_IDS = {"Sextans-Suite": "sextans-suite"}
+KEYWORDS = {"digital object identifier": "DOI", "doi": "DOI"}   # sheet spelling -> _data/keywords.yml
+NO_VALUE = {"unknown"}                                            # a reviewed cell saying there is no value
 
 report = {"removed_tools": [], "struck_values": [], "decide": [], "notes_mapped": []}
 entries = []
@@ -84,7 +82,7 @@ for r in range(3, tw.max_row + 1):
     tid = TOOL_IDS.get(raw_id, raw_id)
     prev = old.get(tid, {})
     top, pend = {"id": tid}, {}
-    if tid in redirects: top["redirect_from"] = redirects[tid]
+    if current.get(tid, {}).get("redirect_from"): top["redirect_from"] = current[tid]["redirect_from"]
     def cell(name): return tw.cell(row=r, column=COL[name])
     def put(key, value, st, note_field=None):
         if st == "verified":
@@ -100,7 +98,7 @@ for r in range(3, tw.max_row + 1):
         for j in colnums:
             c = tw.cell(row=r, column=j); st = status(c)
             if st == "struck": report["struck_values"].append((tid, key, c.value)); continue
-            if not st: continue
+            if not st or str(c.value).strip().lower() in NO_VALUE: continue
             v = conv(c.value)
             target = top if st == "verified" else pend
             if v not in target.setdefault(key, []): target[key].append(v)
@@ -123,9 +121,9 @@ for r in range(3, tw.max_row + 1):
     # a licence cell can hold a reviewer note such as "empty is now unconfirmed"
     multi(LICENCE_COLS, "license", lambda v: "unconfirmed" if "unconfirmed" in str(v).lower() else re.sub(r",\s*and:?$", "", str(v).strip()))
     scalar("Cost", "cost", lambda v: {"unconfirmed": "Unconfirmed"}.get(str(v).strip().lower(), str(v).strip()))
-    scalar("Code availability", "code_availability")
+    multi(CODE_COLS, "code_availability")
     scalar("Maturity", "maturity")
-    scalar("Deprecated", "deprecated", lambda v: True)
+    scalar("Legacy/deprecated", "deprecated", lambda v: True)
 
     # links
     links_top, links_pend = {}, {}
@@ -143,8 +141,10 @@ for r in range(3, tw.max_row + 1):
     c = cell("Documentation"); st = status(c)
     if st:
         v = str(c.value).strip()
-        if re.fullmatch(r"https?://\S+", v):
-            (links_top if st == "verified" else links_pend)["docs"] = v
+        m = re.fullmatch(r"(https?://\S+)\s*(\(.*\))?", v)   # a URL, possibly with a remark such as "(currently down)"
+        if m:
+            (links_top if st == "verified" else links_pend)["docs"] = m.group(1)
+            if m.group(2): report["notes_mapped"].append((tid, "Documentation", v, m.group(1)))
         else:
             url, note = DOCS_NOTES[v.lower()]
             target = links_top if st == "verified" else links_pend
@@ -179,7 +179,7 @@ for r in range(3, tw.max_row + 1):
         pend["logo"] = str(c.value).strip()
         if st == "decide": report["decide"].append((tid, "Logo", c.value))
     # other links: "Kind — URL", or a bare URL
-    for j in cols("Other link 1", "Other link 8"):
+    for j in cols("Other link 1", "Other link 7"):
         c = tw.cell(row=r, column=j); st = status(c)
         if not st or st == "struck":
             if st == "struck": report["struck_values"].append((tid, "Other link", c.value))
@@ -190,23 +190,30 @@ for r in range(3, tw.max_row + 1):
     if links_top: top["links"] = links_top
     if links_pend: pend["links"] = links_pend
 
-    # registry ids (not reviewed yet); the reviewers put citations in the DOI column
-    ids = {}
+    # registry ids: verified ones switch on the bio.tools / GitHub data on the live page; the reviewers
+    # put citations in the DOI column
+    ids, ids_pend = {}, {}
     for name, key in [("bio.tools id", "biotools"), ("GitHub repo", "github"), ("RSD ID", "rsd")]:
         c = cell(name); st = status(c)
-        if st and st != "struck": ids[key] = str(c.value).strip()
+        if st and st != "struck":
+            (ids if st == "verified" else ids_pend)[key] = str(c.value).strip()
+            if st == "decide": report["decide"].append((tid, name, c.value))
     c = cell("DOI"); st = status(c)
     if st and st != "struck":
         v = str(c.value).strip()
         m = re.search(r"(10\.\d{4,9}/[^\s]+)", v)
-        if m: ids["doi"] = m.group(1).rstrip(".")
+        if m: (ids if st == "verified" else ids_pend)["doi"] = m.group(1).rstrip(".")
         if len(v) > 60 or not m:
-            pend["how_to_cite"] = v
+            (top if st == "verified" else pend)["how_to_cite"] = v
+        if st == "decide": report["decide"].append((tid, "DOI", v))
     if (prev.get("ids") or {}).get("fairsharing"):
-        ids["fairsharing"] = prev["ids"]["fairsharing"]          # column was removed from the sheet
-    if ids: pend["ids"] = ids
-    multi(cols("Keyword 1", "Keyword 6"), "keywords")
-    multi(cols("Related 1", "Related 5"), "related")
+        ids_pend["fairsharing"] = prev["ids"]["fairsharing"]     # column was removed from the sheet
+    if ids: top["ids"] = ids
+    if ids_pend: pend["ids"] = ids_pend
+    multi(cols("Keyword 1", "Keyword 6"), "keywords", lambda v: KEYWORDS.get(str(v).strip().lower(), str(v).strip()))
+    # related tools are no longer in the sheet: keep the current ones, verified or not
+    for block, cur in ((top, current.get(tid, {})), (pend, current.get(tid, {}).get("pending", {}))):
+        if cur.get("related"): block["related"] = list(cur["related"])
     # keep related only for tools that stay in the catalogue (checked after the loop)
     if prev.get("institutes"):
         pend["institutes"] = prev["institutes"]                  # Used by was not part of this review
@@ -267,9 +274,9 @@ def emit(d, indent, order):
             out.append(f"{pad}{k}: {q(v)}")
     return out
 
-HEADER = """# Tool entries (schema: _schemas/tool.schema.yml), rendered with _layouts/tool_profile.html.
+HEADER = f"""# Tool entries (schema: _schemas/tool.schema.yml), rendered with _layouts/tool_profile.html.
 #
-# Imported on 2026-10-22 from the manual review (_review/tools4fair-annotation-form_new_v1.xlsx):
+# Imported on {datetime.date.today()} from the manual review (_review/{XLSX.name}):
 # - top-level values were verified by a reviewer (green or yellow in the sheet);
 # - `pending:` holds values nobody has checked yet (white) or that still need a decision (purple).
 #   The live site shows only verified values and hides empty sections; add ?unverified=1 to a tool
@@ -280,6 +287,7 @@ HEADER = """# Tool entries (schema: _schemas/tool.schema.yml), rendered with _la
 # tool_type: bio.tools toolType values, or Self-assessment / checklist, Registry / catalogue,
 #            Standard / specification (_data/tool_types.yml).
 # fair:      F, A, I, R and/or planning. domains: _data/domains.yml. keywords: _data/keywords.yml.
+# code_availability: one value, or two for tools with an open-source and a commercial edition.
 # links.homepage_opens_tool: true when the homepage link opens the working tool itself.
 # hosted:    true for online services.
 """
