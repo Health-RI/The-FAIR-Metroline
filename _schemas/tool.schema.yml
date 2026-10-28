@@ -89,7 +89,11 @@ $defs:
         description: '"Unconfirmed" means a reviewer could not find it; the page then shows no cost.'
         enum: [Free of charge, Free of charge (with restrictions), Commercial, Institutional licence, Free and paid, Unconfirmed]
 
-      code_availability: {enum: [Open source, Closed source, Restricted access]}
+      code_availability:
+        description: One value, or two for tools with an open-source and a commercial edition.
+        type: array
+        uniqueItems: true
+        items: {enum: [Open source, Closed source, Restricted access]}
       maturity: {enum: [Emerging, Mature, Legacy]}
       deprecated: {type: boolean, description: "The maintainers have stopped the tool; the page shows a warning"}
       hosted: {type: boolean, description: "Used online (the reviewers' 'SaaS')"}
@@ -146,7 +150,7 @@ $defs:
         type: array
         uniqueItems: true
         items:
-          enum: [RDF, OWL, OBO format, SPARQL, SHACL, JSON-LD, DCAT, CSV, DICOM, FHIR, CDISC ODM, CARE-SM, ISA, SSSOM, Bioschemas, nanopublication, RDA DMP Common Standard, MQTT, ontology, codebook, eCRF]
+          enum: [RDF, OWL, OBO format, SPARQL, SHACL, JSON-LD, DCAT, CSV, DICOM, FHIR, CDISC ODM, CARE-SM, ISA, SSSOM, Bioschemas, nanopublication, RDA DMP Common Standard, MQTT, DOI, smartAPI, ontology, codebook, eCRF, Common Data Elements (CDE), metadata, registry]
 
       institutes:
         description: Dutch institutes known to use it. Names must match _data/affiliations.yml.

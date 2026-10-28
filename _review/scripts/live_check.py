@@ -47,10 +47,8 @@ for f in sorted(glob.glob(f'{SITE}/**/*.html', recursive=True)):
 
     vt = e.get('tool_type', [])
     vt = [t for t in vt if t in local] + [t for t in vt if t not in local]
-    got = [txt(s) for s in live.select('.tp-type:not(.tp-type--more)')]
-    if got != vt[:3]: bad('types', got, vt[:3])
-    more = live.select_one('.tp-type--more')
-    if (more['title'] if more else None) != (', '.join(vt[3:]) or None): bad('more types', more and more['title'], vt[3:])
+    got = [txt(s) for s in live.select('.tp-type')]
+    if got != vt: bad('types', got, vt)
 
     got = [txt(s) for s in live.select('.tp-domain')]
     if got != e.get('domains', []): bad('domains', got, e.get('domains', []))
@@ -66,7 +64,7 @@ for f in sorted(glob.glob(f'{SITE}/**/*.html', recursive=True)):
     if facts.get('Licence') != (' / '.join(lic) or None): bad('licence', facts.get('Licence'), lic)
     cost = e.get('cost') if str(e.get('cost')).lower() not in NOT_SHOWN else None
     if facts.get('Cost') != cost: bad('cost', facts.get('Cost'), cost)
-    if facts.get('Source code') != e.get('code_availability'): bad('source code', facts.get('Source code'), e.get('code_availability'))
+    if facts.get('Source code') != (' / '.join(e.get('code_availability', [])) or None): bad('source code', facts.get('Source code'), e.get('code_availability'))
 
     letters = [x for x in e.get('fair', []) if x != 'planning']
     got = [txt(s) for s in live.select('.tp-fair-l.on')]

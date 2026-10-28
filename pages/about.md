@@ -25,10 +25,9 @@ The FAIR Metroline makes all its documents and data available under a [CC-BY](ht
 
 ## Media kit
 
-### Metroline Diagrams
-<script src="{{ '/assets/js/downloadMetroline.js' | relative_url }}"></script>
-* <a href="#" onclick="downloadMetrolineSVG({ stripAnchors: true }); return false;">Main diagram (static)</a>
-* <a href="#" onclick="downloadMetrolineSVG({ stripAnchors: false }); return false;">Main diagram (with clickable links)</a>
+### Infographics
+* [One-pagers (ZIP)]({{site.baseurl}}/assets/img/media_kit/one-pagers/one-pagers.zip) - Step-by-step content summaries
+* [Metroline infographic]({{site.baseurl}}/assets/img/media_kit/20261023_FAIR_Metroline_infographic.pdf)
 
 ### Logos
 
@@ -40,10 +39,10 @@ The FAIR Metroline makes all its documents and data available under a [CC-BY](ht
 | **Wide** (+ slogan) | [PNG]({{site.baseurl}}/assets/img/media_kit/transp_main_logo_wide_text.png) | [PNG]({{site.baseurl}}/assets/img/media_kit/white_main_logo_wide_text.png) |
 | **Wide** (+ slogan + URL) | [PNG]({{site.baseurl}}/assets/img/media_kit/transp_main_logo_wide_text_url.png) | [PNG]({{site.baseurl}}/assets/img/media_kit/white_main_logo_wide_text_url.png) |
 
-### Infographics
-* [One-pagers (ZIP)]({{site.baseurl}}/assets/img/media_kit/one-pagers/one-pagers.zip) - Step-by-step content summaries
-* Metroline infographic - coming soon
-
+### Metroline Diagrams
+<script src="{{ '/assets/js/downloadMetroline.js' | relative_url }}"></script>
+* <a href="#" onclick="downloadMetrolineSVG({ stripAnchors: true }); return false;">Main diagram (static)</a>
+* <a href="#" onclick="downloadMetrolineSVG({ stripAnchors: false }); return false;">Main diagram (with clickable links)</a>
 
 
 

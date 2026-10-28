@@ -1,7 +1,7 @@
 - id: 1
   title: Define FAIRification objectives
   summary: FAIRification objectives aim to make data more Findable, Accessible, Interoperable, and Reusable (FAIR). They focus on improving how data is organised and shared, ensuring that it can be easily accessed, understood and used by both humans and machines. Achieving such objectives maximises the value of data, enhancing its usefulness and long-term usability.
-  one_liner: "Define clear, project-specific FAIRification objectives by aligning requirements, assessing impact and planning the resources and steps needed to make their data FAIR."
+  one_liner: "Define clear, project-specific FAIRification objectives by aligning requirements, assessing impact and planning the resources and steps needed to make data FAIR."
   url: metroline_steps/define_fairification_objectives
   icon: ":dart:"
   status: RELEASED
@@ -41,7 +41,7 @@
 - id: 4
   title: Identify and select training
   summary: This page brings forward the training and educational elements available to guide the team in their journey through the Metroline subsequent steps.
-  one_liner: "Identify training needs within their team and find suitable training options to build the skills required for implementing FAIR data practices."
+  one_liner: "Identify training needs within the team and find suitable training options to build the skills required for implementing FAIR data practices."
   url: metroline_steps/identify_and_select_training
   icon: ":weight_lifting:"
   status: RELEASED
@@ -59,7 +59,7 @@
 - id: 5
   title: Pre-FAIR assessment
   summary: A pre-FAIR assessment evaluates the current state of your data and its alignment with the FAIR principles. Performing this assessment early makes you aware of possibilities for increasing the FAIRness of your data, which in turn increases its impact and ensures its long-term usability.
-  one_liner: "Assess the current level of FAIRness of their data using appropriate tools and use the results to identify gaps and plan the next steps in the FAIRification process."
+  one_liner: "Assess the current level of FAIRness of data using appropriate tools and use the results to identify gaps and plan the next steps in the FAIRification process."
   url: metroline_steps/pre_fair_assessment
   icon: ":white_check_mark:"
   status: RELEASED
@@ -114,7 +114,7 @@
 - id: 8
   title: Assess availability of your metadata
   summary: Metadata describes a resource, like a book’s title and author or a photo’s date and location, which help with organization and discovery of that resource. This Metroline step describes the types of metadata, where you can find them for your resource, and how to improve their quality. Filling metadata gaps enhances a resource’s visibility and reusability.
-  one_liner: "Identify, evaluate and improve the completeness and quality of their metadata to ensure it is accurate, consistent and ready for reuse and publication."
+  one_liner: "Identify, evaluate and improve the completeness and quality of metadata to ensure it is accurate, consistent and ready for reuse and publication."
   url: metroline_steps/assess_availability_of_your_metadata
   icon: ":books:"
   status: RELEASED
@@ -151,7 +151,7 @@
 - id: 10
   title: Register resource level metadata
   summary: To make your resource (e.g. data), available for reuse, its metadata can be published in a catalogue. This step helps you find a catalogue where you can register these resource metadata and explains why adding your resource to such a catalogue is important.
-  one_liner: "Make their resources findable by selecting appropriate metadata catalogues and registering consistent, well-defined resource-level metadata."
+  one_liner: "Make resources findable by selecting appropriate metadata catalogues and registering consistent, well-defined resource-level metadata."
   url: metroline_steps/register_resource_level_metadata
   icon: ":card_file_box:"
   status: RELEASED
@@ -170,7 +170,7 @@
 - id: 11
   title: Register structural metadata
   summary: Structural metadata can describe many aspects of how data is organised, represented and related within a dataset or resource. In this step, the focus is primarily on structural metadata describing data elements, their definitions and formats, such as codebooks or data dictionaries. Publishing structural metadata helps others understand, find and reuse your data more easily. This step also describes approaches for making structural metadata easier for computers to process automatically, which can support specific FAIRification objectives.
-  one_liner: "Publish and enhance a codebook or data dictionary by selecting suitable repositories and formats to make their data structure understandable, findable and reusable."
+  one_liner: "Publish and enhance a codebook or data dictionary by selecting suitable repositories and formats to make the data understandable and reusable."
   url: metroline_steps/register_structural_metadata
   icon: ":card_file_box:"
   status: RELEASED
@@ -206,7 +206,7 @@
 - id: 13
   title: Analyse data semantics
   summary: In this step, the aim is to gain more insight into the existing data, or the data that you aim to collect. Clearly defining the meaning (semantics) of the data is an important step for creating the semantic model, as well as for data collection via, for example, electronic case report forms (eCRFs).
-  one_liner: "Clarify and define the meaning of their data and metadata elements by identifying ambiguities and creating a clear, unambiguous codebook to support further FAIRification steps."
+  one_liner: "Clarify and define the meaning of data and metadata elements by identifying ambiguities and creating a clear, unambiguous codebook to support further FAIRification steps."
   url: metroline_steps/analyse_data_semantics
   icon: ":mag_right:"
   status: RELEASED
@@ -244,7 +244,7 @@
 - id: 15
   title: Create or reuse a semantic (meta)data model
   summary: Creating a semantic (meta)data model often requires considerable effort as it is a complex task. Reusing an existing model, where possible, can save time and increase interoperability. Start by checking if a suitable model already exists. If not, follow a structured approach to create one. Once the model is in place, share it using common platforms and provide clear documentation to support reuse by others.
-  one_liner: "Decide whether to reuse, extend or create a semantic model for their data or metadata so it can be represented in a structured, machine-readable and interoperable way."
+  one_liner: "Decide whether to reuse, extend or create a semantic model for data or metadata so it can be represented in a structured, machine-readable and interoperable way."
   url: metroline_steps/create_or_reuse_a_semantic_model
   icon: ":construction:"
   status: RELEASED
@@ -260,7 +260,7 @@
 - id: 16
   title: Use ontologies in the model
   summary: This process involves linking your semantic (meta)data model to ontologies, which are formal, shared vocabularies that provide precise, machine-readable definitions for concepts. This step is written for a broad FAIRification audience and may be used by researchers, data stewards, metadata specialists and ontology or semantic web technology experts, depending on the project context. Not all activities need to be carried out by the same person. researchers and project teams can use this step to understand the process and provide domain knowledge, while specialist support may be needed for ontology selection, concept mapping, formal representation, validation and maintenance. By assigning standard definitions to the elements in your model, you make their meanings explicit and unambiguous. This allows different computer systems to correctly understand, combine and compare data from various sources consistently, making the data more interoperable and easier to reuse across projects.
-  one_liner: "Link elements in a semantic model to ontology terms so their meanings become explicit, machine understandable and interoperable across systems."
+  one_liner: "Link elements in a semantic model to ontology terms so meanings become explicit, machine understandable and interoperable across systems."
   url: metroline_steps/use_ontologies_in_the_model
   icon: ":book:"
   status: RELEASED
@@ -294,7 +294,7 @@
 - id: 19
   title: Apply (meta)data model
   summary: Think of your data like a book in a library. A metadata model defines the kind of information included in the catalogue entry, such as the title, author, topic, and publication date, helping people find and understand the book. A data model defines how the contents of the book are organised and related, like the structure of chapters, sections, and references. Using both makes it easier for people and machines to find, understand, and reuse your data.
-  one_liner: "Understand the role of metadata and data models in FAIRification and points to tools that can be used to apply them in practice."
+  one_liner: "Understand the role of metadata and data models in FAIRification and find tools that can be used to apply them in practice."
   url: metroline_steps/apply_metadata_model
   icon: ":card_file_box:"
   status: RELEASED
@@ -371,7 +371,7 @@
 - id: 23
   title: Assess FAIRness
   summary: Now that you’ve FAIRified your data, it’s time to check the resulting FAIRness and decide if you’ve reached your goals. Use tools and other methods to assess if your data is truly Findable, Accessible, Interoperable, and Reusable. If needed, adjust or improve things so your data stays FAIR in the long run.
-  one_liner: "Understand how to assess the FAIRness of their data and metadata by evaluating objectives, using assessment tools and validating real-world usability."
+  one_liner: "Understand how to assess the FAIRness of data and metadata by evaluating objectives, using assessment tools and validating real-world usability."
   url: metroline_steps/assess_fairness
   icon: ":white_check_mark:"
   status: RELEASED

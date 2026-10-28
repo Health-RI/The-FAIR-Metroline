@@ -24,8 +24,13 @@
 - {name: nanopublication, url: "https://nanopub.net/guidelines/working_draft/", text: "Small RDF graph with provenance that is published and cited on its own"}
 - {name: RDA DMP Common Standard, url: "https://github.com/RDA-DMP-Common/RDA-DMP-Common-Standard", text: "RDA standard for machine-actionable data management plans (maDMP)"}
 - {name: MQTT, url: "https://mqtt.org/mqtt-specification/", text: "OASIS messaging protocol for streaming sensor and device data"}
+- {name: DOI, url: "https://www.doi.org/", text: "Digital Object Identifier, a persistent identifier for publications, datasets and software"}
+- {name: smartAPI, url: "https://smart-api.info/", text: "OpenAPI-based way to describe web APIs with machine-readable metadata"}
 
 # Artefacts
 - {name: ontology}
 - {name: codebook}
 - {name: eCRF}
+- {name: Common Data Elements (CDE)}
+- {name: metadata}
+- {name: registry}
