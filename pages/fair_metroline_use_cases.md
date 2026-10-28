@@ -5,9 +5,8 @@ permalink: fair_metroline_use_cases
 redirect_from: [/fair_metroline_scenarios, /tool-scenarios/transform_onco_data, /use-cases/transform_onco_data]
 ---
 
-The FAIR Metroline provides you with FAIR guidance. However, which steps are actually relevant for your FAIRification journey depends on your FAIR objectives. For example, if your objective is to make your existing data Findable and Accessible in a catalogue, a step like Design eCRF will not be relevant.
-
-This section provides guidance for common FAIR objectives through FAIR use cases.
+{% capture intro %}Which FAIR steps you need depends on your goal: to make existing data findable in a catalogue, for example, you can skip a step like Design eCRF. Pick the use case closest to your goal and follow its route through the steps and tools.{% endcapture %}
+{% include page-intro.html icon="use-cases" lead="Use cases show the FAIR steps you need for a common goal, in order." text=intro %}
 
 {% assign use_cases = site.data.use_cases_list %}
 {% include use-case-cards.html use_cases=use_cases %}

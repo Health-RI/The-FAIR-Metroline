@@ -8,6 +8,9 @@ subitems:
   - title: FAIR steps
     url: /fair_metroline_steps
     subitems:
+      # not the bare page URL: the theme would mark this item active and keep the FAIR steps menu closed
+      - title: All steps
+        url: /fair_metroline_steps?group=
       - title: Goals & expertise
         url: /fair_metroline_steps?group=goals-expertise
       - title: Assess & plan
