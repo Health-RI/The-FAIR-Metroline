@@ -1,6 +1,6 @@
 # Tool review status
 
-Imported on 2026-10-27 from the manual review (_review/tools4fair-annotation-form_new_v2.xlsx) into `_data/tools_v2.yml`. This page is written by
+Imported on 2026-10-28 from the manual review (_review/tools4fair-annotation-form_new_v2.xlsx) into `_data/tools_v2.yml`. This page is written by
 `_review/scripts/review_status.py`; run it again after each import.
 
 - **Verified** (green or yellow in the sheet): the top level of each entry. This is all the live site shows.
@@ -79,10 +79,16 @@ Imported on 2026-10-27 from the manual review (_review/tools4fair-annotation-for
 
 Set in `import_review.py`, so a new import keeps them; update the sheet to match.
 
-| Tool | Column | Value in the sheet | Used instead |
+| Tool | Field | Value in the sheet | Used instead |
 |---|---|---|---|
-| TopBraid SHACL API | Logo URL | https://github.com/TopQuadrant.png?size=200 | https://media.licdn.com/dms/image/v2/C4E0BAQGZbqII1tkEEQ/company-logo… |
-| Yasgui | Logo URL | https://avatars.githubusercontent.com/u/6156399?s=60&v=1024 | https://avatars.githubusercontent.com/u/7573184?v=4 |
+| OpenRefine | links.homepage_opens_tool | yes | no |
+| OpenRefine | tool_type | Desktop application; Plug-in; Web application; Web API; Web service; … | Desktop application |
+| OpenRefine | short_description | Desktop tool to clean messy tables, match values to external identifi… | Desktop tool, used in your browser, to clean messy tables, match valu… |
+| OpenRefine | keywords | SPARQL; RDF | CSV; RDF |
+| Protégé | links.download | https://protegewiki.stanford.edu/wiki/WebProtege | https://protege.stanford.edu/software/#desktop-protege |
+| Protégé | links.other | Download — https://github.com/protegeproject/protege/releases; Report… | Report an issue — https://github.com/protegeproject/protege/issues |
+| TopBraid SHACL API | logo | https://github.com/TopQuadrant.png?size=200 | https://media.licdn.com/dms/image/v2/C4E0BAQGZbqII1tkEEQ/company-logo… |
+| Yasgui | logo | https://avatars.githubusercontent.com/u/6156399?s=60&v=1024 | https://avatars.githubusercontent.com/u/7573184?v=4 |
 
 ## Reviewer notes turned into structured values
 

@@ -59,10 +59,13 @@ lines += [
     "",
     "Set in `import_review.py`, so a new import keeps them; update the sheet to match.",
     "",
-    "| Tool | Column | Value in the sheet | Used instead |",
+    "| Tool | Field | Value in the sheet | Used instead |",
     "|---|---|---|---|",
 ]
-lines += [f"| {names.get(t, t)} | {col} | {short(was, 70)} | {short(now, 70)} |" for t, col, was, now in report["overrides"]]
+def value(v):
+    if isinstance(v, list): return "; ".join(f"{x['kind']} — {x['url']}" if isinstance(x, dict) else str(x) for x in v)
+    return {True: "yes", False: "no", None: "(none)"}.get(v, v) if not isinstance(v, str) else v
+lines += [f"| {names.get(t, t)} | {field} | {short(value(was), 70)} | {short(value(now), 70)} |" for t, field, was, now in report["overrides"]]
 lines += [
     "",
     "## Reviewer notes turned into structured values",

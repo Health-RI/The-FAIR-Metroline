@@ -1,6 +1,6 @@
 # Tool entries (schema: _schemas/tool.schema.yml), rendered with _layouts/tool_profile.html.
 #
-# Imported on 2026-10-27 from the manual review (_review/tools4fair-annotation-form_new_v2.xlsx):
+# Imported on 2026-10-28 from the manual review (_review/tools4fair-annotation-form_new_v2.xlsx):
 # - top-level values were verified by a reviewer (green or yellow in the sheet);
 # - `pending:` holds values nobody has checked yet (white) or that still need a decision (purple).
 #   The live site shows only verified values and hides empty sections; add ?unverified=1 to a tool
@@ -366,12 +366,12 @@
 
 - id: openrefine
   name: OpenRefine
-  short_description: "Desktop tool to clean messy tables, match values to external identifiers such as Wikidata, and convert tables to RDF with an extension."
+  short_description: "Desktop tool, used in your browser, to clean messy tables, match values to external identifiers such as Wikidata, and convert tables to RDF with an extension."
   description: >-
     OpenRefine helps users inspect, clean and reconcile tabular data. With RDF extensions, it can be
     used to transform structured data and metadata into RDF, making it useful when applying semantic
     models or preparing FAIR metadata and data for exposure.
-  tool_type: [Desktop application, Plug-in, Web application, Web API, Web service, Workbench]
+  tool_type: [Desktop application]
   fair: [I]
   lifecycle: [Process]
   domains: [Cross-domain]
@@ -380,14 +380,14 @@
   code_availability: [Open source]
   links:
     homepage: "https://openrefine.org/"
-    homepage_opens_tool: true
+    homepage_opens_tool: false
     docs: "https://openrefine.org/docs"
     download: "https://openrefine.org/download"
     other:
       - {kind: Download, url: "https://github.com/OpenRefine/OpenRefine/releases"}
       - {kind: Report an issue, url: "https://github.com/OpenRefine/OpenRefine/issues"}
   logo: "https://openrefine.org/img/openrefine_logo.svg"
-  keywords: [SPARQL, RDF]
+  keywords: [CSV, RDF]
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     ids:
       github: OpenRefine/OpenRefine
@@ -853,11 +853,9 @@
     homepage: "https://protege.stanford.edu/"
     homepage_opens_tool: true
     docs: "https://protegewiki.stanford.edu/wiki/WebProtege"
-    download: "https://protegewiki.stanford.edu/wiki/WebProtege"
+    download: "https://protege.stanford.edu/software/#desktop-protege"
     other:
-      - {kind: Download, url: "https://github.com/protegeproject/protege/releases"}
       - {kind: Report an issue, url: "https://github.com/protegeproject/protege/issues"}
-      - {kind: Link, url: "https://protege.stanford.edu/software/#desktop-protege,"}
   logo: "https://www.google.com/s2/favicons?domain=protege.stanford.edu&sz=128"
   keywords: [ontology, OWL, RDF, OBO format]
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1

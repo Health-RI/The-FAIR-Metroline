@@ -70,9 +70,18 @@ DOWNLOAD_SPECIAL = {   # tool id -> download links for verified cells that hold 
 TOOL_IDS = {"Sextans-Suite": "sextans-suite"}
 # editors' changes after the review, kept on re-import; listed on the status page so the sheet can follow
 LEFT_OUT = {"sextans-suite"}                                              # not in the catalogue for now
-LOGOS = {   # logo instead of the sheet's
-    "yasgui": "https://avatars.githubusercontent.com/u/7573184?v=4",
-    "topbraid-shacl-api": "https://media.licdn.com/dms/image/v2/C4E0BAQGZbqII1tkEEQ/company-logo_200_200/company-logo_200_200/0/1662058039652/topquadrant_logo?e=2147483647&v=beta&t=KLfeEeC2EBFwWu7O5XPB5KSR3o7mxcsE5Zt-JBrDtO4",
+CHANGES = {   # tool id -> {field: verified value instead of the sheet's}; "links.<name>" for a link field
+    "yasgui": {"logo": "https://avatars.githubusercontent.com/u/7573184?v=4"},
+    "topbraid-shacl-api": {"logo": "https://media.licdn.com/dms/image/v2/C4E0BAQGZbqII1tkEEQ/company-logo_200_200/company-logo_200_200/0/1662058039652/topquadrant_logo?e=2147483647&v=beta&t=KLfeEeC2EBFwWu7O5XPB5KSR3o7mxcsE5Zt-JBrDtO4"},
+    # OpenRefine runs on your own computer (in your browser) and is not offered online: openrefine.org is the
+    # project website, and the web, plug-in and workbench types misled; SPARQL only comes with extensions
+    "openrefine": {"links.homepage_opens_tool": False,
+                   "tool_type": ["Desktop application"],
+                   "short_description": "Desktop tool, used in your browser, to clean messy tables, match values to external identifiers such as Wikidata, and convert tables to RDF with an extension.",
+                   "keywords": ["CSV", "RDF"]},
+    # the sheet's download link went to the WebProtégé wiki; desktop Protégé is downloaded from the software page
+    "protege": {"links.download": "https://protege.stanford.edu/software/#desktop-protege",
+                "links.other": [{"kind": "Report an issue", "url": "https://github.com/protegeproject/protege/issues"}]},
 }
 KEYWORDS = {"digital object identifier": "DOI", "doi": "DOI"}   # sheet spelling -> _data/keywords.yml
 NO_VALUE = {"unknown"}                                            # a reviewed cell saying there is no value
@@ -186,9 +195,6 @@ for r in range(3, tw.max_row + 1):
     elif st:
         pend["logo"] = str(c.value).strip()
         if st == "decide": report["decide"].append((tid, "Logo", c.value))
-    if tid in LOGOS:
-        report["overrides"].append((tid, "Logo URL", c.value, LOGOS[tid]))
-        top["logo"] = LOGOS[tid]; pend.pop("logo", None)
     # other links: "Kind — URL", or a bare URL
     for j in cols("Other link 1", "Other link 7"):
         c = tw.cell(row=r, column=j); st = status(c)
@@ -197,7 +203,8 @@ for r in range(3, tw.max_row + 1):
             continue
         v = str(c.value).strip()
         kind, url = (v.split(" — ", 1) if " — " in v else ("Link", v))
-        (links_top if st == "verified" else links_pend).setdefault("other", []).append({"kind": kind.strip(), "url": url.strip()})
+        url = url.strip().rstrip(",;")                      # "https://…, " in a cell
+        (links_top if st == "verified" else links_pend).setdefault("other", []).append({"kind": kind.strip(), "url": url})
     if links_top: top["links"] = links_top
     if links_pend: pend["links"] = links_pend
 
@@ -228,6 +235,14 @@ for r in range(3, tw.max_row + 1):
     # keep related only for tools that stay in the catalogue (checked after the loop)
     if prev.get("institutes"):
         pend["institutes"] = prev["institutes"]                  # Used by was not part of this review
+    for field, value in CHANGES.get(tid, {}).items():
+        if field.startswith("links."):
+            key, block, pblock = field[6:], top.setdefault("links", {}), pend.get("links", {})
+        else:
+            key, block, pblock = field, top, pend
+        report["overrides"].append((tid, field, block.get(key, pblock.get(key)), value))
+        block[key] = value; pblock.pop(key, None)
+    if not pend.get("links", True): del pend["links"]
     if pend: top["pending"] = pend
     entries.append(top)
 
