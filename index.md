@@ -4,17 +4,12 @@ permalink: /
 page_id: main
 ---
 
-<h5>Practical guidance to make your health and life sciences data Findable, Accessible, Interoperable and Reusable, from planning to implementation.
-</h5>
+<h5>One place to make your health and life sciences data FAIR: real-world examples, the right tools and step-by-step guidance.</h5>
 
 <div class="homepage-nav-grid">
   <a href="/fair_metroline_use_cases" class="homepage-nav-card">
     <div class="nav-card-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-        <path d="M2 17l10 5 10-5"/>
-        <path d="M2 12l10 5 10-5"/>
-      </svg>
+      {% include section-icon.html icon="use-cases" %}
     </div>
     <div class="nav-card-title">Use Cases</div>
     <p class="nav-card-description">Explore real-world examples and use cases for making your data FAIR</p>
@@ -22,23 +17,18 @@ page_id: main
 
   <a href="/toolassemblies/tool_selection" class="homepage-nav-card">
     <div class="nav-card-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-      </svg>
+      {% include section-icon.html icon="tools" %}
     </div>
     <div class="nav-card-title">Tools</div>
-    <p class="nav-card-description">Discover tools and software to support your FAIR data journey</p>
+    <p class="nav-card-description">Find software and services that help make your data FAIR</p>
   </a>
 
   <a href="/fair_metroline_steps" class="homepage-nav-card">
     <div class="nav-card-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="12" y1="5" x2="12" y2="19"/>
-        <polyline points="19 12 12 19 5 12"/>
-      </svg>
+      {% include section-icon.html icon="steps" %}
     </div>
     <div class="nav-card-title">FAIR Steps</div>
-    <p class="nav-card-description">Follow step-by-step guidance through the FAIRification process</p>
+    <p class="nav-card-description">Detailed step-by-step guidance on FAIR data, for data stewards and others who know the basics</p>
   </a>
 </div>
 
@@ -74,6 +64,27 @@ page_id: main
   </div>
 </div>
 
+<div class="homepage-fair-tools mt-5">
+  <h2 class="section-title">Tools that support FAIR data</h2>
+  {%- assign tools = site.pages | where: "type", "tool" %}
+  {%- assign catalogue = "/toolassemblies/tool_selection" | relative_url %}
+  {%- comment %} chips only for verified FAIR tags; until there are any, just the link {% endcomment %}
+  {%- assign fair_tagged = tools | where_exp: "t", "t.fair" %}
+  {%- if fair_tagged.size == 0 %}
+  <p class="fair-tools-intro">Browse the <a href="{{ catalogue }}">{{ tools.size }} tools</a> in the tool catalogue.</p>
+  {%- else %}
+  <p class="fair-tools-intro">Browse <a href="{{ catalogue }}">{{ tools.size }} tools</a> by the FAIR principle they help with:</p>
+  <ul class="fair-chips">
+    {%- for tag in site.data.fair_tags %}
+    {%- assign tagged = tools | where_exp: "t", "t.fair contains tag.name" %}
+    {%- if tagged.size > 0 %}
+    <li><a class="fair-chip" href="{{ catalogue }}?fair={{ tag.name | slugify }}" title="{{ tag.text }}"><span class="fair-chip-badge fair-chip-badge--{{ tag.code }}" aria-hidden="true">{% if tag.code == "planning" %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>{% else %}{{ tag.code }}{% endif %}</span>{{ tag.short | default: tag.name }} <span class="fair-chip-count">{{ tagged.size }}</span></a></li>
+    {%- endif %}
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+</div>
+
 <div class="text-center mt-4 mb-3">
   <p class="text-muted mb-2">Have questions or suggestions?</p>
   <a href="/contact" class="btn btn-outline-primary">
@@ -86,7 +97,7 @@ page_id: main
 
 <div class="homepage-about mt-5 pt-5">
   <h2>About FAIR Metroline</h2>
-  <p>The FAIR Metroline provides step-by-step guidance, practical use cases, and tooling recommendations to help you make your health and life sciences data FAIR (Findable, Accessible, Interoperable and Reusable). Learn more about <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> and <a href="https://www.health-ri.nl/en/about/organisation/fair-data">Health-RI's FAIR data initiatives</a>.</p>
+  <p>The FAIR Metroline provides step-by-step guidance, practical use cases, and a catalogue of tools that support FAIR data to help you make your health and life sciences data FAIR (Findable, Accessible, Interoperable and Reusable). Learn more about <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> and <a href="https://www.health-ri.nl/en/about/organisation/fair-data">Health-RI's FAIR data initiatives</a>.</p>
 
   <p>The platform is under active development in alignment with the <a href="https://catalogus.healthdata.nl/">Dutch National Health Data Catalogue</a>, with ongoing contributions of use cases and tools from UMCs and life science researchers across the Netherlands. See the <a href="/network">list of contributors</a> for more details.</p>
 

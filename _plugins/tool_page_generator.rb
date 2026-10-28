@@ -21,6 +21,7 @@ module Jekyll
 
       @phase_order = (site.data['lifecycle_stages'] || []).map { |s| s['name'] }
       @local_types = (site.data['tool_types'] || []).select { |t| t['source'] == 'local' }.map { |t| t['name'] }
+      @fair_names = (site.data['fair_tags'] || []).to_h { |t| [t['code'], t['name']] }
       @known_ids = entries.map { |e| e['id'] }
       steps = metroline_steps_by_tool(site)
       use_cases = use_cases_by_tool(site, steps)
@@ -46,9 +47,16 @@ module Jekyll
       d['description'] = entry['short_description']
       d['logo_url'] = logo_url(site, entry['logo'])
       d['phase'] = sort_phases(entry['lifecycle'])
+      d['fair'] = fair_names(entry['fair'])
       d['domain'] = entry['domains']
       d['institutes'] = entry['institutes']
       d.compact!
+    end
+
+    # FAIR tag codes as names (Findable, ..., FAIR assessment & planning), in the order of _data/fair_tags.yml
+    def fair_names(codes)
+      names = @fair_names.select { |code, _| Array(codes).include?(code) }.values
+      names unless names.empty?
     end
 
     # Everything a tool page shows, with each value's pending state. A value is taken from, in order:

@@ -5,7 +5,6 @@
 $tp-border: #dee2e6;
 $tp-muted: #6c757d;
 $tp-soft: #f8f9fa;
-$tp-fair: (F: #1f6fb2, A: #2a8c82, I: #6a4fb3, R: #b5562a);
 
 // Small upper-case labels: FAIR / Life cycle, fact names, sub-headings, link kinds
 .tp-label,
@@ -154,11 +153,11 @@ $tp-fair: (F: #1f6fb2, A: #2a8c82, I: #6a4fb3, R: #b5562a);
   padding: 0 0.6rem;
   font-weight: 600;
   color: #fff;
-  background: #455a64;
-  border-color: #455a64;
+  background: $fair-planning-color;
+  border-color: $fair-planning-color;
 }
 
-@each $letter, $color in $tp-fair {
+@each $letter, $color in $fair-colors {
   .tp-fair-#{$letter}.on,
   html.show-unverified .tp-fair-#{$letter}.tp-on-pending { background: $color; border-color: $color; color: #fff; }
 }
