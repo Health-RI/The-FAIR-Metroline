@@ -1,48 +1,96 @@
 # Tool review status
 
-Imported on 2026-10-22 from `_review/tools4fair-annotation-form_new_v1.xlsx` into `_data/tools_v2.yml`.
+Imported on 2026-10-28 from the manual review (_review/tools4fair-annotation-form_new_v2.xlsx) into `_data/tools_v2.yml`. This page is written by
+`_review/scripts/review_status.py`; run it again after each import.
 
 - **Verified** (green or yellow in the sheet): the top level of each entry. This is all the live site shows.
 - **Pending** (white: not checked yet; purple: still to decide): under `pending:` in each entry. Hidden on the
   live site; add `?unverified=1` to a tool page URL to see them with a dashed border (`?unverified=0` hides them).
-  When a value is checked, move it from `pending:` to the top level.
-- **Removed** (crossed out): FAIR-in-a-box and Codebook to Castor/LimeSurvey. Their guidance-page badges were
-  removed; FAIR-in-a-Box mentions now link to its GitHub repository.
-- **Added**: Sextans-Suite (id `sextans-suite`), with only its name and homepage verified so far.
+  When a value is checked, mark it green or yellow in the sheet and import again.
+- **Removed** (crossed out): fair-in-a-box, codebook-to-castor-limesurvey.
+- **Left out by the editors** for now: Sextans-Suite.
+- **Not in the sheet**: related tools (the Related columns were removed) and institutes (Used by) are carried
+  over from the current file and `tools_v2_before_import.yml`, unverified unless they already were.
 
 ## Decisions still open (purple or pink in the sheet)
 
 | Tool | Field | Value in the sheet |
 |---|---|---|
-| Castor EDC | About text | Castor EDC is a cloud-based electronic data capture system designed to simplify clinical data collection and e… |
-| myDRE | Short description | Secure cloud workspaces where project teams store and analyse sensitive data, with approved and logged upload … |
-| myDRE | About text | myDRE is a Trusted Processing Environment run by anDREa B.V. on Microsoft Azure. An organisation takes a subsc… |
-| Ontotext Refine | Logo | https://www.google.com/s2/favicons?domain=ontotext.com&sz=128 |
-| OpenRefine | Homepage opens the tool | yes |
-| CEDAR Workbench | Download | (1) https://metadatacenter.readthedocs.io/en/latest/install-overview/ vs (2) https://github.com/metadatacenter… |
-| CEDAR Workbench | Logo | https://www.google.com/s2/favicons?domain=metadatacenter.org&sz=128 |
-| GraphDB | Logo | https://www.google.com/s2/favicons?domain=graphdb.ontotext.com&sz=128 |
-| ARDC FAIR Data Self-Assessment Tool | Logo | https://www.google.com/s2/favicons?domain=ardc.edu.au&sz=128 |
-| FAIR Data Maturity Model | Short description | RDA recommendation with 41 indicators, priorities and scoring levels to judge how FAIR your (meta)data are, pl… |
-| FAIR Data Maturity Model | Logo | https://www.google.com/s2/favicons?domain=zenodo.org&sz=128 |
-| FAIR-Checker | Documentation | https://fair-checker.france-bioinformatique.fr/docs/index.html |
-| FAIR-Checker | Logo | https://www.google.com/s2/favicons?domain=fair-checker.france-bioinformatique.fr&sz=128 |
-| ART-DECOR | license | GPL-3.0-only |
-| ART-DECOR | license | LGPL-2.1-only |
-| CSV on the Web | license | W3C Document License |
-| iCRF Generator | About text | The iCRF Generator is an open-source Java desktop application, developed at Amsterdam UMC, with a wizard in wh… |
-| sssom-py | Logo | https://github.com/mapping-commons.png?size=200 |
-| Sparnatural | Logo | https://www.google.com/s2/favicons?domain=sparnatural.eu&sz=128 |
-| Yasgui | Documentation | https://docs.triply.cc/yasgui/ |
-| Yasgui | Logo | https://avatars.githubusercontent.com/u/52077849 |
-| Virtuoso SPARQL Query Editor | Cost | Free and paid |
-| Virtuoso SPARQL Query Editor | Download | 1: https://vos.openlinksw.com/owiki/wiki/VOS/VOSSparqlProtocol, or 2: https://vos.openlinksw.com/owiki/wiki/VO… |
-| IBM Aspera | Logo | https://www.google.com/s2/favicons?domain=ibm.com&sz=128 |
-| Globus | Logo | https://www.google.com/s2/favicons?domain=globus.org&sz=128 |
+| MOLGENIS | Maturity | Mature |
+| MOLGENIS | bio.tools id | molgenis |
+| MOLGENIS | GitHub repo | molgenis/molgenis-emx2 |
+| MOLGENIS | DOI | https://doi.org/10.1093/bioinformatics/btw155 |
+| XNAT | Maturity | Mature |
+| XNAT | bio.tools id | xnat |
+| XNAT | GitHub repo | NrgXnat/xnat |
+| XNAT | DOI | https://doi.org/10.1385/ni:5:1:11 |
+| DMPonline | GitHub repo | DMPRoadmap/roadmap |
+| FAIR Data Station | Maturity | Mature |
+| FAIR Data Station | bio.tools id | fair_data_station |
+| FAIR Data Station | RSD ID | fair-data-station |
+| FAIR Data Station | DOI | https://doi.org/10.1101/2022.08.03.502622 |
+| FAIRDOM-SEEK | Maturity | Mature |
+| FAIRDOM-SEEK | bio.tools id | seek_for_science |
+| FAIRDOM-SEEK | GitHub repo | seek4science/seek |
+| FAIRDOM-SEEK | DOI | Wolstencroft K., Owen S., Du Preez F., et al. (2011) The SEEK: A platform for sharing data and models in syst… |
+| FAIR Data Point | Maturity | Emerging |
+| FAIR Data Point | bio.tools id | FAIRDataPoint |
+| FAIR Data Point | GitHub repo | FAIRDataTeam/FAIRDataPoint |
+| FAIR Data Point | DOI | Luiz Olavo Bonino da Silva Santos, Kees Burger, Rajaram Kaliyaperumal, Marek Suchánek, Jan Slifka, Mark Wilki… |
+| OpenRefine | GitHub repo | OpenRefine/OpenRefine |
+| OpenRefine | RSD ID | openrefine |
+| CEDAR Workbench | Maturity | Mature |
+| CEDAR Workbench | bio.tools id | cedar_workbench |
+| CEDAR Workbench | GitHub repo | metadatacenter/cedar-template-editor |
+| CEDAR Workbench | DOI | https://biokeanos.com/source/Center%20for%20Expanded%20Data%20Annotation%20and%20Retrieval%20Workbench |
+| Blazegraph | GitHub repo | blazegraph/database |
+| ARDC FAIR Data Self-Assessment Tool | GitHub repo | au-research/FAIR-Data-Assessment-Tool |
+| FAIR Data Maturity Model (RDA) | DOI | 10.15497/rda00050 |
+| FAIR-Checker | Maturity | Emerging |
+| FAIR-Checker | bio.tools id | fair-checker |
+| FAIR-Checker | GitHub repo | IFB-ElixirFr/FAIR-checker |
+| FAIR-Checker | DOI | https://doi.org/10.1186/s13326-023-00289-5 |
+| FAIR Evaluator | GitHub repo | FAIRMetrics/Metrics |
+| FAIRassist | GitHub repo | FAIRsharing/FAIRassist-App |
+| FAIR Aware | GitHub repo | FAIRsFAIR/fair-aware |
+| CSV on the Web | GitHub repo | w3c/csvw |
+| iCRF Generator | bio.tools id | icrf_generator |
+| iCRF Generator | GitHub repo | aderidder/iCRFGenerator |
+| iCRF Generator | DOI | https://doi.org/10.12688/f1000research.21576.1 |
+| REDCap | Maturity | Mature |
+| REDCap | bio.tools id | redcap |
+| REDCap | DOI | Harvey L.A. (2018) REDCap: Web-based software for all types of data storage and collection editorial. Spinal … |
+| Protégé | bio.tools id | protege |
+| Protégé | GitHub repo | protegeproject/protege |
+| Protégé | DOI | https://doi.org/10.1093/bioinformatics/btu256 |
+| ROBOT | bio.tools id | robot |
+| ROBOT | GitHub repo | ontodev/robot |
+| ROBOT | DOI | Jackson R.C., Balhoff J.P., Douglass E., et al. (2019) ROBOT: A Tool for Automating Ontology Workflows. BMC B… |
+| TopBraid SHACL API | GitHub repo | TopQuadrant/shacl |
+| pySHACL | GitHub repo | RDFLib/pySHACL |
+| sssom-py | GitHub repo | mapping-commons/sssom-py |
+| Sparnatural | GitHub repo | sparna-git/Sparnatural |
+| Wikidata Query Builder | GitHub repo | wikimedia/wikidata-query-builder |
+| Yasgui | GitHub repo | rdfjs/Yasgui |
+| Virtuoso SPARQL Query Editor | code_availability | Open source |
+| Virtuoso SPARQL Query Editor | GitHub repo | openlink/virtuoso-opensource |
+
+## Changed by the editors after the review
+
+Set in `import_review.py`, so a new import keeps them; update the sheet to match.
+
+| Tool | Field | Value in the sheet | Used instead |
+|---|---|---|---|
+| OpenRefine | links.homepage_opens_tool | yes | no |
+| OpenRefine | tool_type | Desktop application; Plug-in; Web application; Web API; Web service; … | Desktop application |
+| OpenRefine | short_description | Desktop tool to clean messy tables, match values to external identifi… | Desktop tool, used in your browser, to clean messy tables, match valu… |
+| OpenRefine | keywords | SPARQL; RDF | CSV; RDF |
+| Protégé | links.download | https://protegewiki.stanford.edu/wiki/WebProtege | https://protege.stanford.edu/software/#desktop-protege |
+| Protégé | links.other | Download — https://github.com/protegeproject/protege/releases; Report… | Report an issue — https://github.com/protegeproject/protege/issues |
+| TopBraid SHACL API | logo | https://github.com/TopQuadrant.png?size=200 | https://media.licdn.com/dms/image/v2/C4E0BAQGZbqII1tkEEQ/company-logo… |
+| Yasgui | logo | https://avatars.githubusercontent.com/u/6156399?s=60&v=1024 | https://avatars.githubusercontent.com/u/7573184?v=4 |
 
 ## Reviewer notes turned into structured values
-
-Cells in Documentation and Download that held a note instead of a URL:
 
 | Tool | Column | Note | Became |
 |---|---|---|---|
@@ -51,11 +99,11 @@ Cells in Documentation and Download that held a note instead of a URL:
 | DMPonline | Download | SaaS | hosted: true |
 | Ontotext Refine | Documentation | Platform-documentatie download underneath left in page bottom | Download it at the bottom of the product page |
 | ARDC FAIR Data Self-Assessment Tool | Documentation | platform website | On the website |
-| ARDC FAIR Data Self-Assessment Tool | Download | nvt: https://fairdata.ardc.edu.au/ | not applicable: no download |
-| FAIR Data Maturity Model | Documentation | platform website | On the website |
-| FAIR Data Maturity Model | Download | nvt | not applicable: no download |
+| FAIR Data Maturity Model (RDA) | Documentation | platform website | On the website |
+| FAIR Data Maturity Model (RDA) | Download | nvt | not applicable: no download |
 | FIP Wizard | Documentation | built in | Built into the tool |
 | FIP Wizard | Download | SaaS | hosted: true |
+| FAIR-Checker | Documentation | https://fair-checker.france-bioinformatique.fr/docs/index.html (curre… | https://fair-checker.france-bioinformatique.fr/docs/index.h… |
 | FAIRassist | Documentation | platform website | On the website |
 | FAIRassist | Download | SaaS | hosted: true |
 | FAIR Aware | Download | SaaS | hosted: true |
@@ -63,66 +111,86 @@ Cells in Documentation and Download that held a note instead of a URL:
 | ERDRI.mdr | Download | SaaS | hosted: true |
 | CSV on the Web | Download | nvt | not applicable: no download |
 | iCRF Generator | Documentation | website and github documentation | On the website and in the GitHub repository |
-| REDCap | Download | via license: https://projectredcap.org/join/, server: https://projectr | Request a licence, Server requirements |
-| Protégé | Download | web version: https://protegewiki.stanford.edu/wiki/WebProtege, downloa | WebProtégé (online), Desktop version, Desktop releases on GitHub |
 | ROBOT | Documentation | platform website | On the website |
 | TopBraid SHACL API | Documentation | github readme | https://github.com/TopQuadrant/shacl#readme |
 | TopBraid SHACL API | Download | GitHub Releases | GitHub releases |
 | pySHACL | Documentation | github readme | https://github.com/RDFLib/pySHACL#readme |
 | Wikidata Query Builder | Download | SaaS/webtool | hosted: true |
 | SURFfilesender | Download | SaaS | hosted: true |
-| Globus | Download | SaaS for users, for admin and developers: https://docs.globus.org/gett | Set-up for admins and developers |
+| Globus | Download | SaaS | hosted: true |
 
 Mapping rules: `SaaS` → `hosted: true` ("Online service"); `nvt` → no download link;
 `platform website` → `docs_note: On the website`; `github readme` → the README of the GitHub homepage;
-several labelled URLs → a labelled download list.
+a URL followed by a remark in brackets → the URL; keyword `unknown` → no keyword.
 
-## Not verified for any tool yet (columns left white)
+## Verified for how many tools
 
-FAIR tags, life cycle, code availability, maturity, other links, registry ids (and with them all data
-fetched from bio.tools/GitHub: activity, metrics, citations), keywords, related tools. Used by (institutes)
-was not in this review round. All of these are in `pending:` and will appear on the live site once checked.
+| Field | Verified | Pending |
+|---|---|---|
+| name | 38 | 0 |
+| short_description | 38 | 0 |
+| description | 38 | 0 |
+| tool_type | 38 | 0 |
+| fair | 38 | 0 |
+| lifecycle | 38 | 0 |
+| domains | 38 | 0 |
+| license | 38 | 0 |
+| cost | 38 | 0 |
+| code_availability | 37 | 1 |
+| maturity | 1 | 8 |
+| hosted | 11 | 0 |
+| links.homepage | 38 | 0 |
+| links.homepage_opens_tool | 38 | 0 |
+| links.docs | 31 | 0 |
+| links.docs_note | 7 | 0 |
+| links.download | 25 | 0 |
+| links.other | 38 | 0 |
+| logo | 38 | 0 |
+| ids | 0 | 27 |
+| how_to_cite | 0 | 5 |
+| keywords | 33 | 0 |
+| institutes | 0 | 6 |
+| related | 0 | 37 |
 
-## Per tool: verified fields
+## Per tool
 
 | Tool | Verified | Pending |
 |---|---|---|
-| Castor EDC | short_description, tool_type, domains, license, cost, links, logo | description, fair, lifecycle, code_availability, links, keywords, related |
-| myDRE | tool_type, domains, license, cost, links, logo | short_description, description, fair, lifecycle, code_availability, links, related |
-| MOLGENIS | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, maturity, links, keywords, ids, related |
-| XNAT | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, maturity, links, keywords, ids, related |
-| DMPonline | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, links, keywords, ids, related |
-| LEAF | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, links, keywords, related |
-| FAIR Data Station | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, maturity, links, keywords, ids, related |
-| FAIRDOM-SEEK | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, maturity, links, keywords, ids, how_to_cite, related |
-| FAIR Data Point | short_description, description, tool_type, domains, license, cost, links | fair, lifecycle, code_availability, maturity, links, logo, keywords, ids, how_to_cite, related |
-| Sextans-Suite | links |  |
-| Ontotext Refine | short_description, description, tool_type, domains, license, cost, links | fair, lifecycle, code_availability, logo, keywords, related |
-| OpenRefine | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, links, keywords, ids, related |
-| CEDAR Workbench | short_description, description, tool_type, domains, license, cost, links | fair, lifecycle, code_availability, maturity, links, logo, keywords, ids, how_to_cite, related |
-| GraphDB | short_description, description, tool_type, domains, license, cost, links | fair, lifecycle, logo, keywords, related |
-| Blazegraph | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, links, keywords, ids, related |
-| ARDC FAIR Data Self-Assessment Tool | short_description, description, tool_type, domains, license, cost, links | fair, lifecycle, code_availability, links, logo, ids, related |
-| FAIR Data Maturity Model | description, tool_type, domains, license, cost, links | short_description, fair, lifecycle, code_availability, links, logo, ids, related |
-| FIP Wizard | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, links, keywords, related |
-| FAIR-Checker | short_description, description, tool_type, domains, license, cost, links | fair, lifecycle, code_availability, maturity, links, logo, keywords, ids, related |
-| FAIR Evaluator | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, links, ids, related |
-| FAIRassist | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, links, ids, related |
-| FAIR Aware | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, links, ids, related |
-| ART-DECOR | short_description, description, tool_type, domains, cost, links, logo | fair, lifecycle, license, keywords, related |
-| ERDRI.mdr | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, keywords, related |
-| CSV on the Web | short_description, description, tool_type, domains, cost, links, logo | fair, lifecycle, license, code_availability, links, keywords, ids |
-| iCRF Generator | short_description, tool_type, domains, license, cost, links, logo | description, fair, lifecycle, code_availability, links, keywords, ids, related |
-| REDCap | short_description, description, tool_type, domains, license, cost, links | fair, lifecycle, code_availability, maturity, links, logo, keywords, ids, how_to_cite, related |
-| Protégé | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, links, keywords, ids, related |
-| ROBOT | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, links, keywords, ids, how_to_cite, related |
-| TopBraid SHACL API | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, links, keywords, ids, related |
-| pySHACL | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, links, keywords, ids, related |
-| sssom-py | short_description, description, tool_type, domains, license, cost, links | fair, lifecycle, code_availability, links, logo, keywords, ids, related |
-| Sparnatural | short_description, description, tool_type, domains, license, cost, links | fair, lifecycle, code_availability, links, logo, keywords, ids, related |
-| Wikidata Query Builder | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, links, keywords, ids, related |
-| Yasgui | short_description, description, tool_type, domains, license, cost, links | fair, lifecycle, code_availability, links, logo, keywords, ids, related |
-| Virtuoso SPARQL Query Editor | short_description, description, tool_type, domains, license, links, logo | fair, lifecycle, cost, code_availability, links, keywords, ids, related |
-| SURFfilesender | short_description, description, tool_type, domains, license, cost, links, logo | fair, lifecycle, code_availability, related |
-| IBM Aspera | short_description, description, tool_type, domains, license, cost, links | fair, lifecycle, links, logo, related |
-| Globus | short_description, description, tool_type, domains, license, cost, links | fair, lifecycle, logo, related |
+| Castor EDC | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, hosted, links.homepage, links.homepage_opens_tool, links.docs, links.other, logo, keywords | institutes, related |
+| myDRE | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, hosted, links.homepage, links.homepage_opens_tool, links.docs, links.other, logo | related |
+| MOLGENIS | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | maturity, ids, institutes, related |
+| XNAT | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | maturity, ids, institutes, related |
+| DMPonline | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, hosted, links.homepage, links.homepage_opens_tool, links.docs, links.other, logo, keywords | ids, institutes, related |
+| LEAF | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | institutes, related |
+| FAIR Data Station | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | maturity, ids, institutes, related |
+| FAIRDOM-SEEK | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | maturity, ids, how_to_cite, related |
+| FAIR Data Point | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | maturity, ids, how_to_cite, related |
+| Ontotext Refine | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs_note, links.download, links.other, logo, keywords | related |
+| OpenRefine | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | ids, related |
+| CEDAR Workbench | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | maturity, ids, how_to_cite, related |
+| GraphDB | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | related |
+| Blazegraph | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, maturity, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | ids, related |
+| ARDC FAIR Data Self-Assessment Tool | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs_note, links.download, links.other, logo | ids, related |
+| FAIR Data Maturity Model (RDA) | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs_note, links.other, logo | ids, related |
+| FIP Wizard | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, hosted, links.homepage, links.homepage_opens_tool, links.docs_note, links.other, logo, keywords | related |
+| FAIR-Checker | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | maturity, ids, related |
+| FAIR Evaluator | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | ids, related |
+| FAIRassist | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, hosted, links.homepage, links.homepage_opens_tool, links.docs_note, links.other, logo, keywords | ids, related |
+| FAIR Aware | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, hosted, links.homepage, links.homepage_opens_tool, links.docs, links.other, logo | ids, related |
+| ART-DECOR | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, hosted, links.homepage, links.homepage_opens_tool, links.docs, links.other, logo, keywords | related |
+| ERDRI.mdr | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, hosted, links.homepage, links.homepage_opens_tool, links.docs, links.other, logo, keywords | related |
+| CSV on the Web | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.other, logo, keywords | ids |
+| iCRF Generator | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs_note, links.download, links.other, logo, keywords | ids, related |
+| REDCap | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | maturity, ids, how_to_cite, related |
+| Protégé | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | ids, related |
+| ROBOT | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs_note, links.download, links.other, logo, keywords | ids, how_to_cite, related |
+| TopBraid SHACL API | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | ids, related |
+| pySHACL | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | ids, related |
+| sssom-py | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | ids, related |
+| Sparnatural | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | ids, related |
+| Wikidata Query Builder | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, hosted, links.homepage, links.homepage_opens_tool, links.docs, links.other, logo, keywords | ids, related |
+| Yasgui | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | ids, related |
+| Virtuoso SPARQL Query Editor | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | code_availability, ids, related |
+| SURFfilesender | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, hosted, links.homepage, links.homepage_opens_tool, links.docs, links.other, logo | related |
+| IBM Aspera | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, links.homepage, links.homepage_opens_tool, links.docs, links.download, links.other, logo, keywords | related |
+| Globus | name, short_description, description, tool_type, fair, lifecycle, domains, license, cost, code_availability, hosted, links.homepage, links.homepage_opens_tool, links.docs, links.other, logo, keywords | related |

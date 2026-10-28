@@ -39,8 +39,7 @@ layout: page
       {% assign n_types = p.tool_types.size %}
       {% if n_types > 0 or p.tool_types_pending.size > 0 %}
       <div class="tp-types{% if n_types == 0 %} tp-pending{% endif %}">
-        {% for t in p.tool_types limit: 3 %}{% assign tdef = site.data.tool_types | where: "name", t | first %}<span class="tp-type{% if tdef.source == 'local' %} tp-type--local{% endif %}" title="{{ tdef.text }}">{{ t }}</span>{% endfor %}
-        {% if n_types > 3 %}{% assign more_types = p.tool_types | slice: 3, n_types %}<span class="tp-type tp-type--more" title="{{ more_types | join: ', ' }}">+{{ n_types | minus: 3 }}</span>{% endif %}
+        {% for t in p.tool_types %}{% assign tdef = site.data.tool_types | where: "name", t | first %}<span class="tp-type{% if tdef.source == 'local' %} tp-type--local{% endif %}" title="{{ tdef.text }}">{{ t }}</span>{% endfor %}
         {% for t in p.tool_types_pending %}{% assign tdef = site.data.tool_types | where: "name", t | first %}<span class="tp-type tp-pending{% if tdef.source == 'local' %} tp-type--local{% endif %}" title="{{ tdef.text }}">{{ t }}</span>{% endfor %}
       </div>
       {% endif %}
@@ -90,18 +89,18 @@ layout: page
   {% comment %} Facts: a fact is pending when its value is; the list is pending when no fact is verified {% endcomment %}
   {% assign lic_all = p.license | concat: p.license_pending %}
   {% assign dom_all = p.domains | concat: p.domains_pending %}
+  {% assign code_all = p.code_availability | concat: p.code_availability_pending %}
   {% assign any_fact = false %}{% assign verified_fact = false %}
-  {% if lic_all.size > 0 or p.cost or p.code_availability or p.maturity or p.activity or dom_all.size > 0 %}{% assign any_fact = true %}{% endif %}
-  {% if p.license.size > 0 or p.domains.size > 0 %}{% assign verified_fact = true %}{% endif %}
+  {% if lic_all.size > 0 or p.cost or code_all.size > 0 or p.maturity or p.activity or dom_all.size > 0 %}{% assign any_fact = true %}{% endif %}
+  {% if p.license.size > 0 or p.code_availability.size > 0 or p.domains.size > 0 %}{% assign verified_fact = true %}{% endif %}
   {% if p.cost %}{% unless p.pending contains 'cost' %}{% assign verified_fact = true %}{% endunless %}{% endif %}
-  {% if p.code_availability %}{% unless p.pending contains 'code_availability' %}{% assign verified_fact = true %}{% endunless %}{% endif %}
   {% if p.maturity %}{% unless p.pending contains 'maturity' %}{% assign verified_fact = true %}{% endunless %}{% endif %}
   {% if p.activity %}{% unless p.activity_pending %}{% assign verified_fact = true %}{% endunless %}{% endif %}
   {% if any_fact %}
   <dl class="tp-facts{% unless verified_fact %} tp-pending{% endunless %}">
     {% if lic_all.size > 0 %}<div{% if p.license.size == 0 %} class="tp-pending"{% endif %}><dt>Licence</dt><dd>{{ p.license | join: " / " }}{% if p.license_pending.size > 0 %}<span class="tp-pending">{% if p.license.size > 0 %} / {% endif %}{{ p.license_pending | join: " / " }}</span>{% endif %}</dd></div>{% endif %}
     {% if p.cost %}<div{% if p.pending contains 'cost' %} class="tp-pending"{% endif %}><dt>Cost</dt><dd>{{ p.cost }}</dd></div>{% endif %}
-    {% if p.code_availability %}<div{% if p.pending contains 'code_availability' %} class="tp-pending"{% endif %}><dt>Source code</dt><dd>{{ p.code_availability }}</dd></div>{% endif %}
+    {% if code_all.size > 0 %}<div{% if p.code_availability.size == 0 %} class="tp-pending"{% endif %}><dt>Source code</dt><dd>{{ p.code_availability | join: " / " }}{% if p.code_availability_pending.size > 0 %}<span class="tp-pending">{% if p.code_availability.size > 0 %} / {% endif %}{{ p.code_availability_pending | join: " / " }}</span>{% endif %}</dd></div>{% endif %}
     {% if p.maturity %}<div{% if p.pending contains 'maturity' %} class="tp-pending"{% endif %}><dt>Maturity</dt><dd><span class="tp-pill tp-pill--{{ p.maturity | downcase }}">{{ p.maturity }}</span></dd></div>{% endif %}
     {% if p.activity %}<div{% if p.activity_pending %} class="tp-pending"{% endif %}><dt>Activity</dt><dd class="tp-activity tp-activity--{{ p.activity.status }}">{{ p.activity.label }}</dd></div>{% endif %}
     {% if dom_all.size > 0 %}<div{% if p.domains.size == 0 %} class="tp-pending"{% endif %}><dt>Domains</dt><dd>{% for d in p.domains %}<span class="tp-domain">{{ d }}</span>{% endfor %}{% for d in p.domains_pending %}<span class="tp-domain tp-pending">{{ d }}</span>{% endfor %}</dd></div>{% endif %}

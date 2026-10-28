@@ -69,7 +69,6 @@ $tp-fair: (F: #1f6fb2, A: #2a8c82, I: #6a4fb3, R: #b5562a);
   cursor: help;
 
   &--local { background: #fbf1e6; color: #96531c; }
-  &--more { background: $tp-soft; color: $tp-muted; }
 }
 
 // Main button: "Open the tool" when the homepage opens the working tool, otherwise "Visit website"

@@ -3,132 +3,383 @@
   "fair-in-a-box",
   "codebook-to-castor-limesurvey"
  ],
- "struck_values": [],
- "decide": [
+ "left_out": [
+  "Sextans-Suite"
+ ],
+ "overrides": [
   [
-   "castor",
-   "About text",
-   "Castor EDC is a cloud-based electronic data capture system designed to simplify clinical data collection and ensure interoperability. It integrates easily with broader clinical trial systems and ranks in the top [5%] of EDC tools for build speed, with over [90%] of studies deployed within 4 weeks."
-  ],
-  [
-   "mydre",
-   "Short description",
-   "Secure cloud workspaces where project teams store and analyse sensitive data, with approved and logged upload and download; used by [all] Dutch UMCs."
-  ],
-  [
-   "mydre",
-   "About text",
-   "myDRE is a Trusted Processing Environment run by anDREa B.V. on Microsoft Azure. An organisation takes a subscription and creates a workspace per research project; each workspace has its own storage and Windows or Linux virtual machines, on which researchers use the software they need (organisations can provide machine templates with, for example, Python, R and SPSS). Access is role-based and can include collaborators from other organisations, every action is logged, and data can only enter or leave a workspace through an approval step. Costs are the organisation's subscription plus pay-per-use Azure consumption. myDRE is used by [all] Dutch UMCs, for example to analyse sensitive health data or to run nodes for federated analysis."
-  ],
-  [
-   "ontotext-refine",
-   "Logo",
-   "https://www.google.com/s2/favicons?domain=ontotext.com&sz=128"
+   "openrefine",
+   "links.homepage_opens_tool",
+   true,
+   false
   ],
   [
    "openrefine",
-   "Homepage opens the tool",
-   "yes"
+   "tool_type",
+   [
+    "Desktop application",
+    "Plug-in",
+    "Web application",
+    "Web API",
+    "Web service",
+    "Workbench"
+   ],
+   [
+    "Desktop application"
+   ]
+  ],
+  [
+   "openrefine",
+   "short_description",
+   "Desktop tool to clean messy tables, match values to external identifiers such as Wikidata, and convert tables to RDF with an extension.",
+   "Desktop tool, used in your browser, to clean messy tables, match values to external identifiers such as Wikidata, and convert tables to RDF with an extension."
+  ],
+  [
+   "openrefine",
+   "keywords",
+   [
+    "SPARQL",
+    "RDF"
+   ],
+   [
+    "CSV",
+    "RDF"
+   ]
+  ],
+  [
+   "protege",
+   "links.download",
+   "https://protegewiki.stanford.edu/wiki/WebProtege",
+   "https://protege.stanford.edu/software/#desktop-protege"
+  ],
+  [
+   "protege",
+   "links.other",
+   [
+    {
+     "kind": "Download",
+     "url": "https://github.com/protegeproject/protege/releases"
+    },
+    {
+     "kind": "Report an issue",
+     "url": "https://github.com/protegeproject/protege/issues"
+    },
+    {
+     "kind": "Link",
+     "url": "https://protege.stanford.edu/software/#desktop-protege"
+    }
+   ],
+   [
+    {
+     "kind": "Report an issue",
+     "url": "https://github.com/protegeproject/protege/issues"
+    }
+   ]
+  ],
+  [
+   "topbraid-shacl-api",
+   "logo",
+   "https://github.com/TopQuadrant.png?size=200",
+   "https://media.licdn.com/dms/image/v2/C4E0BAQGZbqII1tkEEQ/company-logo_200_200/company-logo_200_200/0/1662058039652/topquadrant_logo?e=2147483647&v=beta&t=KLfeEeC2EBFwWu7O5XPB5KSR3o7mxcsE5Zt-JBrDtO4"
+  ],
+  [
+   "yasgui",
+   "logo",
+   "https://avatars.githubusercontent.com/u/6156399?s=60&v=1024",
+   "https://avatars.githubusercontent.com/u/7573184?v=4"
+  ]
+ ],
+ "struck_values": [],
+ "decide": [
+  [
+   "molgenis",
+   "Maturity",
+   "Mature"
+  ],
+  [
+   "molgenis",
+   "bio.tools id",
+   "molgenis"
+  ],
+  [
+   "molgenis",
+   "GitHub repo",
+   "molgenis/molgenis-emx2"
+  ],
+  [
+   "molgenis",
+   "DOI",
+   "https://doi.org/10.1093/bioinformatics/btw155"
+  ],
+  [
+   "xnat",
+   "Maturity",
+   "Mature"
+  ],
+  [
+   "xnat",
+   "bio.tools id",
+   "xnat"
+  ],
+  [
+   "xnat",
+   "GitHub repo",
+   "NrgXnat/xnat"
+  ],
+  [
+   "xnat",
+   "DOI",
+   "https://doi.org/10.1385/ni:5:1:11"
+  ],
+  [
+   "dmponline",
+   "GitHub repo",
+   "DMPRoadmap/roadmap"
+  ],
+  [
+   "fair-data-station",
+   "Maturity",
+   "Mature"
+  ],
+  [
+   "fair-data-station",
+   "bio.tools id",
+   "fair_data_station"
+  ],
+  [
+   "fair-data-station",
+   "RSD ID",
+   "fair-data-station"
+  ],
+  [
+   "fair-data-station",
+   "DOI",
+   "https://doi.org/10.1101/2022.08.03.502622"
+  ],
+  [
+   "fairdom-seek",
+   "Maturity",
+   "Mature"
+  ],
+  [
+   "fairdom-seek",
+   "bio.tools id",
+   "seek_for_science"
+  ],
+  [
+   "fairdom-seek",
+   "GitHub repo",
+   "seek4science/seek"
+  ],
+  [
+   "fairdom-seek",
+   "DOI",
+   "Wolstencroft K., Owen S., Du Preez F., et al. (2011) The SEEK: A platform for sharing data and models in systems biology. Methods in Enzymology. https://doi.org/10.1016/b978-0-12-385118-5.00029-3"
+  ],
+  [
+   "fair-data-point",
+   "Maturity",
+   "Emerging"
+  ],
+  [
+   "fair-data-point",
+   "bio.tools id",
+   "FAIRDataPoint"
+  ],
+  [
+   "fair-data-point",
+   "GitHub repo",
+   "FAIRDataTeam/FAIRDataPoint"
+  ],
+  [
+   "fair-data-point",
+   "DOI",
+   "Luiz Olavo Bonino da Silva Santos, Kees Burger, Rajaram Kaliyaperumal, Marek Suchánek, Jan Slifka, Mark Wilkinson FAIR Data Point."
+  ],
+  [
+   "openrefine",
+   "GitHub repo",
+   "OpenRefine/OpenRefine"
+  ],
+  [
+   "openrefine",
+   "RSD ID",
+   "openrefine"
   ],
   [
    "cedar-workbench",
-   "Download",
-   "(1) https://metadatacenter.readthedocs.io/en/latest/install-overview/ vs (2) https://github.com/metadatacenter/cedar-mkdocs"
+   "Maturity",
+   "Mature"
   ],
   [
    "cedar-workbench",
-   "Logo",
-   "https://www.google.com/s2/favicons?domain=metadatacenter.org&sz=128"
+   "bio.tools id",
+   "cedar_workbench"
   ],
   [
-   "graphdb",
-   "Logo",
-   "https://www.google.com/s2/favicons?domain=graphdb.ontotext.com&sz=128"
+   "cedar-workbench",
+   "GitHub repo",
+   "metadatacenter/cedar-template-editor"
+  ],
+  [
+   "cedar-workbench",
+   "DOI",
+   "https://biokeanos.com/source/Center%20for%20Expanded%20Data%20Annotation%20and%20Retrieval%20Workbench"
+  ],
+  [
+   "blazegraph",
+   "GitHub repo",
+   "blazegraph/database"
   ],
   [
    "ardc-fair-self-assessment-tool",
-   "Logo",
-   "https://www.google.com/s2/favicons?domain=ardc.edu.au&sz=128"
+   "GitHub repo",
+   "au-research/FAIR-Data-Assessment-Tool"
   ],
   [
    "fair-data-maturity-model",
-   "Short description",
-   "RDA recommendation with 41 indicators, priorities and scoring levels to judge how FAIR your (meta)data are, plus a spreadsheet to fill in."
-  ],
-  [
-   "fair-data-maturity-model",
-   "Logo",
-   "https://www.google.com/s2/favicons?domain=zenodo.org&sz=128"
+   "DOI",
+   "10.15497/rda00050"
   ],
   [
    "fair-checker",
-   "Documentation",
-   "https://fair-checker.france-bioinformatique.fr/docs/index.html"
+   "Maturity",
+   "Emerging"
   ],
   [
    "fair-checker",
-   "Logo",
-   "https://www.google.com/s2/favicons?domain=fair-checker.france-bioinformatique.fr&sz=128"
+   "bio.tools id",
+   "fair-checker"
   ],
   [
-   "art-decor",
-   "license",
-   "GPL-3.0-only"
+   "fair-checker",
+   "GitHub repo",
+   "IFB-ElixirFr/FAIR-checker"
   ],
   [
-   "art-decor",
-   "license",
-   "LGPL-2.1-only"
+   "fair-checker",
+   "DOI",
+   "https://doi.org/10.1186/s13326-023-00289-5"
+  ],
+  [
+   "fair-evaluator",
+   "GitHub repo",
+   "FAIRMetrics/Metrics"
+  ],
+  [
+   "fairassist",
+   "GitHub repo",
+   "FAIRsharing/FAIRassist-App"
+  ],
+  [
+   "fair-aware",
+   "GitHub repo",
+   "FAIRsFAIR/fair-aware"
   ],
   [
    "csv-on-the-web",
-   "license",
-   "W3C Document License"
+   "GitHub repo",
+   "w3c/csvw"
   ],
   [
    "icrf-generator",
-   "About text",
-   "The iCRF Generator is an open-source Java desktop application, developed at Amsterdam UMC, with a wizard in which you pick items from published online codebooks, such as the Dutch Clinical Building Blocks (zibs), the Basic Health Data Set and the VASCA rare disease codebook in ART-DECOR. It writes these items as eCRF definitions for Castor EDC, REDCap, OpenClinica 3 / LibreClinica, MOLGENIS EMX or CDISC ODM-XML, and keeps the terminology codes (for example SNOMED CT) that the codebook already contains. Sections, repeating groups and other study-specific details are added afterwards in the EDC system. Support for openEHR codebooks is currently not working; see the GitHub README."
+   "bio.tools id",
+   "icrf_generator"
+  ],
+  [
+   "icrf-generator",
+   "GitHub repo",
+   "aderidder/iCRFGenerator"
+  ],
+  [
+   "icrf-generator",
+   "DOI",
+   "https://doi.org/10.12688/f1000research.21576.1"
+  ],
+  [
+   "redcap",
+   "Maturity",
+   "Mature"
+  ],
+  [
+   "redcap",
+   "bio.tools id",
+   "redcap"
+  ],
+  [
+   "redcap",
+   "DOI",
+   "Harvey L.A. (2018) REDCap: Web-based software for all types of data storage and collection editorial. Spinal Cord. https://doi.org/10.1038/s41393-018-0169-9"
+  ],
+  [
+   "protege",
+   "bio.tools id",
+   "protege"
+  ],
+  [
+   "protege",
+   "GitHub repo",
+   "protegeproject/protege"
+  ],
+  [
+   "protege",
+   "DOI",
+   "https://doi.org/10.1093/bioinformatics/btu256"
+  ],
+  [
+   "robot",
+   "bio.tools id",
+   "robot"
+  ],
+  [
+   "robot",
+   "GitHub repo",
+   "ontodev/robot"
+  ],
+  [
+   "robot",
+   "DOI",
+   "Jackson R.C., Balhoff J.P., Douglass E., et al. (2019) ROBOT: A Tool for Automating Ontology Workflows. BMC Bioinformatics. https://doi.org/10.1186/s12859-019-3002-3"
+  ],
+  [
+   "topbraid-shacl-api",
+   "GitHub repo",
+   "TopQuadrant/shacl"
+  ],
+  [
+   "pyshacl",
+   "GitHub repo",
+   "RDFLib/pySHACL"
   ],
   [
    "sssom-toolkit",
-   "Logo",
-   "https://github.com/mapping-commons.png?size=200"
+   "GitHub repo",
+   "mapping-commons/sssom-py"
   ],
   [
    "sparnatural",
-   "Logo",
-   "https://www.google.com/s2/favicons?domain=sparnatural.eu&sz=128"
+   "GitHub repo",
+   "sparna-git/Sparnatural"
+  ],
+  [
+   "wikidata-query-builder",
+   "GitHub repo",
+   "wikimedia/wikidata-query-builder"
   ],
   [
    "yasgui",
-   "Documentation",
-   "https://docs.triply.cc/yasgui/"
-  ],
-  [
-   "yasgui",
-   "Logo",
-   "https://avatars.githubusercontent.com/u/52077849"
+   "GitHub repo",
+   "rdfjs/Yasgui"
   ],
   [
    "virtuoso-query-editor",
-   "Cost",
-   "Free and paid"
+   "code_availability",
+   "Open source"
   ],
   [
    "virtuoso-query-editor",
-   "Download",
-   "1: https://vos.openlinksw.com/owiki/wiki/VOS/VOSSparqlProtocol, or 2: https://vos.openlinksw.com/owiki/wiki/VOS/VOSSparqlProtocol"
-  ],
-  [
-   "aspera",
-   "Logo",
-   "https://www.google.com/s2/favicons?domain=ibm.com&sz=128"
-  ],
-  [
-   "globus",
-   "Logo",
-   "https://www.google.com/s2/favicons?domain=globus.org&sz=128"
+   "GitHub repo",
+   "openlink/virtuoso-opensource"
   ]
  ],
  "notes_mapped": [
@@ -163,12 +414,6 @@
    "On the website"
   ],
   [
-   "ardc-fair-self-assessment-tool",
-   "Download",
-   "nvt: https://fairdata.ardc.edu.au/",
-   "not applicable: no download"
-  ],
-  [
    "fair-data-maturity-model",
    "Documentation",
    "platform website",
@@ -191,6 +436,12 @@
    "Download",
    "SaaS",
    "hosted: true"
+  ],
+  [
+   "fair-checker",
+   "Documentation",
+   "https://fair-checker.france-bioinformatique.fr/docs/index.html (currently down 21-10-26)",
+   "https://fair-checker.france-bioinformatique.fr/docs/index.html"
   ],
   [
    "fairassist",
@@ -233,40 +484,6 @@
    "Documentation",
    "website and github documentation",
    "On the website and in the GitHub repository"
-  ],
-  [
-   "redcap",
-   "Download",
-   "via license: https://projectredcap.org/join/, server: https://projectredcap.org/software/requirements/",
-   [
-    {
-     "label": "Request a licence",
-     "url": "https://projectredcap.org/join/"
-    },
-    {
-     "label": "Server requirements",
-     "url": "https://projectredcap.org/software/requirements/"
-    }
-   ]
-  ],
-  [
-   "protege",
-   "Download",
-   "web version: https://protegewiki.stanford.edu/wiki/WebProtege, download version: https://protege.stanford.edu/software/#desktop-protege, or: https://github.com/protegeproject/protege-distribution/releases",
-   [
-    {
-     "label": "WebProtégé (online)",
-     "url": "https://protegewiki.stanford.edu/wiki/WebProtege"
-    },
-    {
-     "label": "Desktop version",
-     "url": "https://protege.stanford.edu/software/#desktop-protege"
-    },
-    {
-     "label": "Desktop releases on GitHub",
-     "url": "https://github.com/protegeproject/protege-distribution/releases"
-    }
-   ]
   ],
   [
    "robot",
@@ -312,13 +529,8 @@
   [
    "globus",
    "Download",
-   "SaaS for users, for admin and developers: https://docs.globus.org/getting-started/",
-   [
-    {
-     "label": "Set-up for admins and developers",
-     "url": "https://docs.globus.org/getting-started/"
-    }
-   ]
+   "SaaS",
+   "hosted: true"
   ]
  ]
 }
