@@ -27,13 +27,6 @@ writers:
     affiliation: Health-RI
     active: false
     image: ""
-  - id: 25
-    firstName: Douwe
-    lastName: Spaanderman
-    orcid: 0000-0001-8397-2339
-    affiliation: Health-RI
-    active: true
-    image: douwe_spaanderman.jpg
   - id: 5
     firstName: Fieke
     lastName: Schoots
@@ -158,7 +151,7 @@ writers:
     lastName: Steeghs Jansen
     orcid: 0009-0007-2315-0983
     affiliation: Health-RI
-    active: true
+    active: false
     image: mariska_steeghs.jpg
   - id: 23
     firstName: Vedran
@@ -174,6 +167,20 @@ writers:
     affiliation: Radboudumc
     active: true
     image: veerle_souverein.jpeg
+  - id: 25
+    firstName: Douwe
+    lastName: Spaanderman
+    orcid: 0000-0001-8397-2339
+    affiliation: Health-RI
+    active: false
+    image: douwe_spaanderman.jpg
+  - id: 26
+    firstName: Frank
+    lastName: Bruning
+    orcid: 0009-0006-3127-1235
+    affiliation: Health-RI
+    active: true
+    image: frank_bruning.jpg
 reviewers:
   - id: 1
     firstName: Anna
