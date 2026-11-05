@@ -1,4 +1,9 @@
 // Include here all custom classes to add extra styling on top of what the theme and bootstrap variables offer. 
+
+// FAIR letter colours, shared by the homepage and tool pages
+$fair-colors: (F: #1f6fb2, A: #2a8c82, I: #6a4fb3, R: #b5562a);
+$fair-planning-color: #455a64;
+
 @import "components/info-box";
 @import "components/metroline-grid";
 @import "components/metroline-status";
@@ -19,6 +24,7 @@
 @import "components/footer-styling";
 @import "components/use-case-cards";
 @import "components/homepage";
+@import "components/page-intro";
 @import "components/glossary-tooltips";
 @import "components/step-metadata";
 @import "components/tool-badges";

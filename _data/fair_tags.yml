@@ -1,0 +1,18 @@
+# FAIR tags of tools (`fair:` in _data/tools_v2.yml): the FAIR principle a tool helps with, or `planning`
+# for tools that assess or plan FAIRness. Used by the homepage and the FAIR filter of the tool catalogue.
+- code: F
+  name: Findable
+  text: Describe data with rich metadata and register it where people and machines can find it.
+- code: A
+  name: Accessible
+  text: Store, transfer and query data, with clear rules on who can access it.
+- code: I
+  name: Interoperable
+  text: Use shared formats, vocabularies and ontologies, so data can be combined with other data.
+- code: R
+  name: Reusable
+  text: Validate data and describe it with community standards, so others can reuse it.
+- code: planning
+  name: FAIR assessment & planning
+  short: Assessment & planning   # chip on the homepage
+  text: Check how FAIR your data is, or plan how to make it FAIR, for example in a data management plan.

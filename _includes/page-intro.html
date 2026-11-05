@@ -1,0 +1,14 @@
+{%- comment -%}
+  Intro box at the top of an overview page (use cases, tools, FAIR steps): the section's icon from the
+  homepage cards, a lead sentence and a short explanation.
+  Parameters: icon (use-cases, tools or steps), lead, text (may contain HTML; capture it first).
+{%- endcomment -%}
+<div class="page-intro">
+  <div class="page-intro-icon" aria-hidden="true">{% include section-icon.html icon=include.icon %}</div>
+  <div class="page-intro-body">
+    <p class="page-intro-lead">{{ include.lead }}</p>
+    {%- if include.text %}
+    <p class="page-intro-text">{{ include.text | strip }}</p>
+    {%- endif %}
+  </div>
+</div>

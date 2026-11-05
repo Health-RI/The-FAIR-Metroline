@@ -6,4 +6,7 @@ toc: false
 redirect_from: [/cbioportal, /slide-score, /oncoanalyser]
 ---
 
+{% capture intro %}Each tool page shows which FAIR principles the tool supports and in which phase of a research project you use it. Filter by FAIR principle, domain or phase, or search by name.{% endcapture %}
+{% include page-intro.html icon="tools" lead="Software and services that help make your data FAIR." text=intro %}
+
 {% include toolassemblies/search-tiles.html %}

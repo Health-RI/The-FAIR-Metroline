@@ -34,6 +34,9 @@ title: FAIR Metroline steps
 {% assign allgroups = allgroups | split: ", " | uniq %}
 {% assign audience_options = "Data holder|Data user" | split: "|" %}
 
+{% capture intro %}Each step explains why it matters, how to do it, which expertise you need and, for most steps, which tools can help. Filter the steps below, or follow a <a href="{{ '/fair_metroline_use_cases' | relative_url }}">use case</a> for a ready-made route. New to FAIR? Start with the <a href="{{ '/fair_basics' | relative_url }}">Introduction to FAIR</a>.{% endcapture %}
+{% include page-intro.html icon="steps" lead="Detailed step-by-step guidance on making data FAIR, for data stewards and others who already know the FAIR principles." text=intro %}
+
 <div class="row g-4 row-cols-1 row-cols-md-2 my-4">
   {% include tile-filtering/tile-filter-select.html id="group-input" key="group" label="Filter by group" all_label="All groups" clear_label="group" options=allgroups %}
   {% include tile-filtering/tile-filter-select.html id="keywords-input" key="keywords" param="keyword" label="Filter by keyword" all_label="All keywords" clear_label="keyword" options=allkeywords %}
