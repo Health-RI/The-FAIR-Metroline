@@ -1,0 +1,125 @@
+- status: "prerequisite"
+  text: "You know what you want to achieve: your FAIRification objectives are clear."
+  step_ids:
+    - 1
+
+- status: "prerequisite"
+  text: "A FAIR data steward can help you when needed."
+  step_ids:
+    - 3
+
+- status: "prerequisite"
+  text: "Your team has followed training where its knowledge has gaps."
+  step_ids:
+    - 4
+
+- title: "Check permissions for sharing and reuse"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Check whether the existing informed consent covers the intended sharing and reuse.</li>
+         <li>Check which GDPR and institutional rules apply.</li>
+         <li>Identify any restrictions or additional permissions needed before sharing.</li>
+      </ol>
+  "
+  step_ids:
+    - 21
+    - 17
+  examples:
+    - role: "Researcher"
+      description: "I check whether the existing consent and institutional permissions cover sharing the 20 CT images for validation, comparison or educational use. I identify any restrictions that I need to address."
+
+- title: "Choose a suitable repository"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Select a repository that accepts the data type you want to share, and which supports the anticipated access restrictions.</li>
+         <li>Review its requirements for file formats, documentation and metadata.</li>
+         <li>Check whether the repository provides a persistent identifier and a publicly accessible dataset landing page.</li>
+      </ol>
+  "
+  step_ids:
+    - 10
+    - 9
+  examples:
+    - role: "Researcher"
+      description: "I look for a repository that accepts CT imaging datasets and supports the expected access conditions. I review its submission requirements before preparing the files."
+
+- title: "Retrieve and de-identify the data and metadata"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Retrieve the selected data and associated metadata from the source system.</li>
+         <li>Check the images, filenames and metadata for identifying information. De-identify the data as required and verify that the result is suitable for the intended access conditions.</li>
+         <li>Assess whether essential information, such as acquisition settings and a description of the study population, is available. Collect missing information where possible and document remaining gaps.</li>
+      </ol>
+  "
+  step_ids:
+    - 7
+    - 8
+  examples:
+    - role: "Researcher"
+      description: "I retrieve the 20 CT images and associated metadata from the clinical system or institutional share. I check the images and DICOM headers for identifying information and collect the contextual information needed for reuse. "
+
+- title: "Organise and document the dataset"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Use a clear folder structure and consistent filenames, with documentation that explains how files and metadata relate.</li>
+         <li>Use formats suitable for reuse and accepted by the chosen repository. Ensure that essential metadata are preserved and document any processing or format conversions.</li>
+         <li>Add a README explaining the dataset contents, file structure and information needed to interpret the data independently.</li>
+      </ol>
+  "
+  examples:
+    - role: "Researcher"
+      description: "I organise the CT images and metadata consistently and add a README describing the dataset. I explain any processing or conversions so that another researcher can understand the files without contacting me."
+
+- title: "Prepare the dataset metadata"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Provide the metadata required by the repository, including the title, creators, description, keywords and dataset version.</li>
+         <li>Ensure that the metadata accurately describe the prepared dataset and its relationship to the published article.</li>
+      </ol>
+  "
+  step_ids:
+    - 8
+    - 10
+  examples:
+    - role: "Researcher"
+      description: "I prepare a repository description of the CT image dataset, identify its creators and version, and link it to an article in which the images were used."
+
+- title: "Define access and reuse conditions"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Document permitted uses and restrictions, using an appropriate licence or agreement where applicable.</li>
+         <li>If access is restricted, explain how researchers can request access and how requests will be assessed.</li>
+      </ol>
+  "
+  step_ids:
+    - 21
+  examples:
+    - role: "Researcher"
+      description: "I confirm the appropriate access conditions with institutional support where needed. I document how the CT images may be reused and, if access is restricted, how other researchers can request them. "
+
+- title: "Publish the dataset and verify access"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Publish the prepared data and documentation under the agreed access conditions.</li>
+         <li>Register the dataset metadata and obtain a persistent identifier.</li>
+         <li>Verify that the persistent identifier resolves to the correct dataset record and that the files and access instructions are available as intended.</li>
+      </ol>
+  "
+  step_ids:
+    - 9
+    - 10
+  examples:
+    - role: "Researcher"
+      description: "I publish the prepared CT dataset and documentation and obtain a persistent identifier. I check that other researchers can access the data or request access as specified."
+
+
+- title: "The dataset is available for reuse"
+  status: "destination"
+  description: "The dataset has a persistent identifier, clear documentation and defined access and reuse conditions. Other researchers can understand it independently and access or request the dataset through the documented process."
