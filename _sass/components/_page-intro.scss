@@ -1,0 +1,59 @@
+// ============================================
+// PAGE INTRO — _includes/page-intro.html, at the top of the use cases, tools and FAIR steps pages
+// ============================================
+
+.page-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin: 0.5rem 0 2rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, rgba($primary, 0.07), rgba($link-color, 0.03));
+  border: 1px solid rgba($primary, 0.12);
+  border-left: 4px solid $primary;
+  border-radius: 12px;
+}
+
+.page-intro-icon {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: $primary;
+  color: #fff;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.page-intro-lead {
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: $primary;
+}
+
+.page-intro-text {
+  margin: 0;
+  line-height: 1.6;
+  color: $secondary;
+}
+
+@media (max-width: 576px) {
+  .page-intro {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .page-intro-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

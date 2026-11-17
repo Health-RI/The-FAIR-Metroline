@@ -115,6 +115,88 @@
 }
 
 // ============================================
+// TOOLS THAT SUPPORT FAIR DATA (a chip per FAIR tag, linking to the filtered tool catalogue)
+// ============================================
+
+.homepage-fair-tools {
+  max-width: 1200px;
+  margin: 4rem 0;
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $primary;
+    margin-bottom: 1rem;
+  }
+}
+
+.fair-tools-intro {
+  color: $secondary;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.fair-chips {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+// the theme spaces every list item (#main ul li)
+#main .fair-chips li { margin: 0; }
+
+.fair-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.5rem 0.3rem 0.3rem;
+  background: white;
+  border: 1px solid rgba($light, 0.2);
+  border-radius: 999px;
+  color: $primary;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: $light;
+    box-shadow: 0 4px 12px rgba($light, 0.15);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+}
+
+.fair-chip-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  background: $fair-planning-color;
+
+  svg { width: 1rem; height: 1rem; }
+}
+
+@each $letter, $color in $fair-colors {
+  .fair-chip-badge--#{$letter} { background: $color; }
+}
+
+.fair-chip-count {
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  background: rgba($primary, 0.08);
+  color: $secondary;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+// ============================================
 // RECENT USE CASES SECTION
 // ============================================
 
@@ -202,7 +284,8 @@
     font-size: 1.25rem;
   }
 
-  .homepage-recent-use-cases .section-title {
+  .homepage-recent-use-cases .section-title,
+  .homepage-fair-tools .section-title {
     font-size: 1.5rem;
   }
 }

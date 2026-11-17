@@ -1,27 +1,35 @@
 {%- comment -%}
-  Tool catalogue (pages/toolassemblies/tool_selection.md): a card per tool page, filters for domain,
-  life-cycle phase and institute, and a search box. Cards and filters use verified values only; a filter
+  Tool catalogue (pages/toolassemblies/tool_selection.md): a card per tool page, filters for FAIR principle,
+  domain, life-cycle phase and institute, and a search box. Cards and filters use verified values only; a filter
   is shown only when at least one tool has a value for it. Filters can be set from the URL, for example
-  ?domain=clinical-research&phase=collect&institute=umcg. Filters, cards and the filter script are the shared
+  ?fair=findable&domain=clinical-research&phase=collect&institute=umcg. Filters, cards and the filter script are the shared
   _includes/tile-filtering components.
 {%- endcomment -%}
 {%- assign tools = site.pages | where: "type", "tool" | sort_natural: "title" -%}
 {%- assign none = "" | split: "" -%}
-{%- assign all_domains = none -%}{%- assign used_phases = none -%}{%- assign all_institutes = none -%}
+{%- assign all_domains = none -%}{%- assign used_phases = none -%}{%- assign all_institutes = none -%}{%- assign used_fair = none -%}
 {%- for t in tools -%}
+  {%- if t.fair -%}{%- assign used_fair = used_fair | concat: t.fair -%}{%- endif -%}
   {%- if t.domain -%}{%- assign all_domains = all_domains | concat: t.domain -%}{%- endif -%}
   {%- if t.phase -%}{%- assign used_phases = used_phases | concat: t.phase -%}{%- endif -%}
   {%- if t.institutes -%}{%- assign all_institutes = all_institutes | concat: t.institutes -%}{%- endif -%}
 {%- endfor -%}
 {%- assign all_domains = all_domains | uniq | sort -%}
 {%- assign all_institutes = all_institutes | uniq | sort -%}
-{%- comment -%} phases in life-cycle order {%- endcomment -%}
+{%- comment -%} FAIR tags in F, A, I, R, planning order; phases in life-cycle order {%- endcomment -%}
+{%- assign all_fair = none -%}
+{%- for tag in site.data.fair_tags -%}
+  {%- if used_fair contains tag.name -%}{%- assign all_fair = all_fair | push: tag.name -%}{%- endif -%}
+{%- endfor -%}
 {%- assign all_phases = none -%}
 {%- for stage in site.data.lifecycle_stages -%}
   {%- if used_phases contains stage.name -%}{%- assign all_phases = all_phases | push: stage.name -%}{%- endif -%}
 {%- endfor -%}
 
 <div class="row g-4 row-cols-1 row-cols-md-2 my-4">
+  {%- if all_fair.size > 0 %}
+  {% include tile-filtering/tile-filter-select.html id="fair-input" key="fair" param="fair" label="Filter by FAIR" all_label="All FAIR principles" clear_label="FAIR" options=all_fair %}
+  {%- endif %}
   {%- if all_domains.size > 0 %}
   {% include tile-filtering/tile-filter-select.html id="domains-input" key="domains" param="domain" label="Filter by domain" all_label="All domains" clear_label="domains" options=all_domains %}
   {%- endif %}
@@ -44,7 +52,7 @@
 
 <div class="row row-cols-1 row-cols-md-2 g-4 mb-5 navigation-tiles">
   {%- for t in tools %}
-  <div class="col" data-domains="{% for d in t.domain %}{{ d | slugify }} {% endfor %}" data-phases="{% for ph in t.phase %}{{ ph | slugify }} {% endfor %}" data-institutes="{% for i in t.institutes %}{{ i | slugify }} {% endfor %}">
+  <div class="col" data-fair="{% for f in t.fair %}{{ f | slugify }} {% endfor %}" data-domains="{% for d in t.domain %}{{ d | slugify }} {% endfor %}" data-phases="{% for ph in t.phase %}{{ ph | slugify }} {% endfor %}" data-institutes="{% for i in t.institutes %}{{ i | slugify }} {% endfor %}">
     {% include toolassemblies/tool-card.html tool=t %}
   </div>
   {%- endfor %}
