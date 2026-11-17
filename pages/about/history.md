@@ -1,5 +1,6 @@
 ---
 title: FAIR Metroline - a short history
+description: "Key milestones in the history of the FAIR Metroline, starting with the publication of the FAIR Guiding Principles."
 permalink: /about/history
 sidebar: about
 ---

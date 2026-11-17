@@ -1,5 +1,6 @@
 ---
 title: Tool selection
+description: "Browse and search the FAIR Metroline tool catalogue and filter tools by domain, data life cycle phase and institute."
 permalink: toolassemblies/tool_selection
 toc: false
 # Pages of tools that were removed from the list

@@ -1,5 +1,6 @@
 ---
 title: FAIR Metroline steps
+description: "Overview of all FAIR Metroline steps, which you can filter by group, keyword, expertise and audience to find the guidance you need."
 ---
 {% assign allkeywords = "" %}
 {% assign allexpertise = "" %}

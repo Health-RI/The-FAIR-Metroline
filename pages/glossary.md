@@ -1,5 +1,6 @@
 ---
 title: Glossary
+description: "Definitions of the FAIR and data management terms used throughout the FAIR Metroline."
 ---
 
 <div id="top"></div>
