@@ -98,7 +98,7 @@ check '5 no activity, nothing pending', v['activity'].nil? && v['activity_pendin
 
 # 6 ids verified one by one
 v = view('ids' => { 'biotools' => 'bt' }, 'pending' => { 'ids' => { 'github' => 'o/r' } })
-links = v['more_links'].to_h { |l| [l['url'], l['pending']] }
+links = v['listed_in'].to_h { |l| [l['url'], l['pending']] }
 check '6 bio.tools link verified', links['https://bio.tools/bt'] == false
 check '6 github link pending', links['https://github.com/o/r'] == true
 check '6 metrics from verified ids', v['metrics']['citation_count'] == 5 && v['metrics']['github_stars'].nil? && v['metrics_pending'].nil? && v['metrics']['source'] == 'bio.tools'
@@ -120,13 +120,68 @@ check '12 unknown related ids dropped', v['related'] == ['b'] && v['related_pend
 e_mod = Jekyll::ToolEnrichment
 cff = "cff-version: 1.2.0\ntitle: Tool\nauthors:\n  - given-names: Ann\n    family-names: Lee\ndate-released: 2024-05-01\nversion: 1.0\n"
 check '7 CITATION.cff with a date', e_mod.format_cff(cff) == 'Ann Lee (2024) Tool. Version 1.0.'
+# 8 fetch: a source that does not answer keeps its previous values and date
+NET = {}   # url pattern -> [status, body]
 module Jekyll::ToolEnrichment
-  def self.get_text(*) = nil
-  def self.save_cache(*) = nil
+  def self.get_response(url, *) = NET.find { |pat, _| url.include?(pat) }&.last || [nil, nil]
 end
-e_mod.instance_variable_set(:@cache, { 'x' => { 'at' => 0, 'v' => Jekyll::ToolEnrichment::CACHE_VERSION, 'data' => { 'github_stars' => 3, 'fetched_at' => '2026-01-01' } } })
-check '8 failed fetch keeps fetched_at', e_mod.real_enrich(nil, { 'github' => 'x' })['fetched_at'] == '2026-01-01'
-e_mod.instance_variable_set(:@cache, {})
-check '8 failed fetch without cache has no date', e_mod.real_enrich(nil, { 'github' => 'y' }) == {}
+NET.clear
+d, failed = e_mod.fetch({ 'github' => 'x/y' }, { 'github_stars' => 3, 'fetched_at' => '2026-01-01' })
+check '8 failed fetch keeps values and date', d == { 'github_stars' => 3, 'fetched_at' => '2026-01-01' } && failed == ['GitHub']
+check '8 failed fetch without previous data is empty', e_mod.fetch({ 'github' => 'x/y' })[0] == {}
+
+# 13 publications: bio.tools first, OpenAlex counts, sheet DOI only as a fallback
+bt = { 'biotoolsID' => 'bt', 'publication' => [
+  { 'doi' => '10.1/pre', 'metadata' => { 'citationCount' => 9, 'title' => 'Preprint' } },
+  { 'doi' => '10.1/J', 'type' => ['Primary'], 'metadata' => { 'citationCount' => 4, 'title' => 'Journal', 'date' => '2020-01-01' } },
+  { 'pmid' => '123', 'metadata' => { 'citationCount' => 2, 'title' => 'No DOI' } }] }
+work = ->(id, n) { [200, JSON.generate('id' => id, 'cited_by_count' => n, 'title' => 'OA title', 'publication_year' => 2021)] }
+NET.clear
+NET['bio.tools/api/bt'] = [200, JSON.generate(bt)]
+NET['doi.org/10.1/j?'] = work.call('W1', 76)
+NET['doi.org/10.1/pre?'] = work.call('W1', 76)            # OpenAlex merged the preprint into the article
+d, failed = e_mod.fetch({ 'biotools' => 'bt', 'doi' => '10.1/sheet' })
+titles = d['papers'].map { |x| x['title'] }
+check '13 bio.tools papers, primary first, sheet DOI not added', titles == ['Journal', 'Preprint', 'No DOI'] && failed.empty?
+check '13 merged versions counted once, no-DOI paper keeps bio.tools count', d['citation_count'] == 76 + 2 && d['papers'][1]['duplicate'] && d['citation_source'] == 'OpenAlex'
+check '13 bio.tools metadata wins, OpenAlex fills gaps', d['papers'][0]['year'] == '2020' && d['papers'][1]['year'] == '2021'
+NET.clear
+NET['bio.tools/api/bt'] = [200, JSON.generate(bt)]
+d, failed = e_mod.fetch({ 'biotools' => 'bt' })
+prev = { 'papers' => [{ 'doi' => '10.1/j', 'count' => 76, 'source' => 'OpenAlex' }], 'citation_count' => 76, 'citation_source' => 'OpenAlex', 'fetched_at' => '2026-01-01' }
+d2, = e_mod.fetch({ 'biotools' => 'bt' }, prev)
+check '13 OpenAlex down keeps earlier OpenAlex counts', d2['citation_count'] == 76 && d2['papers'] == prev['papers']
+check '13 OpenAlex down keeps bio.tools counts', d['citation_count'] == 15 && d['citation_source'] == 'bio.tools' && failed == ['OpenAlex']
+NET.clear
+NET['bio.tools/api/none'] = [200, JSON.generate('biotoolsID' => 'none')]
+NET['doi.org/10.1/sheet?'] = work.call('W2', 5)
+NET['doi.org/10.1/unknown?'] = [404, '']
+d, = e_mod.fetch({ 'biotools' => 'none', 'doi' => '10.1/sheet' })
+check '13 sheet DOI used when bio.tools has no paper', d['citation_count'] == 5 && d['papers'][0]['origin'] == 'sheet'
+d, failed = e_mod.fetch({ 'doi' => '10.1/unknown' })
+check '13 sheet DOI unknown to OpenAlex has no count', d['papers'][0]['count'].nil? && d['citation_count'] == 0 && failed.empty?
+d, = e_mod.fetch({ 'biotools' => 'none' }, { 'papers' => [{ 'doi' => '10.1/old' }], 'citation_count' => 3, 'citation_source' => 'bio.tools' })
+check '13 papers removed from bio.tools do not come back', !d.key?('papers') && !d.key?('citation_count')
+
+# 14 build reads the data file only; missing data warns once
+site = Struct.new(:data).new({ 'tools_fetched' => { 'bt|o/r' => { 'github_stars' => 1 } } })
+check '14 lookup by key', e_mod.real_enrich(site, { 'biotools' => 'bt', 'github' => 'o/r' }) == { 'github_stars' => 1 }
+Jekyll::WARNINGS.clear
+2.times { e_mod.real_enrich(site, { 'github' => 'new/repo' }) }
+check '14 missing data warns once', Jekyll::WARNINGS.size == 1 && Jekyll::WARNINGS[0].include?('fetch_tool_data')
+
+# 15 view: metrics source, publications, Listed in, no duplicate links
+FAKE['cit'] = { 'citation_count' => 80, 'citation_source' => 'OpenAlex', 'fetched_at' => '2026-11-18',
+                'papers' => [{ 'doi' => '10.1/a', 'title' => 'A paper', 'count' => 80, 'source' => 'OpenAlex' }] }
+FAKE['cit|o/r'] = FAKE['cit'].merge('github_stars' => 7, 'repository' => 'https://github.com/o/r')
+v = view('ids' => { 'biotools' => 'cit', 'github' => 'o/r', 'doi' => '10.1/a' }, 'pending' => { 'ids' => { 'rsd' => 'r' } })
+check '15 source names OpenAlex', v['metrics']['source'] == 'bio.tools, GitHub and OpenAlex'
+check '15 publications with DOI and Dimensions links', v['papers'][0]['url'] == 'https://doi.org/10.1/a' && v['papers'][0]['dimensions'].end_with?('/doi/10.1/a') && v['papers_pending'] == []
+check '15 Listed in, verified and pending', v['listed_in'].map { |l| [l['label'], l['pending']] } == [['bio.tools', false], ['GitHub', false], ['Research Software Directory', true]]
+urls = v['more_links'].map { |l| l['url'] }
+check '15 more links leave out registries and the paper', urls.none? { |u| u.include?('bio.tools') || u == 'https://github.com/o/r' || u.include?('doi.org/10.1/a') }
+check '15 pending Listed in counts as pending', v['has_pending']
+v = view('ids' => { 'biotools' => 'bt' })
+check '15 stored count, no OpenAlex', v['metrics']['source'] == 'bio.tools'
 
 puts $fails.zero? ? 'all passed' : "#{$fails} failed"

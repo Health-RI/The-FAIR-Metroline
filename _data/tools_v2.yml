@@ -1,6 +1,6 @@
 # Tool entries (schema: _schemas/tool.schema.yml), rendered with _layouts/tool_profile.html.
 #
-# Imported on 2026-10-28 from the manual review (_review/tools4fair-annotation-form_new_v2.xlsx):
+# Imported on 2026-11-18 from the manual review (_review/tools4fair-annotation-form_new_v3.xlsx):
 # - top-level values were verified by a reviewer (green or yellow in the sheet);
 # - `pending:` holds values nobody has checked yet (white) or that still need a decision (purple).
 #   The live site shows only verified values and hides empty sections; add ?unverified=1 to a tool
@@ -40,6 +40,7 @@
       - {kind: Training, url: "https://academy.castoredc.com/"}
       - {kind: Training, url: "https://www.castoredc.com/resources/webinars/"}
       - {kind: Templates and examples, url: "https://forms.castoredc.com/"}
+      - {kind: Source code, url: "https://github.com/castoredc"}
   logo: toolassemblies/tools/castor.png
   keywords: [CDISC ODM]
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
@@ -107,12 +108,12 @@
       - {kind: Report an issue, url: "https://github.com/molgenis/molgenis-emx2/issues"}
   logo: toolassemblies/tools/molgenis.png
   keywords: [RDF, ontology]
+  ids:
+    biotools: molgenis
+    github: molgenis/molgenis-emx2
+    doi: 10.1093/bioinformatics/btw155
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     maturity: Mature
-    ids:
-      biotools: molgenis
-      github: molgenis/molgenis-emx2
-      doi: 10.1093/bioinformatics/btw155
     institutes: [UMCG]
     related: [fair-data-point, fairdom-seek]
 
@@ -147,12 +148,12 @@
       - {kind: Other, url: "https://www.health-ri.nl/en/health-ri-service-desk"}
   logo: toolassemblies/tools/xnat.png
   keywords: [DICOM]
+  ids:
+    biotools: xnat
+    github: NrgXnat/xnat
+    doi: "10.1385/NI:5:1:11"
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     maturity: Mature
-    ids:
-      biotools: xnat
-      github: NrgXnat/xnat
-      doi: "10.1385/ni:5:1:11"
     institutes: [Erasmus MC, Leiden UMC, UMCG]
     related: [fair-data-point]
 
@@ -187,9 +188,10 @@
       - {kind: Report an issue, url: "https://github.com/DMPRoadmap/roadmap/issues"}
   logo: toolassemblies/tools/dmponline.png
   keywords: [RDA DMP Common Standard]
+  ids:
+    github: DMPRoadmap/roadmap
+    doi: 10.5281/zenodo.7073740
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      github: DMPRoadmap/roadmap
     institutes: [Leiden UMC, Radboudumc, Vrije Universiteit Amsterdam, UMC Utrecht, "Wageningen University & Research", Universiteit Utrecht, Technische Universiteit Delft, Erasmus Universiteit Rotterdam]
     related: [fip-wizard, fair-aware]
 
@@ -222,6 +224,8 @@
       - {kind: Link, url: "https://leaf-framework.org/"}
   logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAEJ8d9O9pkiFQvrOcfA-gGxDEMXzW80nlYfPGRxJZlw&s"
   keywords: [MQTT]
+  ids:
+    github: leaf-framework/leaf
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     institutes: ["Wageningen University & Research"]
     related: [fair-data-station, fairdom-seek]
@@ -253,12 +257,13 @@
       - {kind: Documentation, url: "http://docs.fairbydesign.nl"}
   logo: toolassemblies/tools/fair-ds.png
   keywords: [RDF, ISA]
+  ids:
+    biotools: fair_data_station
+    github: FAIRDataTeam/FAIRDataStation
+    rsd: fair-data-station
+    doi: 10.1093/gigascience/giad014
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     maturity: Mature
-    ids:
-      biotools: fair_data_station
-      rsd: fair-data-station
-      doi: 10.1101/2022.08.03.502622
     institutes: ["Wageningen University & Research"]
     related: [fairdom-seek, leaf, cedar-workbench]
 
@@ -290,15 +295,12 @@
       - {kind: Report an issue, url: "https://github.com/seek4science/seek/issues"}
   logo: "https://seek4science.org/assets/images/fairdom-seek-logo-alt.svg"
   keywords: [ISA, RDF]
+  ids:
+    biotools: seek_for_science
+    github: seek4science/seek
+    doi: 10.1186/s12918-015-0174-y
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     maturity: Mature
-    ids:
-      biotools: seek_for_science
-      github: seek4science/seek
-      doi: 10.1016/b978-0-12-385118-5.00029-3
-    how_to_cite: >-
-      Wolstencroft K., Owen S., Du Preez F., et al. (2011) The SEEK: A platform for sharing data and
-      models in systems biology. Methods in Enzymology. https://doi.org/10.1016/b978-0-12-385118-5.00029-3
     related: [fair-data-station, leaf, molgenis]
 
 - id: fair-data-point
@@ -328,14 +330,13 @@
       - {kind: Link, url: "https://specs.fairdatapoint.org/"}
   logo: "https://avatars.githubusercontent.com/u/10460991?s=60&v=4"
   keywords: [DCAT, RDF, SHACL, ontology]
+  ids:
+    biotools: FAIRDataPoint
+    github: FAIRDataTeam/FAIRDataPoint
+    rsd: fairdatapoint
+    doi: 10.1162/dint_a_00160
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     maturity: Emerging
-    ids:
-      biotools: FAIRDataPoint
-      github: FAIRDataTeam/FAIRDataPoint
-    how_to_cite: >-
-      Luiz Olavo Bonino da Silva Santos, Kees Burger, Rajaram Kaliyaperumal, Marek Suchánek, Jan Slifka,
-      Mark Wilkinson FAIR Data Point.
     related: [graphdb, castor]
 
 - id: ontotext-refine
@@ -388,10 +389,11 @@
       - {kind: Report an issue, url: "https://github.com/OpenRefine/OpenRefine/issues"}
   logo: "https://openrefine.org/img/openrefine_logo.svg"
   keywords: [CSV, RDF]
+  ids:
+    github: OpenRefine/OpenRefine
+    rsd: openrefine
+    software_doi: 10.5281/zenodo.595996
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      github: OpenRefine/OpenRefine
-      rsd: openrefine
     related: [ontotext-refine, graphdb]
 
 - id: cedar-workbench
@@ -419,15 +421,14 @@
       - {kind: Link, url: "https://github.com/metadatacenter/cedar-development/blob/develop/ops/BACKEND-RUNBOOK.md"}
   logo: "https://metadatacenter.org/wp-content/uploads/2019/03/CEDAR_logo_tree_no_line-3-80x80.png"
   keywords: [JSON-LD, RDF, ontology]
+  ids:
+    biotools: cedar_workbench
+    github: metadatacenter/cedar-template-editor
+    doi: 10.1007/978-3-319-68204-4_10
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     maturity: Mature
     ids:
-      biotools: cedar_workbench
-      github: metadatacenter/cedar-template-editor
       fairsharing: 10.25504/FAIRsharing.V527H4
-    how_to_cite: >-
-      
-      https://biokeanos.com/source/Center%20for%20Expanded%20Data%20Annotation%20and%20Retrieval%20Workbench
     related: [fair-data-station, fair-data-point]
 
 - id: graphdb
@@ -480,9 +481,9 @@
       - {kind: Report an issue, url: "https://github.com/blazegraph/database/issues"}
   logo: "https://blazegraph.com/images/blazegraph_logo.png"
   keywords: [RDF, SPARQL]
+  ids:
+    github: blazegraph/database
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      github: blazegraph/database
     related: [graphdb, fair-data-point]
 
 - id: ardc-fair-self-assessment-tool
@@ -508,9 +509,9 @@
       - {kind: Download, url: "https://github.com/au-research/FAIR-Data-Assessment-Tool/releases"}
       - {kind: Report an issue, url: "https://github.com/au-research/FAIR-Data-Assessment-Tool/issues"}
   logo: "https://ardc.edu.au/wp-content/uploads/2022/09/ardc-logo.svg"
+  ids:
+    github: au-research/FAIR-Data-Assessment-Tool
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      github: au-research/FAIR-Data-Assessment-Tool
     related: [fair-aware, fair-data-maturity-model, fair-checker]
 
 - id: fair-data-maturity-model
@@ -533,9 +534,9 @@
     other:
       - {kind: Documentation, url: "https://zenodo.org/records/3909563/files/FAIR%20Data%20Maturity%20Model_%20specification%20and%20guidelines_v1.00.pdf?download=1"}
   logo: "https://www.rd-alliance.org/wp-content/themes/rda/assets/images/logo.png"
+  ids:
+    doi: 10.15497/rda00050
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      doi: 10.15497/rda00050
     related: [ardc-fair-self-assessment-tool, fair-aware, fairassist]
 
 - id: fip-wizard
@@ -562,6 +563,8 @@
       - {kind: Documentation, url: "https://wiki.gofair.foundation/docs/fip/content.html"}
   logo: logos/fip-wizard_transp.svg
   keywords: [nanopublication, RDF, SPARQL]
+  ids:
+    github: fip-wizard/fip-wizard
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     related: [ardc-fair-self-assessment-tool, fair-data-maturity-model, dmponline]
 
@@ -588,12 +591,12 @@
       - {kind: Report an issue, url: "https://github.com/IFB-ElixirFr/FAIR-checker/issues"}
   logo: "https://www.ifb-elixir.fr/wp-content/uploads/2026/01/Fair-checker.png"
   keywords: [ontology, Bioschemas]
+  ids:
+    biotools: fair-checker
+    github: IFB-ElixirFr/fair-checker
+    doi: 10.1186/s13326-023-00289-5
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     maturity: Emerging
-    ids:
-      biotools: fair-checker
-      github: IFB-ElixirFr/FAIR-checker
-      doi: 10.1186/s13326-023-00289-5
     related: [fair-evaluator, fairassist]
 
 - id: fair-evaluator
@@ -622,9 +625,9 @@
       - {kind: Report an issue, url: "https://github.com/FAIRMetrics/Metrics/issues"}
   logo: "https://fairsharing.github.io/FAIR-Evaluator-FrontEnd/assets/img/fairmetrics.png"
   keywords: [smartAPI]
+  ids:
+    github: FAIRsharing/FAIR-Evaluator-FrontEnd
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      github: FAIRMetrics/Metrics
     related: [fair-checker, fairassist]
 
 - id: fairassist
@@ -649,9 +652,9 @@
       - {kind: Report an issue, url: "https://github.com/FAIRsharing/FAIRassist-App/issues"}
   logo: "https://avatars.githubusercontent.com/u/29867987"
   keywords: [registry]
+  ids:
+    github: FAIRsharing/FAIRassist-App
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      github: FAIRsharing/FAIRassist-App
     related: [fair-evaluator, fair-checker, fair-aware]
 
 - id: fair-aware
@@ -676,9 +679,9 @@
     other:
       - {kind: Download, url: "https://github.com/FAIRsFAIR/fair-aware/releases"}
   logo: "https://www.google.com/s2/favicons?domain=fairaware.dans.knaw.nl&sz=128"
+  ids:
+    github: FAIRsFAIR/fair-aware
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      github: FAIRsFAIR/fair-aware
     related: [ardc-fair-self-assessment-tool, fair-data-maturity-model]
 
 - id: art-decor
@@ -762,9 +765,8 @@
       - {kind: Report an issue, url: "https://github.com/w3c/csvw/issues"}
   logo: "https://www.google.com/s2/favicons?domain=w3.org&sz=128"
   keywords: [CSV, JSON-LD, RDF]
-  pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      github: w3c/csvw
+  ids:
+    github: w3c/csvw
 
 - id: icrf-generator
   name: iCRF Generator
@@ -793,11 +795,11 @@
       - {kind: Report an issue, url: "https://github.com/aderidder/iCRFGenerator/issues"}
   logo: logos/healthri_transp.png
   keywords: [eCRF, codebook, CDISC ODM]
+  ids:
+    biotools: icrf_generator
+    github: aderidder/iCRFGenerator
+    doi: 10.12688/f1000research.21576.1
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      biotools: icrf_generator
-      github: aderidder/iCRFGenerator
-      doi: 10.12688/f1000research.21576.1
     related: [art-decor, castor, redcap]
 
 - id: redcap
@@ -826,14 +828,11 @@
       - {kind: Link, url: "https://projectredcap.org/software/requirements/"}
   logo: "https://projectredcap.org/wp-content/themes/rcap/images/redcap_logo_high_res_white_on_black.svg"
   keywords: [FHIR]
+  ids:
+    biotools: redcap
+    doi: 10.1016/j.jbi.2008.08.010
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     maturity: Mature
-    ids:
-      biotools: redcap
-      doi: 10.1038/s41393-018-0169-9
-    how_to_cite: >-
-      Harvey L.A. (2018) REDCap: Web-based software for all types of data storage and collection
-      editorial. Spinal Cord. https://doi.org/10.1038/s41393-018-0169-9
     related: [castor, icrf-generator, art-decor]
 
 - id: protege
@@ -858,11 +857,13 @@
       - {kind: Report an issue, url: "https://github.com/protegeproject/protege/issues"}
   logo: "https://www.google.com/s2/favicons?domain=protege.stanford.edu&sz=128"
   keywords: [ontology, OWL, RDF, OBO format]
+  ids:
+    biotools: protege
+    github: protegeproject/protege
+    doi: 10.1093/bioinformatics/btu256
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      biotools: protege
-      github: protegeproject/protege
-      doi: 10.1093/bioinformatics/btu256
+    links:
+      download_note: "https://protegewiki.stanford.edu/wiki/WebProtege"
     related: [robot, sssom-toolkit, pyshacl]
 
 - id: robot
@@ -889,14 +890,11 @@
       - {kind: Report an issue, url: "https://github.com/ontodev/robot/issues"}
   logo: "https://github.com/ontodev.png?size=200"
   keywords: [ontology, OWL, OBO format, RDF]
+  ids:
+    biotools: ROBOT
+    github: ontodev/robot
+    doi: 10.1186/s12859-019-3002-3
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      biotools: robot
-      github: ontodev/robot
-      doi: 10.1186/s12859-019-3002-3
-    how_to_cite: >-
-      Jackson R.C., Balhoff J.P., Douglass E., et al. (2019) ROBOT: A Tool for Automating Ontology
-      Workflows. BMC Bioinformatics. https://doi.org/10.1186/s12859-019-3002-3
     related: [protege, sssom-toolkit]
 
 - id: topbraid-shacl-api
@@ -923,9 +921,9 @@
       - {kind: Report an issue, url: "https://github.com/TopQuadrant/shacl/issues"}
   logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGZbqII1tkEEQ/company-logo_200_200/company-logo_200_200/0/1662058039652/topquadrant_logo?e=2147483647&v=beta&t=KLfeEeC2EBFwWu7O5XPB5KSR3o7mxcsE5Zt-JBrDtO4"
   keywords: [SHACL, RDF, SPARQL, OWL]
+  ids:
+    github: TopQuadrant/shacl
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      github: TopQuadrant/shacl
     related: [pyshacl, fair-data-point]
 
 - id: pyshacl
@@ -951,9 +949,10 @@
       - {kind: Report an issue, url: "https://github.com/RDFLib/pySHACL/issues"}
   logo: "https://github.com/RDFLib.png?size=200"
   keywords: [SHACL, RDF, OWL]
+  ids:
+    github: RDFLib/pySHACL
+    software_doi: 10.5281/zenodo.4750840
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      github: RDFLib/pySHACL
     related: [topbraid-shacl-api, fair-data-point]
 
 - id: sssom-toolkit
@@ -982,9 +981,11 @@
       - {kind: Report an issue, url: "https://github.com/mapping-commons/sssom-py/issues"}
   logo: "https://avatars.githubusercontent.com/u/77892844?s=60&v=4"
   keywords: [SSSOM, ontology, OWL]
+  ids:
+    github: mapping-commons/sssom-py
+    doi: 10.1093/database/baac035
+    software_doi: 10.5281/zenodo.6611513
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      github: mapping-commons/sssom-py
     related: [robot, protege]
 
 - id: sparnatural
@@ -1012,9 +1013,9 @@
       - {kind: Link, url: "https://sparnatural.eu/demos/demo-dbpedia-en/"}
   logo: "https://avatars.githubusercontent.com/u/36700908?s=60&v=4"
   keywords: [SPARQL, RDF, SHACL, OWL, ontology]
+  ids:
+    github: sparna-git/Sparnatural
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      github: sparna-git/Sparnatural
     related: [wikidata-query-builder, yasgui, graphdb]
 
 - id: wikidata-query-builder
@@ -1041,9 +1042,9 @@
       - {kind: Link, url: "https://github.com/wikimedia/wikidata-query-builder"}
   logo: "https://www.wikidata.org/static/favicon/wikidata.ico"
   keywords: [SPARQL]
+  ids:
+    github: wikimedia/wikidata-query-builder
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      github: wikimedia/wikidata-query-builder
     related: [sparnatural, yasgui]
 
 - id: yasgui
@@ -1070,9 +1071,10 @@
       - {kind: Report an issue, url: "https://github.com/rdfjs/Yasgui/issues"}
   logo: "https://avatars.githubusercontent.com/u/7573184?v=4"
   keywords: [SPARQL]
+  ids:
+    github: rdfjs/Yasgui
+    doi: 10.3233/SW-150197
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
-    ids:
-      github: rdfjs/Yasgui
     related: [virtuoso-query-editor, sparnatural, wikidata-query-builder]
 
 - id: virtuoso-query-editor
@@ -1098,10 +1100,10 @@
       - {kind: Link, url: "https://vos.openlinksw.com/owiki/wiki/VOS/VOSSparqlProtocol"}
   logo: "https://www.openlinksw.com/skin/matrix/images/opllogo-minimal-blue.svg"
   keywords: [SPARQL, RDF]
+  ids:
+    github: openlink/virtuoso-opensource
   pending:   # not verified yet: hidden on the live site, shown with ?unverified=1
     code_availability: [Open source]
-    ids:
-      github: openlink/virtuoso-opensource
     related: [yasgui, sparnatural, graphdb]
 
 - id: surf-filesender

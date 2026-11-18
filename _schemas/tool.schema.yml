@@ -141,7 +141,8 @@ $defs:
           github: {type: string, pattern: "^[^/]+/[^/]+$"}
           rsd: {type: string}
           fairsharing: {type: string, pattern: "^10\\.25504/FAIRsharing\\."}
-          doi: {type: string, pattern: "^10\\."}
+          doi: {type: string, pattern: "^10\\.", description: "DOI of the main publication about the tool"}
+          software_doi: {type: string, pattern: "^10\\.", description: "DOI of the software itself (e.g. Zenodo)"}
 
       how_to_cite: {type: string}
 

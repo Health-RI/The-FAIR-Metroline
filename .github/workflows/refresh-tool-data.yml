@@ -1,0 +1,68 @@
+name: Refresh tool registry data
+
+# Fetches bio.tools, GitHub and OpenAlex data for the tool pages into _data/tools_fetched.json
+# (_scripts/fetch_tool_data.rb) and opens a pull request when it changed. The site build itself
+# never goes online. Needs the repository setting "Allow GitHub Actions to create and approve
+# pull requests" (Settings > Actions > General). Optional secret OPENALEX_API_KEY: without it,
+# OpenAlex shares a small daily budget between everyone on the runner's IP address.
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Mondays 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: refresh-tool-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1.204.0
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+          cache-version: 0
+
+      - name: Fetch registry data
+        run: bundle exec ruby _scripts/fetch_tool_data.rb | tee fetch-summary.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+
+      - name: Summary for the pull request
+        id: summary
+        run: |
+          {
+            echo 'body<<EOF'
+            echo 'Weekly refresh of the data fetched from bio.tools, GitHub and OpenAlex for the tool pages.'
+            echo 'Check the diff of `_data/tools_fetched.json` (for example a changed licence or paper) before merging.'
+            echo
+            echo '```'
+            cat fetch-summary.txt
+            echo '```'
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+          rm fetch-summary.txt
+
+      - name: Open or update the pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          base: dev
+          branch: bot/refresh-tool-data
+          add-paths: _data/tools_fetched.json
+          commit-message: Refresh tool registry data
+          title: Refresh tool registry data
+          body: ${{ steps.summary.outputs.body }}
+          delete-branch: true

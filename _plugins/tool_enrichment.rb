@@ -5,58 +5,80 @@ require 'json'
 require 'net/http'
 require 'uri'
 require 'yaml'
-require 'fileutils'
 
 module Jekyll
-  # Build-time enrichment of tool entries from bio.tools and GitHub.
-  # Results are cached in .jekyll-cache/tools_enriched.json for CACHE_TTL seconds so
-  # live-reload rebuilds don't hit the APIs. Failures are logged and ignored; a fetch that
-  # failed is retried after RETRY_TTL. Set GITHUB_TOKEN to lift GitHub's limit of 60 requests
-  # per hour for unauthenticated clients (about two requests are needed per tool).
+  # Registry data for the tool pages, from bio.tools, GitHub and OpenAlex.
+  #
+  # The site build never goes online: it reads _data/tools_fetched.json, which _scripts/fetch_tool_data.rb
+  # writes (weekly by .github/workflows/refresh-tool-data.yml, or by hand). The file is keyed by the ids
+  # a tool page fetches with (see `key`), once for the verified ids and once for all ids.
+  #
+  # Publications: bio.tools says which papers describe a tool; the verified publication DOI from the sheet
+  # is used only when bio.tools lists none. OpenAlex counts their citations, because the counts stored in
+  # bio.tools are rarely refreshed. Set GITHUB_TOKEN when fetching, to lift GitHub's limit of 60 requests
+  # per hour for unauthenticated clients (about three requests are needed per tool), and optionally
+  # OPENALEX_API_KEY (without one, OpenAlex shares a small daily budget between everyone on the same IP).
   module ToolEnrichment
-    CACHE_TTL = 24 * 3600
-    RETRY_TTL = 3600
-    CACHE_VERSION = 4 # bump when new fields are fetched, so cached entries refresh
+    DATA_FILE = 'tools_fetched' # _data/tools_fetched.json
 
     module_function
 
-    # Registry data for one tool; `ids` holds its biotools and github ids
+    def key(ids)
+      [ids['biotools'], ids['github'], ids['doi']].compact.join('|')
+    end
+
+    # Fetched data for one tool page, from the data file (no network)
     def enrich(site, ids)
-      key = [ids['biotools'], ids['github']].compact.join('|')
-      return {} if key.empty?
+      k = key(ids)
+      return {} if k.empty?
 
-      cache = load_cache(site)
-      hit = cache[key]
-      if hit && hit['v'] == CACHE_VERSION
-        ttl = hit['complete'] == false ? RETRY_TTL : CACHE_TTL
-        return hit['data'] if Time.now.to_i - hit['at'] < ttl
+      data = (site.data[DATA_FILE] || {})[k]
+      return data if data
+
+      @warned ||= {}
+      unless @warned[k]
+        Jekyll.logger.warn 'ToolEnrichment:', "no fetched data for #{k}; run _scripts/fetch_tool_data.rb"
+        @warned[k] = true
       end
+      {}
+    end
 
+    # Fetches the registry data for one set of ids (each source answers nil when it could not be reached). Anything a fetch could not get (e.g. GitHub rate
+    # limit) keeps its value, and the date, from `previous`. Returns [data, failed sources].
+    def fetch(ids, previous = nil)
       data = {}
-      complete = true
+      failed = []
       if ids['biotools']
         bt = from_biotools(ids['biotools'])
-        complete &&= !bt.empty?
-        data.merge!(bt)
+        failed << 'bio.tools' unless bt
+        data.merge!(bt || {})
       end
       if ids['github']
-        gh = from_github(ids['github'])
-        complete &&= !gh.empty?
+        gh = from_github(ids['github']) || (failed << 'GitHub' and {})
         data = merge_missing(data, gh)
         data['how_to_cite'] = gh['how_to_cite'] if gh['how_to_cite'] # CITATION.cff is the authors' own choice
       end
+      papers = Array(data.delete('papers'))
+      papers = [{ 'doi' => ids['doi'].downcase, 'origin' => 'sheet' }] if papers.empty? && ids['doi'] && !failed.include?('bio.tools')
+      unless papers.empty?
+        dois = papers.filter_map { |x| x['doi'] }
+        works = dois.empty? ? {} : openalex_works(dois)
+        failed << 'OpenAlex' if works.nil?
+        # without OpenAlex, earlier counts beat the stale bio.tools ones
+        data.merge!(citations(papers, works || {})) unless works.nil? && previous&.key?('papers')
+      end
       data['fetched_at'] = Time.now.utc.strftime('%Y-%m-%d') unless data.empty?
-      # Keep the last good values (and their date) for anything this fetch could not get (e.g. GitHub rate limit)
-      data = hit['data'].merge(data) if hit
-
-      cache[key] = { 'at' => Time.now.to_i, 'v' => CACHE_VERSION, 'complete' => complete, 'data' => data }
-      save_cache(site, cache)
-      data
+      if previous
+        data = previous.merge(data)
+        # a paper list that is gone from bio.tools does not come back from the previous fetch
+        %w[papers citation_count citation_source].each { |k| data.delete(k) } if papers.empty? && !failed.include?('bio.tools')
+      end
+      [data, failed]
     end
 
     def from_biotools(id)
       d = get_json("https://bio.tools/api/#{id}?format=json")
-      return {} unless d && d['biotoolsID']
+      return nil unless d && d['biotoolsID']
 
       links = Array(d['link'])
       docs = Array(d['documentation'])
@@ -71,14 +93,68 @@ module Jekyll
         'issue_tracker' => links.find { |l| Array(l['type']).include?('Issue tracker') }&.dig('url'),
         'how_to_use' => docs.reject { |x| Array(x['type']).include?('Citation instructions') }
                             .map { |x| { 'url' => x['url'], 'label' => Array(x['type']).join(', ') } },
-        'citation_count' => pubs.sum { |p| p.dig('metadata', 'citationCount').to_i },
+        'papers' => papers_from_biotools(pubs),
         'how_to_cite' => primary && format_publication(primary)
       }.reject { |_, v| v.nil? || v == [] || v == '' }
     end
 
+    # bio.tools publications, primary ones first: DOI, PMID, title, journal, year and the stored count
+    def papers_from_biotools(pubs)
+      pubs.map do |p|
+        m = p['metadata'] || {}
+        { 'doi' => p['doi']&.downcase&.sub(%r{\Ahttps?://(dx\.)?doi\.org/}, ''), 'pmid' => p['pmid'], 'title' => m['title'], 'journal' => m['journal'],
+          'year' => m['date']&.slice(0, 4), 'primary' => Array(p['type']).include?('Primary'),
+          'count' => m['citationCount'].to_i }.reject { |_, v| v.nil? || v == '' }
+      end.sort_by { |x| x['primary'] ? 0 : 1 }
+    end
+
+    # Citations, title, venue and year per DOI from OpenAlex, one request per DOI, because OpenAlex merges
+    # versions (a preprint and its journal article, F1000Research versions) and answers with the merged work.
+    # A DOI OpenAlex does not know is left out; nil when OpenAlex could not be reached.
+    def openalex_works(dois)
+      key = ENV['OPENALEX_API_KEY'].to_s
+      dois.each_with_object({}) do |doi, out|
+        status, body = get_response("https://api.openalex.org/works/https://doi.org/#{doi}" \
+                                    "?select=id,doi,cited_by_count,title,publication_year,primary_location#{key.empty? ? '' : "&api_key=#{key}"}")
+        next if status == 404
+        return nil unless status == 200
+
+        w = JSON.parse(body)
+        out[doi] = { 'openalex' => w['id'], 'count' => w['cited_by_count'].to_i, 'title' => w['title'],
+                     'year' => w['publication_year']&.to_s, 'journal' => w.dig('primary_location', 'source', 'display_name') }
+      rescue JSON::ParserError
+        return nil
+      end
+    end
+
+    # Each paper with its citations (OpenAlex where it knows the paper, else the count bio.tools stored;
+    # missing title, journal or year filled from OpenAlex), and the total, counting a work once when
+    # bio.tools lists two versions of it. A paper from the sheet that OpenAlex does not know has no count.
+    def citations(papers, works)
+      seen = {}
+      list = papers.map do |x|
+        w = works[x['doi']]
+        unless w
+          next x.merge('count' => x['count'].to_i, 'source' => 'bio.tools') unless x['origin'] == 'sheet'
+
+          next x
+        end
+
+        merged = w.reject { |k, v| v.nil? || k == 'openalex' }.merge(x.reject { |k, v| k == 'count' || v.nil? })
+        merged['count'] = w['count']
+        merged['source'] = 'OpenAlex'
+        merged['duplicate'] = true if seen[w['openalex']]
+        seen[w['openalex']] = true
+        merged
+      end
+      total = list.reject { |x| x['duplicate'] }.sum { |x| x['count'].to_i }
+      { 'papers' => list.map { |x| x.except('primary') }, 'citation_count' => total,
+        'citation_source' => seen.empty? ? 'bio.tools' : 'OpenAlex' }
+    end
+
     def from_github(repo)
       d = get_json("https://api.github.com/repos/#{repo}")
-      return {} unless d && d['full_name']
+      return nil unless d && d['full_name']
 
       release = get_json("https://api.github.com/repos/#{repo}/releases/latest")
       out = {
@@ -129,6 +205,12 @@ module Jekyll
     end
 
     def get_text(url, accept = '*/*')
+      status, body = get_response(url, accept)
+      status == 200 ? body : nil
+    end
+
+    # [HTTP status, body], or [nil, nil] when the request failed
+    def get_response(url, accept = 'application/json')
       uri = URI(url)
       res = Net::HTTP.start(uri.host, uri.port, use_ssl: true, open_timeout: 5, read_timeout: 10) do |http|
         headers = { 'Accept' => accept, 'User-Agent' => 'fair-metroline-build' }
@@ -136,25 +218,10 @@ module Jekyll
         headers['Authorization'] = "Bearer #{token}" if uri.host == 'api.github.com' && token
         http.get(uri.request_uri, headers)
       end
-      res.is_a?(Net::HTTPSuccess) ? res.body : nil
+      [res.code.to_i, res.body]
     rescue StandardError => e
-      Jekyll.logger.warn 'ToolEnrichment:', "#{url} failed (#{e.class})"
-      nil
-    end
-
-    def cache_path(site)
-      File.join(site.source, '.jekyll-cache', 'tools_enriched.json')
-    end
-
-    def load_cache(site)
-      @cache ||= File.exist?(cache_path(site)) ? JSON.parse(File.read(cache_path(site))) : {}
-    rescue JSON::ParserError
-      @cache = {}
-    end
-
-    def save_cache(site, cache)
-      FileUtils.mkdir_p(File.dirname(cache_path(site)))
-      File.write(cache_path(site), JSON.pretty_generate(cache))
+      Jekyll.logger.warn 'ToolEnrichment:', "#{url.sub(/api_key=[^&]+/, 'api_key=…')} failed (#{e.class})"
+      [nil, nil]
     end
   end
 end

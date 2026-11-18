@@ -1,0 +1,639 @@
+{
+  "10.15497/rda00050": {
+    "citation_count": 137,
+    "citation_source": "OpenAlex",
+    "fetched_at": "2026-11-18",
+    "papers": [
+      {
+        "count": 137,
+        "doi": "10.15497/rda00050",
+        "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+        "origin": "sheet",
+        "source": "OpenAlex",
+        "title": "FAIR Data Maturity Model: specification and guidelines",
+        "year": "2020"
+      }
+    ]
+  },
+  "DMPRoadmap/roadmap|10.5281/zenodo.7073740": {
+    "archived": false,
+    "citation_count": 0,
+    "citation_source": "OpenAlex",
+    "fetched_at": "2026-11-18",
+    "github_stars": 119,
+    "issue_tracker": "https://github.com/DMPRoadmap/roadmap/issues",
+    "last_commit": "2026-11-17",
+    "latest_release": "v6.0.0",
+    "latest_release_date": "2026-10-06",
+    "license": "MIT",
+    "papers": [
+      {
+        "count": 0,
+        "doi": "10.5281/zenodo.7073740",
+        "journal": "Wageningen University & Research Publications",
+        "origin": "sheet",
+        "source": "OpenAlex",
+        "title": "Manual DMPonline - create an account and data management plan",
+        "year": "2022"
+      }
+    ],
+    "repository": "https://github.com/DMPRoadmap/roadmap"
+  },
+  "FAIRDataPoint|FAIRDataTeam/FAIRDataPoint|10.1162/dint_a_00160": {
+    "archived": false,
+    "citation_count": 49,
+    "citation_source": "OpenAlex",
+    "fetched_at": "2026-11-18",
+    "github_stars": 75,
+    "how_to_cite": "Luiz Olavo Bonino da Silva Santos, Kees Burger, Rajaram Kaliyaperumal, Marek Suchánek, Jan Slifka, Mark Wilkinson FAIR Data Point.",
+    "how_to_use": [
+      {
+        "label": "General",
+        "url": "https://github.com/FAIRDataTeam/FAIRDataPoint/wiki"
+      }
+    ],
+    "issue_tracker": "https://github.com/FAIRDataTeam/FAIRDataPoint/issues",
+    "last_commit": "2026-11-17",
+    "latest_release": "v1.22.3",
+    "latest_release_date": "2026-11-10",
+    "license": "MIT",
+    "maturity": "Emerging",
+    "papers": [
+      {
+        "count": 49,
+        "doi": "10.1162/dint_a_00031",
+        "journal": "Data Intelligence",
+        "source": "OpenAlex",
+        "title": "Making FAIR Easy with FAIR Tools: From Creolization to Convergence",
+        "year": "2019"
+      }
+    ],
+    "repository": "https://github.com/FAIRDataTeam/FAIRDataPoint",
+    "tool_types": [
+      "Web API",
+      "Web application"
+    ]
+  },
+  "FAIRsFAIR/fair-aware": {
+    "archived": false,
+    "fetched_at": "2026-11-18",
+    "github_stars": 3,
+    "last_commit": "2022-04-13",
+    "latest_release": "v1.0.1",
+    "latest_release_date": "2021-07-09",
+    "license": "MIT",
+    "repository": "https://github.com/FAIRsFAIR/fair-aware"
+  },
+  "FAIRsharing/FAIR-Evaluator-FrontEnd": {
+    "archived": false,
+    "fetched_at": "2026-11-18",
+    "github_stars": 4,
+    "last_commit": "2022-11-01",
+    "license": "MIT",
+    "repository": "https://github.com/FAIRsharing/FAIR-Evaluator-FrontEnd"
+  },
+  "FAIRsharing/FAIRassist-App": {
+    "archived": false,
+    "fetched_at": "2026-11-18",
+    "github_stars": 0,
+    "issue_tracker": "https://github.com/FAIRsharing/FAIRassist-App/issues",
+    "last_commit": "2026-11-03",
+    "license": "AGPL-3.0",
+    "repository": "https://github.com/FAIRsharing/FAIRassist-App"
+  },
+  "OpenRefine/OpenRefine": {
+    "archived": false,
+    "fetched_at": "2026-11-18",
+    "github_stars": 12110,
+    "issue_tracker": "https://github.com/OpenRefine/OpenRefine/issues",
+    "last_commit": "2026-11-17",
+    "latest_release": "3.10.1",
+    "latest_release_date": "2026-03-04",
+    "license": "BSD-3-Clause",
+    "repository": "https://github.com/OpenRefine/OpenRefine"
+  },
+  "RDFLib/pySHACL": {
+    "archived": false,
+    "fetched_at": "2026-11-18",
+    "github_stars": 374,
+    "how_to_cite": "Ashley Sommer, Nicholas Car (2026) pySHACL. Version 0.40.2. https://doi.org/10.5281/zenodo.4750840",
+    "issue_tracker": "https://github.com/RDFLib/pySHACL/issues",
+    "last_commit": "2026-10-28",
+    "latest_release": "v0.40.2",
+    "latest_release_date": "2026-10-28",
+    "license": "Apache-2.0",
+    "repository": "https://github.com/RDFLib/pySHACL"
+  },
+  "ROBOT|ontodev/robot|10.1186/s12859-019-3002-3": {
+    "archived": false,
+    "citation_count": 249,
+    "citation_source": "OpenAlex",
+    "fetched_at": "2026-11-18",
+    "github_stars": 334,
+    "how_to_cite": "Jackson R.C., Balhoff J.P., Douglass E., et al. (2019) ROBOT: A Tool for Automating Ontology Workflows. BMC Bioinformatics. https://doi.org/10.1186/s12859-019-3002-3",
+    "issue_tracker": "https://github.com/ontodev/robot/issues",
+    "last_commit": "2026-11-09",
+    "latest_release": "v1.9.11",
+    "latest_release_date": "2026-10-01",
+    "license": "BSD-3-Clause",
+    "papers": [
+      {
+        "count": 249,
+        "doi": "10.1186/s12859-019-3002-3",
+        "journal": "BMC Bioinformatics",
+        "pmid": "31357927",
+        "source": "OpenAlex",
+        "title": "ROBOT: A Tool for Automating Ontology Workflows",
+        "year": "2019"
+      }
+    ],
+    "repository": "https://github.com/ontodev/robot/"
+  },
+  "TopQuadrant/shacl": {
+    "archived": false,
+    "fetched_at": "2026-11-18",
+    "github_stars": 249,
+    "issue_tracker": "https://github.com/TopQuadrant/shacl/issues",
+    "last_commit": "2026-06-30",
+    "latest_release": "v1.5.0",
+    "latest_release_date": "2026-03-23",
+    "license": "Apache-2.0",
+    "repository": "https://github.com/TopQuadrant/shacl"
+  },
+  "au-research/FAIR-Data-Assessment-Tool": {
+    "archived": false,
+    "fetched_at": "2026-11-18",
+    "github_stars": 10,
+    "issue_tracker": "https://github.com/au-research/FAIR-Data-Assessment-Tool/issues",
+    "last_commit": "2025-03-07",
+    "latest_release": "v1.0",
+    "latest_release_date": "2021-06-17",
+    "repository": "https://github.com/au-research/FAIR-Data-Assessment-Tool"
+  },
+  "blazegraph/database": {
+    "archived": true,
+    "fetched_at": "2026-11-18",
+    "github_stars": 987,
+    "issue_tracker": "https://github.com/blazegraph/database/issues",
+    "last_commit": "2023-04-16",
+    "latest_release": "BLAZEGRAPH_2_1_6_RC",
+    "latest_release_date": "2020-02-03",
+    "license": "GPL-2.0",
+    "repository": "https://github.com/blazegraph/database"
+  },
+  "cedar_workbench|metadatacenter/cedar-template-editor|10.1007/978-3-319-68204-4_10": {
+    "archived": false,
+    "citation_count": 46,
+    "citation_source": "OpenAlex",
+    "fetched_at": "2026-11-18",
+    "github_stars": 7,
+    "how_to_cite": "https://doi.org/10.1101/850578",
+    "how_to_use": [
+      {
+        "label": "Training material",
+        "url": "https://metadatacenter.org/help/"
+      }
+    ],
+    "issue_tracker": "https://github.com/metadatacenter/cedar-template-editor/issues",
+    "last_commit": "2026-11-14",
+    "license": "Not licensed",
+    "maturity": "Mature",
+    "papers": [
+      {
+        "count": 46,
+        "doi": "10.1101/850578",
+        "journal": "Scientific Data",
+        "source": "OpenAlex",
+        "title": "Obstacles to the reuse of study metadata in ClinicalTrials.gov",
+        "year": "2020"
+      }
+    ],
+    "repository": "https://github.com/metadatacenter/cedar-template-editor",
+    "tool_types": [
+      "Database portal"
+    ]
+  },
+  "fair-checker|IFB-ElixirFr/fair-checker|10.1186/s13326-023-00289-5": {
+    "archived": false,
+    "citation_count": 76,
+    "citation_source": "OpenAlex",
+    "fetched_at": "2026-11-18",
+    "github_stars": 29,
+    "how_to_cite": "Alban Gaignard, Frédéric De Lamotte, Brieuc Quemeneur, Thomas Rosnet, Marie-Dominique Devignes, Sahar Frikha, Vincent Lefort (2026) FAIR-Checker. Version 1.3.4.",
+    "issue_tracker": "https://github.com/IFB-ElixirFr/FAIR-checker/issues",
+    "last_commit": "2026-11-18",
+    "latest_release": "v1.3.5",
+    "latest_release_date": "2026-11-09",
+    "license": "MIT",
+    "maturity": "Emerging",
+    "papers": [
+      {
+        "count": 76,
+        "doi": "10.1186/s13326-023-00289-5",
+        "journal": "Journal of Biomedical Semantics",
+        "pmid": "37393296",
+        "source": "OpenAlex",
+        "title": "FAIR-Checker: supporting digital resource findability and reuse with Knowledge Graphs and Semantic Web standards",
+        "year": "2023"
+      }
+    ],
+    "repository": "https://github.com/IFB-ElixirFr/FAIR-checker",
+    "tool_types": [
+      "Web application"
+    ]
+  },
+  "fair_data_station|FAIRDataTeam/FAIRDataStation|10.1093/gigascience/giad014": {
+    "archived": false,
+    "citation_count": 41,
+    "citation_source": "OpenAlex",
+    "fetched_at": "2026-11-18",
+    "github_stars": 2,
+    "how_to_cite": "https://doi.org/10.1093/gigascience/giad014",
+    "how_to_use": [
+      {
+        "label": "General",
+        "url": "http://docs.fairbydesign.nl"
+      }
+    ],
+    "issue_tracker": "https://github.com/FAIRDataTeam/FAIRDataStation/issues",
+    "last_commit": "2026-08-28",
+    "latest_release": "v0.1.1",
+    "latest_release_date": "2025-05-30",
+    "license": "Apache-2.0",
+    "maturity": "Mature",
+    "papers": [
+      {
+        "count": 41,
+        "doi": "10.1093/gigascience/giad014",
+        "journal": "GigaScience",
+        "source": "OpenAlex",
+        "title": "FAIR data station for lightweight metadata management and validation of omics studies",
+        "year": "2022"
+      },
+      {
+        "count": 41,
+        "doi": "10.1101/2022.08.03.502622",
+        "duplicate": true,
+        "journal": "GigaScience",
+        "source": "OpenAlex",
+        "title": "FAIR data station for lightweight metadata management and validation of omics studies",
+        "year": "2022"
+      }
+    ],
+    "repository": "https://github.com/FAIRDataTeam/FAIRDataStation",
+    "tool_types": [
+      "Web application"
+    ]
+  },
+  "fip-wizard/fip-wizard": {
+    "archived": false,
+    "fetched_at": "2026-11-18",
+    "github_stars": 0,
+    "issue_tracker": "https://github.com/fip-wizard/fip-wizard/issues",
+    "last_commit": "2020-09-30",
+    "repository": "https://github.com/fip-wizard/fip-wizard"
+  },
+  "icrf_generator|aderidder/iCRFGenerator|10.12688/f1000research.21576.1": {
+    "archived": false,
+    "citation_count": 2,
+    "citation_source": "OpenAlex",
+    "fetched_at": "2026-11-18",
+    "github_stars": 13,
+    "how_to_cite": "https://doi.org/10.12688/f1000research.21576.1",
+    "issue_tracker": "https://github.com/aderidder/iCRFGenerator/issues",
+    "last_commit": "2026-04-10",
+    "latest_release": "v2.1.0",
+    "latest_release_date": "2026-02-19",
+    "license": "GPL-3.0",
+    "papers": [
+      {
+        "count": 2,
+        "doi": "10.12688/f1000research.21576.1",
+        "journal": "F1000Research",
+        "pmid": "32566137",
+        "source": "OpenAlex",
+        "title": "The iCRF Generator: Generating interoperable electronic case report forms using online codebooks",
+        "year": "2020"
+      }
+    ],
+    "repository": "https://github.com/aderidder/iCRFGenerator",
+    "tool_types": [
+      "Command-line tool",
+      "Script"
+    ]
+  },
+  "leaf-framework/leaf": {
+    "archived": false,
+    "fetched_at": "2026-11-18",
+    "github_stars": 0,
+    "last_commit": "2026-11-18",
+    "latest_release": "v0.14.0",
+    "latest_release_date": "2026-11-18",
+    "license": "Apache-2.0",
+    "repository": "https://github.com/leaf-framework/leaf"
+  },
+  "mapping-commons/sssom-py|10.1093/database/baac035": {
+    "archived": false,
+    "citation_count": 146,
+    "citation_source": "OpenAlex",
+    "fetched_at": "2026-11-18",
+    "github_stars": 67,
+    "issue_tracker": "https://github.com/mapping-commons/sssom-py/issues",
+    "last_commit": "2026-11-17",
+    "latest_release": "v0.4.22",
+    "latest_release_date": "2026-10-29",
+    "license": "MIT",
+    "papers": [
+      {
+        "count": 146,
+        "doi": "10.1093/database/baac035",
+        "journal": "Database",
+        "origin": "sheet",
+        "source": "OpenAlex",
+        "title": "A Simple Standard for Sharing Ontological Mappings (SSSOM)",
+        "year": "2022"
+      }
+    ],
+    "repository": "https://github.com/mapping-commons/sssom-py"
+  },
+  "molgenis|molgenis/molgenis-emx2|10.1093/bioinformatics/btw155": {
+    "archived": false,
+    "citation_count": 186,
+    "citation_source": "OpenAlex",
+    "fetched_at": "2026-11-18",
+    "github_stars": 28,
+    "how_to_cite": "Pang C., Van Enckevort D., De Haan M., et al. (2016) MOLGENIS/connect: A system for semi-automatic integration of heterogeneous phenotype data with applications in biobanks. Bioinformatics. https://doi.org/10.1093/bioinformatics/btw155",
+    "how_to_use": [
+      {
+        "label": "General",
+        "url": "https://molgenis.gitbooks.io/molgenis/content/"
+      }
+    ],
+    "issue_tracker": "https://github.com/molgenis/molgenis-emx2/issues",
+    "last_commit": "2026-11-18",
+    "latest_release": "v13.235.2",
+    "latest_release_date": "2026-11-17",
+    "license": "LGPL-3.0",
+    "maturity": "Mature",
+    "papers": [
+      {
+        "count": 19,
+        "doi": "10.1093/bioinformatics/btw155",
+        "journal": "Bioinformatics",
+        "pmid": "27153686",
+        "source": "OpenAlex",
+        "title": "MOLGENIS/connect: A system for semi-automatic integration of heterogeneous phenotype data with applications in biobanks",
+        "year": "2016"
+      },
+      {
+        "count": 167,
+        "doi": "10.1186/1471-2105-11-s12-s12",
+        "journal": "BMC Bioinformatics",
+        "pmid": "21210979",
+        "source": "OpenAlex",
+        "title": "The MOLGENIS toolkit: Rapid prototyping of biosoftware at the push of a button",
+        "year": "2010"
+      }
+    ],
+    "repository": "https://github.com/molgenis/molgenis-emx2",
+    "tool_types": [
+      "Web application"
+    ]
+  },
+  "openlink/virtuoso-opensource": {
+    "archived": false,
+    "fetched_at": "2026-11-18",
+    "github_stars": 979,
+    "issue_tracker": "https://github.com/openlink/virtuoso-opensource/issues",
+    "last_commit": "2026-11-16",
+    "latest_release": "v7.2.17",
+    "latest_release_date": "2026-05-07",
+    "repository": "https://github.com/openlink/virtuoso-opensource"
+  },
+  "protege|protegeproject/protege|10.1093/bioinformatics/btu256": {
+    "archived": false,
+    "citation_count": 38,
+    "citation_source": "OpenAlex",
+    "fetched_at": "2026-11-18",
+    "github_stars": 1651,
+    "how_to_cite": "https://doi.org/10.1093/bioinformatics/btu256",
+    "how_to_use": [
+      {
+        "label": "General",
+        "url": "https://protege.stanford.edu/products.php#web-protege"
+      }
+    ],
+    "issue_tracker": "https://github.com/protegeproject/protege/issues",
+    "last_commit": "2026-10-01",
+    "latest_release": "5.6.9",
+    "latest_release_date": "2026-03-07",
+    "papers": [
+      {
+        "count": 38,
+        "doi": "10.1093/bioinformatics/btu256",
+        "journal": "Bioinformatics",
+        "pmid": "24771560",
+        "source": "OpenAlex",
+        "title": "WebProtégé: a collaborative Web-based platform for editing biomedical ontologies",
+        "year": "2014"
+      }
+    ],
+    "repository": "https://github.com/protegeproject/protege",
+    "tool_types": [
+      "Web application",
+      "Desktop application"
+    ]
+  },
+  "rdfjs/Yasgui|10.3233/SW-150197": {
+    "archived": false,
+    "citation_count": 100,
+    "citation_source": "OpenAlex",
+    "fetched_at": "2026-11-18",
+    "github_stars": 26,
+    "issue_tracker": "https://github.com/rdfjs/Yasgui/issues",
+    "last_commit": "2026-11-04",
+    "latest_release": "@zazuko/yasgui@4.6.2",
+    "latest_release_date": "2026-08-18",
+    "license": "MIT",
+    "papers": [
+      {
+        "count": 100,
+        "doi": "10.3233/sw-150197",
+        "journal": "Semantic Web",
+        "origin": "sheet",
+        "source": "OpenAlex",
+        "title": "The YASGUI family of SPARQL clients1",
+        "year": "2016"
+      }
+    ],
+    "repository": "https://github.com/rdfjs/Yasgui"
+  },
+  "redcap|10.1016/j.jbi.2008.08.010": {
+    "citation_count": 54759,
+    "citation_source": "OpenAlex",
+    "fetched_at": "2026-11-18",
+    "how_to_cite": "Harvey L.A. (2018) REDCap: Web-based software for all types of data storage and collection editorial. Spinal Cord. https://doi.org/10.1038/s41393-018-0169-9",
+    "how_to_use": [
+      {
+        "label": "General",
+        "url": "https://projectredcap.org/about/"
+      },
+      {
+        "label": "Installation instructions",
+        "url": "https://projectredcap.org/software/requirements/"
+      }
+    ],
+    "license": "Other",
+    "maturity": "Mature",
+    "papers": [
+      {
+        "count": 102,
+        "doi": "10.1038/s41393-018-0169-9",
+        "journal": "Spinal Cord",
+        "source": "OpenAlex",
+        "title": "REDCap: Web-based software for all types of data storage and collection editorial",
+        "year": "2018"
+      },
+      {
+        "count": 54657,
+        "doi": "10.1016/j.jbi.2008.08.010",
+        "journal": "Journal of Biomedical Informatics",
+        "source": "OpenAlex",
+        "title": "Research electronic data capture (REDCap)-A metadata-driven methodology and workflow process for providing translational research informatics support",
+        "year": "2009"
+      }
+    ],
+    "tool_types": [
+      "Web application"
+    ]
+  },
+  "seek_for_science|seek4science/seek|10.1186/s12918-015-0174-y": {
+    "archived": false,
+    "citation_count": 330,
+    "citation_source": "OpenAlex",
+    "fetched_at": "2026-11-18",
+    "github_stars": 103,
+    "how_to_cite": "Wolstencroft K., Owen S., Du Preez F., et al. (2011) The SEEK: A platform for sharing data and models in systems biology. Methods in Enzymology. https://doi.org/10.1016/b978-0-12-385118-5.00029-3",
+    "how_to_use": [
+      {
+        "label": "General",
+        "url": "https://docs.seek4science.org/help/"
+      }
+    ],
+    "issue_tracker": "https://github.com/seek4science/seek/issues",
+    "last_commit": "2026-11-18",
+    "latest_release": "v1.18.4",
+    "latest_release_date": "2026-11-10",
+    "license": "BSD-3-Clause",
+    "maturity": "Mature",
+    "papers": [
+      {
+        "count": 61,
+        "doi": "10.1016/b978-0-12-385118-5.00029-3",
+        "journal": "Methods in Enzymology",
+        "source": "OpenAlex",
+        "title": "The SEEK: A platform for sharing data and models in systems biology",
+        "year": "2011"
+      },
+      {
+        "count": 126,
+        "doi": "10.1186/s12918-015-0174-y",
+        "journal": "BMC Systems Biology",
+        "source": "OpenAlex",
+        "title": "SEEK: A systems biology data and model management platform",
+        "year": "2015"
+      },
+      {
+        "count": 143,
+        "doi": "10.1093/nar/gkw1032",
+        "journal": "Nucleic Acids Research",
+        "source": "OpenAlex",
+        "title": "FAIRDOMHub: A repository and collaboration environment for sharing systems biology research",
+        "year": "2017"
+      }
+    ],
+    "repository": "https://github.com/seek4science/seek.git",
+    "tool_types": [
+      "Web application"
+    ]
+  },
+  "sparna-git/Sparnatural": {
+    "archived": false,
+    "fetched_at": "2026-11-18",
+    "github_stars": 318,
+    "issue_tracker": "https://github.com/sparna-git/Sparnatural/issues",
+    "last_commit": "2026-11-18",
+    "latest_release": "14.0.0",
+    "latest_release_date": "2026-10-19",
+    "license": "LGPL-3.0",
+    "repository": "https://github.com/sparna-git/Sparnatural"
+  },
+  "w3c/csvw": {
+    "archived": true,
+    "fetched_at": "2026-11-18",
+    "github_stars": 168,
+    "issue_tracker": "https://github.com/w3c/csvw/issues",
+    "last_commit": "2026-05-22",
+    "latest_release": "final-release-WG-2016",
+    "latest_release_date": "2016-02-25",
+    "repository": "https://github.com/w3c/csvw"
+  },
+  "wikimedia/wikidata-query-builder": {
+    "archived": false,
+    "fetched_at": "2026-11-18",
+    "github_stars": 8,
+    "issue_tracker": "https://github.com/wikimedia/wikidata-query-builder/issues",
+    "last_commit": "2025-03-27",
+    "license": "BSD-3-Clause",
+    "repository": "https://github.com/wikimedia/wikidata-query-builder"
+  },
+  "xnat|NrgXnat/xnat|10.1385/NI:5:1:11": {
+    "archived": false,
+    "citation_count": 1273,
+    "citation_source": "OpenAlex",
+    "fetched_at": "2026-11-18",
+    "github_stars": 9,
+    "how_to_cite": "Marcus D.S., Olsen T.R., Ramaratnam M., et al. (2007) The extensible neuroimaging archive toolkit: An informatics platform for managing, exploring, and sharing neuroimaging data. Neuroinformatics. https://doi.org/10.1385/ni:5:1:11",
+    "how_to_use": [
+      {
+        "label": "User manual",
+        "url": "https://wiki.xnat.org/documentation/"
+      },
+      {
+        "label": "API documentation",
+        "url": "https://wiki.xnat.org/xnat-api/xnat-rest-api-directory"
+      }
+    ],
+    "issue_tracker": "https://github.com/NrgXnat/xnat/issues",
+    "last_commit": "2026-11-16",
+    "latest_release": "1.10.2.1",
+    "latest_release_date": "2026-10-23",
+    "license": "BSD-2-Clause",
+    "maturity": "Mature",
+    "papers": [
+      {
+        "count": 518,
+        "doi": "10.1385/ni:5:1:11",
+        "journal": "Neuroinformatics",
+        "pmid": "17426351",
+        "source": "OpenAlex",
+        "title": "The extensible neuroimaging archive toolkit: An informatics platform for managing, exploring, and sharing neuroimaging data",
+        "year": "2007"
+      },
+      {
+        "count": 755,
+        "doi": "10.1162/jocn.2009.21407",
+        "journal": "Journal of Cognitive Neuroscience",
+        "pmid": "19929323",
+        "source": "OpenAlex",
+        "title": "Open access series of imaging studies: Longitudinal MRI data in nondemented and demented older adults",
+        "year": "2010"
+      }
+    ],
+    "repository": "https://bitbucket.org/xnatdev/workspace/repositories/",
+    "tool_types": [
+      "Web application",
+      "Web API"
+    ]
+  }
+}

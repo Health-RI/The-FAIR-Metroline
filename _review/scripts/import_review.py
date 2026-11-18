@@ -11,7 +11,7 @@ import yaml
 from openpyxl import load_workbook
 
 REPO = Path(__file__).resolve().parents[2]
-XLSX = REPO / "_review/tools4fair-annotation-form_new_v2.xlsx"
+XLSX = REPO / "_review/tools4fair-annotation-form_new_v3.xlsx"
 OUT = REPO / "_data/tools_v2.yml"
 
 wb = load_workbook(XLSX)
@@ -30,7 +30,8 @@ def colour(c):
         return "white"
     if f.fgColor.type == "rgb":
         return {"FF92D050": "green", "FFFFFF00": "yellow", "FF7030A0": "purple", "FFFF5DBB": "purple",
-                "FFF8D0D0": "broken", "FFEEF0F3": "white"}.get(f.fgColor.rgb, "white")
+                "FFF8D0D0": "broken", "FFEEF0F3": "white",
+                "FFFF0000": "flagged"}.get(f.fgColor.rgb, "white")
     return "purple" if f.fgColor.theme not in (0, None) else "white"   # theme 0 = plain white fill
 
 def status(c):
@@ -39,7 +40,7 @@ def status(c):
     if c.font and c.font.strike:
         return "struck"
     k = colour(c)
-    return {"green": "verified", "yellow": "verified", "purple": "decide", "broken": "pending"}.get(k, "pending")
+    return {"green": "verified", "yellow": "verified", "purple": "decide", "flagged": "decide", "broken": "pending"}.get(k, "pending")
 
 COL = {}
 for j in range(1, tw.max_column + 1):
@@ -84,7 +85,7 @@ CHANGES = {   # tool id -> {field: verified value instead of the sheet's}; "link
                 "links.other": [{"kind": "Report an issue", "url": "https://github.com/protegeproject/protege/issues"}]},
 }
 KEYWORDS = {"digital object identifier": "DOI", "doi": "DOI"}   # sheet spelling -> _data/keywords.yml
-NO_VALUE = {"unknown"}                                            # a reviewed cell saying there is no value
+NO_VALUE = {"unknown", "tbd"}                                           # a reviewed cell saying there is no value
 
 report = {"removed_tools": [], "left_out": [], "overrides": [], "struck_values": [], "decide": [], "notes_mapped": []}
 entries = []
@@ -208,22 +209,31 @@ for r in range(3, tw.max_row + 1):
     if links_top: top["links"] = links_top
     if links_pend: pend["links"] = links_pend
 
-    # registry ids: verified ones switch on the bio.tools / GitHub data on the live page; the reviewers
-    # put citations in the DOI column
+    # registry ids: verified ones switch on the bio.tools / GitHub data on the live page. Since v3 the
+    # reviewers enter full URLs; an empty green cell means the tool has no such id.
+    ID_URL = {"biotools": r"^https?://bio\.tools/(?:tool/)?", "github": r"^https?://github\.com/",
+              "rsd": r"^https?://research-software-directory\.org/software/"}
     ids, ids_pend = {}, {}
     for name, key in [("bio.tools id", "biotools"), ("GitHub repo", "github"), ("RSD ID", "rsd")]:
         c = cell(name); st = status(c)
         if st and st != "struck":
-            (ids if st == "verified" else ids_pend)[key] = str(c.value).strip()
+            v = re.sub(ID_URL[key], "", str(c.value).strip()).strip("/")
+            if key == "github" and "/" not in v:      # an organisation, not a repository: a plain link
+                lk = links_top if st == "verified" else links_pend
+                lk.setdefault("other", []).append({"kind": "Source code", "url": f"https://github.com/{v}"})
+                if lk is links_top: top["links"] = links_top
+                else: pend["links"] = links_pend
+                continue
+            (ids if st == "verified" else ids_pend)[key] = v
             if st == "decide": report["decide"].append((tid, name, c.value))
-    c = cell("DOI"); st = status(c)
-    if st and st != "struck":
-        v = str(c.value).strip()
-        m = re.search(r"(10\.\d{4,9}/[^\s]+)", v)
-        if m: (ids if st == "verified" else ids_pend)["doi"] = m.group(1).rstrip(".")
-        if len(v) > 60 or not m:
-            (top if st == "verified" else pend)["how_to_cite"] = v
-        if st == "decide": report["decide"].append((tid, "DOI", v))
+    for name, key in [("DOI (publication)", "doi"), ("DOI (software)", "software_doi")]:
+        c = cell(name); st = status(c)
+        if st and st != "struck":
+            v = str(c.value).strip()
+            m = re.search(r"(10\.\d{4,9}/[^\s?#]+)", v)      # drops tails such as ?utm_source=...
+            if m: (ids if st == "verified" else ids_pend)[key] = m.group(1).rstrip(".")
+            else: sys.exit(f"no DOI in {name} for {tid}: {v!r}")
+            if st == "decide": report["decide"].append((tid, name, v))
     if (prev.get("ids") or {}).get("fairsharing"):
         ids_pend["fairsharing"] = prev["ids"]["fairsharing"]     # column was removed from the sheet
     if ids: top["ids"] = ids

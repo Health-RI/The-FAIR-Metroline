@@ -91,7 +91,9 @@ layout: page
   {% assign dom_all = p.domains | concat: p.domains_pending %}
   {% assign code_all = p.code_availability | concat: p.code_availability_pending %}
   {% assign any_fact = false %}{% assign verified_fact = false %}
-  {% if lic_all.size > 0 or p.cost or code_all.size > 0 or p.maturity or p.activity or dom_all.size > 0 %}{% assign any_fact = true %}{% endif %}
+  {% assign listed_v = p.listed_in | where: "pending", false %}
+  {% if lic_all.size > 0 or p.cost or code_all.size > 0 or p.maturity or p.activity or dom_all.size > 0 or p.listed_in.size > 0 %}{% assign any_fact = true %}{% endif %}
+  {% if listed_v.size > 0 %}{% assign verified_fact = true %}{% endif %}
   {% if p.license.size > 0 or p.code_availability.size > 0 or p.domains.size > 0 %}{% assign verified_fact = true %}{% endif %}
   {% if p.cost %}{% unless p.pending contains 'cost' %}{% assign verified_fact = true %}{% endunless %}{% endif %}
   {% if p.maturity %}{% unless p.pending contains 'maturity' %}{% assign verified_fact = true %}{% endunless %}{% endif %}
@@ -103,6 +105,7 @@ layout: page
     {% if code_all.size > 0 %}<div{% if p.code_availability.size == 0 %} class="tp-pending"{% endif %}><dt>Source code</dt><dd>{{ p.code_availability | join: " / " }}{% if p.code_availability_pending.size > 0 %}<span class="tp-pending">{% if p.code_availability.size > 0 %} / {% endif %}{{ p.code_availability_pending | join: " / " }}</span>{% endif %}</dd></div>{% endif %}
     {% if p.maturity %}<div{% if p.pending contains 'maturity' %} class="tp-pending"{% endif %}><dt>Maturity</dt><dd><span class="tp-pill tp-pill--{{ p.maturity | downcase }}">{{ p.maturity }}</span></dd></div>{% endif %}
     {% if p.activity %}<div{% if p.activity_pending %} class="tp-pending"{% endif %}><dt>Activity</dt><dd class="tp-activity tp-activity--{{ p.activity.status }}">{{ p.activity.label }}</dd></div>{% endif %}
+    {% if p.listed_in.size > 0 %}<div{% if listed_v.size == 0 %} class="tp-pending"{% endif %}><dt>Listed in</dt><dd class="tp-listed">{% for l in p.listed_in %}<a class="tp-registry{% if l.pending %} tp-pending{% endif %}" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>{% endfor %}</dd></div>{% endif %}
     {% if dom_all.size > 0 %}<div{% if p.domains.size == 0 %} class="tp-pending"{% endif %}><dt>Domains</dt><dd>{% for d in p.domains %}<span class="tp-domain">{{ d }}</span>{% endfor %}{% for d in p.domains_pending %}<span class="tp-domain tp-pending">{{ d }}</span>{% endfor %}</dd></div>{% endif %}
   </dl>
   {% endif %}
@@ -132,6 +135,25 @@ layout: page
     {% for uc in page.use_cases %}<a class="tp-card" href="{{ uc.url | prepend: '/' | relative_url }}"><span class="tp-card-icon" aria-hidden="true">{{ uc.icon }}</span><strong>{{ uc.title }}</strong></a>{% endfor %}
   </div>
   {% endif %}
+</section>
+{% endif %}
+
+{% comment %} ===== PUBLICATIONS: papers listed in bio.tools (else the verified DOI), citations from OpenAlex ===== {% endcomment %}
+{% assign papers_all = p.papers | concat: p.papers_pending %}
+{% if papers_all.size > 0 %}
+<section class="tp-section{% if p.papers.size == 0 %} tp-pending{% endif %}">
+  <h2>Publications</h2>
+  <ul class="tp-papers">
+    {% for x in papers_all %}
+    <li{% if p.papers.size == 0 %} class="tp-pending"{% endif %}>
+      {% if x.url %}<a href="{{ x.url }}" target="_blank" rel="noopener">{{ x.title | default: x.doi }}</a>{% else %}{{ x.title }}{% endif %}
+      <span class="tp-muted">{% if x.journal %}{{ x.journal }}{% endif %}{% if x.journal and x.year %}, {% endif %}{{ x.year }}</span>
+      <span class="tp-paper-cites">{% unless x.count == nil %}{{ x.count }} citation{% if x.count != 1 %}s{% endif %}{% if x.duplicate %} (another version of the paper above, counted once){% endif %}{% if x.dimensions %} · {% endif %}{% endunless %}{% if x.dimensions %}<a href="{{ x.dimensions }}" target="_blank" rel="noopener" title="Citation details on Dimensions (counts differ between sources)">details on Dimensions</a>{% endif %}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  {% assign counted = papers_all | where: "source", "OpenAlex" %}
+  <p class="tp-muted tp-source">{% if papers_all[0].origin == 'sheet' %}Publication checked by the FAIR Metroline reviewers{% else %}Papers listed in bio.tools{% endif %}{% if counted.size > 0 %}, citations counted by OpenAlex{% endif %}{% if p.metrics.fetched_at %} on {{ p.metrics.fetched_at | date: "%-d %b %Y" }}{% endif %}.</p>
 </section>
 {% endif %}
 

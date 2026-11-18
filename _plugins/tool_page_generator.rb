@@ -151,8 +151,11 @@ module Jekyll
         v['metrics'] = metrics(fetched_all, all_ids)
         v['metrics_pending'] = !v['metrics'].empty?
       end
+      v['listed_in'] = listed_in(vids, pids)
+      v['papers'] = papers(fetched_v)
+      v['papers_pending'] = v['papers'].empty? ? papers(fetched_all) : []
       v['more_links'] = more_links(v, links['other'], plinks['other'], vids, pids, fetched_v, fetched_all)
-      v['has_pending'] = !v['pending'].empty? || v['more_links'].any? { |l| l['pending'] } ||
+      v['has_pending'] = !v['pending'].empty? || (v['more_links'] + v['listed_in']).any? { |l| l['pending'] } ||
                          v.any? { |k, x| k.end_with?('_pending') && (x == true || (x.is_a?(Array) && !x.empty?)) }
       v
     end
@@ -164,8 +167,33 @@ module Jekyll
       m = fetched.slice(*METRICS).reject { |_, x| x.nil? || x == 0 }
       return {} if m.empty?
 
-      source = { 'biotools' => 'bio.tools', 'github' => 'GitHub' }.filter_map { |k, name| name if ids[k] }.join(' and ')
+      names = { 'biotools' => 'bio.tools', 'github' => 'GitHub' }.filter_map { |k, name| name if ids[k] }
+      names << 'OpenAlex' if m['citation_count'] && fetched['citation_source'] == 'OpenAlex'
+      source = names.size > 1 ? "#{names[0..-2].join(', ')} and #{names[-1]}" : names.join
       m.merge('source' => source, 'fetched_at' => fetched['fetched_at'])
+    end
+
+    # Papers about the tool (bio.tools first, else the verified sheet DOI), with links to the paper and to
+    # its citations on Dimensions
+    def papers(fetched)
+      Array(fetched['papers']).map do |x|
+        x.merge('url' => x['doi'] && "https://doi.org/#{x['doi']}",
+                'dimensions' => x['doi'] && "https://badge.dimensions.ai/details/doi/#{x['doi']}")
+      end
+    end
+
+    # Where the tool is registered, from the ids: shown near the top of the page
+    def listed_in(vids, pids)
+      out = []
+      [[vids, false], [pids, true]].each do |ids, pend|
+        add = ->(label, url) { out << { 'label' => label, 'url' => url, 'pending' => pend } if url }
+        add.call('bio.tools', ids['biotools'] && "https://bio.tools/#{ids['biotools']}")
+        add.call('GitHub', ids['github'] && "https://github.com/#{ids['github']}")
+        add.call('Research Software Directory', ids['rsd'] && "https://research-software-directory.org/software/#{ids['rsd']}")
+        add.call('FAIRsharing', ids['fairsharing'] && "https://doi.org/#{ids['fairsharing']}")
+        add.call('Software DOI', ids['software_doi'] && "https://doi.org/#{ids['software_doi']}")
+      end
+      out
     end
 
     # links.download is one URL or a list of {label, url}
@@ -182,12 +210,9 @@ module Jekyll
     def more_links(view, other, other_pending, vids, pids, fetched_v, fetched_all)
       out = []
       add = ->(kind, url, label, pend) { out << { 'kind' => kind, 'url' => url, 'label' => label, 'pending' => pend } if url }
+      # registries are in the Listed in row; the publication DOI only when Publications does not show it
       from_ids = lambda do |ids, pend|
-        add.call('Source code', ids['github'] && "https://github.com/#{ids['github']}", "github.com/#{ids['github']}", pend)
-        add.call('Registry', ids['biotools'] && "https://bio.tools/#{ids['biotools']}", 'bio.tools', pend)
-        add.call('Registry', ids['rsd'] && "https://research-software-directory.org/software/#{ids['rsd']}", 'Research Software Directory', pend)
-        add.call('Registry', ids['fairsharing'] && "https://doi.org/#{ids['fairsharing']}", 'FAIRsharing', pend)
-        add.call('DOI', ids['doi'] && "https://doi.org/#{ids['doi']}", ids['doi'], pend)
+        add.call('Publication', ids['doi'] && "https://doi.org/#{ids['doi']}", "doi.org/#{ids['doi']}", pend)
       end
       from_registries = lambda do |fetched, pend|
         Array(fetched['how_to_use']).each { |l| add.call('Documentation', l['url'], l['label'], pend) }
@@ -202,8 +227,9 @@ module Jekyll
       from_registries.call(fetched_all, true)
 
       # Leave out what the header already links to; a pending header link only rules out pending links
-      header = [view['homepage'], view['docs'], *view['downloads'].map { |d| d['url'] }]
-      header_v = [view['homepage']]
+      listed = view['listed_in'] + (view['papers'] + view['papers_pending']).map { |x| x.merge('pending' => false) }
+      header = [view['homepage'], view['docs'], *view['downloads'].map { |d| d['url'] }, *listed.map { |l| l['url'] }]
+      header_v = [view['homepage'], *listed.reject { |l| l['pending'] }.map { |l| l['url'] }]
       header_v << view['docs'] unless view['pending'].include?('links.docs')
       header_v += view['downloads'].map { |d| d['url'] } unless view['pending'].include?('links.download')
       seen_v = header_v.compact.map { |u| url_key(u) }

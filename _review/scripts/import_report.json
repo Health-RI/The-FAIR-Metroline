@@ -1,11 +1,10 @@
 {
  "removed_tools": [
   "fair-in-a-box",
+  "Sextans-Suite",
   "codebook-to-castor-limesurvey"
  ],
- "left_out": [
-  "Sextans-Suite"
- ],
+ "left_out": [],
  "overrides": [
   [
    "openrefine",
@@ -49,7 +48,7 @@
   [
    "protege",
    "links.download",
-   "https://protegewiki.stanford.edu/wiki/WebProtege",
+   null,
    "https://protege.stanford.edu/software/#desktop-protege"
   ],
   [
@@ -57,16 +56,12 @@
    "links.other",
    [
     {
-     "kind": "Download",
-     "url": "https://github.com/protegeproject/protege/releases"
-    },
-    {
      "kind": "Report an issue",
      "url": "https://github.com/protegeproject/protege/issues"
     },
     {
      "kind": "Link",
-     "url": "https://protege.stanford.edu/software/#desktop-protege"
+     "url": "https://webprotege.stanford.edu/"
     }
    ],
    [
@@ -97,44 +92,9 @@
    "Mature"
   ],
   [
-   "molgenis",
-   "bio.tools id",
-   "molgenis"
-  ],
-  [
-   "molgenis",
-   "GitHub repo",
-   "molgenis/molgenis-emx2"
-  ],
-  [
-   "molgenis",
-   "DOI",
-   "https://doi.org/10.1093/bioinformatics/btw155"
-  ],
-  [
    "xnat",
    "Maturity",
    "Mature"
-  ],
-  [
-   "xnat",
-   "bio.tools id",
-   "xnat"
-  ],
-  [
-   "xnat",
-   "GitHub repo",
-   "NrgXnat/xnat"
-  ],
-  [
-   "xnat",
-   "DOI",
-   "https://doi.org/10.1385/ni:5:1:11"
-  ],
-  [
-   "dmponline",
-   "GitHub repo",
-   "DMPRoadmap/roadmap"
   ],
   [
    "fair-data-station",
@@ -142,39 +102,9 @@
    "Mature"
   ],
   [
-   "fair-data-station",
-   "bio.tools id",
-   "fair_data_station"
-  ],
-  [
-   "fair-data-station",
-   "RSD ID",
-   "fair-data-station"
-  ],
-  [
-   "fair-data-station",
-   "DOI",
-   "https://doi.org/10.1101/2022.08.03.502622"
-  ],
-  [
    "fairdom-seek",
    "Maturity",
    "Mature"
-  ],
-  [
-   "fairdom-seek",
-   "bio.tools id",
-   "seek_for_science"
-  ],
-  [
-   "fairdom-seek",
-   "GitHub repo",
-   "seek4science/seek"
-  ],
-  [
-   "fairdom-seek",
-   "DOI",
-   "Wolstencroft K., Owen S., Du Preez F., et al. (2011) The SEEK: A platform for sharing data and models in systems biology. Methods in Enzymology. https://doi.org/10.1016/b978-0-12-385118-5.00029-3"
   ],
   [
    "fair-data-point",
@@ -182,64 +112,14 @@
    "Emerging"
   ],
   [
-   "fair-data-point",
-   "bio.tools id",
-   "FAIRDataPoint"
-  ],
-  [
-   "fair-data-point",
-   "GitHub repo",
-   "FAIRDataTeam/FAIRDataPoint"
-  ],
-  [
-   "fair-data-point",
-   "DOI",
-   "Luiz Olavo Bonino da Silva Santos, Kees Burger, Rajaram Kaliyaperumal, Marek Suchánek, Jan Slifka, Mark Wilkinson FAIR Data Point."
-  ],
-  [
    "openrefine",
-   "GitHub repo",
-   "OpenRefine/OpenRefine"
-  ],
-  [
-   "openrefine",
-   "RSD ID",
-   "openrefine"
+   "Homepage opens the tool",
+   "yes"
   ],
   [
    "cedar-workbench",
    "Maturity",
    "Mature"
-  ],
-  [
-   "cedar-workbench",
-   "bio.tools id",
-   "cedar_workbench"
-  ],
-  [
-   "cedar-workbench",
-   "GitHub repo",
-   "metadatacenter/cedar-template-editor"
-  ],
-  [
-   "cedar-workbench",
-   "DOI",
-   "https://biokeanos.com/source/Center%20for%20Expanded%20Data%20Annotation%20and%20Retrieval%20Workbench"
-  ],
-  [
-   "blazegraph",
-   "GitHub repo",
-   "blazegraph/database"
-  ],
-  [
-   "ardc-fair-self-assessment-tool",
-   "GitHub repo",
-   "au-research/FAIR-Data-Assessment-Tool"
-  ],
-  [
-   "fair-data-maturity-model",
-   "DOI",
-   "10.15497/rda00050"
   ],
   [
    "fair-checker",
@@ -247,139 +127,19 @@
    "Emerging"
   ],
   [
-   "fair-checker",
-   "bio.tools id",
-   "fair-checker"
-  ],
-  [
-   "fair-checker",
-   "GitHub repo",
-   "IFB-ElixirFr/FAIR-checker"
-  ],
-  [
-   "fair-checker",
-   "DOI",
-   "https://doi.org/10.1186/s13326-023-00289-5"
-  ],
-  [
-   "fair-evaluator",
-   "GitHub repo",
-   "FAIRMetrics/Metrics"
-  ],
-  [
-   "fairassist",
-   "GitHub repo",
-   "FAIRsharing/FAIRassist-App"
-  ],
-  [
-   "fair-aware",
-   "GitHub repo",
-   "FAIRsFAIR/fair-aware"
-  ],
-  [
-   "csv-on-the-web",
-   "GitHub repo",
-   "w3c/csvw"
-  ],
-  [
-   "icrf-generator",
-   "bio.tools id",
-   "icrf_generator"
-  ],
-  [
-   "icrf-generator",
-   "GitHub repo",
-   "aderidder/iCRFGenerator"
-  ],
-  [
-   "icrf-generator",
-   "DOI",
-   "https://doi.org/10.12688/f1000research.21576.1"
-  ],
-  [
    "redcap",
    "Maturity",
    "Mature"
   ],
   [
-   "redcap",
-   "bio.tools id",
-   "redcap"
-  ],
-  [
-   "redcap",
-   "DOI",
-   "Harvey L.A. (2018) REDCap: Web-based software for all types of data storage and collection editorial. Spinal Cord. https://doi.org/10.1038/s41393-018-0169-9"
-  ],
-  [
    "protege",
-   "bio.tools id",
-   "protege"
-  ],
-  [
-   "protege",
-   "GitHub repo",
-   "protegeproject/protege"
-  ],
-  [
-   "protege",
-   "DOI",
-   "https://doi.org/10.1093/bioinformatics/btu256"
-  ],
-  [
-   "robot",
-   "bio.tools id",
-   "robot"
-  ],
-  [
-   "robot",
-   "GitHub repo",
-   "ontodev/robot"
-  ],
-  [
-   "robot",
-   "DOI",
-   "Jackson R.C., Balhoff J.P., Douglass E., et al. (2019) ROBOT: A Tool for Automating Ontology Workflows. BMC Bioinformatics. https://doi.org/10.1186/s12859-019-3002-3"
-  ],
-  [
-   "topbraid-shacl-api",
-   "GitHub repo",
-   "TopQuadrant/shacl"
-  ],
-  [
-   "pyshacl",
-   "GitHub repo",
-   "RDFLib/pySHACL"
-  ],
-  [
-   "sssom-toolkit",
-   "GitHub repo",
-   "mapping-commons/sssom-py"
-  ],
-  [
-   "sparnatural",
-   "GitHub repo",
-   "sparna-git/Sparnatural"
-  ],
-  [
-   "wikidata-query-builder",
-   "GitHub repo",
-   "wikimedia/wikidata-query-builder"
-  ],
-  [
-   "yasgui",
-   "GitHub repo",
-   "rdfjs/Yasgui"
+   "Download",
+   "https://protegewiki.stanford.edu/wiki/WebProtege"
   ],
   [
    "virtuoso-query-editor",
    "code_availability",
    "Open source"
-  ],
-  [
-   "virtuoso-query-editor",
-   "GitHub repo",
-   "openlink/virtuoso-opensource"
   ]
  ],
  "notes_mapped": [

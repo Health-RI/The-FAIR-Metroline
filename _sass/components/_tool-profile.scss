@@ -326,6 +326,33 @@ $tp-fair: (F: #1f6fb2, A: #2a8c82, I: #6a4fb3, R: #b5562a);
 
 .tp-source { margin: 0.4rem 0 0; font-size: 0.78rem; }
 
+// Listed in: registry links in the facts box
+.tp-registry {
+  display: inline-block;
+  margin: 0 0.3rem 0.2rem 0;
+  padding: 0.05rem 0.55rem;
+  border: 1px solid $primary;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $primary;
+  text-decoration: none;
+
+  &:hover { color: #fff; background: $primary; }
+}
+
+.tp-papers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li { padding: 0.45rem 0; border-bottom: 1px solid $tp-border; font-size: 0.92rem; }
+  li:last-child { border-bottom: 0; }
+  .tp-muted { display: block; font-size: 0.82rem; }
+}
+
+.tp-paper-cites { display: block; font-size: 0.82rem; }
+
 .tp-logos {
   display: flex;
   flex-wrap: wrap;
