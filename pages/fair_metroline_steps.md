@@ -33,12 +33,15 @@ title: FAIR Metroline steps
 {% assign allexpertise = allexpertise | split: ", " | uniq | sort_natural %}
 {% assign allgroups = allgroups | split: ", " | uniq %}
 {% assign audience_options = "Data holder|Data user" | split: "|" %}
+{% assign fair_overarching = "Overarching" %}
+{% assign fair_options = "Findable|Accessible|Interoperable|Reusable" | append: "|" | append: fair_overarching | split: "|" %}
 
 <div class="row g-4 row-cols-1 row-cols-md-2 my-4">
   {% include tile-filtering/tile-filter-select.html id="group-input" key="group" label="Filter by group" all_label="All groups" clear_label="group" options=allgroups %}
   {% include tile-filtering/tile-filter-select.html id="keywords-input" key="keywords" param="keyword" label="Filter by keyword" all_label="All keywords" clear_label="keyword" options=allkeywords %}
   {% include tile-filtering/tile-filter-select.html id="expertise-input" key="expertise" label="Filter by expertise" all_label="All expertise" clear_label="expertise" options=allexpertise %}
   {% include tile-filtering/tile-filter-select.html id="audience-input" key="audience" label="Filter by audience" all_label="All audiences" clear_label="audience" options=audience_options %}
+  {% include tile-filtering/tile-filter-select.html id="fair-input" key="fair" label="Filter by FAIR principle" all_label="Any principle" clear_label="FAIR principle" options=fair_options %}
 </div>
 
 <div class="steps row row-cols-1 row-cols-md-2 g-4 mb-5 navigation-tiles">
@@ -56,12 +59,21 @@ title: FAIR Metroline steps
     {% assign audience_tags = "Data user" | split: "|" %}
   {% endif %}
   {% assign group_tags = step.group | split: "|" %}
-  <div class="col step" data-keywords="{{ keyword_classes | strip }}" data-expertise="{{ expertise_classes | strip }}" data-audience="{{ audience_classes | strip }}" data-group="{{ group_class | strip }}">
+  {% comment %}Steps covering all four letters are overarching; others match each of their letters individually (e.g. [A, R] matches both Accessible and Reusable).{% endcomment %}
+  {% if step.fair.size == 4 %}
+    {% assign fair_tags = fair_overarching | split: "|" %}
+  {% else %}
+    {% capture fair_names %}{% for letter in step.fair %}{% case letter %}{% when "F" %}Findable{% when "A" %}Accessible{% when "I" %}Interoperable{% when "R" %}Reusable{% endcase %}{% unless forloop.last %}|{% endunless %}{% endfor %}{% endcapture %}
+    {% assign fair_tags = fair_names | split: "|" %}
+  {% endif %}
+  {% capture fair_classes %}{% for name in fair_tags %}{{ name | slugify }} {% endfor %}{% endcapture %}
+  <div class="col step" data-keywords="{{ keyword_classes | strip }}" data-expertise="{{ expertise_classes | strip }}" data-audience="{{ audience_classes | strip }}" data-group="{{ group_class | strip }}" data-fair="{{ fair_classes | strip }}">
     {% capture card_meta %}
       {% include tile-filtering/tag-group.html label="Keywords" values=step.keywords badge="bg-primary" %}
       {% include tile-filtering/tag-group.html label="Expertise" values=step.expertise_required badge="bg-secondary" %}
       {% include tile-filtering/tag-group.html label="Audience" values=audience_tags badge="bg-primary" %}
       {% include tile-filtering/tag-group.html label="Group" values=group_tags badge="bg-secondary" %}
+      {% include tile-filtering/tag-group.html label="FAIR" values=fair_tags badge="bg-primary" %}
     {% endcapture %}
     {% assign card_meta = card_meta | strip %}
     {% include tile-filtering/navigation-card.html
