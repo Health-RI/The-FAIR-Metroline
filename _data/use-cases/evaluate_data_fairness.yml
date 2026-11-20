@@ -1,35 +1,82 @@
-- title: "Define your goals for evaluating FAIRness."
-  status: "active"
-  short_description: "Define your goals for evaluating FAIRness."
-  description: "Start by identifying your goal: assessing how FAIR your dataset currently is to determine whether it meets your institutional requirements. Understanding baseline FAIRness helps you prioritize improvements."
+- status: "prerequisite"
+  text: "A FAIR data steward can help you when needed."
+  step_ids:
+    - 3
+
+
+- title: "Define the assessment goals"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Check which FAIR-related requirements apply to your dataset, for example from your institute, funder, journal or the repository you plan to use.</li>
+         <li>Identify the dataset version and metadata you want to assess.</li>
+         <li>Define the purpose of the assessment, for example to check whether your dataset meets these requirements or to find out where to start improving.</li>
+      </ol>
+  "
   step_ids:
     - 1
   examples:
     - role: "Researcher"
-      description: "I reviewed the FAIR requirements from my institute and planned publication venue, then checked which aspects of my dataset are most relevant to assess, such as identifiers, metadata, access conditions, and licensing."
+      description: "My institute requires a persistent identifier, metadata following a recognised standard and a clear licence. I want to know which of these my dataset already meets and what I still need to do before depositing it."
 
-- title: "Connect with a data steward for expert guidance."
+- title: "Choose an assessment tool"
   status: "upcoming"
-  short_description: "Connect with a data steward for expert guidance."
-  description: "Reach out to a FAIR data steward who brings expertise in FAIR principles and assessment tools. Having professional support ensures accurate evaluation and actionable recommendations."
-  step_ids:
-    - 3
-  examples:
-    - role: "Researcher"
-      description: "I discussed my dataset, repository options, and metadata with a data steward, who helped me decide which FAIR criteria were most relevant and which assessment approach fit my situation."
-
-- title: "Assess your data's current FAIRness level."
-  status: "upcoming"
-  short_description: "Assess your data's current FAIRness level."
-  description: "Together with your data steward, conduct a pre-FAIR assessment using an appropriate tool (like ARDC FAIR self-assessment or FAIR-Checker) to evaluate how well your data meets FAIR principles and identify specific gaps."
+  description: "
+      <ol>
+         <li>If your institute, funder or repository provides its own checklist, use it as the basis of your assessment. A general assessment tool can help with aspects the checklist does not cover.</li>
+         <li>With your data steward, choose a tool that covers the requirements identified in Step 1. Broadly, there are two types, and the Pre-FAIR assessment step lists commonly used tools of each.</li>
+         <ul>
+           <li>Questionnaire. Asks you about your dataset across all four FAIR principles, such as its identifiers, metadata, file formats, access conditions and licence.</li>
+           <li>Automated tool. Tests the machine-readable metadata of a dataset that is already online, using its link or identifier. It cannot read documentation meant only for people, such as a PDF readme. If your dataset is not yet published, use a questionnaire.</li>
+         </ul>
+         <li>Both types give an indication of FAIRness, usually as scores or test results, and many also suggest improvements. For example, a tool may find an identifier but no licence information in the dataset’s metadata.</li>
+      </ol>
+  "
   step_ids:
     - 5
   examples:
     - role: "Researcher"
-      description: "I completed a FAIR assessment of my dataset and metadata using FAIR-Checker, then reviewed the results to identify gaps such as limited metadata, missing persistent identifiers, or unclear reuse conditions."
+      description: "Because my dataset is not yet published, my data steward and I choose the ARDC FAIR self-assessment. We check that its questions cover my institute’s requirements."
 
-- title: "FAIR assessment complete"
+
+- title: "Carry out the assessment"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Follow the instructions of the selected tool and gather the information it asks for.</li>
+         <li>Base your answers on the current state of the dataset and its documentation, not on improvements you plan to make.</li>
+         <li>Record the findings and supporting information. Note any missing information or items that cannot be assessed.</li>
+         <li>Keep a copy of the tool’s results.</li>
+      </ol>
+  "
+  step_ids:
+    - 5
+  tool_ids:
+    - ardc-fair-self-assessment-tool
+  examples:
+    - role: "Researcher"
+      description: "My data steward and I complete the ARDC FAIR self-assessment, using the dataset documentation to support our answers. We record gaps such as no persistent identifier yet, incomplete metadata, data in a proprietary file format and no licence."
+
+
+- title: "Review the findings and plan the next steps"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Compare the findings with the goals and requirements identified in Step 1.</li>
+         <li>Treat scores as an indication, not a verdict. Different tools can give different results, so use the same tool if you repeat the assessment.</li>
+         <li>List the improvements needed and agree with your data steward which to address first, for example by urgency, impact and feasibility. Some gaps, such as a missing persistent identifier, are usually resolved when you deposit the dataset in a repository.</li>
+         <li>Write a short report with the findings, supporting information and next steps, and attach the tool’s results. Record the dataset version, the tool used and the assessment date.</li>
+      </ol>
+  "
+  step_ids:
+    - 5
+    - 6
+  examples:
+    - role: "Researcher"
+      description: "The assessment shows that the metadata is incomplete, the data is in a proprietary file format and the dataset has no licence. My data steward and I agree to complete the metadata, convert the data to an open format and choose a licence first. The dataset will receive a persistent identifier when I deposit it in a repository."
+
+- title: "The FAIRness assessment is complete"
   status: "destination"
-  icon: "🎯"
-  short_description: "You understand your data's FAIRness and next steps."
-  description: "Congratulations! You now have clear insights into how FAIR your data is and specific recommendations for improvement. You can use this knowledge to define new FAIRification objectives if needed or confirm compliance with institutional requirements."
+  description: "You have a report describing the dataset’s current FAIRness, the gaps identified and the improvements you have prioritised. You can use the report to plan the work needed to meet the requirements that apply to your dataset. After making improvements, repeat the assessment with the same tool to check your progress, as described in Assess FAIRness. "
+  step_ids:
+    - 23
