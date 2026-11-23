@@ -11,10 +11,7 @@ Research data can be difficult to combine and reuse when the same concepts are d
 When designing a new dataset, you can address these differences from the start by clearly defining what you want to collect and aligning your data elements with existing standards where possible. This makes it easier to understand, compare and combine your data with data from other studies, whether for your own analyses or for reuse by others.
 
 <div class="metro-examples">
-  <h4>Examples</h4>
-  <div class="example-tabs">
-    <button class="example-tab active" data-example="1">Researcher</button>
-  </div>
+  <h4>Examples: Researcher</h4>
   <div class="example-content">
     <div class="example-panel active" data-example="1">
       <p>
