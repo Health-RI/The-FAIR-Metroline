@@ -223,3 +223,109 @@
     font-size: 1.1rem;
   }
 }
+
+// FAIR principle toggle filter ("F A I R | FAIR")
+.tile-filter-toggle-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  min-height: calc(1.5em + 0.75rem + 2px); // same height as the select filters
+}
+
+.tile-filter-toggle-label {
+  font-weight: 600;
+  color: $primary;
+}
+
+.tile-filter-toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  .tile-filter-toggle-clear {
+    border: 0;
+    background: none;
+    padding: 0 0.25rem;
+    margin-left: 0.15rem;
+    color: #6c757d;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .tile-filter-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.9rem;
+    height: 1.9rem;
+    padding: 0 0.6rem;
+    border: 1.5px solid #c9d6ea;
+    border-radius: 999px;
+    background-color: #f5f8fd;
+    color: $primary;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+      box-shadow 0.15s ease, transform 0.15s ease;
+
+    &:hover {
+      border-color: #328cc1;
+      background-color: #e8f1fb;
+      transform: translateY(-1px);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 0.2rem rgba(50, 140, 193, 0.35);
+    }
+
+    &.active {
+      border-color: $primary;
+      background-color: $primary;
+      color: #fff;
+      box-shadow: 0 2px 6px rgba(20, 51, 104, 0.3);
+    }
+  }
+
+  .tile-filter-toggle-divider {
+    align-self: stretch;
+    width: 1.5px;
+    margin: 0.15rem 0.3rem;
+    border-radius: 1px;
+    background-color: #c9d6ea;
+  }
+}
+
+// Filter header on the FAIR Metroline steps overview
+.steps-filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 1rem;
+
+  .steps-filters-more {
+    border-radius: 999px;
+    padding-inline: 0.9rem;
+
+    i {
+      margin-right: 0.3rem;
+    }
+
+    &[aria-expanded="true"] {
+      background-color: $primary;
+      color: #fff;
+
+      .badge {
+        background-color: #fff !important;
+        color: $primary;
+      }
+    }
+  }
+}

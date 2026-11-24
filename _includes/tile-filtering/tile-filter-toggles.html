@@ -1,0 +1,20 @@
+<!--
+FAIR principle toggle filter rendered as "F A I R | FAIR".
+Letters combine (AND) and switch FAIR off. FAIR is exclusive and switches the letters off.
+Usage: {% raw %}{% include tile-filtering/tile-filter-toggles.html id="fair-input" label="FAIR principle" %}{% endraw %}
+Tiles need a data-fair attribute holding "fair" or lowercase letters, e.g. "a r".
+-->
+<div class="tile-filter-toggle-row">
+        <span class="tile-filter-toggle-label" id="{{ include.id }}-label">{{ include.label | default: "FAIR principle" }}</span>
+        <div class="tile-filter-toggle-group" role="group" id="{{ include.id }}" aria-labelledby="{{ include.id }}-label" data-filter-key="fair" data-query-param="fair">
+            <button type="button" class="tile-filter-toggle" data-value="f" aria-pressed="false" title="Findable">F</button>
+            <button type="button" class="tile-filter-toggle" data-value="a" aria-pressed="false" title="Accessible">A</button>
+            <button type="button" class="tile-filter-toggle" data-value="i" aria-pressed="false" title="Interoperable">I</button>
+            <button type="button" class="tile-filter-toggle" data-value="r" aria-pressed="false" title="Reusable">R</button>
+            <span class="tile-filter-toggle-divider" aria-hidden="true"></span>
+            <button type="button" class="tile-filter-toggle" data-value="fair" data-exclusive="true" aria-pressed="false" title="Covers all four FAIR principles">FAIR</button>
+            <button type="button" class="tile-filter-clear tile-filter-toggle-clear" title="Clear FAIR principle selection" data-target="{{ include.id }}">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+</div>
