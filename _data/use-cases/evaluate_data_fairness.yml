@@ -34,6 +34,8 @@
   "
   step_ids:
     - 5
+  tool_ids:
+    - ardc-fair-self-assessment-tool
   examples:
     - role: "Researcher"
       description: "Because my dataset is not yet published, my data steward and I choose the ARDC FAIR self-assessment. We check that its questions cover my institute’s requirements."
