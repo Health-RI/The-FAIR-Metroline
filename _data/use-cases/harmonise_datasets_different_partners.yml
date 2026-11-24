@@ -17,8 +17,8 @@
   status: "upcoming"
   description: "
       <ol>
-         <li>Agree on which variables are needed for the joint analysis</li>
-         <li>Collect the available dataset descriptions and codebooks and make them available to the project team</li>
+         <li>Agree on which variables are needed for the joint analysis.</li>
+         <li>Collect the available dataset descriptions and codebooks and make them available to the project team.</li>
          <li>Compare variable definitions, units and collection methods to identify which variables are sufficiently comparable for joint analysis.</li>
       </ol>
   "
@@ -46,8 +46,9 @@
   status: "upcoming"
   description: "
       <ol>
-         <li>Agree on shared variable definitions, units, and a common data structure that fit the planned analysis and intended use. Aim to reuse established standards when they fit, keeping your FAIR objectives in mind. Record the agreed definitions in a shared codebook.</li>
+         <li>Agree on shared variable definitions, units and a common data structure that fit the planned analysis and intended use. Aim to reuse established standards when they fit, keeping your FAIR objectives in mind. Record the agreed definitions in a shared codebook.</li>
          <li>Create a mapping table that links each partner's variables to the corresponding variables in the harmonised dataset. Record any conversion or recoding rules. Document how variables that cannot be made comparable will be handled.</li>
+         <li>Consider expressing the shared codebook as machine-readable validation rules, for example with <a href='https://pydantic.dev/docs/validation/latest/get-started/'>Pydantic</a>, so that the harmonised data can be checked automatically.</li>
       </ol>
   "
   step_ids:
@@ -66,13 +67,13 @@
   "
   examples:
     - role: "Researcher"
-      description:  "The data engineer runs a script that converts Partner B's height values from metres to centimetres. A value of 1.72 metres becomes 172 centimetres in the harmonised dataset."
+      description:  "The Research software engineer runs a script that converts Partner B's height values from metres to centimetres. A value of 1.72 metres becomes 172 centimetres in the harmonised dataset."
 
 - title: "Check the harmonised data"
   status: "upcoming"
   description: "
       <ol>
-         <li>Check whether the transformed data follow the agreed definitions and structure. Compare a sample of transformed records with the source data.</li>
+         <li>Check whether the transformed data follow the agreed definitions and structure, using your validation rules if you set them up. Compare a sample of transformed records with the source data.</li>
          <li>Investigate unexpected values, missing data or changes in record counts with the relevant partners.</li>
          <li>Correct errors and document any remaining limitations that may affect the analysis.</li>
       </ol>
