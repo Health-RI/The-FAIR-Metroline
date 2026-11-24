@@ -14,7 +14,7 @@ One way to make an existing dataset findable is to register descriptive metadata
 
 
 <div class="metro-examples">
-  <h4>Examples: Researcher at University Medical Center</h4>
+  <h4>Example: Researcher at University Medical Center</h4>
   <div class="example-content">
     <div class="example-panel active" data-example="1">
       <p>I am a researcher at Radboudumc. To meet my institution's FAIR-related requirements, I want to make my existing dataset findable through the National Health Data Catalogue.</p>

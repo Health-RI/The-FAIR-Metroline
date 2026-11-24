@@ -12,7 +12,7 @@ Many journals require researchers to explain where the data underlying their pub
 When preparing a publication based on an existing dataset, you can make the data underlying your results identifiable and citable by preserving the version used in your research, registering its metadata and obtaining a persistent identifier. This allows others to identify and reference the dataset, even when the underlying data remain in a restricted archive. Publicly available metadata can also describe the access conditions and explain how access can be requested, where permitted.
 
 <div class="metro-examples">
-  <h4>Examples: Researcher</h4>
+  <h4>Example: Researcher</h4>
   <div class="example-content">
     <div class="example-panel active" data-example="1">
       <p>I am a Radboudumc researcher preparing an article on lung nodules using existing chest CT scans and radiology reports from 50 patients. I analysed a subset of these data and derived additional variables, including nodule size and classification labels. My journal requires me to document the availability of the data supporting my findings. I want to make the exact dataset used in my research citable, even though the sensitive medical data cannot be shared openly.</p>

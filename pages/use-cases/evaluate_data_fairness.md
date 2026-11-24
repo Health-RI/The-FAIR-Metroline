@@ -11,7 +11,7 @@ custom_js: metro-timeline
 As a researcher, you may need to understand how FAIR your data currently is to comply with institutional requirements or to identify areas for improvement. In this use case, you assess the current FAIRness level of your dataset to check compliance and pinpoint specific areas for improvement in how your data is described, accessed, and reused.
 
 <div class="metro-examples">
-  <h4>Examples: Researcher</h4>
+  <h4>Example: Researcher</h4>
   <div class="example-content">
     <div class="example-panel active" data-example="1">
       <p>My institute requires datasets to meet a minimum FAIR standard before submission. I want to check how my dataset currently scores and identify what needs improving before I proceed.</p>

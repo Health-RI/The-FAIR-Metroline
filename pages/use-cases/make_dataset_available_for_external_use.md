@@ -12,7 +12,7 @@ Making an existing research dataset available for reuse allows other researchers
 Before sharing an existing dataset, you need to check whether all relevant metadata are available, whether the data are sufficiently de-identified and whether sharing is legally permitted. Relevant information may be embedded in the data files or stored separately. Bringing this information together and documenting the conditions for reuse helps other researchers understand and use the dataset independently. 
 
 <div class="metro-examples">
-  <h4>Examples: Researcher at University Medical Center</h4>
+  <h4>Example: Researcher at University Medical Center</h4>
   <div class="example-content">
     <div class="example-panel active" data-example="1">
       <p>I have published an article based on 20 CT images and now want to make the dataset available for validation, comparison and educational use. The images are stored in a clinical system or a secure institutional folder, with some metadata embedded in the DICOM headers. Before sharing, I need to verify that all relevant metadata are available and that the data is sufficiently de-identified for sharing. I want to provide a documented and structured dataset that other researchers can understand without any of my direct involvement. </p>

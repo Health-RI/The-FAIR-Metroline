@@ -169,46 +169,11 @@ $prereq-border: #e2e9f3;
   transition: transform 0.15s ease;
 }
 
+// card look comes from .tool-item / .tool-info (_metro-timeline.scss)
 .prereq-more {
-  margin: 0.35rem 0 0.25rem;
-  font-size: 0.88rem;
+  margin: 0.4rem 0 0.3rem;
 
-  p { margin: 0 0 0.45rem; }
-}
-
-.prereq-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.prereq-chip {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.4rem;
-  padding: 0.2rem 0.65rem;
-  border: 1px solid $prereq-border;
-  border-radius: 999px;
-  background: $white;
-  font-size: 0.84rem;
-  font-weight: 600;
-  color: $link-color;
-  text-decoration: none;
-
-  &::after { content: "\2192"; }
-
-  &:hover {
-    border-color: $link-color;
-    text-decoration: none;
-  }
-}
-
-.prereq-chip-kind {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: $secondary;
+  p { margin: 0 0 0.25rem; }
 }
 
 .prereq-tools { margin-top: 0.4rem; }
