@@ -64,8 +64,9 @@ title: FAIR Metroline steps
   </div>
 </div>
 
+{% assign sorted_steps = site.data.metroline_steps | sort_natural: "title" %}
 <div class="steps row row-cols-1 row-cols-md-2 g-4 mb-5 navigation-tiles">
-{% for step in site.data.metroline_steps %}
+{% for step in sorted_steps %}
   {% capture keyword_classes %}{% for keyword in step.keywords %}{{ keyword | slugify }} {% endfor %}{% endcapture %}
   {% capture expertise_classes %}{% for expertise in step.expertise_required %}{{ expertise | slugify }} {% endfor %}{% endcapture %}
   {% capture audience_classes %}{% if step.audience.data_holder %}data-holder {% endif %}{% if step.audience.data_user %}data-user {% endif %}{% endcapture %}
