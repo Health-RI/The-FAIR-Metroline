@@ -5,10 +5,10 @@
   type: "fair guidelines"
   complexity: "Medium"
 
-- title: "Evaluate FAIRness of your data"
+- title: "How to evaluate the FAIRness of your data"
   url: "use-cases/evaluate_data_fairness"
   icon: "📊"
-  description: "Assess how well your data meets FAIR principles and identify areas for improvement using evaluation tools and frameworks."
+  description: "I want to assess how well my dataset aligns with the FAIR principles and find out which improvements are needed before I share or deposit it."
   type: "fair guidelines"
   complexity: "Low"
 
