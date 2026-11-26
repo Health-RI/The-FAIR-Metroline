@@ -1,0 +1,87 @@
+- status: "prerequisite"
+  text: "You know what you want to achieve: your FAIRification objectives are clear."
+  step_ids:
+    - 1
+
+- status: "prerequisite"
+  text: "A FAIR data steward can help you when needed."
+  step_ids:
+    - 3
+
+- status: "prerequisite"
+  text: "Your team has followed training where its knowledge has gaps."
+  step_ids:
+    - 4
+
+- title: "Clarify the meaning of existing terms"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Select the variables that need standardizing.</li>
+         <li>Review the codebook and collection forms for the variables selected for standardisation.</li>
+         <li>Confirm their meaning with the researchers who originally collected the data, or check the original study documentation if they are not available.</li>
+         <li>Record clear definitions and flag any terms of which the meaning remains uncertain.</li>
+      </ol>
+  "
+  step_ids:
+      - 13
+  examples:
+    - role: "Researcher"
+      description: "Because 'MI' can have different meanings, I ask the original research team how they used it. They confirm that 'MI', 'heart attack' and 'myocardial infarction' were used to record the same diagnosis. The meaning of ‘Cardiac event’ cannot be verified."
+
+- title: "Find standard terms and record the mappings"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Check whether a suitable common data element (CDE), established codebook or existing mapping provides definitions, terms or identifiers you can reuse.</li>
+         <li>Where additional terms or identifiers are needed, choose a suitable established vocabulary or ontology used in your research field.</li>
+         <ul>
+           <li>Check the conditions for using the selected terminology, as the use of some terminology require a licence.</li>
+         </ul>
+         <li>Match the selected variables and values to terms with the appropriate meaning and level of detail</li>
+         <li>Create a mapping table recording the original term, standardised term, concept identifier, terminology source and version. Add a column explaining whether the meanings are equivalent or how they differ.</li>
+         <li>Record values that cannot be mapped and explain whether their meaning is unclear or no suitable standard term was found.</li>
+         <li>Confirm the mappings with the original research team or others who know the data.</li>
+      </ol>
+
+      <b>Tip.</b> The sections on selecting ontologies and binding terms in “Use ontologies in the model” also apply here. For this scenario, you do not need to build a semantic model or convert your mappings to RDF or OWL. A well-documented mapping table is sufficient. 
+  "
+  step_ids:
+    - 16
+  examples:
+    - role: "Researcher"
+      description: "I first check whether an existing codebook or mapping can be reused. Together with the data steward, I select SNOMED CT for the diagnosis values. We map the three confirmed equivalent terms to 'Myocardial infarction', concept identifier 22298006, and record the terminology version used. ‘Cardiac event’ remains unmapped because its meaning is uncertain."
+
+- title: "Apply the mappings to the dataset"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Add the standard terms and identifiers to the dataset, for example in a new column, while keeping the original values. Record in the codebook how the standardised values relate to the original values.</li>
+         <li>Check a sample of records to confirm that the mappings were applied correctly.</li>
+         <li>Review uncertain matches with the original research team and document any unresolved issues.</li>
+      </ol>
+  "
+  tool_ids:
+    - openrefine
+  examples:
+    - role: "Researcher"
+      description: "I add a standardised diagnosis-code field while retaining the original diagnosis values. We check a sample of records to confirm that 'MI', 'heart attack' and 'myocardial infarction' have received the agreed code. Records labelled ‘Cardiac event’ retain their original value and are marked as unmapped."
+
+- title: "Document and share the standardised terminology"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Finalise the codebook and mapping table, including definitions, concept identifiers, terminology versions and unresolved terms</li>
+         <li>Publish the documentation in a suitable repository or registry and link it to the relevant dataset version</li>
+         <li>Record who is responsible for reviewing the mappings if the dataset or terminology is updated.</li>
+      </ol>
+  "
+  step_ids:
+    - 11
+  examples:
+    - role: "Researcher"
+      description: "I publish the updated codebook and mapping table and link them to the dataset version. Other researchers can see which diagnosis values were linked to the same standard concept (in this case SNOMED CT concept 22298006), which terminology version was used and which values remain unmapped."
+
+- title: "The standardised terminology is documented and ready for reuse"
+  status: "destination"
+  description: "The dataset contains standardised terms and identifiers. The codebook and mapping table show how the original values were interpreted and record any remaining uncertainties. This helps others interpret the values and assess whether the data are suitable for reuse."
