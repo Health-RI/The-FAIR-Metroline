@@ -1,5 +1,6 @@
 ---
 title: Data Lifecycle
+description: "An interactive overview of the research data life cycle. Select a stage, from Plan and Collect to Share and Reuse, to read what it involves."
 permalink: toolassemblies/data_lifecycle
 toc: false
 ---
