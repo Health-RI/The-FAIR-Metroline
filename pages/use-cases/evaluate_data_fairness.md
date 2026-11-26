@@ -13,10 +13,7 @@ A FAIRness assessment helps you understand how well your dataset and its metadat
 The assessment looks at how your dataset is identified, described, stored and made available for reuse, for example its identifiers, metadata, file formats, access conditions and licence. With support from a data steward, you choose a suitable assessment tool, carry out the assessment and record the findings. The outcome is a report describing what is already in place, what is missing and which improvements are needed.
 
 <div class="metro-examples">
-  <h4>Examples</h4>
-  <div class="example-tabs">
-    <button class="example-tab active" data-example="1">Researcher</button>
-  </div>
+  <h4>Example: Researcher</h4>
   <div class="example-content">
     <div class="example-panel active" data-example="1">
       <p>My institute has FAIR data requirements that datasets must meet before they are deposited in a repository. I want to assess my dataset and identify what needs improving. Together with a data steward, I will check aspects such as identifiers, metadata, file formats, access conditions and licence. I want to document the findings and determine what I need to address before depositing the dataset.</p>

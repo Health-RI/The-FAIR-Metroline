@@ -295,25 +295,6 @@
   font-weight: 600;
 }
 
-.example-tabs {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-
-.example-tab {
-  padding: 0.5rem 1rem;
-  border: 2px solid #e8f0f7;
-  background: white;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
-  color: #143368;
-  font-weight: 500;
-}
-
 .metro-tag {
   display: inline-block;
   font-size: 0.7rem;
@@ -325,17 +306,6 @@
   vertical-align: middle;
   margin-left: 0.5rem;
   letter-spacing: 0.03em;
-}
-
-.example-tab:hover {
-  border-color: #328cc1;
-  background: #f8fbfd;
-}
-
-.example-tab.active {
-  background: #328cc1;
-  color: white;
-  border-color: #328cc1;
 }
 
 .example-content {
@@ -353,14 +323,6 @@
 
 .example-panel.active {
   display: block;
-}
-
-.example-panel h5 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: #328cc1;
-  font-size: 0.95rem;
-  font-weight: 600;
 }
 
 /* Link section */

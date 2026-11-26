@@ -6,7 +6,8 @@
     step_ids     optional Metroline step ids, shown as guidance links (step_id also works)
     tool_ids     optional tool ids, shown as tool badges
     links        optional list of {label, url}
-  An item only expands when it has something beyond its sentence.
+  An item only expands when it has something beyond its sentence; the expanded part
+  reuses the "Guidance steps" card from timeline.html (.tool-item), without icon and title.
   Usage: {% include use-case-prerequisites.html prerequisites=prerequisites %}
 {% endcomment %}
 {% if include.prerequisites.size > 0 %}
@@ -34,15 +35,25 @@
       {% if has_more %}
       <details>
         <summary><span class="prereq-text">{{ text }}</span><span class="prereq-chevron" aria-hidden="true"></span></summary>
-        <div class="prereq-more">
-          {% if p.description %}<p>{{ p.description }}</p>{% endif %}
-          {% if steps.size > 0 or p.links %}
-          <div class="prereq-chips">
-            {% for step in steps %}<a class="prereq-chip" href="{{ step.url | prepend: '/' | relative_url }}"><span class="prereq-chip-kind">Guidance</span>{{ step.title }}</a>{% endfor %}
-            {% for l in p.links %}<a class="prereq-chip" href="{{ l.url }}"><span class="prereq-chip-kind">See also</span>{{ l.label | default: l.url }}</a>{% endfor %}
+        {% comment %} Same element as a "Guidance steps" item in timeline.html, without icon and title {% endcomment %}
+        <div class="prereq-more tool-item resource-step">
+          <div class="tool-info">
+            {% if p.description %}<p>{{ p.description }}</p>{% endif %}
+            {% for step in steps %}
+            {% if step.one_liner %}
+            {{ step.one_liner }}
+            {% endif %}
+            <a href="{{ step.url | prepend: '/' | relative_url }}" class="tool-link">
+              <i class="fas fa-arrow-right"></i> View step details
+            </a>
+            {% endfor %}
+            {% for l in p.links %}
+            <a href="{{ l.url }}" class="tool-link" target="_blank">
+              <i class="fas fa-external-link-alt"></i> {{ l.label | default: l.url }}
+            </a>
+            {% endfor %}
+            {% if p.tool_ids %}<div class="prereq-tools">{% include toolassemblies/show-badges.html ids=p.tool_ids %}</div>{% endif %}
           </div>
-          {% endif %}
-          {% if p.tool_ids %}<div class="prereq-tools">{% include toolassemblies/show-badges.html ids=p.tool_ids %}</div>{% endif %}
         </div>
       </details>
       {% else %}

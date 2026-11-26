@@ -3,9 +3,7 @@
   description: "Before data capture starts, the research team agrees which operational signals, sample identifiers, protocols, instrument settings, processing outputs and provenance records need to be linked. This illustrative use case assumes a bioprocess or fermentation-style experiment where equipment data is captured during a run and later connected to study and assay metadata. The exact terminology should be reviewed by the WUR and IBISBA teams."
   examples:
     - role: "Researcher"
-      description: "I am planning a bioreactor experiment and want to make sure the run metadata, sample identifiers and instrument settings can be reused later."
-    - role: "Data Steward"
-      description: "I help the team decide which metadata templates, identifiers and controlled terms should be used before the experiment starts."
+      description: "I am planning a bioreactor experiment and, together with a data steward, decide which metadata templates, identifiers and controlled terms to use, so the run metadata, sample identifiers and instrument settings can be reused later."
 
 - title: "Capture equipment data close to the source"
   status: "active"
@@ -15,10 +13,8 @@
   tool_ids:
     - leaf
   examples:
-    - role: "Research Engineer"
-      description: "I configure an adapter so the bioreactor run parameters and sensor readings are captured without manually copying files from the instrument."
-    - role: "Facility Operator"
-      description: "I want equipment data to be available during the experiment so the team can monitor the run and later connect the values to the dataset."
+    - role: "Researcher"
+      description: "I use an adapter so the bioreactor run parameters and sensor readings are captured without manually copying files from the instrument, so the team can monitor the run and later connect the values to the dataset."
 
 - title: "Record and connect study, sample, assay and run metadata"
   status: "active"
@@ -29,10 +25,8 @@
     - fair-data-station
     - leaf
   examples:
-    - role: "Data Steward"
-      description: "I prepare a FAIR Data Station template so sample metadata, assay descriptions, run identifiers and data-file references are recorded consistently."
     - role: "Researcher"
-      description: "I fill in the metadata template while the experiment is still fresh, so others can understand how the data was generated and how the files relate to the run."
+      description: "I fill in a FAIR Data Station template while the experiment is still fresh, so sample metadata, assay descriptions, run identifiers and data-file references are recorded consistently and others can understand how the data was generated and how the files relate to the run."
       
 - title: "Register and share the dataset in FAIRDOM-SEEK"
   status: "upcoming"
@@ -42,10 +36,8 @@
   tool_ids:
     - fairdom-seek
   examples:
-    - role: "Data Manager"
-      description: "I import or register the metadata and data files so collaborators can find the experiment, understand the structure and access the approved outputs."
-    - role: "Project Coordinator"
-      description: "I want the project data and SOPs to be visible in the IBISBA Knowledge Hub with the right sharing settings."
+    - role: "Researcher"
+      description: "I register the metadata, data files and SOPs in the IBISBA Knowledge Hub with the right sharing settings, so collaborators can find the experiment, understand the structure and access the approved outputs."
 
 - title: "FAIR bioprocess dataset available for reuse"
   status: "destination"
@@ -54,6 +46,4 @@
   description: "The experiment is no longer only a collection of files and instrument exports. The operational data, sample and assay metadata, protocols, derived outputs and access conditions are connected in a platform where collaborators can discover, interpret and reuse them. This final wording should be adapted once WUR and IBISBA confirm the intended user story."
   examples:
     - role: "Researcher"
-      description: "I can point collaborators to the registered experiment instead of sending separate spreadsheets, files and notes."
-    - role: "Data Steward"
-      description: "I can review whether the published package contains the metadata, provenance and access information needed for reuse."
+      description: "I can point collaborators to the registered experiment instead of sending separate spreadsheets, files and notes, and check that it contains the metadata, provenance and access information needed for reuse."

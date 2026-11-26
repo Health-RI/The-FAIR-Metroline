@@ -108,18 +108,10 @@
 
           {% if stop.examples %}
           <div class="metro-examples">
-            <h4>Examples</h4>
-            <div class="example-tabs">
-              {% for example in stop.examples %}
-              <button class="example-tab {% if forloop.first %}active{% endif %}" data-example="{{ forloop.index }}">
-                {{ example.role }}
-              </button>
-              {% endfor %}
-            </div>
+            <h4>Example</h4>
             <div class="example-content">
               {% for example in stop.examples %}
-              <div class="example-panel {% if forloop.first %}active{% endif %}" data-example="{{ forloop.index }}">
-                <h5>{{ example.role }}</h5>
+              <div class="example-panel active" data-example="{{ forloop.index }}">
                 <p>{{ example.description }}</p>
               </div>
               {% endfor %}
