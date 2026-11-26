@@ -1,0 +1,106 @@
+- status: "prerequisite"
+  text: "You know what you want to achieve: your FAIRification objectives are clear."
+  step_ids:
+    - 1
+
+- status: "prerequisite"
+  text: "A FAIR data steward can help you when needed."
+  step_ids:
+    - 3
+
+- status: "prerequisite"
+  text: "Your team has followed training where its knowledge has gaps."
+  step_ids:
+    - 4
+
+- title: "Understand and compare partner datasets"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Agree on which variables are needed for the joint analysis.</li>
+         <li>Collect the available dataset descriptions and codebooks and make them available to the project team.</li>
+         <li>Compare variable definitions, units and collection methods to identify which variables are sufficiently comparable for joint analysis.</li>
+      </ol>
+  "
+  examples:
+    - role: "Researcher"
+      description: "I collect the partners' codebooks. Partner A records height in centimetres and Partner B in metres. I also find that the partners use different codes for missing values."
+
+- title: "Agree on conditions for joint use"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Confirm with each partner whether their data can be used for the planned joint analysis.</li>
+         <li>Check the consent and institutional rules that apply. For personal data, include applicable GDPR requirements.</li>
+         <li>Agree who can access the data, where the data can be processed and which agreements are needed.</li>
+         <li>Put any required approvals and agreements in place before accessing or transferring the data.</li>
+      </ol>
+  "
+  step_ids:
+    - 21
+  examples:
+    - role: "Researcher"
+      description: "I discuss the planned analysis with partner data stewards. We agree that the analysis team will use the data in the project's approved environment once the required agreements are in place."
+
+- title: "Agree on a common standard and map the datasets"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Agree on shared variable definitions, units and a common data structure that fit the planned analysis and intended use. Aim to reuse established standards when they fit, keeping your FAIR objectives in mind. Record the agreed definitions in a shared codebook.</li>
+         <li>Create a mapping table that links each partner's variables to the corresponding variables in the harmonised dataset. Record any conversion or recoding rules. Document how variables that cannot be made comparable will be handled.</li>
+         <li>Consider expressing the shared codebook as machine-readable validation rules, for example with <a href='https://pydantic.dev/docs/validation/latest/get-started/'>Pydantic</a>, so that the harmonised data can be checked automatically.</li>
+      </ol>
+  "
+  step_ids:
+    - 12
+  examples:
+    - role: "Researcher"
+      description:  "We agree to record height in centimetres. The mapping table links both partners' height variables to the shared height variable and specifies the conversion for Partner B."
+
+- title: "Transform the partner datasets"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Apply the agreed mappings, including unit conversions, recoding and changes to the data structure.</li>
+         <li>Preserve the source dataset versions and record the transformations so they can be repeated.</li>
+      </ol>
+  "
+  examples:
+    - role: "Researcher"
+      description:  "The Research software engineer runs a script that converts Partner B's height values from metres to centimetres. A value of 1.72 metres becomes 172 centimetres in the harmonised dataset."
+
+- title: "Check the harmonised data"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Check whether the transformed data follow the agreed definitions and structure, using your validation rules if you set them up. Compare a sample of transformed records with the source data.</li>
+         <li>Investigate unexpected values, missing data or changes in record counts with the relevant partners.</li>
+         <li>Correct errors and document any remaining limitations that may affect the analysis.</li>
+      </ol>
+  "
+  examples:
+    - role: "Researcher"
+      description:  "The check flags several height values of 999 centimetres. Partner A confirms that 999 was used to indicate a missing value. We update the mapping and rerun the transformation."
+
+- title: "Prepare the harmonised data for joint analysis"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Finalise the data version for joint analysis and its supporting documentation, including the shared codebook, mapping table and transformation records.</li>
+         <li>Make the data and documentation available to authorised project partners under the agreed conditions.</li>
+      </ol>
+  "
+  examples:
+    - role: "Researcher"
+      description:  "I save the version that will be used for the joint analysis and make it available to the team with the shared codebook, mapping table and scripts."
+
+
+- title: "The harmonised data are ready for joint analysis"
+  status: "destination"
+  description: "The analysis team can use the harmonised data under the agreed access conditions. The documentation shows how each partner's data were transformed and records any remaining limitations.
+  <br>
+  Both structural and resource-level metadata can subsequently be made available if this is part of the objectives.
+  "
+  step_ids:
+    - 10
+    - 11
