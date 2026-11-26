@@ -6,10 +6,20 @@ Reads optional fields from the step data:
   keywords   – list of keyword strings
   expertise_required – list of role name strings
   audience.data_holder / audience.data_user – booleans
+  fair       – list of FAIR letters (F, A, I, R); all four = FAIR
 -->
 {% assign step = include.step %}
-{% if step.keywords or step.expertise_required or step.audience %}
+{% if step.keywords or step.expertise_required or step.audience or step.fair %}
 <div class="step-metadata">
+
+  {% if step.fair %}
+  <div class="step-metadata-row">
+    <span class="step-metadata-label"><i class="fa-solid fa-layer-group"></i>FAIR principles</span>
+    <span class="step-metadata-value">
+      {% if step.fair.size == 4 %}<span class="step-metadata-tag">Covers all FAIR principles</span>{% else %}{% for letter in step.fair %}<span class="step-metadata-tag">{% case letter %}{% when "F" %}Findable{% when "A" %}Accessible{% when "I" %}Interoperable{% when "R" %}Reusable{% endcase %}</span>{% endfor %}{% endif %}
+    </span>
+  </div>
+  {% endif %}
 
     {% if step.audience %}
   <div class="step-metadata-row">

@@ -1,5 +1,17 @@
 <script type="text/javascript">
+    function getToggleSelection(group) {
+        return Array.from(group.querySelectorAll(".tile-filter-toggle.active")).map(function (button) {
+            return button.getAttribute("data-value");
+        });
+    }
+
+    function setToggleState(button, pressed) {
+        button.classList.toggle("active", pressed);
+        button.setAttribute("aria-pressed", pressed ? "true" : "false");
+    }
+
     function applyTileFilters() {
+        const toggleGroups = document.querySelectorAll(".tile-filter-toggle-group");
         const tiles = document.querySelectorAll(".navigation-tiles .col");
         const filters = document.querySelectorAll(".tile-filter-control");
         const searchInput = document.querySelector(".tile-search-control");
@@ -21,6 +33,15 @@
                 }
             }
 
+            // Toggle groups match when the tile has every selected value (AND)
+            for (const group of toggleGroups) {
+                if (!filterMatch) break;
+                const selected = getToggleSelection(group);
+                if (!selected.length) continue;
+                const values = (tile.getAttribute(`data-${group.getAttribute("data-filter-key")}`) || "").split(" ").filter(Boolean);
+                filterMatch = selected.every(function (value) { return values.indexOf(value) > -1; });
+            }
+
             const body = tile.querySelector(".card-body");
             const searchMatch = !searchFilter || (body && body.innerText.toLowerCase().indexOf(searchFilter) > -1);
 
@@ -36,6 +57,10 @@
             const queryParam = filter.getAttribute("data-query-param");
             if (filter.value) params.set(queryParam, filter.value);
         }
+        for (const group of toggleGroups) {
+            const selected = getToggleSelection(group);
+            if (selected.length) params.set(group.getAttribute("data-query-param"), selected.join(","));
+        }
         const newUrl = params.toString() ? `?${params}` : location.pathname;
         history.replaceState({}, "", newUrl);
     }
@@ -46,11 +71,35 @@
             filter.addEventListener("change", applyTileFilters);
         }
 
+        const toggleGroups = document.querySelectorAll(".tile-filter-toggle-group");
+        for (const group of toggleGroups) {
+            const buttons = group.querySelectorAll(".tile-filter-toggle");
+            for (const button of buttons) {
+                button.addEventListener("click", function () {
+                    const pressed = !button.classList.contains("active");
+                    setToggleState(button, pressed);
+                    if (pressed) {
+                        // An exclusive button (FAIR) clears the others, any other button clears the exclusive one
+                        const isExclusive = button.hasAttribute("data-exclusive");
+                        for (const other of buttons) {
+                            if (other !== button && (isExclusive || other.hasAttribute("data-exclusive"))) {
+                                setToggleState(other, false);
+                            }
+                        }
+                    }
+                    applyTileFilters();
+                });
+            }
+        }
+
         const clearButtons = document.querySelectorAll(".tile-filter-clear");
         for (const clearButton of clearButtons) {
             clearButton.addEventListener("click", function () {
                 const target = document.getElementById(clearButton.getAttribute("data-target"));
-                if (target) {
+                if (target && target.classList.contains("tile-filter-toggle-group")) {
+                    for (const button of target.querySelectorAll(".tile-filter-toggle")) setToggleState(button, false);
+                    applyTileFilters();
+                } else if (target) {
                     target.value = "";
                     applyTileFilters();
                 }
@@ -76,6 +125,18 @@
             if (urlValue) {
                 filter.value = urlValue;
                 hasUrlFilters = true;
+            }
+        }
+
+        for (const group of toggleGroups) {
+            const urlValue = urlParams.get(group.getAttribute("data-query-param"));
+            if (!urlValue) continue;
+            const wanted = urlValue.toLowerCase().split(",");
+            for (const button of group.querySelectorAll(".tile-filter-toggle")) {
+                if (wanted.indexOf(button.getAttribute("data-value")) > -1) {
+                    setToggleState(button, true);
+                    hasUrlFilters = true;
+                }
             }
         }
 
