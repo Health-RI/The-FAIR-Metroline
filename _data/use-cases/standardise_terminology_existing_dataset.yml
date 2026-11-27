@@ -36,7 +36,7 @@
          <li>Check whether a suitable common data element (CDE), established codebook or existing mapping provides definitions, terms or identifiers you can reuse.</li>
          <li>Where additional terms or identifiers are needed, choose a suitable established vocabulary or ontology used in your research field.</li>
          <ul>
-           <li>Check the conditions for using the selected terminology, as the use of some terminology require a licence.</li>
+           <li>Check the conditions for using the selected terminology, as some terminologies, such as SNOMED CT, require a licence.</li>
          </ul>
          <li>Match the selected variables and values to terms with the appropriate meaning and level of detail</li>
          <li>Create a mapping table recording the original term, standardised term, concept identifier, terminology source and version. Add a column explaining whether the meanings are equivalent or how they differ.</li>
@@ -44,7 +44,7 @@
          <li>Confirm the mappings with the original research team or others who know the data.</li>
       </ol>
 
-      <b>Tip.</b> The sections on selecting ontologies and binding terms in “Use ontologies in the model” also apply here. For this scenario, you do not need to build a semantic model or convert your mappings to RDF or OWL. A well-documented mapping table is sufficient. 
+      <b>Tip.</b> The sections on selecting ontologies and binding terms in  <a href='../../metroline_steps/use_ontologies_in_the_model/'>Use ontologies in the model</a> also apply here. For this scenario, you do not need to build a semantic model or convert your mappings to RDF or OWL. A well-documented mapping table is sufficient. 
   "
   step_ids:
     - 16
