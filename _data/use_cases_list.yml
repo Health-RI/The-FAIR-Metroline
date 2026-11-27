@@ -1,3 +1,10 @@
+- title: "How to standardise terminology in an existing dataset"
+  url: "use-cases/standardise_terminology_existing_dataset"
+  icon: "🏷️"
+  description: "I want to link unclear or inconsistent terms in an existing dataset I am responsible for to standard terms and identifiers, so others can interpret and reuse it consistently."
+  type: "fair guidelines"
+  complexity: "Medium"
+
 - title: "Make a dataset available for external use"
   url: "use-cases/make_dataset_available_for_external_use"
   icon: "📤"
