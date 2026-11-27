@@ -1,3 +1,10 @@
+- title: "How to reuse an external dataset in a secure processing environment"
+  url: "use-cases/reuse_external_dataset_spe"
+  icon: "♻️"
+  description: "I want to reuse a dataset collected by others, checking its suitability and access conditions and analysing it in a secure environment, so that I can answer my research question without new data collection."
+  type: "fair guidelines"
+  complexity: "Medium"
+
 - title: "How to standardise terminology in an existing dataset"
   url: "use-cases/standardise_terminology_existing_dataset"
   icon: "🏷️"
