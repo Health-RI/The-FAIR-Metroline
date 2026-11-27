@@ -1,0 +1,4 @@
+User-agent: atlassian-bot
+Allow: /
+
+Sitemap: https://www.fairmetroline.org/sitemap.xml
