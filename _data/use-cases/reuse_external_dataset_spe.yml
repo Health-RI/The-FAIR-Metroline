@@ -1,0 +1,100 @@
+- status: "prerequisite"
+  text: "You know what you want to achieve: your FAIRification objectives are clear."
+  step_ids:
+    - 1
+
+- status: "prerequisite"
+  text: "A FAIR data steward can help you when needed."
+  step_ids:
+    - 3
+
+- status: "prerequisite"
+  text: "Your team has followed training where its knowledge has gaps."
+  step_ids:
+    - 4
+
+- title: "Find and assess a potentially suitable dataset"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Identify the measurements, study population and level of detail your own study requires.</li>
+         <li>Search relevant data catalogues, repositories or other trusted sources for datasets that may contain the data you need.</li>
+         <li>Identify a dataset and review the available metadata and documentation, including information about the dataset's content, structure, quality and provenance. Check the study population, measurement methods, recording period and available information about data quality.</li>
+         <li>Try to contact the data holder if information needed to assess suitability is missing.</li>
+      </ol>
+  "
+  # Resources: to be added
+  examples:
+    - role: "Researcher"
+      description: "I search the <a href='https://catalogus.healthdata.nl/en/'>National Health Data Catalogue</a> and find the DiaGame Study: Lifestyle and Blood Glucose. Its description lists heart rate measurements and 52 participants with type 2 diabetes. I review the available documentation to assess whether the recording period and measurement methods could support my analysis."
+
+- title: "Request access and arrange the SPE workspace"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Review the access and use conditions, including applicable restrictions, agreements and approval requirements.</li>
+         <li>Submit an access request through the catalogue. If required, describe your research question, the data you need and your planned processing and analysis.</li>
+         <li>Obtain the required approval and complete the necessary agreements before accessing the data.</li>
+         <li>Confirm with the data holder which software is available in the SPE workspace, what processing is permitted and how output checking and export are organised.</li>
+      </ol>
+  "
+  step_ids:
+    - 7
+  examples:
+    - role: "Researcher"
+      description: "I request the heart rate measurements and relevant participant information needed for my analysis of adults with type 2 diabetes through the request form of the NGDC. I describe my intended use and provide all required information. After approval and completion of the required agreements, the authorised data are made available in the agreed SPE workspace."
+
+- title: "Examine and prepare the data within the SPE"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Review the documentation to understand variable definitions, units and missing-value codes.</li>
+         <li>Check that the supplied data cover the approved population and measurements. Assess their completeness and suitability for your analysis.</li>
+         <li>Prepare an analysis file within the SPE, for example by selecting only the relevant participants. Follow the agreed conditions for use.</li>
+         <li>Keep the supplied source file unchanged. Save prepared data, intermediate files and processing scripts separately within the SPE, and document your decisions.</li>
+      </ol>
+  "
+  step_ids:
+    - 13
+  examples:
+    - role: "Researcher"
+      description: "Within the SPE, I identify the heart rate measurements and check their units and missing values. I verify which records belong to the requested participants with type 2 diabetes. I prepare an analysis file and document how I handle periods with missing measurements. The prepared data and scripts remain within the SPE."
+
+- title: "Analyse the data and request export of results"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Perform the analysis within the SPE, following the approved research purpose and access conditions.</li>
+         <li>Prepare the outputs you want to export, such as summary tables and figures. Check whether they are in line with the applicable output rules.</li>
+         <li>Submit the outputs through the agreed review procedure. The data holder (or designated reviewer) checks whether they disclose personal information and comply with the permitted use.</li>
+         <li>Revise outputs if requested. Export only the files approved through this procedure.</li>
+      </ol>
+  "
+  # Resources: to be added
+  examples:
+    - role: "Researcher"
+      description: "I analyse the heart rate measurements and prepare a group-level summary table and figure for my article. I submit these for output checking. If the review identifies information that could reveal individual participants, I revise the outputs. After approval, I export the permitted results."
+
+- title: "Document and report your reuse of the dataset"
+  status: "upcoming"
+  description: "
+      <ol>
+         <li>Record the dataset's source, catalogue link, identifier and version where available.</li>
+         <li>Cite the original dataset and describe its use and relevant limitations in your publications.</li>
+         <li>Where permitted, publish processing scripts and supporting documentation after completing the required export checks. Explain how others can request access to the source data.</li>
+         <li>If your work produced a new dataset, such as a derived or enriched version of the source data, consider whether it is worth making findable and whether the access conditions allow it. Even if the data cannot be redistributed, you can often register their metadata and link them to the source dataset.</li>
+      </ol>
+
+      <b>Tip.</b> If you created a new dataset, see the use case <a href='../../use-cases/make_dataset_findable/'>Make an existing dataset findable in a catalogue</a>.
+  "
+  step_ids:
+    - 7
+    - 10 # Register resource-level metadata (if you created a new dataset)
+  # NOT FOUND in metroline_steps.yml: "Make dataset findable use case" (it is a use case, not a step; linked in the Tip above instead)
+  examples:
+    - role: "Researcher"
+      description: "I document which DiaGame data I used, how I prepared the heart rate measurements and which analyses I performed. I cite the source dataset in my article. Where permitted and cleared for export, I share my scripts and a README explaining the processing steps and how other researchers can request access through the NGDC."
+
+- title: "Done. You have successfully reused an external dataset in a secure processing environment"
+  status: "destination"
+  description: "You have found suitable data for reuse, obtained access and completed your preparation and analysis within the agreed SPE. Your exported results have passed output checking. The dataset's source, your processing decisions and relevant limitations are documented."
